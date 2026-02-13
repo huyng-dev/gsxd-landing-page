@@ -135,7 +135,7 @@ content: [
 
 ## Pages
 
-The site includes 15 pages:
+The site includes 16 pages:
 
 1. **Home** (`index.html`) - Landing page with hero and features
 2. **About** - Company information
