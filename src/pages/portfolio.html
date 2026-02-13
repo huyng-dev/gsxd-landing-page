@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - GSXD Landing Page</title>
+</head>
+<body data-page="portfolio" class="min-h-screen flex flex-col bg-gray-50">
+  {{> header}}
+  
+  <main class="flex-grow">
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <h1 class="text-4xl font-bold mb-12 text-center">Our Portfolio</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="h-48 bg-gradient-to-r from-blue-400 to-purple-400"></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Project Alpha</h3>
+              <p class="text-gray-600">E-commerce platform with modern features.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="h-48 bg-gradient-to-r from-green-400 to-blue-400"></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Project Beta</h3>
+              <p class="text-gray-600">Corporate website redesign and optimization.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="h-48 bg-gradient-to-r from-pink-400 to-red-400"></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Project Gamma</h3>
+              <p class="text-gray-600">Mobile app development for iOS and Android.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

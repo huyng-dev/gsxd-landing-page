@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - GSXD Landing Page</title>
+</head>
+<body data-page="index" class="min-h-screen flex flex-col bg-gray-50">
+  {{> header}}
+  
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-5xl font-bold mb-4">Welcome to GSXD</h1>
+        <p class="text-xl mb-8">Building amazing digital experiences with cutting-edge technology</p>
+        <div class="space-x-4">
+          <a href="/services.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">Our Services</a>
+          <a href="/contact.html" class="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-block">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">Why Choose Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div class="text-blue-600 text-4xl mb-4">🚀</div>
+            <h3 class="text-2xl font-semibold mb-2">Fast Performance</h3>
+            <p class="text-gray-600">Lightning-fast load times and optimal performance for your users.</p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div class="text-blue-600 text-4xl mb-4">💡</div>
+            <h3 class="text-2xl font-semibold mb-2">Innovative Solutions</h3>
+            <p class="text-gray-600">Cutting-edge technology and creative approaches to solve your challenges.</p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div class="text-blue-600 text-4xl mb-4">🎯</div>
+            <h3 class="text-2xl font-semibold mb-2">Results-Driven</h3>
+            <p class="text-gray-600">Focused on delivering measurable results and exceeding expectations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
