@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - GSXD Landing Page</title>
+</head>
+<body data-page="contact" class="min-h-screen flex flex-col bg-gray-50">
+  {{> header}}
+  
+  <main class="flex-grow">
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <h1 class="text-4xl font-bold mb-12 text-center">Contact Us</h1>
+        <div class="max-w-2xl mx-auto">
+          <form class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="mb-6">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your name">
+            </div>
+            <div class="mb-6">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="your@email.com">
+            </div>
+            <div class="mb-6">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+              <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" rows="5" placeholder="Your message"></textarea>
+            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="submit">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
