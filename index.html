@@ -1,47 +1,364 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - GSXD Landing Page</title>
+  <title>Thanh Hải Ceramics - Ngói và Gạch Hoa Truyền Thống</title>
   <link rel="stylesheet" href="/src/assets/css/main.css">
 </head>
-<body data-page="index" class="min-h-screen flex flex-col bg-gray-50">
+<body data-page="index" class="bg-white">
   {{> header}}
-  
-  <main class="flex-grow">
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-      <div class="container mx-auto px-6 text-center">
-        <h1 class="text-5xl font-bold mb-4">Welcome to GSXD</h1>
-        <p class="text-xl mb-8">Building amazing digital experiences with cutting-edge technology</p>
-        <div class="space-x-4">
-          <a href="/services/" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">Our Services</a>
-          <a href="/contact/" class="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-block">Contact Us</a>
+
+  <main>
+    <!-- Hero Banner Carousel -->
+    <section class="relative bg-primary h-64 lg:h-96 overflow-hidden">
+      <!-- Decorative background pattern -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <!-- Top right decorative elements -->
+        <div class="absolute -right-32 -top-32 w-96 h-96 opacity-30">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+            <path d="M100 20L140 60L100 100L60 60Z" stroke="#C76E00" stroke-width="1.5" fill="none"/>
+            <path d="M100 50L125 75L100 100L75 75Z" stroke="#C76E00" stroke-width="1" fill="none" opacity="0.6"/>
+            <circle cx="100" cy="60" r="30" stroke="#C76E00" stroke-width="1" fill="none" opacity="0.4"/>
+          </svg>
+        </div>
+
+        <!-- Bottom right decorative elements -->
+        <div class="absolute right-0 bottom-0 w-80 h-80 opacity-25">
+          <svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+            <circle cx="75" cy="75" r="60" stroke="#C76E00" stroke-width="1" fill="none"/>
+            <circle cx="75" cy="75" r="40" stroke="#C76E00" stroke-width="1" fill="none" opacity="0.6"/>
+            <circle cx="75" cy="75" r="20" stroke="#C76E00" stroke-width="1" fill="none" opacity="0.4"/>
+            <path d="M75 15L135 135" stroke="#C76E00" stroke-width="1" opacity="0.3"/>
+            <path d="M15 75L135 75" stroke="#C76E00" stroke-width="1" opacity="0.3"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="banner-carousel relative w-full h-full z-10">
+        <!-- Slides -->
+        <div class="banner-slide active absolute w-full h-full transition-opacity duration-500" style="background: linear-gradient(135deg, rgba(46, 47, 42, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url('https://api.builder.io/api/v1/image/assets/TEMP/4dc3c5f102cb01252016f9a74cf61f8c102bb1ba?width=1200') center/cover no-repeat;">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <a href="#" class="bg-white bg-opacity-90 text-primary font-bold px-8 py-3 rounded text-center hover:bg-opacity-100 transition-all">
+              XEM CHI TIẾT
+            </a>
+          </div>
+        </div>
+
+        <div class="banner-slide absolute w-full h-full transition-opacity duration-500 opacity-0" style="background: linear-gradient(135deg, rgba(46, 47, 42, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url('https://api.builder.io/api/v1/image/assets/TEMP/ae7ffe93c1d88133ea470f7d59bdd44c72181779?width=1200') center/cover no-repeat;">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <a href="#" class="bg-white bg-opacity-90 text-primary font-bold px-8 py-3 rounded text-center hover:bg-opacity-100 transition-all">
+              XEM CHI TIẾT
+            </a>
+          </div>
+        </div>
+
+        <div class="banner-slide absolute w-full h-full transition-opacity duration-500 opacity-0" style="background: linear-gradient(135deg, rgba(46, 47, 42, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url('https://api.builder.io/api/v1/image/assets/TEMP/e1c5fe0b45c30520d936fef4e21dd1161213eb74?width=1200') center/cover no-repeat;">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <a href="#" class="bg-white bg-opacity-90 text-primary font-bold px-8 py-3 rounded text-center hover:bg-opacity-100 transition-all">
+              XEM CHI TIẾT
+            </a>
+          </div>
+        </div>
+
+        <div class="banner-slide absolute w-full h-full transition-opacity duration-500 opacity-0" style="background: linear-gradient(135deg, rgba(46, 47, 42, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url('https://api.builder.io/api/v1/image/assets/TEMP/a02fcb1fba4c9e35ee099689d3ee2859e6b25a5f?width=1200') center/cover no-repeat;">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <a href="#" class="bg-white bg-opacity-90 text-primary font-bold px-8 py-3 rounded text-center hover:bg-opacity-100 transition-all">
+              XEM CHI TIẾT
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner Navigation -->
+      <button class="banner-prev absolute left-4 lg:left-8 top-1/2 transform -translate-y-1/2 z-10 bg-primary bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all" aria-label="Previous slide">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+
+      <button class="banner-next absolute right-4 lg:right-8 top-1/2 transform -translate-y-1/2 z-10 bg-primary bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all" aria-label="Next slide">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+
+      <!-- Banner Dots -->
+      <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+        <button class="banner-dot active w-3 h-3 rounded-full bg-secondary transition-all" data-slide="0" aria-label="Slide 1"></button>
+        <button class="banner-dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-500 transition-all" data-slide="1" aria-label="Slide 2"></button>
+        <button class="banner-dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-500 transition-all" data-slide="2" aria-label="Slide 3"></button>
+        <button class="banner-dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-500 transition-all" data-slide="3" aria-label="Slide 4"></button>
+      </div>
+    </section>
+    <!-- Product Section 1: Gạch hoa thông gió -->
+    <section class="bg-neutral-2 py-16 lg:py-20">
+      <div class="container mx-auto px-6 lg:px-[140px]">
+        <h2 class="text-primary text-3xl lg:text-5xl font-bold uppercase mb-12">Gạch hoa thông gió</h2>
+        
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <!-- Product Card -->
+          <div class="flex flex-col">
+            <div class="bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square">
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/f97d89b2c08fd6e685ef13ec907976527253e1ee?width=444" alt="Sản phẩm" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
+            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
+            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
+          </div>
+          
+          <!-- Product Card -->
+          <div class="flex flex-col">
+            <div class="bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square">
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/b7e6e6698d76f6824c89433b0b509c1ad93b762c?width=444" alt="Sản phẩm" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
+            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
+            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
+          </div>
+          
+          <!-- Product Card -->
+          <div class="flex flex-col">
+            <div class="bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square">
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/ae5c99b01d862087b0bc65fb306cd3e2314ee4da?width=444" alt="Sản phẩm" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
+            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
+            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
+          </div>
+          
+          <!-- Product Card -->
+          <div class="flex flex-col">
+            <div class="bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square">
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/370613c8308f911d6911b99e5e92ca521d203305?width=444" alt="Sản phẩm" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
+            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
+            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
+          </div>
+          
+          <!-- Product Card -->
+          <div class="flex flex-col">
+            <div class="bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square">
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/26f95a1c9bb8fb09a998d3742e69bd406bd145a2?width=444" alt="Sản phẩm" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
+            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
+            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="py-16">
-      <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12">Why Choose Us</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div class="text-blue-600 text-4xl mb-4">🚀</div>
-            <h3 class="text-2xl font-semibold mb-2">Fast Performance</h3>
-            <p class="text-gray-600">Lightning-fast load times and optimal performance for your users.</p>
+    <!-- Product Section 2: Ngói hài văn miếu -->
+    <section class="bg-neutral-2 py-16 lg:py-20">
+      <div class="container mx-auto px-6 lg:px-[140px]">
+        <div class="flex justify-between items-center mb-12">
+          <h2 class="text-primary text-3xl lg:text-5xl font-bold uppercase">Ngói hài văn miếu</h2>
+          <a href="#" class="text-secondary font-bold text-base uppercase hover:opacity-80 transition-opacity flex items-center gap-2">
+            Xem thêm
+            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.707 2.29292C10.5184 2.11076 10.2658 2.00997 10.0036 2.01224C9.7414 2.01452 9.49059 2.11969 9.30518 2.3051C9.11977 2.49051 9.0146 2.74132 9.01233 3.00352C9.01005 3.26571 9.11084 3.51832 9.293 3.70692L12.586 6.99992H1C0.734784 6.99992 0.48043 7.10528 0.292893 7.29281C0.105357 7.48035 0 7.7347 0 7.99992C0 8.26514 0.105357 8.51949 0.292893 8.70703C0.48043 8.89456 0.734784 8.99992 1 8.99992H12.586L9.293 12.2929C9.19749 12.3852 9.12131 12.4955 9.0689 12.6175C9.01649 12.7395 8.9889 12.8707 8.98775 13.0035C8.9866 13.1363 9.0119 13.268 9.06218 13.3909C9.11246 13.5138 9.18671 13.6254 9.28061 13.7193C9.3745 13.8132 9.48615 13.8875 9.60905 13.9377C9.73194 13.988 9.86362 14.0133 9.9964 14.0122C10.1292 14.011 10.2604 13.9834 10.3824 13.931C10.5044 13.8786 10.6148 13.8024 10.707 13.7069L15.707 8.70692C15.8945 8.51939 15.9998 8.26508 15.9998 7.99992C15.9998 7.73475 15.8945 7.48045 15.707 7.29292L10.707 2.29292Z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div class="flex flex-col">
+            <div class="bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square">
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/f97d89b2c08fd6e685ef13ec907976527253e1ee?width=444" alt="Sản phẩm" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
+            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
+            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
           </div>
-          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div class="text-blue-600 text-4xl mb-4">💡</div>
-            <h3 class="text-2xl font-semibold mb-2">Innovative Solutions</h3>
-            <p class="text-gray-600">Cutting-edge technology and creative approaches to solve your challenges.</p>
+          
+          <div class="flex flex-col">
+            <div class="bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square">
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/d86edff7ca5c842c328463b7879ebf6ff6408daa?width=624" alt="Sản phẩm" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
+            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
+            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
           </div>
-          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div class="text-blue-600 text-4xl mb-4">🎯</div>
-            <h3 class="text-2xl font-semibold mb-2">Results-Driven</h3>
-            <p class="text-gray-600">Focused on delivering measurable results and exceeding expectations.</p>
+          
+          <div class="flex flex-col">
+            <div class="bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square">
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/370613c8308f911d6911b99e5e92ca521d203305?width=444" alt="Sản phẩm" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
+            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
+            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
           </div>
+          
+          <div class="flex flex-col">
+            <div class="bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square">
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/b7e6e6698d76f6824c89433b0b509c1ad93b762c?width=444" alt="Sản phẩm" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
+            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
+            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
+          </div>
+          
+          <div class="flex flex-col">
+            <div class="bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square">
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/ae5c99b01d862087b0bc65fb306cd3e2314ee4da?width=444" alt="Sản phẩm" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
+            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
+            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impressive Works Section -->
+    <section class="bg-white py-16 lg:py-20">
+      <div class="container mx-auto px-6 lg:px-[140px]">
+        <div class="flex justify-between items-end mb-12">
+          <h2 class="text-secondary text-3xl lg:text-5xl font-bold uppercase">Công trình ấn tượng</h2>
+          <div class="flex gap-4">
+            <button class="works-prev w-10 h-10 border border-primary rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Previous">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button class="works-next w-10 h-10 border border-primary rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Next">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Works Carousel -->
+        <div class="works-carousel-container relative">
+          <div class="works-carousel overflow-x-auto scroll-smooth pb-4">
+            <div class="works-track flex gap-6">
+              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/4dc3c5f102cb01252016f9a74cf61f8c102bb1ba?width=790') lightgray; background-size: cover; background-position: center;">
+                <div class="absolute inset-0 flex items-end justify-center pb-6">
+                  <h3 class="text-white text-lg font-semibold text-center px-4">Chùa Bái Đính, Ninh Bình</h3>
+                </div>
+              </div>
+
+              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/ae7ffe93c1d88133ea470f7d59bdd44c72181779?width=790') lightgray; background-size: cover; background-position: center;">
+                <div class="absolute inset-0 flex items-end justify-center pb-6">
+                  <h3 class="text-white text-lg font-semibold text-center px-4">Thiền Viện Trúc Lâm Đại Giác Sapa</h3>
+                </div>
+              </div>
+
+              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/e1c5fe0b45c30520d936fef4e21dd1161213eb74?width=790') lightgray; background-size: cover; background-position: center;">
+                <div class="absolute inset-0 flex items-end justify-center pb-6">
+                  <h3 class="text-white text-lg font-semibold text-center px-4">Chùa Cấp Cô Độc, Quảng Trị</h3>
+                </div>
+              </div>
+
+              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/a02fcb1fba4c9e35ee099689d3ee2859e6b25a5f?width=790') lightgray; background-size: cover; background-position: center;">
+                <div class="absolute inset-0 flex items-end justify-center pb-6">
+                  <h3 class="text-white text-lg font-semibold text-center px-4">Chùa Cấp Cô Độc, Quảng Trị</h3>
+                </div>
+              </div>
+
+              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/4dc3c5f102cb01252016f9a74cf61f8c102bb1ba?width=790') lightgray; background-size: cover; background-position: center;">
+                <div class="absolute inset-0 flex items-end justify-center pb-6">
+                  <h3 class="text-white text-lg font-semibold text-center px-4">Chùa Bái Đính, Ninh Bình</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section class="bg-primary text-white py-16 lg:py-20">
+      <div class="container mx-auto px-6 lg:px-[140px]">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-secondary text-3xl lg:text-5xl font-bold mb-8">Lời tri ân</h2>
+            <p class="text-neutral-1 leading-relaxed text-sm lg:text-base">
+              Hơn 40 năm gắn bó với gốm sứ trang trí nội - ngoại thất, chúng tôi tin rằng mỗi sản phẩm không chỉ là vật liệu xây dựng, mà là kết tinh của đất, lửa và tấm lòng người làm nghề.
+              <br/><br/>
+              Sinh ra và lớn lên tại làng gốm Bát Tràng, nơi lưu giữ di sản nghề gốm được truyền qua nhiều thế hệ, chúng tôi thừa hưởng nền tảng thủ công truyền thống cùng nguồn nguyên liệu quý giá của quê hương.
+            </p>
+            <p class="text-white font-bold text-lg mt-6">Giám đốc Vũ Mạnh Hải</p>
+          </div>
+          <div class="relative">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/37c10dc28fedafb50d45a3090e11281b42813d05?width=1287" alt="Director" class="w-full rounded-lg shadow-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="bg-primary text-white py-16 lg:py-20">
+      <div class="container mx-auto px-6 lg:px-[140px]">
+        <h2 class="text-secondary text-3xl lg:text-5xl font-bold uppercase mb-12">Tại sao lựa chọn TH Ceramics</h2>
+        
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
+          <div>
+            <div class="text-5xl font-bold text-neutral-1 mb-4">1000</div>
+            <p class="text-neutral-1 font-semibold">Công trình lớn nhỏ</p>
+          </div>
+          <div>
+            <div class="text-5xl font-bold text-neutral-1 mb-4">5000m2</div>
+            <p class="text-neutral-1 font-semibold">Nhà xưởng</p>
+          </div>
+          <div>
+            <div class="text-5xl font-bold text-neutral-1 mb-4">100%</div>
+            <p class="text-neutral-1 font-semibold">Sản xuất thủ công</p>
+          </div>
+          <div>
+            <div class="text-5xl font-bold text-neutral-1 mb-4">50</div>
+            <p class="text-neutral-1 font-semibold">Dòng sản phẩm</p>
+          </div>
+          <div>
+            <div class="text-5xl font-bold text-neutral-1 mb-4">40</div>
+            <p class="text-neutral-1 font-semibold">Năm kinh nghiệm</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customers & Partners Section -->
+    <section class="bg-neutral-2 py-16 lg:py-20">
+      <div class="container mx-auto px-6 lg:px-[140px]">
+        <h2 class="text-secondary text-3xl lg:text-5xl font-bold uppercase mb-12">Khách hàng & đối tác</h2>
+        
+        <!-- Partners Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div class="flex items-center justify-center bg-white rounded-lg p-6 h-40">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/fad46ef7213004745e251bdb907d0278fef0d8c6?width=438" alt="Partner" class="max-w-full max-h-full">
+          </div>
+          <div class="flex items-center justify-center bg-white rounded-lg p-6 h-40">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/a176ff71dfe225e60dbfe272490ca85f5b859488?width=438" alt="Partner" class="max-w-full max-h-full">
+          </div>
+          <div class="flex items-center justify-center bg-white rounded-lg p-6 h-40">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/481e5ef8ef240aad0de4ab420ff2787a53c49d05?width=436" alt="Partner" class="max-w-full max-h-full">
+          </div>
+          <div class="flex items-center justify-center bg-white rounded-lg p-6 h-40">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/93c542629cfba9116526a41d78df77d712fd7d20?width=438" alt="Partner" class="max-w-full max-h-full">
+          </div>
+          <div class="flex items-center justify-center bg-white rounded-lg p-6 h-40">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/c12a9cee02406c9bd9d84baa223dbb688b47f87e?width=438" alt="Partner" class="max-w-full max-h-full">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showroom Section -->
+    <section class="bg-white py-16 lg:py-20">
+      <div class="container mx-auto px-6 lg:px-[140px]">
+        <h2 class="text-secondary text-3xl lg:text-5xl font-bold uppercase mb-12">Showroom & xưởng sản xuất</h2>
+        
+        <!-- Showroom Images -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/0b2358b5fadd223468c33205ad49109198635fa6?width=876" alt="Showroom" class="w-full rounded-lg shadow-lg">
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/5c1d9ad47cbee677e6c0449d245a47655816287d?width=848" alt="Showroom" class="w-full rounded-lg shadow-lg">
+          <img src="https://api.builder.io/api/v1/image/assets/TEMP/81ecf528ad76300077c43b5664f0cefac0f9fc68?width=848" alt="Showroom" class="w-full rounded-lg shadow-lg">
         </div>
       </div>
     </section>
@@ -50,5 +367,77 @@
   {{> footer}}
   
   <script type="module" src="/src/js/main.js"></script>
+
+  <script>
+    // Banner Carousel
+    let bannerCurrentSlide = 0;
+    const bannerSlides = document.querySelectorAll('.banner-slide');
+    const bannerDots = document.querySelectorAll('.banner-dot');
+    const totalBannerSlides = bannerSlides.length;
+
+    function showBannerSlide(n) {
+      bannerSlides.forEach(slide => slide.classList.remove('opacity-100'));
+      bannerSlides.forEach(slide => slide.classList.add('opacity-0'));
+      bannerDots.forEach(dot => {
+        dot.classList.remove('bg-secondary');
+        dot.classList.add('bg-gray-400');
+      });
+
+      bannerSlides[n].classList.remove('opacity-0');
+      bannerSlides[n].classList.add('opacity-100');
+      bannerDots[n].classList.remove('bg-gray-400');
+      bannerDots[n].classList.add('bg-secondary');
+    }
+
+    function nextBannerSlide() {
+      bannerCurrentSlide = (bannerCurrentSlide + 1) % totalBannerSlides;
+      showBannerSlide(bannerCurrentSlide);
+    }
+
+    function prevBannerSlide() {
+      bannerCurrentSlide = (bannerCurrentSlide - 1 + totalBannerSlides) % totalBannerSlides;
+      showBannerSlide(bannerCurrentSlide);
+    }
+
+    // Banner Navigation
+    document.querySelector('.banner-next')?.addEventListener('click', nextBannerSlide);
+    document.querySelector('.banner-prev')?.addEventListener('click', prevBannerSlide);
+
+    // Banner Dots
+    document.querySelectorAll('.banner-dot').forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        bannerCurrentSlide = parseInt(e.target.dataset.slide);
+        showBannerSlide(bannerCurrentSlide);
+      });
+    });
+
+    // Auto-play banner
+    setInterval(nextBannerSlide, 5000);
+
+    // Works Carousel
+    const worksCarousel = document.querySelector('.works-carousel');
+    const worksTrack = document.querySelector('.works-track');
+    const worksPrev = document.querySelector('.works-prev');
+    const worksNext = document.querySelector('.works-next');
+
+    if (worksCarousel && worksTrack) {
+      const itemWidth = 400; // Approximate width of each item
+      const gap = 24; // Gap between items (6 in Tailwind = 24px)
+
+      worksPrev?.addEventListener('click', () => {
+        worksCarousel.scrollBy({
+          left: -(itemWidth + gap),
+          behavior: 'smooth'
+        });
+      });
+
+      worksNext?.addEventListener('click', () => {
+        worksCarousel.scrollBy({
+          left: itemWidth + gap,
+          behavior: 'smooth'
+        });
+      });
+    }
+  </script>
 </body>
 </html>

@@ -1,3 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Archivo', sans-serif;
+  }
+}
+
+@layer components {
+  /* Banner Carousel */
+  .banner-slide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .banner-slide.active,
+  .banner-slide.opacity-100 {
+    opacity: 1;
+  }
+
+  .banner-carousel {
+    animation: slideIn 0.3s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Banner decorative patterns */
+  section > .relative > svg {
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  }
+
+  /* Works Carousel Scrollbar */
+  .works-carousel {
+    scroll-behavior: smooth;
+  }
+
+  .works-carousel::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .works-carousel::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .works-carousel::-webkit-scrollbar-thumb {
+    background: #C76E00;
+    border-radius: 2px;
+  }
+
+  .works-carousel::-webkit-scrollbar-thumb:hover {
+    background: #a85c00;
+  }
+}
