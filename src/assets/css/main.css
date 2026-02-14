@@ -9,3 +9,49 @@
     font-family: 'Archivo', sans-serif;
   }
 }
+
+@layer components {
+  /* Banner Carousel */
+  .banner-slide {
+    opacity: 0;
+  }
+
+  .banner-slide.active {
+    opacity: 1;
+  }
+
+  .banner-carousel {
+    animation: slideIn 0.3s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Works Carousel Scrollbar */
+  .works-carousel {
+    scroll-behavior: smooth;
+  }
+
+  .works-carousel::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .works-carousel::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .works-carousel::-webkit-scrollbar-thumb {
+    background: #C76E00;
+    border-radius: 2px;
+  }
+
+  .works-carousel::-webkit-scrollbar-thumb:hover {
+    background: #a85c00;
+  }
+}
