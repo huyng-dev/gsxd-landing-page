@@ -11,86 +11,151 @@
 
   <main>
     <!-- Hero Banner Carousel -->
-    <section class="relative bg-primary h-64 lg:h-96 overflow-hidden">
-      <!-- Decorative background pattern -->
+    <section class="banner-section relative bg-primary overflow-hidden">
+      <!-- Decorative background images -->
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <!-- Top right decorative elements -->
-        <div class="absolute -right-32 -top-32 w-96 h-96 opacity-30">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-            <path d="M100 20L140 60L100 100L60 60Z" stroke="#C76E00" stroke-width="1.5" fill="none"/>
-            <path d="M100 50L125 75L100 100L75 75Z" stroke="#C76E00" stroke-width="1" fill="none" opacity="0.6"/>
-            <circle cx="100" cy="60" r="30" stroke="#C76E00" stroke-width="1" fill="none" opacity="0.4"/>
-          </svg>
-        </div>
-
-        <!-- Bottom right decorative elements -->
-        <div class="absolute right-0 bottom-0 w-80 h-80 opacity-25">
-          <svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-            <circle cx="75" cy="75" r="60" stroke="#C76E00" stroke-width="1" fill="none"/>
-            <circle cx="75" cy="75" r="40" stroke="#C76E00" stroke-width="1" fill="none" opacity="0.6"/>
-            <circle cx="75" cy="75" r="20" stroke="#C76E00" stroke-width="1" fill="none" opacity="0.4"/>
-            <path d="M75 15L135 135" stroke="#C76E00" stroke-width="1" opacity="0.3"/>
-            <path d="M15 75L135 75" stroke="#C76E00" stroke-width="1" opacity="0.3"/>
-          </svg>
-        </div>
+        <!-- Left decorative element (mirrored) -->
+        <img src="/src/assets/images/background-decorate.png" alt="" class="banner-decor-left absolute left-0 -bottom-40 h-full object-contain opacity-100" style="transform: scaleX(-1); max-width: 420px;">
+        <!-- Right decorative element -->
+        <img src="/src/assets/images/background-decorate.png" alt="" class="banner-decor-right absolute right-0 -top-40 h-full object-contain opacity-100" style="max-width: 520px; right: -60px;">
       </div>
-
-      <div class="banner-carousel relative w-full h-full z-10">
+      <!-- Carousel container centered -->
+      <div class="banner-carousel relative mx-auto h-full z-10">
         <!-- Slides -->
-        <div class="banner-slide active absolute w-full h-full transition-opacity duration-500" style="background: linear-gradient(135deg, rgba(46, 47, 42, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url('https://api.builder.io/api/v1/image/assets/TEMP/4dc3c5f102cb01252016f9a74cf61f8c102bb1ba?width=1200') center/cover no-repeat;">
-          <div class="absolute inset-0 flex items-center justify-center">
-            <a href="#" class="bg-white bg-opacity-90 text-primary font-bold px-8 py-3 rounded text-center hover:bg-opacity-100 transition-all">
+        <div class="banner-slide active absolute inset-0 transition-opacity duration-500">
+          <img src="/src/assets/images/banner-01.png" alt="Banner 1" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-end justify-center pb-16">
+            <a href="#" class="banner-cta-btn">
               XEM CHI TIẾT
             </a>
           </div>
         </div>
 
-        <div class="banner-slide absolute w-full h-full transition-opacity duration-500 opacity-0" style="background: linear-gradient(135deg, rgba(46, 47, 42, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url('https://api.builder.io/api/v1/image/assets/TEMP/ae7ffe93c1d88133ea470f7d59bdd44c72181779?width=1200') center/cover no-repeat;">
-          <div class="absolute inset-0 flex items-center justify-center">
-            <a href="#" class="bg-white bg-opacity-90 text-primary font-bold px-8 py-3 rounded text-center hover:bg-opacity-100 transition-all">
+        <div class="banner-slide active absolute inset-0 transition-opacity duration-500">
+          <img src="/src/assets/images/banner-01.png" alt="Banner 2" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-end justify-center pb-16">
+            <a href="#" class="banner-cta-btn">
               XEM CHI TIẾT
             </a>
           </div>
         </div>
 
-        <div class="banner-slide absolute w-full h-full transition-opacity duration-500 opacity-0" style="background: linear-gradient(135deg, rgba(46, 47, 42, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url('https://api.builder.io/api/v1/image/assets/TEMP/e1c5fe0b45c30520d936fef4e21dd1161213eb74?width=1200') center/cover no-repeat;">
-          <div class="absolute inset-0 flex items-center justify-center">
-            <a href="#" class="bg-white bg-opacity-90 text-primary font-bold px-8 py-3 rounded text-center hover:bg-opacity-100 transition-all">
+        <div class="banner-slide active absolute inset-0 transition-opacity duration-500">
+          <img src="/src/assets/images/banner-01.png" alt="Banner 3" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-end justify-center pb-16">
+            <a href="#" class="banner-cta-btn">
               XEM CHI TIẾT
             </a>
           </div>
         </div>
 
-        <div class="banner-slide absolute w-full h-full transition-opacity duration-500 opacity-0" style="background: linear-gradient(135deg, rgba(46, 47, 42, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url('https://api.builder.io/api/v1/image/assets/TEMP/a02fcb1fba4c9e35ee099689d3ee2859e6b25a5f?width=1200') center/cover no-repeat;">
-          <div class="absolute inset-0 flex items-center justify-center">
-            <a href="#" class="bg-white bg-opacity-90 text-primary font-bold px-8 py-3 rounded text-center hover:bg-opacity-100 transition-all">
+        <div class="banner-slide active absolute inset-0 transition-opacity duration-500">
+          <img src="/src/assets/images/banner-01.png" alt="Banner 4" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-end justify-center pb-16">
+            <a href="#" class="banner-cta-btn">
               XEM CHI TIẾT
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Banner Navigation -->
-      <button class="banner-prev absolute left-4 lg:left-8 top-1/2 transform -translate-y-1/2 z-10 bg-primary bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all" aria-label="Previous slide">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <!-- Banner Navigation - positioned at bottom outside carousel -->
+      <button class="banner-prev absolute left-[12.5%] bottom-6 z-20 w-10 h-10 border border-white/50 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all" aria-label="Previous slide">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
         </svg>
       </button>
 
-      <button class="banner-next absolute right-4 lg:right-8 top-1/2 transform -translate-y-1/2 z-10 bg-primary bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all" aria-label="Next slide">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <button class="banner-next absolute right-[12.5%] bottom-6 z-20 w-10 h-10 border border-white/50 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all" aria-label="Next slide">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
         </svg>
       </button>
 
       <!-- Banner Dots -->
-      <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-20">
         <button class="banner-dot active w-3 h-3 rounded-full bg-secondary transition-all" data-slide="0" aria-label="Slide 1"></button>
-        <button class="banner-dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-500 transition-all" data-slide="1" aria-label="Slide 2"></button>
-        <button class="banner-dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-500 transition-all" data-slide="2" aria-label="Slide 3"></button>
-        <button class="banner-dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-500 transition-all" data-slide="3" aria-label="Slide 4"></button>
+        <button class="banner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all" data-slide="1" aria-label="Slide 2"></button>
+        <button class="banner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all" data-slide="2" aria-label="Slide 3"></button>
+        <button class="banner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all" data-slide="3" aria-label="Slide 4"></button>
       </div>
     </section>
+
+    <!-- Impressive Works Section -->
+    <section class="bg-primary pt-16 lg:pt-20">
+      <div class="w-[75%] mx-auto mb-12">
+        <div class="flex items-center">
+          <h2 class="text-secondary text-3xl lg:text-4xl font-bold uppercase">Công trình ấn tượng</h2>
+        </div>
+      </div>
+
+        <!-- Works Carousel -->
+        <div class="works-carousel-container relative pl-[12.5%]">
+          <div class="works-carousel overflow-x-auto scroll-smooth">
+            <div class="works-track flex gap-6">
+              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/4dc3c5f102cb01252016f9a74cf61f8c102bb1ba?width=790') lightgray; background-size: cover; background-position: center;"></div>
+
+              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/ae7ffe93c1d88133ea470f7d59bdd44c72181779?width=790') lightgray; background-size: cover; background-position: center;"></div>
+
+              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/e1c5fe0b45c30520d936fef4e21dd1161213eb74?width=790') lightgray; background-size: cover; background-position: center;"></div>
+
+              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/a02fcb1fba4c9e35ee099689d3ee2859e6b25a5f?width=790') lightgray; background-size: cover; background-position: center;"></div>
+
+              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/a02fcb1fba4c9e35ee099689d3ee2859e6b25a5f?width=790') lightgray; background-size: cover; background-position: center;"></div>
+
+              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/4dc3c5f102cb01252016f9a74cf61f8c102bb1ba?width=790') lightgray; background-size: cover; background-position: center;"></div>
+            </div>
+          </div>
+          <!-- Custom scrollbar limited to 75% -->
+          <div class="mr-[14.5%] mt-8">
+            <div class="works-scrollbar-track">
+              <div class="works-scrollbar-thumb"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-[75%] mx-auto flex justify-end mt-12">
+          <div class="flex gap-4">
+            <button class="works-prev w-10 h-10 border border-white/50 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all" aria-label="Previous">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button class="works-next w-10 h-10 border border-white/50 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all" aria-label="Next">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+    </section>
+    
+    <!-- Customers & Partners Section -->
+    <section class="bg-primary py-8 lg:py-10">
+      <div class="w-[75%] mx-auto">
+        <h2 class="text-secondary text-3xl lg:text-4xl font-bold uppercase mb-12">Khách hàng & đối tác</h2>
+        
+        <!-- Partners Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div class="flex items-center justify-center rounded-lg p-6 h-40">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/fad46ef7213004745e251bdb907d0278fef0d8c6?width=438" alt="Partner" class="max-w-full max-h-full">
+          </div>
+          <div class="flex items-center justify-center rounded-lg p-6 h-40">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/a176ff71dfe225e60dbfe272490ca85f5b859488?width=438" alt="Partner" class="max-w-full max-h-full">
+          </div>
+          <div class="flex items-center justify-center rounded-lg p-6 h-40">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/481e5ef8ef240aad0de4ab420ff2787a53c49d05?width=436" alt="Partner" class="max-w-full max-h-full">
+          </div>
+          <div class="flex items-center justify-center rounded-lg p-6 h-40">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/93c542629cfba9116526a41d78df77d712fd7d20?width=438" alt="Partner" class="max-w-full max-h-full">
+          </div>
+          <div class="flex items-center justify-center rounded-lg p-6 h-40">
+            <img src="https://api.builder.io/api/v1/image/assets/TEMP/c12a9cee02406c9bd9d84baa223dbb688b47f87e?width=438" alt="Partner" class="max-w-full max-h-full">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Product Section 1: Gạch hoa thông gió -->
     <section class="bg-neutral-2 py-16 lg:py-20">
       <div class="container mx-auto px-6 lg:px-[140px]">
@@ -214,64 +279,6 @@
       </div>
     </section>
 
-    <!-- Impressive Works Section -->
-    <section class="bg-white py-16 lg:py-20">
-      <div class="container mx-auto px-6 lg:px-[140px]">
-        <div class="flex justify-between items-end mb-12">
-          <h2 class="text-secondary text-3xl lg:text-5xl font-bold uppercase">Công trình ấn tượng</h2>
-          <div class="flex gap-4">
-            <button class="works-prev w-10 h-10 border border-primary rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Previous">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-              </svg>
-            </button>
-            <button class="works-next w-10 h-10 border border-primary rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Next">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- Works Carousel -->
-        <div class="works-carousel-container relative">
-          <div class="works-carousel overflow-x-auto scroll-smooth pb-4">
-            <div class="works-track flex gap-6">
-              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/4dc3c5f102cb01252016f9a74cf61f8c102bb1ba?width=790') lightgray; background-size: cover; background-position: center;">
-                <div class="absolute inset-0 flex items-end justify-center pb-6">
-                  <h3 class="text-white text-lg font-semibold text-center px-4">Chùa Bái Đính, Ninh Bình</h3>
-                </div>
-              </div>
-
-              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/ae7ffe93c1d88133ea470f7d59bdd44c72181779?width=790') lightgray; background-size: cover; background-position: center;">
-                <div class="absolute inset-0 flex items-end justify-center pb-6">
-                  <h3 class="text-white text-lg font-semibold text-center px-4">Thiền Viện Trúc Lâm Đại Giác Sapa</h3>
-                </div>
-              </div>
-
-              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/e1c5fe0b45c30520d936fef4e21dd1161213eb74?width=790') lightgray; background-size: cover; background-position: center;">
-                <div class="absolute inset-0 flex items-end justify-center pb-6">
-                  <h3 class="text-white text-lg font-semibold text-center px-4">Chùa Cấp Cô Độc, Quảng Trị</h3>
-                </div>
-              </div>
-
-              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/a02fcb1fba4c9e35ee099689d3ee2859e6b25a5f?width=790') lightgray; background-size: cover; background-position: center;">
-                <div class="absolute inset-0 flex items-end justify-center pb-6">
-                  <h3 class="text-white text-lg font-semibold text-center px-4">Chùa Cấp Cô Độc, Quảng Trị</h3>
-                </div>
-              </div>
-
-              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(46, 47, 42, 0.00) 97.46%), url('https://api.builder.io/api/v1/image/assets/TEMP/4dc3c5f102cb01252016f9a74cf61f8c102bb1ba?width=790') lightgray; background-size: cover; background-position: center;">
-                <div class="absolute inset-0 flex items-end justify-center pb-6">
-                  <h3 class="text-white text-lg font-semibold text-center px-4">Chùa Bái Đính, Ninh Bình</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Thank You Section -->
     <section class="bg-primary text-white py-16 lg:py-20">
       <div class="container mx-auto px-6 lg:px-[140px]">
@@ -323,32 +330,6 @@
       </div>
     </section>
 
-    <!-- Customers & Partners Section -->
-    <section class="bg-neutral-2 py-16 lg:py-20">
-      <div class="container mx-auto px-6 lg:px-[140px]">
-        <h2 class="text-secondary text-3xl lg:text-5xl font-bold uppercase mb-12">Khách hàng & đối tác</h2>
-        
-        <!-- Partners Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          <div class="flex items-center justify-center bg-white rounded-lg p-6 h-40">
-            <img src="https://api.builder.io/api/v1/image/assets/TEMP/fad46ef7213004745e251bdb907d0278fef0d8c6?width=438" alt="Partner" class="max-w-full max-h-full">
-          </div>
-          <div class="flex items-center justify-center bg-white rounded-lg p-6 h-40">
-            <img src="https://api.builder.io/api/v1/image/assets/TEMP/a176ff71dfe225e60dbfe272490ca85f5b859488?width=438" alt="Partner" class="max-w-full max-h-full">
-          </div>
-          <div class="flex items-center justify-center bg-white rounded-lg p-6 h-40">
-            <img src="https://api.builder.io/api/v1/image/assets/TEMP/481e5ef8ef240aad0de4ab420ff2787a53c49d05?width=436" alt="Partner" class="max-w-full max-h-full">
-          </div>
-          <div class="flex items-center justify-center bg-white rounded-lg p-6 h-40">
-            <img src="https://api.builder.io/api/v1/image/assets/TEMP/93c542629cfba9116526a41d78df77d712fd7d20?width=438" alt="Partner" class="max-w-full max-h-full">
-          </div>
-          <div class="flex items-center justify-center bg-white rounded-lg p-6 h-40">
-            <img src="https://api.builder.io/api/v1/image/assets/TEMP/c12a9cee02406c9bd9d84baa223dbb688b47f87e?width=438" alt="Partner" class="max-w-full max-h-full">
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Showroom Section -->
     <section class="bg-white py-16 lg:py-20">
       <div class="container mx-auto px-6 lg:px-[140px]">
@@ -379,14 +360,14 @@
       bannerSlides.forEach(slide => slide.classList.remove('opacity-100'));
       bannerSlides.forEach(slide => slide.classList.add('opacity-0'));
       bannerDots.forEach(dot => {
-        dot.classList.remove('bg-secondary');
-        dot.classList.add('bg-gray-400');
+        dot.classList.remove('bg-secondary', 'active');
+        dot.classList.add('bg-white/40');
       });
 
       bannerSlides[n].classList.remove('opacity-0');
       bannerSlides[n].classList.add('opacity-100');
-      bannerDots[n].classList.remove('bg-gray-400');
-      bannerDots[n].classList.add('bg-secondary');
+      bannerDots[n].classList.remove('bg-white/40');
+      bannerDots[n].classList.add('bg-secondary', 'active');
     }
 
     function nextBannerSlide() {
@@ -437,6 +418,28 @@
           behavior: 'smooth'
         });
       });
+
+      // Custom scrollbar sync
+      const scrollbarThumb = document.querySelector('.works-scrollbar-thumb');
+      const scrollbarTrack = document.querySelector('.works-scrollbar-track');
+
+      function updateScrollbar() {
+        if (!scrollbarThumb || !scrollbarTrack) return;
+        const scrollWidth = worksCarousel.scrollWidth;
+        const clientWidth = worksCarousel.clientWidth;
+        const scrollLeft = worksCarousel.scrollLeft;
+        const trackWidth = scrollbarTrack.clientWidth;
+
+        const thumbWidth = Math.max((clientWidth / scrollWidth) * trackWidth, 40);
+        const thumbLeft = (scrollLeft / (scrollWidth - clientWidth)) * (trackWidth - thumbWidth);
+
+        scrollbarThumb.style.width = thumbWidth + 'px';
+        scrollbarThumb.style.left = thumbLeft + 'px';
+      }
+
+      worksCarousel.addEventListener('scroll', updateScrollbar);
+      window.addEventListener('resize', updateScrollbar);
+      updateScrollbar();
     }
   </script>
 </body>

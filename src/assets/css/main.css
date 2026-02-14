@@ -11,7 +11,32 @@
 }
 
 @layer components {
+  /* Banner Section */
+  .banner-section {
+    height: 460px;
+    padding: 24px 0;
+  }
+
+  @media (min-width: 768px) {
+    .banner-section {
+      height: 560px;
+      padding: 32px 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .banner-section {
+      height: 760px;
+      padding: 40px 0px 100px;
+    }
+  }
+
   /* Banner Carousel */
+  .banner-carousel {
+    width: 75%;
+    animation: slideIn 0.3s ease-in-out;
+  }
+
   .banner-slide {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -20,10 +45,6 @@
   .banner-slide.active,
   .banner-slide.opacity-100 {
     opacity: 1;
-  }
-
-  .banner-carousel {
-    animation: slideIn 0.3s ease-in-out;
   }
 
   @keyframes slideIn {
@@ -35,30 +56,59 @@
     }
   }
 
-  /* Banner decorative patterns */
-  section > .relative > svg {
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  /* Banner CTA Button */
+  .banner-cta-btn {
+    display: inline-block;
+    padding: 12px 36px;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+  }
+
+  .banner-cta-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+  }
+
+  /* Banner Dots */
+  .banner-dot.active {
+    background-color: #C76E00;
   }
 
   /* Works Carousel Scrollbar */
   .works-carousel {
     scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
   }
 
   .works-carousel::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  /* Custom scrollbar */
+  .works-scrollbar-track {
     height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    position: relative;
   }
 
-  .works-carousel::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .works-carousel::-webkit-scrollbar-thumb {
+  .works-scrollbar-thumb {
+    height: 100%;
     background: #C76E00;
     border-radius: 2px;
-  }
-
-  .works-carousel::-webkit-scrollbar-thumb:hover {
-    background: #a85c00;
+    min-width: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.1s ease;
+    cursor: pointer;
   }
 }
