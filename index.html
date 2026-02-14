@@ -11,8 +11,31 @@
 
   <main>
     <!-- Hero Banner Carousel -->
-    <section class="relative bg-primary h-96 lg:h-screen overflow-hidden">
-      <div class="banner-carousel relative w-full h-full">
+    <section class="relative bg-primary h-64 lg:h-96 overflow-hidden">
+      <!-- Decorative background pattern -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <!-- Top right decorative elements -->
+        <div class="absolute -right-32 -top-32 w-96 h-96 opacity-30">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+            <path d="M100 20L140 60L100 100L60 60Z" stroke="#C76E00" stroke-width="1.5" fill="none"/>
+            <path d="M100 50L125 75L100 100L75 75Z" stroke="#C76E00" stroke-width="1" fill="none" opacity="0.6"/>
+            <circle cx="100" cy="60" r="30" stroke="#C76E00" stroke-width="1" fill="none" opacity="0.4"/>
+          </svg>
+        </div>
+
+        <!-- Bottom right decorative elements -->
+        <div class="absolute right-0 bottom-0 w-80 h-80 opacity-25">
+          <svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+            <circle cx="75" cy="75" r="60" stroke="#C76E00" stroke-width="1" fill="none"/>
+            <circle cx="75" cy="75" r="40" stroke="#C76E00" stroke-width="1" fill="none" opacity="0.6"/>
+            <circle cx="75" cy="75" r="20" stroke="#C76E00" stroke-width="1" fill="none" opacity="0.4"/>
+            <path d="M75 15L135 135" stroke="#C76E00" stroke-width="1" opacity="0.3"/>
+            <path d="M15 75L135 75" stroke="#C76E00" stroke-width="1" opacity="0.3"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="banner-carousel relative w-full h-full z-10">
         <!-- Slides -->
         <div class="banner-slide active absolute w-full h-full transition-opacity duration-500" style="background: linear-gradient(135deg, rgba(46, 47, 42, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url('https://api.builder.io/api/v1/image/assets/TEMP/4dc3c5f102cb01252016f9a74cf61f8c102bb1ba?width=1200') center/cover no-repeat;">
           <div class="absolute inset-0 flex items-center justify-center">
