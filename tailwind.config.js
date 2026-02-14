@@ -15,7 +15,7 @@ export default {
                 },
             },
             fontFamily: {
-                archivo: ['Archivo', 'sans-serif'],
+                'archivo': ['"Archivo"', 'sans-serif'],
             },
         },
     },

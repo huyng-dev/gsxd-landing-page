@@ -6,6 +6,6 @@
 
 @layer base {
   body {
-    @apply font-archivo;
+    font-family: 'Archivo', sans-serif;
   }
 }
