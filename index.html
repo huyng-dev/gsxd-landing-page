@@ -12,604 +12,17 @@
   {{> header}}
 
   <main>
-    <!-- Hero Banner Carousel -->
-    <section class="banner-section relative bg-primary overflow-hidden">
-      <!-- Decorative background images -->
-      <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <!-- Left decorative element (mirrored) -->
-        <img src="/src/assets/images/background-decorate.png" alt="" class="banner-decor-left absolute left-0 -bottom-40 h-full object-contain opacity-100" style="transform: scaleX(-1); max-width: 420px;">
-        <!-- Right decorative element -->
-        <img src="/src/assets/images/background-decorate.png" alt="" class="banner-decor-right absolute right-0 -top-40 h-full object-contain opacity-100" style="max-width: 520px; right: -60px;">
-      </div>
-      <!-- Carousel container centered -->
-      <div class="banner-carousel relative mx-auto h-full z-10">
-        <!-- Slides -->
-        <div class="banner-slide active absolute inset-0 transition-opacity duration-500">
-          <img src="/src/assets/images/banner-01.png" alt="Banner 1" class="w-full h-full object-cover">
-          <div class="absolute inset-0 flex items-end justify-center pb-16">
-            <a href="#" class="banner-cta-btn">
-              XEM CHI TIẾT
-            </a>
-          </div>
-        </div>
-
-        <div class="banner-slide active absolute inset-0 transition-opacity duration-500">
-          <img src="/src/assets/images/banner-01.png" alt="Banner 2" class="w-full h-full object-cover">
-          <div class="absolute inset-0 flex items-end justify-center pb-16">
-            <a href="#" class="banner-cta-btn">
-              XEM CHI TIẾT
-            </a>
-          </div>
-        </div>
-
-        <div class="banner-slide active absolute inset-0 transition-opacity duration-500">
-          <img src="/src/assets/images/banner-01.png" alt="Banner 3" class="w-full h-full object-cover">
-          <div class="absolute inset-0 flex items-end justify-center pb-16">
-            <a href="#" class="banner-cta-btn">
-              XEM CHI TIẾT
-            </a>
-          </div>
-        </div>
-
-        <div class="banner-slide active absolute inset-0 transition-opacity duration-500">
-          <img src="/src/assets/images/banner-01.png" alt="Banner 4" class="w-full h-full object-cover">
-          <div class="absolute inset-0 flex items-end justify-center pb-16">
-            <a href="#" class="banner-cta-btn">
-              XEM CHI TIẾT
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Banner Navigation - positioned at bottom outside carousel -->
-      <button class="banner-prev absolute left-[12.5%] bottom-6 z-20 w-10 h-10 border border-white/50 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all" aria-label="Previous slide">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-        </svg>
-      </button>
-
-      <button class="banner-next absolute right-[12.5%] bottom-6 z-20 w-10 h-10 border border-white/50 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all" aria-label="Next slide">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </button>
-
-      <!-- Banner Dots -->
-      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-20">
-        <button class="banner-dot active w-3 h-3 rounded-full bg-secondary transition-all" data-slide="0" aria-label="Slide 1"></button>
-        <button class="banner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all" data-slide="1" aria-label="Slide 2"></button>
-        <button class="banner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all" data-slide="2" aria-label="Slide 3"></button>
-        <button class="banner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all" data-slide="3" aria-label="Slide 4"></button>
-      </div>
-    </section>
-
-    <!-- Impressive Works Section -->
-    <section class="bg-primary pt-16 lg:pt-20">
-      <div class="w-[75%] mx-auto mb-12">
-        <div class="flex items-center">
-          <h2 class="text-secondary text-3xl lg:text-4xl font-bold uppercase">Công trình ấn tượng</h2>
-        </div>
-      </div>
-
-        <!-- Works Carousel -->
-        <div class="works-carousel-container relative pl-[12.5%]">
-          <div class="works-carousel overflow-x-auto scroll-smooth">
-            <div class="works-track flex gap-6">
-              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer relative">
-                <img src="/src/assets/images/work-01.jpg" alt="Chùa Bái Đính, Ninh Bình" class="w-full h-full object-cover">
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-12">
-                  <p class="text-white font-semibold text-lg">Chùa Bái Đính, Ninh Bình</p>
-                </div>
-              </div>
-
-              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer relative">
-                <img src="/src/assets/images/work-02.jpg" alt="Thiền Viện Trúc Lâm Đại Giác Sapa" class="w-full h-full object-cover">
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-12">
-                  <p class="text-white font-semibold text-lg">Thiền Viện Trúc Lâm Đại Giác Sapa</p>
-                </div>
-              </div>
-
-              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer relative">
-                <img src="/src/assets/images/work-01.jpg" alt="Chùa Cấp Cô Độc, Quảng Trị" class="w-full h-full object-cover">
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-12">
-                  <p class="text-white font-semibold text-lg">Chùa Cấp Cô Độc, Quảng Trị</p>
-                </div>
-              </div>
-
-              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer relative">
-                <img src="/src/assets/images/work-02.jpg" alt="Chùa Cấp Cô Độc, Quảng Trị" class="w-full h-full object-cover">
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-12">
-                  <p class="text-white font-semibold text-lg">Chùa Cấp Cô Độc, Quảng Trị</p>
-                </div>
-              </div>
-
-              <div class="works-item flex-shrink-0 w-80 lg:w-96 h-80 rounded-sm overflow-hidden group cursor-pointer relative">
-                <img src="/src/assets/images/work-01.jpg" alt="Đền Trần, Nam Định" class="w-full h-full object-cover">
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-12">
-                  <p class="text-white font-semibold text-lg">Đền Trần, Nam Định</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Custom scrollbar limited to 75% -->
-          <div class="mr-[14.5%] mt-8">
-            <div class="works-scrollbar-track">
-              <div class="works-scrollbar-thumb"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-[75%] mx-auto flex justify-end mt-12">
-          <div class="flex gap-4">
-            <button class="works-prev w-10 h-10 border border-white/50 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all" aria-label="Previous">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-              </svg>
-            </button>
-            <button class="works-next w-10 h-10 border border-white/50 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all" aria-label="Next">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-    </section>
-    
-    <!-- Customers & Partners Section -->
-    <section class="bg-primary py-12 lg:py-16 relative">
-      <div class="w-[75%] mx-auto">
-        <h2 class="text-secondary text-3xl lg:text-4xl font-bold uppercase mb-12">Khách hàng & đối tác</h2>
-        
-        <!-- Partners Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-6">
-          <div class="flex items-center justify-center rounded-lg p-6 h-40">
-            <img src="/src/assets/images/partner-01.png" alt="Partner" class="max-w-full max-h-full">
-          </div>
-          <div class="flex items-center justify-center rounded-lg p-6 h-40">
-            <img src="/src/assets/images/partner-02.png" alt="Partner" class="max-w-full max-h-full">
-          </div>
-          <div class="flex items-center justify-center rounded-lg p-6 h-40">
-            <img src="/src/assets/images/partner-03.png" alt="Partner" class="max-w-full max-h-full">
-          </div>
-          <div class="flex items-center justify-center rounded-lg p-6 h-40">
-            <img src="/src/assets/images/partner-04.png" alt="Partner" class="max-w-full max-h-full">
-          </div>
-          <div class="flex items-center justify-center rounded-lg p-6 h-40">
-            <img src="/src/assets/images/partner-05.png" alt="Partner" class="max-w-full max-h-full">
-          </div>
-        </div>
-      </div>
-
-      <!-- Partners Navigation -->
-      <button class="partner-prev absolute left-[6%] xl:left-[7%] top-[60%] -translate-y-1/2 z-20 w-10 h-10 border border-white/50 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all focus:outline-none" aria-label="Previous partner">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-        </svg>
-      </button>
-
-      <button class="partner-next absolute right-[6%] xl:right-[7%] top-[60%] -translate-y-1/2 z-20 w-10 h-10 border border-white/50 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all focus:outline-none" aria-label="Next partner">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </button>
-
-      <!-- Partners Dots -->
-      <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-20">
-        <button class="partner-dot active w-3 h-3 rounded-full bg-secondary transition-all" data-slide="0" aria-label="Page 1"></button>
-        <button class="partner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all" data-slide="1" aria-label="Page 2"></button>
-        <button class="partner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all" data-slide="2" aria-label="Page 3"></button>
-        <button class="partner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all" data-slide="3" aria-label="Page 4"></button>
-      </div>
-    </section>
-
-        <!-- Product Section 1: Ngói âm dương -->
-    <section class="bg-neutral-2 pt-16 lg:pt-20">
-      <div class="w-[75%] mx-auto">
-        <div class="flex justify-between items-center mb-12">
-          <h2 class="text-primary text-3xl lg:text-4xl font-bold uppercase">Ngói âm dương</h2>
-          <a href="#" class="text-secondary font-bold text-base uppercase hover:opacity-80 transition-opacity flex items-center gap-2">
-            Xem thêm
-            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.707 2.29292C10.5184 2.11076 10.2658 2.00997 10.0036 2.01224C9.7414 2.01452 9.49059 2.11969 9.30518 2.3051C9.11977 2.49051 9.0146 2.74132 9.01233 3.00352C9.01005 3.26571 9.11084 3.51832 9.293 3.70692L12.586 6.99992H1C0.734784 6.99992 0.48043 7.10528 0.292893 7.29281C0.105357 7.48035 0 7.7347 0 7.99992C0 8.26514 0.105357 8.51949 0.292893 8.70703C0.48043 8.89456 0.734784 8.99992 1 8.99992H12.586L9.293 12.2929C9.19749 12.3852 9.12131 12.4955 9.0689 12.6175C9.01649 12.7395 8.9889 12.8707 8.98775 13.0035C8.9866 13.1363 9.0119 13.268 9.06218 13.3909C9.11246 13.5138 9.18671 13.6254 9.28061 13.7193C9.3745 13.8132 9.48615 13.8875 9.60905 13.9377C9.73194 13.988 9.86362 14.0133 9.9964 14.0122C10.1292 14.011 10.2604 13.9834 10.3824 13.931C10.5044 13.8786 10.6148 13.8024 10.707 13.7069L15.707 8.70692C15.8945 8.51939 15.9998 8.26508 15.9998 7.99992C15.9998 7.73475 15.8945 7.48045 15.707 7.29292L10.707 2.29292Z" fill="currentColor"/>
-            </svg>
-          </a>
-        </div>
-        
-        <!-- Product Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-01.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-          
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-02.png" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-          
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-03.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-          
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-04.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-          
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-05.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Product Section 2: Ngói hài văn miếu -->
-    <section class="bg-neutral-2 pt-16 lg:pt-20">
-      <div class="w-[75%] mx-auto">
-        <div class="flex justify-between items-center mb-12">
-          <h2 class="text-primary text-3xl lg:text-4xl font-bold uppercase">Ngói hài văn miếu</h2>
-          <a href="#" class="text-secondary font-bold text-base uppercase hover:opacity-80 transition-opacity flex items-center gap-2">
-            Xem thêm
-            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.707 2.29292C10.5184 2.11076 10.2658 2.00997 10.0036 2.01224C9.7414 2.01452 9.49059 2.11969 9.30518 2.3051C9.11977 2.49051 9.0146 2.74132 9.01233 3.00352C9.01005 3.26571 9.11084 3.51832 9.293 3.70692L12.586 6.99992H1C0.734784 6.99992 0.48043 7.10528 0.292893 7.29281C0.105357 7.48035 0 7.7347 0 7.99992C0 8.26514 0.105357 8.51949 0.292893 8.70703C0.48043 8.89456 0.734784 8.99992 1 8.99992H12.586L9.293 12.2929C9.19749 12.3852 9.12131 12.4955 9.0689 12.6175C9.01649 12.7395 8.9889 12.8707 8.98775 13.0035C8.9866 13.1363 9.0119 13.268 9.06218 13.3909C9.11246 13.5138 9.18671 13.6254 9.28061 13.7193C9.3745 13.8132 9.48615 13.8875 9.60905 13.9377C9.73194 13.988 9.86362 14.0133 9.9964 14.0122C10.1292 14.011 10.2604 13.9834 10.3824 13.931C10.5044 13.8786 10.6148 13.8024 10.707 13.7069L15.707 8.70692C15.8945 8.51939 15.9998 8.26508 15.9998 7.99992C15.9998 7.73475 15.8945 7.48045 15.707 7.29292L10.707 2.29292Z" fill="currentColor"/>
-            </svg>
-          </a>
-        </div>
-        
-        <!-- Product Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-01.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-          
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-08.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-          
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-05.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-          
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-06.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-          
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-05.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Product Section 3: Gạch hoa thông gió -->
-    <section class="bg-neutral-2 py-16 lg:py-20">
-      <div class="w-[75%] mx-auto">
-        <div class="flex justify-between items-center mb-12">
-          <h2 class="text-primary text-3xl lg:text-4xl font-bold uppercase">Gạch hoa thông gió</h2>
-          <a href="#" class="text-secondary font-bold text-base uppercase hover:opacity-80 transition-opacity flex items-center gap-2">
-            Xem thêm
-            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.707 2.29292C10.5184 2.11076 10.2658 2.00997 10.0036 2.01224C9.7414 2.01452 9.49059 2.11969 9.30518 2.3051C9.11977 2.49051 9.0146 2.74132 9.01233 3.00352C9.01005 3.26571 9.11084 3.51832 9.293 3.70692L12.586 6.99992H1C0.734784 6.99992 0.48043 7.10528 0.292893 7.29281C0.105357 7.48035 0 7.7347 0 7.99992C0 8.26514 0.105357 8.51949 0.292893 8.70703C0.48043 8.89456 0.734784 8.99992 1 8.99992H12.586L9.293 12.2929C9.19749 12.3852 9.12131 12.4955 9.0689 12.6175C9.01649 12.7395 8.9889 12.8707 8.98775 13.0035C8.9866 13.1363 9.0119 13.268 9.06218 13.3909C9.11246 13.5138 9.18671 13.6254 9.28061 13.7193C9.3745 13.8132 9.48615 13.8875 9.60905 13.9377C9.73194 13.988 9.86362 14.0133 9.9964 14.0122C10.1292 14.011 10.2604 13.9834 10.3824 13.931C10.5044 13.8786 10.6148 13.8024 10.707 13.7069L15.707 8.70692C15.8945 8.51939 15.9998 8.26508 15.9998 7.99992C15.9998 7.73475 15.8945 7.48045 15.707 7.29292L10.707 2.29292Z" fill="currentColor"/>
-            </svg>
-          </a>
-        </div>
-        
-        <!-- Product Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-01.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-          
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-07.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-          
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-05.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-          
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-06.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-          
-          <div class="flex flex-col">
-            <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
-              <img src="/src/assets/images/ngoi-06.jpg" alt="Sản phẩm" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-primary font-semibold text-sm uppercase mb-2">Riềm Âm Dương Sen Bầu</h3>
-            <p class="text-gray-500 text-sm mb-2">MSP: 1234RDS</p>
-            <p class="text-secondary font-bold text-sm">Giá: 675.000 đ/m2</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Thank You Section -->
-    <section class="bg-primary text-white py-16 lg:py-20 relative overflow-hidden">
-      <img src="/src/assets/images/background-decorate.png" alt="" class="absolute -bottom-36 -right-20 w-[560px] h-[541px] opacity-100 pointer-events-none">
-      <div class="w-[75%] mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div class="flex flex-col justify-center">
-            <h2 class="text-secondary text-3xl lg:text-4xl font-bold mb-8">Lời tri ân</h2>
-            <p class="text-neutral-1 leading-relaxed text-sm lg:text-base">
-              Hơn 40 năm gắn bó với gốm sứ trang trí nội - ngoại thất, chúng tôi tin rằng mỗi sản phẩm không chỉ là vật liệu xây dựng, mà là kết tinh của đất, lửa và tấm lòng người làm nghề.
-              <br/><br/>
-              Sinh ra và lớn lên tại làng gốm Bát Tràng, nơi lưu giữ di sản nghề gốm được truyền qua nhiều thế hệ, chúng tôi thừa hưởng nền tảng thủ công truyền thống cùng nguồn nguyên liệu quý giá của quê hương. Là người kế thừa thể hệ thứ ba của dòng họ Vũ Gia, tôi tiếp bước con đường cha ông đã gây dựng, gìn giữ và làm giàu thêm giá trị di sản gốm Việt, đặc biệt là ngói âm dương loại ngói gắn liền với kiến trúc cung đình, đền chùa từ thời Lý – Trần đến nay.
-              <br/><br/>
-              Từ ngói lợp gốm sứ, gạch hoa thông gió đến các phụ kiện trang trí, mỗi sản phẩm đều là sự giao thoa giữa di sản truyền thống và tinh thần đương đại. Hành trình ấy đã đưa sản phẩm của chúng tôi hiện diện trên khắp mọi miền đất nước, trở thành một phần trong nhiều công trình mang đậm bản sắc và thẩm mỹ Việt.
-            </p>
-            <div class="flex flex-col items-start">
-              <div class="flex flex-col items-center">
-                <img src="/src/assets/images/sign.png" alt="Signature">
-                <p class="text-white font-bold text-lg mt-2">Giám đốc Vũ Mạnh Hải</p>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <img src="/src/assets/images/ceo.jpg" alt="Director" class="w-full rounded-lg shadow-lg">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Awards & Achievements Section -->
-    <section class="bg-neutral-2 pt-16 lg:pt-20 overflow-hidden">
-      <div class="w-[75%] mx-auto mb-12">
-        <h2 class="text-secondary text-3xl lg:text-4xl font-bold uppercase">Giải thưởng & thành tựu</h2>
-      </div>
-
-      <div class="w-[75%] mx-auto relative">
-        <div class="swiper awards-swiper w-full py-10">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide w-[300px] h-[450px] relative overflow-hidden shadow-2xl transition-all duration-300">
-              <img src="/src/assets/images/award-01.jpg" alt="Award 1" class="w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                <p class="text-white font-medium text-sm">Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà Nội trao tặng</p>
-              </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide w-[300px] h-[450px] relative overflow-hidden shadow-2xl transition-all duration-300">
-              <img src="/src/assets/images/ceo.jpg" alt="Award 2" class="w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                <p class="text-white font-medium text-sm">Ông Vũ Mạnh Hải - Nghệ nhân Hà Nội năm 2024 do UBND thành phố Hà Nội trao tặng</p>
-              </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="swiper-slide w-[300px] h-[450px] relative overflow-hidden shadow-2xl transition-all duration-300">
-              <img src="/src/assets/images/award-03.jpg" alt="Award 3" class="w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                <p class="text-white font-medium text-sm">Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà Nội trao tặng</p>
-              </div>
-            </div>
-            <!-- Slide 4 -->
-            <div class="swiper-slide w-[300px] h-[450px] relative overflow-hidden shadow-2xl transition-all duration-300">
-              <img src="/src/assets/images/award-02.jpg" alt="Award 4" class="w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                <p class="text-white font-medium text-sm">Ông Vũ Mạnh Hải - Nghệ nhân Hà Nội năm 2024 do UBND thành phố Hà Nội trao tặng</p>
-              </div>
-            </div>
-            <!-- Slide 5 -->
-            <div class="swiper-slide w-[300px] h-[450px] relative overflow-hidden shadow-2xl transition-all duration-300">
-              <img src="/src/assets/images/award-05.jpg" alt="Award 5" class="w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                <p class="text-white font-medium text-sm">Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà Nội trao tặng</p>
-              </div>
-            </div>
-            <!-- Slide 6 -->
-            <div class="swiper-slide w-[300px] h-[450px] relative overflow-hidden shadow-2xl transition-all duration-300">
-              <img src="/src/assets/images/award-01.jpg" alt="Award 1" class="w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                <p class="text-white font-medium text-sm">Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà Nội trao tặng</p>
-              </div>
-            </div>
-            <!-- Slide 7 -->
-            <div class="swiper-slide w-[300px] h-[450px] relative overflow-hidden shadow-2xl transition-all duration-300">
-              <img src="/src/assets/images/ceo.jpg" alt="Award 2" class="w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                <p class="text-white font-medium text-sm">Ông Vũ Mạnh Hải - Nghệ nhân Hà Nội năm 2024 do UBND thành phố Hà Nội trao tặng</p>
-              </div>
-            </div>
-            <!-- Slide 8 -->
-            <div class="swiper-slide w-[300px] h-[450px] relative overflow-hidden shadow-2xl transition-all duration-300">
-              <img src="/src/assets/images/award-03.jpg" alt="Award 3" class="w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                <p class="text-white font-medium text-sm">Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà Nội trao tặng</p>
-              </div>
-            </div>
-            <!-- Slide 9 -->
-            <div class="swiper-slide w-[300px] h-[450px] relative overflow-hidden shadow-2xl transition-all duration-300">
-              <img src="/src/assets/images/award-02.jpg" alt="Award 4" class="w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                <p class="text-white font-medium text-sm">Ông Vũ Mạnh Hải - Nghệ nhân Hà Nội năm 2024 do UBND thành phố Hà Nội trao tặng</p>
-              </div>
-            </div>
-            <!-- Slide 10 -->
-            <div class="swiper-slide w-[300px] h-[450px] relative overflow-hidden shadow-2xl transition-all duration-300">
-              <img src="/src/assets/images/award-05.jpg" alt="Award 5" class="w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                <p class="text-white font-medium text-sm">Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà Nội trao tặng</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Swiper Navigation -->
-        <div class="awards-prev absolute -left-[6%] xl:-left-[7%] top-[50%] -translate-y-1/2 z-20 w-10 h-10 border border-black/50 rounded-full flex items-center justify-center text-black/70 hover:border-black hover:text-black transition-all cursor-pointer">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-          </svg>
-        </div>
-
-        <div class="awards-next absolute -right-[6%] xl:-right-[7%] top-[50%] -translate-y-1/2 z-20 w-10 h-10 border border-black/50 rounded-full flex items-center justify-center text-black/70 hover:border-black hover:text-black transition-all cursor-pointer">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- Press Section -->
-    <section class="bg-neutral-2 py-16 lg:py-20 overflow-hidden">
-      <div class="w-[75%] mx-auto mb-12">
-        <h2 class="text-secondary text-3xl lg:text-4xl font-bold uppercase">Báo chí nói về chúng tôi</h2>
-      </div>
-
-      <div class="w-[75%] mx-auto flex flex-wrap items-center justify-between gap-6">
-        <div class="flex items-center justify-center h-14 lg:h-16">
-          <img src="/src/assets/images/news-01.png" alt="Dân Trí" class="h-full w-auto object-contain">
-        </div>
-        <div class="flex items-center justify-center h-14 lg:h-16">
-          <img src="/src/assets/images/news-02.png" alt="Vietnamnet" class="h-full w-auto object-contain">
-        </div>
-        <div class="flex items-center justify-center h-14 lg:h-16">
-          <img src="/src/assets/images/news-03.png" alt="VnExpress" class="h-full w-auto object-contain">
-        </div>
-        <div class="flex items-center justify-center h-14 lg:h-16">
-          <img src="/src/assets/images/news-04.png" alt="Hà Nội Mới" class="h-full w-auto object-contain">
-        </div>
-        <div class="flex items-center justify-center h-14 lg:h-16">
-          <img src="/src/assets/images/news-05.png" alt="VTV3" class="h-full w-auto object-contain">
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="bg-primary text-white py-16 lg:py-20">
-      <div class="w-[75%] mx-auto">
-        <h2 class="text-secondary text-3xl lg:text-4xl font-bold uppercase mb-12">Tại sao lựa chọn TH Ceramics</h2>
-        <!-- Video Player Placeholder -->
-        <div class="relative w-full aspect-video mb-12 rounded-lg overflow-hidden cursor-pointer group">
-          <img src="/src/assets/images/video-placeholder.jpg" alt="Video placeholder" class="w-full h-full object-cover brightness-50 group-hover:brightness-[0.4] transition-all duration-300">
-          <!-- Play Button -->
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300">
-              <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Stats Grid -->
-        <div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
-          <div>
-            <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3">1000</div>
-            <p class="text-neutral-1 font-semibold">Công trình lớn nhỏ</p>
-          </div>
-          <div>
-            <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3">5000m<sup>2</sup></div>
-            <p class="text-neutral-1 font-semibold">Nhà xưởng</p>
-          </div>
-          <div>
-            <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3">100%</div>
-            <p class="text-neutral-1 font-semibold">Sản xuất thủ công</p>
-          </div>
-          <div>
-            <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3">50</div>
-            <p class="text-neutral-1 font-semibold">Dòng sản phẩm</p>
-          </div>
-          <div>
-            <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3">40</div>
-            <p class="text-neutral-1 font-semibold">Năm kinh nghiệm</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Showroom Section -->
-    <section class="bg-primary py-16 lg:py-20">
-      <div class="w-[75%] mx-auto">
-        <div class="flex justify-between items-center mb-12">
-          <h2 class="text-secondary text-3xl lg:text-4xl font-bold uppercase">Showroom & xưởng sản xuất</h2>
-          <a href="/showroom/" class="text-secondary font-bold text-base uppercase hover:opacity-80 transition-opacity flex items-center gap-2">
-            Xem thêm
-            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.707 2.29292C10.5184 2.11076 10.2658 2.00997 10.0036 2.01224C9.7414 2.01452 9.49059 2.11969 9.30518 2.3051C9.11977 2.49051 9.0146 2.74132 9.01233 3.00352C9.01005 3.26571 9.11084 3.51832 9.293 3.70692L12.586 6.99992H1C0.734784 6.99992 0.48043 7.10528 0.292893 7.29281C0.105357 7.48035 0 7.7347 0 7.99992C0 8.26514 0.105357 8.51949 0.292893 8.70703C0.48043 8.89456 0.734784 8.99992 1 8.99992H12.586L9.293 12.2929C9.19749 12.3852 9.12131 12.4955 9.0689 12.6175C9.01649 12.7395 8.9889 12.8707 8.98775 13.0035C8.9866 13.1363 9.0119 13.268 9.06218 13.3909C9.11246 13.5138 9.18671 13.6254 9.28061 13.7193C9.3745 13.8132 9.48615 13.8875 9.60905 13.9377C9.73194 13.988 9.86362 14.0133 9.9964 14.0122C10.1292 14.011 10.2604 13.9834 10.3824 13.931C10.5044 13.8786 10.6148 13.8024 10.707 13.7069L15.707 8.70692C15.8945 8.51939 15.9998 8.26508 15.9998 7.99992C15.9998 7.73475 15.8945 7.48045 15.707 7.29292L10.707 2.29292Z" fill="currentColor"/>
-            </svg>
-          </a>
-        </div>
-        <!-- Showroom Images -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <img src="/src/assets/images/showroom-01.png" alt="Showroom" class="w-full h-64 lg:h-80 object-cover rounded-lg shadow-lg">
-          <img src="/src/assets/images/showroom-02.png" alt="Showroom" class="w-full h-64 lg:h-80 object-cover rounded-lg shadow-lg">
-          <img src="/src/assets/images/showroom-03.png" alt="Showroom" class="w-full h-64 lg:h-80 object-cover rounded-lg shadow-lg">
-        </div>
-        <div class="mt-12 flex flex-col items-center">
-          <p class="text-neutral-1 text-lg italic leading-relaxed text-center max-w-4xl mx-auto opacity-90">
-            Xưởng sản xuất và showroom Thanh Hải Ceramics là nơi quá khứ và hiện tại giao thoa. Từ ngọn lửa lò nung Bát Tràng, những viên ngói âm dương ra đời, mang theo tinh hoa làng nghề, dấu ấn kiến trúc Việt và câu chuyện di sản sống động. Trong từng lớp ngói xếp là ký ức của thời gian, được tiếp nối bằng bàn tay người thợ hôm nay để gìn giữ và lan tỏa giá trị truyền thống.
-          </p>
-          <img src="/src/assets/images/quotation-mark.svg" alt="Quotation mark" class="w-16 h-16 mt-8">
-        </div>
-      </div>
-    </section>
+    {{> home/banner}}
+    {{> home/works}}
+    {{> home/partners}}
+    {{> home/products-ngoi-am-duong}}
+    {{> home/products-ngoi-hai}}
+    {{> home/products-gach-hoa}}
+    {{> home/thank-you}}
+    {{> home/awards}}
+    {{> home/press}}
+    {{> home/why-choose-us}}
+    {{> home/showroom}}
   </main>
 
   {{> footer}}
@@ -723,7 +136,7 @@
       effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,
-      slidesPerView: 3,
+      slidesPerView: 1,
       initialSlide: 1,
       loop: true,
       loopedSlides: 5,
@@ -735,6 +148,8 @@
         slideShadows: true,
       },
       navigation: {
+        nextEl: '.awards-next',
+        prevEl: '.awards-prev',
         nextEl: '.awards-next',
         prevEl: '.awards-prev',
       },
@@ -757,6 +172,43 @@
         }
       }
     });
+
+    // Showroom Dots Logic
+    const showroomContainer = document.querySelector('.showroom-container');
+    const showroomDots = document.querySelectorAll('.showroom-dot');
+
+    if (showroomContainer && showroomDots.length > 0) {
+      showroomContainer.addEventListener('scroll', () => {
+        const scrollPosition = showroomContainer.scrollLeft;
+        const width = showroomContainer.offsetWidth; // Note: This might need adjustment if item width != container width, but for full/large width items it often works or use item width.
+        // Better approach for snap items: find closest center
+        const itemWidth = showroomContainer.querySelector('img').offsetWidth + 16; // 16 is gap-4 (approximate)
+        
+        // Simple index calculation
+        const index = Math.round(scrollPosition / itemWidth);
+        
+        showroomDots.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.remove('bg-white/40');
+            dot.classList.add('bg-secondary', 'active');
+          } else {
+            dot.classList.remove('bg-secondary', 'active');
+            dot.classList.add('bg-white/40');
+          }
+        });
+      });
+
+      // Click to scroll
+      showroomDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          const itemWidth = showroomContainer.querySelector('img').offsetWidth + 16;
+          showroomContainer.scrollTo({
+            left: itemWidth * index,
+            behavior: 'smooth'
+          });
+        });
+      });
+    }
 
   </script>
 
