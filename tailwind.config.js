@@ -4,18 +4,19 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#2E2F2A',
-                secondary: '#C76E00',
+                primary: "#2E2F2A",
+                secondary: "#C76E00",
+                textPrimary: "#2E2F2A",
                 neutral: {
-                    1: '#EFE4DE',
-                    2: '#F5EDE7',
+                    1: "#EFE4DE",
+                    2: "#F5EDE7",
                 },
                 background: {
-                    primary: '#FFF',
+                    primary: "#FFF",
                 },
             },
             fontFamily: {
-                'archivo': ['"Archivo"', 'sans-serif'],
+                archivo: ['"Archivo"', "sans-serif"],
             },
         },
     },
