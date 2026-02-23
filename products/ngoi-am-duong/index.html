@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ngói Âm Dương - GSXD Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap');
+  </style>
+  <link rel="stylesheet" href="/src/assets/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
+  {{> header}}
+  
+  <main class="flex-grow bg-background-secondary">
+    <!-- Top Banner -->
+    <section class="relative min-h-[600px] flex items-center pt-24 pb-8 overflow-hidden">
+      <!-- Background Image with Dark Overlay and Bottom Blur/Gradient -->
+      <div class="absolute inset-0 z-0">
+        <img src="/src/assets/images/ngoi-am-duong-banner.jpg" alt="Ngói Âm Dương Banner" class="w-full h-full object-cover object-bottom">
+        <div class="absolute inset-0 bg-black/70"></div>
+        <!-- Bottom gradient fading into neutral-1 -->
+        <div class="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-background-secondary via-background-secondary to-transparent"></div>
+      </div>
+  
+      <!-- Content Container -->
+      <div class="relative z-10 w-[85%] lg:w-[75%] mx-auto flex flex-col h-full justify-between">
+        
+        <!-- Header text -->
+        <div class="text-center pb-16 md:pb-24 space-y-8">
+          <h1 class="text-3xl md:text-5xl lg:text-[40px] font-bold mb-4 uppercase tracking-widest text-white drop-shadow-md">Ngói Âm Dương</h1>
+          <p class="font-italianno text-4xl md:text-5xl lg:text-[48px] text-white/90 leading-tight drop-shadow-md max-w-4xl mx-auto">
+             "Chưng cất tinh đất, tôi luyện qua lửa<br>Thanh Hải kiến tạo dáng hình di sản trong từng lớp ngói âm dương"
+          </p>
+        </div>
+
+        <!-- Lower specific content overlapping the fade -->
+        <div class="flex flex-col md:flex-row items-end justify-between gap-12 w-full mt-auto pb-4">
+           <!-- Poem/Text -->
+           <div class="w-full md:w-1/2 text-center md:text-left z-20 pb-4">
+              <p class="font-charm text-2xl md:text-[32px] text-primary leading-loose tracking-wide font-medium">
+                  Âm dương hòa hợp, đất hóa linh<br>
+                  Thanh Hải kết tinh, vạn công trình<br>
+                  Mái ngói nghiêng soi hình dáng cổ<br>
+                  Vững bền năm tháng, trọn niềm tin
+              </p>
+           </div>
+           
+           <!-- Images Placeholder -->
+           <div class="w-full md:w-1/2 flex justify-center md:justify-end z-20">
+              <div class="bg-white p-7 flex gap-7 w-full max-w-[760px] transform translate-y-8 md:-translate-y-8 rounded">
+                 <!-- Image 1 (Placeholder) -->
+                 <div class="w-1/2 aspect-square flex items-center justify-center">
+                     <img src="/src/assets/images/ngoi-am-duong-01.jpg" alt="Ngói Âm Dương 01" class="w-full h-full object-cover">
+                 </div>
+                 <!-- Image 2 (Placeholder) -->
+                 <div class="w-1/2 aspect-square flex items-center justify-center">
+                     <img src="/src/assets/images/ngoi-am-duong-02.png" alt="Ngói Âm Dương 02" class="w-full h-full object-cover">
+                 </div>
+              </div>
+           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="w-[85%] lg:w-[75%] mx-auto pb-6 pt-16 relative z-10">
+        <p class="font-bold tracking-[0.15em] text-primary/60 uppercase">
+            <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-extrabold border-primary">Ngói Âm Dương</span>
+        </p>
+    </div>
+
+    {{> products/product-grid}}
+    
+    <!-- Sizes Options Section -->
+    <section class="w-[85%] lg:w-[75%] mx-auto pb-16 pt-4 animate-fade-in-up">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-secondary mb-12 uppercase tracking-wide">Đa dạng kích thước - phong phú chọn lựa</h2>
+        <div class="w-full flex justify-center">
+            <img src="/src/assets/images/ngoi-am-duong-size.png" alt="Đa dạng kích thước ngói âm dương" class="w-full h-auto object-contain">
+        </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section class="w-[85%] lg:w-[75%] mx-auto pb-20 animate-fade-in-up">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-secondary mb-12 uppercase tracking-wide">Phụ kiện ngói</h2>
+        <div class="w-full flex justify-center">
+            <img src="/src/assets/images/ngoi-am-duong-pk.png" alt="Phụ kiện ngói âm dương" class="w-[80%] h-auto object-contain">
+        </div>
+    </section>
+  </main>
+
+  <!-- Value Section -->
+  <section class="w-full relative pb-16 animate-fade-in-up">
+    <!-- Section Title -->
+    <div class="text-center mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase tracking-wide">Giá trị vượt trội</h2>
+    </div>
+
+    <!-- Background Image Container -->
+    <div class="relative w-full overflow-hidden flex flex-col" style="min-height: 800px;">
+      <!-- Background Image -->
+      <img src="/src/assets/images/gia-tri-vuot-troi.png" alt="Giá trị vượt trội nền" class="absolute inset-0 w-full h-full object-cover z-0">
+
+      <!-- Text Content -->
+      <div class="relative z-10 container mx-auto px-6 lg:px-[140px] flex-grow flex flex-col items-end justify-center text-end text-white py-16">
+         <h3 class="text-2xl md:text-3xl font-bold mb-10 tracking-wide drop-shadow-md">CỐT ĐẤT LUYỆN LỬA</h3>
+         <p class="font-charm text-2xl md:text-3xl leading-relaxed max-w-4xl drop-shadow-md">
+            Được tôi luyện ở nhiệt độ 1300°C tạo nên cốt gốm đanh chắc, thách thức mọi khắc nghiệt từ sương muối đến bão giông. Đây là sự đầu tư một lần cho giá trị truyền đời, chẳng ngại dấu vết thời gian
+         </p>
+      </div>
+
+      <!-- 4 Images Bottom Left -->
+      <div class="relative z-10 w-full mb-16 md:px-0">
+         <div class="flex flex-row overflow-x-hidden gap-5 items-end translate-y-[20px]">
+            <div class="w-[160px] md:w-[300px] flex-shrink-0 shadow-lg">
+               <img src="/src/assets/images/value-01.png" alt="Value 1" class="w-full h-full object-cover">
+            </div>
+            <div class="w-[120px] md:w-[200px] flex-shrink-0 shadow-lg">
+               <img src="/src/assets/images/value-02.png" alt="Value 2" class="w-full h-full object-cover">
+            </div>
+            <div class="w-[120px] md:w-[200px] flex-shrink-0 shadow-lg">
+               <img src="/src/assets/images/value-03.png" alt="Value 3" class="w-full h-full object-cover">
+            </div>
+            <div class="w-[120px] md:w-[200px] flex-shrink-0 shadow-lg">
+               <img src="/src/assets/images/value-04.png" alt="Value 4" class="w-full h-full object-cover">
+            </div>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  {{> products/journey-video}}
+
+  {{> products/works}}
+
+  <!-- FAQ Section -->
+  <section class="w-full relative pb-20 bg-[#F4EFE9] overflow-hidden animate-fade-in-up">
+    <!-- Background Decoration -->
+    <img src="/src/assets/images/background-decorate.png" class="absolute top-1/2 -translate-y-2/3 md:left-0 -left-1/2 -translate-x-[10%] w-auto object-contain opacity-80 pointer-events-none z-0" alt="">
+    <img src="/src/assets/images/background-decorate.png" class="absolute top-2/3 -translate-y-1/2 right-0 translate-x-[60%] w-auto object-contain opacity-100 pointer-events-none z-0" alt="">
+
+    {{> products/faq-content}}
+  </section>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const productWorksSwiper = new Swiper('.product-works-swiper', {
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          spaceBetween: 40,
+          loop: true,
+          speed: 500,
+          
+          navigation: {
+             nextEl: '.product-works-next',
+             prevEl: '.product-works-prev',
+          },
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          }
+      });
+      
+      // FAQ Accordion Logic
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const button = item.querySelector('.faq-button');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+        
+        button.addEventListener('click', () => {
+          const isOpen = !content.classList.contains('hidden');
+          
+          // Close all other items
+          faqItems.forEach(otherItem => {
+              if (otherItem !== item) {
+                  otherItem.querySelector('.faq-content').classList.add('hidden');
+                  otherItem.querySelector('.faq-icon').classList.replace('bg-textPrimary', 'bg-gray-200');
+                  otherItem.querySelector('.faq-icon').classList.replace('text-white', 'text-gray-500');
+                  otherItem.querySelector('.faq-icon').classList.add('rotate-180');
+              }
+          });
+          
+          if (isOpen) {
+            content.classList.add('hidden');
+            icon.classList.add('rotate-180');
+            icon.classList.replace('bg-textPrimary', 'bg-gray-200');
+            icon.classList.replace('text-white', 'text-gray-500');
+          } else {
+            content.classList.remove('hidden');
+            icon.classList.remove('rotate-180');
+            icon.classList.replace('bg-gray-200', 'bg-textPrimary');
+            icon.classList.replace('text-gray-500', 'text-white');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

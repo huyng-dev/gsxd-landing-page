@@ -13,10 +13,13 @@ export default {
                 },
                 background: {
                     primary: "#FFF",
+                    secondary: "#F5EDE7",
                 },
             },
             fontFamily: {
                 archivo: ['"Archivo"', "sans-serif"],
+                italianno: ['"Italianno"', "cursive"],
+                charm: ['"Charm"', "cursive"],
             },
         },
     },
