@@ -6,6 +6,7 @@
   <title>Gạch Hoa Thông Gió - GSXD Landing Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/src/assets/css/main.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-page="products" class="min-h-screen flex flex-col bg-neutral-1">
   {{> header}}
@@ -13,7 +14,7 @@
   <main class="flex-grow pt-10 pb-16">
     <div class="container mx-auto px-6 lg:px-[140px]">
         <p class="text-sm md:text-base mb-6 opacity-90 font-light tracking-wide text-gray-500">Trang chủ &nbsp; > &nbsp; Sản phẩm &nbsp; > &nbsp; Gạch Hoa Thông Gió</p>
-        <h1 class="text-3xl md:text-4xl font-bold uppercase tracking-widest text-[#212121] mb-8">Gạch Hoa Thông Gió</h1>
+        <h1 class="text-3xl md:text-4xl font-bold uppercase tracking-widest text-[#212121] mb-8" data-aos="fade-up">Gạch Hoa Thông Gió</h1>
         <div class="h-[40vh] flex items-center justify-center bg-gray-100 rounded-lg border border-gray-200">
            <p class="text-xl text-gray-400">Nội dung sản phẩm đang cập nhật...</p>
         </div>
@@ -23,5 +24,7 @@
   {{> footer}}
   
   <script type="module" src="/src/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true, offset: 100 });</script>
 </body>
 </html>

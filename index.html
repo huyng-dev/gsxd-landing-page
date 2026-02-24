@@ -7,6 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="/src/assets/css/main.css">
 </head>
 <body data-page="index" class="bg-white">
@@ -22,7 +23,7 @@
     {{> home/thank-you}}
     <section class="bg-neutral-2 pt-16 lg:pt-20 overflow-hidden">
       <div class="w-[85%] lg:w-[75%] mx-auto mb-12">
-        <h2 class="text-secondary text-3xl lg:text-4xl font-bold uppercase">Giải thưởng & thành tựu</h2>
+        <h2 class="text-secondary text-3xl lg:text-4xl font-bold uppercase" data-aos="fade-up">Giải thưởng & thành tựu</h2>
        </div>
       {{> home/awards}}
     </section>
@@ -36,7 +37,13 @@
   <script type="module" src="/src/js/main.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100,
+    });
     // Banner Carousel
     let bannerCurrentSlide = 0;
     const bannerSlides = document.querySelectorAll('.banner-slide');
