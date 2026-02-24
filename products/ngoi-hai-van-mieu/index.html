@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ngói Hài Văn Miếu - GSXD Landing Page</title>
+  <title>Ngói Hài Văn Miếu - Thanh Hải Ceramics</title>
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/src/assets/css/main.css">
   <style>
@@ -157,12 +158,20 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const productWorksSwiper = new Swiper('.product-works-swiper', {
-          slidesPerView: 'auto',
-          centeredSlides: true,
-          spaceBetween: 40,
+          slidesPerView: 1,
+          centeredSlides: false,
+          spaceBetween: 20,
           loop: true,
           speed: 500,
-          
+
+          breakpoints: {
+            768: {
+              slidesPerView: 'auto',
+              centeredSlides: true,
+              spaceBetween: 40,
+            }
+          },
+
           navigation: {
              nextEl: '.product-works-next',
              prevEl: '.product-works-prev',
@@ -170,8 +179,12 @@
           autoplay: {
             delay: 5000,
             disableOnInteraction: false,
-          }
+          },
       });
+
+      // Wire mobile nav buttons
+      document.querySelector('.product-works-prev-mobile')?.addEventListener('click', () => productWorksSwiper.slidePrev());
+      document.querySelector('.product-works-next-mobile')?.addEventListener('click', () => productWorksSwiper.slideNext());
           
       // FAQ Accordion Logic
       const faqItems = document.querySelectorAll('.faq-item');
