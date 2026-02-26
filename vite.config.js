@@ -3,16 +3,19 @@ import { resolve } from 'path';
 import { glob } from 'glob';
 import handlebars from 'vite-plugin-handlebars';
 
-// Auto-scan all HTML files (root index.html + */index.html)
-const htmlFiles = glob.sync('{index.html,*/index.html}', {
-  ignore: ['node_modules/**', 'dist/**'],
+// Auto-scan all HTML files
+const htmlFiles = glob.sync('**/*.html', {
+  ignore: ['node_modules/**', 'dist/**', 'src/**'],
 });
 
 // Create input object for all HTML files
 const input = {};
 htmlFiles.forEach(file => {
-  const dir = file.replace("/index.html", "").replace("index.html", "");
-  const name = dir === "" ? "index" : dir;
+  const normalizedPath = file.replace(/\\/g, "/");
+  let name = normalizedPath.replace(/\.html$/, "");
+  if (name.endsWith("/index")) {
+      name = name.replace(/\/index$/, "");
+  }
   input[name] = resolve(__dirname, file);
 });
 
