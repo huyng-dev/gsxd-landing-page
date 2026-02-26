@@ -23,7 +23,7 @@
     {{> home/thank-you}}
     <section class="bg-neutral-2 pt-16 lg:pt-20 overflow-hidden">
       <div class="w-[85%] lg:w-[75%] mx-auto mb-12">
-        <h2 class="text-secondary text-3xl lg:text-4xl font-bold uppercase" data-aos="fade-up">Giải thưởng & thành tựu</h2>
+        <h2 class="text-secondary text-2xl lg:text-4xl font-bold uppercase" data-aos="fade-up">Giải thưởng & thành tựu</h2>
        </div>
       {{> home/awards}}
     </section>
@@ -89,12 +89,47 @@
     // Auto-play banner
     setInterval(nextBannerSlide, 5000);
 
-    // Product card hover overlay
-    document.querySelectorAll('.product-card').forEach(card => {
-      const overlay = document.createElement('div');
-      overlay.className = 'product-overlay';
-      overlay.innerHTML = `<img src="/src/assets/images/eye.svg" alt="Xem"><span>Xem chi tiết</span>`;
-      card.appendChild(overlay);
+    // Partners Carousel (Desktop)
+    let partnerCurrentSlide = 0;
+    const partnerTrack = document.getElementById('partners-track');
+    const partnerDots = document.querySelectorAll('.partner-dot');
+    const totalPartnerSlides = 2;
+
+    function showPartnerSlide(n) {
+      if (!partnerTrack) return;
+      
+      // Since track is 200% width, sliding by 50% shows the second slide
+      partnerTrack.style.transform = `translateX(-${n * 50}%)`;
+
+      partnerDots.forEach(dot => {
+        dot.classList.remove('bg-secondary', 'active');
+        dot.classList.add('bg-white/40');
+      });
+
+      if (partnerDots[n]) {
+        partnerDots[n].classList.remove('bg-white/40');
+        partnerDots[n].classList.add('bg-secondary', 'active');
+      }
+    }
+
+    function nextPartnerSlide() {
+      partnerCurrentSlide = (partnerCurrentSlide + 1) % totalPartnerSlides;
+      showPartnerSlide(partnerCurrentSlide);
+    }
+
+    function prevPartnerSlide() {
+      partnerCurrentSlide = (partnerCurrentSlide - 1 + totalPartnerSlides) % totalPartnerSlides;
+      showPartnerSlide(partnerCurrentSlide);
+    }
+
+    document.querySelector('.partner-next')?.addEventListener('click', nextPartnerSlide);
+    document.querySelector('.partner-prev')?.addEventListener('click', prevPartnerSlide);
+
+    partnerDots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        partnerCurrentSlide = parseInt(e.target.dataset.slide);
+        showPartnerSlide(partnerCurrentSlide);
+      });
     });
 
     // Works Carousel
@@ -154,15 +189,13 @@
       loop: true,
       loopedSlides: 5,
       coverflowEffect: {
-        rotate: 30,
-        stretch: -30,
-        depth: 100,
+        rotate: 25,
+        stretch: -20,
+        depth: 60,
         modifier: 1,
         slideShadows: true,
       },
       navigation: {
-        nextEl: '.awards-next',
-        prevEl: '.awards-prev',
         nextEl: '.awards-next',
         prevEl: '.awards-prev',
       },
@@ -178,9 +211,15 @@
           }
         },
         1024: {
+          slidesPerView: 3,
+          coverflowEffect: {
+            stretch: -30,
+          }
+        },
+        1280: {
           slidesPerView: 5,
           coverflowEffect: {
-            stretch: -45,
+            stretch: -30,
           }
         }
       }

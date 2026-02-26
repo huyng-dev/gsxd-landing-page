@@ -25,22 +25,6 @@
             href="https://unpkg.com/aos@2.3.1/dist/aos.css"
             rel="stylesheet"
         />
-        <style>
-            .about-awards-expanded {
-                width: 100%;
-                margin-left: 0%;
-            }
-            @media (max-width: 768px) {
-                .about-awards-expanded {
-                    width: 100%;
-                    margin-left: 0%;
-                }
-            }
-            .about-awards-expanded > div {
-                width: 85% !important;
-                max-width: 85% !important;
-            }
-        </style>
     </head>
     <body
         data-page="about"
@@ -70,7 +54,7 @@
                 >
                     <p class="text-sm md:text-base mb-6 opacity-90 font-light tracking-wide">Trang chủ &nbsp; > &nbsp; Về chúng tôi</p>
                     <h1 class="text-xl md:text-2xl font-bold mb-4 uppercase tracking-widest text-white/90">GỐM SỨ THANH HẢI</h1>
-                    <h2 class="text-4xl md:text-6xl font-bold uppercase leading-tight max-w-4xl drop-shadow-lg">
+                    <h2 class="text-3xl md:text-6xl font-bold uppercase leading-tight max-w-4xl drop-shadow-lg">
                         40 NĂM - LỬA NGHỀ
                         <br />
                         CHƯA BAO GIỜ TẮT
@@ -80,8 +64,8 @@
 
             <!-- Tabs Section -->
             <section class="py-16 bg-neutral-2">
-                <div class="w-[85%] lg:w-[75%] mx-auto px-4">
-                    <!-- Tab Headers -->
+                <!-- Tab Headers -->
+                <div class="w-[85%] lg:w-[75%] max-w-7xl mx-auto px-4">
                     <div class="flex w-full mx-auto mb-12">
                         <button
                             class="tab-btn active group flex-1 py-4 text-sm md:text-3xl font-bold text-secondary border-b-4 border-secondary transition-all duration-300 uppercase focus:outline-none"
@@ -96,12 +80,14 @@
                             NGHỆ THUẬT THỦ CÔNG
                         </button>
                     </div>
+                </div>
 
-                    <!-- Về gốm sứ Thanh Hải -->
-                    <div
-                        id="tab-introduction"
-                        class="tab-content block animate-fade-in-up max-w-7xl mx-auto"
-                    >
+                <!-- Về gốm sứ Thanh Hải -->
+                <div
+                    id="tab-introduction"
+                    class="tab-content block animate-fade-in-up w-full"
+                >
+                    <div class="w-[85%] lg:w-[75%] max-w-7xl mx-auto px-4">
                         <!-- Section 1 -->
                         <div
                             class="flex flex-col md:flex-row items-center gap-8 md:gap-16 mb-16 md:mb-24"
@@ -164,15 +150,15 @@
                         <!-- Section 3: Core Values -->
                         <div class="mt-16 md:mt-24">
                             <h3
-                                class="text-3xl md:text-4xl font-bold text-center text-textPrimary mb-12 uppercase"
+                                class="text-2xl md:text-4xl font-bold text-center text-textPrimary mb-12 uppercase"
                                 data-aos="fade-up"
                             >
                                 GIÁ TRỊ CỐT LÕI
                             </h3>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                            <div class="flex flex-row md:grid md:grid-cols-3 gap-6 md:gap-10 overflow-x-auto snap-x snap-mandatory pb-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                                 <!-- Item 1 -->
                                 <div
-                                    class="flex flex-col items-center"
+                                    class="flex flex-col items-center min-w-full md:min-w-0 snap-center"
                                     data-aos="fade-up"
                                 >
                                     <div class="w-full aspect-[1/1] overflow-hidden shadow-lg mb-6">
@@ -183,7 +169,7 @@
                                         />
                                     </div>
                                     <!-- Title -->
-                                    <h4 class="text-3xl font-bold text-textPrimary mb-4">Tính kế thừa</h4>
+                                    <h4 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Tính kế thừa</h4>
                                     <!-- Description -->
                                     <p class="text-textPrimary text-justify leading-relaxed">
                                         Gốm sứ xây dựng Thanh Hải là câu chuyện được tiếp nối qua nhiều thế hệ. Từ những ngày đầu cha ông nhóm lửa lò nung, qua năm tháng thế hệ kế thừa vẫn bền bỉ tích
@@ -194,7 +180,7 @@
 
                                 <!-- Item 2 -->
                                 <div
-                                    class="flex flex-col items-center"
+                                    class="flex flex-col items-center min-w-full md:min-w-0 snap-center"
                                     data-aos="fade-up"
                                     data-aos-delay="150"
                                 >
@@ -206,7 +192,7 @@
                                         />
                                     </div>
                                     <!-- Title -->
-                                    <h4 class="text-3xl font-bold text-textPrimary mb-4">Nghệ thuật thủ công</h4>
+                                    <h4 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Nghệ thuật thủ công</h4>
                                     <!-- Description -->
                                     <p class="text-textPrimary text-justify leading-relaxed">
                                         “Nghệ thuật thủ công” là giá trị cốt lõi khiến sản phẩm Gốm sứ xây dựng của Thanh Hải khác biệt với các vật liệu công nghiệp trên thị trường. Từ đất thô qua bàn
@@ -217,7 +203,7 @@
 
                                 <!-- Item 3 -->
                                 <div
-                                    class="flex flex-col items-center"
+                                    class="flex flex-col items-center min-w-full md:min-w-0 snap-center"
                                     data-aos="fade-up"
                                     data-aos-delay="300"
                                 >
@@ -229,7 +215,7 @@
                                         />
                                     </div>
                                     <!-- Title -->
-                                    <h4 class="text-3xl font-bold text-textPrimary mb-4">Giá trị vượt thời gian</h4>
+                                    <h4 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Giá trị vượt thời gian</h4>
                                     <!-- Description -->
                                     <p class="text-textPrimary text-justify leading-relaxed">
                                         Với Thanh Hải, mỗi viên gạch, viên ngói không chỉ để dựng nhà, mà để gìn giữ một tổ ấm. Đó là nơi che mưa nắng, chứng kiến những bữa cơm sum họp và những đổi
@@ -243,26 +229,26 @@
                         <!-- Section 4: Our Journey -->
                         <div class="mt-16 md:mt-24 mb-16">
                             <h3
-                                class="text-3xl md:text-4xl font-bold text-center text-textPrimary mb-24 uppercase tracking-wider"
+                                class="text-2xl md:text-4xl font-bold text-center text-textPrimary md:mb-24 mb-16 uppercase tracking-wider"
                                 data-aos="fade-up"
                             >
                                 HÀNH TRÌNH CỦA CHÚNG TÔI
                             </h3>
 
                             <div class="relative flex flex-col md:flex-row gap-8 md:gap-16">
-                                <div class="w-full md:w-1/2 space-y-48 md:space-y-[50vh] py-16 md:py-[20vh]">
+                                <div class="w-full md:w-1/2 flex flex-row md:flex-col overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none gap-8 md:gap-0 space-y-0 md:space-y-[50vh] py-8 md:py-[20vh] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                                     <div
-                                        class="timeline-item flex flex-col items-center justify-center text-center min-h-[30vh]"
+                                        class="timeline-item flex-shrink-0 w-full snap-center flex flex-col items-center justify-start md:justify-center text-center min-h-[30vh]"
                                         data-index="0"
                                         data-aos="fade-up"
                                     >
-                                        <h4 class="text-4xl md:text-5xl font-bold text-textPrimary mb-6">1985</h4>
+                                        <h4 class="text-3xl md:text-5xl font-bold text-textPrimary mb-6">1985</h4>
                                         <p class="text-textPrimary leading-relaxed text-center max-w-lg">
                                             Hai người sáng lập là ông Vũ Mạnh Hải và bà Nguyễn Thị Thanh bắt đầu được giao lại toàn bộ công việc sản xuất gốm sứ từ cụ Vũ Đình Sơn. Nhận thấy thị trường
                                             sản xuất bát đĩa đang dần bão hòa và nhiều cạnh tranh, ông bà bắt đầu tìm hướng đi mới thông qua việc tự thiết kế mẫu mã mới cho dòng sản phẩm gốm sứ xây
                                             dựng, gốm sứ trang trí – đặt những viên gạch đầu tiên cho con đường làm nghề.
                                         </p>
-                                        <div class="md:hidden mt-8 w-full flex justify-center">
+                                        <div class="md:hidden mt-auto pt-8 w-full flex justify-center">
                                             <div class="aspect-[3/4] w-full max-w-sm relative overflow-hidden shadow-lg rounded-sm">
                                                 <img
                                                     src="/src/assets/images/about-02.jpg"
@@ -274,17 +260,17 @@
                                     </div>
 
                                     <div
-                                        class="timeline-item flex flex-col items-center justify-center text-center min-h-[30vh]"
+                                        class="timeline-item flex-shrink-0 w-full snap-center flex flex-col items-center justify-start md:justify-center text-center min-h-[30vh]"
                                         data-index="1"
                                         data-aos="fade-up"
                                     >
-                                        <h4 class="text-4xl md:text-5xl font-bold text-textPrimary mb-6">1993</h4>
+                                        <h4 class="text-3xl md:text-5xl font-bold text-textPrimary mb-6">1993</h4>
                                         <p class="text-textPrimary leading-relaxed text-center max-w-lg">
                                             Cửa hàng bán lẻ đầu tiên được mở ra, đánh dấu bước phát triển mới trong hoạt động kinh doanh. Từ đây, mẫu mã không ngừng được nghiên cứu và sáng tạo, chủng
                                             loại sản phẩm ngày càng đa dạng nhằm đáp ứng các nhu cầu khác nhau của khách hàng. Đồng thời, Gốm Sứ Thanh Hải dần tạo được sự tín nhiệm từ các doanh nghiệp
                                             lớn và được giao thực hiện những công trình quy mô đầu tiên.
                                         </p>
-                                        <div class="md:hidden mt-8 w-full flex justify-center">
+                                        <div class="md:hidden mt-auto pt-8 w-full flex justify-center">
                                             <div class="aspect-[3/4] w-full max-w-sm relative overflow-hidden shadow-lg rounded-sm">
                                                 <img
                                                     src="/src/assets/images/about-01.png"
@@ -296,16 +282,16 @@
                                     </div>
 
                                     <div
-                                        class="timeline-item flex flex-col items-center justify-center text-center min-h-[30vh]"
+                                        class="timeline-item flex-shrink-0 w-full snap-center flex flex-col items-center justify-start md:justify-center text-center min-h-[30vh]"
                                         data-index="2"
                                         data-aos="fade-up"
                                     >
-                                        <h4 class="text-4xl md:text-5xl font-bold text-textPrimary mb-6">2000</h4>
+                                        <h4 class="text-3xl md:text-5xl font-bold text-textPrimary mb-6">2000</h4>
                                         <p class="text-textPrimary leading-relaxed text-center max-w-lg">
                                             Công ty TNHH Sản xuất và Thương mại Thanh Hải chính thức được thành lập, đánh dấu bước chuyển quan trọng sang mô hình hoạt động chuyên nghiệp. Hệ thống
                                             xưởng sản xuất gốm sứ xây dựng được đầu tư đồng bộ, từng bước áp dụng quy trình để nâng cao tay nghề thợ thủ công, mở rộng quy mô sản xuất.
                                         </p>
-                                        <div class="md:hidden mt-8 w-full flex justify-center">
+                                        <div class="md:hidden mt-auto pt-8 w-full flex justify-center">
                                             <div class="aspect-[3/4] w-full max-w-sm relative overflow-hidden shadow-lg rounded-sm">
                                                 <img
                                                     src="/src/assets/images/about-02.jpg"
@@ -317,17 +303,17 @@
                                     </div>
 
                                     <div
-                                        class="timeline-item flex flex-col items-center justify-center text-center min-h-[30vh]"
+                                        class="timeline-item flex-shrink-0 w-full snap-center flex flex-col items-center justify-start md:justify-center text-center min-h-[30vh]"
                                         data-index="3"
                                         data-aos="fade-up"
                                     >
-                                        <h4 class="text-4xl md:text-5xl font-bold text-textPrimary mb-6">2008</h4>
+                                        <h4 class="text-3xl md:text-5xl font-bold text-textPrimary mb-6">2008</h4>
                                         <p class="text-textPrimary leading-relaxed text-center max-w-lg">
                                             Showroom chuyên nghiệp đầu tiên được xây dựng tại số 42 Phố Gốm, đánh dấu bước phát triển trong việc nâng cao trải nghiệm tham quan và giới thiệu sản phẩm
                                             gốm sứ Thanh Hải. Từ đây, không gian trưng bày được chú trọng đầu tư bài bản, sắp đặt sản phẩm theo từng nhóm ứng dụng và giá trị thẩm mỹ, góp phần thể hiện
                                             rõ nét hơn tinh thần và chất lượng của thương hiệu.
                                         </p>
-                                        <div class="md:hidden mt-8 w-full flex justify-center">
+                                        <div class="md:hidden mt-auto pt-8 w-full flex justify-center">
                                             <div class="aspect-[3/4] w-full max-w-sm relative overflow-hidden shadow-lg rounded-sm">
                                                 <img
                                                     src="/src/assets/images/about-01.png"
@@ -339,17 +325,17 @@
                                     </div>
 
                                     <div
-                                        class="timeline-item flex flex-col items-center justify-center text-center min-h-[30vh]"
+                                        class="timeline-item flex-shrink-0 w-full snap-center flex flex-col items-center justify-start md:justify-center text-center min-h-[30vh]"
                                         data-index="4"
                                         data-aos="fade-up"
                                     >
-                                        <h4 class="text-4xl md:text-5xl font-bold text-textPrimary mb-6">2024</h4>
+                                        <h4 class="text-3xl md:text-5xl font-bold text-textPrimary mb-6">2024</h4>
                                         <p class="text-textPrimary leading-relaxed text-center max-w-lg">
                                             Showroom thứ hai với diện tích gần 400m² tại số 18 Phố Gốm được hình thành như một không gian trưng bày và kể chuyện di sản. Tại đây, ngói âm dương được tái
                                             hiện thông qua việc kết hợp ngói âm và gạch xây cũ, tạo nên các họa tiết mô phỏng ngói thời Lý – Trần, dấu ấn tiêu biểu của kiến trúc cổ Việt Nam. Không
                                             gian vừa là nơi giới thiệu sản phẩm, vừa là điểm kết nối văn hóa, lưu giữ và lan tỏa giá trị kiến trúc truyền thống.
                                         </p>
-                                        <div class="md:hidden mt-8 w-full flex justify-center">
+                                        <div class="md:hidden mt-auto pt-8 w-full flex justify-center">
                                             <div class="aspect-[3/4] w-full max-w-sm relative overflow-hidden shadow-lg rounded-sm">
                                                 <img
                                                     src="/src/assets/images/about-02.jpg"
@@ -401,7 +387,7 @@
                         <!-- Section 5: Founders -->
                         <div class="mt-16 md:mt-24 mb-16">
                             <h3
-                                class="text-3xl md:text-4xl font-bold text-center text-textPrimary mb-14 uppercase tracking-wider"
+                                class="text-2xl md:text-4xl font-bold text-center text-textPrimary mb-14 uppercase tracking-wider"
                                 data-aos="fade-up"
                             >
                                 NGƯỜI SÁNG LẬP
@@ -423,8 +409,8 @@
                                     </div>
                                 </div>
                                 <!-- Text Content -->
-                                <div class="w-full md:w-1/2 pr-16">
-                                    <p class="text-textPrimary leading-relaxed text-justify">
+                                <div class="w-full md:w-1/2 xl:pr-16">
+                                    <p class="text-textPrimary leading-relaxed text-center md:text-justify">
                                         Trải qua nhiều thăng trầm của nghề, ông Vũ Mạnh Hải và bà Nguyễn Thị Thanh vẫn bền bỉ đồng hành, kiên định theo đuổi dòng sản phẩm gốm sứ xây dựng. Dù ngói thủ
                                         công không phải là sản phẩm phổ biến, Thanh Hải vẫn xây dựng được một cộng đồng khách hàng trung thành và tin cậy, thể hiện qua việc được lựa chọn cho nhiều
                                         công trình lớn nhỏ trên cả nước như Chùa Bái Đính, Bệnh viện Y học cổ truyền Quân đội, Viện 103, Vinpearl Land Nha Trang. Những dấu ấn ấy đã đưa hai nhà sáng
@@ -433,11 +419,12 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
                         <!-- Section 6: Awards -->
-                        <div class="mt-16 md:mt-24 mb-16">
+                        <div class="mt-16 md:mt-24 mb-16 w-full">
                             <h3
-                                class="text-3xl md:text-4xl font-bold text-center text-textPrimary mb-14 uppercase tracking-wider"
+                                class="text-2xl md:text-4xl font-bold text-center text-textPrimary mb-14 uppercase tracking-wider"
                                 data-aos="fade-up"
                             >
                                 GIẢI THƯỞNG & THÀNH TỰU
@@ -446,6 +433,7 @@
                             <div class="about-awards-expanded">{{> home/awards}}</div>
                         </div>
 
+                    <div class="w-[85%] lg:w-[75%] max-w-7xl mx-auto px-4">
                         <!-- Section 7: Certificates -->
                         <div class="mt-16 md:mt-24 mb-16 relative">
                             <div class="swiper certificates-swiper w-full px-4 md:px-3">
@@ -570,18 +558,20 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Nghệ thuật thủ công -->
-                    <div
-                        id="tab-craft"
-                        class="tab-content hidden animate-fade-in-up max-w-7xl mx-auto"
-                    >
+                <!-- Nghệ thuật thủ công -->
+                <div
+                    id="tab-craft"
+                    class="tab-content hidden animate-fade-in-up w-full"
+                >
+                    <div class="w-[85%] lg:w-[75%] max-w-7xl mx-auto px-4">
                         <!-- Section 1: Intro Text -->
                         <div
                             class="max-w-2xl mx-auto text-center mb-16 md:mb-24"
                             data-aos="fade-up"
                         >
-                            <h2 class="text-3xl md:text-4xl font-bold text-textPrimary mb-8 leading-tight">
+                            <h2 class="text-2xl md:text-4xl font-bold text-textPrimary mb-8 leading-tight">
                                 Từ vật liệu xây dựng
                                 <br />
                                 đến di sản kiến trúc
@@ -621,7 +611,7 @@
                         <!-- Section 3: Craftsmanship Skills -->
                         <div class="mt-24 md:mt-32 text-center max-w-7xl mx-auto">
                             <h2
-                                class="text-3xl md:text-4xl font-bold text-secondary mb-8 uppercase tracking-wide"
+                                class="text-2xl md:text-4xl font-bold text-secondary mb-8 uppercase tracking-wide"
                                 data-aos="fade-up"
                             >
                                 NGHỆ THUẬT CHẾ TÁC THỦ CÔNG ĐIÊU LUYỆN
@@ -657,7 +647,7 @@
                                 class="max-w-3xl mx-auto"
                                 data-aos="fade-up"
                             >
-                                <h3 class="text-3xl font-bold text-textPrimary mb-4">Kỹ thuật luyện đất</h3>
+                                <h3 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Kỹ thuật luyện đất</h3>
                                 <p class="text-textPrimary leading-relaxed text-center">
                                     Đất là gốc rễ, nền tảng của mọi sản phẩm gốm chất lượng. Chúng tôi tuyển chọn nguyên liệu đất sét tinh khiết, loại bỏ tạp chất để đảm bảo độ dẻo, độ bám và khả năng
                                     chịu nhiệt vượt trội. Đất sau khi được ngâm, lắng và luyện qua nhiều giai đoạn xử lý truyền thống sẽ cho ra hỗn hợp mịn, ổn định, sẵn sàng cho từng bước tạo hình,
@@ -672,7 +662,7 @@
                             >
                                 <!-- Tạo hình -->
                                 <div>
-                                    <h3 class="text-3xl font-bold text-textPrimary mb-4">Kỹ thuật tạo hình</h3>
+                                    <h3 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Kỹ thuật tạo hình</h3>
                                     <p class="text-textPrimary leading-relaxed text-justify mb-8 text-[17px]">
                                         Tạo hình bắt đầu từ bản vẽ, nơi tỉ lệ và hình dáng sản phẩm được tính toán kỹ lưỡng. Để tạo hình hàng loạt, nghệ nhân sẽ bắt đầu với cốt sản phẩm. Phần cốt này
                                         sẽ được điêu khắc hoàn toàn bằng tay với nguyên liệu chính là thạch cao. Cốt càng sắc nét, khuôn thạch cao càng chuẩn, hàng càng đẹp. Đất sau luyện được đổ rót
@@ -689,7 +679,7 @@
 
                                 <!-- Tráng men -->
                                 <div>
-                                    <h3 class="text-3xl font-bold text-textPrimary mb-4">Kỹ thuật tráng men</h3>
+                                    <h3 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Kỹ thuật tráng men</h3>
                                     <p class="text-textPrimary leading-relaxed text-justify mb-8 text-[17px]">
                                         Mỗi nghệ nhân sẽ có một bí quyết pha men riêng, kế thừa từ cha ông và tiếp tục sáng tạo trên nền tảng đó. Thông thường, men sẽ được nghiền một cách cẩn thận,
                                         sau đó trộn, lọc kỹ rồi mới pha theo tỷ lệ để tạo nên màu sắc và bề mặt khác nhau. Với ngói, chúng tôi phát triển hơn hai mươi màu men, quý khách hàng hoàn toàn
@@ -710,7 +700,7 @@
                                 class="max-w-3xl mx-auto mt-16"
                                 data-aos="fade-up"
                             >
-                                <h3 class="text-3xl font-bold text-textPrimary mb-4">Kỹ thuật đun lò</h3>
+                                <h3 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Kỹ thuật đun lò</h3>
                                 <p class="text-textPrimary leading-relaxed text-center">
                                     Công đoạn nung sản phẩm trong lò là bước quyết định chất lượng gốm của Thanh Hải. Lò được đun ở nhiệt độ cao, có thể lên tới 1.300°C, đòi hỏi đất và men đạt chuẩn
                                     để chịu nhiệt bền vững. Việc tăng – giữ – hạ nhiệt theo từng giai đoạn là bí quyết riêng của các nghệ nhân. Sau khi nung, sản phẩm được ủ chậm khoảng 12 giờ để
@@ -767,7 +757,7 @@
                 if (timelineItems.length > 0 && imageLayers.length > 0) {
                     const observerOptions = {
                         root: null,
-                        // Trigger khi item nằm gần giữa màn hình
+                        // Trigger when item is in the middle of the screen
                         rootMargin: "-45% 0px -45% 0px",
                         threshold: 0,
                     };
@@ -780,18 +770,18 @@
                                 imageLayers.forEach((layer) => {
                                     const layerIndex = parseInt(layer.getAttribute("data-index"));
 
-                                    // Reset chỉ class điều khiển vị trí Y
+                                    // Reset Y position
                                     layer.classList.remove("translate-y-0", "translate-y-full");
 
-                                    // LOGIC XẾP CHỒNG (STACKING):
+                                    // Stack logic
                                     if (layerIndex <= activeIndex) {
-                                        // Ảnh hiện tại HOẶC ảnh quá khứ:
-                                        // Cho nằm ở giữa khung hình.
-                                        // Nhờ vào Z-index cố định trong HTML, ảnh có index cao hơn sẽ tự động đè lên ảnh có index thấp hơn.
+                                        // Current image OR past image:
+                                        // Place in the middle of the screen.
+                                        // Thanks to the fixed Z-index in HTML, images with higher index will automatically overlay images with lower index.
                                         layer.classList.add("translate-y-0");
                                     } else {
-                                        // Ảnh tương lai:
-                                        // Cho chờ ở bên dưới khung hình.
+                                        // Future image:
+                                        // Wait at the bottom of the screen.
                                         layer.classList.add("translate-y-full");
                                     }
                                 });
@@ -849,9 +839,9 @@
                 loop: true,
                 loopedSlides: 5,
                 coverflowEffect: {
-                    rotate: 30,
-                    stretch: -30,
-                    depth: 100,
+                    rotate: 25,
+                    stretch: -20,
+                    depth: 60,
                     modifier: 1,
                     slideShadows: true,
                 },
@@ -871,11 +861,17 @@
                         },
                     },
                     1024: {
-                        slidesPerView: 5,
+                        slidesPerView: 3,
                         coverflowEffect: {
-                            stretch: -45,
+                            stretch: -30,
                         },
                     },
+                    1280: {
+                        slidesPerView: 5,
+                        coverflowEffect: {
+                            stretch: -30,
+                        }
+                    }
                 },
             });
 

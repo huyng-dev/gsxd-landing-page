@@ -1,214 +1,651 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phụ Kiện Ngói - Thanh Hải Ceramics</title>
-  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-  </style>
-  <link rel="stylesheet" href="/src/assets/css/main.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
-  {{> header}}
-  
-  <main class="flex-grow bg-background-secondary overflow-hidden">
-    <!-- Banner Section -->
-    <section class="relative w-full">
-        <div class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-[2.5/1]">
-            <img src="/src/assets/images/pk-banner.png" alt="Phụ Kiện Ngói" class="w-full h-full object-cover">
-            <div class="absolute inset-0 flex flex-col items-center pt-[5%] md:pt-[5%] lg:pt-[2%]">
-                <div class="text-center text-white px-4">
-                    <h1 class="font-sans text-[26px] md:text-3xl lg:text-[40px] font-bold uppercase tracking-wider mb-2 md:mb-5 drop-shadow-md">PHỤ KIỆN NGÓI</h1>
-                    <p class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-tight tracking-wide drop-shadow-sm text-white/95">
-                        Nâng niu nét chạm trổ, sắt son cùng thời gian
-                    </p>
-                    <p class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-tight tracking-wide drop-shadow-sm text-white/95">
-                        Phụ kiện Thanh Hải: Điểm nhấn tâm linh, hoàn thiện dáng hình kiến trúc Việt
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Phụ Kiện Ngói - Thanh Hải Ceramics</title>
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/src/assets/images/logo.svg"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+        </style>
+        <link
+            rel="stylesheet"
+            href="/src/assets/css/main.css"
+        />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body
+        data-page="products"
+        class="min-h-screen flex flex-col bg-background-secondary"
+    >
+        {{> header}}
 
-    <!-- Danh Mục Sản Phẩm Section 1 -->
-    <section class="w-full pb-16 pt-8">
-        <!-- Section Title -->
-        <div class="flex items-center justify-center gap-4 md:gap-8 mb-8" data-aos="fade-up">
-            <img src="/src/assets/images/title-left.svg" alt="" class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-60">
-            <h2 class="text-xl md:text-3xl lg:text-[34px] font-bold text-[#C47526] uppercase tracking-wider">Danh Mục Sản Phẩm</h2>
-            <img src="/src/assets/images/title-right.svg" alt="" class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-60">
-        </div>
-
-        <!-- Main Container -->
-        <div class="bg-[#EBCEC1] ml-0 lg:ml-[8%] p-6 lg:p-10" data-aos="fade-up" data-aos-delay="100">
-            <div class="flex flex-col-reverse lg:flex-row gap-8 lg:gap-16">
-                
-                <!-- Left Column: Products Grid & Pagination -->
-                <div class="w-full lg:w-[55%] flex flex-col justify-between">
-                    <!-- Products Grid -->
-                    <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
-                        
-                        <!-- Product Card 1 -->
-                        <div class="flex flex-col">
-                            <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
-                                 <img src="https://placehold.co/400/white/white" alt="" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
-                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
-                        </div>
-                        
-                        <!-- Product Card 2 -->
-                        <div class="flex flex-col">
-                            <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
-                                 <img src="https://placehold.co/400/white/white" alt="" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
-                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
-                        </div>
-
-                        <!-- Product Card 3 -->
-                        <div class="flex flex-col">
-                            <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
-                                 <img src="https://placehold.co/400/white/white" alt="" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
-                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
-                        </div>
-                        
-                        <!-- Product Card 4 -->
-                        <div class="flex flex-col">
-                            <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
-                                 <img src="https://placehold.co/400/white/white" alt="" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
-                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
-                        </div>
-
-                    </div>
-
-                    <!-- Pagination -->
-                    <div class="flex items-center justify-center gap-4 mt-auto">
-                        <button class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all">
-                            <svg class="w-4 h-4 font-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M15 19l-7-7 7-7"></path></svg>
-                        </button>
-                        <button class="w-[36px] h-[36px] rounded-full bg-[#D48227] flex items-center justify-center text-white hover:bg-[#A6601D] transition-all shadow-md">
-                            <svg class="w-4 h-4 font-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M9 5l7 7-7 7"></path></svg>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Right Column: Featured Image & Brush Title -->
-                <div class="w-full lg:w-[45%] mr-0 lg:mr-[10%] flex flex-col justify-stretch">
-                    <div class="w-full flex-grow relative shadow-xl overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px] border border-black/10">
-                        <img src="/src/assets/images/bo-noc.png" alt="" class="absolute inset-0 w-full h-full object-cover">
-                        
-                        <!-- Brush Title Overlay inside image container -->
-                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300">
-                            <div class="relative w-full flex items-center justify-center">
-                                <img src="/src/assets/images/brush.svg" alt="" class="w-full drop-shadow-xl opacity-90">
-                                <span class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">Ngói Bò Nóc</span>
-                            </div>
+        <main class="flex-grow bg-background-secondary overflow-hidden">
+            <!-- Banner Section -->
+            <section class="relative w-full">
+                <div class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-[2.5/1]">
+                    <img
+                        src="/src/assets/images/pk-banner.png"
+                        alt="Phụ Kiện Ngói"
+                        class="w-full h-full object-cover"
+                    />
+                    <div
+                        class="absolute inset-0 flex flex-col items-center pt-[5%] md:pt-[5%] lg:pt-[2%]"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        <div class="text-center text-white px-4">
+                            <h1 class="font-sans text-[26px] md:text-3xl lg:text-[40px] font-bold uppercase tracking-wider mb-2 md:mb-5 drop-shadow-md">PHỤ KIỆN NGÓI</h1>
+                            <p class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-tight tracking-wide drop-shadow-sm text-white/95">
+                                Nâng niu nét chạm trổ, sắt son cùng thời gian
+                            </p>
+                            <p class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-tight tracking-wide drop-shadow-sm text-white/95">
+                                Phụ kiện Thanh Hải: Điểm nhấn tâm linh, hoàn thiện dáng hình kiến trúc Việt
+                            </p>
                         </div>
                     </div>
                 </div>
+            </section>
 
-            </div>
-        </div>
-    </section>
+            <!-- Danh Mục Sản Phẩm Section 1 -->
+            <section class="w-full pb-16 pt-8">
+                <!-- Section Title -->
+                <div
+                    class="flex items-center justify-center gap-4 md:gap-8 mb-8"
+                    data-aos="fade-up"
+                >
+                    <img
+                        src="/src/assets/images/title-left.svg"
+                        alt=""
+                        class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-60"
+                    />
+                    <h2 class="text-2xl lg:text-3xl font-bold text-[#C47526] uppercase tracking-wider">Danh Mục Sản Phẩm</h2>
+                    <img
+                        src="/src/assets/images/title-right.svg"
+                        alt=""
+                        class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-60"
+                    />
+                </div>
 
-    <!-- Danh Mục Sản Phẩm Section 2 -->
-    <section class="w-full pb-16">
-        <!-- Main Container -->
-        <div class="bg-[#EBCEC1] mr-0 lg:mr-[8%] p-6 lg:p-10" data-aos="fade-up" data-aos-delay="100">
-            <div class="flex flex-col lg:flex-row gap-8 lg:gap-16">
-                <!-- Left Column: Featured Image & Brush Title -->
-                <div class="w-full lg:w-[45%] ml-0 lg:ml-[10%] flex flex-col justify-stretch">
-                    <div class="w-full flex-grow relative shadow-xl overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px] border border-black/10">
-                        <img src="/src/assets/images/dao-kim.png" alt="" class="absolute inset-0 w-full h-full object-cover">
-                        
-                        <!-- Brush Title Overlay inside image container -->
-                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300">
-                            <div class="relative w-full flex items-center justify-center">
-                                <img src="/src/assets/images/brush.svg" alt="" class="w-full drop-shadow-xl opacity-90">
-                                <span class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">Ngói Bò Nóc</span>
+                <!-- Main Container -->
+                <div
+                    class="bg-[#EBCEC1] ml-0 lg:ml-[8%] p-6 lg:p-10 opacity-80"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+                    <div class="flex flex-col-reverse lg:flex-row gap-8 lg:gap-16">
+                        <!-- Left Column: Products Grid & Pagination -->
+                        <div class="w-full lg:w-[55%] flex flex-col justify-between">
+                            <!-- Products Grid -->
+                            <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
+                                <!-- Product Card 1 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="https://placehold.co/400/white/white"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+
+                                <!-- Product Card 2 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="https://placehold.co/400/white/white"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+
+                                <!-- Product Card 3 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="https://placehold.co/400/white/white"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+
+                                <!-- Product Card 4 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="https://placehold.co/400/white/white"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="flex items-center justify-center gap-4 mt-auto">
+                                <button
+                                    class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all"
+                                >
+                                    <svg
+                                        class="w-4 h-4 font-light"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.2"
+                                            d="M15 19l-7-7 7-7"
+                                        ></path>
+                                    </svg>
+                                </button>
+                                <button class="w-[36px] h-[36px] rounded-full bg-[#D48227] flex items-center justify-center text-white hover:bg-[#A6601D] transition-all shadow-md">
+                                    <svg
+                                        class="w-4 h-4 font-light"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.2"
+                                            d="M9 5l7 7-7 7"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Featured Image & Brush Title -->
+                        <div class="w-full lg:w-[45%] mr-0 lg:mr-[10%] flex flex-col justify-stretch">
+                            <div class="w-full flex-grow relative shadow-xl overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px] border border-black/10">
+                                <img
+                                    src="/src/assets/images/bo-noc.png"
+                                    alt=""
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+
+                                <!-- Brush Title Overlay inside image container -->
+                                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300">
+                                    <div class="relative w-full flex items-center justify-center">
+                                        <img
+                                            src="/src/assets/images/brush.svg"
+                                            alt=""
+                                            class="w-full drop-shadow-xl opacity-90"
+                                        />
+                                        <span
+                                            class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
+                                            style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)"
+                                        >
+                                            Ngói Bò Nóc
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Right Column: Products Grid & Pagination -->
-                <div class="w-full lg:w-[55%] flex flex-col justify-between">
-                    <!-- Products Grid -->
-                    <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
-                        
-                        <!-- Product Card 1 -->
-                        <div class="flex flex-col">
-                            <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
-                                 <img src="https://placehold.co/400/white/white" alt="" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
-                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
-                        </div>
-                        
-                        <!-- Product Card 2 -->
-                        <div class="flex flex-col">
-                            <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
-                                 <img src="https://placehold.co/400/white/white" alt="" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
-                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
-                        </div>
+            </section>
 
-                        <!-- Product Card 3 -->
-                        <div class="flex flex-col">
-                            <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
-                                 <img src="https://placehold.co/400/white/white" alt="" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
-                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
-                        </div>
-                        
-                        <!-- Product Card 4 -->
-                        <div class="flex flex-col">
-                            <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
-                                 <img src="https://placehold.co/400/white/white" alt="" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
-                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
-                        </div>
+            <!-- Danh Mục Sản Phẩm Section 2 -->
+            <section class="w-full pb-16">
+                <!-- Main Container -->
+                <div
+                    class="bg-[#EBCEC1] mr-0 lg:mr-[8%] p-6 lg:p-10 opacity-80"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+                    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16">
+                        <!-- Left Column: Featured Image & Brush Title -->
+                        <div class="w-full lg:w-[45%] ml-0 lg:ml-[10%] flex flex-col justify-stretch">
+                            <div class="w-full flex-grow relative shadow-xl overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px] border border-black/10">
+                                <img
+                                    src="/src/assets/images/dao-kim.png"
+                                    alt=""
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
 
-                    </div>
+                                <!-- Brush Title Overlay inside image container -->
+                                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300">
+                                    <div class="relative w-full flex items-center justify-center">
+                                        <img
+                                            src="/src/assets/images/brush.svg"
+                                            alt=""
+                                            class="w-full drop-shadow-xl opacity-90"
+                                        />
+                                        <span
+                                            class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
+                                            style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)"
+                                        >
+                                            Ngói Bò Nóc
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Column: Products Grid & Pagination -->
+                        <div class="w-full lg:w-[55%] flex flex-col justify-between">
+                            <!-- Products Grid -->
+                            <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
+                                <!-- Product Card 1 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="https://placehold.co/400/white/white"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
 
-                    <!-- Pagination -->
-                    <div class="flex items-center justify-center gap-4 mt-auto">
-                        <button class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all">
-                            <svg class="w-4 h-4 font-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M15 19l-7-7 7-7"></path></svg>
-                        </button>
-                        <button class="w-[36px] h-[36px] rounded-full bg-[#D48227] flex items-center justify-center text-white hover:bg-[#A6601D] transition-all shadow-md">
-                            <svg class="w-4 h-4 font-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M9 5l7 7-7 7"></path></svg>
-                        </button>
+                                <!-- Product Card 2 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="https://placehold.co/400/white/white"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+
+                                <!-- Product Card 3 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="https://placehold.co/400/white/white"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+
+                                <!-- Product Card 4 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="https://placehold.co/400/white/white"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="flex items-center justify-center gap-4 mt-auto">
+                                <button
+                                    class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all"
+                                >
+                                    <svg
+                                        class="w-4 h-4 font-light"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.2"
+                                            d="M15 19l-7-7 7-7"
+                                        ></path>
+                                    </svg>
+                                </button>
+                                <button class="w-[36px] h-[36px] rounded-full bg-[#D48227] flex items-center justify-center text-white hover:bg-[#A6601D] transition-all shadow-md">
+                                    <svg
+                                        class="w-4 h-4 font-light"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.2"
+                                            d="M9 5l7 7-7 7"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-  </main>
+            </section>
 
-  {{> footer}}
-  
-  <script type="module" src="/src/js/main.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 800, once: true, offset: 100 });</script>
-</body>
+            <!-- Danh Mục Sản Phẩm Section 3 -->
+            <section class="relative mx-auto pb-10 lg:pb-16 overflow-visible">
+                <!-- Background Decorations -->
+                <img
+                    src="/src/assets/images/pk-decorate-left.svg"
+                    alt=""
+                    class="absolute top-10 lg:-top-[11%] left-0 w-[60%] max-w-[400px] lg:max-w-[620px] opacity-80 z-0 pointer-events-none"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                />
+                <img
+                    src="/src/assets/images/pk-decorate-right.svg"
+                    alt=""
+                    class="absolute bottom-[-5%] lg:bottom-[-18%] right-0 w-[70%] max-w-[500px] lg:max-w-[780px] opacity-80 z-0 pointer-events-none"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                />
+
+                <!-- Main Container -->
+                <div class="relative w-[90%] lg:w-[92%] lg:ml-auto lg:mx-0 mx-auto z-10">
+                    <div
+                        class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 gap-y-4 lg:gap-y-6"
+                        data-aos="fade-up"
+                    >
+                        <!-- Product 1 -->
+                        <div class="flex flex-col col-span-2 lg:col-start-2 lg:col-span-3">
+                            <div class="w-full aspect-[2/1] lg:aspect-[2.8/1] shadow mb-4 lg:mb-6 flex items-center justify-center overflow-hidden">
+                                <img
+                                    src="/src/assets/images/pk-01.png"
+                                    alt="Riềm Âm Dương Sen Bầu"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h3 class="font-bold text-[#212121] text-[15px] lg:text-[18px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <p class="text-gray-500 text-[13px] lg:text-[14px] mb-1">MSP: 1234RDS</p>
+                            <p class="font-bold text-[#C47526] text-[14px] lg:text-[15px]">Giá: 675.000 đ/m2</p>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div
+                            class="flex flex-col col-span-2 lg:col-span-2"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
+                            <div class="w-full aspect-[2/1] md:aspect-[18.8/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                                <img
+                                    src="/src/assets/images/pk-02.png"
+                                    alt="Riềm Âm Dương Sen Bầu"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                        </div>
+                        <!-- Product 3 -->
+                        <div
+                            class="flex flex-col"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
+                            <div class="w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                                <img
+                                    src="/src/assets/images/pk-03.png"
+                                    alt="Riềm Âm Dương Sen Bầu"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                        </div>
+                        <!-- Product 4 -->
+                        <div
+                            class="flex flex-col"
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                        >
+                            <div class="w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                                <img
+                                    src="/src/assets/images/pk-04.png"
+                                    alt="Riềm Âm Dương Sen Bầu"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                        </div>
+                        <!-- Product 5 -->
+                        <div
+                            class="flex flex-col"
+                            data-aos="fade-up"
+                            data-aos-delay="400"
+                        >
+                            <div class="w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                                <img
+                                    src="/src/assets/images/pk-05.png"
+                                    alt="Riềm Âm Dương Sen Bầu"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                        </div>
+                        <!-- Product 6 -->
+                        <div
+                            class="flex flex-col"
+                            data-aos="fade-up"
+                            data-aos-delay="500"
+                        >
+                            <div class="w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                                <img
+                                    src="/src/assets/images/pk-06.png"
+                                    alt="Riềm Âm Dương Sen Bầu"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dấu Ấn Công Trình Section -->
+            <section class="relative w-full pb-10 lg:pb-16 overflow-hidden">
+                <div class="relative z-10 w-[90%] lg:w-[80%] mx-auto">
+                    <!-- Title -->
+                    <div
+                        class="text-center mb-8 lg:mb-16"
+                        data-aos="fade-up"
+                    >
+                        <h2 class="text-2xl lg:text-3xl font-bold text-[#C47526] uppercase tracking-wider">Dấu Ấn Trên Những Công Trình</h2>
+                    </div>
+
+                    <!-- Grid Container for Images (6 place folders) -->
+                    <div class="flex flex-col gap-2 md:gap-4">
+                        <!-- Top Row -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-end">
+                            <!-- Image 1 -->
+                            <div
+                                class="col-span-1"
+                                data-aos="fade-up"
+                                data-aos-delay="0"
+                            >
+                                <div class="w-full aspect-[1.1/1] shadow overflow-hidden relative group">
+                                    <img
+                                        src="/src/assets/images/pk-07.png"
+                                        alt=""
+                                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
+                            <!-- Brown Block 1 -->
+                            <div
+                                class="col-span-1"
+                                data-aos="fade-up"
+                                data-aos-delay="100"
+                            >
+                                <div class="w-full aspect-[8/10] bg-[#BD724F] shadow"></div>
+                            </div>
+                            <!-- Image 2 (Wide) -->
+                            <div
+                                class="col-span-2 hidden md:block"
+                                data-aos="fade-up"
+                                data-aos-delay="200"
+                            >
+                                <div class="w-full aspect-[11/5] shadow overflow-hidden relative group">
+                                    <img
+                                        src="/src/assets/images/pk-08.png"
+                                        alt=""
+                                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Image 2 (Wide) - Mobile -->
+                        <div
+                            class="grid grid-cols-1 md:hidden gap-2 md:gap-4"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
+                            <div class="col-span-1">
+                                <div class="w-full aspect-[22/10] shadow overflow-hidden relative group">
+                                    <img
+                                        src="/src/assets/images/pk-08.png"
+                                        alt=""
+                                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Row -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-start">
+                            <!-- Image 3 -->
+                            <div
+                                class="col-span-1"
+                                data-aos="fade-up"
+                                data-aos-delay="0"
+                            >
+                                <div class="w-full aspect-[8/10] shadow overflow-hidden relative group">
+                                    <img
+                                        src="/src/assets/images/pk-03.png"
+                                        alt=""
+                                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
+                            <!-- Image 4 + Brown Block 2 -->
+                            <div class="col-span-1 flex flex-col gap-2 md:gap-4">
+                                <div
+                                    class="w-full aspect-[8/10] shadow overflow-hidden relative group"
+                                    data-aos="fade-up"
+                                    data-aos-delay="100"
+                                >
+                                    <img
+                                        src="/src/assets/images/gach-hoa-02.png"
+                                        alt=""
+                                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div
+                                    class="w-full aspect-[19/10] bg-[#BD724F] shadow"
+                                    data-aos="fade-up"
+                                    data-aos-delay="200"
+                                ></div>
+                            </div>
+                            <!-- Image 5 -->
+                            <div
+                                class="col-span-1"
+                                data-aos="fade-up"
+                                data-aos-delay="200"
+                            >
+                                <div class="w-full aspect-[8/10] shadow overflow-hidden relative group">
+                                    <img
+                                        src="/src/assets/images/dao-kim.png"
+                                        alt=""
+                                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
+                            <!-- Image 6 -->
+                            <div
+                                class="col-span-1"
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                            >
+                                <div class="w-full aspect-[8/10] shadow overflow-hidden relative group">
+                                    <img
+                                        src="/src/assets/images/pk-04.png"
+                                        alt=""
+                                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section
+                class="w-full relative pb-16 bg-[#F4EFE9] overflow-visible"
+                data-aos="fade-up"
+            >
+                <!-- Background Decoration -->
+                <div
+                    class="absolute z-[2] lg:-top-[23%] lg:left-[18%] -left-[10%] w-[120%] lg:w-[65%] pointer-events-none"
+                    data-aos="fade-up-right"
+                >
+                    <img
+                        src="/src/assets/images/pk-decorate.svg"
+                        alt=""
+                        class="w-full origin-center md:opacity-70 opacity-60 drop-shadow-sm"
+                    />
+                </div>
+
+                {{> products/faq-content}}
+            </section>
+        </main>
+
+        {{> footer}}
+
+        <script
+            type="module"
+            src="/src/js/main.js"
+        ></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 800, once: true, offset: 100 });
+        </script>
+    </body>
 </html>
