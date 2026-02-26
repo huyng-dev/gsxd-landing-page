@@ -13,21 +13,21 @@
 @layer components {
   /* Banner Section */
   .banner-section {
-    height: 580px;
-    padding: 64px 0;
+    height: 760px;
+    padding: 120px 0;
   }
 
   @media (min-width: 768px) {
     .banner-section {
-      height: 620px;
-      padding: 64px 0;
+      height: 720px;
+      padding: 120px 0;
     }
   }
 
   @media (min-width: 1024px) {
     .banner-section {
-      height: 760px;
-      padding: 40px 0px 100px;
+      height: 860px;
+      padding: 140px 0px 100px;
     }
   }
 
