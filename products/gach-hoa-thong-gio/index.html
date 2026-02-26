@@ -3,28 +3,346 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gạch Hoa Thông Gió - GSXD Landing Page</title>
+  <title>Gạch Hoa Thông Gió - Thanh Hải Ceramics</title>
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap');
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="/src/assets/css/main.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body data-page="products" class="min-h-screen flex flex-col bg-neutral-1">
+<body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
   {{> header}}
   
-  <main class="flex-grow pt-10 pb-16">
-    <div class="container mx-auto px-6 lg:px-[140px]">
-        <p class="text-sm md:text-base mb-6 opacity-90 font-light tracking-wide text-gray-500">Trang chủ &nbsp; > &nbsp; Sản phẩm &nbsp; > &nbsp; Gạch Hoa Thông Gió</p>
-        <h1 class="text-3xl md:text-4xl font-bold uppercase tracking-widest text-[#212121] mb-8" data-aos="fade-up">Gạch Hoa Thông Gió</h1>
-        <div class="h-[40vh] flex items-center justify-center bg-gray-100 rounded-lg border border-gray-200">
-           <p class="text-xl text-gray-400">Nội dung sản phẩm đang cập nhật...</p>
+  <main class="flex-grow bg-background-secondary overflow-hidden">
+        <section class="relative w-full overflow-hidden pt-24 mb-12" data-aos="fade-up">
+            <!-- Background Fissures -->
+            <div class="absolute inset-0 -top-12 md:top-24 lg:top-32 z-[1] flex flex-col items-center justify-center pointer-events-none overflow-hidden">
+                <img src="/src/assets/images/fissure-01.svg" class="w-full object-contain opacity-100 -mb-1" alt="">
+                <img src="/src/assets/images/fissure-02.svg" class="w-full object-contain opacity-100" alt="">
+            </div>
+
+            <!-- Left and Right Decorations -->
+            <div class="absolute z-[2] left-[-40%] md:left-[-30%] lg:left-[-25%] top-[55%] w-[65%] md:w-[55%] lg:w-[45%] pointer-events-none" data-aos="fade-up-right">
+                <img src="/src/assets/images/gach-hoa-decorate.png" alt="" class="w-full origin-center -translate-y-1/2 rotate-[-45deg] md:opacity-100 opacity-50 drop-shadow-sm">
+            </div>
+            <div class="absolute z-[2] right-[-40%] md:right-[-30%] lg:right-[-25%] top-[55%] w-[65%] md:w-[55%] lg:w-[45%] pointer-events-none" data-aos="fade-up-left">
+                <img src="/src/assets/images/gach-hoa-decorate.png" alt="" class="w-full origin-center -translate-y-1/2 rotate-[45deg] scale-x-[-1] md:opacity-100 opacity-50 drop-shadow-sm">
+            </div>
+
+            <!-- Content -->
+            <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-12 max-w-5xl mx-auto">
+                <h1 class="font-archivo text-[3rem] md:text-[6rem] lg:text-[8rem] font-bold text-secondary tracking-normal leading-tight uppercase drop-shadow-sm mb-12 md:mb-24" style="text-shadow: 1px 1px 0px rgba(255,255,255,0.5);">
+                    Gạch Hoa<br>Thông Gió
+                </h1>
+                
+                <p class="font-charm text-3xl md:text-[40px] text-gray-800 mb-20 md:mb-40 pt-4">Gốm sứ Thanh Hải</p>
+                
+                <p class="font-italianno text-3xl md:text-5xl text-gray-600 leading-relaxed max-w-6xl mx-auto tracking-wide" style="text-shadow: 0px 1px 0px #fff;">
+                    Kết tinh từ cốt gốm đanh thép, tôi luyện giữa lò nung nghìn độ, Thanh Hải phục dựng tinh hoa gạch thông gió cổ qua những nét chạm thủ công và sắc men độc bản, mở ra không gian tràn đầy sinh khí và dấu ấn nghệ thuật trường tồn.
+                </p>
+            </div>
+        </section>
+
+        <!-- Product Collage Carousel -->
+        <section class="relative w-full pb-16">
+            <!-- Background Decoration (Right/Left corner extending down) -->
+            <div class="absolute z-[0] right-[-35%] md:right-[-25%] lg:right-[-48%] top-[50%] md:top-[55%] w-[70%] md:w-[70%] lg:w-[80%] pointer-events-none" data-aos="fade-up-left">
+                <img src="/src/assets/images/gach-hoa-decorate.png" alt="" class="w-full origin-center rotate-[-55deg] scale-x-[-1] opacity-20 md:opacity-30 drop-shadow-sm">
+            </div>
+            <div class="absolute z-[0] left-[-35%] md:left-[-25%] lg:left-[-35%] -bottom-[200%] md:-bottom-[200%] w-[70%] md:w-[70%] lg:w-[80%] pointer-events-none" data-aos="fade-up-right">
+                <img src="/src/assets/images/gach-hoa-decorate.png" alt="" class="w-full origin-center rotate-[-55deg] scale-x-[-1] opacity-20 md:opacity-30 drop-shadow-sm">
+            </div>
+
+            <div class="mx-auto px-4 md:px-8 flex flex-col items-center relative z-10" data-aos="fade-up">
+                <!-- Swiper Container -->
+                <div class="swiper product-collage-swiper w-full pb-6 md:pb-12">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide w-full">
+                            <div class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[2.5/1]">
+                                <!-- Colored Squares -->
+                                <div class="absolute bg-[#C0815F]" style="left: 5.5%; top: 52%; width: 2.5%; aspect-ratio: 1;"></div>
+                                <div class="absolute bg-[#5A6A4E]" style="left: 74.5%; top: 24%; width: 2.5%; aspect-ratio: 1;"></div>
+                                <div class="absolute bg-[#C06848]" style="left: 81%; top: 66%; width: 2.5%; aspect-ratio: 1;"></div>
+
+                                <!-- Images Placeholders -->
+                                <img src="/src/assets/images/gach-hoa-01.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 9%; top: 32%; width: 12%; height: 26%;" alt="Image 1">
+                                <img src="/src/assets/images/gach-hoa-02.png" class="absolute object-cover shadow-md transition-transform hover:scale-105" style="left: 22.5%; top: 15%; width: 18%; height: 38%;" alt="Image 2">
+                                <img src="/src/assets/images/gach-hoa-03.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 22.5%; top: 55%; width: 8%; height: 16%;" alt="Image 3">
+                                <img src="/src/assets/images/gach-hoa-04.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 31.5%; top: 55%; width: 9%; height: 28%;" alt="Image 4">
+                                
+                                <!-- Center Focal Image -->
+                                <img src="/src/assets/images/gach-hoa-05.png" class="absolute object-cover shadow-lg z-10 transition-transform hover:scale-[1.02]" style="left: 42%; top: 18%; width: 18%; height: 48%;" alt="Image 5">
+                                
+                                <img src="/src/assets/images/gach-hoa-06.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 61.5%; top: 8%; width: 12%; height: 22%;" alt="Image 6">
+                                <img src="/src/assets/images/gach-hoa-07.png" class="absolute object-cover shadow-md transition-transform hover:scale-105" style="left: 61.5%; top: 32%; width: 18%; height: 40%;" alt="Image 7">
+                                <img src="/src/assets/images/gach-hoa-08.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 81%; top: 32%; width: 12%; height: 32%;" alt="Image 8">
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 (Placeholder for demonstration) -->
+                        <div class="swiper-slide w-full">
+                            <div class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[2.5/1]">
+                                <!-- Colored Squares -->
+                                <div class="absolute bg-[#C0815F]" style="left: 5.5%; top: 52%; width: 2.5%; aspect-ratio: 1;"></div>
+                                <div class="absolute bg-[#5A6A4E]" style="left: 74.5%; top: 24%; width: 2.5%; aspect-ratio: 1;"></div>
+                                <div class="absolute bg-[#C06848]" style="left: 81%; top: 66%; width: 2.5%; aspect-ratio: 1;"></div>
+
+                                <!-- Images Placeholders -->
+                                <img src="/src/assets/images/gach-hoa-01.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 9%; top: 32%; width: 12%; height: 26%;" alt="Image 1">
+                                <img src="/src/assets/images/gach-hoa-02.png" class="absolute object-cover shadow-md transition-transform hover:scale-105" style="left: 22.5%; top: 15%; width: 18%; height: 38%;" alt="Image 2">
+                                <img src="/src/assets/images/gach-hoa-03.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 22.5%; top: 55%; width: 8%; height: 16%;" alt="Image 3">
+                                <img src="/src/assets/images/gach-hoa-04.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 31.5%; top: 55%; width: 9%; height: 28%;" alt="Image 4">
+                                
+                                <!-- Center Focal Image -->
+                                <img src="/src/assets/images/gach-hoa-05.png" class="absolute object-cover shadow-lg z-10 transition-transform hover:scale-[1.02]" style="left: 42%; top: 18%; width: 18%; height: 48%;" alt="Image 5">
+                                
+                                <img src="/src/assets/images/gach-hoa-06.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 61.5%; top: 8%; width: 12%; height: 22%;" alt="Image 6">
+                                <img src="/src/assets/images/gach-hoa-07.png" class="absolute object-cover shadow-md transition-transform hover:scale-105" style="left: 61.5%; top: 32%; width: 18%; height: 40%;" alt="Image 7">
+                                <img src="/src/assets/images/gach-hoa-08.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 81%; top: 32%; width: 12%; height: 32%;" alt="Image 8">
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 (Placeholder for demonstration) -->
+                        <div class="swiper-slide w-full">
+                            <div class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[2.5/1]">
+                                <!-- Colored Squares -->
+                                <div class="absolute bg-[#C0815F]" style="left: 5.5%; top: 52%; width: 2.5%; aspect-ratio: 1;"></div>
+                                <div class="absolute bg-[#5A6A4E]" style="left: 74.5%; top: 24%; width: 2.5%; aspect-ratio: 1;"></div>
+                                <div class="absolute bg-[#C06848]" style="left: 81%; top: 66%; width: 2.5%; aspect-ratio: 1;"></div>
+
+                                <!-- Images Placeholders -->
+                                <img src="/src/assets/images/gach-hoa-01.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 9%; top: 32%; width: 12%; height: 26%;" alt="Image 1">
+                                <img src="/src/assets/images/gach-hoa-02.png" class="absolute object-cover shadow-md transition-transform hover:scale-105" style="left: 22.5%; top: 15%; width: 18%; height: 38%;" alt="Image 2">
+                                <img src="/src/assets/images/gach-hoa-03.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 22.5%; top: 55%; width: 8%; height: 16%;" alt="Image 3">
+                                <img src="/src/assets/images/gach-hoa-04.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 31.5%; top: 55%; width: 9%; height: 28%;" alt="Image 4">
+                                
+                                <!-- Center Focal Image -->
+                                <img src="/src/assets/images/gach-hoa-05.png" class="absolute object-cover shadow-lg z-10 transition-transform hover:scale-[1.02]" style="left: 42%; top: 18%; width: 18%; height: 48%;" alt="Image 5">
+                                
+                                <img src="/src/assets/images/gach-hoa-06.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 61.5%; top: 8%; width: 12%; height: 22%;" alt="Image 6">
+                                <img src="/src/assets/images/gach-hoa-07.png" class="absolute object-cover shadow-md transition-transform hover:scale-105" style="left: 61.5%; top: 32%; width: 18%; height: 40%;" alt="Image 7">
+                                <img src="/src/assets/images/gach-hoa-08.png" class="absolute object-cover shadow-sm transition-transform hover:scale-105" style="left: 81%; top: 32%; width: 12%; height: 32%;" alt="Image 8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Swiper Navigation -->
+                <div class="w-[85%] lg:w-[75%] flex items-center justify-between z-20 text-textPrimary font-bold text-[17px]">
+                    <div class="collage-button-prev shrink-0 w-10 h-10 border-2 border-black/20 rounded-full flex items-center justify-center text-black/40 hover:border-black hover:text-black transition-all cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </div>
+                    
+                    <div class="collage-pagination flex items-center justify-center gap-5 select-none"></div>
+                    
+                    <div class="collage-button-next shrink-0 w-10 h-10 border-2 border-black/20 rounded-full flex items-center justify-center text-black/40 hover:border-black hover:text-black transition-all cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breadcrumb -->
+        <div class="w-[85%] lg:w-[75%] mx-auto pb-6 pt-16 relative z-10">
+            <p class="font-bold tracking-[0.15em] text-primary/60 uppercase">
+                <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-extrabold border-primary">Gạch Hòa Thông Gió</span>
+            </p>
         </div>
-    </div>
+
+        {{> products/product-grid}}
+
+        <!-- Video Section -->
+        <section class="w-full mx-auto pb-16 animate-fade-in-up">
+            <!-- Section Title -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase tracking-wide">Hành trình chế tác</h2>
+            </div>
+            <div class="flex">
+                <div class="w-1/2 pl-[7.5%] lg:pl-[12.5%] py-[5%] pr-[2.5%] lg:pr-[5%]" data-aos="fade-right">
+                    <img src="/src/assets/images/gach-hoa-value.png" alt="Video placeholder" class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300">
+                </div>
+            <div class="relative w-full aspect-[4/3] overflow-hidden cursor-pointer group" data-aos="fade-left" data-aos-delay="200">
+                <img src="/src/assets/images/video-placeholder-02.png" alt="Video placeholder" class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300">
+                <!-- Play Button -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300">
+                        <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Giá trị vượt trội Section -->
+        <section class="w-[85%] lg:w-[75%] mx-auto pb-16 pt-12">
+            <!-- Section Title -->
+            <div class="text-center mb-16 md:mb-20" data-aos="fade-up">
+                <h2 class="text-[28px] md:text-3xl font-bold text-[#C47526] uppercase tracking-wide">GIÁ TRỊ VƯỢT TRỘI</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8" data-aos="fade-up" data-aos-delay="200">
+                
+                <!-- Column 1 -->
+                <div class="flex flex-col box-border">
+                    <div class="w-full flex justify-center mb-10 lg:mb-36">
+                        <div class="relative w-full aspect-[10/9]">
+                            <!-- Blue Background -->
+                            <div class="absolute top-0 left-0 w-full h-[70%] bg-[#1D78AD]"></div>
+                            <!-- Image Container -->
+                            <div class="absolute top-[20%] left-[18%] right-[18%] bottom-[-15%] shadow-lg bg-black/5 overflow-hidden">
+                                <img src="/src/assets/images/gach-hoa-value.png" alt="" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-6 px-2 flex-grow flex flex-col justify-start">
+                        <h3 class="text-[22px] lg:text-[36px] font-bold text-textPrimary mb-3 leading-snug">Tuyệt tác men<br>hỏa biến kháng</h3>
+                        <p class="text-[14px] lg:text-base font-medium text-textPrimary leading-relaxed max-w-[290px] mx-auto">
+                            Lớp men dày dặn đóng vai trò như màng chắn thủy tinh siêu cứng, ngăn chặn bụi bẩn và rêu mốc bám dính. Nhờ độ trơn bóng cao, mái nhà có khả năng "tự làm sạch"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="flex flex-col box-border">
+                    <div class="text-center mb-12 md:mb-6 px-2 flex-grow flex flex-col justify-start">
+                        <h3 class="text-[22px] lg:text-[36px] font-bold text-textPrimary mb-3 leading-snug">Tuyệt tác men<br>hỏa biến kháng</h3>
+                        <p class="text-[14px] lg:text-base font-medium text-textPrimary leading-relaxed max-w-[290px] mx-auto">
+                            Lớp men dày dặn đóng vai trò như màng chắn thủy tinh siêu cứng, ngăn chặn bụi bẩn và rêu mốc bám dính. Nhờ độ trơn bóng cao, mái nhà có khả năng "tự làm sạch"
+                        </p>
+                    </div>
+                    <div class="w-full flex justify-center mt-12 md:mt-10">
+                        <div class="relative w-full aspect-[10/9]">
+                            <!-- Green Background -->
+                            <div class="absolute bottom-0 left-0 w-full h-[70%] bg-[#5A7E46]"></div>
+                            <!-- Image Container -->
+                            <div class="absolute bottom-[20%] left-[18%] right-[18%] top-[-15%] shadow-lg bg-black/5 overflow-hidden">
+                                <img src="/src/assets/images/work-03.jpg" alt="" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="flex flex-col box-border">
+                    <div class="w-full flex justify-center mb-10 lg:mb-36">
+                        <div class="relative w-full aspect-[10/9]">
+                            <!-- Brown Background -->
+                            <div class="absolute top-0 left-0 w-full h-[70%] bg-[#B28373]"></div>
+                            <!-- Image Container -->
+                            <div class="absolute top-[20%] left-[18%] right-[18%] bottom-[-15%] shadow-lg bg-black/5 overflow-hidden">
+                                <img src="/src/assets/images/value-01.png" alt="" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-6 px-2 flex-grow flex flex-col justify-start">
+                        <h3 class="text-[22px] lg:text-[36px] font-bold text-textPrimary mb-3 leading-snug">Tuyệt tác men<br>hỏa biến kháng</h3>
+                        <p class="text-[14px] lg:text-base font-medium text-textPrimary leading-relaxed max-w-[290px] mx-auto">
+                            Lớp men dày dặn đóng vai trò như màng chắn thủy tinh siêu cứng, ngăn chặn bụi bẩn và rêu mốc bám dính. Nhờ độ trơn bóng cao, mái nhà có khả năng "tự làm sạch"
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="w-full relative pb-20 bg-[#F4EFE9] overflow-hidden" data-aos="fade-up">
+            <!-- Background Decoration -->
+            <div class="absolute z-[2] left-[-40%] md:left-[-30%] lg:left-[-24%] top-[55%] w-[65%] md:w-[55%] lg:w-[45%] pointer-events-none" data-aos="fade-up-right">
+                <img src="/src/assets/images/gach-hoa-decorate.png" alt="" class="w-full origin-center -translate-y-1/2 rotate-[-45deg] md:opacity-60 opacity-50 drop-shadow-sm">
+            </div>
+            <div class="absolute z-[2] right-[-40%] md:right-[-30%] lg:right-[-24%] top-[55%] w-[65%] md:w-[55%] lg:w-[45%] pointer-events-none" data-aos="fade-up-left">
+                <img src="/src/assets/images/gach-hoa-decorate.png" alt="" class="w-full origin-center -translate-y-1/2 rotate-[45deg] scale-x-[-1] md:opacity-60 opacity-50 drop-shadow-sm">
+            </div>
+
+            {{> products/faq-content}}
+        </section>
   </main>
 
   {{> footer}}
   
   <script type="module" src="/src/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 800, once: true, offset: 100 });</script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+    
+    // Initialize Product Collage Swiper
+    document.addEventListener('DOMContentLoaded', () => {
+        new Swiper('.product-collage-swiper', {
+            loop: true,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.collage-button-next',
+                prevEl: '.collage-button-prev',
+            },
+            pagination: {
+                el: '.collage-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return `<span class="${className} text-black/40 hover:text-black transition-colors px-1 cursor-pointer inline-block">${index + 1}</span>`;
+                },
+            },
+            on: {
+                init: function () {
+                    // Inject styling for active bullet
+                    const style = document.createElement('style');
+                    style.innerHTML = `
+                        .collage-pagination .swiper-pagination-bullet { background: transparent; opacity: 1; width: auto; height: auto; border-radius: 0; margin: 0 !important; }
+                        .collage-pagination .swiper-pagination-bullet-active { color: #000; border-bottom: 2px solid #000; }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }
+        });
+
+        // FAQ Accordion Logic
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const button = item.querySelector('.faq-button');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+        
+        button.addEventListener('click', () => {
+          const isOpen = !content.classList.contains('hidden');
+          
+          // Close all other items
+          faqItems.forEach(otherItem => {
+              if (otherItem !== item) {
+                  otherItem.querySelector('.faq-content').classList.add('hidden');
+                  otherItem.querySelector('.faq-icon').classList.replace('bg-textPrimary', 'bg-gray-200');
+                  otherItem.querySelector('.faq-icon').classList.replace('text-white', 'text-gray-500');
+                  otherItem.querySelector('.faq-icon').classList.add('rotate-180');
+              }
+          });
+          
+          if (isOpen) {
+            content.classList.add('hidden');
+            icon.classList.add('rotate-180');
+            icon.classList.replace('bg-textPrimary', 'bg-gray-200');
+            icon.classList.replace('text-white', 'text-gray-500');
+          } else {
+            content.classList.remove('hidden');
+            icon.classList.remove('rotate-180');
+            icon.classList.replace('bg-gray-200', 'bg-textPrimary');
+            icon.classList.replace('text-gray-500', 'text-white');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
