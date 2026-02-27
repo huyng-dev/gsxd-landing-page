@@ -1,158 +1,185 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  body {
-    font-family: 'Archivo', sans-serif;
-  }
+	body {
+		font-family: "Archivo", sans-serif;
+	}
 }
 
 @layer components {
-  /* Banner Section */
-  .banner-section {
-    height: 760px;
-    padding: 120px 0;
-  }
+	/* Banner Section */
+	.banner-section {
+		height: 760px;
+		padding: 120px 0;
+	}
 
-  @media (min-width: 768px) {
-    .banner-section {
-      height: 720px;
-      padding: 120px 0;
-    }
-  }
+	@media (min-width: 768px) {
+		.banner-section {
+			height: 720px;
+			padding: 120px 0;
+		}
+	}
 
-  @media (min-width: 1024px) {
-    .banner-section {
-      height: 860px;
-      padding: 140px 0px 100px;
-    }
-  }
+	@media (min-width: 1024px) {
+		.banner-section {
+			height: 860px;
+			padding: 140px 0px 100px;
+		}
+	}
 
-  /* Banner Carousel */
-  .banner-carousel {
-    width: 75%;
-    animation: slideIn 0.3s ease-in-out;
-  }
+	/* Banner Carousel */
+	.banner-carousel {
+		width: 75%;
+		animation: slideIn 0.3s ease-in-out;
+	}
 
-  .banner-slide {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
+	.banner-slide {
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
 
-  .banner-slide.active,
-  .banner-slide.opacity-100 {
-    opacity: 1;
-  }
+	.banner-slide.active,
+	.banner-slide.opacity-100 {
+		opacity: 1;
+	}
 
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+	@keyframes slideIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
 
-  /* Banner CTA Button */
-  .banner-cta-btn {
-    display: inline-block;
-    padding: 12px 36px;
-    border: 1.5px solid rgba(255, 255, 255, 0.85);
-    color: #fff;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    text-align: center;
-    transition: all 0.3s ease;
-    border-radius: 4px;
-  }
+	/* Banner CTA Button */
+	.banner-cta-btn {
+		display: inline-block;
+		padding: 12px 36px;
+		border: 1.5px solid rgba(255, 255, 255, 0.85);
+		color: #fff;
+		font-weight: 600;
+		font-size: 14px;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		text-align: center;
+		transition: all 0.3s ease;
+		border-radius: 4px;
+	}
 
-  .banner-cta-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: #fff;
-  }
+	.banner-cta-btn:hover {
+		background: rgba(255, 255, 255, 0.2);
+		border-color: #fff;
+	}
 
-  /* Banner Dots */
-  .banner-dot.active {
-    background-color: #C76E00;
-  }
+	/* Banner Dots */
+	.banner-dot.active {
+		background-color: #c76e00;
+	}
 
-  /* Product Card Hover Overlay */
-  .product-card .product-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+	/* Product Card Hover Overlay */
+	.product-card .product-overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.6);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
 
-  .product-card:hover .product-overlay {
-    opacity: 1;
-  }
+	.product-card:hover .product-overlay {
+		opacity: 1;
+	}
 
-  .product-card .product-overlay img {
-    width: 22px;
-    height: 22px;
-  }
+	.product-card .product-overlay img {
+		width: 22px;
+		height: 22px;
+	}
 
-  .product-card .product-overlay span {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
+	.product-card .product-overlay span {
+		color: #fff;
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
 
-  /* Works Carousel Scrollbar */
-  .works-carousel {
-    scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
-  }
+	/* Works Carousel Scrollbar */
+	.works-carousel {
+		scroll-behavior: smooth;
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE/Edge */
+	}
 
-  .works-carousel::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
-  }
+	.works-carousel::-webkit-scrollbar {
+		display: none; /* Chrome/Safari */
+	}
 
-  /* Custom scrollbar */
-  .works-scrollbar-track {
-    height: 4px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 2px;
-    position: relative;
-  }
+	/* Custom scrollbar */
+	.works-scrollbar-track {
+		height: 4px;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 2px;
+		position: relative;
+	}
 
-  .works-scrollbar-thumb {
-    height: 100%;
-    background: #C76E00;
-    border-radius: 2px;
-    min-width: 40px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: width 0.1s ease;
-    cursor: pointer;
-  }
+	.works-scrollbar-thumb {
+		height: 100%;
+		background: #c76e00;
+		border-radius: 2px;
+		min-width: 40px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: width 0.1s ease;
+		cursor: pointer;
+	}
+
+	/* Hide Swiper's default navigation arrows/lines */
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: none !important;
+	}
+
+	.swiper-button-next::after,
+	.swiper-button-prev::after {
+		display: none !important;
+	}
+
+	/* Hide Swiper's default pagination if not used */
+	.swiper-pagination {
+		display: none !important;
+	}
+
+	/* Hide Swiper's default scrollbar */
+	.swiper-scrollbar {
+		display: none !important;
+	}
+
+	/* Remove any horizontal rules from Swiper */
+	.swiper-horizontal > .swiper-scrollbar,
+	.swiper .swiper-scrollbar {
+		display: none !important;
+	}
 }
 
 @layer utilities {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
 
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.scrollbar-hide {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
 }
