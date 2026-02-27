@@ -81,6 +81,13 @@
 		background-color: #c76e00;
 	}
 
+	/* Awards Swiper Slides - maintain 1:1.7 aspect ratio */
+	.awards-swiper .swiper-slide {
+		width: 341px;
+		aspect-ratio: 10 / 17;
+		height: auto !important;
+	}
+
 	/* Product Card Hover Overlay */
 	.product-card .product-overlay {
 		position: absolute;
