@@ -199,6 +199,54 @@
 			width: 240px !important; /* Growing from 200px */
 		}
 	}
+
+	/* ===== Product Works Swiper — Step 1 Engine ===== */
+	.product-works-swiper .swiper-wrapper {
+		display: flex;
+		align-items: flex-end; /* Bottom-align all slides */
+	}
+
+	.product-works-swiper .swiper-slide {
+		width: 85vw; /* Mobile default */
+		aspect-ratio: 4 / 3;
+		opacity: 0.5;
+		overflow: hidden;
+		flex-shrink: 0;
+		transition: 
+		width 300ms cubic-bezier(0.25, 1, 0.5, 1),
+		opacity 500ms cubic-bezier(0.25, 1, 0.5, 1);
+	}
+
+	@media (min-width: 1280px) {
+		.product-works-swiper .swiper-slide {
+			opacity: 1;
+			width: 360px;
+		}
+	}
+
+	.product-works-swiper .swiper-slide-active {
+		width: 85vw;
+		opacity: 1;
+	}
+
+	@media (min-width: 1280px) {
+		.product-works-swiper .swiper-slide-active {
+			width: 720px;
+		}
+	}
+
+	/* Image zoom: inactive = zoomed in, active = normal */
+	.product-works-swiper .swiper-slide img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transform: scale(1.1);
+		transition: transform 700ms cubic-bezier(0.25, 1, 0.5, 1);
+	}
+
+	.product-works-swiper .swiper-slide-active img {
+		transform: scale(1);
+	}
 }
 
 @layer utilities {
