@@ -13,7 +13,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap');
   </style>
   <link rel="stylesheet" href="/src/assets/css/main.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
@@ -161,7 +161,7 @@
   {{> footer}}
   
   <script type="module" src="/src/js/main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -172,35 +172,6 @@
   </script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const productWorksSwiper = new Swiper('.product-works-swiper', {
-          slidesPerView: 1,
-          centeredSlides: false,
-          spaceBetween: 20,
-          loop: true,
-          speed: 700,
-
-          breakpoints: {
-            768: {
-              slidesPerView: 'auto',
-              centeredSlides: true,
-              spaceBetween: 40,
-            }
-          },
-
-          navigation: {
-             nextEl: '.product-works-next',
-             prevEl: '.product-works-prev',
-          },
-          autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-          },
-      });
-
-      // Wire mobile nav buttons
-      document.querySelector('.product-works-prev-mobile')?.addEventListener('click', () => productWorksSwiper.slidePrev());
-      document.querySelector('.product-works-next-mobile')?.addEventListener('click', () => productWorksSwiper.slideNext());
-      
       // FAQ Accordion Logic
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(item => {
