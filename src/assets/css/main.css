@@ -19,14 +19,14 @@
 
 	@media (min-width: 768px) {
 		.banner-section {
-			height: 720px;
+			height: 680px;
 			padding: 120px 0;
 		}
 	}
 
 	@media (min-width: 1024px) {
 		.banner-section {
-			height: 940px;
+			height: 885px;
 			padding: 160px 0px 100px;
 		}
 	}
