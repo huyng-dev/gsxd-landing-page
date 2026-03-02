@@ -1,5 +1,5 @@
-<header class="{{#if isHome}}bg-primary bg-opacity-60 absolute top-0 left-0 right-0{{else}}bg-primary relative{{/if}} text-white h-[94px] z-50 transition-colors duration-300">
-  <div class="w-[95%] lg:w-[84%] max-w-[1320px] px-6 lg:px-0 mx-auto h-full">
+<header id="site-header" class="{{#if isHome}}bg-primary bg-opacity-60 fixed top-0 left-0 right-0{{else}}bg-primary sticky top-0{{/if}} text-white h-[94px] z-50 transition-all duration-300">
+  <div class="w-full max-w-[1320px] px-6 lg:px-0 mx-auto h-full">
     <nav class="flex items-center justify-between h-full">
       <!-- Logo -->
       <div class="flex-shrink-0 mr-[8%]">
@@ -104,6 +104,22 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    // 0. Sticky header scroll effect (home page only)
+    const siteHeader = document.getElementById('site-header');
+    if (siteHeader && siteHeader.classList.contains('fixed')) {
+      const onScroll = () => {
+        if (window.scrollY > 20) {
+          siteHeader.classList.remove('bg-opacity-60');
+          siteHeader.classList.add('bg-opacity-100', 'shadow-md');
+        } else {
+          siteHeader.classList.add('bg-opacity-60');
+          siteHeader.classList.remove('bg-opacity-100', 'shadow-md');
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
     // 1. Highlight Active Link
     const currentPath = window.location.pathname;
     

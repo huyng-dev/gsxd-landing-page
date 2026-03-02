@@ -17,25 +17,88 @@
     <!-- Stats Grid -->
     <div class="grid grid-cols-2 lg:grid-cols-5 gap-8" data-aos="fade-up" data-aos-delay="400">
       <div>
-        <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3">1000</div>
+        <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3"><span class="stat-number" data-target="1000">0</span></div>
         <p class="text-neutral-1 font-semibold">Công trình lớn nhỏ</p>
       </div>
       <div>
-        <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3">5000m<sup>2</sup></div>
+        <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3"><span class="stat-number" data-target="5000">0</span>m<sup>2</sup></div>
         <p class="text-neutral-1 font-semibold">Nhà xưởng</p>
       </div>
       <div>
-        <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3">100%</div>
+        <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3"><span class="stat-number" data-target="100" data-suffix="%">0%</span></div>
         <p class="text-neutral-1 font-semibold">Sản xuất thủ công</p>
       </div>
       <div>
-        <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3">50</div>
+        <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3"><span class="stat-number" data-target="50">0</span></div>
         <p class="text-neutral-1 font-semibold">Dòng sản phẩm</p>
       </div>
       <div>
-        <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3">40</div>
+        <div class="text-4xl lg:text-5xl font-bold text-neutral-1 mb-3"><span class="stat-number" data-target="40">0</span></div>
         <p class="text-neutral-1 font-semibold">Năm kinh nghiệm</p>
       </div>
     </div>
+
+    <script>
+      (function () {
+        const counters = document.querySelectorAll('.stat-number');
+        if (!counters.length) return;
+
+        // Store active interval per element
+        const timers = new WeakMap();
+
+        const reset = (el) => {
+          if (timers.has(el)) {
+            clearInterval(timers.get(el));
+            timers.delete(el);
+          }
+          const suffix = el.getAttribute('data-suffix') || '';
+          el.textContent = '0' + suffix;
+        };
+
+        const animate = (el) => {
+          // Clear any existing animation first
+          if (timers.has(el)) {
+            clearInterval(timers.get(el));
+            timers.delete(el);
+          }
+
+          const target = parseInt(el.getAttribute('data-target'), 10);
+          const suffix = el.getAttribute('data-suffix') || '';
+          const duration = 3000;
+          const frameDuration = 1000 / 60;
+          const totalFrames = Math.round(duration / frameDuration);
+          let frame = 0;
+
+          const easeOut = (t) => 1 - Math.pow(1 - t, 4);
+
+          const id = setInterval(() => {
+            frame++;
+            const progress = easeOut(frame / totalFrames);
+            const current = Math.round(progress * target);
+            el.textContent = current + suffix;
+            if (frame >= totalFrames) {
+              el.textContent = target + suffix;
+              clearInterval(id);
+              timers.delete(el);
+            }
+          }, frameDuration);
+
+          timers.set(el, id);
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animate(entry.target);
+            } else {
+              // Reset when scrolled away so it replays next time
+              reset(entry.target);
+            }
+          });
+        }, { threshold: 0.4 });
+
+        counters.forEach((el) => observer.observe(el));
+      })();
+    </script>
   </div>
 </section>

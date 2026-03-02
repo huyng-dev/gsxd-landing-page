@@ -187,43 +187,35 @@
       effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,
-      slidesPerView: 1,
+      slidesPerView: "auto",
       initialSlide: 1,
       loop: true,
       loopedSlides: 5,
       coverflowEffect: {
-        rotate: 25,
-        stretch: -20,
-        depth: 60,
+        rotate: 35,
+        stretch: 0,
+        depth: 50,
         modifier: 1,
         slideShadows: true,
+        scale: 0.9
       },
       navigation: {
         nextEl: '.awards-next',
         prevEl: '.awards-prev',
       },
       autoplay: {
-        delay: 3000,
+        delay: 1000000,
         disableOnInteraction: false,
       },
       breakpoints: {
         768: {
           slidesPerView: 3,
-          coverflowEffect: {
-            stretch: -20,
-          }
         },
         1024: {
           slidesPerView: 3,
-          coverflowEffect: {
-            stretch: -30,
-          }
         },
         1280: {
           slidesPerView: 5,
-          coverflowEffect: {
-            stretch: -30,
-          }
         }
       }
     });
