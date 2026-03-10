@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenTech - Nền tảng Khoa học & Công nghệ Mở</title>
+    <style>
+        /* ==========================================================================
+           1. CSS VARIABLES (DESIGN TOKENS) - Quản lý màu sắc & Typography tập trung
+           ========================================================================== */
+        :root {
+            --color-primary: #004b87; /* Navy Blue - Trust/Gov */
+            --color-primary-light: #f0f5fa;
+            --color-secondary: #0073e6;
+            --color-text-main: #1f2937;
+            --color-text-muted: #6b7280;
+            --color-bg-body: #f9fafb;
+            --color-white: #ffffff;
+            --color-border: #e5e7eb;
+            
+            /* Tag Colors */
+            --tag-science: #e0f2fe; --tag-science-text: #0369a1;
+            --tag-data: #dcfce7; --tag-data-text: #15803d;
+            --tag-api: #fef08a; --tag-api-text: #854d0e;
+
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 4rem;
+
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* ==========================================================================
+           2. GLOBAL STYLES & RESET
+           ========================================================================== */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--color-bg-body);
+            color: var(--color-text-main);
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 var(--spacing-md); }
+        .section-title { font-size: 1.75rem; font-weight: 700; margin-bottom: var(--spacing-lg); border-left: 4px solid var(--color-primary); padding-left: var(--spacing-md); }
+
+        /* ==========================================================================
+           3. COMPONENTS LAYOUT
+           ========================================================================== */
+        /* --- HEADER --- */
+        .site-header {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            position: sticky; top: 0; z-index: 100;
+            box-shadow: var(--shadow-md);
+        }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md) 0; }
+        .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: -0.5px; }
+        .main-nav { display: flex; gap: var(--spacing-lg); }
+        .main-nav a { font-weight: 500; opacity: 0.9; transition: opacity 0.2s; }
+        .main-nav a:hover { opacity: 1; text-decoration: underline; }
+        .user-actions { display: flex; gap: var(--spacing-md); align-items: center; }
+        .btn { padding: 0.5rem 1rem; border-radius: var(--radius-md); font-weight: 500; cursor: pointer; border: none; }
+        .btn-outline { background: transparent; border: 1px solid var(--color-white); color: var(--color-white); }
+        .btn-primary { background: var(--color-secondary); color: var(--color-white); }
+
+        /* --- HERO & SCHOLAR SEARCH --- */
+        .hero { background: linear-gradient(to bottom, var(--color-white), var(--color-primary-light)); padding: var(--spacing-xl) 0; text-align: center; border-bottom: 1px solid var(--color-border); }
+        .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: var(--spacing-sm); color: var(--color-primary); }
+        .hero p { font-size: 1.125rem; color: var(--color-text-muted); margin-bottom: var(--spacing-lg); max-width: 800px; margin-inline: auto; }
+        
+        .search-container { max-width: 900px; margin: 0 auto; background: var(--color-white); padding: var(--spacing-sm); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: var(--spacing-sm); border: 1px solid var(--color-border); }
+        .search-bar { display: flex; gap: var(--spacing-sm); }
+        .search-bar select { padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg-body); font-weight: 500; outline: none; }
+        .search-bar input { flex: 1; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-size: 1rem; outline: none; }
+        .search-bar input:focus { border-color: var(--color-primary); }
+        .search-bar button { padding: 1rem 2rem; font-size: 1rem; }
+        
+        .search-filters { display: flex; justify-content: center; gap: var(--spacing-lg); font-size: 0.875rem; color: var(--color-text-muted); margin-top: var(--spacing-sm); }
+        .search-filters label { display: flex; align-items: center; gap: 4px; cursor: pointer; }
+
+        /* --- PLATFORM METRICS --- */
+        .metrics { display: flex; justify-content: center; gap: var(--spacing-xl); padding: var(--spacing-lg) 0; background: var(--color-white); border-bottom: 1px solid var(--color-border); }
+        .metric-item { text-align: center; }
+        .metric-item strong { display: block; font-size: 2rem; color: var(--color-primary); font-weight: 800; line-height: 1.2; }
+        .metric-item span { font-size: 0.875rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* --- CONTENT GRIDS (CSS GRID ARCHITECTURE) --- */
+        .section-wrapper { padding: var(--spacing-xl) 0; }
+        .section-wrapper:nth-child(even) { background-color: var(--color-white); }
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: var(--spacing-lg); }
+
+        /* --- CARDS (REUSABLE UI COMPONENTS) --- */
+        .card { background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--spacing-lg); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; height: 100%; box-shadow: var(--shadow-sm); }
+        .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--color-secondary); }
+        
+        .card-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-md); font-size: 0.875rem; }
+        .badge { padding: 0.25rem 0.75rem; border-radius: 999px; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .badge.science { background: var(--tag-science); color: var(--tag-science-text); }
+        .badge.data { background: var(--tag-data); color: var(--tag-data-text); }
+        .badge.api { background: var(--tag-api); color: var(--tag-api-text); }
+        
+        .card h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: var(--spacing-sm); color: var(--color-text-main); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .card p { color: var(--color-text-muted); font-size: 0.875rem; margin-bottom: var(--spacing-md); flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        
+        .card-footer { border-top: 1px solid var(--color-border); padding-top: var(--spacing-md); font-size: 0.875rem; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 4px; }
+        .card-footer strong { color: var(--color-text-main); }
+        
+        .view-all-link { display: inline-block; margin-top: var(--spacing-lg); font-weight: 600; color: var(--color-secondary); text-decoration: none; }
+        .view-all-link:hover { text-decoration: underline; }
+
+        /* --- FOOTER --- */
+        .site-footer { background: var(--color-text-main); color: var(--color-white); padding: var(--spacing-xl) 0; margin-top: auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--spacing-xl); }
+        .footer-col h4 { font-size: 1.125rem; margin-bottom: var(--spacing-md); color: #9ca3af; }
+        .footer-col ul { display: flex; flex-direction: column; gap: var(--spacing-sm); }
+        .footer-col a { color: #d1d5db; }
+        .footer-col a:hover { color: var(--color-white); }
+        .footer-bottom { text-align: center; padding-top: var(--spacing-lg); margin-top: var(--spacing-lg); border-top: 1px solid #374151; color: #9ca3af; font-size: 0.875rem; }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">🏛️ OpenTech.gov.vn</div>
+            <nav class="main-nav">
+                <a href="#cong-bo">Công bố Khoa học</a>
+                <a href="#du-lieu">Dữ liệu Mở</a>
+                <a href="#open-api">Open API</a>
+                <a href="#dien-dan">Diễn đàn</a>
+            </nav>
+            <div class="user-actions">
+                <button class="btn btn-outline">Đăng nhập</button>
+                <button class="btn btn-primary">Tài khoản Cán bộ</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Cổng Thông tin Khoa học & Công nghệ Mở</h1>
+                <p>Tìm kiếm, truy xuất và đóng góp vào kho tàng tri thức khoa học, tập dữ liệu mở và API chất lượng cao phục vụ nghiên cứu và phát triển.</p>
+                
+                <div class="search-container">
+                    <div class="search-bar">
+                        <select aria-label="Danh mục tìm kiếm">
+                            <option>Tất cả danh mục</option>
+                            <option>Công bố Khoa học (Bài báo/Tạp chí)</option>
+                            <option>Tập Dữ liệu Mở (Dataset)</option>
+                            <option>Tài liệu Open API</option>
+                        </select>
+                        <input type="text" placeholder="Nhập từ khóa, tên tác giả, DOI, chủ đề nghiên cứu..." aria-label="Khung tìm kiếm">
+                        <button class="btn btn-primary">TÌM KIẾM 🔍</button>
+                    </div>
+                    <div class="search-filters">
+                        <span>Nguồn trích xuất:</span>
+                        <label><input type="checkbox" checked> CSDL Quốc gia</label>
+                        <label><input type="checkbox" checked> Scopus / IEEE</label>
+                        <label><input type="checkbox" checked> Tạp chí Nội bộ</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="metrics">
+            <div class="metric-item"><strong>15,420+</strong><span>Công bố Khoa học</span></div>
+            <div class="metric-item"><strong>2,150+</strong><span>Tập Dữ liệu Mở</span></div>
+            <div class="metric-item"><strong>45+</strong><span>Hệ thống Open API</span></div>
+            <div class="metric-item"><strong>1.2M+</strong><span>Lượt truy xuất / tháng</span></div>
+        </section>
+
+        <section id="cong-bo" class="section-wrapper">
+            <div class="container">
+                <h2 class="section-title">Công bố Khoa học mới nhất</h2>
+                <div class="grid-layout">
+                    <article class="card">
+                        <div class="card-meta">
+                            <span class="badge science">Trí tuệ nhân tạo (AI)</span>
+                            <span>12/03/2026</span>
+                        </div>
+                        <h3>Ứng dụng mô hình ngôn ngữ lớn (LLM) trong phân tích dữ liệu Y tế dự phòng tại Việt Nam</h3>
+                        <p>Nghiên cứu tập trung vào việc fine-tune các mô hình mã nguồn mở để dự đoán biểu đồ dịch tễ học dựa trên dữ liệu bệnh án điện tử...</p>
+                        <div class="card-footer">
+                            <span>👤 Tác giả: <strong>TS. Nguyễn Văn A, ThS. Trần Thị B</strong></span>
+                            <span>📖 Nguồn: Tạp chí Khoa học Máy tính VN</span>
+                            <span>📎 Đính kèm: PDF (Có thể tải xuống)</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-meta">
+                            <span class="badge science">Vật liệu Mới</span>
+                            <span>10/03/2026</span>
+                        </div>
+                        <h3>Tổng hợp và đánh giá tính chất quang xúc tác của Nano TiO2 pha tạp Graphene</h3>
+                        <p>Bài báo trình bày quy trình tổng hợp vật liệu composite nano... nhằm ứng dụng trong xử lý nước thải công nghiệp Dệt may.</p>
+                        <div class="card-footer">
+                            <span>👤 Tác giả: <strong>Nhóm nghiên cứu PTN Trọng điểm</strong></span>
+                            <span>📖 Nguồn: Kỷ yếu Hội nghị Vật lý Toàn quốc</span>
+                            <span>📎 Đính kèm: Đang chờ Peer-review</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-meta">
+                            <span class="badge science">Năng lượng xanh</span>
+                            <span>05/03/2026</span>
+                        </div>
+                        <h3>Tối ưu hóa hệ thống pin mặt trời áp mái bằng thuật toán bầy đàn (PSO)</h3>
+                        <p>Đề xuất mô hình tính toán góc nghiêng tối ưu cho các tấm pin quang điện tại khu vực Đồng bằng Sông Cửu Long...</p>
+                        <div class="card-footer">
+                            <span>👤 Tác giả: <strong>PGS. TS. Lê Văn C</strong></span>
+                            <span>📖 Nguồn: IEEE Transactions on Energy</span>
+                            <span>📎 Đính kèm: PDF, Link DOI</span>
+                        </div>
+                    </article>
+                </div>
+                <a href="#" class="view-all-link">Xem toàn bộ Kho lưu trữ Khoa học ➔</a>
+            </div>
+        </section>
+
+        <section id="du-lieu" class="section-wrapper">
+            <div class="container">
+                <h2 class="section-title">Tập Dữ liệu Mở (Open Datasets) nổi bật</h2>
+                <div class="grid-layout">
+                    <article class="card">
+                        <div class="card-meta">
+                            <span class="badge data">Môi trường & Khí hậu</span>
+                            <span>Cập nhật: 1 giờ trước</span>
+                        </div>
+                        <h3>Chỉ số chất lượng không khí (AQI) toàn quốc Q1/2026</h3>
+                        <p>Dữ liệu đo đạc từ 150 trạm quan trắc trên toàn quốc, độ phân giải theo giờ, bao gồm chỉ số PM2.5, PM10, CO, NO2.</p>
+                        <div class="card-footer">
+                            <span>💾 Định dạng: <strong>CSV, GeoJSON</strong></span>
+                            <span>📊 Dung lượng: 1.2 GB | Số dòng: 2.5M+</span>
+                            <span>🏛️ Cơ quan cấp: Cục Kiểm soát Ô nhiễm MT</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-meta">
+                            <span class="badge data">Kinh tế & Xã hội</span>
+                            <span>Cập nhật: Hôm qua</span>
+                        </div>
+                        <h3>Thống kê Tỉ lệ xuất nhập khẩu khối ngành Nông nghiệp 2021-2025</h3>
+                        <p>Tập dữ liệu phân tích chi tiết các mặt hàng chủ lực xuất khẩu sang thị trường EU và Mỹ, phân loại theo mã HS code.</p>
+                        <div class="card-footer">
+                            <span>💾 Định dạng: <strong>Excel (XLSX), JSON</strong></span>
+                            <span>📊 Dung lượng: 45 MB | Số dòng: 15,000</span>
+                            <span>🏛️ Cơ quan cấp: Tổng cục Thống kê</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-meta">
+                            <span class="badge data">Y tế dự phòng</span>
+                            <span>Cập nhật: Tuần trước</span>
+                        </div>
+                        <h3>Dữ liệu Tiêm chủng mở rộng các bệnh Truyền nhiễm (Đã ẩn danh)</h3>
+                        <p>Cơ sở dữ liệu thống kê tỉ lệ bao phủ vaccine theo tỉnh thành, độ tuổi. Phục vụ mô phỏng và nghiên cứu dịch tễ.</p>
+                        <div class="card-footer">
+                            <span>💾 Định dạng: <strong>CSV</strong></span>
+                            <span>📊 Dung lượng: 850 MB | Số dòng: 1.8M+</span>
+                            <span>🏛️ Cơ quan cấp: Viện Vệ sinh Dịch tễ</span>
+                        </div>
+                    </article>
+                </div>
+                <a href="#" class="view-all-link">Khám phá Cổng Dữ liệu Mở ➔</a>
+            </div>
+        </section>
+
+        <section id="open-api" class="section-wrapper">
+            <div class="container">
+                <h2 class="section-title">Nền tảng Open API cho Nhà phát triển</h2>
+                <div class="grid-layout">
+                    <article class="card">
+                        <div class="card-meta">
+                            <span class="badge api">RESTful API</span>
+                            <span style="color: #16a34a; font-weight: bold;">🟢 99.9% Uptime</span>
+                        </div>
+                        <h3>API Truy xuất Bản đồ Không gian Địa lý (Web Map Service)</h3>
+                        <p>Cung cấp endpoint để query bản đồ hành chính, lớp mây, lớp nhiệt độ. Hỗ trợ chuẩn OGC WMS/WFS.</p>
+                        <div class="card-footer">
+                            <span>🔑 Authentication: Bearer Token</span>
+                            <span>📖 Documentation: Swagger / OpenAPI 3.0</span>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-meta">
+                            <span class="badge api">GraphQL</span>
+                            <span style="color: #16a34a; font-weight: bold;">🟢 99.8% Uptime</span>
+                        </div>
+                        <h3>API Tra cứu Danh mục Công trình Khoa học Quốc gia</h3>
+                        <p>Truy vấn linh hoạt metadata của hơn 15,000 bài báo. Hỗ trợ filtering sâu theo DOI, tác giả, chuyên ngành.</p>
+                        <div class="card-footer">
+                            <span>🔑 Authentication: API Key</span>
+                            <span>📖 Documentation: GraphiQL Explorer</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>CƠ QUAN CHỦ QUẢN</h4>
+                    <p>Bộ Khoa học và Công nghệ<br>Cục Thông tin Khoa học và Công nghệ Quốc gia</p>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: #9ca3af;">
+                        Địa chỉ: 24 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội<br>
+                        Email: hotro@opentech.gov.vn<br>
+                        Hotline: 1900 xxxx
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>LIÊN KẾT NHANH</h4>
+                    <ul>
+                        <li><a href="#">Hướng dẫn Nộp công bố Khoa học</a></li>
+                        <li><a href="#">Quy định sử dụng Dữ liệu Mở</a></li>
+                        <li><a href="#">Tài liệu tích hợp Open API</a></li>
+                        <li><a href="#">Sơ đồ Trang (Sitemap)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>CHÍNH SÁCH</h4>
+                    <ul>
+                        <li><a href="#">Giấy phép Nguồn mở (Open License)</a></li>
+                        <li><a href="#">Chính sách Bảo mật & Quyền riêng tư</a></li>
+                        <li><a href="#">Điều khoản Dịch vụ (Terms of Use)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Hệ thống OpenTech.gov.vn. Vận hành theo kiến trúc mở phục vụ nghiên cứu khoa học.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

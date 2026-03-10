@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gạch Trang Trí - Thanh Hải Ceramics</title>
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+  </style>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap');
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/src/assets/css/main.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body data-page="products" class="min-h-screen flex flex-col bg-neutral-1">
+  {{> header}}
+  
+  <main class="flex-grow bg-background-secondary">
+    <!-- Top Banner -->
+    <section class="relative w-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center pb-8 overflow-hidden">
+      <!-- Background Image with Dark Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="/src/assets/images/gach-trang-tri-banner.png" alt="Gạch Trang Trí Banner" class="w-full h-full object-cover object-center">
+        <!-- Slight dark overlay to make text readable -->
+        <div class="absolute inset-0 bg-black/30"></div>
+      </div>
+      
+      <!-- Content Container -->
+      <div class="relative z-10 xl:w-[50%] w-[85%] max-w-[1320px] mx-auto text-white">
+        <div data-aos="fade-up" data-aos-duration="1000">
+          <h1 class="text-6xl md:text-8xl lg:text-[130px] leading-none mb-6 md:mb-8 drop-shadow-md font-lavishly">
+            Gạch trang trí
+          </h1>
+          <p class="text-sm md:text-base lg:text-lg max-w-lg mb-6 md:mb-8 drop-shadow leading-relaxed">
+            Cùng bạn viết nên tuyệt tác<br>
+            trên những mảng tường.
+          </p>
+          <a href="#" class="inline-block border-2 border-white text-white px-6 py-2 md:px-8 md:py-3 uppercase text-xs font-bold tracking-widest hover:bg-white hover:text-black transition-colors duration-300">TÌM HIỂU THÊM</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ứng dụng đa dạng Section -->
+    <section class="max-w-[1320px] w-[85%] mx-auto py-12 md:py-16" data-aos="fade-up">
+      <h2 class="text-xl md:text-2xl font-bold uppercase text-secondary mb-6 md:mb-10 tracking-wide text-left">Ứng dụng đa dạng</h2>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+        <!-- Left large box -->
+        <div class="flex flex-col">
+          <div class="w-full aspect-square bg-[#E2E2E2] shadow-lg"></div>
+          <p class="text-base md:text-xl font-bold uppercase mt-4 text-primary text-left">Tường trang trí</p>
+        </div>
+        
+        <!-- Right 2x2 grid -->
+        <div class="flex flex-col justify-between gap-5 h-full">
+          <!-- Top Row -->
+          <div class="grid grid-cols-2 gap-4 md:gap-16">
+            <div class="flex flex-col">
+              <div class="w-full aspect-square bg-[#E2E2E2] shadow-lg"></div>
+              <p class="text-base md:text-xl font-bold uppercase text-center mt-4 text-primary">Lát nền</p>
+            </div>
+            <div class="flex flex-col">
+              <div class="w-full aspect-square bg-[#E2E2E2] shadow-lg"></div>
+              <p class="text-base md:text-xl font-bold uppercase text-center mt-4 text-primary">Phòng khách</p>
+            </div>
+          </div>
+          <!-- Bottom Row -->
+          <div class="grid grid-cols-2 gap-4 md:gap-16">
+            <div class="flex flex-col">
+              <div class="w-full aspect-square bg-[#E2E2E2] shadow-lg"></div>
+              <p class="text-base md:text-xl font-bold uppercase text-center mt-4 text-primary">Ngoài trời</p>
+            </div>
+            <div class="flex flex-col">
+              <div class="w-full aspect-square bg-[#E2E2E2] shadow-lg"></div>
+              <p class="text-base md:text-xl font-bold uppercase text-center mt-4 text-primary">Phòng tắm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="w-[85%] max-w-[1320px] mx-auto pb-6 pt-4 relative z-10">
+        <p class="font-bold tracking-[0.15em] text-primary/60 uppercase text-xs md:text-base">
+            <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-extrabold border-primary">Gạch Trang Trí</span>
+        </p>
+    </div>
+
+    {{> products/product-grid category="gach-trang-tri"}}
+
+    <!-- Process Section -->
+    <section class="w-[85%] max-w-[1320px] mx-auto pb-12 md:pb-16" data-aos="fade-up">
+        <!-- Texts -->
+        <div class="w-full mb-6 md:mb-10">
+            <div class="flex flex-col w-full">
+                <h2 class="text-secondary font-italianno text-[45px] md:text-[60px] leading-none text-left drop-shadow-sm">
+                    Cùng chúng tôi hiện thực hóa mẫu gạch trong mơ...
+                </h2>
+                <h2 class="text-secondary font-italianno text-[45px] md:text-[60px] leading-none text-right mt-2 drop-shadow-sm">
+                    Yêu cầu của bạn là gì?
+                </h2>
+            </div>
+        </div>
+
+        <!-- Image Process -->
+        <div class="w-full flex justify-center mb-6">
+            <img src="/src/assets/images/process.svg" alt="Quy trình chế tác gạch" class="w-full h-auto object-contain shadow-lg bg-white">
+        </div>
+
+        <!-- Note Text -->
+        <div class="w-full">
+            <p class="text-base md:text-xl italic text-primary font-thin">
+                * Để đảm bảo sự hoàn mỹ: Quá trình chế tác mẫu có tính phí và thời gian thực hiện tùy thuộc vào độ tinh xảo của sản phẩm
+            </p>
+        </div>
+    </section>
+
+    <!-- 2 Images Section -->
+    <section class="w-full max-w-[1920px] mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6">
+            <img src="/src/assets/images/trang-tri-01.png" alt="Gạch Trang Trí 1" class="w-full h-auto object-contain shadow-lg bg-white" data-aos="fade-up">
+            <img src="/src/assets/images/trang-tri-02.png" alt="Gạch Trang Trí 2" class="w-full h-auto object-contain shadow-lg bg-white" data-aos="fade-up">
+        </div>
+    </section>
+
+    <!-- Công đoạn chế tác Section -->
+    <section class="relative w-full overflow-hidden py-12 md:py-20" data-aos="fade-up">
+        <!-- Họa tiết trang trí background -->
+        <div class="absolute right-0 top-1/3 -translate-y-1/2 w-[100px] md:w-[200px] lg:w-[300px] pointer-events-none z-0 opacity-60">
+            <img src="/src/assets/images/gtt-decorate.svg" alt="Decor Background" class="w-full h-auto">
+        </div>
+        
+        <!-- Content Container -->
+        <div class="max-w-[1320px] w-[85%] mx-auto relative z-10">
+            <h2 class="text-xl md:text-2xl font-bold uppercase text-secondary mb-8 md:mb-12 tracking-wide text-left">Công đoạn chế tác</h2>
+            <div class="flex justify-center items-center w-full">
+                <img src="/src/assets/images/gtt-process.svg" alt="Công đoạn chế tác" class="w-full max-w-[95%] h-auto relative z-10 drop-shadow-sm">
+            </div>
+        </div>
+    </section>
+
+    {{> products/journey-video}}
+
+    <!-- Nâng tầm giá trị nghệ thuật Section -->
+    <section class="max-w-[1320px] w-[85%] mx-auto pb-12 md:pb-20" data-aos="fade-up">
+        <h2 class="text-xl md:text-2xl font-bold uppercase text-secondary mb-8 md:mb-12 tracking-wide text-left">Nâng tầm giá trị nghệ thuật</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-14 md:items-start">
+            <!-- Card 1 -->
+            <div class="bg-white px-8 md:px-12 pt-8 md:pt-12 pb-8 md:pb-36 shadow-lg flex flex-col items-center text-center transition-transform hover:-translate-y-2 duration-300 group">
+                <img src="/src/assets/images/gtt-hand.svg" alt="Chế tác thủ công" class="w-16 md:w-20 mb-6 object-contain transition-transform group-hover:scale-110 duration-300">
+                <h3 class="text-lg md:text-xl font-bold text-primary mb-4">Chế tác thủ công</h3>
+                <p class="text-sm md:text-base text-primary/80 leading-relaxed text-justify md:text-center xl:text-justify">
+                    Mỗi viên gạch đều được tạo hình, tráng men và chăm chút tỉ mỉ bằng tay. Quy trình thủ công thuần túy tạo nên chiều sâu và cá tính riêng biệt. Chúng tôi trân trọng vẻ đẹp từ những khiếm khuyết tự nhiên.
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white pt-8 md:pt-12 px-8 md:px-12 pb-8 md:pb-24 shadow-lg flex flex-col items-center text-center transition-transform hover:-translate-y-2 duration-300 group">
+                <img src="/src/assets/images/gtt-fire.svg" alt="Tinh hoa hỏa biến" class="w-16 md:w-20 mb-6 object-contain transition-transform group-hover:scale-110 duration-300">
+                <h3 class="text-lg md:text-xl font-bold text-primary mb-4">Tinh hoa hỏa biến</h3>
+                <p class="text-sm md:text-base text-primary/80 leading-relaxed text-justify md:text-center xl:text-justify">
+                    Sử dụng nguồn đất tuyển chọn kỹ lưỡng, gạch được nung ở nhiệt độ cao lên đến 1300°C. Quy trình này giúp xương gạch đạt độ cứng vượt trội, chống thấm và chịu được những điều kiện thời tiết khắc nghiệt nhất. Ngoài ra, nhiệt độ cao và không đồng đều trong lò nung cũng tạo ra sự biến chuyển cho màu sắc độc đáo.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white px-8 md:px-12 pt-8 md:pt-12 pb-8 md:pb-24 shadow-lg flex flex-col items-center text-center transition-transform hover:-translate-y-2 duration-300 group">
+                <img src="/src/assets/images/gtt-brush.svg" alt="Tùy biến độc bản" class="w-16 md:w-20 mb-6 object-contain transition-transform group-hover:scale-110 duration-300">
+                <h3 class="text-lg md:text-xl font-bold text-primary mb-4">Tùy biến độc bản</h3>
+                <p class="text-sm md:text-base text-primary/80 leading-relaxed text-justify md:text-center xl:text-justify">
+                    Chúng tôi kiến tạo những mảng gạch tùy chỉnh theo mong muốn và yêu cầu của bạn, phá vỡ mọi giới hạn nghệ thuật. Với khả năng tùy biến không giới hạn về màu sắc và hình khối, mỗi không gian sẽ trở thành một tác phẩm thị giác sống động, đậm chất cá nhân.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dấu ấn trên những công trình Section -->
+    <section class="max-w-[1320px] w-[85%] mx-auto" data-aos="fade-up">
+        <h2 class="text-xl md:text-2xl font-bold uppercase text-secondary mb-6 md:mb-10 tracking-wide text-left">Dấu ấn trên những công trình</h2>
+        
+        <div class="flex h-[400px] md:h-[500px] lg:h-[600px] gap-2 md:gap-4 lg:gap-6 w-full">
+            
+            <!-- Item 1 -->
+            <div class="project-item active group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-full [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onclick="setActiveProject(this)">
+                <img src="/src/assets/images/trang-tri-slide-01.jpg" alt="Công trình 1" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
+                <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
+                    <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
+                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
+                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-full [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onclick="setActiveProject(this)">
+                <img src="/src/assets/images/trang-tri-slide-02.jpg" alt="Công trình 2" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
+                <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
+                    <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
+                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
+                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-full [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onclick="setActiveProject(this)">
+                <img src="/src/assets/images/trang-tri-slide-01.jpg" alt="Công trình 3" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
+                <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
+                    <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
+                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
+                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-full [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onclick="setActiveProject(this)">
+                <img src="/src/assets/images/trang-tri-slide-04.jpg" alt="Công trình 4" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
+                <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
+                    <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
+                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
+                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-full [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onclick="setActiveProject(this)">
+                <img src="/src/assets/images/trang-tri-slide-03.jpg" alt="Công trình 5" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
+                <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
+                    <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
+                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
+                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <script>
+            function setActiveProject(clickedEl) {
+                const items = document.querySelectorAll('.project-item');
+                items.forEach(item => {
+                    item.classList.remove('active');
+                });
+                clickedEl.classList.add('active');
+            }
+        </script>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="w-full relative py-12 md:py-20 bg-background-secondary overflow-hidden" data-aos="fade-up">
+       <img src="/src/assets/images/gtt-decorate-left.svg" class="absolute top-[38%] -translate-y-1/3 md:-left-12 -left-1/2 w-[42%] object-contain opacity-80 pointer-events-none z-0" alt="">
+      <img src="/src/assets/images/gtt-decorate-right.svg" class="absolute top-[38%] -translate-y-1/3 md:-right-12 -right-1/2 w-[42%] object-contain opacity-80 pointer-events-none z-0" alt="">
+        {{> products/faq-content}}
+    </section>
+
+  </main>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true, offset: 100 });</script>
+</body>
+</html>

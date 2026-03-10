@@ -20,6 +20,7 @@ export default {
                 archivo: ['"Archivo"', "sans-serif"],
                 italianno: ['"Italianno"', "cursive"],
                 charm: ['"Charm"', "cursive"],
+                lavishly: ['"Lavishly Yours"', "cursive"],
             },
             keyframes: {
                 marquee: {

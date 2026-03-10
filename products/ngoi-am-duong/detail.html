@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ngói Âm Dương 27 Xanh Đồng - Thanh Hải Ceramics</title>
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap');
+  </style>
+  <link rel="stylesheet" href="/src/assets/css/main.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
+  {{> header}}
+  
+  <main class="flex-grow bg-background-secondary pb-20">
+    
+    <!-- Top Banner for Detail -->
+    <section class="relative w-full h-[250px] md:h-[300px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="/src/assets/images/ngoi-am-duong-banner.jpg" alt="Ngói Âm Dương Banner" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+        <div class="relative z-10 text-center text-white px-4 pt-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 tracking-wider">NGÓI ÂM DƯƠNG</h1>
+            <p class="text-xs md:text-sm text-white/80 tracking-widest">
+                <a href="/" class="hover:text-white transition-colors">Trang chủ</a> <span class="mx-2">></span> 
+                <a href="/products/ngoi-am-duong/" class="hover:text-white transition-colors">Ngói âm dương</a> <span class="mx-2">></span>
+                <span class="text-white">Kiến trúc Resort lợp ngói lưu ly màu xanh</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Sub Breadcrumb -->
+    <div class="w-[85%] max-w-[1320px] mx-auto py-8">
+        <p class="font-bold tracking-[0.15em] text-primary/60 uppercase text-[12px] md:text-sm">
+            <a href="/" class="hover:text-primary transition-colors">Trang chủ</a> 
+            <span class="mx-1">/</span> 
+            <a href="/products/" class="hover:text-primary transition-colors">Sản phẩm</a> 
+            <span class="mx-1">/</span> 
+            <span class="text-primary font-extrabold pb-1">NGÓI ÂM DƯƠNG</span>
+        </p>
+        <hr class="border-t border-black/10 mt-4 w-full">
+    </div>
+
+    <!-- Product Detail Container -->
+    <section class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 pb-16">
+        
+        <!-- Left: Images -->
+        <div class="flex flex-col gap-5">
+            <!-- Main Image -->
+            <div class="w-full aspect-square bg-[#FBF9F7] flex items-center justify-center shadow-lg relative overflow-hidden group">
+                <img src="/src/assets/images/ngoi-01.jpg" alt="Ngói Âm Dương 27 Xanh Đồng" class="w-[85%] h-[85%] object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <!-- Thumbnails -->
+            <div class="flex gap-2 w-full mt-2">
+                <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
+                <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
+                <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
+                <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
+                <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
+                <div class="flex-1 aspect-square bg-gradient-to-r from-[#5C2321] to-[#F5EDE7] cursor-pointer opacity-90 relative"></div>
+            </div>
+        </div>
+
+        <!-- Right: Info -->
+        <div class="flex flex-col py-2">
+            <div class="flex items-center gap-4 mb-4 text-[15px] font-bold">
+                <span class="text-primary/70">Mã SP</span>
+                <span class="text-primary font-extrabold">THC 100-GDS</span>
+            </div>
+            
+            <h2 class="text-3xl md:text-4xl lg:text-[40px] font-bold text-secondary uppercase leading-[1.1] mb-8 pb-2 tracking-tight">Ngói Âm Dương 27<br>Xanh Đồng</h2>
+            
+            <p class="text-2xl md:text-[32px] font-bold text-primary mb-10">675.000 đ/m2</p>
+            
+            <hr class="border-t border-black/10 mb-8 w-full">
+            
+            <ul class="list-disc pl-5 space-y-4 mb-10 text-primary/80 font-medium text-sm md:text-base leading-relaxed">
+                <li>Vẻ đẹp vượt thời gian, trường tồn cùng năm tháng</li>
+                <li>Chất lượng cao cấp và thiết kế cổ điển, phù hợp cho trang trí công trình kiến trúc</li>
+                <li>Màu sắc men lưu ly độc bản, biến không gian trở thành tác phẩm nghệ thuật</li>
+            </ul>
+
+            <!-- Actions -->
+            <div class="flex flex-wrap items-center gap-6 mb-12">
+                <!-- Quantity -->
+                <div class="flex items-center gap-4 text-primary font-bold">
+                    <button class="w-6 h-6 flex items-center justify-center text-xl hover:text-secondary transition-colors focus:outline-none">-</button>
+                    <div class="w-12 h-12 flex items-center justify-center border border-black/40 rounded-full text-lg shadow-sm">1</div>
+                    <button class="w-6 h-6 flex items-center justify-center text-xl hover:text-secondary transition-colors focus:outline-none">+</button>
+                </div>
+                
+                <!-- Add to cart -->
+                <button class="bg-[#C16A00] hover:bg-secondary text-white px-8 md:px-10 py-4 font-bold tracking-[0.05em] transition-colors shadow-md rounded-[2px] flex items-center justify-center text-sm ml-4">
+                    THÊM VÀO GIỎ HÀNG
+                </button>
+            </div>
+            
+            <!-- Contacts -->
+            <div class="flex flex-col gap-5 mt-2">
+                <!-- Hotline -->
+                <div class="flex items-center gap-5">
+                    <div class="w-[50px] h-[50px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-[#BC6700]/70 font-semibold uppercase tracking-wider mb-0.5">Đặt hàng ngay</p>
+                        <p class="text-secondary font-bold text-lg md:text-xl">Hotline: 0966 55 8808</p>
+                    </div>
+                </div>
+                <!-- Zalo -->
+                <div class="flex items-center gap-5">
+                    <div class="w-[50px] h-[50px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10">
+                       <span class="font-bold text-[13px]">Zalo</span>
+                    </div>
+                    <div>
+                        <p class="text-secondary font-bold text-lg md:text-xl">Chat với chúng tôi</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+  </main>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true, offset: 100 });</script>
+</body>
+</html>
