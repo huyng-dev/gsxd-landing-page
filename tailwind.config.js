@@ -22,6 +22,7 @@ export default {
                 charm: ['"Charm"', "cursive"],
                 lavishly: ['"Lavishly Yours"', "cursive"],
                 ephesis: ['"Ephesis"', "cursive"],
+                carattere: ['"Carattere"', "cursive"],
             },
             keyframes: {
                 marquee: {
