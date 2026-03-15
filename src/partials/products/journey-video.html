@@ -1,9 +1,11 @@
 <!-- Video Section -->
-  <section class="w-full mx-auto pb-16 animate-fade-in-up max-w-[1920px]">
+  <section class="w-full mx-auto pb-16 max-w-[1920px]">
+    {{#unless hideTitle}}
     <!-- Section Title -->
     <div class="text-center mb-16" data-aos="fade-up">
       <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase tracking-wide">Hành trình chế tác</h2>
     </div>
+    {{/unless}}
   <div class="relative w-full aspect-video overflow-hidden cursor-pointer group" data-aos="fade-up" data-aos-delay="200">
       <img src="/src/assets/images/video-placeholder-02.png" alt="Video placeholder" class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300">
       <!-- Play Button -->

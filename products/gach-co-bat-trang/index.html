@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gạch Cổ Bát Tràng - Thanh Hải Ceramics</title>
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Ephesis&family=Italianno&display=swap');
+  </style>
+  <link rel="stylesheet" href="/src/assets/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
+  {{> header}}
+  
+  <main class="flex-grow">
+    <!-- Banner Section -->
+    <section class="relative w-full h-[600px] md:h-[720px] lg:h-[840px] overflow-hidden flex items-start">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="/src/assets/images/gach-co-banner.png" alt="Gạch Cổ Bát Tràng Banner" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <div class="container mx-auto px-6 lg:px-[120px] relative z-10 flex flex-col justify-between items-start text-white">
+            <!-- Main Title -->
+            <div data-aos="fade-right" class="mt-10 md:mt-20">
+                <h1 class="font-lavishly text-[60px] md:text-[80px] lg:text-[128px] leading-tight drop-shadow-md">Gạch cổ Bát Tràng</h1>
+            </div>
+
+            <!-- Poem -->
+            <div data-aos="fade-left" class="max-w-xl mt-16 md:mt-32 self-end text-center">
+                <p class="font-ephesis text-2xl md:text-3xl lg:text-[36px] md:leading-[1.2] lg:leading-[1.4] drop-shadow-lg opacity-90">
+                    Trên trời có đám mây xanh<br>
+                    Ở giữa mây trắng, chung quanh mây vàng<br>
+                    Ước gì anh lấy được nàng<br>
+                    Để anh mua gạch Bát Tràng về xây<br>
+                    Xây dọc rồi lại xây ngang<br>
+                    Xây hồ bán nguyệt cho nàng rửa chân
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-[85%] max-w-[1320px] mx-auto pt-16">
+        <!-- Breadcrumb -->
+        <div class="pb-6 relative z-10">
+            <p class="font-bold tracking-[0.15em] text-primary/60 uppercase text-xs md:text-base">
+                <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-extrabold border-primary">Gạch Cổ Bát Tràng</span>
+            </p>
+        </div>
+
+        <hr class="border-t border-black/10 mb-4 w-full">
+
+        <!-- Product Grid Section -->
+        <section class="pb-8 md:pb-16">
+            <!-- Filter Button -->
+        <div class="mb-8 block" data-aos="fade-up">
+                <button class="flex items-center gap-3 text-textPrimary hover:text-secondary transition-colors font-bold uppercase tracking-[0.05em] text-[13px]">
+                    <div class="w-8 h-8 flex items-center justify-center border border-black/60 rounded text-black/60">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+                        </svg>
+                    </div>
+                    BỘ LỌC SẢN PHẨM
+                </button>
+            </div>
+
+            <!-- GẠCH BÁT SECTION -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-36 items-start mb-32" data-aos="fade-up">
+                <!-- Left: Image Gallery -->
+                <div class="relative">
+                    <div class="relative mb-6">
+                        <img src="/src/assets/images/gach-bat-01.jpg" alt="Gạch bát công trình" class="w-full aspect-[1.1/1] h-auto object-cover rounded-sm shadow-md" onerror="this.src='https://placehold.co/800x800/8c5a3c/fff?text=Gach+Bat+01'">
+                        <!-- Elip Overlay -->
+                        <img src="/src/assets/images/gach-bat-elip.svg" alt="" class="absolute top-1/2 -translate-y-1/2 -right-12 md:-right-20 max-w-[220px] aspect-square object-contain drop-shadow-2xl z-10" onerror="this.style.display='none'">
+                    </div>
+                    <!-- Thumbnails -->
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="aspect-square bg-white shadow-sm border border-black/5 flex items-center justify-center p-2 rounded-sm overflow-hidden">
+                            <img src="/src/assets/images/gach-bat-02.jpg" alt="Gạch bát mẫu" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/200x200/eee/999?text=Gach+Bat'">
+                        </div>
+                        <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
+                        <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
+                    </div>
+                </div>
+
+                <!-- Right: Product Info -->
+                <div>
+                    <h3 class="text-3xl lg:text-4xl font-bold text-secondary mb-9 tracking-wide">GẠCH BÁT</h3>
+                    <p class="font-italianno text-[28px] lg:text-[36px] text-primary/80 mb-12 leading-none">Phối sắc tự nhiên - Hiện diện một nền</p>
+                    
+                    <!-- Color Swatches -->
+                    <div class="flex gap-5 mb-12 items-center justify-center">
+                        <div class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#A98467] rounded-2xl shadow-sm"></div>
+                        <div class="w-[70px] h-[90px] md:w-[134px] md:h-[144px] bg-[#B22222] rounded-2xl shadow-sm"></div>
+                        <div class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#5D5FEF] rounded-2xl shadow-sm"></div>
+                    </div>
+
+                    <p class="text-[13px] md:text-[15px] text-primary/70 italic leading-relaxed mb-12 max-w-xl">
+                        Sự không đồng màu này không phải là lỗi kỹ thuật, mà chính là "chứng chỉ" cho nghệ thuật chế tác thủ công. Chính sự biến thiên của lửa trong lò bầu, lò ếch ngày xưa đã tạo nên vẻ đẹp "vạn biến" mà các dòng gạch công nghiệp hiện đại khó lòng mô phỏng được.
+                    </p>
+
+                    <!-- Spec Table -->
+                    <table class="w-full text-primary">
+                        <thead>
+                            <tr class="border-b border-black/10 text-[13px] md:text-[15px] font-bold uppercase tracking-wider">
+                                <th class="py-4 text-left font-bold">Kích thước (mm)</th>
+                                <th class="py-4 text-center font-bold">Định mức (viên/m2)</th>
+                                <th class="py-4 text-center font-bold">Cân nặng (kg)</th>
+                                <th class="py-4 text-right font-bold">Giá (VND)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-[14px] md:text-[16px] text-primary/90">
+                            <tr>
+                                <td class="py-5 font-medium">300x300x50</td>
+                                <td class="py-5 text-center">11</td>
+                                <td class="py-5 text-center">10</td>
+                                <td class="py-5 text-right font-bold">75.000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-5 font-medium">300x300x40</td>
+                                <td class="py-5 text-center">11</td>
+                                <td class="py-5 text-center">8</td>
+                                <td class="py-5 text-right font-bold">70.000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-5 font-medium">200x200x50</td>
+                                <td class="py-5 text-center">25</td>
+                                <td class="py-5 text-center">4.5</td>
+                                <td class="py-5 text-right font-bold">60.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- GẠCH THẤT & GẠCH XÂY SECTION -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start mb-32" data-aos="fade-up">
+                <!-- Left: Product Info -->
+                <div class="order-2 lg:order-1">
+                    <h3 class="text-3xl lg:text-4xl font-bold text-secondary mb-9 tracking-wide uppercase">Gạch Thất & Gạch Xây</h3>
+                    <p class="font-italianno text-[28px] lg:text-[36px] text-primary/80 mb-12 leading-none">Phối sắc tự nhiên - Hiện diện một nền</p>
+                    
+                    <!-- Color Swatches -->
+                    <div class="flex gap-5 mb-12 items-center justify-center">
+                        <div class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#A98467] rounded-2xl shadow-sm"></div>
+                        <div class="w-[70px] h-[90px] md:w-[134px] md:h-[144px] bg-[#B22222] rounded-2xl shadow-sm"></div>
+                        <div class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#5D5FEF] rounded-2xl shadow-sm"></div>
+                    </div>
+
+                    <p class="text-[13px] md:text-[15px] text-primary/70 italic leading-relaxed mb-12 max-w-xl">
+                        Sự không đồng màu này không phải là lỗi kỹ thuật, mà chính là "chứng chỉ" cho nghệ thuật chế tác thủ công. Chính sự biến thiên của lửa trong lò bầu, lò ếch ngày xưa đã tạo nên vẻ đẹp "vạn biến" mà các dòng gạch công nghiệp hiện đại khó lòng mô phỏng được.
+                    </p>
+
+                    <!-- Spec Table -->
+                    <table class="w-full text-primary">
+                        <thead>
+                            <tr class="border-b border-black/10 text-[13px] md:text-[15px] font-bold uppercase tracking-wider">
+                                <th class="py-4 text-left font-bold">Kích thước (mm)</th>
+                                <th class="py-4 text-center font-bold">Định mức (viên/m2)</th>
+                                <th class="py-4 text-center font-bold">Cân nặng (kg)</th>
+                                <th class="py-4 text-right font-bold">Giá (VND)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-[14px] md:text-[16px] text-primary/90">
+                            <tr>
+                                <td class="py-5 font-medium">220x110x60</td>
+                                <td class="py-5 text-center">60</td>
+                                <td class="py-5 text-center">3.5</td>
+                                <td class="py-5 text-right font-bold">26.000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-5 font-medium">300x150x60</td>
+                                <td class="py-5 text-center">50</td>
+                                <td class="py-5 text-center">6</td>
+                                <td class="py-5 text-right font-bold">40.000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-5 font-medium">300x100x60</td>
+                                <td class="py-5 text-center">50</td>
+                                <td class="py-5 text-center">6</td>
+                                <td class="py-5 text-right font-bold">38.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Right: Image Gallery -->
+                <div class="relative order-1 lg:order-2">
+                    <div class="relative mb-6">
+                        <img src="/src/assets/images/gach-that-01.jpg" alt="Gạch thất công trình" class="w-full aspect-[1.1/1] h-auto object-cover rounded-sm shadow-md" onerror="this.src='https://placehold.co/800x800/8c5a3c/fff?text=Gach+That+01'">
+                        <!-- Elip Overlay (Positioned to the left for this block) -->
+                        <img src="/src/assets/images/gach-that-elip.svg" alt="" class="absolute top-1/2 -translate-y-1/2 -left-12 md:-left-20 max-w-[220px] aspect-square object-contain drop-shadow-2xl z-10" onerror="this.style.display='none'">
+                    </div>
+                    <!-- Thumbnails -->
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
+                        <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
+                        <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GẠCH THẺ SECTION -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-36 items-start" data-aos="fade-up">
+                <!-- Left: Image Gallery -->
+                <div class="relative">
+                    <div class="relative mb-6">
+                        <img src="/src/assets/images/gach-the-01.jpg" alt="Gạch bát công trình" class="w-full aspect-[1.1/1] h-auto object-cover rounded-sm shadow-md" onerror="this.src='https://placehold.co/800x800/8c5a3c/fff?text=Gach+Bat+01'">
+                        <!-- Elip Overlay -->
+                        <img src="/src/assets/images/gach-the-elip.svg" alt="" class="absolute top-1/2 -translate-y-1/2 -right-12 md:-right-20 max-w-[220px] aspect-square object-contain drop-shadow-2xl z-10" onerror="this.style.display='none'">
+                    </div>
+                    <!-- Thumbnails -->
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
+                        <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
+                        <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
+                    </div>
+                </div>
+
+                <!-- Right: Product Info -->
+                <div>
+                    <h3 class="text-3xl lg:text-4xl font-bold text-secondary mb-9 tracking-wide">GẠCH BÁT</h3>
+                    <p class="font-italianno text-[28px] lg:text-[36px] text-primary/80 mb-12 leading-none">Phối sắc tự nhiên - Hiện diện một nền</p>
+                    
+                    <!-- Color Swatches -->
+                    <div class="flex gap-5 mb-12 items-center justify-center">
+                        <div class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#A98467] rounded-2xl shadow-sm"></div>
+                        <div class="w-[70px] h-[90px] md:w-[134px] md:h-[144px] bg-[#B22222] rounded-2xl shadow-sm"></div>
+                        <div class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#5D5FEF] rounded-2xl shadow-sm"></div>
+                    </div>
+
+                    <p class="text-[13px] md:text-[15px] text-primary/70 italic leading-relaxed mb-12 max-w-xl">
+                        Sự không đồng màu này không phải là lỗi kỹ thuật, mà chính là "chứng chỉ" cho nghệ thuật chế tác thủ công. Chính sự biến thiên của lửa trong lò bầu, lò ếch ngày xưa đã tạo nên vẻ đẹp "vạn biến" mà các dòng gạch công nghiệp hiện đại khó lòng mô phỏng được.
+                    </p>
+
+                    <!-- Spec Table -->
+                    <table class="w-full text-primary">
+                        <thead>
+                            <tr class="border-b border-black/10 text-[13px] md:text-[15px] font-bold uppercase tracking-wider">
+                                <th class="py-4 text-left font-bold">Kích thước (mm)</th>
+                                <th class="py-4 text-center font-bold">Định mức (viên/m2)</th>
+                                <th class="py-4 text-center font-bold">Cân nặng (kg)</th>
+                                <th class="py-4 text-right font-bold">Giá (VND)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-[14px] md:text-[16px] text-primary/90">
+                            <tr>
+                                <td class="py-5 font-medium">300x100x30</td>
+                                <td class="py-5 text-center">32</td>
+                                <td class="py-5 text-center">1.5</td>
+                                <td class="py-5 text-right font-bold">30.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CÔNG ĐOẠN CHẾ TÁC SECTION -->
+    {{> products/fabrication-process}}
+
+    {{> products/journey-video hideTitle=true}}
+
+    <!-- DẤU ẤN TRÊN NHỮNG CÔNG TRÌNH SECTION -->
+    <section class="w-full pb-16 md:pb-24 bg-background-secondary overflow-hidden" data-aos="fade-up">
+        <div class="max-w-[1920px] mx-auto">
+            <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-secondary text-center uppercase tracking-[0.15em] mb-12 md:mb-16">DẤU ẤN TRÊN NHỮNG CÔNG TRÌNH</h2>
+            
+            <div class="relative px-4 md:px-0">
+                <!-- Swiper Container -->
+                <div class="swiper projects-slider overflow-visible">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide transition-all duration-500">
+                            <div class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl">
+                                <img src="/src/assets/images/gach-co-work-1.jpg" alt="Dấu ấn trên những công trình" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide transition-all duration-500">
+                            <div class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl">
+                                <img src="/src/assets/images/trang-tri-slide-01.jpg" alt="Dấu ấn trên những công trình" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide transition-all duration-500">
+                            <div class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl">
+                                <img src="/src/assets/images/gach-co-work-2.jpg" alt="Dấu ấn trên những công trình" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide transition-all duration-500">
+                            <div class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl">
+                                <img src="/src/assets/images/gach-co-work-1.jpg" alt="Dấu ấn trên những công trình" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
+                            </div>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide transition-all duration-500">
+                            <div class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl">
+                                <img src="/src/assets/images/gach-co-work-2.jpg" alt="Dấu ấn trên những công trình" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination dots -->
+                <div class="projects-pagination mt-10 md:mt-12 flex justify-center gap-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓ THỂ BẠN QUAN TÂM SECTION -->
+    {{> products/recommendations}}
+
+    <!-- FAQ Section -->
+    <section class="w-full relative pb-16 bg-background-secondary overflow-visible" data-aos="fade-up">
+        {{> products/faq-content}}
+    </section>
+  </main>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initialize AOS
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        // Initialize Fabrication Slider
+        new Swiper('.fabrication-slider', {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            centeredSlides: true,
+            loop: true,
+            pagination: {
+                el: '.fabrication-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>';
+                }
+            },
+            navigation: {
+                nextEl: '.fabrication-next',
+                prevEl: '.fabrication-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                    centeredSlides: false,
+                },
+                1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 80,
+                    centeredSlides: true,
+                }
+            },
+            on: {
+                init: function() {
+                    // Refresh AOS once Swiper is ready to recalculate positions
+                    setTimeout(() => {
+                        AOS.refresh();
+                    }, 500);
+                }
+            }
+        });
+
+        // Initialize Projects Slider
+        new Swiper('.projects-slider', {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            centeredSlides: true,
+            loop: true,
+            pagination: {
+                el: '.projects-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>';
+                }
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                    centeredSlides: false,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    slidesOffsetBefore: 0,
+                    spaceBetween: 60,
+                    centeredSlides: true,
+                },
+                1440: {
+                    slidesPerView: 2.1,
+                    spaceBetween: 80,
+                    centeredSlides: true,
+                }
+            },
+            on: {
+                init: function() {
+                    setTimeout(() => {
+                        AOS.refresh();
+                    }, 500);
+                }
+            }
+        });
+
+        // Add CSS for active bullets manually if needed or via Swiper class
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .fabrication-pagination .swiper-pagination-bullet-active,
+            .projects-pagination .swiper-pagination-bullet-active {
+                background-color: #C76E00 !important;
+                width: 12px !important;
+                border-radius: 6px !important;
+            }
+
+            /* Custom Recommendation Scrollbar */
+            .custom-recommend-scrollbar::-webkit-scrollbar {
+                height: 12px;
+            }
+            .custom-recommend-scrollbar::-webkit-scrollbar-track {
+                background: #FDF5E6;
+                border: 1px solid #D2691E40;
+                border-radius: 20px;
+            }
+            .custom-recommend-scrollbar::-webkit-scrollbar-thumb {
+                background: #C76E00;
+                border: 2px solid #FDF5E6;
+                border-radius: 20px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='12' height='12'%3E%3Cpath d='M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z'/%3E%3C/svg%3E"), 
+                                  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='12' height='12'%3E%3Cpath d='M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z'/%3E%3C/svg%3E");
+                background-position: left 2px center, right 2px center;
+                background-repeat: no-repeat;
+            }
+            .custom-recommend-scrollbar::-webkit-scrollbar-thumb:hover {
+                background-color: #A65D00;
+            }
+        `;
+        document.head.appendChild(style);
+    });
+  </script>
+</body>
+</html>

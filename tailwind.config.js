@@ -21,6 +21,7 @@ export default {
                 italianno: ['"Italianno"', "cursive"],
                 charm: ['"Charm"', "cursive"],
                 lavishly: ['"Lavishly Yours"', "cursive"],
+                ephesis: ['"Ephesis"', "cursive"],
             },
             keyframes: {
                 marquee: {

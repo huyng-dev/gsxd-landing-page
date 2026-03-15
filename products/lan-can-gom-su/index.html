@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lan Can Gốm Sứ - Thanh Hải Ceramics</title>
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap');
+  </style>
+  <link rel="stylesheet" href="/src/assets/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
+  {{> header}}
+  
+  <main class="flex-grow">
+            <!-- Banner Section -->
+            <section class="relative h-[70vh] min-h-[500px] max-h-[740px] flex items-center justify-center text-white overflow-hidden">
+                <!-- Background Image -->
+                <div class="absolute inset-0 z-0">
+                    <img
+                        src="/src/assets/images/about-banner.jpg"
+                        alt="About Banner"
+                        class="w-full h-full object-cover"
+                    />
+                    <div class="absolute inset-0 bg-black/65"></div>
+                    <!-- Dark overlay -->
+                </div>
+
+                <!-- Content -->
+                <div
+                    class="relative z-10 text-center container mx-auto px-4 flex flex-col items-center"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
+                    <h1 class="text-xl md:text-2xl font-bold mb-4 uppercase tracking-widest text-white/90">GỐM SỨ THANH HẢI</h1>
+                    <h2 class="text-3xl md:text-6xl font-bold uppercase leading-tight max-w-4xl drop-shadow-lg">
+                        LAN CAN GỐM SỨ
+                    </h2>
+                </div>
+            </section>
+          <!-- Danh Mục Sản Phẩm Section 1 -->
+            <section class="w-full pb-16 pt-8">
+                <!-- Section Title -->
+                <div
+                    class="flex items-center justify-center mt-8 mb-16"
+                    data-aos="fade-up"
+                >
+                    <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#C47526] uppercase tracking-wider">Danh Mục Sản Phẩm</h2>
+                </div>
+
+                <!-- Main Container -->
+                <div
+                    class="bg-[#EBCEC1] opacity-80 p-6 lg:p-10"
+                    style="margin-left: max(0px, calc((100% - 1320px) / 2));"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+                    <!-- Featured Image & Brush Title -->
+                    <div class="flex flex-col-reverse lg:flex-row gap-8 lg:gap-16 max-w-[1320px]">
+                        <!-- Left Column: Products Grid & Pagination -->
+                        <div class="w-full lg:w-[55%] flex flex-col justify-between">
+                            <!-- Products Grid -->
+                            <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
+                                <!-- Product Card 1 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="/src/assets/images/lan-can-01.png"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+
+                                <!-- Product Card 2 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="/src/assets/images/lan-can-02.png"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+
+                                <!-- Product Card 3 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="/src/assets/images/lan-can-03.png"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+
+                                <!-- Product Card 4 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="/src/assets/images/lan-can-01.png"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="flex items-center justify-center gap-4 mt-auto">
+                                <button
+                                    class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all"
+                                >
+                                    <svg
+                                        class="w-4 h-4 font-light"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.2"
+                                            d="M15 19l-7-7 7-7"
+                                        ></path>
+                                    </svg>
+                                </button>
+                                <button class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all">
+                                    <svg
+                                        class="w-4 h-4 font-light"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.2"
+                                            d="M9 5l7 7-7 7"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Featured Image & Brush Title -->
+                        <div class="w-full lg:w-[45%] mr-0 lg:mr-[10%] flex flex-col justify-stretch">
+                            <div class="w-full flex-grow relative shadow-xl overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px] border border-black/10">
+                                <img
+                                    src="/src/assets/images/lan-can-giot-le.jpg"
+                                    alt=""
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+
+                                <!-- Brush Title Overlay inside image container -->
+                                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300">
+                                    <div class="relative w-full flex items-center justify-center">
+                                        <img
+                                            src="/src/assets/images/brush.svg"
+                                            alt=""
+                                            class="w-full drop-shadow-xl opacity-90"
+                                        />
+                                        <span
+                                            class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
+                                            style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)"
+                                        >
+                                            LAN CAN GIỌT LỆ
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Danh Mục Sản Phẩm Section 2 -->
+            <section class="w-full pb-16">
+                <!-- Main Container -->
+                <div
+                    class="bg-[#EBCEC1] opacity-80 p-6 lg:p-10"
+                    style="margin-right: max(0px, calc((100% - 1320px) / 2));"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+                    <!-- Featured Image & Brush Title -->
+                    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-[1320px] ml-auto">
+                        <!-- Left Column: Featured Image & Brush Title -->
+                        <div class="w-full lg:w-[45%] ml-0 lg:ml-[10%] flex flex-col justify-stretch">
+                            <div class="w-full flex-grow relative shadow-xl overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px] border border-black/10">
+                                <img
+                                    src="/src/assets/images/lan-can-bau.png"
+                                    alt=""
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+
+                                <!-- Brush Title Overlay inside image container -->
+                                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300">
+                                    <div class="relative w-full flex items-center justify-center">
+                                        <img
+                                            src="/src/assets/images/brush.svg"
+                                            alt=""
+                                            class="w-full drop-shadow-xl opacity-90"
+                                        />
+                                        <span
+                                            class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
+                                            style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)"
+                                        >
+                                            LAN CAN BẦU
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Column: Products Grid & Pagination -->
+                        <div class="w-full lg:w-[55%] flex flex-col justify-between">
+                            <!-- Products Grid -->
+                            <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
+                                <!-- Product Card 1 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="/src/assets/images/lan-can-02.png"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+
+                                <!-- Product Card 2 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="/src/assets/images/lan-can-04.png"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+
+                                <!-- Product Card 3 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="/src/assets/images/lan-can-05.png"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+
+                                <!-- Product Card 4 -->
+                                <div class="flex flex-col">
+                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                        <img
+                                            src="/src/assets/images/lan-can-06.png"
+                                            alt=""
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                                    <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                                </div>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="flex items-center justify-center gap-4 mt-auto">
+                                <button
+                                    class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all"
+                                >
+                                    <svg
+                                        class="w-4 h-4 font-light"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.2"
+                                            d="M15 19l-7-7 7-7"
+                                        ></path>
+                                    </svg>
+                                </button>
+                                <button class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all">
+                                    <svg
+                                        class="w-4 h-4 font-light"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.2"
+                                            d="M9 5l7 7-7 7"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product List Section -->
+            <section class="relative mx-auto pb-10 lg:pb-16 overflow-visible">
+              <div class="relative w-[85%] max-w-[1320px] mx-auto z-10">
+                    <div
+                        class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 gap-y-4 lg:gap-y-6"
+                        data-aos="fade-up"
+                    >
+                    <div
+                            class="flex flex-col col-span-2 lg:col-span-2"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
+                            <div class="w-full aspect-[2/1] md:aspect-[18.8/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                                <img
+                                    src="/src/assets/images/lan-can-giot-le.jpg"
+                                    alt="Riềm Âm Dương Sen Bầu"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                        </div>
+                        <!-- Product 3 -->
+                        <div
+                            class="flex flex-col"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
+                            <div class="w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                                <img
+                                    src="/src/assets/images/lan-can-07.jpg"
+                                    alt="Riềm Âm Dương Sen Bầu"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                        </div>
+                        <!-- Product 4 -->
+                        <div
+                            class="flex flex-col"
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                        >
+                            <div class="w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                                <img
+                                    src="/src/assets/images/lan-can-08.jpg"
+                                    alt="Riềm Âm Dương Sen Bầu"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+                            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                        </div>
+                    </div>
+              </div>
+            </section>
+
+            {{> products/outstanding-value}}
+
+            {{> products/journey-video}}
+
+            {{> products/works}}
+
+            <!-- FAQ Section -->
+            <section
+                class="w-full relative pb-16 bg-background-secondary overflow-visible"
+                data-aos="fade-up"
+            >
+
+                {{> products/faq-content}}
+            </section>
+  </main>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true, offset: 100 });</script>
+</body>
+</html>

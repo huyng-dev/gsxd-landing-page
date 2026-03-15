@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đèn Gốm Sứ - Thanh Hải Ceramics</title>
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/src/assets/css/main.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
+  {{> header}}
+  
+  <main class="flex-grow pt-24 pb-16">
+    <div class="w-[85%] max-w-[1320px] mx-auto">
+        <!-- Breadcrumb -->
+        <div class="pb-6 relative z-10">
+            <p class="font-bold tracking-[0.15em] text-primary/60 uppercase text-xs md:text-base">
+                <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-extrabold border-primary">Đèn Gốm Sứ</span>
+            </p>
+        </div>
+
+        <h1 class="text-2xl md:text-4xl font-bold uppercase tracking-widest text-secondary mb-8" data-aos="fade-up">Đèn Gốm Sứ</h1>
+        
+        <div class="bg-white p-12 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center justify-center min-h-[400px]" data-aos="fade-up">
+            <img src="/src/assets/images/logo.svg" alt="Logo" class="w-20 h-20 opacity-20 mb-6">
+            <p class="text-xl text-gray-400 font-light italic">Nội dung sản phẩm đang được cập nhật...</p>
+        </div>
+    </div>
+  </main>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true, offset: 100 });</script>
+</body>
+</html>
