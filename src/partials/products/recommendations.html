@@ -1,7 +1,11 @@
-<!-- CÓ THỂ BẠN QUAN TÂM SECTION -->
-<section class="w-full pb-16 md:pb-24 bg-background-secondary" data-aos="fade-up">
-    <div class="max-w-[1320px] w-[85%] mx-auto">
-        <h2 class="text-2xl md:text-3xl font-bold text-secondary text-center uppercase tracking-[0.15em] mb-16">CÓ THỂ BẠN QUAN TÂM</h2>
+<section class="w-full pb-16 md:pb-24 bg-background-secondary relative {{#if showDecor}}overflow-visible{{/if}}" data-aos="fade-up">
+    {{#if showDecor}}
+    <!-- Decorative image -->
+    <img src="/src/assets/images/gtt-decorate-right.svg" class="absolute -left-[15%] md:-left-[20%] lg:-left-[20%] -translate-y-1/2 lg:top-[5%] w-[45%] md:w-[40%] lg:w-[35%] opacity-60 pointer-events-none z-0" alt="">
+    {{/if}}
+
+    <div class="max-w-[1320px] w-[85%] mx-auto relative z-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-secondary text-center uppercase mb-16">CÓ THỂ BẠN QUAN TÂM</h2>
         
         <div class="relative">
             <div class="overflow-x-auto pb-6 custom-recommend-scrollbar">

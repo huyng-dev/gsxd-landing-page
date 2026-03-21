@@ -271,52 +271,7 @@
     {{> products/journey-video hideTitle=true}}
 
     <!-- DẤU ẤN TRÊN NHỮNG CÔNG TRÌNH SECTION -->
-    <section class="w-full pb-16 md:pb-24 bg-background-secondary overflow-hidden" data-aos="fade-up">
-        <div class="max-w-[1920px] mx-auto">
-            <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-secondary text-center uppercase tracking-[0.15em] mb-12 md:mb-16">DẤU ẤN TRÊN NHỮNG CÔNG TRÌNH</h2>
-            
-            <div class="relative px-4 md:px-0">
-                <!-- Swiper Container -->
-                <div class="swiper projects-slider overflow-visible">
-                    <div class="swiper-wrapper">
-                        <!-- Slide 1 -->
-                        <div class="swiper-slide transition-all duration-500">
-                            <div class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl">
-                                <img src="/src/assets/images/gach-co-work-1.jpg" alt="Dấu ấn trên những công trình" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
-                            </div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide transition-all duration-500">
-                            <div class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl">
-                                <img src="/src/assets/images/trang-tri-slide-01.jpg" alt="Dấu ấn trên những công trình" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
-                            </div>
-                        </div>
-                        <!-- Slide 3 -->
-                        <div class="swiper-slide transition-all duration-500">
-                            <div class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl">
-                                <img src="/src/assets/images/gach-co-work-2.jpg" alt="Dấu ấn trên những công trình" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
-                            </div>
-                        </div>
-                        <!-- Slide 4 -->
-                        <div class="swiper-slide transition-all duration-500">
-                            <div class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl">
-                                <img src="/src/assets/images/gach-co-work-1.jpg" alt="Dấu ấn trên những công trình" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
-                            </div>
-                        </div>
-                        <!-- Slide 5 -->
-                        <div class="swiper-slide transition-all duration-500">
-                            <div class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl">
-                                <img src="/src/assets/images/gach-co-work-2.jpg" alt="Dấu ấn trên những công trình" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pagination dots -->
-                <div class="projects-pagination mt-10 md:mt-12 flex justify-center gap-3"></div>
-            </div>
-        </div>
-    </section>
+    {{> products/works-simple}}
 
     <!-- CÓ THỂ BẠN QUAN TÂM SECTION -->
     {{> products/recommendations}}
@@ -426,26 +381,6 @@
                 border-radius: 6px !important;
             }
 
-            /* Custom Recommendation Scrollbar */
-            .custom-recommend-scrollbar::-webkit-scrollbar {
-                height: 12px;
-            }
-            .custom-recommend-scrollbar::-webkit-scrollbar-track {
-                background: #FDF5E6;
-                border: 1px solid #D2691E40;
-                border-radius: 20px;
-            }
-            .custom-recommend-scrollbar::-webkit-scrollbar-thumb {
-                background: #C76E00;
-                border: 2px solid #FDF5E6;
-                border-radius: 20px;
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='12' height='12'%3E%3Cpath d='M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z'/%3E%3C/svg%3E"), 
-                                  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='12' height='12'%3E%3Cpath d='M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z'/%3E%3C/svg%3E");
-                background-position: left 2px center, right 2px center;
-                background-repeat: no-repeat;
-            }
-            .custom-recommend-scrollbar::-webkit-scrollbar-thumb:hover {
-                background-color: #A65D00;
             }
         `;
         document.head.appendChild(style);

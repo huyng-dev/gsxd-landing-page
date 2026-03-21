@@ -150,6 +150,26 @@
 		cursor: pointer;
 	}
 
+	/* Recommendations Scrollbar */
+	.custom-recommend-scrollbar::-webkit-scrollbar {
+		height: 4px;
+	}
+
+	.custom-recommend-scrollbar::-webkit-scrollbar-track {
+		background: rgba(0, 0, 0, 0.05);
+		border-radius: 10px;
+	}
+
+	.custom-recommend-scrollbar::-webkit-scrollbar-thumb {
+		background: #C76E00CC;
+		border-radius: 10px;
+	}
+
+	.custom-recommend-scrollbar {
+		scrollbar-width: thin;
+		scrollbar-color: #C76E00CC rgba(0, 0, 0, 0.05);
+	}
+
 	/* Hide Swiper's default navigation arrows/lines */
 	.swiper-button-next,
 	.swiper-button-prev {
