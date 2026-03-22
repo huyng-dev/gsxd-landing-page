@@ -36,7 +36,7 @@
 
     <main class="flex-grow bg-background-secondary">
       <!-- FAQ Banner -->
-      <section class="relative w-full h-[300px] md:h-[400px] flex items-end justify-center overflow-hidden pb-12 md:pb-16">
+      <section class="relative w-full h-[300px] md:h-[400px] flex items-end justify-center overflow-hidden pb-8 md:pb-12">
         <div class="absolute inset-0 z-0">
           <img
             src="/src/assets/images/faq-banner.png"
@@ -45,12 +45,12 @@
           />
         </div>
         <!-- Search Bar -->
-        <div class="relative z-10 w-[90%] max-w-[700px]">
+        <div class="relative z-10 w-[90%] max-w-[735px]">
           <div class="relative group">
             <input
               type="text"
               placeholder="Nhập nội dung tìm kiếm..."
-              class="w-full h-12 md:h-14 px-6 pl-14 rounded-full bg-white/20 backdrop-blur-md border-[1.5px] border-white focus:bg-white/30 focus:outline-none transition-all text-white placeholder:text-white/80 italic shadow-2xl"
+              class="w-full h-12 md:h-16 px-6 pl-14 rounded-full bg-white/20 backdrop-blur-md border-[1.5px] border-white focus:bg-white/30 focus:outline-none transition-all text-white placeholder:text-white/80 italic shadow-2xl"
             />
             <div class="absolute left-5 top-1/2 -translate-y-1/2 text-white">
               <svg
@@ -397,9 +397,11 @@
         </div>
 
       </section>
+
+      {{> faq/faq-contact}}
     </main>
 
-    {{> footer}}
+    {{> footer hideNewsletter=true}}
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

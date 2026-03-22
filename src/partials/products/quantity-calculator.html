@@ -95,42 +95,62 @@
             TÍNH TOÁN KHỐI LƯỢNG
           </button>
 
-          <!-- Results -->
-          <div class="pt-6 border-t border-black/10">
-            {{#if showDetailedResults}}
-              <div class="grid grid-cols-12 gap-4 pb-4 items-center">
-                <div class="col-span-6 md:col-span-5">
-                  <h4 class="font-bold text-primary uppercase text-xl tracking-wider">KẾT QUẢ</h4>
-                </div>
-                <div class="col-span-3 md:col-span-4 text-center">
-                  <span class="text-base font-bold text-primary">Định mức</span>
-                </div>
-                <div class="col-span-3 md:col-span-3 text-right">
-                  <span class="text-base font-bold text-primary">Số lượng</span>
-                </div>
+          <!-- Results Section (Grid Layout) -->
+          <div class="pt-8 border-t border-black/10">
+            <div class="grid grid-cols-5 gap-y-4 items-start">
+              
+              <!-- Row 1: Header Titles -->
+              <div class="col-span-4">
+                <h4 class="font-bold text-primary uppercase text-xl md:text-2xl tracking-tight leading-none">KẾT QUẢ</h4>
               </div>
-              <div class="space-y-4">
-                {{#each results}}
-                  <div class="grid grid-cols-12 gap-4 items-center">
-                    <div class="col-span-6 md:col-span-5">
-                      <span class="text-primary/80 font-medium text-base">{{name}}</span>
-                    </div>
-                    <div class="col-span-3 md:col-span-4 text-center">
-                      <span class="text-primary/80 font-medium text-base">{{rate}}</span>
-                    </div>
-                    <div class="col-span-3 md:col-span-3 text-right">
-                      <span class="text-primary font-extrabold text-base">{{value}}</span>
-                    </div>
-                  </div>
-                {{/each}}
+              <div class="text-right">
+                <span class="text-xl md:text-2xl font-bold text-primary leading-none">{{#if totalArea}}{{totalArea}}{{else}}00{{/if}} m²</span>
               </div>
-            {{else}}
-              <div class="flex justify-between items-center mb-2">
-                <h4 class="font-bold text-primary uppercase text-xl tracking-wider">KẾT QUẢ</h4>
-                <span class="text-xl font-bold text-primary">00 m²</span>
-              </div>
-              <p class="text-[12px] italic text-primary/60">Diện tích được làm tròn lên đến m² gần nhất.</p>
-            {{/if}}
+
+              {{#if showInfo}}
+                <!-- Row 2: Note and Column Headers -->
+                <div class="col-span-3">
+                  <p class="text-[12px] md:text-[13px] italic text-primary/80 leading-snug">
+                    {{#if areaNote}}{{areaNote}}{{else}}Diện tích được làm tròn lên đến m² gần nhất.{{/if}}
+                  </p>
+                </div>
+                <div class="text-center">
+                  <span class="text-base font-bold text-primary tracking-wider">Định mức</span>
+                </div>
+                <div class="invisible md:visible"></div>
+
+                <!-- Row 3: Product Data 1 -->
+                <div class="col-span-3 py-1">
+                  <span class="text-primary text-base">{{#if label1}}{{label1}}{{else}}Gạch{{/if}}</span>
+                </div>
+                <div class="text-center py-1">
+                  <span class="text-primary text-base leading-none">{{#if rate1}}{{rate1}}{{else}}-- viên/m²{{/if}}</span>
+                </div>
+                <div class="text-right py-1">
+                  <span class="text-primary font-bold text-base leading-none">{{#if value1}}{{value1}}{{else}}00 viên{{/if}}</span>
+                </div>
+
+                <!-- Row 4: Product Data 2 (Optional) -->
+                {{#if label2}}
+                <div class="col-span-3 py-1">
+                  <span class="text-primary text-base">{{#if label2}}{{label2}}{{else}}Gạch{{/if}}</span>
+                </div>
+                <div class="text-center py-1">
+                   <span class="text-primary text-base leading-none">{{#if rate2}}{{rate2}}{{else}}-- viên/m²{{/if}}</span>
+                </div>
+                <div class="text-right py-1">
+                  <span class="text-primary font-bold text-base leading-none">{{#if value2}}{{value2}}{{else}}00 viên{{/if}}</span>
+                </div>
+                {{/if}}
+              {{else}}
+                <!-- Default if showInfo is false: Just the note -->
+                <div class="col-span-5">
+                   <p class="text-[12px] italic text-primary/80">
+                     {{#if areaNote}}{{areaNote}}{{else}}Diện tích được làm tròn lên đến m² gần nhất.{{/if}}
+                   </p>
+                </div>
+              {{/if}}
+            </div>
           </div>
 
           <!-- Extras -->
