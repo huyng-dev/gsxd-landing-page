@@ -19,6 +19,7 @@ export default {
             fontFamily: {
                 archivo: ['"Archivo"', "sans-serif"],
                 italianno: ['"Italianno"', "cursive"],
+                arima: ['"Arima"', "system-ui"],
                 charm: ['"Charm"', "cursive"],
                 lavishly: ['"Lavishly Yours"', "cursive"],
                 ephesis: ['"Ephesis"', "cursive"],
