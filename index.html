@@ -192,12 +192,11 @@
       loop: true,
       loopedSlides: 5,
       coverflowEffect: {
-        rotate: 35,
-        stretch: 0,
-        depth: 50,
+        rotate: 25,
+        stretch: -20,
+        depth: 60,
         modifier: 1,
-        slideShadows: true,
-        scale: 0.9
+        slideShadows: true
       },
       navigation: {
         nextEl: '.awards-next',
@@ -216,6 +215,9 @@
         },
         1280: {
           slidesPerView: 5,
+          coverflowEffect: {
+            stretch: -30,
+          }
         }
       }
     });

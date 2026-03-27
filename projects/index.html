@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Dự án - Thanh Hải Ceramics</title>
+        <meta name="description" content="Khám phá các công trình ấn tượng sử dụng gốm sứ xây dựng Thanh Hải. Sự kết hợp hoàn hảo giữa nghệ thuật truyền thống và kiến trúc hiện đại.">
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/src/assets/images/logo.svg"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="/src/assets/css/main.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+        />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body
+        class="min-h-screen flex flex-col bg-background-secondary"
+    >
+        {{> header}}
+
+        <main class="flex-grow">
+            {{> projects/list}}
+              <!-- Catalog Section -->
+  <section id="catalog-section" class="py-16 lg:py-28 bg-white relative overflow-hidden">
+  <!-- Decorative Elements -->
+  <img
+    src="/src/assets/images/news-decor.svg"
+    alt="Decor Left"
+    class="absolute left-0 top-0 h-full w-auto max-h-[1000px] opacity-40 pointer-events-none"
+  />
+  <img
+    src="/src/assets/images/gtt-decorate-left.svg"
+    alt="Decor Right"
+    class="absolute -right-[10%] top-0 h-[150%] w-auto max-h-[1000px] opacity-20 pointer-events-none rotate-180"
+  />
+
+  <div class="container-custom relative z-10 w-[85%] max-w-[1320px] mx-auto">
+    <div class="w-[85%] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      <!-- Left Content -->
+      <div
+        class="w-full lg:w-5/12"
+        data-aos="fade-right"
+      >
+        <h2 class="text-4xl lg:text-[48px] font-arima font-light text-primary leading-tight mb-4">
+          Gạch thông<br /> gió 300x300<br /> thường
+        </h2>
+        <a
+          href="#"
+          class="inline-block px-10 py-3.5 border border-primary text-[13px] font-bold text-primary uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all duration-300"
+        >
+          TẢI CATALOG
+        </a>
+      </div>
+
+      <!-- Right Image -->
+      <div
+        class="w-full lg:w-7/12"
+        data-aos="fade-left"
+      >
+        <div class="relative group">
+          <img
+            src="/src/assets/images/news-detail-5.png"
+            alt="Gạch thông gió"
+            class="w-full h-auto object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        </main>
+
+        {{> footer}}
+
+        <script
+            type="module"
+            src="/src/js/main.js"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100,
+            });
+        </script>
+    </body>
+</html>

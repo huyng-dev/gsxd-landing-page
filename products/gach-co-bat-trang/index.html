@@ -271,7 +271,7 @@
     {{> products/journey-video hideTitle=true}}
 
     <!-- DẤU ẤN TRÊN NHỮNG CÔNG TRÌNH SECTION -->
-    {{> products/works-simple}}
+    {{> products/works-simple showNav=true}}
 
     <!-- CÓ THỂ BẠN QUAN TÂM SECTION -->
     {{> products/recommendations}}
@@ -343,6 +343,10 @@
                 renderBullet: function (index, className) {
                     return '<span class="' + className + ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>';
                 }
+            },
+            navigation: {
+                nextEl: '.projects-next',
+                prevEl: '.projects-prev',
             },
             breakpoints: {
                 768: {
