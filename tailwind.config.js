@@ -20,6 +20,7 @@ export default {
                 archivo: ['"Archivo"', "sans-serif"],
                 italianno: ['"Italianno"', "cursive"],
                 arima: ['"Arima"', "system-ui"],
+                arbutus: ['"Arbutus Slab"', "serif"],
                 charm: ['"Charm"', "cursive"],
                 lavishly: ['"Lavishly Yours"', "cursive"],
                 ephesis: ['"Ephesis"', "cursive"],

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quy trình đặt hàng - Dịch vụ khách hàng - Thanh Hải Ceramics</title>
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/src/assets/css/main.css">
+</head>
+
+<body data-page="customer-service" class="bg-white">
+  {{> header}}
+
+  <main class="bg-background-secondary min-h-screen font-archivo">
+    <div class="w-[85%] max-w-[1320px] mx-auto">
+      {{> customer-service/breadcrumb currentPage="Quy trình đặt hàng"}}
+      
+      <div class="flex flex-col lg:flex-row gap-12 mb-6 lg:mb-12">
+        {{> customer-service/sidebar activeProcess=true}}
+        <div class="flex-1 lg:pl-12">
+            <h1 class="text-3xl lg:text-[36px] font-arima font-medium text-primary mb-10 mt-[-6px]">Quy trình đặt hàng</h1>
+            
+            <div class="py-4">
+                <img src="/src/assets/images/quy-trinh-dat-hang.svg" alt="Quy trình đặt hàng Thanh Hải Ceramics" class="w-full h-auto pointer-events-none select-none">
+            </div>
+        </div>
+      </div>
+      {{> faq/faq-contact}}
+    </div>
+  </main>
+
+  {{> footer}}
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
