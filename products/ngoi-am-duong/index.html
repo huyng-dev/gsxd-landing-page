@@ -18,6 +18,7 @@
 </head>
 <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
   {{> header}}
+  {{> catalog-button}}
   
   <main class="flex-grow bg-background-secondary">
     <!-- Top Banner -->
@@ -26,8 +27,8 @@
       <div class="absolute inset-0 z-0">
         <img src="/src/assets/images/ngoi-am-duong-banner.jpg" alt="Ngói Âm Dương Banner" class="w-full h-full object-cover object-bottom">
         <div class="absolute inset-0 bg-black/70"></div>
-        <!-- Bottom gradient fading into neutral-1 -->
-        <div class="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-background-secondary via-background-secondary to-transparent"></div>
+        <!-- Bottom layered gradient: Wide white band starts earlier (from bottom) -->
+        <div class="absolute bottom-0 left-0 right-0 h-3/5 bg-[linear-gradient(to_top,#F5EDE7_10%,white_25%,white_60%,transparent_100%)]"></div>
       </div>
   
       <!-- Content Container -->
@@ -35,8 +36,8 @@
         
         <!-- Header text -->
         <div class="text-center pb-16 md:pb-24 space-y-8">
-          <h1 class="text-2xl md:text-5xl lg:text-[40px] font-bold mb-4 uppercase tracking-widest text-white drop-shadow-md" data-aos="fade-up" data-aos-duration="1000">Ngói Âm Dương</h1>
-          <p class="font-italianno text-3xl md:text-5xl lg:text-[48px] text-white/90 leading-tight drop-shadow-md max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          <h1 class="text-2xl md:text-4xl lg:text-[44px] font-bold mb-4 uppercase text-white drop-shadow-md" data-aos="fade-up" data-aos-duration="1000">Ngói Âm Dương</h1>
+          <p class="font-italianno text-3xl md:text-5xl lg:text-[48px] text-white/80 leading-tight drop-shadow-md max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
              "Chưng cất tinh đất, tôi luyện qua lửa<br>Thanh Hải kiến tạo dáng hình di sản trong từng lớp ngói âm dương"
           </p>
         </div>
@@ -44,8 +45,8 @@
         <!-- Lower specific content overlapping the fade -->
         <div class="flex flex-col-reverse md:flex-row items-end justify-between gap-12 w-full mt-auto pb-4">
            <!-- Poem/Text -->
-           <div class="w-full md:w-1/2 text-center md:text-left z-20 pb-4" data-aos="fade-right" data-aos-delay="400">
-              <p class="font-charm text-2xl md:text-[32px] text-primary leading-loose tracking-wide font-medium">
+           <div class="w-full md:w-1/2 text-center md:text-left z-20 pb-10 lg:ml-12" data-aos="fade-right" data-aos-delay="400">
+              <p class="font-charm text-2xl md:text-[32px] text-primary leading-relaxed tracking-wide font-medium">
                   Âm dương hòa hợp, đất hóa linh<br>
                   Thanh Hải kết tinh, vạn công trình<br>
                   Mái ngói nghiêng soi hình dáng cổ<br>
@@ -55,7 +56,7 @@
            
            <!-- Images Placeholder -->
            <div class="w-full md:w-1/2 flex justify-center md:justify-end z-20" data-aos="fade-left" data-aos-delay="400">
-              <div class="bg-white p-7 flex gap-7 w-full max-w-[760px] transform translate-y-8 md:-translate-y-8 rounded">
+              <div class="bg-white p-6 flex gap-6 w-full max-w-[860px] transform translate-y-8 md:-translate-y-8 rounded">
                  <!-- Image 1 (Placeholder) -->
                  <div class="w-1/2 aspect-square flex items-center justify-center">
                      <img src="/src/assets/images/ngoi-am-duong-01.jpg" alt="Ngói Âm Dương 01" class="w-full h-full object-cover">
@@ -72,16 +73,16 @@
     </section>
 
     <!-- Breadcrumb -->
-    <div class="w-[85%] max-w-[1320px] mx-auto pb-6 pt-16 relative z-10">
-        <p class="font-bold tracking-[0.15em] text-primary/60 uppercase text-xs md:text-base">
-            <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-extrabold border-primary">Ngói Âm Dương</span>
+    <div class="w-[85%] max-w-[1320px] mx-auto pb-6 pt-8 relative z-10">
+        <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
+            <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-semibold border-primary">Ngói Âm Dương</span>
         </p>
     </div>
 
     {{> products/product-grid category="ngoi-am-duong"}}
     
     <!-- Sizes Options Section -->
-    <section class="w-[85%] max-w-[1320px] mx-auto pb-16 pt-4" data-aos="fade-up">
+    <section class="w-[85%] max-w-[1320px] mx-auto pb-16 pt-1" data-aos="fade-up">
         <h2 class="text-2xl md:text-3xl font-bold text-center text-secondary mb-12 uppercase tracking-wide">Đa dạng kích thước - phong phú chọn lựa</h2>
         <div class="w-full flex justify-center">
             <img src="/src/assets/images/ngoi-am-duong-size.png" alt="Đa dạng kích thước ngói âm dương" class="w-full h-auto object-contain">
@@ -104,10 +105,10 @@
   {{> products/works}}
 
   <!-- FAQ Section -->
-  <section class="w-full relative pb-20 bg-background-secondary overflow-hidden" data-aos="fade-up">
+  <section class="w-full relative pb-32 bg-background-secondary overflow-hidden" data-aos="fade-up">
     <!-- Background Decoration -->
-    <img src="/src/assets/images/background-decorate.png" class="absolute top-1/2 -translate-y-2/3 md:left-0 -left-1/2 -translate-x-[10%] w-auto object-contain opacity-80 pointer-events-none z-0" alt="">
-    <img src="/src/assets/images/background-decorate.png" class="absolute top-2/3 -translate-y-1/2 right-0 translate-x-[60%] w-auto object-contain opacity-100 pointer-events-none z-0" alt="">
+    <img src="/src/assets/images/background-decorate-03.svg" class="absolute top-[20%] -translate-y-1/2 md:left-4 -left-[20%] md:translate-x-[10%] translate-x-0 w-auto object-contain opacity-100 pointer-events-none z-0" alt="">
+    <img src="/src/assets/images/background-decorate-02.svg" class="absolute md:top-[62%] top-[80%] -translate-y-1/2 right-0 translate-x-[60%] w-auto object-contain opacity-50 pointer-events-none z-0" alt="">
 
     {{> products/faq-content}}
   </section>

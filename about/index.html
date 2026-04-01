@@ -25,12 +25,22 @@
             href="https://unpkg.com/aos@2.3.1/dist/aos.css"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+        />
+        <style>
+            #catalog-sticky-btn {
+                top: 170px !important;
+            }
+        </style>
     </head>
     <body
         data-page="about"
         class="min-h-screen flex flex-col bg-neutral-1"
     >
         {{> header}}
+        {{> catalog-button}}
 
         <main class="flex-grow">
             <!-- Banner Section -->
@@ -42,7 +52,7 @@
                         alt="About Banner"
                         class="w-full h-full object-cover"
                     />
-                    <div class="absolute inset-0 bg-black/65"></div>
+                    <div class="absolute inset-0 bg-black/55"></div>
                     <!-- Dark overlay -->
                 </div>
 
@@ -53,11 +63,10 @@
                     data-aos-duration="1000"
                 >
                     <p class="text-sm md:text-base mb-6 opacity-90 font-light tracking-wide">Trang chủ &nbsp; > &nbsp; Về chúng tôi</p>
-                    <h1 class="text-xl md:text-2xl font-bold mb-4 uppercase tracking-widest text-white/90">GỐM SỨ THANH HẢI</h1>
-                    <h2 class="text-3xl md:text-6xl font-bold uppercase leading-tight max-w-4xl drop-shadow-lg">
-                        40 NĂM - LỬA NGHỀ
-                        <br />
-                        CHƯA BAO GIỜ TẮT
+                    <h1 class="text-xl md:text-2xl font-semibold mb-4 uppercase tracking-wide text-white/90">GỐM SỨ THANH HẢI</h1>
+                    <h2 class="text-3xl md:text-5xl font-bold uppercase leading-tight max-w-4xl drop-shadow-lg flex flex-col gap-2 md:gap-4">
+                        <span>40 NĂM - LỬA NGHỀ</span>
+                        <span>CHƯA BAO GIỜ TẮT</span>
                     </h2>
                 </div>
             </section>
@@ -102,13 +111,12 @@
                                     />
                                 </div>
                             </div>
-                            <div class="w-full md:w-1/2">
-                                <h3 class="text-2xl md:text-4xl font-bold text-textPrimary mb-6 leading-tight">
-                                    Những công việc giản dị
-                                    <br />
-                                    và ngọn lửa nghề luôn ấm
+                            <div class="w-full md:w-1/2 lg:ml-20">
+                                <h3 class="text-2xl md:text-4xl font-bold text-textPrimary mb-6 flex flex-col gap-2 md:gap-4">
+                                    <span>Những công việc giản dị</span>
+                                    <span>và ngọn lửa nghề luôn ấm</span>
                                 </h3>
-                                <p class="text-textPrimary leading-relaxed text-justify mb-4">
+                                <p class="text-textPrimary leading-relaxed text-left mb-4 lg:max-w-md font-medium tracking-wide">
                                     Từ những bàn tay khéo léo của người thợ Việt tới ngôi nhà của bạn. Từ những ngày làm thuê trong xí nghiệp gốm, nghệ nhân Vũ Mạnh Hải và Nguyễn Thị Thanh – hai người
                                     sáng lập đầy tâm huyết – đã sớm nuôi dưỡng khát khao tạo ra những sản phẩm của riêng mình. Những mẫu lan can gốm sứ đầu tiên, được tự tay thiết kế, sản xuất và mang
                                     đi chào hàng trên phố Cát Linh, đã đặt nền móng cho hành trình theo nghề nhiều thử thách nhưng bền bỉ.
@@ -130,17 +138,16 @@
                                     />
                                 </div>
                             </div>
-                            <div class="w-full md:w-1/2">
-                                <h3 class="text-2xl md:text-4xl font-bold text-textPrimary mb-6 leading-tight">
-                                    Kiên định một con đường,
-                                    <br />
-                                    bền vững qua thời gian
+                            <div class="w-full md:w-1/2 lg:ml-20">
+                                <h3 class="text-2xl md:text-4xl font-bold text-textPrimary mb-6 flex flex-col gap-2 md:gap-4">
+                                    <span>Kiên định một con đường,</span>
+                                    <span>bền vững qua thời gian</span>
                                 </h3>
-                                <p class="text-textPrimary leading-relaxed text-justify mb-4">
+                                <p class="text-textPrimary leading-relaxed text-left lg:max-w-md font-medium tracking-wide">
                                     Dù Bát Tràng đã trải qua nhiều giai đoạn chuyển đổi và thử nghiệm các loại hình gốm sứ khác nhau, Thanh Hải vẫn kiên định với lựa chọn ban đầu: gốm sứ xây dựng –
                                     gạch và ngói – làm nền tảng phát triển lâu dài.
                                 </p>
-                                <p class="text-textPrimary leading-relaxed text-justify">
+                                <p class="text-textPrimary leading-relaxed text-left lg:max-w-md font-medium tracking-wide">
                                     Mỗi sản phẩm được nghiên cứu kỹ về chất liệu và kỹ thuật, đồng thời được tinh chỉnh trong thiết kế để phù hợp với kiến trúc hôm nay. Thanh Hải tin rằng giá trị bền
                                     vững nhất nằm ở sự kết hợp hài hòa giữa di sản nghề gốm và hơi thở của thời đại.
                                 </p>
@@ -161,7 +168,7 @@
                                     class="flex flex-col items-center min-w-full md:min-w-0 snap-center"
                                     data-aos="fade-up"
                                 >
-                                    <div class="w-full aspect-[1/1] overflow-hidden shadow-lg mb-6">
+                                    <div class="w-full aspect-[1/1] overflow-hidden shadow-lg mb-12">
                                         <img
                                             src="/src/assets/images/about-02.jpg"
                                             alt="Tính kế thừa"
@@ -169,12 +176,12 @@
                                         />
                                     </div>
                                     <!-- Title -->
-                                    <h4 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Tính kế thừa</h4>
+                                    <h4 class="text-2xl md:text-3xl font-bold text-textPrimary mb-6">Tính kế thừa</h4>
                                     <!-- Description -->
-                                    <p class="text-textPrimary text-justify leading-relaxed">
-                                        Gốm sứ xây dựng Thanh Hải là câu chuyện được tiếp nối qua nhiều thế hệ. Từ những ngày đầu cha ông nhóm lửa lò nung, qua năm tháng thế hệ kế thừa vẫn bền bỉ tích
-                                        lũy kinh nghiệm. Mỗi thế hệ sau không chỉ học cách làm gốm, mà còn học cách tôn trọng nghề, giữ chữ tín và làm ra những sản phẩm đủ bền để đi cùng thời gian.
-                                        Chính sự kế thừa lặng lẽ nhưng bền bỉ ấy đã tạo nên Thanh Hải của hôm nay.
+                                    <p class="text-textPrimary text-center leading-relaxed font-medium tracking-wide">
+                                        Gốm sứ xây&nbsp;dựng Thanh Hải là câu chuyện được tiếp nối qua nhiều thế hệ. Từ những ngày đầu cha ông nhóm lửa lò nung, qua năm tháng thế hệ kế thừa vẫn bền&nbsp;bỉ tích
+                                        lũy kinh&nbsp;nghiệm. Mỗi thế hệ sau không chỉ học cách làm gốm, mà còn học cách tôn&nbsp;trọng nghề, giữ chữ tín và làm ra những sản&nbsp;phẩm đủ bền để đi cùng thời&nbsp;gian.
+                                        Chính sự kế&nbsp;thừa lặng&nbsp;lẽ nhưng bền&nbsp;bỉ ấy đã tạo nên Thanh Hải của hôm&nbsp;nay.
                                     </p>
                                 </div>
 
@@ -184,7 +191,7 @@
                                     data-aos="fade-up"
                                     data-aos-delay="150"
                                 >
-                                    <div class="w-full aspect-[1/1] overflow-hidden shadow-lg mb-6">
+                                    <div class="w-full aspect-[1/1] overflow-hidden shadow-lg mb-12">
                                         <img
                                             src="/src/assets/images/about-02.jpg"
                                             alt="Nghệ thuật thủ công"
@@ -192,12 +199,12 @@
                                         />
                                     </div>
                                     <!-- Title -->
-                                    <h4 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Nghệ thuật thủ công</h4>
+                                    <h4 class="text-2xl md:text-3xl font-bold text-textPrimary mb-6">Nghệ thuật thủ công</h4>
                                     <!-- Description -->
-                                    <p class="text-textPrimary text-justify leading-relaxed">
-                                        “Nghệ thuật thủ công” là giá trị cốt lõi khiến sản phẩm Gốm sứ xây dựng của Thanh Hải khác biệt với các vật liệu công nghiệp trên thị trường. Từ đất thô qua bàn
-                                        tay người thợ, mỗi viên gạch, viên ngói được chế tác bằng sự am hiểu vật liệu, kết hợp kỹ thuật nung truyền thống và sự tuyển chọn nguyên liệu hàng đầu nhằm đảm
-                                        bảo độ bền, tính thẩm mỹ và giá trị sử dụng lâu dài cho từng công trình.
+                                    <p class="text-textPrimary text-center leading-relaxed font-medium tracking-wide">
+                                        “Nghệ&nbsp;thuật thủ&nbsp;công” là giá&nbsp;trị cốt&nbsp;lõi khiến sản&nbsp;phẩm Gốm sứ xây&nbsp;dựng của Thanh Hải khác&nbsp;biệt với các vật&nbsp;liệu công&nbsp;nghiệp trên thị&nbsp;trường. Từ đất thô qua bàn
+                                        tay người thợ, mỗi viên gạch, viên ngói được chế&nbsp;tác bằng sự am&nbsp;hiểu vật&nbsp;liệu, kết&nbsp;hợp kỹ&nbsp;thuật nung truyền&nbsp;thống và sự tuyển&nbsp;chọn nguyên&nbsp;liệu hàng&nbsp;đầu nhằm đảm
+                                        bảo độ bền, tính thẩm&nbsp;mỹ và giá&nbsp;trị sử&nbsp;dụng lâu&nbsp;dài cho từng công&nbsp;trình.
                                     </p>
                                 </div>
 
@@ -207,7 +214,7 @@
                                     data-aos="fade-up"
                                     data-aos-delay="300"
                                 >
-                                    <div class="w-full aspect-[1/1] overflow-hidden shadow-lg mb-6">
+                                    <div class="w-full aspect-[1/1] overflow-hidden shadow-lg mb-12">
                                         <img
                                             src="/src/assets/images/about-02.jpg"
                                             alt="Giá trị vượt thời gian"
@@ -215,12 +222,12 @@
                                         />
                                     </div>
                                     <!-- Title -->
-                                    <h4 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Giá trị vượt thời gian</h4>
+                                    <h4 class="text-2xl md:text-3xl font-bold text-textPrimary mb-6">Giá trị vượt thời gian</h4>
                                     <!-- Description -->
-                                    <p class="text-textPrimary text-justify leading-relaxed">
-                                        Với Thanh Hải, mỗi viên gạch, viên ngói không chỉ để dựng nhà, mà để gìn giữ một tổ ấm. Đó là nơi che mưa nắng, chứng kiến những bữa cơm sum họp và những đổi
-                                        thay của đời người theo năm tháng. Chính vì vậy, từng sản phẩm đều được làm ra bằng sự nâng niu và trách nhiệm, đủ bền để ở lại cùng gia đình qua nhiều thế hệ.
-                                        Với Thanh Hải, góp phần xây tổ ấm cho người khác luôn là một sứ mệnh cao cả.
+                                    <p class="text-textPrimary text-center leading-relaxed font-medium tracking-wide">
+                                        Với Thanh Hải, mỗi viên gạch, viên ngói không chỉ để dựng nhà, mà để gìn giữ một tổ&nbsp;ấm. Đó là nơi che mưa nắng, chứng kiến những bữa cơm sum&nbsp;họp và những đổi
+                                        thay của đời người theo năm tháng. Chính vì vậy, từng sản&nbsp;phẩm đều được làm ra bằng sự nâng&nbsp;niu và trách&nbsp;nhiệm, đủ bền để ở lại cùng gia&nbsp;đình qua nhiều thế&nbsp;hệ.
+                                        Với Thanh Hải, góp phần xây tổ&nbsp;ấm cho người khác luôn là một sứ&nbsp;mệnh cao&nbsp;cả.
                                     </p>
                                 </div>
                             </div>
@@ -229,7 +236,7 @@
                         <!-- Section 4: Our Journey -->
                         <div class="mt-16 md:mt-24 mb-16">
                             <h3
-                                class="text-2xl md:text-4xl font-bold text-center text-textPrimary md:mb-24 mb-16 uppercase tracking-wider"
+                                class="text-2xl md:text-4xl font-bold text-center text-textPrimary md:mb-14 mb-12 uppercase tracking-normal"
                                 data-aos="fade-up"
                             >
                                 HÀNH TRÌNH CỦA CHÚNG TÔI
@@ -243,10 +250,10 @@
                                         data-aos="fade-up"
                                     >
                                         <h4 class="text-3xl md:text-5xl font-bold text-textPrimary mb-6">1985</h4>
-                                        <p class="text-textPrimary leading-relaxed text-center max-w-lg">
-                                            Hai người sáng lập là ông Vũ Mạnh Hải và bà Nguyễn Thị Thanh bắt đầu được giao lại toàn bộ công việc sản xuất gốm sứ từ cụ Vũ Đình Sơn. Nhận thấy thị trường
-                                            sản xuất bát đĩa đang dần bão hòa và nhiều cạnh tranh, ông bà bắt đầu tìm hướng đi mới thông qua việc tự thiết kế mẫu mã mới cho dòng sản phẩm gốm sứ xây
-                                            dựng, gốm sứ trang trí – đặt những viên gạch đầu tiên cho con đường làm nghề.
+                                        <p class="text-textPrimary leading-relaxed text-center max-w-lg font-medium tracking-wide">
+                                            Hai người sáng&nbsp;lập là ông Vũ Mạnh Hải và bà Nguyễn Thị Thanh bắt đầu được giao lại toàn&nbsp;bộ công&nbsp;việc sản&nbsp;xuất gốm sứ từ cụ Vũ Đình Sơn. Nhận thấy thị&nbsp;trường
+                                            sản&nbsp;xuất bát đĩa đang dần bão&nbsp;hòa và nhiều cạnh&nbsp;tranh, ông bà bắt đầu tìm hướng đi mới thông qua việc tự thiết&nbsp;kế mẫu mã mới cho dòng sản&nbsp;phẩm gốm sứ xây&nbsp;dựng,
+                                            gốm sứ trang&nbsp;trí – đặt những viên gạch đầu&nbsp;tiên cho con đường làm nghề.
                                         </p>
                                         <div class="md:hidden mt-auto pt-8 w-full flex justify-center">
                                             <div class="aspect-[3/4] w-full max-w-sm relative overflow-hidden shadow-lg rounded-sm">
@@ -265,10 +272,10 @@
                                         data-aos="fade-up"
                                     >
                                         <h4 class="text-3xl md:text-5xl font-bold text-textPrimary mb-6">1993</h4>
-                                        <p class="text-textPrimary leading-relaxed text-center max-w-lg">
-                                            Cửa hàng bán lẻ đầu tiên được mở ra, đánh dấu bước phát triển mới trong hoạt động kinh doanh. Từ đây, mẫu mã không ngừng được nghiên cứu và sáng tạo, chủng
-                                            loại sản phẩm ngày càng đa dạng nhằm đáp ứng các nhu cầu khác nhau của khách hàng. Đồng thời, Gốm Sứ Thanh Hải dần tạo được sự tín nhiệm từ các doanh nghiệp
-                                            lớn và được giao thực hiện những công trình quy mô đầu tiên.
+                                        <p class="text-textPrimary leading-relaxed text-center max-w-lg font-medium tracking-wide">
+                                            Cửa&nbsp;hàng bán&nbsp;lẻ đầu&nbsp;tiên được mở ra, đánh&nbsp;dấu bước phát&nbsp;triển mới trong hoạt&nbsp;động kinh&nbsp;doanh. Từ đây, mẫu mã không ngừng được nghiên&nbsp;cứu và sáng&nbsp;tạo, chủng
+                                            loại sản&nbsp;phẩm ngày&nbsp;càng đa&nbsp;dạng nhằm đáp&nbsp;ứng các nhu&nbsp;cầu khác&nbsp;nhau của khách&nbsp;hàng. Đồng&nbsp;thời, Gốm Sứ Thanh Hải dần tạo được sự tín&nbsp;nhiệm từ các doanh&nbsp;nghiệp
+                                            lớn và được giao thực&nbsp;hiện những công&nbsp;trình quy&nbsp;mô đầu&nbsp;tiên.
                                         </p>
                                         <div class="md:hidden mt-auto pt-8 w-full flex justify-center">
                                             <div class="aspect-[3/4] w-full max-w-sm relative overflow-hidden shadow-lg rounded-sm">
@@ -287,9 +294,9 @@
                                         data-aos="fade-up"
                                     >
                                         <h4 class="text-3xl md:text-5xl font-bold text-textPrimary mb-6">2000</h4>
-                                        <p class="text-textPrimary leading-relaxed text-center max-w-lg">
-                                            Công ty TNHH Sản xuất và Thương mại Thanh Hải chính thức được thành lập, đánh dấu bước chuyển quan trọng sang mô hình hoạt động chuyên nghiệp. Hệ thống
-                                            xưởng sản xuất gốm sứ xây dựng được đầu tư đồng bộ, từng bước áp dụng quy trình để nâng cao tay nghề thợ thủ công, mở rộng quy mô sản xuất.
+                                        <p class="text-textPrimary leading-relaxed text-center max-w-lg font-medium tracking-wide">
+                                            Công&nbsp;ty TNHH Sản&nbsp;xuất và Thương&nbsp;mại Thanh&nbsp;Hải chính&nbsp;thức được thành&nbsp;lập, đánh&nbsp;dấu bước chuyển quan&nbsp;trọng sang mô&nbsp;hình hoạt&nbsp;động chuyên&nbsp;nghiệp. Hệ&nbsp;thống
+                                            xưởng sản&nbsp;xuất gốm&nbsp;sứ xây&nbsp;dựng được đầu&nbsp;tư đồng&nbsp;bộ, từng bước áp&nbsp;dụng quy&nbsp;trình để nâng&nbsp;cao tay&nbsp;nghề thợ thủ&nbsp;công, mở&nbsp;rộng quy&nbsp;mô sản&nbsp;xuất.
                                         </p>
                                         <div class="md:hidden mt-auto pt-8 w-full flex justify-center">
                                             <div class="aspect-[3/4] w-full max-w-sm relative overflow-hidden shadow-lg rounded-sm">
@@ -308,10 +315,10 @@
                                         data-aos="fade-up"
                                     >
                                         <h4 class="text-3xl md:text-5xl font-bold text-textPrimary mb-6">2008</h4>
-                                        <p class="text-textPrimary leading-relaxed text-center max-w-lg">
-                                            Showroom chuyên nghiệp đầu tiên được xây dựng tại số 42 Phố Gốm, đánh dấu bước phát triển trong việc nâng cao trải nghiệm tham quan và giới thiệu sản phẩm
-                                            gốm sứ Thanh Hải. Từ đây, không gian trưng bày được chú trọng đầu tư bài bản, sắp đặt sản phẩm theo từng nhóm ứng dụng và giá trị thẩm mỹ, góp phần thể hiện
-                                            rõ nét hơn tinh thần và chất lượng của thương hiệu.
+                                        <p class="text-textPrimary leading-relaxed text-center max-w-lg font-medium tracking-wide">
+                                            Showroom chuyên&nbsp;nghiệp đầu&nbsp;tiên được xây&nbsp;dựng tại số 42 Phố Gốm, đánh&nbsp;dấu bước phát&nbsp;triển trong việc nâng&nbsp;cao trải&nbsp;nghiệm tham&nbsp;quan và giới&nbsp;thiệu sản&nbsp;phẩm
+                                            gốm&nbsp;sứ Thanh&nbsp;Hải. Từ đây, không&nbsp;gian trưng&nbsp;bày được chú&nbsp;trọng đầu&nbsp;tư bài&nbsp;bản, sắp&nbsp;đặt sản&nbsp;phẩm theo từng nhóm ứng&nbsp;dụng và giá&nbsp;trị thẩm&nbsp;mỹ, góp&nbsp;phần thể&nbsp;hiện
+                                            rõ nét hơn tinh&nbsp;thần và chất&nbsp;lượng của thương&nbsp;hiệu.
                                         </p>
                                         <div class="md:hidden mt-auto pt-8 w-full flex justify-center">
                                             <div class="aspect-[3/4] w-full max-w-sm relative overflow-hidden shadow-lg rounded-sm">
@@ -330,10 +337,10 @@
                                         data-aos="fade-up"
                                     >
                                         <h4 class="text-3xl md:text-5xl font-bold text-textPrimary mb-6">2024</h4>
-                                        <p class="text-textPrimary leading-relaxed text-center max-w-lg">
-                                            Showroom thứ hai với diện tích gần 400m² tại số 18 Phố Gốm được hình thành như một không gian trưng bày và kể chuyện di sản. Tại đây, ngói âm dương được tái
-                                            hiện thông qua việc kết hợp ngói âm và gạch xây cũ, tạo nên các họa tiết mô phỏng ngói thời Lý – Trần, dấu ấn tiêu biểu của kiến trúc cổ Việt Nam. Không
-                                            gian vừa là nơi giới thiệu sản phẩm, vừa là điểm kết nối văn hóa, lưu giữ và lan tỏa giá trị kiến trúc truyền thống.
+                                        <p class="text-textPrimary leading-relaxed text-center max-w-lg font-medium tracking-wide">
+                                            Showroom thứ hai với diện&nbsp;tích gần 400m² tại số 18 Phố Gốm được hình&nbsp;thành như một không&nbsp;gian trưng&nbsp;bày và kể&nbsp;chuyện di&nbsp;sản. Tại đây, ngói âm&nbsp;dương được tái
+                                            hiện thông&nbsp;qua việc kết&nbsp;hợp ngói âm và gạch xây cũ, tạo nên các họa&nbsp;tiết mô&nbsp;phỏng ngói thời Lý – Trần, dấu&nbsp;ấn tiêu&nbsp;biểu của kiến&nbsp;trúc cổ Việt&nbsp;Nam. Không
+                                            gian vừa là nơi giới&nbsp;thiệu sản&nbsp;phẩm, vừa là điểm kết&nbsp;nối văn&nbsp;hóa, lưu&nbsp;giữ và lan&nbsp;tỏa giá&nbsp;trị kiến&nbsp;trúc truyền&nbsp;thống.
                                         </p>
                                         <div class="md:hidden mt-auto pt-8 w-full flex justify-center">
                                             <div class="aspect-[3/4] w-full max-w-sm relative overflow-hidden shadow-lg rounded-sm">
@@ -387,7 +394,7 @@
                         <!-- Section 5: Founders -->
                         <div class="mt-16 md:mt-24 mb-16">
                             <h3
-                                class="text-2xl md:text-4xl font-bold text-center text-textPrimary mb-14 uppercase tracking-wider"
+                                class="text-2xl md:text-4xl font-bold text-center text-textPrimary mb-14 uppercase tracking-normal"
                                 data-aos="fade-up"
                             >
                                 NGƯỜI SÁNG LẬP
@@ -410,11 +417,9 @@
                                 </div>
                                 <!-- Text Content -->
                                 <div class="w-full md:w-1/2 xl:pr-16">
-                                    <p class="text-textPrimary leading-relaxed text-center md:text-justify">
-                                        Trải qua nhiều thăng trầm của nghề, ông Vũ Mạnh Hải và bà Nguyễn Thị Thanh vẫn bền bỉ đồng hành, kiên định theo đuổi dòng sản phẩm gốm sứ xây dựng. Dù ngói thủ
-                                        công không phải là sản phẩm phổ biến, Thanh Hải vẫn xây dựng được một cộng đồng khách hàng trung thành và tin cậy, thể hiện qua việc được lựa chọn cho nhiều
-                                        công trình lớn nhỏ trên cả nước như Chùa Bái Đính, Bệnh viện Y học cổ truyền Quân đội, Viện 103, Vinpearl Land Nha Trang. Những dấu ấn ấy đã đưa hai nhà sáng
-                                        lập đến niềm vinh dự khi lần lượt được UBND Thành phố Hà Nội trao tặng danh hiệu Nghệ nhân Hà Nội vào các năm 2023 và 2025.
+                                    <p class="text-textPrimary leading-relaxed text-center md:text-left font-medium tracking-wide">
+                                        Trải&nbsp;qua nhiều thăng&nbsp;trầm của nghề, ông Vũ Mạnh Hải và bà Nguyễn Thị Thanh vẫn bền&nbsp;bỉ đồng&nbsp;hành, kiên&nbsp;định theo&nbsp;đuổi dòng sản&nbsp;phẩm gốm&nbsp;sứ xây&nbsp;dựng. Dù ngói thủ&nbsp;công không phải là sản&nbsp;phẩm phổ&nbsp;biến, Thanh&nbsp;Hải vẫn xây&nbsp;dựng được một cộng&nbsp;đồng khách&nbsp;hàng trung&nbsp;thành và tin&nbsp;cậy, thể&nbsp;hiện qua việc được lựa&nbsp;chọn cho nhiều
+                                        công&nbsp;trình lớn&nbsp;nhỏ trên cả&nbsp;nước như Chùa Bái&nbsp;Đính, Bệnh&nbsp;viện Y&nbsp;học cổ&nbsp;truyền Quân&nbsp;đội, Viện 103, Vinpearl&nbsp;Land Nha&nbsp;Trang. Những dấu&nbsp;ấn ấy đã đưa hai nhà&nbsp;sáng&nbsp;lập đến niềm vinh&nbsp;dự khi lần&nbsp;lượt được UBND Thành&nbsp;phố Hà&nbsp;Nội trao&nbsp;tặng danh&nbsp;hiệu Nghệ&nbsp;nhân Hà&nbsp;Nội vào các năm 2023 và 2025.
                                     </p>
                                 </div>
                             </div>
@@ -424,7 +429,7 @@
                         <!-- Section 6: Awards -->
                         <div class="mt-16 md:mt-24 mb-16 w-full">
                             <h3
-                                class="text-2xl md:text-4xl font-bold text-center text-textPrimary mb-14 uppercase tracking-wider"
+                                class="text-2xl md:text-4xl font-bold text-center text-textPrimary mb-10 uppercase tracking-normal"
                                 data-aos="fade-up"
                             >
                                 GIẢI THƯỞNG & THÀNH TỰU
@@ -442,19 +447,23 @@
                                     <div class="swiper-slide">
                                         <div class="flex flex-col items-center group cursor-pointer w-full">
                                             <div class="text-2xl md:text-3xl font-bold text-textPrimary mb-8">2016</div>
-                                            <div class="w-full h-[2px] bg-secondary mb-12 relative flex items-center justify-center">
+                                            <div class="w-full h-[2px] bg-secondary mb-20 relative flex items-center justify-center">
                                                 <div class="w-6 h-6 bg-neutral-1 rounded-full border-2 border-secondary z-10 box-border flex items-center justify-center">
                                                     <div class="w-4 h-4 bg-secondary rounded-full"></div>
                                                 </div>
                                             </div>
                                             <div class="w-full px-2 md:px-4">
-                                                <div class="w-full aspect-[3/4] overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2">
+                                                <a
+                                                    href="/src/assets/images/award-01.jpg"
+                                                    class="glightbox block w-full aspect-[3/4] overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2"
+                                                    data-gallery="certificates"
+                                                >
                                                     <img
                                                         src="/src/assets/images/award-01.jpg"
                                                         alt="Kết quả thử nghiệm 2016"
                                                         class="w-full h-full object-cover"
                                                     />
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -462,19 +471,23 @@
                                     <div class="swiper-slide">
                                         <div class="flex flex-col items-center group cursor-pointer w-full">
                                             <div class="text-2xl md:text-3xl font-bold text-textPrimary mb-8">2016</div>
-                                            <div class="w-full h-[2px] bg-secondary mb-12 relative flex items-center justify-center">
+                                            <div class="w-full h-[2px] bg-secondary mb-20 relative flex items-center justify-center">
                                                 <div class="w-6 h-6 bg-neutral-1 rounded-full border-2 border-secondary z-10 box-border flex items-center justify-center">
                                                     <div class="w-4 h-4 bg-secondary rounded-full"></div>
                                                 </div>
                                             </div>
                                             <div class="w-full px-2 md:px-4">
-                                                <div class="w-full aspect-[3/4] overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2">
+                                                <a
+                                                    href="/src/assets/images/award-01.jpg"
+                                                    class="glightbox block w-full aspect-[3/4] overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2"
+                                                    data-gallery="certificates"
+                                                >
                                                     <img
                                                         src="/src/assets/images/award-01.jpg"
                                                         alt="Kết quả thử nghiệm 2016"
                                                         class="w-full h-full object-cover"
                                                     />
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -482,19 +495,23 @@
                                     <div class="swiper-slide">
                                         <div class="flex flex-col items-center group cursor-pointer w-full">
                                             <div class="text-2xl md:text-3xl font-bold text-textPrimary mb-8">2016</div>
-                                            <div class="w-full h-[2px] bg-secondary mb-12 relative flex items-center justify-center">
+                                            <div class="w-full h-[2px] bg-secondary mb-20 relative flex items-center justify-center">
                                                 <div class="w-6 h-6 bg-neutral-1 rounded-full border-2 border-secondary z-10 box-border flex items-center justify-center">
                                                     <div class="w-4 h-4 bg-secondary rounded-full"></div>
                                                 </div>
                                             </div>
                                             <div class="w-full px-2 md:px-4">
-                                                <div class="w-full aspect-[3/4] overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2">
+                                                <a
+                                                    href="/src/assets/images/award-01.jpg"
+                                                    class="glightbox block w-full aspect-[3/4] overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2"
+                                                    data-gallery="certificates"
+                                                >
                                                     <img
                                                         src="/src/assets/images/award-01.jpg"
                                                         alt="Kết quả thử nghiệm 2016"
                                                         class="w-full h-full object-cover"
                                                     />
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -508,13 +525,17 @@
                                                 </div>
                                             </div>
                                             <div class="w-full px-2 md:px-4">
-                                                <div class="w-full aspect-[3/4] overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2">
+                                                <a
+                                                    href="/src/assets/images/award-01.jpg"
+                                                    class="glightbox block w-full aspect-[3/4] overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2"
+                                                    data-gallery="certificates"
+                                                >
                                                     <img
                                                         src="/src/assets/images/award-01.jpg"
                                                         alt="Kết quả thử nghiệm 2016"
                                                         class="w-full h-full object-cover"
                                                     />
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -568,19 +589,18 @@
                     <div class="w-[85%] max-w-[1320px] mx-auto px-4">
                         <!-- Section 1: Intro Text -->
                         <div
-                            class="max-w-2xl mx-auto text-center mb-16 md:mb-24"
+                            class="max-w-2xl mx-auto text-center mb-16 md:mb-24 mt-16 md:mt-24"
                             data-aos="fade-up"
                         >
-                            <h2 class="text-2xl md:text-4xl font-bold text-textPrimary mb-8 leading-tight">
-                                Từ vật liệu xây dựng
-                                <br />
-                                đến di sản kiến trúc
+                            <h2 class="text-2xl md:text-4xl font-bold text-textPrimary mb-8 flex flex-col gap-2 md:gap-4 items-center">
+                                <span>Từ vật liệu xây dựng</span>
+                                <span>đến di sản kiến trúc</span>
                             </h2>
-                            <p class="text-textPrimary leading-relaxed text-justify md:text-center">
-                                Chúng tôi dành nhiều năm nghiên cứu để phục chế mẫu ngói âm dương lấy cảm hứng từ ngói thời Lý – Trần, kết hợp đối chiếu tư liệu kiến trúc cổ và hệ mái Kinh thành Huế.
-                                Bắt đầu từ những bản vẽ và mẫu thử đầu tiên, từng viên ngói được chế tác thủ công, đo đạc tỷ lệ, kiểm tra độ thoát nước, độ bền và khả năng thích ứng với kiến trúc
-                                đương đại. Không chỉ tái hiện hình dáng cổ xưa, chúng tôi hướng tới việc giữ lại tinh thần của ngói âm dương truyền thống, đồng thời nâng cao chất lượng để mỗi mái ngói
-                                vừa mang giá trị di sản, vừa đáp ứng yêu cầu sử dụng lâu dài trong công trình hôm nay.
+                            <p class="text-textPrimary leading-relaxed text-justify md:text-center font-medium tracking-wide">
+                                chúng tôi dành nhiều năm nghiên&nbsp;cứu để phục&nbsp;chế mẫu ngói âm&nbsp;dương lấy cảm&nbsp;hứng từ ngói thời Lý – Trần, kết&nbsp;hợp đối&nbsp;chiếu tư&nbsp;liệu kiến&nbsp;trúc cổ và hệ mái Kinh&nbsp;thành Huế.
+                                Bắt đầu từ những bản&nbsp;vẽ và mẫu&nbsp;thử đầu&nbsp;tiên, từng viên ngói được chế&nbsp;tác thủ&nbsp;công, đo&nbsp;đạc tỷ&nbsp;lệ, kiểm&nbsp;tra độ thoát&nbsp;nước, độ bền và khả&nbsp;năng thích&nbsp;ứng với kiến&nbsp;trúc
+                                đương&nbsp;đại. Không chỉ tái&nbsp;hiện hình&nbsp;dáng cổ&nbsp;xưa, chúng tôi hướng tới việc giữ lại tinh&nbsp;thần của ngói âm&nbsp;dương truyền&nbsp;thống, đồng&nbsp;thời nâng&nbsp;cao chất&nbsp;lượng để mỗi mái ngói
+                                vừa mang giá&nbsp;trị di&nbsp;sản, vừa đáp&nbsp;ứng yêu&nbsp;cầu sử&nbsp;dụng lâu&nbsp;dài trong công&nbsp;trình hôm&nbsp;nay.
                             </p>
                         </div>
 
@@ -589,12 +609,12 @@
                             class="flex flex-col md:flex-row items-center gap-16 md:gap-36"
                             data-aos="fade-up"
                         >
-                            <div class="w-full md:w-1/2">
+                            <div class="w-full md:w-1/2 lg:ml-20">
                                 <h3 class="text-2xl md:text-4xl font-bold text-textPrimary mb-6">Ngôn ngữ của vật liệu</h3>
-                                <p class="text-textPrimary leading-relaxed text-justify mb-4">
-                                    Chúng tôi hiểu rằng đất chính là cốt lõi làm nên hồn của mỗi sản phẩm. Dù không dễ để thuyết phục khách hàng ngay từ cái nhìn đầu tiên rằng giá trị của Thanh Hải
-                                    nằm sâu trong lớp đất được tuyển chọn kỹ lưỡng, chúng tôi chọn để thời gian lên tiếng. Giá trị ấy được chứng minh bằng độ bền qua năm tháng và bằng các chứng chỉ
-                                    kiểm nghiệm độc lập. Nếu men là vẻ đẹp thu hút ánh nhìn ban đầu, thì đất chính là chiều sâu lặng lẽ – đủ để giữ khách hàng ở lại lâu dài cùng chúng tôi.
+                                <p class="text-textPrimary leading-relaxed text-left mb-4 font-medium tracking-wide lg:max-w-md">
+                                    Chúng tôi hiểu rằng đất chính là cốt&nbsp;lõi làm nên hồn của mỗi sản&nbsp;phẩm. Dù không dễ để thuyết&nbsp;phục khách&nbsp;hàng ngay từ cái nhìn đầu&nbsp;tiên rằng giá&nbsp;trị của Thanh&nbsp;Hải
+                                    nằm sâu trong lớp đất được tuyển&nbsp;chọn kỹ&nbsp;lưỡng, chúng tôi chọn để thời&nbsp;gian lên tiếng. Giá&nbsp;trị ấy được chứng&nbsp;minh bằng độ bền qua năm&nbsp;tháng và bằng các chứng&nbsp;chỉ
+                                    kiểm&nbsp;nghiệm độc&nbsp;lập. Nếu men là vẻ đẹp thu&nbsp;hút ánh nhìn ban&nbsp;đầu, thì đất chính là chiều&nbsp;sâu lặng&nbsp;lẽ – đủ để giữ khách&nbsp;hàng ở lại lâu&nbsp;dài cùng chúng tôi.
                                 </p>
                             </div>
                             <div class="w-full md:w-1/2">
@@ -611,16 +631,16 @@
                         <!-- Section 3: Craftsmanship Skills -->
                         <div class="mt-24 md:mt-32 text-center max-w-7xl mx-auto">
                             <h2
-                                class="text-2xl md:text-4xl font-bold text-secondary mb-8 uppercase tracking-wide"
+                                class="text-2xl md:text-4xl font-bold text-secondary mb-12 uppercase tracking-wide"
                                 data-aos="fade-up"
                             >
                                 NGHỆ THUẬT CHẾ TÁC THỦ CÔNG ĐIÊU LUYỆN
                             </h2>
-                            <p class="text-textPrimary leading-relaxed text-justify md:text-center mb-12 max-w-2xl mx-auto">
-                                Chúng tôi dành nhiều năm nghiên cứu để phục chế mẫu ngói âm dương lấy cảm hứng từ ngói thời Lý – Trần, kết hợp đối chiếu tư liệu kiến trúc cổ và hệ mái Kinh thành Huế.
-                                Bắt đầu từ những bản vẽ và mẫu thử đầu tiên, từng viên ngói được chế tác thủ công, đo đạc tỷ lệ, kiểm tra độ thoát nước, độ bền và khả năng thích ứng với kiến trúc
-                                đương đại. Không chỉ tái hiện hình dáng cổ xưa, chúng tôi hướng tới việc giữ lại tinh thần của ngói âm dương truyền thống, đồng thời nâng cao chất lượng để mỗi mái ngói
-                                vừa mang giá trị di sản, vừa đáp ứng yêu cầu sử dụng lâu dài trong công trình hôm nay.
+                            <p class="text-textPrimary leading-relaxed text-justify md:text-center mb-24 max-w-2xl mx-auto font-medium tracking-wide">
+                                Chúng tôi dành nhiều năm nghiên&nbsp;cứu để phục&nbsp;chế mẫu ngói âm&nbsp;dương lấy cảm&nbsp;hứng từ ngói thời Lý – Trần, kết&nbsp;hợp đối&nbsp;chiếu tư&nbsp;liệu kiến&nbsp;trúc cổ và hệ mái Kinh&nbsp;thành Huế.
+                                Bắt đầu từ những bản&nbsp;vẽ và mẫu&nbsp;thử đầu&nbsp;tiên, từng viên ngói được chế&nbsp;tác thủ&nbsp;công, đo&nbsp;đạc tỷ&nbsp;lệ, kiểm&nbsp;tra độ thoát&nbsp;nước, độ bền và khả&nbsp;năng thích&nbsp;ứng với kiến&nbsp;trúc
+                                đương&nbsp;đại. Không chỉ tái&nbsp;hiện hình&nbsp;dáng cổ&nbsp;xưa, chúng tôi hướng tới việc giữ lại tinh&nbsp;thần của ngói âm&nbsp;dương truyền&nbsp;thống, đồng&nbsp;thời nâng&nbsp;cao chất&nbsp;lượng để mỗi mái ngói
+                                vừa mang giá&nbsp;trị di&nbsp;sản, vừa đáp&nbsp;ứng yêu&nbsp;cầu sử&nbsp;dụng lâu&nbsp;dài trong công&nbsp;trình hôm&nbsp;nay.
                             </p>
 
                             <div
@@ -644,11 +664,11 @@
                             </div>
 
                             <div
-                                class="max-w-3xl mx-auto"
+                                class="max-w-4xl mx-auto"
                                 data-aos="fade-up"
                             >
-                                <h3 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Kỹ thuật luyện đất</h3>
-                                <p class="text-textPrimary leading-relaxed text-center">
+                                <h3 class="text-2xl md:text-3xl font-bold text-textPrimary mb-6">Kỹ thuật luyện đất</h3>
+                                <p class="text-textPrimary leading-relaxed text-center font-medium tracking-wide">
                                     Đất là gốc rễ, nền tảng của mọi sản phẩm gốm chất lượng. Chúng tôi tuyển chọn nguyên liệu đất sét tinh khiết, loại bỏ tạp chất để đảm bảo độ dẻo, độ bám và khả năng
                                     chịu nhiệt vượt trội. Đất sau khi được ngâm, lắng và luyện qua nhiều giai đoạn xử lý truyền thống sẽ cho ra hỗn hợp mịn, ổn định, sẵn sàng cho từng bước tạo hình,
                                     nung và hoàn thiện.
@@ -662,8 +682,8 @@
                             >
                                 <!-- Tạo hình -->
                                 <div>
-                                    <h3 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Kỹ thuật tạo hình</h3>
-                                    <p class="text-textPrimary leading-relaxed text-justify mb-8">
+                                    <h3 class="text-2xl md:text-3xl font-bold text-textPrimary mb-6">Kỹ thuật tạo hình</h3>
+                                    <p class="text-textPrimary leading-relaxed text-left mb-16 font-medium tracking-wide">
                                         Tạo hình bắt đầu từ bản vẽ, nơi tỉ lệ và hình dáng sản phẩm được tính toán kỹ lưỡng. Để tạo hình hàng loạt, nghệ nhân sẽ bắt đầu với cốt sản phẩm. Phần cốt này
                                         sẽ được điêu khắc hoàn toàn bằng tay với nguyên liệu chính là thạch cao. Cốt càng sắc nét, khuôn thạch cao càng chuẩn, hàng càng đẹp. Đất sau luyện được đổ rót
                                         vào khuôn. Cách để kiểm soát độ dày đồng đều giữa các sản phẩm phụ thuộc nhiều vào khuôn và tay nghề cũng như sức bền của mỗi người thợ đổ rót.
@@ -679,11 +699,11 @@
 
                                 <!-- Tráng men -->
                                 <div>
-                                    <h3 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Kỹ thuật tráng men</h3>
-                                    <p class="text-textPrimary leading-relaxed text-justify mb-8">
-                                        Mỗi nghệ nhân sẽ có một bí quyết pha men riêng, kế thừa từ cha ông và tiếp tục sáng tạo trên nền tảng đó. Thông thường, men sẽ được nghiền một cách cẩn thận,
-                                        sau đó trộn, lọc kỹ rồi mới pha theo tỷ lệ để tạo nên màu sắc và bề mặt khác nhau. Với ngói, chúng tôi phát triển hơn hai mươi màu men, quý khách hàng hoàn toàn
-                                        có thể lựa chọn theo ngũ hành, hay tính chất từng công trình như: Chùa chiền, Từ đường hay Khu nghỉ dưỡng.
+                                    <h3 class="text-2xl md:text-3xl font-bold text-textPrimary mb-6">Kỹ thuật tráng men</h3>
+                                    <p class="text-textPrimary leading-relaxed text-left mb-16 font-medium tracking-wide">
+                                        Mỗi nghệ&nbsp;nhân sẽ có một bí&nbsp;quyết pha men riêng, kế&nbsp;thừa từ cha&nbsp;ông và tiếp&nbsp;tục sáng&nbsp;tạo trên nền&nbsp;tảng đó. Thông&nbsp;thường, men sẽ được nghiền một&nbsp;cách cẩn&nbsp;thận,
+                                        sau đó trộn, lọc kỹ rồi mới pha theo tỷ&nbsp;lệ để tạo nên màu&nbsp;sắc và bề&nbsp;mặt khác&nbsp;nhau. Với ngói, chúng tôi phát&nbsp;triển hơn hai&nbsp;mươi màu men, quý khách&nbsp;hàng hoàn&nbsp;toàn
+                                        có thể lựa&nbsp;chọn theo ngũ&nbsp;hành, hay tính&nbsp;chất từng công&nbsp;trình như: Chùa&nbsp;chiền, Từ&nbsp;đường hay Khu nghỉ&nbsp;dưỡng.
                                     </p>
                                     <div class="aspect-[1/1] relative overflow-hidden shadow-lg">
                                         <img
@@ -700,11 +720,11 @@
                                 class="max-w-3xl mx-auto mt-16"
                                 data-aos="fade-up"
                             >
-                                <h3 class="text-2xl md:text-3xl font-bold text-textPrimary mb-4">Kỹ thuật đun lò</h3>
-                                <p class="text-textPrimary leading-relaxed text-center">
-                                    Công đoạn nung sản phẩm trong lò là bước quyết định chất lượng gốm của Thanh Hải. Lò được đun ở nhiệt độ cao, có thể lên tới 1.300°C, đòi hỏi đất và men đạt chuẩn
-                                    để chịu nhiệt bền vững. Việc tăng – giữ – hạ nhiệt theo từng giai đoạn là bí quyết riêng của các nghệ nhân. Sau khi nung, sản phẩm được ủ chậm khoảng 12 giờ để
-                                    nguội dần, giúp gốm đanh chắc, hạn chế nứt vỡ và bền bỉ theo thời gian.
+                                <h3 class="text-2xl md:text-3xl font-bold text-textPrimary mb-6">Kỹ thuật đun lò</h3>
+                                <p class="text-textPrimary leading-relaxed text-center font-medium tracking-wide">
+                                    Công đoạn nung sản&nbsp;phẩm trong lò là bước quyết&nbsp;định chất&nbsp;lượng gốm của Thanh Hải. Lò được đun ở nhiệt&nbsp;độ cao, có thể lên tới 1.300°C, đòi&nbsp;hỏi đất và men đạt chuẩn
+                                    để chịu nhiệt bền&nbsp;vững. Việc tăng – giữ – hạ nhiệt theo từng giai&nbsp;đoạn là bí&nbsp;quyết riêng của các nghệ&nbsp;nhân. Sau khi nung, sản&nbsp;phẩm được ủ chậm khoảng 12 giờ để
+                                    nguội dần, giúp gốm đanh&nbsp;chắc, hạn&nbsp;chế nứt vỡ và bền&nbsp;bỉ theo thời&nbsp;gian.
                                 </p>
                             </div>
 
@@ -740,12 +760,18 @@
             src="/src/js/main.js"
         ></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init({
                 duration: 800,
                 once: true,
                 offset: 100,
+            });
+            const lightbox = GLightbox({
+                touchNavigation: true,
+                loop: true,
+                autoplayVideos: true,
             });
         </script>
         <script>

@@ -44,11 +44,54 @@ const initMobileMenu = () => {
     }
 };
 
+// FAQ Accordion Logic
+const initFAQ = () => {
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach((item) => {
+        const button = item.querySelector(".faq-button");
+        const content = item.querySelector(".faq-content");
+        const icon = item.querySelector(".faq-icon");
+
+        if (button && content && icon) {
+            button.addEventListener("click", () => {
+                const isOpen = !content.classList.contains("hidden");
+
+                // Close all other items
+                faqItems.forEach((otherItem) => {
+                    if (otherItem !== item) {
+                        const otherContent = otherItem.querySelector(".faq-content");
+                        const otherIcon = otherItem.querySelector(".faq-icon");
+                        if (otherContent) otherContent.classList.add("hidden");
+                        if (otherIcon) {
+                            otherIcon.classList.add("rotate-180");
+                            otherIcon.classList.replace("bg-textPrimary", "bg-gray-200");
+                            otherIcon.classList.replace("text-white", "text-gray-500");
+                        }
+                    }
+                });
+
+                if (isOpen) {
+                    content.classList.add("hidden");
+                    icon.classList.add("rotate-180");
+                    icon.classList.replace("bg-textPrimary", "bg-gray-200");
+                    icon.classList.replace("text-white", "text-gray-500");
+                } else {
+                    content.classList.remove("hidden");
+                    icon.classList.remove("rotate-180");
+                    icon.classList.replace("bg-gray-200", "bg-textPrimary");
+                    icon.classList.replace("text-gray-500", "text-white");
+                }
+            });
+        }
+    });
+};
+
 // Initialize on DOM ready
 document.addEventListener("DOMContentLoaded", () => {
     initializePage();
     initMobileMenu();
+    initFAQ();
 });
 
 // Export for testing purposes
-export { initializePage, initMobileMenu };
+export { initializePage, initMobileMenu, initFAQ };

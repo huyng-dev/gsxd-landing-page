@@ -35,6 +35,7 @@
         class="min-h-screen flex flex-col bg-background-secondary"
     >
         {{> header}}
+    {{> catalog-button}}
 
         <main class="flex-grow">
             <!-- Banner Section -->
@@ -87,7 +88,7 @@
             <div class="w-[85%] max-w-[1320px] mx-auto pt-16">
                 <!-- Breadcrumb -->
                 <div class="pb-6 relative z-10">
-                    <p class="font-bold tracking-[0.15em] text-primary/60 uppercase text-xs md:text-base">
+                    <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
                         <a
                             href="/"
                             class="hover:text-secondary transition-colors"
@@ -95,7 +96,7 @@
                             Trang chủ
                         </a>
                         <span class="mx-1">/</span>
-                        <span class="text-primary font-extrabold border-primary">Linh Vật Phong Thủy</span>
+                        <span class="text-primary font-semibold border-primary">Linh Vật Phong Thủy</span>
                     </p>
                 </div>
 
@@ -348,7 +349,7 @@
             {{> products/recommendations}}
 
             <!-- FAQ Section -->
-            <section class="w-full relative pb-16 bg-background-secondary overflow-visible" data-aos="fade-up">
+            <section class="w-full relative pb-32 bg-background-secondary overflow-visible" data-aos="fade-up">
                 {{> products/faq-content}}
             </section>
         </main>

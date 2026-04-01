@@ -20,6 +20,7 @@
 </head>
 <body data-page="products" class="min-h-screen flex flex-col bg-neutral-1">
   {{> header}}
+  {{> catalog-button}}
   
   <main class="flex-grow bg-background-secondary">
     <!-- Top Banner -->
@@ -47,14 +48,14 @@
     </section>
 
     <!-- Ứng dụng đa dạng Section -->
-    <section class="max-w-[1320px] w-[85%] mx-auto py-12 md:py-16" data-aos="fade-up">
-      <h2 class="text-xl md:text-2xl font-bold uppercase text-secondary mb-6 md:mb-10 tracking-wide text-left">Ứng dụng đa dạng</h2>
+    <section class="max-w-[1320px] w-[85%] mx-auto py-12 md:py-12" data-aos="fade-up">
+      <h2 class="text-xl md:text-2xl font-semibold uppercase text-secondary mb-6 md:mb-10 text-left">Ứng dụng đa dạng</h2>
       
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <!-- Left large box -->
         <div class="flex flex-col">
-          <div class="w-full aspect-square bg-[#E2E2E2] shadow-lg"></div>
-          <p class="text-base md:text-xl font-bold uppercase mt-4 text-primary text-left">Tường trang trí</p>
+          <div class="w-full aspect-[23/25] bg-[#E2E2E2] shadow-lg"></div>
+          <p class="text-base md:text-xl font-medium uppercase mt-6 text-primary text-left">Tường trang trí</p>
         </div>
         
         <!-- Right 2x2 grid -->
@@ -63,22 +64,22 @@
           <div class="grid grid-cols-2 gap-4 md:gap-16">
             <div class="flex flex-col">
               <div class="w-full aspect-square bg-[#E2E2E2] shadow-lg"></div>
-              <p class="text-base md:text-xl font-bold uppercase text-center mt-4 text-primary">Lát nền</p>
+              <p class="text-base md:text-xl font-medium uppercase text-center mt-6 text-primary">Lát nền</p>
             </div>
             <div class="flex flex-col">
               <div class="w-full aspect-square bg-[#E2E2E2] shadow-lg"></div>
-              <p class="text-base md:text-xl font-bold uppercase text-center mt-4 text-primary">Phòng khách</p>
+              <p class="text-base md:text-xl font-medium uppercase text-center mt-6 text-primary">Phòng khách</p>
             </div>
           </div>
           <!-- Bottom Row -->
           <div class="grid grid-cols-2 gap-4 md:gap-16">
             <div class="flex flex-col">
               <div class="w-full aspect-square bg-[#E2E2E2] shadow-lg"></div>
-              <p class="text-base md:text-xl font-bold uppercase text-center mt-4 text-primary">Ngoài trời</p>
+              <p class="text-base md:text-xl font-medium uppercase text-center mt-6 text-primary">Ngoài trời</p>
             </div>
             <div class="flex flex-col">
               <div class="w-full aspect-square bg-[#E2E2E2] shadow-lg"></div>
-              <p class="text-base md:text-xl font-bold uppercase text-center mt-4 text-primary">Phòng tắm</p>
+              <p class="text-base md:text-xl font-medium uppercase text-center mt-6 text-primary">Phòng tắm</p>
             </div>
           </div>
         </div>
@@ -86,9 +87,9 @@
     </section>
 
     <!-- Breadcrumb -->
-    <div class="w-[85%] max-w-[1320px] mx-auto pb-6 pt-4 relative z-10">
-        <p class="font-bold tracking-[0.15em] text-primary/60 uppercase text-xs md:text-base">
-            <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-extrabold border-primary">Gạch Trang Trí</span>
+    <div class="w-[85%] max-w-[1320px] mx-auto pb-6 pt-6 relative z-10">
+        <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
+            <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-semibold border-primary">Gạch Trang Trí</span>
         </p>
     </div>
 
@@ -99,13 +100,13 @@
     <!-- Công đoạn chế tác Section -->
     <section class="relative w-full overflow-hidden py-12 md:py-20" data-aos="fade-up">
         <!-- Họa tiết trang trí background -->
-        <div class="absolute right-0 top-1/3 -translate-y-1/2 w-[100px] md:w-[200px] lg:w-[300px] pointer-events-none z-0 opacity-60">
+        <div class="absolute right-0 top-1/3 -translate-y-1/2 w-[100px] md:w-[200px] lg:w-[300px] pointer-events-none z-0 opacity-90">
             <img src="/src/assets/images/gtt-decorate.svg" alt="Decor Background" class="w-full h-auto">
         </div>
         
         <!-- Content Container -->
         <div class="max-w-[1320px] w-[85%] mx-auto relative z-10">
-            <h2 class="text-xl md:text-2xl font-bold uppercase text-secondary mb-8 md:mb-12 tracking-wide text-left">Công đoạn chế tác</h2>
+            <h2 class="text-xl md:text-2xl font-semibold uppercase text-secondary mb-8 md:mb-12 text-left">Công đoạn chế tác</h2>
             <div class="flex justify-center items-center w-full">
                 <img src="/src/assets/images/gtt-process.svg" alt="Công đoạn chế tác" class="w-full max-w-[95%] h-auto relative z-10 drop-shadow-sm">
             </div>
@@ -116,7 +117,7 @@
 
     <!-- Nâng tầm giá trị nghệ thuật Section -->
     <section class="max-w-[1320px] w-[85%] mx-auto pb-12 md:pb-20" data-aos="fade-up">
-        <h2 class="text-xl md:text-2xl font-bold uppercase text-secondary mb-8 md:mb-12 tracking-wide text-left">Nâng tầm giá trị nghệ thuật</h2>
+        <h2 class="text-xl md:text-2xl font-semibold uppercase text-secondary mb-8 md:mb-12 text-left">Nâng tầm giá trị nghệ thuật</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-14 md:items-start">
             <!-- Card 1 -->
@@ -150,12 +151,12 @@
 
     <!-- Dấu ấn trên những công trình Section -->
     <section class="max-w-[1320px] w-[85%] mx-auto" data-aos="fade-up">
-        <h2 class="text-xl md:text-2xl font-bold uppercase text-secondary mb-6 md:mb-10 tracking-wide text-left">Dấu ấn trên những công trình</h2>
+        <h2 class="text-xl md:text-2xl font-semibold uppercase text-secondary mb-6 md:mb-10 text-left">Dấu ấn trên những công trình</h2>
         
         <div class="flex h-[400px] md:h-[500px] lg:h-[600px] gap-2 md:gap-4 lg:gap-6 w-full">
             
             <!-- Item 1 -->
-            <div class="project-item active group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-3xl [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
+            <div class="project-item active group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-[60px] [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
                 <img src="/src/assets/images/trang-tri-slide-01.jpg" alt="Công trình 1" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
                 <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
@@ -166,7 +167,7 @@
             </div>
 
             <!-- Item 2 -->
-            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-3xl [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
+            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-[60px] [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
                 <img src="/src/assets/images/trang-tri-slide-02.jpg" alt="Công trình 2" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
                 <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
@@ -177,7 +178,7 @@
             </div>
 
             <!-- Item 3 -->
-            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-3xl [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
+            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-[60px] [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
                 <img src="/src/assets/images/trang-tri-slide-01.jpg" alt="Công trình 3" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
                 <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
@@ -188,7 +189,7 @@
             </div>
 
             <!-- Item 4 -->
-            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-3xl [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
+            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-[60px] [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
                 <img src="/src/assets/images/trang-tri-slide-04.jpg" alt="Công trình 4" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
                 <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
@@ -199,7 +200,7 @@
             </div>
 
             <!-- Item 5 -->
-            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-3xl [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
+            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-[60px] [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
                 <img src="/src/assets/images/trang-tri-slide-03.jpg" alt="Công trình 5" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
                 <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
@@ -223,9 +224,9 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="w-full relative py-12 md:py-20 bg-background-secondary overflow-hidden" data-aos="fade-up">
-       <img src="/src/assets/images/gtt-decorate-left.svg" class="absolute top-[38%] -translate-y-1/3 md:-left-12 -left-1/2 w-[42%] object-contain opacity-80 pointer-events-none z-0" alt="">
-      <img src="/src/assets/images/gtt-decorate-right.svg" class="absolute top-[38%] -translate-y-1/3 md:-right-12 -right-1/2 w-[42%] object-contain opacity-80 pointer-events-none z-0" alt="">
+    <section class="w-full relative pt-24 pb-20 md:pt-[150px] md:pb-[120px] bg-background-secondary overflow-hidden" data-aos="fade-up">
+       <img src="/src/assets/images/gtt-decorate-left.svg" class="absolute top-[38%] -translate-y-1/3 md:left-12 -left-1/2 w-[42%] object-contain opacity-80 pointer-events-none z-0" alt="">
+      <img src="/src/assets/images/gtt-decorate-right.svg" class="absolute top-[38%] -translate-y-1/3 md:right-12 -right-1/2 w-[42%] object-contain opacity-80 pointer-events-none z-0" alt="">
         {{> products/faq-content}}
     </section>
 

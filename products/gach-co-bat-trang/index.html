@@ -18,6 +18,7 @@
 </head>
 <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
   {{> header}}
+  {{> catalog-button}}
   
   <main class="flex-grow">
     <!-- Banner Section -->
@@ -51,8 +52,8 @@
     <div class="w-[85%] max-w-[1320px] mx-auto pt-16">
         <!-- Breadcrumb -->
         <div class="pb-6 relative z-10">
-            <p class="font-bold tracking-[0.15em] text-primary/60 uppercase text-xs md:text-base">
-                <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-extrabold border-primary">Gạch Cổ Bát Tràng</span>
+            <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
+                <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-semibold border-primary">Gạch Cổ Bát Tràng</span>
             </p>
         </div>
 
@@ -82,7 +83,7 @@
                         <img src="/src/assets/images/gach-bat-elip.svg" alt="" class="absolute top-1/2 -translate-y-1/2 -right-12 md:-right-20 max-w-[220px] aspect-square object-contain drop-shadow-2xl z-10" onerror="this.style.display='none'">
                     </div>
                     <!-- Thumbnails -->
-                    <div class="grid grid-cols-3 gap-4">
+                    <div class="grid grid-cols-3 gap-7">
                         <div class="aspect-square bg-white shadow-sm border border-black/5 flex items-center justify-center p-2 rounded-sm overflow-hidden">
                             <img src="/src/assets/images/gach-bat-02.jpg" alt="Gạch bát mẫu" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/200x200/eee/999?text=Gach+Bat'">
                         </div>
@@ -94,47 +95,47 @@
                 <!-- Right: Product Info -->
                 <div>
                     <h3 class="text-3xl lg:text-4xl font-bold text-secondary mb-9 tracking-wide">GẠCH BÁT</h3>
-                    <p class="font-italianno text-[28px] lg:text-[36px] text-primary/80 mb-12 leading-none">Phối sắc tự nhiên - Hiện diện một nền</p>
+                    <p class="font-italianno text-[28px] lg:text-[36px] text-primary mb-12 leading-none">Phối sắc tự nhiên - Hiện diện một nền</p>
                     
                     <!-- Color Swatches -->
-                    <div class="flex gap-5 mb-12 items-center justify-center">
+                    <div class="flex gap-7 mb-12 items-center justify-center">
                         <div class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#A98467] rounded-2xl shadow-sm"></div>
                         <div class="w-[70px] h-[90px] md:w-[134px] md:h-[144px] bg-[#B22222] rounded-2xl shadow-sm"></div>
                         <div class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#5D5FEF] rounded-2xl shadow-sm"></div>
                     </div>
 
-                    <p class="text-[13px] md:text-[15px] text-primary/70 italic leading-relaxed mb-12 max-w-xl">
+                    <p class="text-[13px] md:text-[15px] text-primary italic font-thin leading-relaxed mb-12 max-w-2xl">
                         Sự không đồng màu này không phải là lỗi kỹ thuật, mà chính là "chứng chỉ" cho nghệ thuật chế tác thủ công. Chính sự biến thiên của lửa trong lò bầu, lò ếch ngày xưa đã tạo nên vẻ đẹp "vạn biến" mà các dòng gạch công nghiệp hiện đại khó lòng mô phỏng được.
                     </p>
 
                     <!-- Spec Table -->
                     <table class="w-full text-primary">
                         <thead>
-                            <tr class="border-b border-black/10 text-[13px] md:text-[15px] font-bold uppercase tracking-wider">
-                                <th class="py-4 text-left font-bold">Kích thước (mm)</th>
-                                <th class="py-4 text-center font-bold">Định mức (viên/m2)</th>
-                                <th class="py-4 text-center font-bold">Cân nặng (kg)</th>
-                                <th class="py-4 text-right font-bold">Giá (VND)</th>
+                            <tr class="border-b border-black/10 text-[16px] md:text-[20px] font-bold">
+                                <th class="py-4 text-center font-bold">Kích thước<br>(mm)</th>
+                                <th class="py-4 text-center font-bold">Định mức<br>(viên/m2)</th>
+                                <th class="py-4 text-center font-bold">Cân nặng<br>(kg)</th>
+                                <th class="py-4 text-center font-bold">Giá<br>(VND)</th>
                             </tr>
                         </thead>
-                        <tbody class="text-[14px] md:text-[16px] text-primary/90">
+                        <tbody class="text-[16px] md:text-[20px] text-primary font-light">
                             <tr class="hover:bg-black/5 transition-colors cursor-pointer group" onclick="window.location.href='./detail-300x300x50.html'">
-                                <td class="py-5 font-medium">300x300x50</td>
-                                <td class="py-5 text-center">11</td>
-                                <td class="py-5 text-center">10</td>
-                                <td class="py-5 text-right font-bold">75.000</td>
+                                <td class="py-4 text-center">300x300x50</td>
+                                <td class="py-4 text-center">11</td>
+                                <td class="py-4 text-center">10</td>
+                                <td class="py-4 text-center">75.000</td>
                             </tr>
                             <tr>
-                                <td class="py-5 font-medium">300x300x40</td>
-                                <td class="py-5 text-center">11</td>
-                                <td class="py-5 text-center">8</td>
-                                <td class="py-5 text-right font-bold">70.000</td>
+                                <td class="py-4 text-center">300x300x40</td>
+                                <td class="py-4 text-center">11</td>
+                                <td class="py-4 text-center">8</td>
+                                <td class="py-4 text-center">70.000</td>
                             </tr>
                             <tr class="hover:bg-black/5 transition-colors cursor-pointer group" onclick="window.location.href='./detail-200x200x50.html'">
-                                <td class="py-5 font-medium">200x200x50</td>
-                                <td class="py-5 text-center">25</td>
-                                <td class="py-5 text-center">4.5</td>
-                                <td class="py-5 text-right font-bold">60.000</td>
+                                <td class="py-4 text-center">200x200x50</td>
+                                <td class="py-4 text-center">25</td>
+                                <td class="py-4 text-center">4.5</td>
+                                <td class="py-4 text-center">60.000</td>
                             </tr>
                         </tbody>
                     </table>
@@ -146,47 +147,47 @@
                 <!-- Left: Product Info -->
                 <div class="order-2 lg:order-1">
                     <h3 class="text-3xl lg:text-4xl font-bold text-secondary mb-9 tracking-wide uppercase">Gạch Thất & Gạch Xây</h3>
-                    <p class="font-italianno text-[28px] lg:text-[36px] text-primary/80 mb-12 leading-none">Phối sắc tự nhiên - Hiện diện một nền</p>
+                    <p class="font-italianno text-[28px] lg:text-[36px] text-primary mb-12 leading-none">Phối sắc tự nhiên - Hiện diện một nền</p>
                     
                     <!-- Color Swatches -->
-                    <div class="flex gap-5 mb-12 items-center justify-center">
+                    <div class="flex gap-7 mb-12 items-center justify-center">
                         <div class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#A98467] rounded-2xl shadow-sm"></div>
                         <div class="w-[70px] h-[90px] md:w-[134px] md:h-[144px] bg-[#B22222] rounded-2xl shadow-sm"></div>
                         <div class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#5D5FEF] rounded-2xl shadow-sm"></div>
                     </div>
 
-                    <p class="text-[13px] md:text-[15px] text-primary/70 italic leading-relaxed mb-12 max-w-xl">
+                    <p class="text-[13px] md:text-[15px] text-primary font-thin italic leading-relaxed mb-12 max-w-2xl">
                         Sự không đồng màu này không phải là lỗi kỹ thuật, mà chính là "chứng chỉ" cho nghệ thuật chế tác thủ công. Chính sự biến thiên của lửa trong lò bầu, lò ếch ngày xưa đã tạo nên vẻ đẹp "vạn biến" mà các dòng gạch công nghiệp hiện đại khó lòng mô phỏng được.
                     </p>
 
                     <!-- Spec Table -->
                     <table class="w-full text-primary">
                         <thead>
-                            <tr class="border-b border-black/10 text-[13px] md:text-[15px] font-bold uppercase tracking-wider">
-                                <th class="py-4 text-left font-bold">Kích thước (mm)</th>
-                                <th class="py-4 text-center font-bold">Định mức (viên/m2)</th>
-                                <th class="py-4 text-center font-bold">Cân nặng (kg)</th>
-                                <th class="py-4 text-right font-bold">Giá (VND)</th>
+                            <tr class="border-b border-black/10 text-[16px] md:text-[20px] font-bold">
+                                <th class="py-4 text-center font-bold">Kích thước<br>(mm)</th>
+                                <th class="py-4 text-center font-bold">Định mức<br>(viên/m2)</th>
+                                <th class="py-4 text-center font-bold">Cân nặng<br>(kg)</th>
+                                <th class="py-4 text-center font-bold">Giá<br>(VND)</th>
                             </tr>
                         </thead>
-                        <tbody class="text-[14px] md:text-[16px] text-primary/90">
+                        <tbody class="text-[16px] md:text-[20px] text-primary font-light">
                             <tr class="hover:bg-black/5 transition-colors cursor-pointer group" onclick="window.location.href='./detail-220x110x60.html'">
-                                <td class="py-5 font-medium">220x110x60</td>
-                                <td class="py-5 text-center">60</td>
-                                <td class="py-5 text-center">3.5</td>
-                                <td class="py-5 text-right font-bold">26.000</td>
+                                <td class="py-4 pt-12 text-center">220x110x60</td>
+                                <td class="py-4 pt-12 text-center">60</td>
+                                <td class="py-4 pt-12 text-center">3.5</td>
+                                <td class="py-4 pt-12 text-center">26.000</td>
                             </tr>
                             <tr class="hover:bg-black/5 transition-colors cursor-pointer group" onclick="window.location.href='./detail-300x150x60.html'">
-                                <td class="py-5 font-medium">300x150x60</td>
-                                <td class="py-5 text-center">50</td>
-                                <td class="py-5 text-center">6</td>
-                                <td class="py-5 text-right font-bold">40.000</td>
+                                <td class="py-4 text-center">300x150x60</td>
+                                <td class="py-4 text-center">50</td>
+                                <td class="py-4 text-center">6</td>
+                                <td class="py-4 text-center">40.000</td>
                             </tr>
                             <tr>
-                                <td class="py-5 font-medium">300x100x60</td>
-                                <td class="py-5 text-center">50</td>
-                                <td class="py-5 text-center">6</td>
-                                <td class="py-5 text-right font-bold">38.000</td>
+                                <td class="py-4 text-center">300x100x60</td>
+                                <td class="py-4 text-center">50</td>
+                                <td class="py-4 text-center">6</td>
+                                <td class="py-4 text-center">38.000</td>
                             </tr>
                         </tbody>
                     </table>
@@ -200,7 +201,7 @@
                         <img src="/src/assets/images/gach-that-elip.svg" alt="" class="absolute top-1/2 -translate-y-1/2 -left-12 md:-left-20 max-w-[220px] aspect-square object-contain drop-shadow-2xl z-10" onerror="this.style.display='none'">
                     </div>
                     <!-- Thumbnails -->
-                    <div class="grid grid-cols-3 gap-4">
+                    <div class="grid grid-cols-3 gap-7">
                         <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
                         <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
                         <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
@@ -218,7 +219,7 @@
                         <img src="/src/assets/images/gach-the-elip.svg" alt="" class="absolute top-1/2 -translate-y-1/2 -right-12 md:-right-20 max-w-[220px] aspect-square object-contain drop-shadow-2xl z-10" onerror="this.style.display='none'">
                     </div>
                     <!-- Thumbnails -->
-                    <div class="grid grid-cols-3 gap-4">
+                    <div class="grid grid-cols-3 gap-7">
                         <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
                         <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
                         <div class="aspect-square bg-[#E5E5E5] shadow-sm rounded-sm"></div>
@@ -228,35 +229,35 @@
                 <!-- Right: Product Info -->
                 <div>
                     <h3 class="text-3xl lg:text-4xl font-bold text-secondary mb-9 tracking-wide">GẠCH THẺ</h3>
-                    <p class="font-italianno text-[28px] lg:text-[36px] text-primary/80 mb-12 leading-none">Phối sắc tự nhiên - Hiện diện một nền</p>
+                    <p class="font-italianno text-[28px] lg:text-[36px] text-primary mb-12 leading-none">Phối sắc tự nhiên - Hiện diện một nền</p>
                     
                     <!-- Color Swatches -->
-                    <div class="flex gap-5 mb-12 items-center justify-center">
+                    <div class="flex gap-7 mb-12 items-center justify-center">
                         <div class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#A98467] rounded-2xl shadow-sm"></div>
                         <div class="w-[70px] h-[90px] md:w-[134px] md:h-[144px] bg-[#B22222] rounded-2xl shadow-sm"></div>
                         <div class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#5D5FEF] rounded-2xl shadow-sm"></div>
                     </div>
 
-                    <p class="text-[13px] md:text-[15px] text-primary/70 italic leading-relaxed mb-12 max-w-xl">
+                    <p class="text-[13px] md:text-[15px] text-primary font-thin italic leading-relaxed mb-24 max-w-2xl">
                         Sự không đồng màu này không phải là lỗi kỹ thuật, mà chính là "chứng chỉ" cho nghệ thuật chế tác thủ công. Chính sự biến thiên của lửa trong lò bầu, lò ếch ngày xưa đã tạo nên vẻ đẹp "vạn biến" mà các dòng gạch công nghiệp hiện đại khó lòng mô phỏng được.
                     </p>
 
                     <!-- Spec Table -->
                     <table class="w-full text-primary">
                         <thead>
-                            <tr class="border-b border-black/10 text-[13px] md:text-[15px] font-bold uppercase tracking-wider">
-                                <th class="py-4 text-left font-bold">Kích thước (mm)</th>
-                                <th class="py-4 text-center font-bold">Định mức (viên/m2)</th>
-                                <th class="py-4 text-center font-bold">Cân nặng (kg)</th>
-                                <th class="py-4 text-right font-bold">Giá (VND)</th>
+                            <tr class="border-b border-black/10 text-[16px] md:text-[20px] font-bold">
+                                <th class="py-4 text-center font-bold">Kích thước<br>(mm)</th>
+                                <th class="py-4 text-center font-bold">Định mức<br>(viên/m2)</th>
+                                <th class="py-4 text-center font-bold">Cân nặng<br>(kg)</th>
+                                <th class="py-4 text-center font-bold">Giá<br>(VND)</th>
                             </tr>
                         </thead>
-                        <tbody class="text-[14px] md:text-[16px] text-primary/90">
+                        <tbody class="text-[16px] md:text-[20px] text-primary font-light">
                             <tr class="hover:bg-black/5 transition-colors cursor-pointer group" onclick="window.location.href='./detail-300x100x30.html'">
-                                <td class="py-5 font-medium">300x100x30</td>
-                                <td class="py-5 text-center">32</td>
-                                <td class="py-5 text-center">1.5</td>
-                                <td class="py-5 text-right font-bold">30.000</td>
+                                <td class="py-4 pt-8 text-center">300x100x30</td>
+                                <td class="py-4 pt-8 text-center">32</td>
+                                <td class="py-4 pt-8 text-center">1.5</td>
+                                <td class="py-4 pt-8 text-center">30.000</td>
                             </tr>
                         </tbody>
                     </table>
@@ -277,7 +278,7 @@
     {{> products/recommendations}}
 
     <!-- FAQ Section -->
-    <section class="w-full relative pb-16 bg-background-secondary overflow-visible" data-aos="fade-up">
+    <section class="w-full relative pb-32 bg-background-secondary overflow-visible" data-aos="fade-up">
         {{> products/faq-content}}
     </section>
   </main>

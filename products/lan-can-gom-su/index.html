@@ -15,6 +15,7 @@
 </head>
 <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
   {{> header}}
+  {{> catalog-button}}
   
   <main class="flex-grow">
             <!-- Banner Section -->
@@ -36,8 +37,8 @@
                     data-aos="fade-up"
                     data-aos-duration="1000"
                 >
-                    <h1 class="text-xl md:text-2xl font-bold mb-4 uppercase tracking-widest text-white/90">GỐM SỨ THANH HẢI</h1>
-                    <h2 class="text-3xl md:text-6xl font-bold uppercase leading-tight max-w-4xl drop-shadow-lg">
+                    <h1 class="text-xl md:text-2xl font-semibold mb-4 uppercase text-white/90">GỐM SỨ THANH HẢI</h1>
+                    <h2 class="text-3xl md:text-5xl font-extrabold uppercase leading-tight drop-shadow-lg">
                         LAN CAN GỐM SỨ
                     </h2>
                 </div>
@@ -49,7 +50,7 @@
                     class="flex items-center justify-center mt-8 mb-16"
                     data-aos="fade-up"
                 >
-                    <h2 class="text-2xl md:text-3xl font-bold text-[#C47526] uppercase tracking-wider">Danh Mục Sản Phẩm</h2>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-secondary uppercase">Danh Mục Sản Phẩm</h2>
                 </div>
 
                 <!-- Main Container -->
@@ -66,94 +67,88 @@
                             <!-- Products Grid -->
                             <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
                                 <!-- Product Card 1 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="/src/assets/images/lan-can-01.png"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
 
                                 <!-- Product Card 2 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="/src/assets/images/lan-can-02.png"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
 
                                 <!-- Product Card 3 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="/src/assets/images/lan-can-03.png"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
 
                                 <!-- Product Card 4 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="/src/assets/images/lan-can-01.png"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
                             </div>
 
                             <!-- Pagination -->
-                            <div class="flex items-center justify-center gap-4 mt-auto">
-                                <button
-                                    class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all"
-                                >
-                                    <svg
-                                        class="w-4 h-4 font-light"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.2"
-                                            d="M15 19l-7-7 7-7"
-                                        ></path>
+                            <div class="flex items-center justify-center gap-5 mt-10 lg:mt-auto">
+                                <button class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                                     </svg>
                                 </button>
-                                <button class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all">
-                                    <svg
-                                        class="w-4 h-4 font-light"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.2"
-                                            d="M9 5l7 7-7 7"
-                                        ></path>
+                                <button class="w-[40px] h-[40px] rounded-full bg-secondary flex items-center justify-center text-white hover:opacity-90 transition-all duration-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                     </svg>
                                 </button>
                             </div>
@@ -233,94 +228,88 @@
                             <!-- Products Grid -->
                             <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
                                 <!-- Product Card 1 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="/src/assets/images/lan-can-02.png"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
 
                                 <!-- Product Card 2 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="/src/assets/images/lan-can-04.png"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
 
                                 <!-- Product Card 3 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="/src/assets/images/lan-can-05.png"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
 
                                 <!-- Product Card 4 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="/src/assets/images/lan-can-06.png"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
                             </div>
 
                             <!-- Pagination -->
-                            <div class="flex items-center justify-center gap-4 mt-auto">
-                                <button
-                                    class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all"
-                                >
-                                    <svg
-                                        class="w-4 h-4 font-light"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.2"
-                                            d="M15 19l-7-7 7-7"
-                                        ></path>
+                            <div class="flex items-center justify-center gap-5 mt-10 lg:mt-auto">
+                                <button class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                                     </svg>
                                 </button>
-                                <button class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all">
-                                    <svg
-                                        class="w-4 h-4 font-light"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.2"
-                                            d="M9 5l7 7-7 7"
-                                        ></path>
+                                <button class="w-[40px] h-[40px] rounded-full bg-secondary flex items-center justify-center text-white hover:opacity-90 transition-all duration-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                     </svg>
                                 </button>
                             </div>
@@ -336,53 +325,68 @@
                         class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 gap-y-4 lg:gap-y-6"
                         data-aos="fade-up"
                     >
-                    <div
-                            class="flex flex-col col-span-2 lg:col-span-2"
+                        <div
+                            class="flex flex-col col-span-2 lg:col-span-2 group cursor-pointer"
                             data-aos="fade-up"
                             data-aos-delay="100"
+                            onclick="window.location.href = '#'"
                         >
-                            <div class="w-full aspect-[2/1] md:aspect-[18.8/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                            <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                 <img
                                     src="/src/assets/images/lan-can-giot-le.jpg"
-                                    alt="Riềm Âm Dương Sen Bầu"
+                                    alt="Lan Can Giọt Lệ"
                                     class="w-full h-full object-cover"
                                 />
+                                <div class="product-overlay">
+                                    <img src="/src/assets/images/eye.svg" alt="Search">
+                                    <span>Xem chi tiết</span>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Lan Can Giọt Lệ</h3>
                             <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                             <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                         </div>
                         <!-- Product 3 -->
                         <div
-                            class="flex flex-col"
+                            class="flex flex-col group cursor-pointer"
                             data-aos="fade-up"
                             data-aos-delay="200"
+                            onclick="window.location.href = '#'"
                         >
-                            <div class="w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                            <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                 <img
                                     src="/src/assets/images/lan-can-07.jpg"
-                                    alt="Riềm Âm Dương Sen Bầu"
+                                    alt="Lan Can Bầu"
                                     class="w-full h-full object-cover"
                                 />
+                                <div class="product-overlay">
+                                    <img src="/src/assets/images/eye.svg" alt="Search">
+                                    <span>Xem chi tiết</span>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Lan Can Bầu</h3>
                             <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                             <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                         </div>
                         <!-- Product 4 -->
                         <div
-                            class="flex flex-col"
+                            class="flex flex-col group cursor-pointer"
                             data-aos="fade-up"
                             data-aos-delay="300"
+                            onclick="window.location.href = '#'"
                         >
-                            <div class="w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                            <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                 <img
                                     src="/src/assets/images/lan-can-08.jpg"
-                                    alt="Riềm Âm Dương Sen Bầu"
+                                    alt="Lan Can Chữ Thọ"
                                     class="w-full h-full object-cover"
                                 />
+                                <div class="product-overlay">
+                                    <img src="/src/assets/images/eye.svg" alt="Search">
+                                    <span>Xem chi tiết</span>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Lan Can Chữ Thọ</h3>
                             <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                             <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                         </div>
