@@ -1,5 +1,10 @@
+import { initCalculator } from '../calculator.js';
+
 export const init = () => {
     // Note: FAQ Accordion Logic has been moved to main.js for global use.
+    
+    // Initialize Roof Quantity Calculator
+    initCalculator();
 
     // Value Section Interaction
     const valueImages = document.querySelectorAll('.value-image-item');
@@ -21,12 +26,16 @@ export const init = () => {
         valueDescription.style.transform = 'translateY(10px)';
 
         setTimeout(() => {
-            valueTitle.textContent = img.dataset.title;
-            valueDescription.textContent = img.dataset.description;
-            valueTitle.style.opacity = '1';
-            valueDescription.style.opacity = '1';
-            valueTitle.style.transform = 'translateY(0)';
-            valueDescription.style.transform = 'translateY(0)';
+            if (valueTitle) valueTitle.textContent = img.dataset.title;
+            if (valueDescription) valueDescription.textContent = img.dataset.description;
+            if (valueTitle) {
+                valueTitle.style.opacity = '1';
+                valueTitle.style.transform = 'translateY(0)';
+            }
+            if (valueDescription) {
+                valueDescription.style.opacity = '1';
+                valueDescription.style.transform = 'translateY(0)';
+            }
         }, 300);
     };
 

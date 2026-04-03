@@ -25,6 +25,7 @@ export default {
                 lavishly: ['"Lavishly Yours"', "cursive"],
                 ephesis: ['"Ephesis"', "cursive"],
                 carattere: ['"Carattere"', "cursive"],
+                advent: ['"Advent Pro"', "sans-serif"],
             },
             keyframes: {
                 marquee: {
