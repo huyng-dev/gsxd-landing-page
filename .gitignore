@@ -31,3 +31,6 @@ yarn-error.log*
 # Cache
 .cache/
 .parcel-cache/
+
+# Added by CodebaseTracker
+_codebase/
