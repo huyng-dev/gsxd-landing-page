@@ -1,93 +1,138 @@
 <section class="bg-[#F5EDE7] relative overflow-hidden text-primary">
-    <!-- 1. Slider Segment -->
-    <div class="relative z-10 pt-16 lg:pt-24">
-        <!-- Navigation Buttons -->
-        <div class="w-[85%] max-w-[1320px] mx-auto mb-8 flex justify-end">
-            <div class="flex gap-4">
-                <button class="section4-prev w-10 h-10 md:w-12 md:h-12 border border-black/20 rounded-full flex items-center justify-center hover:bg-black/5 transition-all focus:outline-none">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M19 12H5M12 19l-7-7 7-7"/>
-                    </svg>
-                </button>
-                <button class="section4-next w-10 h-10 md:w-12 md:h-12 border border-black/20 rounded-full flex items-center justify-center hover:bg-black/5 transition-all focus:outline-none">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- Carousel -->
-        <div class="ml-[7.5%] min-[1553px]:ml-[calc((100vw-1320px)/2)] lg:max-w-[1920px] overflow-hidden">
-            <div class="swiper section4-swiper overflow-visible">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide w-full md:w-[70%] lg:w-[80%]">
-                        <div class="aspect-[2/1] overflow-hidden shadow-lg bg-neutral-1">
-                            <!-- Attempt adding png/jpg -->
-                            <img src="/src/assets/images/factory-03.png" onerror="this.src='/src/assets/images/factory-01.jpg'" alt="Phân xưởng" class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105">
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-full md:w-[70%] lg:w-[80%]">
-                        <div class="aspect-[2/1] overflow-hidden shadow-lg bg-neutral-1">
-                            <img src="/src/assets/images/factory-04.jpg" onerror="this.src='/src/assets/images/trang-tri-slide-01.jpg'" alt="Phân xưởng" class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- 1. Slider Segment -->
+  <div class="relative z-10 pt-16 lg:pt-24">
+    <!-- Navigation Buttons -->
+    <div class="w-[85%] max-w-[1320px] mx-auto mb-8 flex justify-end">
+      <div class="flex gap-4">
+        <button
+          class="section4-prev w-10 h-10 md:w-12 md:h-12 border border-black/20 rounded-full flex items-center justify-center hover:bg-black/5 transition-all focus:outline-none"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          class="section4-next w-10 h-10 md:w-12 md:h-12 border border-black/20 rounded-full flex items-center justify-center hover:bg-black/5 transition-all focus:outline-none"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
     </div>
 
-    <!-- 2. Text and Blueprint Layer -->
-    <div class="relative z-0 mt-20 md:mt-32 pb-16 md:pb-24">
-        
-        <!-- Background lines overlay (to make them extend infinitely) -->
-        <div class="grid-overlay absolute inset-0 z-0 pointer-events-none">
-            <div class="w-[85%] max-w-[1320px] mx-auto h-full relative">
-                <!-- Vertical line separating Number "1" and Text -->
-                <div class="line line-v hidden md:block absolute bg-black/10 w-px h-[250vh] top-[-50vh]" style="left: 10%;"></div>
-                
-                <!-- Horizontal intersecting line matching bottom of text -->
-                <div class="line line-h hidden md:block absolute bg-black/10 h-px w-[50vw]" style="bottom: 10vh; left: 2vw;"></div>
+    <!-- Carousel -->
+    <div class="ml-[7.5%] min-[1553px]:ml-[calc((100vw-1320px)/2)] lg:max-w-[1920px] overflow-hidden">
+      <div class="swiper section4-swiper overflow-visible">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide w-full md:w-[70%] lg:w-[80%]">
+            <div class="aspect-[2/1] overflow-hidden shadow-lg bg-neutral-1">
+              <!-- Attempt adding png/jpg -->
+              <img
+                src="/src/assets/images/factory-03.png"
+                onerror="this.src = '/src/assets/images/factory-01.jpg'"
+                alt="Phân xưởng"
+                class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+              />
             </div>
+          </div>
+          <div class="swiper-slide w-full md:w-[70%] lg:w-[80%]">
+            <div class="aspect-[2/1] overflow-hidden shadow-lg bg-neutral-1">
+              <img
+                src="/src/assets/images/factory-04.jpg"
+                onerror="this.src = '/src/assets/images/trang-tri-slide-01.jpg'"
+                alt="Phân xưởng"
+                class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+          </div>
         </div>
-
-        <!-- Text wrapper -->
-        <div class="relative z-10 w-[85%] max-w-[1320px] mx-auto flex flex-col md:flex-row pb-12 md:pb-24 border-b md:border-b-0 border-black/10" data-aos="fade-up">
-            <!-- Numeral Col -->
-            <div class="w-full md:w-[10%] pt-2 md:ml-12 flex justify-start">
-                <span class="text-[64px] md:text-[80px] lg:text-[96px] leading-none text-black/30 font-arbutus select-none">1</span>
-            </div>
-            
-            <!-- Content Col -->
-            <div class="w-full md:w-[90%] md:pl-12 lg:pl-16 pt-8 md:pt-4" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-[15px] md:text-[16px] font-bold uppercase tracking-wide mb-6">LỰA CHỌN VÀ XỬ LÝ NGUYÊN LIỆU (PHA CHẾ ĐẤT)</h3>
-                <div class="text-[15px] md:text-[16px] text-black/75 leading-[1.8] space-y-4 text-justify max-w-2xl">
-                    <p>
-                        Đây là bước quan trọng nhất quyết định độ bền của sản phẩm. Thanh Hải tuyển chọn những loại đất sét có độ dẻo cao, khả năng chịu nhiệt tốt (thường từ các vùng nguyên liệu nổi tiếng như Trúc Thôn). Đất được xử lý qua hệ thống bể lọc để loại bỏ tạp chất, sau đó pha trộn theo tỷ lệ bí truyền để tạo ra "xương" gốm vững chắc.
-                    </p>
-                </div>
-            </div>
-        </div>
-
+      </div>
     </div>
+  </div>
+
+  <!-- 2. Text and Blueprint Layer -->
+  <div class="relative z-0 mt-20 md:mt-32 pb-16 md:pb-24">
+    <!-- Background lines overlay (to make them extend infinitely) -->
+    <div class="grid-overlay absolute inset-0 z-0 pointer-events-none">
+      <div class="w-[85%] max-w-[1320px] mx-auto h-full relative">
+        <!-- Vertical line separating Number "1" and Text -->
+        <div
+          class="line line-v hidden md:block absolute bg-black/10 w-px h-[250vh] top-[-50vh]"
+          style="left: 12%"
+        ></div>
+
+        <!-- Horizontal intersecting line matching bottom of text -->
+        <div
+          class="line line-h hidden md:block absolute bg-black/10 h-px w-[50vw]"
+          style="bottom: 9vh; left: 4vw"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Text wrapper -->
+    <div
+      class="relative z-10 w-[85%] max-w-[1320px] mx-auto flex flex-col md:flex-row pb-12 md:pb-24 border-b md:border-b-0 border-black/10"
+      data-aos="fade-up"
+    >
+      <!-- Numeral Col -->
+      <div class="w-full md:w-[10%] pt-2 md:ml-12 flex justify-start">
+        <span class="text-[64px] md:text-[80px] lg:text-[96px] leading-none text-[#909090] font-arbutus select-none">1</span>
+      </div>
+
+      <!-- Content Col -->
+      <div
+        class="w-full md:w-[90%] md:pl-12 lg:pl-16 pt-8 md:pt-4"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <h3 class="text-[15px] md:text-[16px] font-bold uppercase mb-4">LỰA CHỌN VÀ XỬ LÝ NGUYÊN LIỆU (PHA CHẾ ĐẤT)</h3>
+        <div class="text-[15px]/[1.6] md:text-base/9 text-black/75 space-y-4 text-left max-w-xl">
+          <p>
+            Đây là bước quan trọng nhất quyết định độ bền của sản phẩm. Thanh Hải tuyển chọn những loại đất sét có độ dẻo cao, khả năng chịu
+            nhiệt tốt (thường từ các vùng nguyên liệu nổi tiếng như Trúc Thôn). Đất được xử lý qua hệ thống bể lọc để loại bỏ tạp chất, sau
+            đó pha trộn theo tỷ lệ bí truyền để tạo ra "xương" gốm vững chắc.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        if (typeof Swiper !== 'undefined') {
-            new Swiper('.section4-swiper', {
-                slidesPerView: 'auto',
-                spaceBetween: 24,
-                navigation: {
-                    nextEl: '.section4-next',
-                    prevEl: '.section4-prev',
-                },
-                breakpoints: {
-                    768: {
-                        spaceBetween: 32,
-                    }
-                }
-            });
-        }
-    });
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof Swiper !== "undefined") {
+      new Swiper(".section4-swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 24,
+        navigation: {
+          nextEl: ".section4-next",
+          prevEl: ".section4-prev",
+        },
+        breakpoints: {
+          768: {
+            spaceBetween: 32,
+          },
+        },
+      });
+    }
+  });
 </script>

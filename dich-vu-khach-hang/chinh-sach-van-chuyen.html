@@ -1,195 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Chính sách vận chuyển - Dịch vụ khách hàng - Thanh Hải Ceramics</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/src/assets/images/logo.svg"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="/src/assets/css/main.css"
+    />
+    <style>
+      .shipping-table th,
+      .shipping-table td {
+        border: 1px solid #2e2f2a;
+        padding: 1.5rem 1rem;
+      }
+      .shipping-table th {
+        background-color: transparent;
+        color: #2e2f2a;
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chính sách vận chuyển - Dịch vụ khách hàng - Thanh Hải Ceramics</title>
-  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/src/assets/css/main.css">
-  <style>
-    .shipping-table th, .shipping-table td {
-      border: 1px solid #2E2F2A;
-      padding: 1.5rem 1rem;
-    }
-    .shipping-table th {
-      background-color: transparent;
-      color: #2E2F2A;
-      font-weight: bold;
-      text-align: center;
-    }
-  </style>
-</head>
+  <body
+    data-page="customer-service"
+    class="bg-white"
+  >
+    {{> header}}
 
-<body data-page="customer-service" class="bg-white">
-  {{> header}}
+    <main class="bg-background-secondary min-h-screen font-archivo text-primary">
+      <div class="w-[85%] max-w-[1320px] mx-auto">
+        {{> customer-service/breadcrumb currentPage="Chính sách vận chuyển"}}
 
-  <main class="bg-background-secondary min-h-screen font-archivo text-primary">
-    <div class="w-[85%] max-w-[1320px] mx-auto">
-      {{> customer-service/breadcrumb currentPage="Chính sách vận chuyển"}}
-      
-      <div class="flex flex-col lg:flex-row gap-12 mb-6 lg:mb-12">
-        {{> customer-service/sidebar activeShipping=true}}
-        <div class="flex-1 lg:pl-12">
-            <h1 class="text-3xl lg:text-[36px] font-arima font-medium text-primary mb-6 mt-[-6px]">Chính sách vận chuyển - đóng gói - kiểm hàng</h1>
-            
-            <div class="text-primary/80 space-y-8 text-sm lg:text-base leading-relaxed">
+        <div class="flex flex-col lg:flex-row gap-12 mb-4 lg:mb-8">
+          {{> customer-service/sidebar activeShipping=true}}
+          <div class="flex-1 lg:pl-12">
+            <h1 class="text-3xl lg:text-[36px] font-arima font-medium text-primary mb-6 mt-[-6px]">
+              Chính sách vận chuyển - đóng gói - kiểm hàng
+            </h1>
+
+            <div class="text-primary space-y-8 text-sm lg:text-base leading-relaxed">
+              <p>
+                Tại Gốm sứ Thanh Hải, chúng tôi hiểu rằng đặc thù hàng gốm sứ xây dựng rất nặng và dễ vỡ. Vì vậy, quy trình vận chuyển được
+                chúng tôi thiết lập chuyên nghiệp để đảm bảo sản phẩm đến tay khách hàng an toàn với chi phí tối ưu nhất.
+              </p>
+
+              <section class="space-y-6">
+                <h2 class="text-base lg:text-lg font-bold text-primary">1. Phân loại Phí vận chuyển & Thời gian giao hàng</h2>
+
+                <div class="overflow-x-auto">
+                  <table class="w-full border-collapse shipping-table text-sm lg:text-base text-primary">
+                    <thead>
+                      <tr>
+                        <th class="w-[14%]">Khu vực</th>
+                        <th class="w-[20%]">Phương thức vận chuyển</th>
+                        <th class="w-[51%]">Chi tiết chi phí & Ghi chú</th>
+                        <th class="w-[15%]">Thời gian dự kiến</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Noi thanh Ha Noi -->
+                      <tr>
+                        <td
+                          rowspan="2"
+                          class="font-bold text-center align-middle"
+                        >
+                          Nội thành Hà Nội
+                        </td>
+                        <td class="italic font-bold text-center align-middle">Ship ghép chuyến</td>
+                        <td class="space-y-1">
+                          <p>Phí từ 70.000đ (tùy số km).</p>
+                          <p>Giao theo khung giờ:</p>
+                          <p>Sáng (trước 13h) hoặc Chiều (trước 18h).</p>
+                          <p>Quý khách vui lòng báo trước 5 tiếng để sắp xếp lộ trình.</p>
+                        </td>
+                        <td class="text-center align-middle">Trong hoặc sau 1 ngày</td>
+                      </tr>
+                      <tr>
+                        <td class="italic font-bold text-center align-middle">Ship riêng chuyến</td>
+                        <td>
+                          <p>
+                            Phí tính theo số km thực tế từ Bát Tràng đến địa chỉ nhận hàng. Ưu tiên thời gian theo yêu cầu của khách hàng.
+                          </p>
+                        </td>
+                        <td class="text-center align-middle">Giao ngay</td>
+                      </tr>
+
+                      <!-- Tinh thanh mien Bac -->
+                      <tr>
+                        <td
+                          rowspan="2"
+                          class="font-bold text-center align-middle"
+                        >
+                          Tỉnh thành miền Bắc
+                        </td>
+                        <td class="italic font-bold text-center align-middle">Xe tải chuyên dụng</td>
+                        <td>
+                          <p>
+                            Khuyến khích cho đơn hàng nặng (từ 1 tấn trở lên). Thanh Hải hỗ trợ liên hệ nhà xe hoặc giao theo xe khách chỉ
+                            định.
+                          </p>
+                        </td>
+                        <td class="text-center align-middle">1 - 2 ngày</td>
+                      </tr>
+                      <tr>
+                        <td class="italic font-bold text-center align-middle">Gửi xe khách</td>
+                        <td class="space-y-1">
+                          <p>Phí = [Phí vận chuyển từ Bát Tràng ra bến xe] + [Cước nhà xe về địa chỉ khách].</p>
+                          <p>Giao tại các bến: Nước Ngầm, Giáp Bát, Gia Lâm.</p>
+                        </td>
+                        <td class="text-center align-middle">1 - 2 ngày</td>
+                      </tr>
+
+                      <!-- Mien Trung & Mien Nam -->
+                      <tr>
+                        <td
+                          rowspan="2"
+                          class="font-bold text-center align-middle"
+                        >
+                          Miền Trung & Miền Nam
+                        </td>
+                        <td class="italic font-bold text-center align-middle">
+                          Xe tải ghép <br />
+                          Bắc - Nam
+                        </td>
+                        <td>
+                          <p>Áp dụng cho đơn hàng lớn. Cước tính theo thùng/kiện hoặc theo tấn (nếu đi riêng chuyến).</p>
+                        </td>
+                        <td class="text-center align-middle">3 - 7 ngày</td>
+                      </tr>
+                      <tr>
+                        <td class="italic font-bold text-center align-middle">Gửi xe khách</td>
+                        <td>
+                          <p>Áp dụng cho hàng mẫu hoặc đơn hàng số lượng ít để rút ngắn thời gian nhận hàng.</p>
+                        </td>
+                        <td class="text-center align-middle">2 - 4 ngày</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="space-y-4">
+                <h2 class="text-base lg:text-lg font-bold text-primary">2. Quy định đóng gói & Bảo hiểm nứt vỡ</h2>
+                <p>Sự an toàn của hàng hóa là ưu tiên hàng đầu của chúng tôi:</p>
+                <ul class="list-disc pl-7 space-y-2">
+                  <li>
+                    <span class="font-bold">Tiêu chuẩn đóng gói:</span> Tất cả sản phẩm được đóng trong thùng carton cứng hoặc đóng đai chắc
+                    chắn.
+                  </li>
+                  <li>
+                    <span class="font-bold">Gia cố thùng gỗ:</span> Với các mặt hàng giá trị cao hoặc vận chuyển đi xa, chúng tôi cung cấp
+                    dịch vụ đóng kiện gỗ với chi phí từ 50.000đ – 300.000đ (tùy kích thước) để đảm bảo an toàn tuyệt đối.
+                  </li>
+                  <li>
+                    <span class="font-bold">Chính sách Bảo hiểm:</span> Thanh Hải cam kết đền bù 100% giá trị sản phẩm nếu xảy ra nứt vỡ do
+                    lỗi vận chuyển.
+                  </li>
+                </ul>
+                <p class="italic">
+                  *Lưu ý: Quý khách vui lòng quay video quá trình mở hộp hoặc kiểm tra trực tiếp khi nhận hàng để làm căn cứ áp dụng chính
+                  sách đền bù.
+                </p>
+              </section>
+
+              <section class="space-y-4">
+                <h2 class="text-base lg:text-lg font-bold text-primary">3. Chính sách Kiểm hàng (Kiểm tra trước khi thanh toán)</h2>
+                <p>Để bảo vệ quyền lợi tối đa, Gốm sứ Thanh Hải khuyến khích khách hàng thực hiện các bước sau khi nhận hàng:</p>
+                <ul class="list-disc pl-7 space-y-2">
+                  <li>
+                    <span class="font-bold">Mở thùng kiểm tra:</span> Quý khách hoàn toàn có quyền yêu cầu đơn vị vận chuyển đợi để kiểm tra
+                    sơ bộ tình trạng sản phẩm.
+                  </li>
+                  <li>
+                    <span class="font-bold">Đối chiếu mẫu mã:</span> Xác nhận sản phẩm đúng chủng loại, màu sắc và số lượng như trong đơn
+                    hàng/hợp đồng.
+                  </li>
+                  <li>
+                    <span class="font-bold">Xác nhận tình trạng:</span> Kiểm tra các lỗi sứt mẻ, trầy xước bề mặt. Nếu có vấn đề phát sinh,
+                    vui lòng liên hệ ngay hotline của chúng tôi để được xử lý kịp thời.
+                  </li>
+                </ul>
+              </section>
+
+              <section class="space-y-6 text-left">
+                <h2 class="text-sm lg:text-base font-bold text-primary uppercase">Hướng dẫn xử lý khi hàng hóa có sự cố (Nứt/Vỡ)</h2>
                 <p>
-                    Tại Gốm sứ Thanh Hải, chúng tôi hiểu rằng đặc thù hàng gốm sứ xây dựng rất nặng và dễ vỡ. Vì vậy, quy trình vận chuyển được chúng tôi thiết lập chuyên nghiệp để đảm bảo sản phẩm đến tay khách hàng an toàn với chi phí tối ưu nhất.
+                  Tại Gốm sứ Thanh Hải, chúng tôi cam kết chịu trách nhiệm 100% đối với các rủi ro trong quá trình vận chuyển. Nếu quý khách
+                  gặp tình trạng hàng bị hư hỏng, xin đừng quá lo lắng và hãy thực hiện theo 3 bước đơn giản sau:
                 </p>
 
-                <section class="space-y-6">
-                    <h2 class="text-base lg:text-lg font-bold text-primary">1. Phân loại Phí vận chuyển & Thời gian giao hàng</h2>
-                    
-                    <div class="overflow-x-auto">
-                        <table class="w-full border-collapse shipping-table text-sm lg:text-base">
-                            <thead>
-                                <tr>
-                                    <th class="w-[15%]">Khu vực</th>
-                                    <th class="w-[20%]">Phương thức vận chuyển</th>
-                                    <th class="w-[50%]">Chi tiết chi phí & Ghi chú</th>
-                                    <th class="w-[15%]">Thời gian dự kiến</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Noi thanh Ha Noi -->
-                                <tr>
-                                    <td rowspan="2" class="font-bold text-center align-middle">Nội thành Hà Nội</td>
-                                    <td class="italic font-bold text-center align-middle">Ship ghép chuyến</td>
-                                    <td class="space-y-1">
-                                        <p>Phí từ 70.000đ (tùy số km).</p>
-                                        <p>Giao theo khung giờ: Sáng (trước 13h) hoặc Chiều (trước 18h).</p>
-                                        <p>Quý khách vui lòng báo trước 5 tiếng để sắp xếp lộ trình.</p>
-                                    </td>
-                                    <td class="text-center align-middle">Trong hoặc sau 1 ngày</td>
-                                </tr>
-                                <tr>
-                                    <td class="italic font-bold text-center align-middle">Ship riêng chuyến</td>
-                                    <td>
-                                        <p>Phí tính theo số km thực tế từ Bát Tràng đến địa chỉ nhận hàng. Ưu tiên thời gian theo yêu cầu của khách hàng.</p>
-                                    </td>
-                                    <td class="text-center align-middle">Giao ngay</td>
-                                </tr>
-                                
-                                <!-- Tinh thanh mien Bac -->
-                                <tr>
-                                    <td rowspan="2" class="font-bold text-center align-middle">Tỉnh thành miền Bắc</td>
-                                    <td class="italic font-bold text-center align-middle">Xe tải chuyên dụng</td>
-                                    <td>
-                                        <p>Khuyến khích cho đơn hàng nặng (từ 1 tấn trở lên). Thanh Hải hỗ trợ liên hệ nhà xe hoặc giao theo xe khách chỉ định.</p>
-                                    </td>
-                                    <td class="text-center align-middle">1 - 2 ngày</td>
-                                </tr>
-                                <tr>
-                                    <td class="italic font-bold text-center align-middle">Gửi xe khách</td>
-                                    <td class="space-y-1">
-                                        <p>Phí = [Phí vận chuyển từ Bát Tràng ra bến xe] + [Cước nhà xe về địa chỉ khách].</p>
-                                        <p>Giao tại các bến: Nước Ngầm, Giáp Bát, Gia Lâm.</p>
-                                    </td>
-                                    <td class="text-center align-middle">1 - 2 ngày</td>
-                                </tr>
+                <div class="overflow-x-auto">
+                  <table class="w-full border-collapse shipping-table text-sm lg:text-base">
+                    <thead>
+                      <tr>
+                        <th class="w-[15%]">Bước</th>
+                        <th class="w-[50%]">Hành động của khách hàng</th>
+                        <th class="w-[35%]">Trách nhiệm của Thanh Hải</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="font-bold text-center align-middle">Bước 1</td>
+                        <td>
+                          <p>
+                            Quay phim/Chụp ảnh: Chụp lại hiện trạng thùng hàng và các sản phẩm bị vỡ ngay khi mở kiện (giữ nguyên vị trí
+                            trong thùng).
+                          </p>
+                        </td>
+                        <td class="text-center">Tiếp nhận thông tin qua Hotline/Zalo trực 24/7 để xác nhận sự cố.</td>
+                      </tr>
+                      <tr>
+                        <td class="font-bold text-center align-middle">Bước 2</td>
+                        <td>
+                          <p>
+                            Liên hệ ngay: Gọi Hotline hoặc gửi hình ảnh qua Zalo bộ phận chăm sóc khách hàng trong vòng 24h kể từ khi nhận
+                            hàng.
+                          </p>
+                        </td>
+                        <td class="text-center">Phản hồi phương án xử lý trong vòng 2 tiếng làm việc.</td>
+                      </tr>
+                      <tr>
+                        <td class="font-bold text-center align-middle">Bước 3</td>
+                        <td>
+                          <p>Xác nhận số lượng: Liệt kê mã sản phẩm và số lượng viên/mảnh bị vỡ để chúng tôi lên đơn hàng bù.</p>
+                        </td>
+                        <td class="text-center">
+                          Gửi bù sản phẩm mới 100% hoàn toàn miễn phí hoặc hoàn tiền tương ứng vào tài khoản khách hàng.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
 
-                                <!-- Mien Trung & Mien Nam -->
-                                <tr>
-                                    <td rowspan="2" class="font-bold text-center align-middle">Miền Trung & Miền Nam</td>
-                                    <td class="italic font-bold text-center align-middle">Xe tải ghép Bắc - Nam</td>
-                                    <td>
-                                        <p>Áp dụng cho đơn hàng lớn. Cước tính theo thùng/kiện hoặc theo tấn (nếu đi riêng chuyến).</p>
-                                    </td>
-                                    <td class="text-center align-middle">3 - 7 ngày</td>
-                                </tr>
-                                <tr>
-                                    <td class="italic font-bold text-center align-middle">Gửi xe khách</td>
-                                    <td>
-                                        <p>Áp dụng cho hàng mẫu hoặc đơn hàng số lượng ít để rút ngắn thời gian nhận hàng.</p>
-                                    </td>
-                                    <td class="text-center align-middle">2 - 4 ngày</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <section class="space-y-4">
-                    <h2 class="text-base lg:text-lg font-bold text-primary">2. Quy định đóng gói & Bảo hiểm nứt vỡ</h2>
-                    <p>Sự an toàn của hàng hóa là ưu tiên hàng đầu của chúng tôi:</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><span class="font-bold">Tiêu chuẩn đóng gói:</span> Tất cả sản phẩm được đóng trong thùng carton cứng hoặc đóng đai chắc chắn.</li>
-                        <li><span class="font-bold">Gia cố thùng gỗ:</span> Với các mặt hàng giá trị cao hoặc vận chuyển đi xa, chúng tôi cung cấp dịch vụ đóng kiện gỗ với chi phí từ 50.000đ – 300.000đ (tùy kích thước) để đảm bảo an toàn tuyệt đối.</li>
-                        <li><span class="font-bold">Chính sách Bảo hiểm:</span> Thanh Hải cam kết đền bù 100% giá trị sản phẩm nếu xảy ra nứt vỡ do lỗi vận chuyển.</li>
-                    </ul>
-                    <p class="italic">*Lưu ý: Quý khách vui lòng quay video quá trình mở hộp hoặc kiểm tra trực tiếp khi nhận hàng để làm căn cứ áp dụng chính sách đền bù.*</p>
-                </section>
-
-                <section class="space-y-4">
-                    <h2 class="text-base lg:text-lg font-bold text-primary">3. Chính sách Kiểm hàng (Kiểm tra trước khi thanh toán)</h2>
-                    <p>Để bảo vệ quyền lợi tối đa, Gốm sứ Thanh Hải khuyến khích khách hàng thực hiện các bước sau khi nhận hàng:</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><span class="font-bold">Mở thùng kiểm tra:</span> Quý khách hoàn toàn có quyền yêu cầu đơn vị vận chuyển đợi để kiểm tra sơ bộ tình trạng sản phẩm.</li>
-                        <li><span class="font-bold">Đối chiếu mẫu mã:</span> Xác nhận sản phẩm đúng chủng loại, màu sắc và số lượng như trong đơn hàng/hợp đồng.</li>
-                        <li><span class="font-bold">Xác nhận tình trạng:</span> Kiểm tra các lỗi sứt mẻ, trầy xước bề mặt. Nếu có vấn đề phát sinh, vui lòng liên hệ ngay hotline của chúng tôi để được xử lý kịp thời.</li>
-                    </ul>
-                </section>
-
-                <section class="space-y-6 pt-4 text-left">
-                    <h2 class="text-lg lg:text-xl font-bold text-primary uppercase">Hướng dẫn xử lý khi hàng hóa có sự cố (Nứt/Vỡ)</h2>
-                    <p>Tại Gốm sứ Thanh Hải, chúng tôi cam kết chịu trách nhiệm 100% đối với các rủi ro trong quá trình vận chuyển. Nếu quý khách gặp tình trạng hàng bị hư hỏng, xin đừng quá lo lắng và hãy thực hiện theo 3 bước đơn giản sau:</p>
-                    
-                    <div class="overflow-x-auto">
-                        <table class="w-full border-collapse shipping-table text-sm lg:text-base">
-                            <thead>
-                                <tr>
-                                    <th class="w-[15%]">Bước</th>
-                                    <th class="w-[45%]">Hành động của khách hàng</th>
-                                    <th class="w-[40%]">Trách nhiệm của Thanh Hải</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="font-bold text-center align-middle">Bước 1</td>
-                                    <td>
-                                        <p>Quay phim/Chụp ảnh: Chụp lại hiện trạng thùng hàng và các sản phẩm bị vỡ ngay khi mở kiện (giữ nguyên vị trí trong thùng).</p>
-                                    </td>
-                                    <td class="text-center">Tiếp nhận thông tin qua Hotline/Zalo trực 24/7 để xác nhận sự cố.</td>
-                                </tr>
-                                <tr>
-                                    <td class="font-bold text-center align-middle">Bước 2</td>
-                                    <td>
-                                        <p>Liên hệ ngay: Gọi Hotline hoặc gửi hình ảnh qua Zalo bộ phận chăm sóc khách hàng trong vòng 24h kể từ khi nhận hàng.</p>
-                                    </td>
-                                    <td class="text-center">Phản hồi phương án xử lý trong vòng 2 tiếng làm việc.</td>
-                                </tr>
-                                <tr>
-                                    <td class="font-bold text-center align-middle">Bước 3</td>
-                                    <td>
-                                        <p>Xác nhận số lượng: Liệt kê mã sản phẩm và số lượng viên/mảnh bị vỡ để chúng tôi lên đơn hàng bù.</p>
-                                    </td>
-                                    <td class="text-center">Gửi bù sản phẩm mới 100% hoàn toàn miễn phí hoặc hoàn tiền tương ứng vào tài khoản khách hàng.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <section class="py-6 space-y-4 text-left">
-                    <h3 class="text-base lg:text-lg font-bold text-primary uppercase">3 Lưu ý "Vàng" để được hỗ trợ nhanh nhất:</h3>
-                    <ul class="space-y-3">
-                        <li>• <span class="font-bold">Đừng vội vứt bỏ:</span> Vui lòng giữ lại các sản phẩm vỡ và bao bì cho đến khi sự cố được xác nhận xong.</li>
-                        <li>• <span class="font-bold">Ký biên bản:</span> Nếu vận chuyển qua bên thứ 3 (xe khách/xe tải ghép), hãy yêu cầu tài xế ký xác nhận tình trạng vật vào phiếu giao hàng.</li>
-                        <li>• <span class="font-bold">Video mở hộp:</span> Đây là bằng chứng thép giúp chúng tôi làm việc với đơn vị bảo hiểm và hỗ trợ quý khách thay thế hàng mới ngay lập tức mà không cần chờ đợi đối soát lâu.</li>
-                    </ul>
-                    <p class="italic font-medium pt-2">"Sự an tâm của quý khách là ưu tiên hàng đầu của chúng tôi. Mọi rủi ro vận chuyển đã có Thanh Hải lo!"</p>
-                </section>
+              <section class="pb-6 space-y-4 text-left">
+                <h3 class="text-sm lg:text-base font-bold text-primary uppercase mb-6">3 Lưu ý "Vàng" để được hỗ trợ nhanh nhất:</h3>
+                <ul class="space-y-3 list-disc pl-7">
+                  <li>
+                    <span class="font-bold">Đừng vội vứt bỏ:</span> Vui lòng giữ lại các sản phẩm vỡ và bao bì cho đến khi sự cố được xác
+                    nhận xong.
+                  </li>
+                  <li>
+                    <span class="font-bold">Ký biên bản:</span> Nếu vận chuyển qua bên thứ 3 (xe khách/xe tải ghép), hãy yêu cầu tài xế ký
+                    xác nhận tình trạng vật vào phiếu giao hàng.
+                  </li>
+                  <li>
+                    <span class="font-bold">Video mở hộp:</span> Đây là bằng chứng thép giúp chúng tôi làm việc với đơn vị bảo hiểm và hỗ
+                    trợ quý khách thay thế hàng mới ngay lập tức mà không cần chờ đợi đối soát lâu.
+                  </li>
+                </ul>
+                <p class="italic pt-1">
+                  "Sự an tâm của quý khách là ưu tiên hàng đầu của chúng tôi. Mọi rủi ro vận chuyển đã có Thanh Hải lo!"
+                </p>
+              </section>
             </div>
+          </div>
         </div>
+        {{> faq/faq-contact}}
       </div>
-      {{> faq/faq-contact}}
-    </div>
-  </main>
+    </main>
 
-  {{> footer}}
-  <script type="module" src="/src/js/main.js"></script>
-</body>
-
+    {{> footer}}
+    <script
+      type="module"
+      src="/src/js/main.js"
+    ></script>
+  </body>
 </html>

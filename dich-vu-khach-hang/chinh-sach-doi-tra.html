@@ -1,55 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Chính sách đổi trả - Dịch vụ khách hàng - Thanh Hải Ceramics</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/src/assets/images/logo.svg"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="/src/assets/css/main.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chính sách đổi trả - Dịch vụ khách hàng - Thanh Hải Ceramics</title>
-  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/src/assets/css/main.css">
-</head>
+  <body
+    data-page="customer-service"
+    class="bg-white"
+  >
+    {{> header}}
 
-<body data-page="customer-service" class="bg-white">
-  {{> header}}
+    <main class="bg-background-secondary min-h-screen font-archivo">
+      <div class="w-[85%] max-w-[1320px] mx-auto">
+        {{> customer-service/breadcrumb currentPage="Chính sách đổi trả"}}
 
-  <main class="bg-background-secondary min-h-screen font-archivo">
-    <div class="w-[85%] max-w-[1320px] mx-auto">
-      {{> customer-service/breadcrumb currentPage="Chính sách đổi trả"}}
-      
-      <div class="flex flex-col lg:flex-row gap-12 mb-6 lg:mb-12">
-        {{> customer-service/sidebar activeReturn=true}}
-        <div class="flex-1 lg:pl-12">
+        <div class="flex flex-col lg:flex-row gap-12 mb-6 lg:mb-12">
+          {{> customer-service/sidebar activeReturn=true}}
+          <div class="flex-1 lg:pl-12">
             <h1 class="text-3xl lg:text-[36px] font-arima font-medium text-primary mb-6 mt-[-6px]">Chính sách đổi trả</h1>
-            
-            <div class="text-primary/80 space-y-4 text-sm lg:text-base leading-relaxed">
-                <p>
-                    Vì đặc thù gốm thủ công được sản xuất theo lô (mỗi lô có thể lệch màu nhẹ), chúng tôi không khuyến khích trả lại hàng dư. Bạn nên giữ lại một ít để dự phòng cho việc sửa chữa sau này nếu cần.
-                </p>
-                <p>
-                    Tuy nhiên, nếu số lượng hàng dư nhiều, chúng tôi có chính sách đổi trả với điều kiện hàng hóa còn nguyên thùng, cụ thể như sau:
-                </p>
-                <p>
-                    Hàng hóa có thể được đổi hoặc trả trong vòng 10 ngày kể từ ngày mua hàng
-                </p>
-                <ul class="list-disc pl-5 space-y-2">
-                    <li>Sau 10 ngày, hàng trả lại sẽ bị trừ 10% giá trị đơn hàng</li>
-                    <li>Từ 30 ngày trở lên, mức khấu trừ tăng lên 20% giá trị đơn hàng</li>
-                    <li>Quá 40 ngày, công ty không chấp nhận bất kỳ yêu cầu đổi trả nào</li>
-                </ul>
-                <p>
-                    Quý khách vui lòng kiểm tra hàng ngay khi nhận. Nếu phát hiện nứt vỡ do vận chuyển, hãy chụp ảnh, quay video cụ thể số lượng hàng bị vỡ. Sau đó, liên hệ ngay với chúng tôi trong vòng 24h để được hỗ trợ gửi bù sản phẩm mới kịp thời cho công trình.
-                </p>
+
+            <div class="text-primary space-y-4 text-sm lg:text-base leading-relaxed">
+              <p>
+                Vì đặc thù gốm thủ công được sản xuất theo lô (mỗi lô có thể lệch màu nhẹ), chúng tôi không khuyến khích trả lại hàng dư.
+                Bạn nên giữ lại một ít để dự phòng cho việc sửa chữa sau này nếu cần.
+              </p>
+              <p>
+                Tuy nhiên, nếu số lượng hàng dư nhiều, chúng tôi có chính sách đổi trả với điều kiện hàng hóa còn nguyên thùng, cụ thể như
+                sau:
+              </p>
+              <p>Hàng hóa có thể được đổi hoặc trả trong vòng 10 ngày kể từ ngày mua hàng</p>
+              <ul class="list-disc pl-7 space-y-2">
+                <li>Sau 10 ngày, hàng trả lại sẽ bị trừ 10% giá trị đơn hàng</li>
+                <li>Từ 30 ngày trở lên, mức khấu trừ tăng lên 20% giá trị đơn hàng</li>
+                <li>Quá 40 ngày, công ty không chấp nhận bất kỳ yêu cầu đổi trả nào</li>
+              </ul>
+              <p>
+                Quý khách vui lòng kiểm tra hàng ngay khi nhận. Nếu phát hiện nứt vỡ do vận chuyển, hãy chụp ảnh, quay video cụ thể số lượng
+                hàng bị vỡ. Sau đó, liên hệ ngay với chúng tôi trong vòng 24h để được hỗ trợ gửi bù sản phẩm mới kịp thời cho công trình.
+              </p>
             </div>
             <div class="w-full aspect-[25/7] bg-[#D9D9D9] rounded-sm mt-8"></div>
+          </div>
         </div>
+        {{> faq/faq-contact}}
       </div>
-      {{> faq/faq-contact}}
-    </div>
-  </main>
+    </main>
 
-  {{> footer}}
-  <script type="module" src="/src/js/main.js"></script>
-</body>
-
+    {{> footer}}
+    <script
+      type="module"
+      src="/src/js/main.js"
+    ></script>
+  </body>
 </html>

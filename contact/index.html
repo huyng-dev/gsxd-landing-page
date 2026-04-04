@@ -1,110 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Liên hệ - Thanh Hải Ceramics</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/src/assets/images/logo.svg"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="/src/assets/css/main.css"
+    />
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom scrollbar for some browsers if needed, but not required here */
+      .contact-input::placeholder {
+        color: rgba(255, 250, 243, 0.4);
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên hệ - Thanh Hải Ceramics</title>
-  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/src/assets/css/main.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    /* Custom scrollbar for some browsers if needed, but not required here */
-    .contact-input::placeholder {
-      color: rgba(255, 250, 243, 0.4);
-    }
-  </style>
-</head>
+  <body
+    data-page="contact"
+    class="bg-primary min-h-screen flex flex-col font-archivo"
+  >
+    {{> header isHome=false}}
 
-<body data-page="contact" class="bg-primary min-h-screen flex flex-col font-archivo">
-  {{> header isHome=false}}
+    <main class="flex-grow flex items-stretch">
+      <div class="w-full max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2">
+        <!-- Left Content -->
+        <div class="w-[85%] mx-auto xl:pl-[15%] flex flex-col justify-start mt-10 bg-primary">
+          <!-- Breadcrumb -->
+          <nav
+            class="text-white text-sm mb-10 flex items-center gap-2"
+            data-aos="fade-up"
+          >
+            <a
+              href="/"
+              class="hover:text-secondary transition-colors"
+              >Trang chủ</a
+            >
+            <svg
+              class="w-2.5 h-2.5 inline-block fill-current opacity-80"
+              viewBox="0 0 35 35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5797 31.4214C11.1695 31.0111 10.9391 30.4548 10.9391 29.8747C10.9391 29.2946 11.1695 28.7383 11.5797 28.3281L22.4078 17.5L11.5797 6.67184C11.1937 6.25726 10.9836 5.70915 10.9936 5.14283C11.0036 4.5765 11.2328 4.03612 11.6331 3.63539C12.0334 3.23465 12.5735 3.0048 13.1399 2.99421C13.7062 2.98361 14.2545 3.1931 14.6695 3.57858L27.046 15.9516C27.4561 16.3618 27.6865 16.9182 27.6865 17.4983C27.6865 18.0783 27.4561 18.6347 27.046 19.0449L14.6729 31.4214C14.2627 31.8315 13.7064 32.0619 13.1263 32.0619C12.5462 32.0619 11.9899 31.8315 11.5797 31.4214Z"
+                fill="currentColor"
+              />
+            </svg>
+            <span class="text-[#FFFAF3]">Liên hệ</span>
+          </nav>
 
-  <main class="flex-grow flex items-stretch">
-    <div class="w-full max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2">
-      <!-- Left Content -->
-      <div class="w-[85%] mx-auto xl:pl-[10%] py-16 flex flex-col justify-center bg-primary">
-        <!-- Breadcrumb -->
-        <nav class="text-[#FFFAF3]/60 text-sm mb-12 flex items-center gap-2" data-aos="fade-up">
-           <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
-           <span class="text-xs">&gt;</span>
-           <span class="text-[#FFFAF3]">Liên hệ</span>
-        </nav>
-
-        <!-- Contact Methods -->
-        <div class="space-y-6 mb-12" data-aos="fade-up" data-aos-delay="100">
-          <div class="flex items-center gap-5">
-            <div class="w-14 h-14 rounded-full bg-[#3D3E39] flex items-center justify-center flex-shrink-0">
-               <img src="/src/assets/images/phone-call.svg" alt="Phone" class="w-6 h-6 brightness-0 invert">
+          <!-- Contact Methods -->
+          <div
+            class="space-y-6 mb-12"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flex items-center gap-5">
+              <div class="w-16 h-16 rounded-full bg-[#3D3E39] flex items-center justify-center flex-shrink-0">
+                <img
+                  src="/src/assets/images/phone-call.svg"
+                  alt="Phone"
+                  class="w-6 h-6 brightness-0 invert"
+                />
+              </div>
+              <div class="flex flex-col">
+                <span class="text-white text-base">Đặt hàng ngay</span>
+                <span class="text-white text-lg lg:text-xl font-semibold">Hotline: 0966 55 8808</span>
+              </div>
             </div>
-            <div class="flex flex-col">
-              <span class="text-[#FFFAF3]/60 text-sm">Đặt hàng ngay</span>
-              <span class="text-white text-lg lg:text-xl font-bold tracking-wide">Hotline: 0966 55 8808</span>
+
+            <div class="flex items-center gap-5">
+              <div class="w-16 h-16 rounded-full bg-[#3D3E39] flex items-center justify-center flex-shrink-0">
+                <img
+                  src="/src/assets/images/zalo2.png"
+                  alt="Zalo"
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+              </div>
+              <div>
+                <span class="text-white text-lg lg:text-xl font-semibold">Chat với chúng tôi</span>
+              </div>
             </div>
           </div>
-          
-          <div class="flex items-center gap-5">
-            <div class="w-14 h-14 rounded-full bg-[#3D3E39] flex items-center justify-center flex-shrink-0">
-               <img src="/src/assets/images/zalo2.png" alt="Zalo" class="w-9 h-9 rounded-full object-cover">
-            </div>
-            <div>
-              <span class="text-white text-lg lg:text-xl font-bold tracking-wide">Chat với chúng tôi</span>
-            </div>
+
+          <!-- Form Section -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="max-w-[580px]"
+          >
+            <h1 class="text-[#EFE4DE] text-2xl lg:text-[32px] mb-8 leading-[1.2] font-semibold">
+              Hãy nói với chúng tôi <br />
+              những mong muốn của bạn
+            </h1>
+
+            <form
+              action="#"
+              class="space-y-8"
+            >
+              <div class="input-group">
+                <label class="block text-[#EFE4DE] text-base mb-1 font-medium">Họ và tên</label>
+                <input
+                  type="text"
+                  placeholder="Nhập họ và tên của bạn"
+                  class="contact-input w-full font-light bg-transparent border-b border-[#EFE4DE] py-3 text-white focus:outline-none focus:border-secondary transition-colors text-sm"
+                />
+              </div>
+
+              <div class="input-group">
+                <label class="block text-[#EFE4DE] text-base mb-1 font-medium">Email</label>
+                <input
+                  type="email"
+                  placeholder="Nhập thông tin email của bạn"
+                  class="contact-input w-full font-light bg-transparent border-b border-[#EFE4DE] py-3 text-white focus:outline-none focus:border-secondary transition-colors text-sm"
+                />
+              </div>
+
+              <div class="input-group">
+                <label class="block text-[#EFE4DE] text-base mb-1 font-medium">Số điện thoại</label>
+                <input
+                  type="tel"
+                  placeholder="Nhập số điện thoại của bạn"
+                  class="contact-input w-full font-light bg-transparent border-b border-[#EFE4DE] py-3 text-white focus:outline-none focus:border-secondary transition-colors text-sm"
+                />
+              </div>
+
+              <div class="input-group">
+                <label class="block text-[#EFE4DE] text-base mb-1 font-medium">Nội dung</label>
+                <input
+                  type="text"
+                  placeholder="Nhập nội dung bất kì"
+                  class="contact-input w-full font-light bg-transparent border-b border-[#EFE4DE] py-3 text-white focus:outline-none focus:border-secondary transition-colors text-sm"
+                />
+              </div>
+
+              <div class="pt-6">
+                <button
+                  type="submit"
+                  class="w-full px-20 py-4 border border-[#EFE4DE] text-[#FFFAF3] text-sm uppercase hover:bg-secondary hover:border-secondary hover:text-white transition-all duration-300 rounded-sm"
+                >
+                  GỬI THÔNG TIN
+                </button>
+              </div>
+            </form>
           </div>
         </div>
 
-        <!-- Form Section -->
-        <div data-aos="fade-up" data-aos-delay="200" class="max-w-[580px]">
-           <h1 class="text-white text-2xl lg:text-[32px] mb-8 leading-[1.2]">Hãy nói với chúng tôi <br> những mong muốn của bạn</h1>
-           
-           <form action="#" class="space-y-8">
-             <div class="input-group">
-                <label class="block text-[#FFFAF3] text-base mb-1">Họ và tên</label>
-                <input type="text" placeholder="Nhập họ và tên của bạn" class="contact-input w-full bg-transparent border-b border-[#FFFAF3]/20 py-3 text-white focus:outline-none focus:border-secondary transition-colors text-sm">
-             </div>
-
-             <div class="input-group">
-                <label class="block text-[#FFFAF3] text-base mb-1">Email</label>
-                <input type="email" placeholder="Nhập thông tin email của bạn" class="contact-input w-full bg-transparent border-b border-[#FFFAF3]/20 py-3 text-white focus:outline-none focus:border-secondary transition-colors text-sm">
-             </div>
-
-             <div class="input-group">
-                <label class="block text-[#FFFAF3] text-base mb-1">Số điện thoại</label>
-                <input type="tel" placeholder="Nhập số điện thoại của bạn" class="contact-input w-full bg-transparent border-b border-[#FFFAF3]/20 py-3 text-white focus:outline-none focus:border-secondary transition-colors text-sm">
-             </div>
-
-             <div class="input-group">
-                <label class="block text-[#FFFAF3] text-base mb-1">Nội dung</label>
-                <input type="text" placeholder="Nhập nội dung bất kì" class="contact-input w-full bg-transparent border-b border-[#FFFAF3]/20 py-3 text-white focus:outline-none focus:border-secondary transition-colors text-sm">
-             </div>
-
-             <div class="pt-6">
-               <button type="submit" class="w-full px-20 py-4 border border-[#FFFAF3]/30 text-[#FFFAF3] text-sm font-bold tracking-[0.2em] uppercase hover:bg-secondary hover:border-secondary hover:text-white transition-all duration-300 rounded-sm">
-                 GỬI THÔNG TIN
-               </button>
-             </div>
-           </form>
+        <!-- Right Image (Map) -->
+        <div
+          class="relative h-[500px] lg:h-auto overflow-hidden bg-gray-900 mt-10"
+          data-aos="fade-left"
+        >
+          <img
+            src="/src/assets/images/contact-map.png"
+            alt="Contact Map"
+            class="w-full h-full object-cover object-center"
+          />
         </div>
       </div>
+    </main>
 
-      <!-- Right Image (Map) -->
-      <div class="relative h-[500px] lg:h-auto overflow-hidden bg-gray-900" data-aos="fade-left">
-        <img src="/src/assets/images/contact-map.png" alt="Contact Map" class="w-full h-full object-cover object-center">
-      </div>
-    </div>
-  </main>
+    {{> footer hideNewsletter=true}}
 
-  {{> footer hideNewsletter=true}}
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script type="module" src="/src/js/main.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100,
-    });
-  </script>
-</body>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      type="module"
+      src="/src/js/main.js"
+    ></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+    </script>
+  </body>
 </html>
