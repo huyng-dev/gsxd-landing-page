@@ -1,15 +1,13 @@
 <section
   class="w-full pb-16 lg:pb-20 bg-background-secondary"
   data-aos="fade-up"
+  data-quantity-calculator
 >
   <div class="w-[85%] max-w-[1320px] mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-start">
-      
       <!-- Left: Dimensions/Image -->
       <div class="flex flex-col items-center">
-        <h2 class="text-2xl md:text-3xl font-semibold text-secondary mb-12 uppercase text-center">
-          KÍCH THƯỚC
-        </h2>
+        <h2 class="text-2xl md:text-3xl font-semibold text-secondary mb-12 uppercase text-center">KÍCH THƯỚC</h2>
         <div class="w-full max-w-[500px] flex justify-center">
           <img
             src="{{#if image}}{{image}}{{else}}/src/assets/images/gtt-size.png{{/if}}"
@@ -21,36 +19,37 @@
 
       <!-- Right: Calculator Form -->
       <div class="flex flex-col">
-        <h2 class="text-2xl md:text-3xl font-semibold text-secondary mb-12 uppercase text-left lg:text-center">
-          CÁCH TÍNH KHỐI LƯỢNG
-        </h2>
+        <h2 class="text-2xl md:text-3xl font-semibold text-secondary mb-12 uppercase text-left lg:text-center">CÁCH TÍNH KHỐI LƯỢNG</h2>
 
-        <div class="space-y-8">
+        <div class="space-y-6">
           <!-- Area 1 -->
-          <div class="flex flex-col md:flex-row gap-6 items-end">
+          <div
+            class="flex flex-col md:flex-row gap-6 items-end"
+            data-area-block
+          >
             <div class="w-full md:w-[120px] shrink-0 pb-1">
-              <span class="font-bold text-primary uppercase text-base tracking-widest">DIỆN TÍCH 1</span>
+              <span class="font-semibold text-primary uppercase text-base">DIỆN TÍCH 1</span>
             </div>
             <div class="flex-1 w-full grid grid-cols-5 gap-6 items-end">
-              <hr>
+              <hr />
               <div class="flex flex-col gap-2 col-span-2">
-                <label class="text-[16px] uppercase font-bold text-primary tracking-widest text-center">CHIỀU DÀI</label>
+                <label class="text-[16px] uppercase font-semibold text-primary text-center mb-2">CHIỀU DÀI</label>
                 <div class="relative">
                   <input
                     type="text"
                     placeholder="00"
-                    class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-right pr-8 focus:border-secondary outline-none transition-colors"
+                    class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-8 focus:border-secondary outline-none transition-colors"
                   />
                   <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[12px] text-primary/40">m</span>
                 </div>
               </div>
               <div class="flex flex-col gap-2 col-span-2">
-                <label class="text-[16px] uppercase font-bold text-primary tracking-widest text-center">CHIỀU RỘNG</label>
+                <label class="text-[16px] uppercase font-semibold text-primary text-center mb-2">CHIỀU RỘNG</label>
                 <div class="relative">
                   <input
                     type="text"
                     placeholder="00"
-                    class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-right pr-8 focus:border-secondary outline-none transition-colors"
+                    class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-8 focus:border-secondary outline-none transition-colors"
                   />
                   <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[12px] text-primary/40">m</span>
                 </div>
@@ -59,18 +58,26 @@
           </div>
 
           <!-- Area 2 (Optional/Removable) -->
-          <div class="flex flex-col md:flex-row gap-6 items-end">
-            <div class="w-full md:w-[120px] shrink-0 pb-1 flex flex-col">
-              <span class="font-bold text-primary uppercase text-base tracking-widest">DIỆN TÍCH 2</span>
-              <button class="text-[14px] text-secondary underline text-center font-bold opacity-80 hover:opacity-100 transition-opacity">Loại bỏ</button>
+          <div
+            class="flex flex-col md:flex-row gap-6 items-end"
+            data-area-block
+          >
+            <div class="w-full md:w-[120px] shrink-0 pb-1 flex flex-col mt-2">
+              <span class="font-semibold text-primary uppercase text-base">DIỆN TÍCH 2</span>
+              <button
+                data-remove-area
+                class="text-[14px] text-secondary underline text-start ml-4 font-medium opacity-80 hover:opacity-100 transition-opacity"
+              >
+                Loại bỏ
+              </button>
             </div>
             <div class="flex-1 w-full grid grid-cols-5 gap-6 items-end">
-              <hr>
+              <hr />
               <div class="relative col-span-2">
                 <input
                   type="text"
                   placeholder="00"
-                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-right pr-8 focus:border-secondary outline-none transition-colors"
+                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-8 focus:border-secondary outline-none transition-colors"
                 />
                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[12px] text-primary/40">m</span>
               </div>
@@ -78,7 +85,7 @@
                 <input
                   type="text"
                   placeholder="00"
-                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-right pr-8 focus:border-secondary outline-none transition-colors"
+                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-8 focus:border-secondary outline-none transition-colors"
                 />
                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[12px] text-primary/40">m</span>
               </div>
@@ -86,10 +93,16 @@
           </div>
 
           <div class="text-center">
-            <button class="text-secondary font-bold text-sm underline hover:opacity-80 transition-opacity">+ Thêm diện tích</button>
+            <button
+              data-add-area
+              class="text-secondary font-semibold text-sm underline hover:opacity-80 transition-opacity"
+            >
+              + Thêm diện tích
+            </button>
           </div>
 
           <button
+            data-calculate-quantity
             class="w-full py-4 bg-[#C16A00] hover:bg-secondary text-white text-sm font-bold uppercase tracking-widest rounded-sm shadow-md transition-all duration-300"
           >
             TÍNH TOÁN KHỐI LƯỢNG
@@ -98,57 +111,75 @@
           <!-- Results Section (Grid Layout) -->
           <div class="pt-8 border-t border-black/10">
             <div class="grid grid-cols-5 gap-y-4 items-start">
-              
               <!-- Row 1: Header Titles -->
               <div class="col-span-4">
-                <h4 class="font-bold text-primary uppercase text-xl md:text-2xl tracking-tight leading-none">KẾT QUẢ</h4>
+                <h4 class="font-semibold text-primary uppercase text-lg md:text-xl">KẾT QUẢ</h4>
               </div>
               <div class="text-right">
-                <span class="text-xl md:text-2xl font-bold text-primary leading-none">{{#if totalArea}}{{totalArea}}{{else}}00{{/if}} m²</span>
+                <span
+                  data-total-area-output
+                  class="text-xl md:text-2xl font-bold text-primary leading-none"
+                  >{{#if totalArea}}{{totalArea}}{{else}}00{{/if}} m²</span
+                >
               </div>
 
               {{#if showInfo}}
-                <!-- Row 2: Note and Column Headers -->
-                <div class="col-span-3">
-                  <p class="text-[12px] md:text-[13px] italic text-primary/80 leading-snug">
-                    {{#if areaNote}}{{areaNote}}{{else}}Diện tích được làm tròn lên đến m² gần nhất.{{/if}}
-                  </p>
-                </div>
-                <div class="text-center">
-                  <span class="text-base font-bold text-primary tracking-wider">Định mức</span>
-                </div>
-                <div class="invisible md:visible"></div>
+              <!-- Row 2: Note and Column Headers -->
+              <div class="col-span-3">
+                <p class="text-[12px] md:text-[14px] italic text-primary font-light">
+                  {{#if areaNote}}{{areaNote}}{{else}}Diện tích được làm tròn lên đến m² gần nhất.{{/if}}
+                </p>
+              </div>
+              <div class="text-center">
+                <span class="text-base font-bold text-primary tracking-wider">Định mức</span>
+              </div>
+              <div class="invisible md:visible"></div>
 
-                <!-- Row 3: Product Data 1 -->
-                <div class="col-span-3 py-1">
-                  <span class="text-primary text-base">{{#if label1}}{{label1}}{{else}}Gạch{{/if}}</span>
-                </div>
-                <div class="text-center py-1">
-                  <span class="text-primary text-base leading-none">{{#if rate1}}{{rate1}}{{else}}-- viên/m²{{/if}}</span>
-                </div>
-                <div class="text-right py-1">
-                  <span class="text-primary font-bold text-base leading-none">{{#if value1}}{{value1}}{{else}}00 viên{{/if}}</span>
-                </div>
+              <!-- Row 3: Product Data 1 -->
+              <div class="col-span-3 py-1">
+                <span class="text-primary text-base">{{#if label1}}{{label1}}{{else}}Gạch{{/if}}</span>
+              </div>
+              <div class="text-center py-1">
+                <span
+                  data-rate-output
+                  class="text-primary text-base leading-none"
+                  >{{#if rate1}}{{rate1}}{{else}}-- viên/m²{{/if}}</span
+                >
+              </div>
+              <div class="text-right py-1">
+                <span
+                  data-value-output
+                  class="text-primary font-bold text-base leading-none"
+                  >{{#if value1}}{{value1}}{{else}}00 viên{{/if}}</span
+                >
+              </div>
 
-                <!-- Row 4: Product Data 2 (Optional) -->
-                {{#if label2}}
-                <div class="col-span-3 py-1">
-                  <span class="text-primary text-base">{{#if label2}}{{label2}}{{else}}Gạch{{/if}}</span>
-                </div>
-                <div class="text-center py-1">
-                   <span class="text-primary text-base leading-none">{{#if rate2}}{{rate2}}{{else}}-- viên/m²{{/if}}</span>
-                </div>
-                <div class="text-right py-1">
-                  <span class="text-primary font-bold text-base leading-none">{{#if value2}}{{value2}}{{else}}00 viên{{/if}}</span>
-                </div>
-                {{/if}}
-              {{else}}
-                <!-- Default if showInfo is false: Just the note -->
-                <div class="col-span-5">
-                   <p class="text-[12px] italic text-primary/80">
-                     {{#if areaNote}}{{areaNote}}{{else}}Diện tích được làm tròn lên đến m² gần nhất.{{/if}}
-                   </p>
-                </div>
+              <!-- Row 4: Product Data 2 (Optional) -->
+              {{#if label2}}
+              <div class="col-span-3 py-1">
+                <span class="text-primary text-base">{{#if label2}}{{label2}}{{else}}Gạch{{/if}}</span>
+              </div>
+              <div class="text-center py-1">
+                <span
+                  data-rate-output
+                  class="text-primary text-base leading-none"
+                  >{{#if rate2}}{{rate2}}{{else}}-- viên/m²{{/if}}</span
+                >
+              </div>
+              <div class="text-right py-1">
+                <span
+                  data-value-output
+                  class="text-primary font-bold text-base leading-none"
+                  >{{#if value2}}{{value2}}{{else}}00 viên{{/if}}</span
+                >
+              </div>
+              {{/if}} {{else}}
+              <!-- Default if showInfo is false: Just the note -->
+              <div class="col-span-5">
+                <p class="text-[12px] italic text-primary/80">
+                  {{#if areaNote}}{{areaNote}}{{else}}Diện tích được làm tròn lên đến m² gần nhất.{{/if}}
+                </p>
+              </div>
               {{/if}}
             </div>
           </div>
@@ -164,7 +195,9 @@
               for="extra-loss-quantity"
               class="w-fit text-[15px] font-medium text-primary/80 cursor-pointer flex items-center gap-3 select-none peer-checked:[&_.loss-checkbox-box]:border-secondary peer-checked:[&_.loss-checkbox-box]:bg-secondary peer-checked:[&_.loss-checkbox-icon]:opacity-100 peer-focus-visible:[&_.loss-checkbox-box]:ring-2 peer-focus-visible:[&_.loss-checkbox-box]:ring-secondary/40 peer-focus-visible:[&_.loss-checkbox-box]:ring-offset-1"
             >
-              <span class="loss-checkbox-box relative flex h-5 w-5 items-center justify-center border border-black/20 rounded-none bg-transparent transition-all">
+              <span
+                class="loss-checkbox-box relative flex h-5 w-5 items-center justify-center border border-black/20 rounded-none bg-transparent transition-all"
+              >
                 <svg
                   class="loss-checkbox-icon h-3 w-3 text-white opacity-0 transition-opacity"
                   viewBox="0 0 20 20"
@@ -172,12 +205,19 @@
                   stroke="currentColor"
                   stroke-width="2.5"
                 >
-                  <path d="M4 10.5L8 14.5L16 6.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M4 10.5L8 14.5L16 6.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
                 </svg>
               </span>
               <span class="flex items-center gap-2">
                 Cộng thêm hao hụt
-                <span class="w-5 h-5 rounded-full border border-primary/40 text-primary/60 flex items-center justify-center text-[10px] font-bold">?</span>
+                <span
+                  class="w-5 h-5 rounded-full border border-primary/40 text-primary/60 flex items-center justify-center text-[10px] font-bold"
+                  >?</span
+                >
               </span>
             </label>
 

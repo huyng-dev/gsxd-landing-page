@@ -54,7 +54,17 @@
               class="hover:text-white transition-colors"
               >Trang chủ</a
             >
-            <svg class="w-2.5 h-2.5 inline-block mx-2 fill-current opacity-80" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5797 31.4214C11.1695 31.0111 10.9391 30.4548 10.9391 29.8747C10.9391 29.2946 11.1695 28.7383 11.5797 28.3281L22.4078 17.5L11.5797 6.67184C11.1937 6.25726 10.9836 5.70915 10.9936 5.14283C11.0036 4.5765 11.2328 4.03612 11.6331 3.63539C12.0334 3.23465 12.5735 3.0048 13.1399 2.99421C13.7062 2.98361 14.2545 3.1931 14.6695 3.57858L27.046 15.9516C27.4561 16.3618 27.6865 16.9182 27.6865 17.4983C27.6865 18.0783 27.4561 18.6347 27.046 19.0449L14.6729 31.4214C14.2627 31.8315 13.7064 32.0619 13.1263 32.0619C12.5462 32.0619 11.9899 31.8315 11.5797 31.4214Z" fill="currentColor"/></svg>
+            <svg
+              class="w-2.5 h-2.5 inline-block mx-2 fill-current opacity-80"
+              viewBox="0 0 35 35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5797 31.4214C11.1695 31.0111 10.9391 30.4548 10.9391 29.8747C10.9391 29.2946 11.1695 28.7383 11.5797 28.3281L22.4078 17.5L11.5797 6.67184C11.1937 6.25726 10.9836 5.70915 10.9936 5.14283C11.0036 4.5765 11.2328 4.03612 11.6331 3.63539C12.0334 3.23465 12.5735 3.0048 13.1399 2.99421C13.7062 2.98361 14.2545 3.1931 14.6695 3.57858L27.046 15.9516C27.4561 16.3618 27.6865 16.9182 27.6865 17.4983C27.6865 18.0783 27.4561 18.6347 27.046 19.0449L14.6729 31.4214C14.2627 31.8315 13.7064 32.0619 13.1263 32.0619C12.5462 32.0619 11.9899 31.8315 11.5797 31.4214Z"
+                fill="currentColor"
+              />
+            </svg>
             <a
               href="/products/gach-trang-tri/"
               class="hover:text-white transition-colors"
@@ -64,7 +74,7 @@
         </div>
       </section>
 
-            <!-- Sub Breadcrumb -->
+      <!-- Sub Breadcrumb -->
       <div class="w-[85%] max-w-[1320px] mx-auto py-8">
         <p class="font-semibold text-primary/60 uppercase text-[14px] md:text-base">
           <a
@@ -91,7 +101,7 @@
           <!-- Main Image -->
           <div class="w-full aspect-square bg-[#FBF9F7] flex items-center justify-center shadow-lg relative overflow-hidden group">
             <img
-              src="/src/assets/images/am-duong-detail.png" 
+              src="/src/assets/images/am-duong-detail.png"
               alt="Gạch Trang Trí 27 Xanh Đồng"
               class="object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
             />
@@ -109,9 +119,9 @@
 
         <!-- Right: Info -->
         <div class="flex flex-col lg:col-span-2">
-          <div class="flex items-center gap-4 mb-8 text-[15px] font-bold">
-            <span class="text-primary/70 uppercase">Mã SP</span>
-            <span class="text-primary font-extrabold uppercase">THC 100-GDS</span>
+          <div class="flex items-center gap-4 mb-8 text-[16px]">
+            <span class="text-primary">Mã SP</span>
+            <span class="text-primary font-semibold">THC 100-GDS</span>
           </div>
 
           <h2 class="text-xl md:text-2xl lg:text-[32px] font-semibold text-secondary uppercase !leading-normal mb-14 pb-1 tracking-tight">
@@ -187,17 +197,10 @@
         </div>
       </section>
 
-      {{> products/quantity-calculator image="/src/assets/images/gtt-size.png"}}
-
-      {{> products/fabrication-process}}
-      {{> products/journey-video hideTitle=true}}
-      {{> products/trang-tri-process}}
+      {{> products/quantity-calculator image="/src/assets/images/gtt-size.png"}} {{> products/fabrication-process}} {{>
+      products/journey-video hideTitle=true}} {{> products/trang-tri-process}}
       <hr class="mb-16" />
-      {{> products/works-simple showNav=true}}
-      {{> products/recommendations showDecor=true}}
-      {{> products/faq2}}
-
-
+      {{> products/works-simple showNav=true}} {{> products/recommendations showDecor=true}} {{> products/faq2}}
     </main>
 
     {{> footer hideNewsletter=true}}
@@ -209,94 +212,102 @@
     ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener("DOMContentLoaded", () => {
         // Initialize AOS
         AOS.init({ duration: 800, once: true, offset: 100 });
 
         // Initialize Fabrication Slider
-        new Swiper('.fabrication-slider', {
-            slidesPerView: 1.2,
-            spaceBetween: 20,
-            centeredSlides: true,
-            loop: true,
-            pagination: {
-                el: '.fabrication-pagination',
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>';
-                }
+        new Swiper(".fabrication-slider", {
+          slidesPerView: 1.2,
+          spaceBetween: 20,
+          centeredSlides: true,
+          loop: true,
+          pagination: {
+            el: ".fabrication-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+              return (
+                '<span class="' +
+                className +
+                ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
+              );
             },
-            navigation: {
-                nextEl: '.fabrication-next',
-                prevEl: '.fabrication-prev',
+          },
+          navigation: {
+            nextEl: ".fabrication-next",
+            prevEl: ".fabrication-prev",
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+              centeredSlides: false,
             },
-            breakpoints: {
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                    centeredSlides: false,
-                },
-                1280: {
-                    slidesPerView: 4,
-                    spaceBetween: 80,
-                    centeredSlides: true,
-                }
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 80,
+              centeredSlides: true,
             },
-            on: {
-                init: function() {
-                    setTimeout(() => {
-                        if (typeof AOS !== 'undefined') AOS.refresh();
-                    }, 500);
-                }
-            }
+          },
+          on: {
+            init: function () {
+              setTimeout(() => {
+                if (typeof AOS !== "undefined") AOS.refresh();
+              }, 500);
+            },
+          },
         });
 
         // Initialize Projects Slider
-        new Swiper('.projects-slider', {
-            slidesPerView: 1.2,
-            spaceBetween: 20,
-            centeredSlides: true,
-            loop: true,
-            pagination: {
-                el: '.projects-pagination',
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>';
-                }
+        new Swiper(".projects-slider", {
+          slidesPerView: 1.2,
+          spaceBetween: 20,
+          centeredSlides: true,
+          loop: true,
+          pagination: {
+            el: ".projects-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+              return (
+                '<span class="' +
+                className +
+                ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
+              );
             },
-            navigation: {
-                nextEl: '.projects-next',
-                prevEl: '.projects-prev',
+          },
+          navigation: {
+            nextEl: ".projects-next",
+            prevEl: ".projects-prev",
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+              centeredSlides: false,
             },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                    centeredSlides: false,
-                },
-                1024: {
-                    slidesPerView: 2,
-                    slidesOffsetBefore: 0,
-                    spaceBetween: 60,
-                    centeredSlides: true,
-                },
-                1440: {
-                    slidesPerView: 2.1,
-                    spaceBetween: 80,
-                    centeredSlides: true,
-                }
+            1024: {
+              slidesPerView: 2,
+              slidesOffsetBefore: 0,
+              spaceBetween: 60,
+              centeredSlides: true,
             },
-            on: {
-                init: function() {
-                    setTimeout(() => {
-                        AOS.refresh();
-                    }, 500);
-                }
-            }
+            1440: {
+              slidesPerView: 2.1,
+              spaceBetween: 80,
+              centeredSlides: true,
+            },
+          },
+          on: {
+            init: function () {
+              setTimeout(() => {
+                AOS.refresh();
+              }, 500);
+            },
+          },
         });
 
         // Add bullet style
-        const style = document.createElement('style');
+        const style = document.createElement("style");
         style.innerHTML = `
             .fabrication-pagination .swiper-pagination-bullet-active,
             .projects-pagination .swiper-pagination-bullet-active {
