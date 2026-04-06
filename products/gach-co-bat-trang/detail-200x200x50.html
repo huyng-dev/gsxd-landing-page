@@ -89,11 +89,11 @@
         <!-- Left: Images -->
         <div class="flex flex-col gap-5 lg:col-span-3">
           <!-- Main Image -->
-          <div class="w-full aspect-square bg-[#FBF9F7] flex items-center justify-center shadow-lg relative overflow-hidden group">
+          <div class="w-full aspect-square shadow-lg relative overflow-hidden group">
             <img
               src="/src/assets/images/gach-bat-detail-1.png" 
               alt="Gạch bát 300x300x50"
-              class="object-cover transition-transform duration-500 group-hover:scale-110"
+              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
             />
           </div>
           <!-- Thumbnails -->
@@ -219,33 +219,34 @@
         AOS.init({ duration: 800, once: true, offset: 100 });
 
         // Initialize Fabrication Slider
+        const fabricationRoot = document.querySelector('.fabrication-slider')?.closest('.group') || document;
+        const fabricationNextEl = fabricationRoot.querySelector('.fabrication-next');
+        const fabricationPrevEl = fabricationRoot.querySelector('.fabrication-prev');
+        const fabricationPaginationEl = fabricationRoot.querySelector('.fabrication-pagination');
+
         new Swiper('.fabrication-slider', {
-            slidesPerView: 1.2,
+            slidesPerView: 'auto',
             spaceBetween: 20,
             centeredSlides: true,
             loop: true,
             pagination: {
-                el: '.fabrication-pagination',
+            el: fabricationPaginationEl,
                 clickable: true,
                 renderBullet: function (index, className) {
                     return '<span class="' + className + ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>';
                 }
             },
             navigation: {
-                nextEl: '.fabrication-next',
-                prevEl: '.fabrication-prev',
+            nextEl: fabricationNextEl,
+            prevEl: fabricationPrevEl,
             },
             breakpoints: {
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                    centeredSlides: false,
-                },
-                1280: {
-                    slidesPerView: 4,
-                    spaceBetween: 80,
-                    centeredSlides: true,
-                }
+              768: {
+                spaceBetween: 40,
+              },
+              1280: {
+                spaceBetween: 80,
+              }
             },
             on: {
                 init: function() {
