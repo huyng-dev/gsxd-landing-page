@@ -29,6 +29,10 @@
       href="https://unpkg.com/aos@2.3.1/dist/aos.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
   </head>
   <body class="min-h-screen flex flex-col bg-background-secondary">
     {{> header}}
@@ -97,6 +101,7 @@
       src="/src/js/main.js"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -104,6 +109,22 @@
         once: true,
         offset: 100,
       });
+
+      if (typeof GLightbox !== "undefined") {
+        // Use actual rendered img URLs so lightbox works with Vite asset hashing.
+        document.querySelectorAll(".glightbox").forEach((anchor) => {
+          const image = anchor.querySelector("img");
+          if (image) {
+            anchor.setAttribute("href", image.currentSrc || image.src);
+          }
+        });
+
+        GLightbox({
+          touchNavigation: true,
+          loop: true,
+          autoplayVideos: true,
+        });
+      }
     </script>
   </body>
 </html>
