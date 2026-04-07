@@ -105,3 +105,82 @@
     </div>
   </div>
 </section>
+
+<!-- Fabrication Lightbox -->
+<div id="fabrication-lightbox" class="fixed inset-0 z-[9999] pointer-events-none flex items-center justify-center bg-black/85 p-4 opacity-0 transition-opacity duration-300 ease-out">
+  <button
+    id="fabrication-lightbox-close"
+    type="button"
+    aria-label="Close image preview"
+    class="absolute right-4 top-4 md:right-6 md:top-6 text-white text-3xl leading-none hover:text-neutral-200 opacity-0 translate-y-2 transition-all duration-300 ease-out"
+  >
+    &times;
+  </button>
+  <img
+    id="fabrication-lightbox-image"
+    src=""
+    alt="Phóng to ảnh công đoạn chế tác"
+    class="max-w-[95vw] max-h-[90vh] object-contain opacity-0 scale-95 transition-all duration-300 ease-out will-change-transform"
+  />
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("fabrication-lightbox");
+    const lightboxImage = document.getElementById("fabrication-lightbox-image");
+    const closeButton = document.getElementById("fabrication-lightbox-close");
+
+    if (!lightbox || !lightboxImage || !closeButton) return;
+
+    const slideImages = document.querySelectorAll(".fabrication-slider .swiper-slide img");
+    if (!slideImages.length) return;
+
+    const closeLightbox = () => {
+      lightbox.classList.remove("opacity-100");
+      lightbox.classList.add("opacity-0");
+
+      closeButton.classList.add("opacity-0", "translate-y-2");
+      lightboxImage.classList.remove("opacity-100", "scale-100");
+      lightboxImage.classList.add("opacity-0", "scale-95");
+
+      document.body.classList.remove("overflow-hidden");
+
+      setTimeout(() => {
+        lightbox.classList.add("pointer-events-none");
+        lightboxImage.src = "";
+      }, 280);
+    };
+
+    slideImages.forEach((image) => {
+      image.classList.add("cursor-zoom-in");
+      image.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        lightboxImage.src = image.currentSrc || image.src;
+        lightbox.classList.remove("pointer-events-none", "opacity-0");
+        lightbox.classList.add("opacity-100");
+
+        requestAnimationFrame(() => {
+          closeButton.classList.remove("opacity-0", "translate-y-2");
+          lightboxImage.classList.remove("opacity-0", "scale-95");
+          lightboxImage.classList.add("opacity-100", "scale-100");
+        });
+
+        document.body.classList.add("overflow-hidden");
+      });
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox.classList.contains("opacity-100")) {
+        closeLightbox();
+      }
+    });
+  });
+</script>

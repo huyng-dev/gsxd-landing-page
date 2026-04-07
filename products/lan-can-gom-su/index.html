@@ -19,7 +19,7 @@
   
   <main class="flex-grow">
             <!-- Banner Section -->
-            <section class="relative h-[70vh] min-h-[500px] max-h-[740px] flex items-center justify-center text-white overflow-hidden">
+            <section class="relative h-[70vh] min-h-[500px] max-h-[740px] lg:h-[663px] flex items-center justify-center text-neutral-1 overflow-hidden">
                 <!-- Background Image -->
                 <div class="absolute inset-0 z-0">
                     <img
@@ -27,7 +27,23 @@
                         alt="About Banner"
                         class="w-full h-full object-cover"
                     />
-                    <div class="absolute inset-0 bg-black/65"></div>
+                    <div
+                        class="absolute inset-0"
+                        style="
+                            background:
+                                linear-gradient(
+                                    180deg,
+                                    rgba(0, 0, 0, 0) 16.89%,
+                                    rgba(21, 21, 21, 0.5) 75.07%,
+                                    rgba(0, 0, 0, 0.5) 99.72%
+                                ),
+                                linear-gradient(
+                                    0deg,
+                                    rgba(46, 47, 42, 0.59) 0%,
+                                    rgba(46, 47, 42, 0.59) 100%
+                                );
+                        "
+                    ></div>
                     <!-- Dark overlay -->
                 </div>
 
@@ -37,8 +53,8 @@
                     data-aos="fade-up"
                     data-aos-duration="1000"
                 >
-                    <h1 class="text-xl md:text-2xl font-semibold mb-4 uppercase text-white/90">GỐM SỨ THANH HẢI</h1>
-                    <h2 class="text-3xl md:text-5xl font-extrabold uppercase leading-tight drop-shadow-lg">
+                    <h1 class="text-xl md:text-2xl font-semibold mb-4 uppercase tracking-wide text-neutral-1">GỐM SỨ THANH HẢI</h1>
+                    <h2 class="text-[32px] md:text-[48px] font-archivo font-extrabold uppercase leading-[44px] md:leading-[65px] max-w-4xl text-neutral-1">
                         LAN CAN GỐM SỨ
                     </h2>
                 </div>

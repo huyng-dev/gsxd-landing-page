@@ -682,6 +682,14 @@
         <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
         <script>
             AOS.init({ duration: 800, once: true, offset: 100 });
+
+            // Ensure lightbox links use resolved build paths instead of /src/assets URLs.
+            document.querySelectorAll('.glightbox').forEach((anchor) => {
+                const image = anchor.querySelector('img');
+                if (image) {
+                    anchor.setAttribute('href', image.currentSrc || image.src);
+                }
+            });
             
             // Initialize GLightbox
             const lightbox = GLightbox({

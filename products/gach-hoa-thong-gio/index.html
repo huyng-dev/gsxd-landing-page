@@ -268,7 +268,9 @@
                             <div class="absolute top-0 left-0 w-full h-[70%] bg-[#1D78AD]"></div>
                             <!-- Image Container -->
                             <div class="absolute top-[20%] left-[18%] right-[18%] bottom-[-15%] shadow-lg bg-black/5 overflow-hidden">
-                                <img src="/src/assets/images/gach-hoa-value.png" alt="" class="w-full h-full object-cover">
+                                <a href="/src/assets/images/gach-hoa-value.png" class="glightbox group block w-full h-full cursor-zoom-in" data-gallery="gia-tri-vuot-troi">
+                                    <img src="/src/assets/images/gach-hoa-value.png" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.2]">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -294,7 +296,9 @@
                             <div class="absolute bottom-0 left-0 w-full h-[70%] bg-[#5A7E46]"></div>
                             <!-- Image Container -->
                             <div class="absolute bottom-[20%] left-[18%] right-[18%] top-[-15%] shadow-lg bg-black/5 overflow-hidden">
-                                <img src="/src/assets/images/work-03.jpg" alt="" class="w-full h-full object-cover">
+                                <a href="/src/assets/images/work-03.jpg" class="glightbox group block w-full h-full cursor-zoom-in" data-gallery="gia-tri-vuot-troi">
+                                    <img src="/src/assets/images/work-03.jpg" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.2]">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -308,7 +312,9 @@
                             <div class="absolute top-0 left-0 w-full h-[70%] bg-[#B28373]"></div>
                             <!-- Image Container -->
                             <div class="absolute top-[20%] left-[18%] right-[18%] bottom-[-15%] shadow-lg bg-black/5 overflow-hidden">
-                                <img src="/src/assets/images/value-01.png" alt="" class="w-full h-full object-cover">
+                                <a href="/src/assets/images/value-01.png" class="glightbox group block w-full h-full cursor-zoom-in" data-gallery="gia-tri-vuot-troi">
+                                    <img src="/src/assets/images/value-01.png" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.2]">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -376,6 +382,14 @@
                     `;
                     document.head.appendChild(style);
                 }
+            }
+        });
+
+        // Ensure lightbox links use resolved build paths instead of /src/assets URLs.
+        document.querySelectorAll('.glightbox').forEach((anchor) => {
+            const image = anchor.querySelector('img');
+            if (image) {
+                anchor.setAttribute('href', image.currentSrc || image.src);
             }
         });
 
