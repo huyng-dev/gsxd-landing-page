@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Về chúng tôi - Thanh Hải Ceramics</title>
-    <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/src/assets/css/main.css" />
     <link
@@ -322,15 +322,17 @@
             <!-- Section 4: Our Journey -->
             <div class="mt-16 md:mt-24 mb-16">
               <h3
-                class="text-2xl md:text-4xl font-bold text-center text-textPrimary md:mb-14 mb-12 uppercase tracking-normal"
+                class="relative z-20 text-2xl md:text-4xl font-bold text-center text-textPrimary mb-0 uppercase tracking-normal"
                 data-aos="fade-up"
               >
                 HÀNH TRÌNH CỦA CHÚNG TÔI
               </h3>
 
-              <div class="relative flex flex-col md:flex-row gap-8 md:gap-16">
+              <div
+                class="relative z-10 mt-[60px] mb-[60px] flex flex-col md:flex-row gap-8 md:gap-[148px]"
+              >
                 <div
-                  class="w-full md:w-1/2 flex flex-row md:flex-col overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none gap-8 md:gap-0 space-y-0 md:space-y-[50vh] py-8 md:py-[20vh] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                  class="w-full md:flex-1 min-w-0 flex flex-row md:flex-col overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none gap-8 md:gap-0 space-y-0 md:space-y-[50vh] py-8 md:py-[20vh] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
                 >
                   <div
                     class="timeline-item flex-shrink-0 w-full snap-center flex flex-col items-center justify-start md:justify-center text-center min-h-[30vh]"
@@ -527,10 +529,10 @@
                 </div>
 
                 <div
-                  class="hidden md:flex w-full md:w-1/2 sticky top-[120px] h-[calc(100vh-200px)] min-h-[500px] max-h-[800px] items-center justify-center lg:justify-end py-8"
+                  class="hidden md:flex w-full md:w-[565px] md:shrink-0 sticky top-[94px] h-[calc(100vh-94px)] items-start justify-end"
                 >
                   <div
-                    class="aspect-[3/4] w-full max-w-md lg:max-w-lg relative overflow-hidden shadow-2xl rounded-sm bg-gray-100"
+                    class="w-full h-full relative overflow-hidden shadow-2xl rounded-sm bg-gray-100"
                   >
                     <img
                       src="/src/assets/images/about-02.jpg"
@@ -570,7 +572,7 @@
             <!-- Section 5: Founders -->
             <div class="mt-16 md:mt-24 mb-16">
               <h3
-                class="text-2xl md:text-4xl font-bold text-center text-textPrimary mb-14 uppercase tracking-normal"
+                class="relative z-20 text-2xl md:text-4xl font-bold text-center text-textPrimary mb-14 uppercase tracking-normal"
                 data-aos="fade-up"
               >
                 NGƯỜI SÁNG LẬP
@@ -1176,59 +1178,13 @@
               if (targetId === "tab-introduction") {
                 // Use a small timeout to ensure DOM is updated
                 setTimeout(() => {
-                  if (awardsSwiper) awardsSwiper.update();
+                  window.dispatchEvent(new Event("awards:refresh"));
                   if (certificatesSwiper) certificatesSwiper.update();
                 }, 10);
               }
             }
           });
         });
-      });
-
-      // Awards Swiper
-      var awardsSwiper = new Swiper(".awards-swiper", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 1,
-        initialSlide: 1,
-        loop: true,
-        loopedSlides: 5,
-        coverflowEffect: {
-          rotate: 25,
-          stretch: -20,
-          depth: 60,
-          modifier: 1,
-          slideShadows: true,
-        },
-        navigation: {
-          nextEl: ".awards-next",
-          prevEl: ".awards-prev",
-        },
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 3,
-            coverflowEffect: {
-              stretch: -20,
-            },
-          },
-          1024: {
-            slidesPerView: 3,
-            coverflowEffect: {
-              stretch: -30,
-            },
-          },
-          1280: {
-            slidesPerView: 5,
-            coverflowEffect: {
-              stretch: -30,
-            },
-          },
-        },
       });
 
       // Certificates Swiper

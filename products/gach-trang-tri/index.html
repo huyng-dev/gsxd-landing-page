@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gạch Trang Trí - Thanh Hải Ceramics</title>
-  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.png">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
   </style>
@@ -16,6 +16,10 @@
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/src/assets/css/main.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+  >
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-page="products" class="min-h-screen flex flex-col bg-neutral-1">
@@ -150,77 +154,175 @@
     </section>
 
     <!-- Dấu ấn trên những công trình Section -->
-    <section class="max-w-[1320px] w-[85%] mx-auto" data-aos="fade-up">
+    <section class="max-w-[1320px] w-[85%] mx-auto overflow-x-hidden" data-aos="fade-up">
         <h2 class="font-archivo text-[24px] md:text-[32px] font-semibold uppercase text-secondary leading-[36px] md:leading-[45px] mb-6 md:mb-10 text-left">Dấu ấn trên những công trình</h2>
-        
-        <div class="flex h-[400px] md:h-[500px] lg:h-[600px] gap-2 md:gap-4 lg:gap-6 w-full">
-            
-            <!-- Item 1 -->
-            <div class="project-item active group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-[60px] [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
-                <img src="/src/assets/images/trang-tri-slide-01.jpg" alt="Công trình 1" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
-                <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
-                    <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
-                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
-                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
-                </div>
-            </div>
+        <style>
+          .project-showcase-swiper {
+            --project-side-width: 10%;
+            --project-center-width: 50%;
+            --project-height: 780px;
+            --project-radius: 80px;
+            width: 100%;
+            height: var(--project-height);
+            overflow: hidden;
+            touch-action: pan-y;
+          }
 
-            <!-- Item 2 -->
-            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-[60px] [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
-                <img src="/src/assets/images/trang-tri-slide-02.jpg" alt="Công trình 2" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
-                <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
-                    <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
-                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
-                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
-                </div>
-            </div>
+          .project-showcase-swiper .swiper-wrapper {
+            align-items: stretch;
+          }
 
-            <!-- Item 3 -->
-            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-[60px] [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
-                <img src="/src/assets/images/trang-tri-slide-01.jpg" alt="Công trình 3" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
-                <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
-                    <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
-                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
-                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
-                </div>
-            </div>
+          .project-showcase-swiper .swiper-slide {
+            width: var(--project-side-width) !important;
+            height: var(--project-height);
+            border-radius: var(--project-radius);
+            overflow: hidden;
+            flex-shrink: 0;
+            will-change: width;
+            transition:
+              width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+          }
 
-            <!-- Item 4 -->
-            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-[60px] [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
-                <img src="/src/assets/images/trang-tri-slide-04.jpg" alt="Công trình 4" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
-                <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
-                    <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
-                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
-                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
-                </div>
-            </div>
+          .project-showcase-swiper.is-dragging .swiper-slide {
+            transition: none !important;
+          }
 
-            <!-- Item 5 -->
-            <div class="project-item group relative cursor-pointer overflow-hidden transition-all duration-700 ease-in-out flex-[1] rounded-[60px] [&.active]:flex-[5] lg:[&.active]:flex-[6] [&.active]:rounded-[40px] md:[&.active]:rounded-[80px]" onmouseenter="setActiveProject(this)">
-                <img src="/src/assets/images/trang-tri-slide-03.jpg" alt="Công trình 5" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-[.active]:opacity-100"></div>
-                <div class="absolute bottom-8 md:bottom-16 left-6 md:left-20 text-white z-10 translate-y-4 opacity-0 transition-all duration-700 delay-100 group-[.active]:translate-y-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto pointer-events-none min-w-[130px] md:min-w-[400px]">
-                    <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
-                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
-                    <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
-                </div>
-            </div>
-            
-        </div>
+          .project-showcase-swiper .swiper-slide-active {
+            width: var(--project-center-width) !important;
+          }
 
-        <script>
-            function setActiveProject(clickedEl) {
-                const items = document.querySelectorAll('.project-item');
-                items.forEach(item => {
-                    item.classList.remove('active');
-                });
-                clickedEl.classList.add('active');
+          .project-showcase-swiper:not(.swiper-initialized) .swiper-slide:first-child {
+            width: var(--project-center-width) !important;
+          }
+
+          .project-showcase-swiper .project-overlay {
+            opacity: 0;
+            transition: opacity 0.7s ease;
+          }
+
+          .project-showcase-swiper .project-content {
+            left: 80px;
+            bottom: 65px;
+            opacity: 0;
+            transform: translateY(16px);
+            pointer-events: none;
+            transition: all 0.7s ease;
+          }
+
+          .project-showcase-swiper .swiper-slide-active .project-overlay {
+            opacity: 1;
+          }
+
+          .project-showcase-swiper .swiper-slide-active .project-content {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+          }
+
+          .project-showcase-swiper:not(.swiper-initialized) .swiper-slide:first-child .project-overlay {
+            opacity: 1;
+          }
+
+          .project-showcase-swiper:not(.swiper-initialized) .swiper-slide:first-child .project-content {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+          }
+
+          @media (max-width: 1023px) {
+            .project-showcase-swiper {
+              --project-side-width: min(76vw, 420px);
+              --project-center-width: min(76vw, 420px);
+              --project-height: 520px;
+              --project-radius: 42px;
             }
-        </script>
+
+            .project-showcase-swiper .swiper-slide {
+              width: var(--project-side-width) !important;
+              height: var(--project-height);
+              border-radius: var(--project-radius);
+            }
+
+            .project-showcase-swiper .project-content {
+              left: 28px;
+              bottom: 28px;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .project-showcase-swiper {
+              --project-side-width: min(82vw, 320px);
+              --project-center-width: min(82vw, 320px);
+              --project-height: 380px;
+              --project-radius: 30px;
+            }
+
+            .project-showcase-swiper .swiper-slide {
+              width: var(--project-side-width) !important;
+              height: var(--project-height);
+              border-radius: var(--project-radius);
+            }
+
+            .project-showcase-swiper .project-content {
+              left: 20px;
+              bottom: 20px;
+            }
+          }
+        </style>
+
+        <div class="swiper project-showcase-swiper w-full">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide project-item group relative cursor-pointer">
+              <img src="/src/assets/images/trang-tri-slide-01.jpg" alt="Công trình 1" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <div class="project-content absolute bottom-[65px] left-[80px] text-white z-10 min-w-[130px] md:min-w-[400px]">
+                <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
+                <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
+                <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide project-item group relative cursor-pointer">
+              <img src="/src/assets/images/trang-tri-slide-02.jpg" alt="Công trình 2" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <div class="project-content absolute bottom-[65px] left-[80px] text-white z-10 min-w-[130px] md:min-w-[400px]">
+                <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
+                <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
+                <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide project-item group relative cursor-pointer">
+              <img src="/src/assets/images/trang-tri-slide-01.jpg" alt="Công trình 3" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <div class="project-content absolute bottom-[65px] left-[80px] text-white z-10 min-w-[130px] md:min-w-[400px]">
+                <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
+                <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
+                <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide project-item group relative cursor-pointer">
+              <img src="/src/assets/images/trang-tri-slide-04.jpg" alt="Công trình 4" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <div class="project-content absolute bottom-[65px] left-[80px] text-white z-10 min-w-[130px] md:min-w-[400px]">
+                <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
+                <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
+                <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide project-item group relative cursor-pointer">
+              <img src="/src/assets/images/trang-tri-slide-03.jpg" alt="Công trình 5" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <div class="project-content absolute bottom-[65px] left-[80px] text-white z-10 min-w-[130px] md:min-w-[400px]">
+                <h3 class="font-bold text-base md:text-lg lg:text-xl mb-1 md:mb-2 leading-tight">CHÙA BÁI ĐÍNH</h3>
+                <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Địa điểm:</span> Ninh Bình</p>
+                <p class="text-xs md:text-sm lg:text-base"><span class="font-bold">Sản phẩm:</span> Ngói âm dương nâu đen</p>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
 
     <!-- FAQ Section -->
@@ -235,7 +337,86 @@
   {{> footer hideNewsletter=true}}
   
   <script type="module" src="/src/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 800, once: true, offset: 100 });</script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var projectShowcaseEl = document.querySelector(".project-showcase-swiper");
+      if (!projectShowcaseEl || typeof Swiper === "undefined") {
+        return;
+      }
+
+      var wrapperEl = projectShowcaseEl.querySelector(".swiper-wrapper");
+      if (!wrapperEl) {
+        return;
+      }
+
+      var originalSlides = Array.from(wrapperEl.children);
+      var targetSlideCount = 10;
+
+      if (originalSlides.length > 0 && originalSlides.length < targetSlideCount) {
+        var cloneIndex = 0;
+        while (wrapperEl.children.length < targetSlideCount) {
+          var sourceSlide = originalSlides[cloneIndex % originalSlides.length];
+          var cloneSlide = sourceSlide.cloneNode(true);
+          cloneSlide.setAttribute("data-fake-slide", "true");
+          wrapperEl.appendChild(cloneSlide);
+          cloneIndex += 1;
+        }
+      }
+
+      var finalSlideCount = wrapperEl.children.length;
+      var initialSlide = finalSlideCount > 2 ? 2 : 0;
+
+      new Swiper(projectShowcaseEl, {
+        slidesPerView: "auto",
+        slidesPerGroup: 1,
+        centeredSlides: true,
+        initialSlide: initialSlide,
+        slideToClickedSlide: true,
+        grabCursor: true,
+        watchSlidesProgress: true,
+        speed: 520,
+        loop: finalSlideCount >= 5,
+        spaceBetween: 33,
+        allowTouchMove: true,
+        threshold: 8,
+        longSwipesRatio: 0.15,
+        resistanceRatio: 0.85,
+        observer: true,
+        observeParents: true,
+        watchOverflow: false,
+        roundLengths: true,
+        breakpoints: {
+          0: {
+            spaceBetween: 12,
+          },
+          768: {
+            spaceBetween: 20,
+          },
+          1024: {
+            spaceBetween: 33,
+          },
+        },
+        on: {
+          sliderFirstMove: function () {
+            projectShowcaseEl.classList.add("is-dragging");
+          },
+          touchStart: function () {
+            projectShowcaseEl.classList.add("is-dragging");
+          },
+          touchEnd: function () {
+            window.setTimeout(function () {
+              projectShowcaseEl.classList.remove("is-dragging");
+            }, 80);
+          },
+          transitionEnd: function () {
+            projectShowcaseEl.classList.remove("is-dragging");
+          },
+        },
+      });
+    });
+  </script>
 </body>
 </html>

@@ -81,13 +81,6 @@
     background-color: #c76e00;
   }
 
-  /* Awards Swiper Slides - maintain 1:1.7 aspect ratio */
-  .awards-swiper .swiper-slide {
-    width: 341px;
-    aspect-ratio: 10 / 17;
-    height: auto !important;
-  }
-
   /* Product Card Hover Overlay */
   .product-card .product-overlay {
     position: absolute;
@@ -280,29 +273,6 @@
     transform: scale(1);
   }
 
-  /*
-	.awards-swiper .swiper-slide:has(+ .swiper-slide-prev) {
-		transform: translate3d(-3px, 0px, -120px) rotateX(0deg) rotateY(65deg)
-			scale(0.9) !important;
-	}
-	.awards-swiper .swiper-slide-prev {
-		transform: translate3d(-15px, 0px, -60px) rotateX(0deg) rotateY(40deg)
-			scale(1) !important;
-	}
-	.awards-swiper .swiper-slide-active {
-		transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg)
-			scale(1.1) !important;
-	}
-	.awards-swiper .swiper-slide-next {
-		transform: translate3d(15px, 0px, -60px) rotateX(0deg) rotateY(-40deg)
-			scale(1) !important;
-	}
-	.awards-swiper .swiper-slide-next + .swiper-slide {
-		transform: translate3d(3px, 0px, -120px) rotateX(0deg) rotateY(-65deg)
-			scale(0.9) !important;
-	}
-	*/
-  
 }
 
 @layer utilities {

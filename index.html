@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thanh Hải Ceramics - Ngói và Gạch Hoa Truyền Thống</title>
-  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -181,46 +181,6 @@
       window.addEventListener('resize', updateScrollbar);
       updateScrollbar();
     }
-
-    // Awards Swiper
-    const awardsSwiper = new Swiper('.awards-swiper', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      initialSlide: 1,
-      loop: true,
-      loopedSlides: 5,
-      coverflowEffect: {
-        rotate: 25,
-        stretch: -20,
-        depth: 60,
-        modifier: 1,
-        slideShadows: true
-      },
-      navigation: {
-        nextEl: '.awards-next',
-        prevEl: '.awards-prev',
-      },
-      autoplay: {
-        delay: 1000000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 3,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-        1280: {
-          slidesPerView: 5,
-          coverflowEffect: {
-            stretch: -30,
-          }
-        }
-      }
-    });
 
     // Showroom Dots Logic
     const showroomContainer = document.querySelector('.showroom-container');
