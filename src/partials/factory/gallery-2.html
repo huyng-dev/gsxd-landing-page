@@ -1,58 +1,140 @@
 <section class="bg-[#F5EDE7] pb-24 lg:pb-36 overflow-hidden">
-    <!-- Header row: Giữ nguyên để nút Nav thẳng hàng với lề phải tiêu chuẩn (1320px) -->
-    <div class="w-[85%] max-w-[1320px] mx-auto mb-8 flex justify-end">
-        <!-- Navigation Buttons -->
-        <div class="flex gap-4">
-            <button class="slider-final-prev w-10 h-10 md:w-12 md:h-12 border border-black/20 rounded-full flex items-center justify-center hover:bg-black/5 transition-all focus:outline-none">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M19 12H5M12 19l-7-7 7-7"/>
-                </svg>
-            </button>
-            <button class="slider-final-next w-10 h-10 md:w-12 md:h-12 border border-black/20 rounded-full flex items-center justify-center hover:bg-black/5 transition-all focus:outline-none">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-            </button>
-        </div>
+  <!-- Header row: Giữ nguyên để nút Nav thẳng hàng với lề phải tiêu chuẩn (1320px) -->
+  <div class="w-[85%] max-w-[1320px] mx-auto mb-8 flex justify-end">
+    <!-- Navigation Buttons -->
+    <div class="flex gap-4">
+      <button
+        class="slider-final-prev w-10 h-10 md:w-12 md:h-12 border border-black/20 rounded-full flex items-center justify-center hover:bg-black/5 transition-all focus:outline-none"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        class="slider-final-next w-10 h-10 md:w-12 md:h-12 border border-black/20 rounded-full flex items-center justify-center hover:bg-black/5 transition-all focus:outline-none"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
     </div>
+  </div>
 
-    <!-- Swiper Container: Mở rộng max-w lên 1920px nhưng giữ ML đồng nhất -->
-    <div class="ml-[7.5%] min-[1553px]:ml-[calc((100vw-1320px)/2)] lg:max-w-[1920px] overflow-hidden">
-        <div class="swiper slider-final-swiper overflow-visible">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide w-full md:w-[70%] lg:w-[80%]">
-                    <div class="aspect-[2/1] overflow-hidden shadow-lg bg-neutral-1">
-                        <img src="/src/assets/images/factory-04.jpg" alt="Phối cảnh" class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105">
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide w-full md:w-[70%] lg:w-[80%]">
-                    <div class="aspect-[2/1] overflow-hidden shadow-lg bg-neutral-1">
-                        <img src="/src/assets/images/trang-tri-slide-02.jpg" alt="Trang trí" class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105">
-                    </div>
-                </div>
-            </div>
+  <!-- Swiper Container: Mở rộng max-w lên 1920px nhưng giữ ML đồng nhất -->
+  <div class="ml-[7.5%] min-[1553px]:ml-[calc((100vw-1320px)/2)] lg:max-w-[1920px] overflow-hidden">
+    <div class="swiper slider-final-swiper overflow-visible">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide w-full md:w-[70%] lg:w-[80%]">
+          <div class="aspect-[2/1] overflow-hidden shadow-lg bg-neutral-1">
+            <img
+              src="/src/assets/images/factory-04.jpg"
+              alt="Phối cảnh"
+              class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+            />
+          </div>
         </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide w-full md:w-[70%] lg:w-[80%]">
+          <div class="aspect-[2/1] overflow-hidden shadow-lg bg-neutral-1">
+            <img
+              src="/src/assets/images/trang-tri-slide-02.jpg"
+              alt="Trang trí"
+              class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide w-full md:w-[70%] lg:w-[80%]">
+          <div class="aspect-[2/1] overflow-hidden shadow-lg bg-neutral-1">
+            <img
+              src="/src/assets/images/factory-04.jpg"
+              onerror="this.src = '/src/assets/images/factory-02.jpg'"
+              alt="Sản xuất"
+              class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        if (typeof Swiper !== 'undefined') {
-            new Swiper('.slider-final-swiper', {
-                slidesPerView: 'auto',
-                spaceBetween: 24,
-                navigation: {
-                    nextEl: '.slider-final-next',
-                    prevEl: '.slider-final-prev',
-                },
-                breakpoints: {
-                    768: {
-                        spaceBetween: 32,
-                    }
-                }
-            });
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof Swiper !== "undefined") {
+      const section4StepNumber = document.getElementById("section4-step-number");
+      const section4StepTitle = document.getElementById("section4-step-title");
+      const section4StepDescription = document.getElementById("section4-step-description");
+
+      const section4Steps = [
+        {
+          number: "1",
+          title: "LỰA CHỌN VÀ XỬ LÝ NGUYÊN LIỆU (PHA CHẾ ĐẤT)",
+          description:
+            "Đây là bước quan trọng nhất quyết định độ bền của sản phẩm. Thanh Hải tuyển chọn những loại đất sét có độ dẻo cao, khả năng chịu nhiệt tốt. Đất được xử lý qua hệ thống bể lọc để loại bỏ tạp chất, sau đó pha trộn theo tỷ lệ để tạo ra xương gốm vững chắc.",
+        },
+        {
+          number: "2",
+          title: "TẠO HÌNH VÀ HOÀN THIỆN MỘC",
+          description:
+            "Sau khi đạt chuẩn độ dẻo, đất được đưa vào công đoạn tạo hình bằng khuôn hoặc thủ công tùy từng dòng sản phẩm. Mỗi viên ngói, viên gạch đều được chỉnh sửa tỉ mỉ các cạnh và bề mặt trước khi chuyển sang giai đoạn sấy nhằm bảo đảm tính thẩm mỹ và độ đồng đều.",
+        },
+        {
+          number: "3",
+          title: "SẤY, NUNG VÀ KIỂM ĐỊNH CHẤT LƯỢNG",
+          description:
+            "Sản phẩm mộc được sấy theo chu trình kiểm soát nhiệt độ để hạn chế nứt vỡ, sau đó nung ở mức nhiệt phù hợp để đạt độ cứng tối ưu. Sau khi nung, mỗi sản phẩm đều trải qua quy trình kiểm định nghiêm ngặt về kích thước, độ bền và màu sắc để đảm bảo chỉ những viên đạt chuẩn mới được xuất xưởng.",
+        },
+      ];
+
+      const updateSection4Text = (index) => {
+        if (!section4StepNumber || !section4StepTitle || !section4StepDescription) {
+          return;
         }
-    });
+
+        const step = section4Steps[index] || section4Steps[0];
+        section4StepNumber.textContent = step.number;
+        section4StepTitle.textContent = step.title;
+        section4StepDescription.textContent = step.description;
+      };
+
+      const gallery2Swiper = new Swiper(".slider-final-swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 24,
+        navigation: {
+          nextEl: ".slider-final-next",
+          prevEl: ".slider-final-prev",
+        },
+        breakpoints: {
+          768: {
+            spaceBetween: 32,
+          },
+        },
+      });
+
+      updateSection4Text(0);
+      gallery2Swiper.on("slideChange", () => {
+        updateSection4Text(gallery2Swiper.realIndex);
+      });
+    }
+  });
 </script>
