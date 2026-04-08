@@ -78,12 +78,12 @@
       alt=""
       class="hidden lg:block absolute inset-0 w-full h-full object-cover"
     />
-    <div class="relative w-[85%] 2xl:w-full max-w-[1320px] mx-auto pt-12 lg:pt-[132px] pb-[60px]">
+    <div class="relative w-[85%] 2xl:w-[95%] 2xl:max-w-[1480px] mx-auto pt-12 lg:pt-[150px] pb-[60px]">
       <!-- Footer Content -->
       <!-- Footer grid: Logo col | Info col | Tổng quan | Sản phẩm (2 sub-cols) | Dịch vụ -->
-      <div class="flex flex-col lg:flex-row gap-8 lg:gap-0">
+      <div class="flex flex-col xl:flex-row gap-8 xl:gap-0">
         <!-- LEFT BLOCK: Logo trên, Bộ công thương + Download dưới -->
-        <div class="flex flex-col justify-between gap-6 lg:w-[130px] xl:w-[150px] shrink-0 lg:mr-8 xl:mr-12">
+        <div class="flex flex-col justify-between lg:items-center gap-6 lg:w-[130px] xl:w-[150px] shrink-0 lg:mr-8 xl:mr-12">
           <!-- Logo -->
           <div>
             <img
@@ -93,7 +93,7 @@
             />
           </div>
           <!-- Bộ Công Thương -->
-          <div class="mt-auto xl:pt-28">
+          <div class="mt-auto xl:pt-16">
             <a
               href="#"
               class="inline-block"
@@ -109,8 +109,8 @@
         </div>
 
         <!-- INFO BLOCK: Tên cty, địa chỉ, social, download -->
-        <div class="lg:w-[260px] xl:w-[300px] shrink-0 lg:mr-10 xl:mr-14">
-          <div class="text-white text-[15px] font-medium leading-[26px] mb-6">
+        <div class="lg:w-[260px] xl:w-[435px] shrink-0 lg:mr-10 xl:mr-14">
+          <div class="text-white text-[15px] leading-[26px] mb-6 tracking-[-0.1px]">
             <p class="font-bold uppercase">CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI THANH HẢI</p>
             <p>18 Phố Gốm – Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</p>
             <p>0966 55 8808</p>
@@ -154,7 +154,7 @@
           <!-- Download Button -->
           <a
             href="#"
-            class="inline-flex items-center gap-[6px] bg-[#AB6520] rounded px-6 py-3 hover:bg-opacity-90 transition-opacity"
+            class="inline-flex items-center gap-[6px] bg-[#AB6520] rounded px-16 py-4 hover:bg-opacity-90 transition-opacity"
           >
             <svg
               class="w-4 h-4 shrink-0"
@@ -176,10 +176,10 @@
         </div>
 
         <!-- NAV COLUMNS: grow to fill remaining space -->
-        <div class="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-8 min-w-0">
+        <div class="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-x-16 gap-y-8 min-w-0">
           <!-- Overview -->
           <div class="min-w-0">
-            <h3 class="text-white text-base font-semibold leading-[26px] mb-5 whitespace-nowrap">TỔNG QUAN</h3>
+            <h3 class="text-white text-base font-semibold leading-[26px] mb-6 whitespace-nowrap">TỔNG QUAN</h3>
             <ul class="space-y-4">
               <li>
                 <a
@@ -214,7 +214,7 @@
 
           <!-- Products: col-span-2, heading centered above both lists -->
           <div class="col-span-2 min-w-0">
-            <h3 class="text-white text-base font-semibold leading-[26px] mb-5 text-start lg:text-center mr-12">SẢN PHẨM</h3>
+            <h3 class="text-white text-base font-semibold leading-[26px] mb-6 text-start lg:text-center mr-12">SẢN PHẨM</h3>
             <div class="flex gap-20">
               <ul class="space-y-4">
                 <li>
@@ -281,7 +281,7 @@
 
           <!-- Customer Service -->
           <div class="min-w-0">
-            <h3 class="text-white text-base font-semibold leading-[26px] mb-5 whitespace-nowrap">DỊCH VỤ KHÁCH HÀNG</h3>
+            <h3 class="text-white text-base font-semibold leading-[26px] mb-6 whitespace-nowrap">DỊCH VỤ KHÁCH HÀNG</h3>
             <ul class="space-y-4">
               <li>
                 <a
@@ -319,13 +319,27 @@
 
     <!-- Bottom Bar -->
     <div class="relative border-t border-white/20 w-full">
-      <div class="w-full max-w-[1320px] px-6 lg:px-0 mx-auto py-6">
+      <div class="w-[95%] max-w-[1480px] px-6 lg:px-0 mx-auto py-6">
         <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-4">
           <p class="text-[#909090] text-sm leading-[26px]">Copyright © 2022 . All rights reserved</p>
           <div class="text-[#909090] text-sm leading-[26px]">
-            <a href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html" class="hover:text-secondary transition-colors">Chính sách vận chuyển</a> | 
-            <a href="/dich-vu-khach-hang/chinh-sach-doi-tra.html" class="hover:text-secondary transition-colors">Chính sách đổi trả</a> | 
-            <a href="/dich-vu-khach-hang/bao-mat-thong-tin.html" class="hover:text-secondary transition-colors">Bảo mật thông tin</a>
+            <a
+              href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html"
+              class="hover:text-secondary transition-colors"
+              >Chính sách vận chuyển</a
+            ><span class="lg:mx-4 mx-2">|</span>
+
+            <a
+              href="/dich-vu-khach-hang/chinh-sach-doi-tra.html"
+              class="hover:text-secondary transition-colors"
+              >Chính sách đổi trả</a
+            ><span class="lg:mx-4 mx-2">|</span>
+
+            <a
+              href="/dich-vu-khach-hang/bao-mat-thong-tin.html"
+              class="hover:text-secondary transition-colors"
+              >Bảo mật thông tin</a
+            >
           </div>
         </div>
       </div>
