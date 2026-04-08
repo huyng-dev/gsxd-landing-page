@@ -78,12 +78,12 @@
       alt=""
       class="hidden lg:block absolute inset-0 w-full h-full object-cover"
     />
-    <div class="relative w-[85%] max-w-[1320px] 2xl:w-[95%] 2xl:max-w-[1480px] mx-auto pt-12 lg:pt-[150px] pb-[60px]">
+    <div class="relative w-[85%] max-w-[1320px] mx-auto pt-12 lg:pt-[150px] pb-[60px] whitespace-nowrap">
       <!-- Footer Content -->
       <!-- Footer grid: Logo col | Info col | Tổng quan | Sản phẩm (2 sub-cols) | Dịch vụ -->
-      <div class="flex flex-col xl:flex-row gap-8 xl:gap-0">
+      <div class="flex flex-col gap-8 lg:grid lg:grid-cols-[200px_455px_195px_370px_200px] lg:gap-0 lg:w-[1420px] lg:justify-start lg:-translate-x-[38px]">
         <!-- LEFT BLOCK: Logo trên, Bộ công thương + Download dưới -->
-        <div class="flex flex-col justify-between lg:items-center gap-6 lg:w-[130px] xl:w-[150px] shrink-0 lg:mr-8 xl:mr-12">
+        <div class="flex flex-col justify-between items-center gap-6 w-full lg:w-[200px] lg:pr-[45px] shrink-0">
           <!-- Logo -->
           <div>
             <img
@@ -93,7 +93,7 @@
             />
           </div>
           <!-- Bộ Công Thương -->
-          <div class="mt-auto xl:pt-16">
+          <div class="mt-auto lg:pt-16">
             <a
               href="#"
               class="inline-block"
@@ -109,7 +109,7 @@
         </div>
 
         <!-- INFO BLOCK: Tên cty, địa chỉ, social, download -->
-        <div class="lg:w-[260px] xl:w-[435px] shrink-0 lg:mr-10 xl:mr-14">
+        <div class="w-full lg:w-[455px] shrink-0">
           <div class="text-white text-[15px] leading-[26px] mb-6 tracking-[-0.1px]">
             <p class="font-bold uppercase">CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI THANH HẢI</p>
             <p>18 Phố Gốm – Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</p>
@@ -175,143 +175,108 @@
           </a>
         </div>
 
-        <!-- NAV COLUMNS: grow to fill remaining space -->
-        <div class="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-x-16 gap-y-8 min-w-0">
-          <!-- Overview -->
-          <div class="min-w-0">
-            <h3 class="text-white text-base font-semibold leading-[26px] mb-6 whitespace-nowrap">TỔNG QUAN</h3>
-            <ul class="space-y-4">
-              <li>
-                <a
-                  href="/about/"
-                  class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                  >Về chúng tôi</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/showroom/"
-                  class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                  >Showroom</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/factory/"
-                  class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                  >Nhà xưởng</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/contact/"
-                  class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                  >Liên hệ</a
-                >
-              </li>
-            </ul>
+        <!-- Overview -->
+        <div class="w-full lg:w-[195px] min-w-0">
+          <h3 class="text-white text-base font-semibold leading-[26px] tracking-[-0.1px] mb-6 whitespace-nowrap">TỔNG QUAN</h3>
+          <div class="leading-[40px] whitespace-nowrap">
+            <a
+              href="/about/"
+              class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Về chúng tôi</a
+            ><br />
+            <a
+              href="/showroom/"
+              class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Showroom</a
+            ><br />
+            <a
+              href="/factory/"
+              class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Nhà xưởng</a
+            ><br />
+            <a
+              href="/contact/"
+              class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Liên hệ</a
+            >
           </div>
+        </div>
 
-          <!-- Products: col-span-2, heading centered above both lists -->
-          <div class="col-span-2 min-w-0">
-            <h3 class="text-white text-base font-semibold leading-[26px] mb-6 text-start lg:text-center mr-12">SẢN PHẨM</h3>
-            <div class="flex gap-20">
-              <ul class="space-y-4">
-                <li>
-                  <a
-                    href="/products/ngoi-am-duong/"
-                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                    >Ngói âm dương</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/products/ngoi-hai-van-mieu/"
-                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                    >Ngói hài văn miếu</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/products/phu-kien-ngoi/"
-                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                    >Phụ kiện mái</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/products/linh-vat-phong-thuy/"
-                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                    >Linh vật phong thủy</a
-                  >
-                </li>
-              </ul>
-              <ul class="space-y-4">
-                <li>
-                  <a
-                    href="/products/gach-hoa-thong-gio/"
-                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                    >Gạch thông gió</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/products/gach-trang-tri/"
-                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                    >Gạch trang trí</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/products/lan-can-gom-su/"
-                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                    >Lan can gốm sứ</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/products/den-gom-su/"
-                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                    >Đèn vườn gốm sứ</a
-                  >
-                </li>
-              </ul>
+        <!-- Products -->
+        <div class="w-full lg:w-[370px] min-w-0">
+          <h3 class=" text-white text-base font-semibold leading-[26px] tracking-[-0.1px] mb-6 text-center mr-[65px] whitespace-nowrap">SẢN PHẨM</h3>
+          <div class="flex gap-[50px]">
+            <div class="leading-[40px] whitespace-nowrap">
+              <a
+                href="/products/ngoi-am-duong/"
+                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Ngói âm dương</a
+              ><br />
+              <a
+                href="/products/ngoi-hai-van-mieu/"
+                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Ngói hài văn miếu</a
+              ><br />
+              <a
+                href="/products/phu-kien-ngoi/"
+                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Phụ kiện mái</a
+              ><br />
+              <a
+                href="/products/linh-vat-phong-thuy/"
+                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Linh vật phong thủy</a
+              >
+            </div>
+            <div class="leading-[40px] whitespace-nowrap">
+              <a
+                href="/products/gach-hoa-thong-gio/"
+                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Gạch thông gió</a
+              ><br />
+              <a
+                href="/products/gach-trang-tri/"
+                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Gạch trang trí</a
+              ><br />
+              <a
+                href="/products/lan-can-gom-su/"
+                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Lan can gốm sứ</a
+              ><br />
+              <a
+                href="/products/den-gom-su/"
+                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Đèn vườn gốm sứ</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Customer Service -->
-          <div class="min-w-0">
-            <h3 class="text-white text-base font-semibold leading-[26px] mb-6 whitespace-nowrap">DỊCH VỤ KHÁCH HÀNG</h3>
-            <ul class="space-y-4">
-              <li>
-                <a
-                  href="/dich-vu-khach-hang/tai-khoan-cua-toi.html"
-                  class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                  >Tài khoản</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/dich-vu-khach-hang/quy-trinh-dat-hang.html"
-                  class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                  >Quy trình đặt hàng</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/dich-vu-khach-hang/huong-dan-thi-cong.html"
-                  class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                  >Hướng dẫn thi công</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/faq/index.html"
-                  class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
-                  >FAQ</a
-                >
-              </li>
-            </ul>
+        <!-- Customer Service -->
+        <div class="w-full lg:w-[200px] min-w-0">
+          <h3 class="text-white text-base font-semibold leading-[26px] tracking-[-0.1px] mb-6 whitespace-nowrap">DỊCH VỤ KHÁCH HÀNG</h3>
+          <div class="leading-[40px] whitespace-nowrap">
+            <a
+              href="/dich-vu-khach-hang/tai-khoan-cua-toi.html"
+              class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Tài khoản</a
+            ><br />
+            <a
+              href="/dich-vu-khach-hang/quy-trinh-dat-hang.html"
+              class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Quy trình đặt hàng</a
+            ><br />
+            <a
+              href="/dich-vu-khach-hang/huong-dan-thi-cong.html"
+              class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Hướng dẫn thi công</a
+            ><br />
+            <a
+              href="/faq/index.html"
+              class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >FAQ</a
+            >
           </div>
         </div>
       </div>
@@ -319,25 +284,25 @@
 
     <!-- Bottom Bar -->
     <div class="relative border-t border-white/20 w-full">
-  <div class="w-[85%] max-w-[1320px] 2xl:w-[95%] 2xl:max-w-[1480px] mx-auto py-6">
+      <div class="w-[85%] max-w-[1320px] mx-auto py-6">
         <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-4">
-          <p class="text-[#909090] text-sm leading-[26px]">Copyright © 2022 . All rights reserved</p>
-          <div class="text-[#909090] text-sm leading-[26px]">
+          <p class="text-[#909090] text-sm leading-[26px] whitespace-nowrap">Copyright © 2022 . All rights reserved</p>
+          <div class="text-[#909090] text-sm leading-[26px] whitespace-nowrap">
             <a
               href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html"
-              class="hover:text-secondary transition-colors"
+              class="whitespace-nowrap hover:text-secondary transition-colors"
               >Chính sách vận chuyển</a
             ><span class="lg:mx-4 mx-2">|</span>
 
             <a
               href="/dich-vu-khach-hang/chinh-sach-doi-tra.html"
-              class="hover:text-secondary transition-colors"
+              class="whitespace-nowrap hover:text-secondary transition-colors"
               >Chính sách đổi trả</a
             ><span class="lg:mx-4 mx-2">|</span>
 
             <a
               href="/dich-vu-khach-hang/bao-mat-thong-tin.html"
-              class="hover:text-secondary transition-colors"
+              class="whitespace-nowrap hover:text-secondary transition-colors"
               >Bảo mật thông tin</a
             >
           </div>
