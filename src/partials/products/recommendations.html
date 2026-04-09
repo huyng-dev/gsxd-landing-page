@@ -2,6 +2,27 @@
   class="w-full pb-12 md:pb-16 bg-background-secondary relative {{#if showDecor}}overflow-visible{{/if}}"
   data-aos="fade-up"
 >
+  <style>
+    .custom-recommend-scrollbar::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .custom-recommend-scrollbar::-webkit-scrollbar-track {
+      background: white;
+      border-radius: 10px;
+    }
+
+    .custom-recommend-scrollbar::-webkit-scrollbar-thumb {
+      background: #c76e00cc;
+      border-radius: 10px;
+    }
+
+    .custom-recommend-scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: #c76e00cc rgba(0, 0, 0, 0.05);
+    }
+  </style>
+
   {{#if showDecor}}
   <!-- Decorative image -->
   <img

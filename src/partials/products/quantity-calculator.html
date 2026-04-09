@@ -252,3 +252,148 @@
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const calculatorSection = document.querySelector("[data-quantity-calculator]");
+    if (!calculatorSection) return;
+
+    const areaBlocks = () => Array.from(calculatorSection.querySelectorAll("[data-area-block]"));
+    const initialBlocks = areaBlocks();
+
+    const masterTemplate = (
+      initialBlocks.find((block) => block.querySelector("[data-remove-area]")) || initialBlocks[initialBlocks.length - 1]
+    )?.cloneNode(true);
+
+    const addAreaBtn = calculatorSection.querySelector("[data-add-area]");
+    const calculateBtn = calculatorSection.querySelector("[data-calculate-quantity]");
+    const totalAreaOutput = calculatorSection.querySelector("[data-total-area-output]");
+    const rateOutputs = Array.from(calculatorSection.querySelectorAll("[data-rate-output]"));
+    const valueOutputs = Array.from(calculatorSection.querySelectorAll("[data-value-output]"));
+
+    const extraLossCheckbox = calculatorSection.querySelector("#extra-loss-quantity");
+    const lossRadios = Array.from(calculatorSection.querySelectorAll('input[name="loss-rate"]'));
+
+    const numberFormatter = new Intl.NumberFormat("vi-VN");
+    const formatNumber = (value) => numberFormatter.format(value);
+
+    const parseNumericValue = (raw = "") => {
+      const normalized = raw.replace(/\s/g, "").replace(/,/g, ".").replace(/[^\d.]/g, "");
+      return Number.parseFloat(normalized) || 0;
+    };
+
+    const getLossFactor = () => {
+      if (!extraLossCheckbox || !extraLossCheckbox.checked) return 1;
+
+      const selectedRadio = lossRadios.find((radio) => radio.checked);
+      if (!selectedRadio) return 1;
+
+      const labelText = selectedRadio.closest("label")?.textContent || "";
+      if (labelText.includes("10%")) return 1.1;
+      if (labelText.includes("5%")) return 1.05;
+      return 1;
+    };
+
+    const getBlockArea = (block) => {
+      const inputs = Array.from(block.querySelectorAll('input[type="text"]'));
+      const length = parseNumericValue(inputs[0]?.value || "0");
+      const width = parseNumericValue(inputs[1]?.value || "0");
+      return length * width;
+    };
+
+    const getAreaTitle = (block) => Array.from(block.querySelectorAll("span")).find((span) => /DIỆN\s*TÍCH/i.test(span.textContent || ""));
+
+    const renumberAreas = () => {
+      areaBlocks().forEach((block, index) => {
+        const title = getAreaTitle(block);
+        if (title) title.textContent = `DIỆN TÍCH ${index + 1}`;
+      });
+    };
+
+    const updateResults = () => {
+      const rawArea = areaBlocks().reduce((sum, block) => sum + getBlockArea(block), 0);
+      const roundedArea = Math.ceil(rawArea);
+      const lossFactor = getLossFactor();
+
+      if (totalAreaOutput) {
+        totalAreaOutput.textContent = `${formatNumber(roundedArea)} m²`;
+      }
+
+      rateOutputs.forEach((rateEl, index) => {
+        const rate = parseNumericValue(rateEl.textContent || "0");
+        const quantity = Math.ceil(roundedArea * rate * lossFactor);
+
+        if (!valueOutputs[index]) return;
+
+        if (rate > 0) {
+          valueOutputs[index].textContent = `${formatNumber(quantity)} viên`;
+        } else {
+          valueOutputs[index].textContent = "00 viên";
+        }
+      });
+    };
+
+    const attachRemoveAreaListener = (block) => {
+      const removeBtn = block.querySelector("[data-remove-area]");
+      if (!removeBtn) return;
+
+      removeBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        block.remove();
+        renumberAreas();
+        updateResults();
+      });
+    };
+
+    const addArea = () => {
+      if (!masterTemplate) return;
+
+      const newBlock = masterTemplate.cloneNode(true);
+      newBlock.querySelectorAll('input[type="text"]').forEach((input) => {
+        input.value = "";
+      });
+
+      const removeBtn = newBlock.querySelector("[data-remove-area]");
+      if (!removeBtn) {
+        const title = getAreaTitle(newBlock);
+        const header = title ? title.parentElement : null;
+
+        if (header) {
+          header.classList.add("flex", "flex-col");
+
+          const button = document.createElement("button");
+          button.type = "button";
+          button.setAttribute("data-remove-area", "");
+          button.className =
+            "text-[14px] text-secondary underline text-start ml-4 font-medium opacity-80 hover:opacity-100 transition-opacity";
+          button.textContent = "Loại bỏ";
+          header.appendChild(button);
+        }
+      }
+
+      const addAreaRow = addAreaBtn?.parentElement;
+      if (!addAreaRow) return;
+
+      addAreaRow.before(newBlock);
+      attachRemoveAreaListener(newBlock);
+      renumberAreas();
+    };
+
+    areaBlocks().forEach(attachRemoveAreaListener);
+
+    addAreaBtn?.addEventListener("click", (event) => {
+      event.preventDefault();
+      addArea();
+    });
+
+    calculateBtn?.addEventListener("click", (event) => {
+      event.preventDefault();
+      updateResults();
+    });
+
+    extraLossCheckbox?.addEventListener("change", updateResults);
+    lossRadios.forEach((radio) => radio.addEventListener("change", updateResults));
+
+    renumberAreas();
+  });
+</script>

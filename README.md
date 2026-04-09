@@ -86,11 +86,7 @@ npm run preview
 │  │  ├─ css/main.css
 │  │  └─ images/
 │  ├─ js/
-│  │  ├─ main.js
-│  │  ├─ calculator.js
-│  │  └─ pages/
-│  │     ├─ index.js
-│  │     └─ products.js
+│  │  └─ main.js
 │  └─ partials/
 │     ├─ header.html
 │     ├─ footer.html
@@ -143,19 +139,13 @@ Luu y:
 
 ### 6.4 JavaScript runtime
 
-File `src/js/main.js` khoi tao 3 nhom logic:
+File `src/js/main.js` chi giu logic dung chung cho toan bo website.
 
-1. Dynamic import module theo `data-page`
-2. Mobile menu toggle
-3. FAQ accordion global
+JS/CSS rieng theo page khong dat trong file module doc lap nua ma duoc dat truc tiep trong page HTML tuong ung (`<script>`, `<style>`).
 
-Pattern dynamic import:
+JS/CSS cua component duoc dat ngay trong partial component trong `src/partials/**`.
 
-- HTML dat: `<body data-page="products">`
-- JS tu dong load: `src/js/pages/products.js`
-- Module trang can export ham `init()`
-
-Neu khong co module tuong ung, he thong se bo qua an toan (khong crash).
+Muc tieu la tach ro: phan "dung chung" o `main.js` va phan "dac thu" nam cung noi su dung.
 
 ## 7. Danh Muc Trang Hien Co
 
@@ -185,22 +175,9 @@ Tong cong: **41** HTML pages nguon.
 ### 8.1 Them trang moi
 
 1. Tao file HTML moi trong root hoac folder con (khong dat trong `src/`).
-2. Neu can JS rieng, them `data-page` vao the `body`.
-3. Tao module `src/js/pages/<ten-data-page>.js` va export `init()`.
+2. Neu can JS/CSS rieng cho page, dat truc tiep trong page do bang the `<script>` / `<style>`.
+3. Neu la JS/CSS cua component, dat trong partial component tuong ung trong `src/partials/**`.
 4. Chay `npm run dev` de test route.
-
-Vi du:
-
-```html
-<body data-page="about">
-```
-
-```js
-// src/js/pages/about.js
-export function init() {
-  // page logic here
-}
-```
 
 ### 8.2 Them partial moi
 
@@ -243,8 +220,8 @@ git push
 - Partial khong render:
   - Kiem tra ten partial va duong dan trong `src/partials`
 - JS page khong chay:
-  - Kiem tra `data-page` tren `body`
-  - Kiem tra module tuong ung trong `src/js/pages/` co export `init()`
+  - Kiem tra the `<script>` da duoc dat dung trong page hoac partial chua
+  - Kiem tra selector trong script co khop voi HTML thuc te khong
 
 ## 11. License
 

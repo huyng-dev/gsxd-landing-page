@@ -1,6 +1,7 @@
 <section
   class="w-full py-12 lg:py-16 bg-background-secondary"
   data-aos="fade-up"
+  data-weight-calculator
 >
   <div class="w-[85%] max-w-[1320px] mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24 items-start">
@@ -434,3 +435,306 @@
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const calculatorSection = document.querySelector("[data-weight-calculator]");
+    if (!calculatorSection) return;
+
+    const roofStyleSelect = calculatorSection.querySelector("#roof-style");
+    const tileTypeSelect = calculatorSection.querySelector("#tile-type");
+    const areasContainer = calculatorSection.querySelector(".space-y-4.col-span-1.lg\\:col-span-3");
+
+    if (!areasContainer || !roofStyleSelect || !tileTypeSelect) return;
+
+    const allInitialBlocks = Array.from(areasContainer.children).filter(
+      (el) => el.classList.contains("flex") && el.querySelector("span")?.textContent.includes("DIỆN TÍCH"),
+    );
+
+    const masterTemplate = (
+      allInitialBlocks.find((block) => {
+        const removeBtn = block.querySelector("button.underline");
+        return removeBtn && removeBtn.textContent.includes("Loại bỏ");
+      }) || allInitialBlocks[allInitialBlocks.length - 1]
+    )?.cloneNode(true);
+
+    const buttons = areasContainer.querySelectorAll("button");
+    const addAreaBtn = Array.from(buttons).find((btn) => btn.textContent.includes("+ Thêm diện tích"));
+    const calculateBtn = Array.from(buttons).find((btn) => btn.textContent.includes("TÍNH TOÁN KHỐI LƯỢNG"));
+
+    const resultRows = calculatorSection.querySelectorAll(".pt-8 .space-y-4 > .grid.grid-cols-12");
+    const resultTilesAm = resultRows[0];
+    const resultTilesDuong = resultRows[1];
+    const resultDiem = resultRows[2];
+
+    const extraLossCheckbox = calculatorSection.querySelector("#extra-loss");
+    const lossRadios = Array.from(calculatorSection.querySelectorAll('input[name="loss-rate"]'));
+
+    const vnFormatter = new Intl.NumberFormat("vi-VN");
+    const format = (num) => vnFormatter.format(num);
+
+    const getAreaBlocks = () =>
+      Array.from(areasContainer.children).filter(
+        (el) => el.classList.contains("flex") && el.querySelector("span")?.textContent.includes("DIỆN TÍCH"),
+      );
+
+    const getAreaTitle = (block) => Array.from(block.querySelectorAll("span")).find((span) => /DIỆN\s*TÍCH/i.test(span.textContent || ""));
+
+    const updateCoeffLabels = () => {
+      const selectedTile = tileTypeSelect.options[tileTypeSelect.selectedIndex];
+
+      if (!selectedTile || selectedTile.value === "") {
+        if (resultTilesAm) resultTilesAm.querySelectorAll("span")[2].textContent = "-- viên/m²";
+        if (resultTilesDuong) resultTilesDuong.querySelectorAll("span")[2].textContent = "-- viên/m²";
+        if (resultDiem) resultDiem.querySelectorAll("span")[2].textContent = "-- cặp/md";
+        return;
+      }
+
+      const amCoeff = Number.parseFloat(selectedTile.dataset.am || "0") || 40;
+      const duongCoeff = Number.parseFloat(selectedTile.dataset.duong || "0") || 27;
+      const diemCoeff = Number.parseFloat(selectedTile.dataset.diem || "0") || 5;
+
+      if (resultTilesAm) {
+        const coeffSpan = resultTilesAm.querySelectorAll("span")[2];
+        if (coeffSpan) coeffSpan.textContent = `${amCoeff} viên/m²`;
+      }
+
+      if (resultTilesDuong) {
+        const coeffSpan = resultTilesDuong.querySelectorAll("span")[2];
+        if (coeffSpan) coeffSpan.textContent = `${duongCoeff} viên/m²`;
+      }
+
+      if (resultDiem) {
+        const coeffSpan = resultDiem.querySelectorAll("span")[2];
+        if (coeffSpan) coeffSpan.textContent = `${diemCoeff} cặp/md`;
+      }
+    };
+
+    const updateResults = () => {
+      let totalS = 0;
+      let totalL = 0;
+
+      getAreaBlocks().forEach((block) => {
+        const select = block.querySelector("select");
+        if (!select) return;
+
+        const inputs = Array.from(block.querySelectorAll("input")).filter(
+          (input) => input.closest(".relative")?.parentElement.style.display !== "none",
+        );
+
+        const type = select.value || select.options[select.selectedIndex].text;
+        let area = 0;
+        let length = 0;
+
+        if (type.includes("CHỮ NHẬT")) {
+          const dai = Number.parseFloat(inputs[0]?.value || "0") || 0;
+          const rong = Number.parseFloat(inputs[1]?.value || "0") || 0;
+          area = dai * rong;
+          length = dai;
+        } else if (type.includes("THANG")) {
+          const dayLon = Number.parseFloat(inputs[0]?.value || "0") || 0;
+          const dayBe = Number.parseFloat(inputs[1]?.value || "0") || 0;
+          const cao = Number.parseFloat(inputs[2]?.value || "0") || 0;
+          area = ((dayLon + dayBe) * cao) / 2;
+          length = dayLon;
+        }
+
+        totalS += area;
+        totalL += length;
+      });
+
+      let factor = 1;
+      if (extraLossCheckbox?.checked) {
+        const checkedRadio = lossRadios.find((radio) => radio.checked);
+        const label = checkedRadio?.closest("label")?.textContent || "";
+
+        if (label.includes("15%")) factor = 1.15;
+        if (label.includes("20%")) factor = 1.2;
+      }
+
+      const styleFactor =
+        roofStyleSelect.value !== ""
+          ? Number.parseFloat(roofStyleSelect.options[roofStyleSelect.selectedIndex].dataset.factor || "1") || 1
+          : 0;
+
+      factor *= styleFactor;
+      updateCoeffLabels();
+
+      const selectedTile = tileTypeSelect.options[tileTypeSelect.selectedIndex];
+      const amCoeff = selectedTile?.value ? Number.parseFloat(selectedTile.dataset.am || "0") || 0 : 0;
+      const duongCoeff = selectedTile?.value ? Number.parseFloat(selectedTile.dataset.duong || "0") || 0 : 0;
+      const diemCoeff = selectedTile?.value ? Number.parseFloat(selectedTile.dataset.diem || "0") || 0 : 0;
+
+      const ngoiAm = Math.ceil(totalS * amCoeff * factor);
+      const ngoiDuong = Math.ceil(totalS * duongCoeff * factor);
+      const diem = Math.ceil(totalL * diemCoeff * factor);
+
+      if (resultTilesAm) {
+        resultTilesAm.querySelectorAll("span")[1].textContent = `${format(totalS)} m²`;
+        resultTilesAm.querySelectorAll("span")[3].textContent = `${format(ngoiAm)} viên`;
+      }
+
+      if (resultTilesDuong) {
+        resultTilesDuong.querySelectorAll("span")[1].textContent = `${format(totalS)} m²`;
+        resultTilesDuong.querySelectorAll("span")[3].textContent = `${format(ngoiDuong)} viên`;
+      }
+
+      if (resultDiem) {
+        resultDiem.querySelectorAll("span")[1].textContent = `${format(totalL)} md`;
+        resultDiem.querySelectorAll("span")[3].textContent = `${format(diem)} cặp`;
+      }
+    };
+
+    const handleTypeChange = (block) => {
+      const select = block.querySelector("select");
+      const inputGrid = block.querySelector(".grid-cols-12");
+      if (!select || !inputGrid) return;
+
+      const type = select.value || select.options[select.selectedIndex].text;
+      const inputWrappers = Array.from(inputGrid.children);
+
+      if (type.includes("CHỮ NHẬT")) {
+        const label1 = inputWrappers[1]?.querySelector("label");
+        if (label1) {
+          label1.innerHTML =
+            "CHIỀU DÀI <span class=\"block text-[12px] font-normal italic normal-case text-secondary/70\">Chiều tính diềm mái</span>";
+        }
+
+        inputWrappers[1]?.classList.replace("col-span-4", "col-span-6");
+
+        const label2 = inputWrappers[2]?.querySelector("label");
+        if (label2) {
+          label2.innerHTML = "CHIỀU RỘNG <span class=\"block text-[12px] opacity-0\">&nbsp;</span>";
+        }
+
+        inputWrappers[2]?.classList.replace("col-span-4", "col-span-6");
+        if (inputWrappers[3]) inputWrappers[3].style.display = "none";
+      } else if (type.includes("THANG")) {
+        const label1 = inputWrappers[1]?.querySelector("label");
+        if (label1) {
+          label1.innerHTML =
+            "ĐÁY LỚN <span class=\"block text-[12px] font-normal italic normal-case text-secondary/70\">Chiều tính diềm mái</span>";
+        }
+
+        inputWrappers[1]?.classList.replace("col-span-6", "col-span-4");
+
+        const label2 = inputWrappers[2]?.querySelector("label");
+        if (label2) {
+          label2.innerHTML = "ĐÁY BÉ <span class=\"block text-[12px] opacity-0\">&nbsp;</span>";
+        }
+
+        inputWrappers[2]?.classList.replace("col-span-6", "col-span-4");
+
+        if (inputWrappers[3]) {
+          inputWrappers[3].style.removeProperty("display");
+          inputWrappers[3]?.classList.replace("col-span-6", "col-span-4");
+
+          const label3 = inputWrappers[3].querySelector("label");
+          if (label3) {
+            label3.innerHTML = "CHIỀU CAO <span class=\"block text-[12px] opacity-0\">&nbsp;</span>";
+          }
+        }
+      }
+
+      [inputWrappers[1], inputWrappers[2], inputWrappers[3]].forEach((wrapper) => {
+        const label = wrapper?.querySelector("label");
+        if (!label) return;
+        label.classList.remove("min-h-[42px]");
+        label.classList.add("h-[44px]", "flex", "flex-col", "items-center", "justify-start");
+      });
+    };
+
+    const renumberAreas = () => {
+      getAreaBlocks().forEach((block, index) => {
+        const titleSpan = getAreaTitle(block);
+        if (titleSpan) titleSpan.textContent = `DIỆN TÍCH ${index + 1}`;
+      });
+    };
+
+    const setupListeners = (block) => {
+      const select = block.querySelector("select");
+
+      if (select) {
+        select.addEventListener("change", () => handleTypeChange(block));
+        handleTypeChange(block);
+      }
+
+      const removeBtn = block.querySelector("button.underline");
+      if (removeBtn && removeBtn.textContent.includes("Loại bỏ")) {
+        removeBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+          block.remove();
+          renumberAreas();
+          updateResults();
+        });
+      }
+    };
+
+    const addArea = () => {
+      if (!masterTemplate) return;
+
+      const newBlock = masterTemplate.cloneNode(true);
+      newBlock.querySelectorAll("input").forEach((input) => {
+        input.value = "";
+      });
+
+      let removeBtn = newBlock.querySelector("button.underline");
+
+      if (!removeBtn || !removeBtn.textContent.includes("Loại bỏ")) {
+        const titleSpan = newBlock.querySelector("span.tracking-widest");
+        const titleWrapper = titleSpan?.parentElement;
+
+        if (titleWrapper) {
+          titleWrapper.classList.add("flex", "flex-col");
+          removeBtn = document.createElement("button");
+          removeBtn.type = "button";
+          removeBtn.className = "text-[14px] text-secondary underline text-left font-bold";
+          removeBtn.textContent = "Loại bỏ";
+          titleWrapper.appendChild(removeBtn);
+        }
+      }
+
+      const triggerDiv = addAreaBtn?.parentElement;
+      if (!triggerDiv) return;
+
+      triggerDiv.before(newBlock);
+      renumberAreas();
+      setupListeners(newBlock);
+    };
+
+    getAreaBlocks().forEach(setupListeners);
+
+    addAreaBtn?.addEventListener("click", (event) => {
+      event.preventDefault();
+      addArea();
+    });
+
+    calculateBtn?.addEventListener("click", (event) => {
+      event.preventDefault();
+      updateResults();
+    });
+
+    extraLossCheckbox?.addEventListener("change", updateResults);
+    lossRadios.forEach((radio) => radio.addEventListener("change", updateResults));
+
+    const checkButtonState = () => {
+      if (!calculateBtn) return;
+
+      const isStyleSelected = roofStyleSelect.value !== "";
+      const isTileSelected = tileTypeSelect.value !== "";
+
+      calculateBtn.disabled = !(isStyleSelected && isTileSelected);
+      calculateBtn.classList.toggle("opacity-50", calculateBtn.disabled);
+      calculateBtn.classList.toggle("cursor-not-allowed", calculateBtn.disabled);
+    };
+
+    roofStyleSelect.addEventListener("change", checkButtonState);
+    tileTypeSelect.addEventListener("change", () => {
+      updateCoeffLabels();
+      checkButtonState();
+    });
+
+    checkButtonState();
+    updateResults();
+  });
+</script>

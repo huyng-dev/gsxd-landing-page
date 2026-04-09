@@ -74,3 +74,92 @@
     </div>
   </div>
 </section>
+
+<style>
+  .works-carousel {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .works-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .works-scrollbar-track {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .works-scrollbar-thumb {
+    height: 100%;
+    background: #c76e00;
+    border-radius: 2px;
+    min-width: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.1s ease;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const worksSection = document.querySelector(".works-carousel-container")?.closest("section");
+    if (!worksSection) return;
+
+    const worksCarousel = worksSection.querySelector(".works-carousel");
+    const worksTrack = worksSection.querySelector(".works-track");
+    const worksPrev = worksSection.querySelector(".works-prev");
+    const worksNext = worksSection.querySelector(".works-next");
+    const scrollbarThumb = worksSection.querySelector(".works-scrollbar-thumb");
+    const scrollbarTrack = worksSection.querySelector(".works-scrollbar-track");
+
+    if (!worksCarousel || !worksTrack) return;
+
+    const itemWidth = 400;
+    const gap = 24;
+
+    worksPrev?.addEventListener("click", () => {
+      worksCarousel.scrollBy({
+        left: -(itemWidth + gap),
+        behavior: "smooth",
+      });
+    });
+
+    worksNext?.addEventListener("click", () => {
+      worksCarousel.scrollBy({
+        left: itemWidth + gap,
+        behavior: "smooth",
+      });
+    });
+
+    const updateScrollbar = () => {
+      if (!scrollbarThumb || !scrollbarTrack) return;
+
+      const scrollWidth = worksCarousel.scrollWidth;
+      const clientWidth = worksCarousel.clientWidth;
+      const scrollLeft = worksCarousel.scrollLeft;
+      const trackWidth = scrollbarTrack.clientWidth;
+
+      if (scrollWidth <= clientWidth || trackWidth <= 0) {
+        scrollbarThumb.style.width = "100%";
+        scrollbarThumb.style.left = "0";
+        return;
+      }
+
+      const thumbWidth = Math.max((clientWidth / scrollWidth) * trackWidth, 40);
+      const thumbLeft = (scrollLeft / (scrollWidth - clientWidth)) * (trackWidth - thumbWidth);
+
+      scrollbarThumb.style.width = `${thumbWidth}px`;
+      scrollbarThumb.style.left = `${thumbLeft}px`;
+    };
+
+    worksCarousel.addEventListener("scroll", updateScrollbar);
+    window.addEventListener("resize", updateScrollbar);
+    updateScrollbar();
+  });
+</script>

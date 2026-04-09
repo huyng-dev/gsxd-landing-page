@@ -26,8 +26,20 @@ export default defineConfig({
     }),
   ],
   build: {
+    minify: false,
+    cssMinify: false,
     rollupOptions: {
       input,
+      output: {
+        entryFileNames: 'assets/js/[name].js',
+        chunkFileNames: 'assets/js/[name].js',
+        assetFileNames: ({ name }) => {
+          if (name && name.endsWith('.css')) {
+            return 'assets/css/[name][extname]';
+          }
+          return 'assets/[name][extname]';
+        },
+      },
     },
   },
   resolve: {

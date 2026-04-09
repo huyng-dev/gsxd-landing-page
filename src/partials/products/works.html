@@ -4,28 +4,58 @@
   data-aos="fade-up"
 >
   <style>
-    /* BÍ QUYẾT ĐỂ SLIDE CHUYỂN ĐỘNG CỰC KỲ MƯỢT MÀ */
-    /* 1. Ép Swiper dùng chung hàm gia tốc siêu mượt (ease-out-quart) thay vì linear/ease mặc định */
     .product-works-swiper .swiper-wrapper {
+      display: flex;
+      align-items: flex-end;
       transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1) !important;
+      will-change: transform;
     }
-    
-    /* 2. Slide width và opacity phải khớp chuẩn xác 100% thời gian (1200ms) với speed của JS */
+
     .product-works-swiper .swiper-slide {
+      width: 85vw;
+      aspect-ratio: 4 / 3;
+      opacity: 0.55;
+      overflow: hidden;
+      flex-shrink: 0;
+      cursor: pointer;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      will-change: width, opacity;
+      contain: layout paint;
       transition: width 1200ms cubic-bezier(0.25, 1, 0.5, 1),
                   opacity 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
     }
-    
-    /* 3. Phóng to ảnh nhẹ ở slide phụ (1.1) và trở về (1) khi là main slide tạo cảm giác mở rộng */
+
+    @media (min-width: 1280px) {
+      .product-works-swiper .swiper-slide {
+        opacity: 1;
+        width: 360px;
+      }
+    }
+
+    .product-works-swiper .swiper-slide-active {
+      width: 85vw;
+      opacity: 1;
+      z-index: 2;
+    }
+
+    @media (min-width: 1280px) {
+      .product-works-swiper .swiper-slide-active {
+        width: 720px;
+      }
+    }
+
     .product-works-swiper .swiper-slide img {
       transform: translateZ(0) scale(1.1) !important; 
       transition: transform 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+      backface-visibility: hidden;
+      will-change: transform;
     }
+
     .product-works-swiper .swiper-slide-active img {
       transform: translateZ(0) scale(1) !important;
     }
-    
-    /* 4. Class dành riêng cho hiệu ứng chữ (chuyển đổi mượt 400ms) */
+
     .slide-text-transition {
       transition-property: opacity, transform !important;
       transition-duration: 400ms !important;

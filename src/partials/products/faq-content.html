@@ -1,5 +1,5 @@
     <!-- FAQ Content -->
-    <div class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto">
+    <div class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto" data-faq-component>
       <!-- Section Title -->
       <div class="w-[85%] max-w-[1320px] mx-auto text-center mb-16" data-aos="fade-up">
         <h2 class="font-archivo text-[24px] md:text-[32px] font-semibold text-secondary uppercase leading-[36px] md:leading-[45px]">Câu hỏi thường gặp</h2>
@@ -78,3 +78,54 @@
         </div>
       </div>
     </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const faqComponents = document.querySelectorAll("[data-faq-component]");
+
+    faqComponents.forEach((component) => {
+      const faqItems = component.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        const button = item.querySelector(".faq-button");
+        const content = item.querySelector(".faq-content");
+        const icon = item.querySelector(".faq-icon");
+
+        if (!button || !content || !icon) return;
+
+        button.addEventListener("click", () => {
+          const isOpen = !content.classList.contains("hidden");
+
+          faqItems.forEach((otherItem) => {
+            if (otherItem === item) return;
+
+            const otherContent = otherItem.querySelector(".faq-content");
+            const otherIcon = otherItem.querySelector(".faq-icon");
+
+            if (otherContent) {
+              otherContent.classList.add("hidden");
+            }
+
+            if (otherIcon) {
+              otherIcon.classList.add("rotate-180");
+              otherIcon.classList.replace("bg-textPrimary", "bg-gray-200");
+              otherIcon.classList.replace("text-white", "text-gray-500");
+            }
+          });
+
+          if (isOpen) {
+            content.classList.add("hidden");
+            icon.classList.add("rotate-180");
+            icon.classList.replace("bg-textPrimary", "bg-gray-200");
+            icon.classList.replace("text-white", "text-gray-500");
+          } else {
+            content.classList.remove("hidden");
+            icon.classList.remove("rotate-180");
+            icon.classList.replace("bg-gray-200", "bg-textPrimary");
+            icon.classList.replace("text-gray-500", "text-white");
+          }
+        });
+      });
+    });
+  });
+</script>

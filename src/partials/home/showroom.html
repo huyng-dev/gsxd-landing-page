@@ -30,3 +30,47 @@
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector(".showroom-container")?.closest("section");
+    if (!section) return;
+
+    const showroomContainer = section.querySelector(".showroom-container");
+    const showroomDots = Array.from(section.querySelectorAll(".showroom-dot"));
+
+    if (!showroomContainer || !showroomDots.length) return;
+
+    const updateActiveDot = () => {
+      const firstImage = showroomContainer.querySelector("img");
+      if (!firstImage) return;
+
+      const itemWidth = firstImage.offsetWidth + 16;
+      const index = Math.round(showroomContainer.scrollLeft / itemWidth);
+
+      showroomDots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === index;
+        dot.classList.toggle("active", isActive);
+        dot.classList.toggle("bg-secondary", isActive);
+        dot.classList.toggle("bg-white/40", !isActive);
+      });
+    };
+
+    showroomContainer.addEventListener("scroll", updateActiveDot);
+
+    showroomDots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        const firstImage = showroomContainer.querySelector("img");
+        if (!firstImage) return;
+
+        const itemWidth = firstImage.offsetWidth + 16;
+        showroomContainer.scrollTo({
+          left: itemWidth * index,
+          behavior: "smooth",
+        });
+      });
+    });
+
+    updateActiveDot();
+  });
+</script>
