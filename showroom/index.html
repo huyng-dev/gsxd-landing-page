@@ -268,7 +268,7 @@
     {{> footer}}
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       type="module"
@@ -276,28 +276,30 @@
     ></script>
 
     <!-- Swiper Initialization -->
-    <script type="module">
-      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+    <script>
+      if (window.AOS) {
+        AOS.init({ once: true, duration: 800, offset: 50 });
+      }
 
-      AOS.init({ once: true, duration: 800, offset: 50 });
+      if (window.Swiper) {
+        new Swiper(".showroomSwiper", {
+          slidesPerView: "auto",
+          spaceBetween: 24,
+          loop: false,
+          navigation: {
+            nextEl: ".showroom-next",
+            prevEl: ".showroom-prev",
+          },
+        });
 
-      new Swiper(".showroomSwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 24,
-        loop: false,
-        navigation: {
-          nextEl: ".showroom-next",
-          prevEl: ".showroom-prev",
-        },
-      });
-
-      new Swiper(".showroomSwiper2", {
-        slidesPerView: "auto",
-        spaceBetween: 24,
-        loop: false,
-        initialSlide: 1,
-        rtl: true,
-      });
+        new Swiper(".showroomSwiper2", {
+          slidesPerView: "auto",
+          spaceBetween: 24,
+          loop: false,
+          initialSlide: 1,
+          rtl: true,
+        });
+      }
     </script>
   </body>
 </html>
