@@ -436,6 +436,7 @@
   </div>
 </section>
 
+{{#push "scripts"}}
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const calculatorSection = document.querySelector("[data-weight-calculator]");
@@ -738,3 +739,4 @@
     updateResults();
   });
 </script>
+{{/push}}

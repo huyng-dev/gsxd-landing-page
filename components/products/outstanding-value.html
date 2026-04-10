@@ -46,7 +46,8 @@
     </div>
   </section>
 
-   <style>
+   {{#push "styles"}}
+<style>
       .value-image-item {
          transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
          cursor: pointer;
@@ -74,8 +75,10 @@
          }
       }
    </style>
+{{/push}}
 
-   <script>
+   {{#push "scripts"}}
+<script>
       document.addEventListener("DOMContentLoaded", () => {
          const valueSection = document.querySelector("#value-title")?.closest("section");
          if (!valueSection) return;
@@ -121,3 +124,4 @@
          });
       });
    </script>
+{{/push}}

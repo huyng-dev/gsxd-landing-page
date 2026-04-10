@@ -31,6 +31,7 @@
   </div>
 </section>
 
+{{#push "scripts"}}
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const section = document.querySelector(".showroom-container")?.closest("section");
@@ -74,3 +75,4 @@
     updateActiveDot();
   });
 </script>
+{{/push}}

@@ -301,7 +301,7 @@
           />
         </button>
         <a
-          href="/gio-hang.html"
+          href="/cart/gio-hang.html"
           class="hover:text-secondary transition-colors"
           aria-label="Cart"
         >
@@ -353,7 +353,7 @@
             />
           </button>
           <a
-            href="/gio-hang.html"
+            href="/cart/gio-hang.html"
             class="hover:text-secondary transition-colors"
             aria-label="Cart"
           >
@@ -621,6 +621,7 @@
   </div>
 </header>
 
+{{#push "scripts"}}
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     // 0. Sticky header scroll effect (home page only)
@@ -758,3 +759,4 @@
     }
   });
 </script>
+{{/push}}

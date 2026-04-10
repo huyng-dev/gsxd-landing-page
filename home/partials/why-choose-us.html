@@ -38,7 +38,8 @@
       </div>
     </div>
 
-    <script>
+    {{#push "scripts"}}
+<script>
       (function () {
         const counters = document.querySelectorAll('.stat-number');
         if (!counters.length) return;
@@ -100,5 +101,6 @@
         counters.forEach((el) => observer.observe(el));
       })();
     </script>
+{{/push}}
   </div>
 </section>

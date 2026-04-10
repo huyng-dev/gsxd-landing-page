@@ -1,56 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Hải Ceramics - Ngói và Gạch Hoa Truyền Thống</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    {{{stack "styles"}}}
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thanh Hải Ceramics - Ngói và Gạch Hoa Truyền Thống</title>
-  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  {{{stack "styles"}}}
-</head>
+  <body data-page="index" class="bg-white">
+    {{> components/header isHome=true}}
 
-<body data-page="index" class="bg-white">
-  {{> components/header isHome=true}}
+    <main>
+      {{> home/partials/banner}} {{> home/partials/works}} {{>
+      home/partials/partners}} {{> home/partials/products-ngoi-am-duong}} {{>
+      home/partials/products-ngoi-hai}} {{> home/partials/products-gach-hoa}}
+      {{> home/partials/thank-you}}
+      <section class="bg-neutral-2 pt-16 lg:pt-20 overflow-hidden">
+        <div class="w-[85%] max-w-[1320px] mx-auto mb-12">
+          <h2
+            class="text-secondary text-2xl lg:text-4xl font-bold uppercase"
+            data-aos="fade-up"
+          >
+            Giải thưởng & thành tựu
+          </h2>
+        </div>
+        {{> components/home-awards}}
+      </section>
+      {{> home/partials/press}} {{> home/partials/why-choose-us}} {{>
+      home/partials/showroom}}
+    </main>
 
-  <main>
-    {{> home/partials/banner}}
-    {{> home/partials/works}}
-    {{> home/partials/partners}}
-    {{> home/partials/products-ngoi-am-duong}}
-    {{> home/partials/products-ngoi-hai}}
-    {{> home/partials/products-gach-hoa}}
-    {{> home/partials/thank-you}}
-    <section class="bg-neutral-2 pt-16 lg:pt-20 overflow-hidden">
-      <div class="w-[85%] max-w-[1320px] mx-auto mb-12">
-        <h2 class="text-secondary text-2xl lg:text-4xl font-bold uppercase" data-aos="fade-up">Giải thưởng & thành tựu
-        </h2>
-      </div>
-      {{> components/home-awards}}
-    </section>
-    {{> home/partials/press}}
-    {{> home/partials/why-choose-us}}
-    {{> home/partials/showroom}}
-  </main>
+    {{> components/footer}}
 
-  {{> components/footer}}
+    <script type="module" src="/assets/js/main.js"></script>
 
-  <script type="module" src="/assets/js/main.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  {{{stack "scripts"}}}
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100,
-    });
-  </script>
-
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    {{{stack "scripts"}}}
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+    </script>
+  </body>
 </html>

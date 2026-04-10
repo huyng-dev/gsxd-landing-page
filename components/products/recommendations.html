@@ -2,7 +2,8 @@
   class="w-full pb-12 md:pb-16 bg-background-secondary relative {{#if showDecor}}overflow-visible{{/if}}"
   data-aos="fade-up"
 >
-  <style>
+  {{#push "styles"}}
+<style>
     .custom-recommend-scrollbar::-webkit-scrollbar {
       height: 4px;
     }
@@ -22,6 +23,7 @@
       scrollbar-color: #c76e00cc rgba(0, 0, 0, 0.05);
     }
   </style>
+{{/push}}
 
   {{#if showDecor}}
   <!-- Decorative image -->

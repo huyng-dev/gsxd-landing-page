@@ -3,7 +3,8 @@
   class="w-full bg-background-secondary pb-16 relative overflow-visible animate-fade-in-up xl:min-h-[760px]"
   data-aos="fade-up"
 >
-  <style>
+  {{#push "styles"}}
+<style>
     .product-works-swiper .swiper-wrapper {
       display: flex;
       align-items: flex-end;
@@ -63,6 +64,7 @@
       will-change: opacity, transform;
     }
   </style>
+{{/push}}
 
   <!-- Section Title -->
   <div class="text-center mb-10 md:mb-16">
@@ -217,6 +219,7 @@
   </div>
 </section>
 
+{{#push "scripts"}}
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var swiperEl = document.querySelector(".product-works-swiper");
@@ -312,3 +315,4 @@
     });
   });
 </script>
+{{/push}}

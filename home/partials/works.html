@@ -75,6 +75,7 @@
   </div>
 </section>
 
+{{#push "styles"}}
 <style>
   .works-carousel {
     scroll-behavior: smooth;
@@ -105,7 +106,9 @@
     cursor: pointer;
   }
 </style>
+{{/push}}
 
+{{#push "scripts"}}
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const worksSection = document.querySelector(".works-carousel-container")?.closest("section");
@@ -163,3 +166,4 @@
     updateScrollbar();
   });
 </script>
+{{/push}}

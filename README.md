@@ -13,7 +13,8 @@ README nay duoc viet theo hien trang codebase thuc te, bao gom cau truc trang, l
   - PostCSS + Autoprefixer
   - vite-plugin-handlebars (tai su dung partials)
 - Kieu route:
-  - Root route: `index.html`, `gio-hang.html`, `thanh-toan.html`
+  - Root route: `index.html`
+  - Cart route: `cart/gio-hang.html`, `cart/thanh-toan.html`
   - Nested route theo folder: `about/index.html`, `products/...`, `news/...`, ...
 - So trang HTML nguon hien tai (khong tinh `dist/`, `components/`, `node_modules/`): **41 trang**
 
@@ -70,8 +71,9 @@ npm run preview
 ```text
 .
 ├─ index.html
-├─ gio-hang.html
-├─ thanh-toan.html
+├─ cart/
+│  ├─ gio-hang.html
+│  └─ thanh-toan.html
 ├─ about/
 ├─ contact/
 ├─ dich-vu-khach-hang/
@@ -150,6 +152,8 @@ JS/CSS rieng theo page khong dat trong file module doc lap nua ma duoc dat truc 
 
 JS/CSS cua component duoc dat ngay trong partial component trong `components/**` hoac `*/partials/**`.
 
+Voi component/partial co inline CSS/JS, uu tien bo trong `{{#push "styles"}}...{{/push}}` va `{{#push "scripts"}}...{{/push}}` de page render qua stack.
+
 Muc tieu la tach ro: phan "dung chung" o `main.js` va phan "dac thu" nam cung noi su dung.
 
 ## 7. Danh Muc Trang Hien Co
@@ -157,10 +161,13 @@ Muc tieu la tach ro: phan "dung chung" o `main.js` va phan "dac thu" nam cung no
 ### 7.1 Trang root
 
 - `index.html`
-- `gio-hang.html`
-- `thanh-toan.html`
 
-### 7.2 Trang theo nhom
+### 7.2 Trang cart
+
+- `cart/gio-hang.html`
+- `cart/thanh-toan.html`
+
+### 7.3 Trang theo nhom
 
 - `about/index.html`
 - `contact/index.html`
@@ -181,7 +188,7 @@ Tong cong: **41** HTML pages nguon.
 
 1. Tao file HTML moi trong root hoac folder con.
 2. Neu can JS/CSS rieng cho page, dat truc tiep trong page do bang the `<script>` / `<style>`.
-3. Neu la JS/CSS cua component, dat trong partial component tuong ung trong `components/**` hoac partial folder cua page.
+3. Neu la JS/CSS cua component, dat trong partial component tuong ung trong `components/**` hoac partial folder cua page, va wrap bang `push` de page in qua `stack`.
 4. Chay `npm run dev` de test route.
 
 ### 8.2 Them partial moi
