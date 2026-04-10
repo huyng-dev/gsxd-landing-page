@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lan Can Gốm Sứ - Thanh Hải Ceramics</title>
-  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap');
   </style>
-  <link rel="stylesheet" href="/src/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
-  {{> header}}
-  {{> catalog-button}}
+  {{> components/header}}
+  {{> components/catalog-button}}
   
   <main class="flex-grow">
             <!-- Banner Section -->
@@ -23,7 +23,7 @@
                 <!-- Background Image -->
                 <div class="absolute inset-0 z-0">
                     <img
-                        src="/src/assets/images/about-banner.jpg"
+                        src="/assets/images/about-banner.jpg"
                         alt="About Banner"
                         class="w-full h-full object-cover"
                     />
@@ -86,12 +86,12 @@
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
                                     <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/src/assets/images/lan-can-01.jpg"
+                                            src="/assets/images/lan-can-01.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
                                         <div class="product-overlay">
-                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <img src="/assets/images/eye.svg" alt="Search">
                                             <span>Xem chi tiết</span>
                                         </div>
                                     </div>
@@ -104,12 +104,12 @@
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
                                     <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/src/assets/images/lan-can-02.jpg"
+                                            src="/assets/images/lan-can-02.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
                                         <div class="product-overlay">
-                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <img src="/assets/images/eye.svg" alt="Search">
                                             <span>Xem chi tiết</span>
                                         </div>
                                     </div>
@@ -122,12 +122,12 @@
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
                                     <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/src/assets/images/lan-can-03.jpg"
+                                            src="/assets/images/lan-can-03.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
                                         <div class="product-overlay">
-                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <img src="/assets/images/eye.svg" alt="Search">
                                             <span>Xem chi tiết</span>
                                         </div>
                                     </div>
@@ -140,12 +140,12 @@
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
                                     <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/src/assets/images/lan-can-01.jpg"
+                                            src="/assets/images/lan-can-01.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
                                         <div class="product-overlay">
-                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <img src="/assets/images/eye.svg" alt="Search">
                                             <span>Xem chi tiết</span>
                                         </div>
                                     </div>
@@ -174,7 +174,7 @@
                         <div class="w-full lg:w-[45%] mr-0 lg:mr-[10%] flex flex-col justify-stretch">
                             <div class="w-full flex-grow relative shadow-xl overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px] border border-black/10">
                                 <img
-                                    src="/src/assets/images/lan-can-giot-le.jpg"
+                                    src="/assets/images/lan-can-giot-le.jpg"
                                     alt=""
                                     class="absolute inset-0 w-full h-full object-cover"
                                 />
@@ -183,7 +183,7 @@
                                 <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300">
                                     <div class="relative w-full flex items-center justify-center">
                                         <img
-                                            src="/src/assets/images/brush.svg"
+                                            src="/assets/images/brush.svg"
                                             alt=""
                                             class="w-full drop-shadow-xl opacity-90"
                                         />
@@ -216,7 +216,7 @@
                         <div class="w-full lg:w-[45%] ml-0 lg:ml-[10%] flex flex-col justify-stretch">
                             <div class="w-full flex-grow relative shadow-xl overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px] border border-black/10">
                                 <img
-                                    src="/src/assets/images/lan-can-bau.png"
+                                    src="/assets/images/lan-can-bau.png"
                                     alt=""
                                     class="absolute inset-0 w-full h-full object-cover"
                                 />
@@ -225,7 +225,7 @@
                                 <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300">
                                     <div class="relative w-full flex items-center justify-center">
                                         <img
-                                            src="/src/assets/images/brush.svg"
+                                            src="/assets/images/brush.svg"
                                             alt=""
                                             class="w-full drop-shadow-xl opacity-90"
                                         />
@@ -247,12 +247,12 @@
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
                                     <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/src/assets/images/lan-can-02.jpg"
+                                            src="/assets/images/lan-can-02.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
                                         <div class="product-overlay">
-                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <img src="/assets/images/eye.svg" alt="Search">
                                             <span>Xem chi tiết</span>
                                         </div>
                                     </div>
@@ -265,12 +265,12 @@
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
                                     <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/src/assets/images/lan-can-04.jpg"
+                                            src="/assets/images/lan-can-04.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
                                         <div class="product-overlay">
-                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <img src="/assets/images/eye.svg" alt="Search">
                                             <span>Xem chi tiết</span>
                                         </div>
                                     </div>
@@ -283,12 +283,12 @@
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
                                     <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/src/assets/images/lan-can-05.jpg"
+                                            src="/assets/images/lan-can-05.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
                                         <div class="product-overlay">
-                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <img src="/assets/images/eye.svg" alt="Search">
                                             <span>Xem chi tiết</span>
                                         </div>
                                     </div>
@@ -301,12 +301,12 @@
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
                                     <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/src/assets/images/lan-can-06.jpg"
+                                            src="/assets/images/lan-can-06.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
                                         <div class="product-overlay">
-                                            <img src="/src/assets/images/eye.svg" alt="Search">
+                                            <img src="/assets/images/eye.svg" alt="Search">
                                             <span>Xem chi tiết</span>
                                         </div>
                                     </div>
@@ -349,12 +349,12 @@
                         >
                             <div class="product-card relative w-full aspect-[2/1] md:aspect-[19/10] mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                 <img
-                                    src="/src/assets/images/lan-can-giot-le.jpg"
+                                    src="/assets/images/lan-can-giot-le.jpg"
                                     alt="Lan Can Giọt Lệ"
                                     class="w-full h-full object-cover"
                                 />
                                 <div class="product-overlay">
-                                    <img src="/src/assets/images/eye.svg" alt="Search">
+                                    <img src="/assets/images/eye.svg" alt="Search">
                                     <span>Xem chi tiết</span>
                                 </div>
                             </div>
@@ -371,12 +371,12 @@
                         >
                             <div class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                 <img
-                                    src="/src/assets/images/lan-can-07.jpg"
+                                    src="/assets/images/lan-can-07.jpg"
                                     alt="Lan Can Bầu"
                                     class="w-full h-full object-cover"
                                 />
                                 <div class="product-overlay">
-                                    <img src="/src/assets/images/eye.svg" alt="Search">
+                                    <img src="/assets/images/eye.svg" alt="Search">
                                     <span>Xem chi tiết</span>
                                 </div>
                             </div>
@@ -393,12 +393,12 @@
                         >
                             <div class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                 <img
-                                    src="/src/assets/images/lan-can-08.jpg"
+                                    src="/assets/images/lan-can-08.jpg"
                                     alt="Lan Can Chữ Thọ"
                                     class="w-full h-full object-cover"
                                 />
                                 <div class="product-overlay">
-                                    <img src="/src/assets/images/eye.svg" alt="Search">
+                                    <img src="/assets/images/eye.svg" alt="Search">
                                     <span>Xem chi tiết</span>
                                 </div>
                             </div>
@@ -410,11 +410,11 @@
               </div>
             </section>
 
-            {{> products/outstanding-value}}
+            {{> components/products/outstanding-value}}
 
-            {{> products/journey-video}}
+            {{> components/products/journey-video}}
 
-            {{> products/works}}
+            {{> components/products/works}}
 
             <!-- FAQ Section -->
             <section
@@ -422,13 +422,13 @@
                 data-aos="fade-up"
             >
 
-                {{> products/faq-content}}
+                {{> components/products/faq-content}}
             </section>
   </main>
 
-  {{> footer hideNewsletter=true}}
+  {{> components/footer hideNewsletter=true}}
   
-  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 800, once: true, offset: 100 });</script>

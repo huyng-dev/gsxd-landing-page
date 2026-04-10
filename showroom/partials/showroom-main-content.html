@@ -1,0 +1,108 @@
+<!-- Main Content -->
+<section
+  class="w-full max-w-[1920px] px-6 lg:px-[8%] 2xl:pl-[12.5%] mx-auto py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 xl:gap-20 items-center overflow-hidden"
+>
+  <!-- Left: Text Info -->
+  <div
+    class="lg:col-span-5 flex flex-col gap-6 relative z-10"
+    data-aos="fade-right"
+  >
+    <h2 class="font-arima text-3xl md:text-4xl lg:text-[48px] font-medium leading-[1.2]">Showroom Bát Tràng</h2>
+
+    <div class="h-[1px] w-[100%] lg:ml-[20%] lg:w-[120%] bg-white/20 mb-16"></div>
+
+    <div class="flex flex-col gap-5 text-xs mb-8">
+      <div class="grid grid-cols-[100px_1fr] md:grid-cols-[100px_1fr] gap-4 items-start">
+        <span class="font-medium tracking-[0.1em] uppercase text-xs mt-[3px]">ĐỊA CHỈ</span>
+        <span class="font-bold leading-snug w-full max-w-[280px] text-xs">18 Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</span>
+      </div>
+      <div class="grid grid-cols-[100px_1fr] md:grid-cols-[100px_1fr] gap-4 items-center mt-2">
+        <span class="font-medium tracking-[0.1em] uppercase text-xs">ĐIỆN THOẠI</span>
+        <span class="font-bold text-xs">0966 55 8808</span>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-5 w-full max-w-[360px]">
+      <a
+        href="mailto:contact@thanhhaiceramics.com"
+        class="bg-gradient-to-r from-[#C76E00] via-[#DF8828] to-[#E79735] hover:from-secondary hover:to-[#DF8828] text-white flex flex-col items-center justify-center py-4 px-8 min-w-[180px] w-full transition-colors shadow-lg"
+      >
+        <img
+          src="/assets/images/mail.svg"
+          alt=""
+          class="mb-1.5 shrink-0"
+        />
+        <span class="font-extrabold text-[13px]">Liên hệ ngay</span>
+      </a>
+      <a
+        href="https://maps.google.com/?q=18+Giang+Cao,+Bat+Trang,+Gia+Lam,+Ha+Noi"
+        target="_blank"
+        class="bg-primary hover:bg-[#3d3f38] text-white flex flex-col items-center justify-center py-4 px-8 min-w-[180px] w-full transition-colors border-2 border-[#DF8828]"
+      >
+        <img
+          src="/assets/images/direction.svg"
+          alt=""
+          class="mb-1.5 shrink-0"
+        />
+        <span class="font-extrabold text-[13px]">Đường đi</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Right: Slider -->
+  <div
+    class="lg:col-span-7 relative h-auto pl-0 xl:pl-10 z-20"
+    data-aos="fade-left"
+  >
+    <div
+      class="swiper showroomSwiper h-[400px] md:h-[500px] lg:h-[600px] relative w-full overflow-visible [clip-path:inset(-100px_-100vw_-100px_-20px)] lg:[clip-path:inset(-50px_-100vw_-50px_-40px)] xl:[clip-path:inset(-50px_-100vw_-50px_-60px)]"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide w-[85%] sm:w-[75%] h-full">
+          <img
+            src="/assets/images/showroom-01.jpg"
+            alt="Showroom 01"
+            class="w-full h-full object-cover shadow-2xl"
+          />
+        </div>
+        <div class="swiper-slide w-[85%] sm:w-[75%] h-full">
+          <img
+            src="/assets/images/showroom-02.jpg"
+            alt="Showroom 02"
+            class="w-full h-full object-cover shadow-2xl"
+          />
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="absolute bottom-[12%] right-0 sm:right-[-10%] z-20 drop-shadow-xl">
+        <div class="relative w-[40px] h-[64px] md:w-[56px] md:h-[80px]">
+          <button
+            class="showroom-prev absolute bottom-0 left-0 w-8 h-8 md:w-10 md:h-10 bg-white flex items-center justify-center transition-all duration-300 hover:bg-gray-50 [&.swiper-button-disabled]:opacity-40 [&.swiper-button-disabled]:cursor-not-allowed z-10"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="#2E2F2A"
+            >
+              <path d="M16 19V5l-11 7z" />
+            </svg>
+          </button>
+          <button
+            class="showroom-next absolute top-0 right-0 w-8 h-8 md:w-10 md:h-10 bg-white flex items-center justify-center transition-all duration-300 hover:bg-gray-50 [&.swiper-button-disabled]:opacity-40 [&.swiper-button-disabled]:cursor-not-allowed z-20 shadow-md"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="#2E2F2A"
+            >
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

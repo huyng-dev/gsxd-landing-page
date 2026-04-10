@@ -10,12 +10,12 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/src/assets/images/logo.png"
+      href="/assets/images/logo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
-      href="/src/assets/css/main.css"
+      href="/assets/css/main.css"
     />
   </head>
 
@@ -23,152 +23,24 @@
     data-page="customer-service"
     class="bg-white"
   >
-    {{> header}}
+    {{> components/header}}
 
     <main class="bg-background-secondary min-h-screen font-archivo">
       <div class="w-[85%] max-w-[1320px] mx-auto">
-        {{> customer-service/breadcrumb currentPage="Tải Catalog"}}
+        {{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Tải Catalog"}}
 
         <div class="flex flex-col lg:flex-row gap-12 mb-6 lg:mb-12">
-          {{> customer-service/sidebar activeCatalog=true}}
-          <div class="flex-1 lg:pl-12">
-            <h1 class="text-3xl lg:text-[36px] font-arima font-medium text-primary mb-6 mt-[-6px]">Tải Catalog</h1>
-
-            <p class="text-primary/80 text-sm lg:text-base leading-relaxed mb-10 max-w-[1000px]">
-              Để quý khách dễ dàng lựa chọn giải pháp tối ưu, Gốm sứ Thanh Hải trân trọng giới thiệu hệ thống catalog chuyên biệt theo từng
-              dòng sản phẩm từ ngói lợp, gạch trang trí đến gốm phong thủy. Bên cạnh đó, bộ catalog tổng thể sẽ giúp quý vị có cái nhìn toàn
-              diện nhất về hệ sinh thái sản phẩm đa dạng mà chúng tôi cung cấp.
-            </p>
-
-            <div class="space-y-12">
-              <!-- Featured Catalog -->
-              <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 bg-transparent">
-                <div class="w-full lg:w-[480px] aspect-[1/1.1] bg-[#D9D9D9] rounded-sm flex-shrink-0"></div>
-                <div class="flex flex-col justify-end">
-                  <div class="flex items-center gap-3 mb-2.5">
-                    <h3 class="text-sm font-semibold text-primary">Catalog Dự án</h3>
-                  </div>
-                  <div>
-                    <button
-                      class="flex items-center font-extralight justify-between gap-4 px-2 py-1 border border-primary text-primary text-xs lg:text-sm hover:bg-primary hover:text-white transition-all w-fit min-w-[110px]"
-                    >
-                      Xem chi tiết
-                      <img src="/src/assets/images/triangle.svg" alt="" class="w-[6px] h-[10px] rotate-180 scale-x-[-1]" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Catalog Grid -->
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-                <!-- Item 1 -->
-                <div class="flex flex-col">
-                  <div class="aspect-[1/1.1] bg-[#D9D9D9] rounded-sm mb-6"></div>
-                  <div class="flex items-center gap-3 mb-2.5">
-                    <h3 class="text-sm font-semibold text-primary">Catalog Dự án</h3>
-                  </div>
-                  <div>
-                    <button
-                      class="flex items-center font-extralight justify-between gap-4 px-2 py-1 border border-primary text-primary text-sm hover:bg-primary hover:text-white transition-all w-fit min-w-[110px]"
-                    >
-                      Xem chi tiết
-                      <img src="/src/assets/images/triangle.svg" alt="" class="w-[6px] h-[10px] rotate-180 scale-x-[-1]" />
-                    </button>
-                  </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="flex flex-col">
-                  <div class="aspect-[1/1.1] bg-[#D9D9D9] rounded-sm mb-6"></div>
-                  <div class="flex items-center gap-3 mb-2.5">
-                    <h3 class="text-sm font-semibold text-primary">Catalog Dự án</h3>
-                  </div>
-                  <div>
-                    <button
-                      class="flex items-center font-extralight justify-between gap-4 px-2 py-1 border border-primary text-primary text-xs lg:text-sm hover:bg-primary hover:text-white transition-all w-fit min-w-[110px]"
-                    >
-                      Xem chi tiết
-                      <img src="/src/assets/images/triangle.svg" alt="" class="w-[6px] h-[10px] rotate-180 scale-x-[-1]" />
-                    </button>
-                  </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="flex flex-col">
-                  <div class="aspect-[1/1.1] bg-[#D9D9D9] rounded-sm mb-6"></div>
-                  <div class="flex items-center gap-3 mb-2.5">
-                    <h3 class="text-sm font-semibold text-primary">Catalog Dự án</h3>
-                  </div>
-                  <div>
-                    <button
-                      class="flex items-center font-extralight justify-between gap-4 px-2 py-1 border border-primary text-primary text-xs lg:text-sm hover:bg-primary hover:text-white transition-all w-fit min-w-[110px]"
-                    >
-                      Xem chi tiết
-                      <img src="/src/assets/images/triangle.svg" alt="" class="w-[6px] h-[10px] rotate-180 scale-x-[-1]" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-                <!-- Item 1 -->
-                <div class="flex flex-col">
-                  <div class="aspect-[1/1.1] bg-[#D9D9D9] rounded-sm mb-6"></div>
-                  <div class="flex items-center gap-3 mb-2.5">
-                    <h3 class="text-sm font-semibold text-primary">Catalog Dự án</h3>
-                  </div>
-                  <div>
-                    <button
-                      class="flex items-center font-extralight justify-between gap-4 px-2 py-1 border border-primary text-primary text-xs lg:text-sm hover:bg-primary hover:text-white transition-all w-fit min-w-[110px]"
-                    >
-                      Xem chi tiết
-                      <img src="/src/assets/images/triangle.svg" alt="" class="w-[6px] h-[10px] rotate-180 scale-x-[-1]" />
-                    </button>
-                  </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="flex flex-col">
-                  <div class="aspect-[1/1.1] bg-[#D9D9D9] rounded-sm mb-6"></div>
-                  <div class="flex items-center gap-3 mb-2.5">
-                    <h3 class="text-sm font-semibold text-primary">Catalog Dự án</h3>
-                  </div>
-                  <div>
-                    <button
-                      class="flex items-center font-extralight justify-between gap-4 px-2 py-1 border border-primary text-primary text-xs lg:text-sm hover:bg-primary hover:text-white transition-all w-fit min-w-[110px]"
-                    >
-                      Xem chi tiết
-                      <img src="/src/assets/images/triangle.svg" alt="" class="w-[6px] h-[10px] rotate-180 scale-x-[-1]" />
-                    </button>
-                  </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="flex flex-col">
-                  <div class="aspect-[1/1.1] bg-[#D9D9D9] rounded-sm mb-6"></div>
-                  <div class="flex items-center gap-3 mb-2.5">
-                    <h3 class="text-sm font-semibold text-primary">Catalog Dự án</h3>
-                  </div>
-                  <div>
-                    <button
-                      class="flex items-center font-extralight justify-between gap-4 px-2 py-1 border border-primary text-primary text-xs lg:text-sm hover:bg-primary hover:text-white transition-all w-fit min-w-[110px]"
-                    >
-                      Xem chi tiết
-                      <img src="/src/assets/images/triangle.svg" alt="" class="w-[6px] h-[10px] rotate-180 scale-x-[-1]" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {{> dich-vu-khach-hang/partials/customer-service/sidebar activeCatalog=true}}
+          {{> dich-vu-khach-hang/partials/customer-service/catalog-content}}
         </div>
-        {{> faq/faq-contact}}
+        {{> components/faq/faq-contact}}
       </div>
     </main>
 
-    {{> footer}}
+    {{> components/footer}}
     <script
       type="module"
-      src="/src/js/main.js"
+      src="/assets/js/main.js"
     ></script>
   </body>
 </html>

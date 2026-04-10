@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thanh toán - Thanh Hải Ceramics</title>
-  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/src/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
 <body data-page="checkout" class="bg-white">
-  {{> header}}
+  {{> components/header}}
 
   <main class="bg-background-secondary min-h-screen py-10">
     <div class="w-[85%] max-w-[1320px] mx-auto pb-12 md:pb-16">
@@ -98,7 +98,7 @@
                     <!-- Item 1 -->
                     <div class="flex items-start gap-6 border-t border-gray-300 pt-6 last:border-0">
                         <div class="relative w-20 h-20 lg:w-24 lg:h-24 flex-shrink-0 border border-gray-300 rounded-md overflow-hidden bg-white p-2">
-                            <img src="/src/assets/images/ngoi-van-mieu-detail-2.png" alt="Ngói âm dương" class="w-full h-full object-contain">
+                            <img src="/assets/images/ngoi-van-mieu-detail-2.png" alt="Ngói âm dương" class="w-full h-full object-contain">
                             <span class="absolute -top-1 -right-1 bg-secondary text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-sm">20</span>
                         </div>
                         <div class="flex-1 flex justify-between h-full py-1">
@@ -121,7 +121,7 @@
                     <!-- Item 2 -->
                     <div class="flex items-start gap-6 pb-6 border-b border-gray-100 last:border-0">
                         <div class="relative w-20 h-20 lg:w-24 lg:h-24 flex-shrink-0 border border-gray-300 rounded-md overflow-hidden bg-white p-2">
-                            <img src="/src/assets/images/ngoi-van-mieu-detail-2.png" alt="Ngói âm dương" class="w-full h-full object-contain">
+                            <img src="/assets/images/ngoi-van-mieu-detail-2.png" alt="Ngói âm dương" class="w-full h-full object-contain">
                             <span class="absolute -top-1 -right-1 bg-secondary text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-sm">50</span>
                         </div>
                         <div class="flex-1 flex justify-between h-full py-1">
@@ -170,12 +170,12 @@
         </div>
       </div>
     </div>
-    {{> faq/faq-contact}}
+    {{> components/faq/faq-contact}}
   </main>
 
-  {{> footer}}
+  {{> components/footer}}
 
-  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
 </body>
 
 </html>

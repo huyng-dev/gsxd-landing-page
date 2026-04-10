@@ -10,7 +10,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/src/assets/images/logo.png"
+      href="/assets/images/logo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -18,7 +18,7 @@
     </style>
     <link
       rel="stylesheet"
-      href="/src/assets/css/main.css"
+      href="/assets/css/main.css"
     />
     <link
       rel="stylesheet"
@@ -33,7 +33,7 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> header}} {{> catalog-button}}
+    {{> components/header}} {{> components/catalog-button}}
 
     <main class="flex-grow">
       <!-- Banner Section -->
@@ -41,7 +41,7 @@
         <!-- Background Image -->
         <div class="relative z-0">
           <img
-            src="/src/assets/images/den-gom-banner.png"
+            src="/assets/images/den-gom-banner.png"
             alt="Đèn Gốm Sứ Banner"
             class="w-full h-auto -mt-[60px] md:-mt-[100px] object-cover"
           />
@@ -112,10 +112,10 @@
           >
             <div class="aspect-[4/6] overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="/src/assets/images/den-gom-01.png"
+                src="/assets/images/den-gom-01.png"
                 alt="Đèn gốm sứ sân vườn"
                 class="w-full h-full object-cover"
-                onerror="this.src = '/src/assets/images/ngoi-01.jpg'"
+                onerror="this.src = '/assets/images/ngoi-01.jpg'"
               />
             </div>
           </div>
@@ -128,17 +128,17 @@
           >
             <div class="relative overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="/src/assets/images/den-gom-02.png"
+                src="/assets/images/den-gom-02.png"
                 alt="Đèn gốm sứ trang trí kiến trúc"
                 class="w-full h-auto aspect-[6/5] object-cover"
-                onerror="this.src = '/src/assets/images/about-01.png'"
+                onerror="this.src = '/assets/images/about-01.png'"
               />
 
               <!-- Decorative Text Box at the bottom -->
               <div class="absolute bottom-[-10px] left-0 w-full z-10">
                 <div class="relative rounded-b-2xl overflow-hidden">
                   <img
-                    src="/src/assets/images/den-gom-decorate.svg"
+                    src="/assets/images/den-gom-decorate.svg"
                     class="w-full h-auto block scale-[1.01] origin-bottom"
                     alt="nền trang trí"
                     onerror="this.style.display = 'none'"
@@ -154,7 +154,7 @@
         </div>
       </section>
 
-      <div class="w-[85%] max-w-[1320px] mx-auto pb-4">{{> products/product-grid-2x4 category="den-gom-su"}}</div>
+      <div class="w-[85%] max-w-[1320px] mx-auto pb-4">{{> components/products/product-grid-2x4 category="den-gom-su"}}</div>
 
       <!-- Image Section 2 -->
       <section class="pb-16 md:pb-24 max-w-[1920px] mx-auto">
@@ -167,17 +167,17 @@
           >
             <div class="relative overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="/src/assets/images/den-gom-02.png"
+                src="/assets/images/den-gom-02.png"
                 alt="Đèn gốm sứ trang trí kiến trúc"
                 class="w-full h-auto aspect-[6/5] object-cover"
-                onerror="this.src = '/src/assets/images/about-01.png'"
+                onerror="this.src = '/assets/images/about-01.png'"
               />
 
               <!-- Decorative Text Box at the bottom -->
               <div class="absolute bottom-[-10px] left-0 w-full z-10">
                 <div class="relative rounded-b-2xl overflow-hidden">
                   <img
-                    src="/src/assets/images/den-gom-decorate.svg"
+                    src="/assets/images/den-gom-decorate.svg"
                     class="w-full h-auto block scale-[1.01] origin-bottom"
                     alt="nền trang trí"
                     onerror="this.style.display = 'none'"
@@ -197,17 +197,17 @@
           >
             <div class="aspect-[4/6] overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="/src/assets/images/den-gom-01.png"
+                src="/assets/images/den-gom-01.png"
                 alt="Đèn gốm sứ sân vườn"
                 class="w-full h-full object-cover"
-                onerror="this.src = '/src/assets/images/ngoi-01.jpg'"
+                onerror="this.src = '/assets/images/ngoi-01.jpg'"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <div class="w-[85%] max-w-[1320px] mx-auto">{{> products/product-grid-2x4 category="den-gom-su"}}</div>
+      <div class="w-[85%] max-w-[1320px] mx-auto">{{> components/products/product-grid-2x4 category="den-gom-su"}}</div>
 
       <!-- Advantages Section -->
       <section class="pb-16 bg-background-secondary overflow-hidden pt-4">
@@ -230,7 +230,7 @@
                 class="relative aspect-square overflow-hidden rounded-xl shadow-2xl flex flex-col justify-center items-center text-center p-6 lg:p-8"
               >
                 <img
-                  src="/src/assets/images/den-gom-bg.png"
+                  src="/assets/images/den-gom-bg.png"
                   class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 scale-[1.02]"
                   alt="background"
                 />
@@ -243,7 +243,7 @@
                 <div class="absolute bottom-[-1px] left-0 w-full z-30">
                   <div class="relative overflow-hidden rounded-b-xl border-b border-black/5">
                     <img
-                      src="/src/assets/images/den-gom-decorate-2.svg"
+                      src="/assets/images/den-gom-decorate-2.svg"
                       class="w-full h-auto block scale-x-110"
                       alt="decorate"
                     />
@@ -265,7 +265,7 @@
                 class="relative aspect-square overflow-hidden rounded-xl shadow-2xl flex flex-col justify-center items-center text-center p-6 lg:p-8"
               >
                 <img
-                  src="/src/assets/images/den-gom-bg.png"
+                  src="/assets/images/den-gom-bg.png"
                   class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 scale-[1.02]"
                   alt="background"
                 />
@@ -277,7 +277,7 @@
                 <div class="absolute bottom-[-1px] left-0 w-full z-30">
                   <div class="relative overflow-hidden rounded-b-xl border-b border-black/5">
                     <img
-                      src="/src/assets/images/den-gom-decorate-2.svg"
+                      src="/assets/images/den-gom-decorate-2.svg"
                       class="w-full h-auto block scale-x-110"
                       alt="decorate"
                     />
@@ -299,7 +299,7 @@
                 class="relative aspect-square overflow-hidden rounded-xl shadow-2xl flex flex-col justify-center items-center text-center p-6 lg:p-8"
               >
                 <img
-                  src="/src/assets/images/den-gom-bg.png"
+                  src="/assets/images/den-gom-bg.png"
                   class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 scale-[1.02]"
                   alt="background"
                 />
@@ -311,7 +311,7 @@
                 <div class="absolute bottom-[-1px] left-0 w-full z-30">
                   <div class="relative overflow-hidden rounded-b-xl border-b border-black/5">
                     <img
-                      src="/src/assets/images/den-gom-decorate-2.svg"
+                      src="/assets/images/den-gom-decorate-2.svg"
                       class="w-full h-auto block scale-x-110"
                       alt="decorate"
                     />
@@ -333,7 +333,7 @@
                 class="relative aspect-square overflow-hidden rounded-xl shadow-2xl flex flex-col justify-center items-center text-center p-6 lg:p-8"
               >
                 <img
-                  src="/src/assets/images/den-gom-bg.png"
+                  src="/assets/images/den-gom-bg.png"
                   class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 scale-[1.02]"
                   alt="background"
                 />
@@ -345,7 +345,7 @@
                 <div class="absolute bottom-[-1px] left-0 w-full z-30">
                   <div class="relative overflow-hidden rounded-b-xl border-b border-black/5">
                     <img
-                      src="/src/assets/images/den-gom-decorate-2.svg"
+                      src="/assets/images/den-gom-decorate-2.svg"
                       class="w-full h-auto block scale-x-110"
                       alt="decorate"
                     />
@@ -360,22 +360,22 @@
         </div>
       </section>
 
-      {{> products/fabrication-process}} {{> products/journey-video hideTitle=true}} {{> products/recommendations}}
+      {{> components/products/fabrication-process}} {{> components/products/journey-video hideTitle=true}} {{> components/products/recommendations}}
 
       <!-- FAQ Section -->
       <section
         class="w-full relative pb-32 bg-background-secondary overflow-visible"
         data-aos="fade-up"
       >
-        {{> products/faq-content}}
+        {{> components/products/faq-content}}
       </section>
     </main>
 
-    {{> footer hideNewsletter=true}}
+    {{> components/footer hideNewsletter=true}}
 
     <script
       type="module"
-      src="/src/js/main.js"
+      src="/assets/js/main.js"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -10,7 +10,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/src/assets/images/logo.png"
+      href="/assets/images/logo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -19,7 +19,7 @@
     </style>
     <link
       rel="stylesheet"
-      href="/src/assets/css/main.css"
+      href="/assets/css/main.css"
     />
     <link
       rel="stylesheet"
@@ -31,248 +31,23 @@
     />
   </head>
   <body class="min-h-screen flex flex-col bg-primary text-white font-archivo">
-    {{> header}}
+    {{> components/header}}
 
     <main class="flex-grow">
-      <!-- Top Banner -->
-      <section class="relative w-full h-[220px] md:h-[260px] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-          <img
-            src="/src/assets/images/showroom-banner.png"
-            alt="Showroom Banner"
-            class="w-full h-full object-cover mix-blend-multiply opacity-100"
-          />
-        </div>
-        <div class="relative z-10 text-center text-white px-4 pt-12">
-          <h1 class="text-2xl md:text-[30px] font-bold mb-3 uppercase drop-shadow-lg">SHOWROOM</h1>
-          <p class="text-[11px] md:text-sm text-white drop-shadow-md">
-            <a
-              href="/"
-              class="hover:text-secondary transition-colors"
-              >Trang chủ</a
-            >
-            <svg
-              class="w-2.5 h-2.5 inline-block mx-2 fill-current opacity-80"
-              viewBox="0 0 35 35"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11.5797 31.4214C11.1695 31.0111 10.9391 30.4548 10.9391 29.8747C10.9391 29.2946 11.1695 28.7383 11.5797 28.3281L22.4078 17.5L11.5797 6.67184C11.1937 6.25726 10.9836 5.70915 10.9936 5.14283C11.0036 4.5765 11.2328 4.03612 11.6331 3.63539C12.0334 3.23465 12.5735 3.0048 13.1399 2.99421C13.7062 2.98361 14.2545 3.1931 14.6695 3.57858L27.046 15.9516C27.4561 16.3618 27.6865 16.9182 27.6865 17.4983C27.6865 18.0783 27.4561 18.6347 27.046 19.0449L14.6729 31.4214C14.2627 31.8315 13.7064 32.0619 13.1263 32.0619C12.5462 32.0619 11.9899 31.8315 11.5797 31.4214Z"
-                fill="currentColor"
-              />
-            </svg>
-            <span>Showroom</span>
-          </p>
-        </div>
-      </section>
-
-      <!-- Main Content -->
-      <section
-        class="w-full max-w-[1920px] px-6 lg:px-[8%] 2xl:pl-[12.5%] mx-auto py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 xl:gap-20 items-center overflow-hidden"
-      >
-        <!-- Left: Text Info -->
-        <div
-          class="lg:col-span-5 flex flex-col gap-6 relative z-10"
-          data-aos="fade-right"
-        >
-          <h2 class="font-arima text-3xl md:text-4xl lg:text-[48px] font-medium leading-[1.2]">Showroom Bát Tràng</h2>
-
-          <div class="h-[1px] w-[100%] lg:ml-[20%] lg:w-[120%] bg-white/20 mb-16"></div>
-
-          <div class="flex flex-col gap-5 text-xs mb-8">
-            <div class="grid grid-cols-[100px_1fr] md:grid-cols-[100px_1fr] gap-4 items-start">
-              <span class="font-medium tracking-[0.1em] uppercase text-xs mt-[3px]">ĐỊA CHỈ</span>
-              <span class="font-bold leading-snug w-full max-w-[280px] text-xs">18 Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</span>
-            </div>
-            <div class="grid grid-cols-[100px_1fr] md:grid-cols-[100px_1fr] gap-4 items-center mt-2">
-              <span class="font-medium tracking-[0.1em] uppercase text-xs">ĐIỆN THOẠI</span>
-              <span class="font-bold text-xs">0966 55 8808</span>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-5 w-full max-w-[360px]">
-            <a
-              href="mailto:contact@thanhhaiceramics.com"
-              class="bg-gradient-to-r from-[#C76E00] via-[#DF8828] to-[#E79735] hover:from-secondary hover:to-[#DF8828] text-white flex flex-col items-center justify-center py-4 px-8 min-w-[180px] w-full transition-colors shadow-lg"
-            >
-              <img
-                src="/src/assets/images/mail.svg"
-                alt=""
-                class="mb-1.5 shrink-0"
-              />
-              <span class="font-extrabold text-[13px]">Liên hệ ngay</span>
-            </a>
-            <a
-              href="https://maps.google.com/?q=18+Giang+Cao,+Bat+Trang,+Gia+Lam,+Ha+Noi"
-              target="_blank"
-              class="bg-primary hover:bg-[#3d3f38] text-white flex flex-col items-center justify-center py-4 px-8 min-w-[180px] w-full transition-colors border-2 border-[#DF8828]"
-            >
-              <img
-                src="/src/assets/images/direction.svg"
-                alt=""
-                class="mb-1.5 shrink-0"
-              />
-              <span class="font-extrabold text-[13px]">Đường đi</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Slider -->
-        <div
-          class="lg:col-span-7 relative h-auto pl-0 xl:pl-10 z-20"
-          data-aos="fade-left"
-        >
-          <div
-            class="swiper showroomSwiper h-[400px] md:h-[500px] lg:h-[600px] relative w-full overflow-visible [clip-path:inset(-100px_-100vw_-100px_-20px)] lg:[clip-path:inset(-50px_-100vw_-50px_-40px)] xl:[clip-path:inset(-50px_-100vw_-50px_-60px)]"
-          >
-            <div class="swiper-wrapper">
-              <div class="swiper-slide w-[85%] sm:w-[75%] h-full">
-                <img
-                  src="/src/assets/images/showroom-01.jpg"
-                  alt="Showroom 01"
-                  class="w-full h-full object-cover shadow-2xl"
-                />
-              </div>
-              <div class="swiper-slide w-[85%] sm:w-[75%] h-full">
-                <img
-                  src="/src/assets/images/showroom-02.jpg"
-                  alt="Showroom 02"
-                  class="w-full h-full object-cover shadow-2xl"
-                />
-              </div>
-            </div>
-
-            <!-- Navigation -->
-            <div class="absolute bottom-[12%] right-0 sm:right-[-10%] z-20 drop-shadow-xl">
-              <div class="relative w-[40px] h-[64px] md:w-[56px] md:h-[80px]">
-                <button
-                  class="showroom-prev absolute bottom-0 left-0 w-8 h-8 md:w-10 md:h-10 bg-white flex items-center justify-center transition-all duration-300 hover:bg-gray-50 [&.swiper-button-disabled]:opacity-40 [&.swiper-button-disabled]:cursor-not-allowed z-10"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="#2E2F2A"
-                  >
-                    <path d="M16 19V5l-11 7z" />
-                  </svg>
-                </button>
-                <button
-                  class="showroom-next absolute top-0 right-0 w-8 h-8 md:w-10 md:h-10 bg-white flex items-center justify-center transition-all duration-300 hover:bg-gray-50 [&.swiper-button-disabled]:opacity-40 [&.swiper-button-disabled]:cursor-not-allowed z-20 shadow-md"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="#2E2F2A"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Room Display Content (Symmetrical) -->
-      <section
-        class="w-full max-w-[1920px] px-6 lg:px-[8%] 2xl:pr-[12.5%] mx-auto pb-16 lg:pb-32 lg:pt-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 xl:gap-20 items-center overflow-hidden"
-      >
-        <!-- Left: Slider Image -->
-        <div
-          class="lg:col-span-7 relative h-auto pr-0 xl:pr-10 order-2 lg:order-1 z-20"
-          data-aos="fade-right"
-        >
-          <div
-            class="swiper showroomSwiper2 h-[400px] md:h-[500px] lg:h-[600px] relative w-full overflow-visible [clip-path:inset(-100px_-20px_-100px_-100vw)] lg:[clip-path:inset(-50px_-40px_-50px_-100vw)] xl:[clip-path:inset(-50px_-60px_-50px_-100vw)]"
-          >
-            <div class="swiper-wrapper flex flex-row">
-              <div class="swiper-slide w-[85%] sm:w-[75%] h-full ml-auto">
-                <img
-                  src="/src/assets/images/showroom-02.jpg"
-                  alt="Phòng trưng bày 02"
-                  class="w-full h-full object-cover shadow-2xl"
-                />
-              </div>
-              <div class="swiper-slide w-[85%] sm:w-[75%] h-full">
-                <img
-                  src="/src/assets/images/showroom-01.jpg"
-                  alt="Phòng trưng bày 01"
-                  class="w-full h-full object-cover shadow-2xl"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Text Info -->
-        <div
-          class="lg:col-span-5 flex flex-col gap-6 relative z-10 order-1 lg:order-2 justify-self-end"
-          data-aos="fade-left"
-        >
-          <h2 class="font-arima text-3xl md:text-4xl lg:text-[48px] font-medium leading-[1.2]">Phòng trưng bày</h2>
-
-          <div class="h-[1px] w-[100%] lg:mr-[20%] lg:w-[160%] lg:-ml-[80%] bg-white/20 mb-16 relative z-[-1]"></div>
-
-          <div class="flex flex-col gap-5 text-xs mb-8">
-            <div class="grid grid-cols-[100px_1fr] md:grid-cols-[100px_1fr] gap-4 items-start">
-              <span class="font-medium tracking-[0.1em] uppercase text-xs mt-[3px]">ĐỊA CHỈ</span>
-              <span class="font-bold leading-snug w-full max-w-[320px] text-xs">10 ngõ 252 - Thôn 3, Giang Cao, Bát Tràng, Hà Nội</span>
-            </div>
-            <div class="grid grid-cols-[100px_1fr] md:grid-cols-[100px_1fr] gap-4 items-center mt-2">
-              <span class="font-medium tracking-[0.1em] uppercase text-xs">ĐIỆN THOẠI</span>
-              <span class="font-bold text-xs">0966 55 8808</span>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-5 w-full max-w-[360px]">
-            <a
-              href="mailto:contact@thanhhaiceramics.com"
-              class="bg-gradient-to-r from-[#C76E00] via-[#DF8828] to-[#E79735] hover:from-secondary hover:to-[#DF8828] text-white flex flex-col items-center justify-center py-4 px-8 min-w-[180px] w-full transition-colors shadow-lg"
-            >
-              <img
-                src="/src/assets/images/mail.svg"
-                alt=""
-                class="mb-1.5 shrink-0"
-              />
-              <span class="font-extrabold text-[13px]">Liên hệ ngay</span>
-            </a>
-            <a
-              href="https://maps.google.com/?q=10+ngo+252+Thon+3,+Giang+Cao,+Bat+Trang,+Gia+Lam,+Ha+Noi"
-              target="_blank"
-              class="bg-primary hover:bg-[#3d3f38] text-white flex flex-col items-center justify-center py-4 px-8 min-w-[180px] w-full transition-colors border-2 border-[#DF8828]"
-            >
-              <img
-                src="/src/assets/images/direction.svg"
-                alt=""
-                class="mb-1.5 shrink-0"
-              />
-              <span class="font-extrabold text-[13px]">Đường đi</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section: Fullscreen image -->
-      <section class="max-w-[1920px] h-auto mx-auto lg:pt-8">
-        <img
-          src="/src/assets/images/showroom-map.png"
-          alt="Showroom Full Image"
-          class="w-full h-auto object-cover"
-        />
-      </section>
+      {{> showroom/partials/top-banner}}
+      {{> showroom/partials/showroom-main-content}}
+      {{> showroom/partials/room-display-content}}
+      {{> showroom/partials/showroom-map-section}}
     </main>
 
-    {{> footer}}
+    {{> components/footer}}
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       type="module"
-      src="/src/js/main.js"
+      src="/assets/js/main.js"
     ></script>
 
     <!-- Swiper Initialization -->

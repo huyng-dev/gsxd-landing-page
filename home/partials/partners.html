@@ -1,0 +1,113 @@
+<section class="bg-primary py-12 lg:py-16 relative">
+  <div class="w-[85%] mx-auto max-w-[1320px] relative">
+    <h2 class="text-secondary text-2xl lg:text-4xl font-bold uppercase mb-12" data-aos="fade-up">Khách hàng & đối tác</h2>
+    
+    <div class="relative overflow-hidden mb-0 lg:mb-6 -mx-[8%] lg:mx-0" data-aos="fade-up" data-aos-delay="200" id="partners-container">
+      <div class="flex w-max animate-marquee lg:animate-none lg:w-[200%] lg:transition-transform lg:duration-500" id="partners-track">
+        <div class="flex gap-6 pl-6 pr-6 lg:pl-0 lg:pr-0 lg:w-1/2 lg:grid lg:grid-cols-5 lg:gap-6">
+          <div class="flex-shrink-0 w-[40vw] sm:w-[30vw] lg:w-auto h-40 flex items-center justify-center p-6 lg:p-0">
+            <img src="/assets/images/partner-01.png" alt="Partner" class="max-w-full max-h-full object-contain">
+          </div>
+          <div class="flex-shrink-0 w-[40vw] sm:w-[30vw] lg:w-auto h-40 flex items-center justify-center py-6 lg:p-0">
+            <img src="/assets/images/partner-02.png" alt="Partner" class="max-w-full max-h-full object-contain">
+          </div>
+          <div class="flex-shrink-0 w-[40vw] sm:w-[30vw] lg:w-auto h-40 flex items-center justify-center py-6 lg:p-0">
+            <img src="/assets/images/partner-03.png" alt="Partner" class="max-w-full max-h-full object-contain">
+          </div>
+          <div class="flex-shrink-0 w-[40vw] sm:w-[30vw] lg:w-auto h-40 flex items-center justify-center py-6 lg:p-0">
+            <img src="/assets/images/partner-04.png" alt="Partner" class="max-w-full max-h-full object-contain">
+          </div>
+          <div class="flex-shrink-0 w-[40vw] sm:w-[30vw] lg:w-auto h-40 flex items-center justify-center py-6 lg:p-0">
+            <img src="/assets/images/partner-05.png" alt="Partner" class="max-w-full max-h-full object-contain">
+          </div>
+        </div>
+
+        <div class="flex gap-6 pr-6 lg:w-1/2 lg:grid lg:grid-cols-5 lg:gap-6 lg:pr-0" aria-hidden="true">
+          <div class="flex-shrink-0 w-[40vw] sm:w-[30vw] lg:w-auto h-40 flex items-center justify-center p-6 lg:p-0">
+            <img src="/assets/images/partner-01.png" alt="Partner" class="max-w-full max-h-full object-contain">
+          </div>
+          <div class="flex-shrink-0 w-[40vw] sm:w-[30vw] lg:w-auto h-40 flex items-center justify-center py-6 lg:p-0">
+            <img src="/assets/images/partner-02.png" alt="Partner" class="max-w-full max-h-full object-contain">
+          </div>
+          <div class="flex-shrink-0 w-[40vw] sm:w-[30vw] lg:w-auto h-40 flex items-center justify-center py-6 lg:p-0">
+            <img src="/assets/images/partner-03.png" alt="Partner" class="max-w-full max-h-full object-contain">
+          </div>
+          <div class="flex-shrink-0 w-[40vw] sm:w-[30vw] lg:w-auto h-40 flex items-center justify-center py-6 lg:p-0">
+            <img src="/assets/images/partner-04.png" alt="Partner" class="max-w-full max-h-full object-contain">
+          </div>
+          <div class="flex-shrink-0 w-[40vw] sm:w-[30vw] lg:w-auto h-40 flex items-center justify-center py-6 lg:p-0">
+            <img src="/assets/images/partner-05.png" alt="Partner" class="max-w-full max-h-full object-contain">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Partners Navigation -->
+    <button class="partner-prev hidden lg:flex absolute -left-16 top-[60%] -translate-y-1/2 z-20 w-10 h-10 border border-white/50 rounded-full items-center justify-center text-white/70 hover:border-white hover:text-white transition-all focus:outline-none" aria-label="Previous partner">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+
+    <button class="partner-next hidden lg:flex absolute -right-16 top-[60%] -translate-y-1/2 z-20 w-10 h-10 border border-white/50 rounded-full items-center justify-center text-white/70 hover:border-white hover:text-white transition-all focus:outline-none" aria-label="Next partner">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Partners Dots -->
+  <div class="hidden lg:flex absolute bottom-6 left-1/2 transform -translate-x-1/2 gap-3 z-20">
+    <button class="partner-dot active w-3 h-3 rounded-full bg-secondary transition-all" data-slide="0" aria-label="Page 1"></button>
+    <button class="partner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all" data-slide="1" aria-label="Page 2"></button>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const partnerTrack = document.getElementById("partners-track");
+    if (!partnerTrack) return;
+
+    const section = partnerTrack.closest("section");
+    if (!section) return;
+
+    const partnerDots = Array.from(section.querySelectorAll(".partner-dot"));
+    const partnerPrev = section.querySelector(".partner-prev");
+    const partnerNext = section.querySelector(".partner-next");
+    const totalPartnerSlides = Math.max(partnerDots.length, 2);
+
+    let partnerCurrentSlide = 0;
+
+    const showPartnerSlide = (index) => {
+      partnerTrack.style.transform = `translateX(-${index * 50}%)`;
+
+      partnerDots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === index;
+        dot.classList.toggle("active", isActive);
+        dot.classList.toggle("bg-secondary", isActive);
+        dot.classList.toggle("bg-white/40", !isActive);
+      });
+    };
+
+    const nextPartnerSlide = () => {
+      partnerCurrentSlide = (partnerCurrentSlide + 1) % totalPartnerSlides;
+      showPartnerSlide(partnerCurrentSlide);
+    };
+
+    const prevPartnerSlide = () => {
+      partnerCurrentSlide = (partnerCurrentSlide - 1 + totalPartnerSlides) % totalPartnerSlides;
+      showPartnerSlide(partnerCurrentSlide);
+    };
+
+    partnerNext?.addEventListener("click", nextPartnerSlide);
+    partnerPrev?.addEventListener("click", prevPartnerSlide);
+
+    partnerDots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        partnerCurrentSlide = index;
+        showPartnerSlide(partnerCurrentSlide);
+      });
+    });
+
+    showPartnerSlide(partnerCurrentSlide);
+  });
+</script>

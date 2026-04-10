@@ -10,7 +10,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/src/assets/images/logo.png"
+      href="/assets/images/logo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -21,7 +21,7 @@
     </style>
     <link
       rel="stylesheet"
-      href="/src/assets/css/main.css"
+      href="/assets/css/main.css"
     />
     <link
       rel="stylesheet"
@@ -36,7 +36,7 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> header}} {{> catalog-button}}
+    {{> components/header}} {{> components/catalog-button}}
 
     <main class="flex-grow">
       <!-- Banner Section -->
@@ -44,7 +44,7 @@
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
           <img
-            src="/src/assets/images/gach-co-banner.png"
+            src="/assets/images/gach-co-banner.png"
             alt="Gạch Cổ Bát Tràng Banner"
             class="w-full h-full object-cover"
           />
@@ -130,14 +130,14 @@
             <div class="relative">
               <div class="relative mb-6">
                 <img
-                  src="/src/assets/images/gach-bat-01.jpg"
+                  src="/assets/images/gach-bat-01.jpg"
                   alt="Gạch bát công trình"
                   class="w-full aspect-[1.1/1] h-auto object-cover rounded-sm shadow-md"
                   onerror="this.src = 'https://placehold.co/800x800/8c5a3c/fff?text=Gach+Bat+01'"
                 />
                 <!-- Elip Overlay -->
                 <img
-                  src="/src/assets/images/gach-bat-elip.svg"
+                  src="/assets/images/gach-bat-elip.svg"
                   alt=""
                   class="absolute top-1/2 -translate-y-1/2 -right-12 md:-right-20 max-w-[220px] aspect-square object-contain drop-shadow-2xl z-10"
                   onerror="this.style.display = 'none'"
@@ -149,7 +149,7 @@
                   class="aspect-square bg-white shadow-sm border border-black/5 flex items-center justify-center p-2 rounded-sm overflow-hidden"
                 >
                   <img
-                    src="/src/assets/images/gach-bat-02.jpg"
+                    src="/assets/images/gach-bat-02.jpg"
                     alt="Gạch bát mẫu"
                     class="w-full h-full object-contain"
                     onerror="this.src = 'https://placehold.co/200x200/eee/999?text=Gach+Bat'"
@@ -284,14 +284,14 @@
             <div class="relative order-1 lg:order-2">
               <div class="relative mb-6">
                 <img
-                  src="/src/assets/images/gach-that-01.jpg"
+                  src="/assets/images/gach-that-01.jpg"
                   alt="Gạch thất công trình"
                   class="w-full aspect-[1.1/1] h-auto object-cover rounded-sm shadow-md"
                   onerror="this.src = 'https://placehold.co/800x800/8c5a3c/fff?text=Gach+That+01'"
                 />
                 <!-- Elip Overlay (Positioned to the left for this block) -->
                 <img
-                  src="/src/assets/images/gach-that-elip.svg"
+                  src="/assets/images/gach-that-elip.svg"
                   alt=""
                   class="absolute top-1/2 -translate-y-1/2 -left-12 md:-left-20 max-w-[220px] aspect-square object-contain drop-shadow-2xl z-10"
                   onerror="this.style.display = 'none'"
@@ -315,14 +315,14 @@
             <div class="relative">
               <div class="relative mb-6">
                 <img
-                  src="/src/assets/images/gach-the-01.jpg"
+                  src="/assets/images/gach-the-01.jpg"
                   alt="Gạch bát công trình"
                   class="w-full aspect-[1.1/1] h-auto object-cover rounded-sm shadow-md"
                   onerror="this.src = 'https://placehold.co/800x800/8c5a3c/fff?text=Gach+Bat+01'"
                 />
                 <!-- Elip Overlay -->
                 <img
-                  src="/src/assets/images/gach-the-elip.svg"
+                  src="/assets/images/gach-the-elip.svg"
                   alt=""
                   class="absolute top-1/2 -translate-y-1/2 -right-12 md:-right-20 max-w-[220px] aspect-square object-contain drop-shadow-2xl z-10"
                   onerror="this.style.display = 'none'"
@@ -382,28 +382,28 @@
       </div>
 
       <!-- CÔNG ĐOẠN CHẾ TÁC SECTION -->
-      {{> products/fabrication-process}} {{> products/journey-video hideTitle=true}}
+      {{> components/products/fabrication-process}} {{> components/products/journey-video hideTitle=true}}
 
       <!-- DẤU ẤN TRÊN NHỮNG CÔNG TRÌNH SECTION -->
-      {{> products/works-simple showNav=true}}
+      {{> components/products/works-simple showNav=true}}
 
       <!-- CÓ THỂ BẠN QUAN TÂM SECTION -->
-      {{> products/recommendations}}
+      {{> components/products/recommendations}}
 
       <!-- FAQ Section -->
       <section
         class="w-full relative pb-32 bg-background-secondary overflow-visible"
         data-aos="fade-up"
       >
-        {{> products/faq-content}}
+        {{> components/products/faq-content}}
       </section>
     </main>
 
-    {{> footer hideNewsletter=true}}
+    {{> components/footer hideNewsletter=true}}
 
     <script
       type="module"
-      src="/src/js/main.js"
+      src="/assets/js/main.js"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

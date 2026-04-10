@@ -1,6 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: ["./*.html", "./**/index.html", "./src/**/*.{html,js}", "./src/partials/**/*.html"],
+    content: [
+        "./*.html",
+        "./about/**/*.html",
+        "./contact/**/*.html",
+        "./dich-vu-khach-hang/**/*.html",
+        "./factory/**/*.html",
+        "./faq/**/*.html",
+        "./news/**/*.html",
+        "./products/**/*.html",
+        "./projects/**/*.html",
+        "./showroom/**/*.html",
+        "./assets/js/**/*.js",
+        "./components/**/*.html",
+        "./home/partials/**/*.html",
+        "./news/partials/**/*.html",
+        "./factory/partials/**/*.html",
+        "./projects/partials/**/*.html",
+        "./dich-vu-khach-hang/partials/**/*.html",
+    ],
     theme: {
         extend: {
             colors: {

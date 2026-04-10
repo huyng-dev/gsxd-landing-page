@@ -10,7 +10,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/src/assets/images/logo.png"
+      href="/assets/images/logo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -19,7 +19,7 @@
     </style>
     <link
       rel="stylesheet"
-      href="/src/assets/css/main.css"
+      href="/assets/css/main.css"
     />
     <link
       rel="stylesheet"
@@ -34,14 +34,14 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> header}}
+    {{> components/header}}
 
     <main class="flex-grow bg-background-secondary pb-20">
       <!-- Top Banner for Detail -->
       <section class="relative w-full h-[180px] md:h-[210px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
           <img
-            src="/src/assets/images/detail-banner.png"
+            src="/assets/images/detail-banner.png"
             alt="Gạch cổ Bát Tràng Banner"
             class="w-full h-full object-cover"
           />
@@ -91,15 +91,15 @@
           <!-- Main Image -->
           <div class="w-full aspect-square shadow-lg relative overflow-hidden group">
             <img
-              src="/src/assets/images/gach-bat-detail-1.png" 
+              src="/assets/images/gach-bat-detail-1.png" 
               alt="Gạch bát 300x300x50"
               class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
             />
           </div>
           <!-- Thumbnails -->
           <div class="flex gap-5 w-full mt-2">
-            <img src="/src/assets/images/gach-bat-02.jpg" class="flex-1 w-[88px] aspect-square cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></img>
-            <img src="/src/assets/images/gach-bat-detail-2.png" class="flex-1 w-[88px] aspect-square cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></img>
+            <img src="/assets/images/gach-bat-02.jpg" class="flex-1 w-[88px] aspect-square cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></img>
+            <img src="/assets/images/gach-bat-detail-2.png" class="flex-1 w-[88px] aspect-square cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></img>
             <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
             <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
             <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
@@ -158,7 +158,7 @@
                 class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10"
               >
                 <img
-                  src="/src/assets/images/phone-call.svg"
+                  src="/assets/images/phone-call.svg"
                   alt="Phone Call"
                   class="w-6 h-6"
                 />
@@ -174,7 +174,7 @@
                 class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10"
               >
                 <img
-                  src="/src/assets/images/zalo.png"
+                  src="/assets/images/zalo.png"
                   alt="Zalo"
                   class="w-[80%] h-[80%] object-cover"
                 />
@@ -187,30 +187,30 @@
         </div>
       </section>
 
-      {{> products/quantity-calculator 
-        image="/src/assets/images/gach-bat-size-1.png"
+      {{> components/products/quantity-calculator 
+        image="/assets/images/gach-bat-size-1.png"
         showInfo=true
         label1="Gạch"
         rate1="32 viên/m²"
       }}
 
-      {{> products/fabrication-process}}
-      {{> products/journey-video hideTitle=true}}
-      {{> products/trang-tri-process}}
+      {{> components/products/fabrication-process}}
+      {{> components/products/journey-video hideTitle=true}}
+      {{> components/products/trang-tri-process}}
       <hr class="mb-16" />
-      {{> products/works-simple showNav=true}}
-      {{> products/recommendations}}
-      {{> products/faq2}}
+      {{> components/products/works-simple showNav=true}}
+      {{> components/products/recommendations}}
+      {{> components/products/faq2}}
 
 
     </main>
 
-    {{> footer hideNewsletter=true}}
+    {{> components/footer hideNewsletter=true}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script
       type="module"
-      src="/src/js/main.js"
+      src="/assets/js/main.js"
     ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

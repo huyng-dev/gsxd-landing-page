@@ -10,12 +10,12 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/src/assets/images/logo.png"
+      href="/assets/images/logo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
-      href="/src/assets/css/main.css"
+      href="/assets/css/main.css"
     />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
@@ -33,7 +33,7 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-neutral-1"
   >
-    {{> header}} {{> catalog-button}}
+    {{> components/header}} {{> components/catalog-button}}
 
     <main class="flex-grow bg-background-secondary">
       <!-- Top Banner -->
@@ -41,7 +41,7 @@
         <!-- Background Image with Dark Overlay -->
         <div class="absolute inset-x-0 top-0 h-[65%] lg:h-[75%] z-0">
           <img
-            src="/src/assets/images/ngoi-hai-van-mieu-banner.jpg"
+            src="/assets/images/ngoi-hai-van-mieu-banner.jpg"
             alt="Ngói Hài Văn Miếu Banner"
             class="w-full h-full object-cover object-center"
           />
@@ -76,7 +76,7 @@
                   class="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 w-full h-full border border-white/80 z-20 pointer-events-none"
                 ></div>
                 <img
-                  src="/src/assets/images/ngoi-hai-01.png"
+                  src="/assets/images/ngoi-hai-01.png"
                   alt="Ngói văn miếu tròn"
                   class="relative z-10 w-full h-auto aspect-[3/5] object-cover shadow-2xl"
                 />
@@ -97,7 +97,7 @@
                   class="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 w-full h-full border border-white/80 z-20 pointer-events-none"
                 ></div>
                 <img
-                  src="/src/assets/images/ngoi-hai-02.png"
+                  src="/assets/images/ngoi-hai-02.png"
                   alt="Ngói văn miếu mũi"
                   class="relative z-10 w-full h-auto aspect-[3/5] object-cover shadow-2xl"
                 />
@@ -118,7 +118,7 @@
                   class="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 w-full h-full border border-white/80 z-20 pointer-events-none"
                 ></div>
                 <img
-                  src="/src/assets/images/ngoi-hai-03.png"
+                  src="/assets/images/ngoi-hai-03.png"
                   alt="Ngói hài cổ"
                   class="relative z-10 w-full h-auto aspect-[3/5] object-cover shadow-2xl"
                 />
@@ -141,7 +141,7 @@
         </p>
       </div>
 
-      {{> products/product-grid category="ngoi-hai-van-mieu" link1="ngoi-hai-co-nau-den.html" name1="Ngói hài cổ nâu đen"
+      {{> components/products/product-grid category="ngoi-hai-van-mieu" link1="ngoi-hai-co-nau-den.html" name1="Ngói hài cổ nâu đen"
       image1="ngoi-hai-detail.png" link2="ngoi-van-mieu-ghi-anh-kim.html" name2="Ngói văn miếu ghi ánh kim"
       image2="ngoi-van-mieu-detail.png" }}
 
@@ -154,7 +154,7 @@
         <!-- Full width Background Image -->
         <div class="absolute inset-x-0 w-full h-full z-0">
           <img
-            src="/src/assets/images/khac-biet.png"
+            src="/assets/images/khac-biet.png"
             alt="Khác biệt"
             class="w-full h-full object-cover object-center"
           />
@@ -220,7 +220,7 @@
         </div>
       </section>
 
-      {{> products/journey-video}} {{> products/works}}
+      {{> components/products/journey-video}} {{> components/products/works}}
 
       <!-- FAQ Section -->
       <section
@@ -229,25 +229,25 @@
       >
         <!-- Background Decoration -->
         <img
-          src="/src/assets/images/background-decorate-03.svg"
+          src="/assets/images/background-decorate-03.svg"
           class="absolute top-[20%] -translate-y-1/2 md:left-4 -left-[20%] md:translate-x-[10%] translate-x-0 w-auto object-contain opacity-100 pointer-events-none z-0"
           alt=""
         />
         <img
-          src="/src/assets/images/background-decorate-02.svg"
+          src="/assets/images/background-decorate-02.svg"
           class="absolute md:top-[62%] top-[80%] -translate-y-1/2 right-0 translate-x-[60%] w-auto object-contain opacity-50 pointer-events-none z-0"
           alt=""
         />
 
-        {{> products/faq-content}}
+        {{> components/products/faq-content}}
       </section>
     </main>
 
-    {{> footer}}
+    {{> components/footer}}
 
     <script
       type="module"
-      src="/src/js/main.js"
+      src="/assets/js/main.js"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

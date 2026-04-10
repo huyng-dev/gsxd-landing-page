@@ -10,7 +10,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/src/assets/images/logo.png"
+      href="/assets/images/logo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -19,7 +19,7 @@
     </style>
     <link
       rel="stylesheet"
-      href="/src/assets/css/main.css"
+      href="/assets/css/main.css"
     />
     <link
       rel="stylesheet"
@@ -34,14 +34,14 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> header}}
+    {{> components/header}}
 
     <main class="flex-grow bg-background-secondary pb-20">
       <!-- Top Banner for Detail -->
             <section class="relative w-full">
                 <div class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]">
                     <img
-                        src="/src/assets/images/pk-banner.png"
+                        src="/assets/images/pk-banner.png"
                         alt="Phụ Kiện Ngói"
                         class="w-full h-full object-cover"
                     />
@@ -90,7 +90,7 @@
           <!-- Main Image -->
           <div class="w-full aspect-square shadow-lg relative overflow-hidden group">
             <img
-              src="/src/assets/images/am-duong-detail.png" 
+              src="/assets/images/am-duong-detail.png" 
               alt="Gạch bát 300x300x50"
               class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
             />
@@ -173,7 +173,7 @@
                 class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10"
               >
                 <img
-                  src="/src/assets/images/phone-call.svg"
+                  src="/assets/images/phone-call.svg"
                   alt="Phone Call"
                   class="w-6 h-6"
                 />
@@ -189,7 +189,7 @@
                 class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10"
               >
                 <img
-                  src="/src/assets/images/zalo.png"
+                  src="/assets/images/zalo.png"
                   alt="Zalo"
                   class="w-[80%] h-[80%] object-cover"
                 />
@@ -209,25 +209,25 @@
           <h2 class="text-2xl md:text-3xl font-semibold text-secondary uppercase drop-shadow-sm">Bộ ngói bò chữ vạn và phụ kiện</h2>
         </div>
         <div class="flex flex-col gap-8 md:gap-12">
-          <img src="/src/assets/images/chu-van-1.png" alt="Bộ ngói bò chữ vạn và phụ kiện" class="w-full" data-aos="fade-up" />
-          <img src="/src/assets/images/chu-van-2.png" alt="Bộ ngói bò chữ vạn và phụ kiện" class="w-full" data-aos="fade-up" />
-          <img src="/src/assets/images/chu-van-3.png" alt="Bộ ngói bò chữ vạn và phụ kiện" class="w-full" data-aos="fade-up" />
+          <img src="/assets/images/chu-van-1.png" alt="Bộ ngói bò chữ vạn và phụ kiện" class="w-full" data-aos="fade-up" />
+          <img src="/assets/images/chu-van-2.png" alt="Bộ ngói bò chữ vạn và phụ kiện" class="w-full" data-aos="fade-up" />
+          <img src="/assets/images/chu-van-3.png" alt="Bộ ngói bò chữ vạn và phụ kiện" class="w-full" data-aos="fade-up" />
         </div>
       </section>
 
-      {{> products/outstanding-value}}
-      {{> products/journey-video}}
-      {{> products/works}}
+      {{> components/products/outstanding-value}}
+      {{> components/products/journey-video}}
+      {{> components/products/works}}
 
 
     </main>
 
-    {{> footer hideNewsletter=true}}
+    {{> components/footer hideNewsletter=true}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script
       type="module"
-      src="/src/js/main.js"
+      src="/assets/js/main.js"
     ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>

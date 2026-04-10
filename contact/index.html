@@ -10,12 +10,12 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/src/assets/images/logo.png"
+      href="/assets/images/logo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
-      href="/src/assets/css/main.css"
+      href="/assets/css/main.css"
     />
     <link
       href="https://unpkg.com/aos@2.3.1/dist/aos.css"
@@ -33,7 +33,7 @@
     data-page="contact"
     class="bg-primary min-h-screen flex flex-col font-archivo"
   >
-    {{> header isHome=false}}
+    {{> components/header isHome=false}}
 
     <main class="relative flex-grow overflow-hidden">
       <div class="w-full max-w-[1920px] mx-auto">
@@ -72,7 +72,7 @@
             <div class="flex items-center gap-5">
               <div class="w-16 h-16 rounded-full bg-[#3D3E39] flex items-center justify-center flex-shrink-0">
                 <img
-                  src="/src/assets/images/phone-call.svg"
+                  src="/assets/images/phone-call.svg"
                   alt="Phone"
                   class="w-6 h-6 brightness-0 invert"
                 />
@@ -86,7 +86,7 @@
             <div class="flex items-center gap-5">
               <div class="w-16 h-16 rounded-full bg-[#3D3E39] flex items-center justify-center flex-shrink-0">
                 <img
-                  src="/src/assets/images/zalo2.png"
+                  src="/assets/images/zalo2.png"
                   alt="Zalo"
                   class="w-12 h-12 rounded-full object-cover"
                 />
@@ -168,7 +168,7 @@
       >
         <div class="h-full w-full lg:absolute lg:left-0 lg:top-0 lg:w-[50vw] lg:h-full">
           <img
-            src="/src/assets/images/contact-map.png"
+            src="/assets/images/contact-map.png"
             alt="Contact Map"
             class="w-full h-full object-cover object-center"
           />
@@ -176,12 +176,12 @@
       </div>
     </main>
 
-    {{> footer hideNewsletter=true}}
+    {{> components/footer hideNewsletter=true}}
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       type="module"
-      src="/src/js/main.js"
+      src="/assets/js/main.js"
     ></script>
     <script>
       AOS.init({

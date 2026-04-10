@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ngói Âm Dương - Thanh Hải Ceramics</title>
-  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
@@ -12,20 +12,20 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap');
   </style>
-  <link rel="stylesheet" href="/src/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
-  {{> header}}
-  {{> catalog-button}}
+  {{> components/header}}
+  {{> components/catalog-button}}
   
   <main class="flex-grow bg-background-secondary">
     <!-- Top Banner -->
     <section class="relative min-h-[600px] flex items-center pt-24 pb-8 overflow-hidden">
       <!-- Background Image with Dark Overlay and Bottom Blur/Gradient -->
       <div class="absolute inset-0 z-0">
-        <img src="/src/assets/images/ngoi-am-duong-banner.jpg" alt="Ngói Âm Dương Banner" class="w-full h-full object-cover object-bottom">
+        <img src="/assets/images/ngoi-am-duong-banner.jpg" alt="Ngói Âm Dương Banner" class="w-full h-full object-cover object-bottom">
         <div class="absolute inset-0 bg-black/70"></div>
         <!-- Bottom layered gradient: Wide white band starts earlier (from bottom) -->
         <div class="absolute bottom-0 left-0 right-0 h-3/5 bg-[linear-gradient(to_top,#F5EDE7_10%,white_25%,white_60%,transparent_100%)]"></div>
@@ -59,11 +59,11 @@
               <div class="bg-white p-6 flex gap-6 w-full max-w-[860px] transform translate-y-8 md:-translate-y-8 rounded">
                  <!-- Image 1 (Placeholder) -->
                  <div class="w-1/2 aspect-square flex items-center justify-center">
-                     <img src="/src/assets/images/ngoi-am-duong-01.jpg" alt="Ngói Âm Dương 01" class="w-full h-full object-cover">
+                     <img src="/assets/images/ngoi-am-duong-01.jpg" alt="Ngói Âm Dương 01" class="w-full h-full object-cover">
                  </div>
                  <!-- Image 2 (Placeholder) -->
                  <div class="w-1/2 aspect-square flex items-center justify-center">
-                     <img src="/src/assets/images/ngoi-am-duong-02.png" alt="Ngói Âm Dương 02" class="w-full h-full object-cover">
+                     <img src="/assets/images/ngoi-am-duong-02.png" alt="Ngói Âm Dương 02" class="w-full h-full object-cover">
                  </div>
               </div>
            </div>
@@ -79,13 +79,13 @@
         </p>
     </div>
 
-    {{> products/product-grid category="ngoi-am-duong"}}
+    {{> components/products/product-grid category="ngoi-am-duong"}}
     
     <!-- Sizes Options Section -->
     <section class="w-[85%] max-w-[1320px] mx-auto pb-16 pt-1" data-aos="fade-up">
         <h2 class="text-2xl md:text-3xl font-bold text-center text-secondary mb-12 uppercase tracking-wide">Đa dạng kích thước - phong phú chọn lựa</h2>
         <div class="w-full flex justify-center">
-            <img src="/src/assets/images/ngoi-am-duong-size.png" alt="Đa dạng kích thước ngói âm dương" class="w-full h-auto object-contain">
+            <img src="/assets/images/ngoi-am-duong-size.png" alt="Đa dạng kích thước ngói âm dương" class="w-full h-auto object-contain">
         </div>
     </section>
 
@@ -93,29 +93,29 @@
     <section class="w-[85%] max-w-[1320px] mx-auto pb-20" data-aos="fade-up">
         <h2 class="text-2xl md:text-3xl font-bold text-center text-secondary mb-12 uppercase tracking-wide">Phụ kiện ngói</h2>
         <div class="w-full flex justify-center">
-            <img src="/src/assets/images/ngoi-am-duong-pk.png" alt="Phụ kiện ngói âm dương" class="w-[80%] h-auto object-contain">
+            <img src="/assets/images/ngoi-am-duong-pk.png" alt="Phụ kiện ngói âm dương" class="w-[80%] h-auto object-contain">
         </div>
     </section>
   </main>
 
-  {{> products/outstanding-value}}
+  {{> components/products/outstanding-value}}
 
-  {{> products/journey-video}}
+  {{> components/products/journey-video}}
 
-  {{> products/works}}
+  {{> components/products/works}}
 
   <!-- FAQ Section -->
   <section class="w-full relative pb-32 bg-background-secondary overflow-hidden" data-aos="fade-up">
     <!-- Background Decoration -->
-    <img src="/src/assets/images/background-decorate-03.svg" class="absolute top-[20%] -translate-y-1/2 md:left-4 -left-[20%] md:translate-x-[10%] translate-x-0 w-auto object-contain opacity-100 pointer-events-none z-0" alt="">
-    <img src="/src/assets/images/background-decorate-02.svg" class="absolute md:top-[62%] top-[80%] -translate-y-1/2 right-0 translate-x-[60%] w-auto object-contain opacity-50 pointer-events-none z-0" alt="">
+    <img src="/assets/images/background-decorate-03.svg" class="absolute top-[20%] -translate-y-1/2 md:left-4 -left-[20%] md:translate-x-[10%] translate-x-0 w-auto object-contain opacity-100 pointer-events-none z-0" alt="">
+    <img src="/assets/images/background-decorate-02.svg" class="absolute md:top-[62%] top-[80%] -translate-y-1/2 right-0 translate-x-[60%] w-auto object-contain opacity-50 pointer-events-none z-0" alt="">
 
-    {{> products/faq-content}}
+    {{> components/products/faq-content}}
   </section>
 
-  {{> footer}}
+  {{> components/footer}}
   
-  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

@@ -10,7 +10,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/src/assets/images/logo.png"
+      href="/assets/images/logo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -19,7 +19,7 @@
     </style>
     <link
       rel="stylesheet"
-      href="/src/assets/css/main.css"
+      href="/assets/css/main.css"
     />
     <link
       rel="stylesheet"
@@ -34,14 +34,14 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> header}}
+    {{> components/header}}
 
     <main class="flex-grow bg-background-secondary pb-20">
       <!-- Top Banner for Detail -->
       <section class="relative w-full">
         <div class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]">
           <img
-            src="/src/assets/images/pk-banner.png"
+            src="/assets/images/pk-banner.png"
             alt="Phụ Kiện Ngói"
             class="w-full h-full object-cover"
           />
@@ -96,7 +96,7 @@
           <!-- Main Image -->
           <div class="w-full aspect-square shadow-lg relative overflow-hidden group">
             <img
-              src="/src/assets/images/am-duong-detail.png"
+              src="/assets/images/am-duong-detail.png"
               alt="Gạch bát 300x300x50"
               class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
             />
@@ -177,7 +177,7 @@
                 class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10"
               >
                 <img
-                  src="/src/assets/images/phone-call.svg"
+                  src="/assets/images/phone-call.svg"
                   alt="Phone Call"
                   class="w-6 h-6"
                 />
@@ -193,7 +193,7 @@
                 class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10"
               >
                 <img
-                  src="/src/assets/images/zalo.png"
+                  src="/assets/images/zalo.png"
                   alt="Zalo"
                   class="w-[80%] h-[80%] object-cover"
                 />
@@ -221,7 +221,7 @@
               Mô tả sản phẩm
             </h3>
             <img
-              src="/src/assets/images/gach-bat-size-1.png"
+              src="/assets/images/gach-bat-size-1.png"
               alt="Mô tả kích thước"
               class="w-full max-w-[550px] object-contain"
             />
@@ -260,7 +260,7 @@
             data-aos-delay="100"
           >
             <img
-              src="/src/assets/images/gate-1.svg"
+              src="/assets/images/gate-1.svg"
               alt="Cổng ra vào"
               class="h-16 md:h-24 mb-6"
             />
@@ -280,7 +280,7 @@
             data-aos-delay="200"
           >
             <img
-              src="/src/assets/images/gate-2.svg"
+              src="/assets/images/gate-2.svg"
               alt="Trước cửa điện thờ, từ đường"
               class="h-16 md:h-24 mb-6"
             />
@@ -300,7 +300,7 @@
             data-aos-delay="100"
           >
             <img
-              src="/src/assets/images/roof.svg"
+              src="/assets/images/roof.svg"
               alt="Trên trụ cổng hoặc bờ nóc mái"
               class="h-16 md:h-24 mb-6"
             />
@@ -320,7 +320,7 @@
             data-aos-delay="200"
           >
             <img
-              src="/src/assets/images/furniture.svg"
+              src="/assets/images/furniture.svg"
               alt="Trong không gian nội thất"
               class="h-16 md:h-24 mb-6"
             />
@@ -334,15 +334,15 @@
           </div>
         </div>
       </section>
-      {{> products/works-simple showNav=true}} {{> products/journey-video}} {{> products/recommendations}} {{> products/faq2}}
+      {{> components/products/works-simple showNav=true}} {{> components/products/journey-video}} {{> components/products/recommendations}} {{> components/products/faq2}}
     </main>
 
-    {{> footer hideNewsletter=true}}
+    {{> components/footer hideNewsletter=true}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script
       type="module"
-      src="/src/js/main.js"
+      src="/assets/js/main.js"
     ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

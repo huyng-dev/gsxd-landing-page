@@ -10,12 +10,12 @@
         <link
             rel="icon"
             type="image/svg+xml"
-            href="/src/assets/images/logo.png"
+            href="/assets/images/logo.png"
         />
         <script src="https://cdn.tailwindcss.com"></script>
         <link
             rel="stylesheet"
-            href="/src/assets/css/main.css"
+            href="/assets/css/main.css"
         />
         <link
             rel="stylesheet"
@@ -30,21 +30,21 @@
         data-page="news-detail"
         class="min-h-screen flex flex-col bg-background-secondary"
     >
-        {{> header}}
+        {{> components/header}}
 
         <main class="flex-grow">
-            {{> news/detail-hero}}
-            {{> news/detail-content}}
-            {{> news/catalog-section}}
-            {{> news/author-section}}
-            {{> news/detail-related}}
+            {{> news/partials/detail-hero}}
+            {{> news/partials/detail-content}}
+            {{> news/partials/catalog-section}}
+            {{> news/partials/author-section}}
+            {{> news/partials/detail-related}}
         </main>
 
-        {{> footer}}
+        {{> components/footer}}
 
         <script
             type="module"
-            src="/src/js/main.js"
+            src="/assets/js/main.js"
         ></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -10,7 +10,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/src/assets/images/logo.png"
+      href="/assets/images/logo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -22,7 +22,7 @@
     </style>
     <link
       rel="stylesheet"
-      href="/src/assets/css/main.css"
+      href="/assets/css/main.css"
     />
     <link
       href="https://unpkg.com/aos@2.3.1/dist/aos.css"
@@ -32,14 +32,14 @@
   <body
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> header}}
+    {{> components/header}}
 
     <main class="flex-grow bg-background-secondary">
       <!-- FAQ Banner -->
       <section class="relative w-full h-[300px] md:h-[400px] flex items-end justify-center overflow-hidden pb-8 md:pb-12">
         <div class="absolute inset-0 z-0">
           <img
-            src="/src/assets/images/faq-banner.png"
+            src="/assets/images/faq-banner.png"
             alt="FAQ Banner"
             class="w-full h-full object-cover"
           />
@@ -398,10 +398,10 @@
 
       </section>
 
-      {{> faq/faq-contact}}
+      {{> components/faq/faq-contact}}
     </main>
 
-    {{> footer hideNewsletter=true}}
+    {{> components/footer hideNewsletter=true}}
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

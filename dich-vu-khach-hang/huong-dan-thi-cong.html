@@ -10,12 +10,12 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/src/assets/images/logo.png"
+      href="/assets/images/logo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
-      href="/src/assets/css/main.css"
+      href="/assets/css/main.css"
     />
   </head>
 
@@ -23,155 +23,23 @@
     data-page="customer-service"
     class="bg-white"
   >
-    {{> header}}
+    {{> components/header}}
 
     <main class="bg-background-secondary min-h-screen font-archivo">
       <div class="w-[85%] max-w-[1320px] mx-auto">
-        {{> customer-service/breadcrumb currentPage="Hướng dẫn thi công"}}
+        {{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Hướng dẫn thi công"}}
 
         <div class="flex flex-col lg:flex-row gap-12 mb-6 lg:mb-12">
-          {{> customer-service/sidebar activeGuide=true}}
-          <div class="flex-1 lg:pl-12">
-            <h1 class="text-3xl lg:text-[36px] font-arima font-medium text-primary mb-10 mt-[-6px]">Hướng dẫn thi công</h1>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 w-full">
-              <!-- Row 1: Text Left | Image Right -->
-              <div class="flex flex-col justify-center items-start ml-8 p-8 bg-transparent aspect-[9/6]">
-                <h3 class="text-2xl lg:text-[32px] font-semibold text-primary mb-4">Ngói âm dương</h3>
-                <button
-                  class="flex items-center gap-2 px-2 py-1.5 border border-primary text-primary text-[12px] lg:text-[14px] font-extralight hover:bg-primary hover:text-white transition-all font-archivo"
-                >
-                  Xem hướng dẫn
-                  <img
-                    src="/src/assets/images/triangle.svg"
-                    alt=""
-                    class="w-[6px] h-[10px] rotate-180 scale-x-[-1] ml-4"
-                  />
-                </button>
-              </div>
-              <div class="bg-[#D9D9D9] w-full aspect-[9/6]"></div>
-
-              <!-- Row 2: Image Left | Text Right -->
-              <div class="bg-[#D9D9D9] w-full aspect-[9/6]"></div>
-              <div class="flex flex-col justify-center items-end mr-8 p-8 bg-transparent text-right aspect-[9/6]">
-                <h3 class="text-2xl lg:text-[32px] font-semibold text-primary mb-4">Ngói hài văn miếu</h3>
-                <button
-                  class="flex items-center gap-2 px-2 py-1.5 border border-primary text-primary text-[12px] lg:text-[14px] font-extralight hover:bg-primary hover:text-white transition-all font-archivo"
-                >
-                  Xem hướng dẫn
-                  <img
-                    src="/src/assets/images/triangle.svg"
-                    alt=""
-                    class="w-[6px] h-[10px] rotate-180 scale-x-[-1] ml-4"
-                  />
-                </button>
-              </div>
-
-              <!-- Row 3: Text Left | Image Right -->
-              <div class="flex flex-col justify-center items-start ml-8 p-8 bg-transparent aspect-[9/6]">
-                <h3 class="text-2xl lg:text-[32px] font-semibold text-primary mb-4">Gạch hoa thông gió</h3>
-                <button
-                  class="flex items-center gap-2 px-2 py-1.5 border border-primary text-primary text-[12px] lg:text-[14px] font-extralight hover:bg-primary hover:text-white transition-all font-archivo"
-                >
-                  Xem hướng dẫn
-                  <img
-                    src="/src/assets/images/triangle.svg"
-                    alt=""
-                    class="w-[6px] h-[10px] rotate-180 scale-x-[-1] ml-4"
-                  />
-                </button>
-              </div>
-              <div class="bg-[#D9D9D9] w-full aspect-[9/6]"></div>
-
-              <!-- Row 4: Image Left | Text Right -->
-              <div class="bg-[#D9D9D9] w-full aspect-[9/6]"></div>
-              <div class="flex flex-col justify-center items-end mr-8 p-8 bg-transparent text-right aspect-[9/6]">
-                <h3 class="text-2xl lg:text-[32px] font-semibold text-primary mb-4">Gạch trang trí</h3>
-                <button
-                  class="flex items-center gap-2 px-2 py-1.5 border border-primary text-primary text-[12px] lg:text-[14px] font-extralight hover:bg-primary hover:text-white transition-all font-archivo"
-                >
-                  Xem hướng dẫn
-                  <img
-                    src="/src/assets/images/triangle.svg"
-                    alt=""
-                    class="w-[6px] h-[10px] rotate-180 scale-x-[-1] ml-4"
-                  />
-                </button>
-              </div>
-
-              <!-- Row 5: Text Left | Image Right -->
-              <div class="flex flex-col justify-center items-start ml-8 p-8 bg-transparent aspect-[9/6]">
-                <h3 class="text-2xl lg:text-[32px] font-semibold text-primary mb-4">Ngói lợp cao cấp</h3>
-                <button
-                  class="flex items-center gap-2 px-2 py-1.5 border border-primary text-primary text-[12px] lg:text-[14px] font-extralight hover:bg-primary hover:text-white transition-all font-archivo"
-                >
-                  Xem hướng dẫn
-                  <img
-                    src="/src/assets/images/triangle.svg"
-                    alt=""
-                    class="w-[6px] h-[10px] rotate-180 scale-x-[-1] ml-4"
-                  />
-                </button>
-              </div>
-              <div class="bg-[#D9D9D9] w-full aspect-[9/6]"></div>
-
-              <!-- Row 6: Image Left | Text Right -->
-              <div class="bg-[#D9D9D9] w-full aspect-[9/6]"></div>
-              <div class="flex flex-col justify-center items-end mr-8 p-8 bg-transparent text-right aspect-[9/6]">
-                <h3 class="text-2xl lg:text-[32px] font-semibold text-primary mb-4">Linh vật gốm sứ</h3>
-                <button
-                  class="flex items-center gap-2 px-2 py-1.5 border border-primary text-primary text-[12px] lg:text-[14px] font-extralight hover:bg-primary hover:text-white transition-all font-archivo"
-                >
-                  Xem hướng dẫn
-                  <img
-                    src="/src/assets/images/triangle.svg"
-                    alt=""
-                    class="w-[6px] h-[10px] rotate-180 scale-x-[-1] ml-4"
-                  />
-                </button>
-              </div>
-
-              <!-- Row 7: Text Left | Image Right -->
-              <div class="flex flex-col justify-center items-start ml-8 p-8 bg-transparent aspect-[9/6]">
-                <h3 class="text-2xl lg:text-[32px] font-semibold text-primary mb-4">Gốm phong thủy</h3>
-                <button
-                  class="flex items-center gap-2 px-2 py-1.5 border border-primary text-primary text-[12px] lg:text-[14px] font-extralight hover:bg-primary hover:text-white transition-all font-archivo"
-                >
-                  Xem hướng dẫn
-                  <img
-                    src="/src/assets/images/triangle.svg"
-                    alt=""
-                    class="w-[6px] h-[10px] rotate-180 scale-x-[-1] ml-4"
-                  />
-                </button>
-              </div>
-              <div class="bg-[#D9D9D9] w-full aspect-[9/6]"></div>
-
-              <!-- Row 8: Image Left | Text Right -->
-              <div class="bg-[#D9D9D9] w-full aspect-[9/6]"></div>
-              <div class="flex flex-col justify-center items-end mr-8 p-8 bg-transparent text-right aspect-[9/6]">
-                <h3 class="text-2xl lg:text-[32px] font-semibold text-primary mb-4">Gốm tâm linh</h3>
-                <button
-                  class="flex items-center gap-2 px-2 py-1.5 border border-primary text-primary text-[12px] lg:text-[14px] font-extralight hover:bg-primary hover:text-white transition-all font-archivo"
-                >
-                  Xem hướng dẫn
-                  <img
-                    src="/src/assets/images/triangle.svg"
-                    alt=""
-                    class="w-[6px] h-[10px] rotate-180 scale-x-[-1] ml-4"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
+          {{> dich-vu-khach-hang/partials/customer-service/sidebar activeGuide=true}}
+          {{> dich-vu-khach-hang/partials/customer-service/installation-guide-content}}
         </div>
       </div>
     </main>
 
-    {{> footer}}
+    {{> components/footer}}
     <script
       type="module"
-      src="/src/js/main.js"
+      src="/assets/js/main.js"
     ></script>
   </body>
 </html>
