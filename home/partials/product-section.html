@@ -1,7 +1,7 @@
-<section class="bg-neutral-2 {{sectionClass}}">
+<section class="bg-neutral-2 {{sectionClass}}" data-product-section>
   <div class="w-[85%] max-w-[1320px] mx-auto">
     <div class="flex justify-between items-center mb-6 lg:mb-12" data-aos="fade-up">
-      <h2 class="text-primary text-2xl lg:text-4xl font-bold uppercase">{{sectionTitle}}</h2>
+      <h2 class="text-primary text-[20px] leading-[32px] lg:text-4xl lg:leading-10 font-bold uppercase">{{sectionTitle}}</h2>
       <a href="{{desktopLinkHref}}" class="hidden lg:flex text-secondary font-bold text-base uppercase hover:opacity-80 transition-opacity items-center gap-2">
         Xem thêm
         <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,7 +10,18 @@
       </a>
     </div>
 
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6" data-aos="fade-up" data-aos-delay="200">
+    <div class="lg:hidden" data-product-carousel-shell>
+      <div class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide" data-product-carousel>
+        {{> @partial-block}}
+      </div>
+
+      <div class="mt-3 flex justify-center gap-[3px]" aria-label="Product mobile pagination">
+        <button class="product-section-dot h-1 w-1 rounded-full bg-secondary" data-product-dot="0" aria-label="Slide 1"></button>
+        <button class="product-section-dot h-1 w-1 rounded-full bg-[#656663]" data-product-dot="1" aria-label="Slide 2"></button>
+      </div>
+    </div>
+
+    <div class="hidden lg:grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6" data-aos="fade-up" data-aos-delay="200">
       <div class="flex flex-col">
         <div class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square group cursor-pointer">
           <img src="{{image1}}" alt="Sản phẩm" class="w-full h-full object-cover">
@@ -62,15 +73,6 @@
         <p class="text-gray-500 text-sm mb-2">{{cardCode}}</p>
         <p class="text-secondary font-bold text-sm">Giá: {{cardPrice}}</p>
       </div>
-    </div>
-
-    <div class="flex justify-end mt-10 lg:hidden">
-      <a href="{{mobileLinkHref}}" class="flex text-secondary font-bold text-sm uppercase hover:opacity-80 transition-opacity items-center gap-2">
-        Xem thêm
-        <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10.707 2.29292C10.5184 2.11076 10.2658 2.00997 10.0036 2.01224C9.7414 2.01452 9.49059 2.11969 9.30518 2.3051C9.11977 2.49051 9.0146 2.74132 9.01233 3.00352C9.01005 3.26571 9.11084 3.51832 9.293 3.70692L12.586 6.99992H1C0.734784 6.99992 0.48043 7.10528 0.292893 7.29281C0.105357 7.48035 0 7.7347 0 7.99992C0 8.26514 0.105357 8.51949 0.292893 8.70703C0.48043 8.89456 0.734784 8.99992 1 8.99992H12.586L9.293 12.2929C9.19749 12.3852 9.12131 12.4955 9.0689 12.6175C9.01649 12.7395 8.9889 12.8707 8.98775 13.0035C8.9866 13.1363 9.0119 13.268 9.06218 13.3909C9.11246 13.5138 9.18671 13.6254 9.28061 13.7193C9.3745 13.8132 9.48615 13.8875 9.60905 13.9377C9.73194 13.988 9.86362 14.0133 9.9964 14.0122C10.1292 14.011 10.2604 13.9834 10.3824 13.931C10.5044 13.8786 10.6148 13.8024 10.707 13.7069L15.707 8.70692C15.8945 8.51939 15.9998 8.26508 15.9998 7.99992C15.9998 7.73475 15.8945 7.48045 15.707 7.29292L10.707 2.29292Z" fill="currentColor"/>
-        </svg>
-      </a>
     </div>
   </div>
 </section>

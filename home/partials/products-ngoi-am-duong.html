@@ -1,8 +1,7 @@
-{{> home/partials/product-section
-  sectionClass="pt-16 lg:pt-20"
+{{#> home/partials/product-section
+  sectionClass="py-[25px] md:py-16 lg:pt-20"
   sectionTitle="Ngói âm dương"
   desktopLinkHref="/products/ngoi-am-duong/"
-  mobileLinkHref="/products/ngoi-am-duong/"
   image1="/assets/images/ngoi-01.jpg"
   image2="/assets/images/ngoi-02.png"
   image3="/assets/images/ngoi-03.jpg"
@@ -11,3 +10,21 @@
   cardCode="MSP: 1234RDS"
   cardPrice="675.000 đ/m2"
 }}
+  <article class="flex-shrink-0 w-full snap-start pb-1" data-product-slide>
+    <div class="grid grid-cols-2 gap-4">
+      {{> home/partials/mobile-product-card href="/products/ngoi-am-duong/detail.html" image="/assets/images/ngoi-01.jpg" title="Ngói âm dương sen bông hổ phách 27" code="MSP: 1234RDS" price="675.000 đ/m2"}}
+      {{> home/partials/mobile-product-card href="/products/ngoi-am-duong/detail.html" image="/assets/images/ngoi-02.png" title="Ngói âm dương sen bông hổ phách 27" code="MSP: 1234RDS" price="675.000 đ/m2"}}
+      {{> home/partials/mobile-product-card href="/products/ngoi-am-duong/detail.html" image="/assets/images/ngoi-03.jpg" title="Ngói âm dương sen bông hổ phách 27" code="MSP: 1234RDS" price="675.000 đ/m2"}}
+      {{> home/partials/mobile-product-card href="/products/ngoi-am-duong/detail.html" image="/assets/images/ngoi-04.jpg" title="Ngói âm dương sen bông hổ phách 27" code="MSP: 1234RDS" price="675.000 đ/m2"}}
+    </div>
+  </article>
+
+  <article class="flex-shrink-0 w-full snap-start pb-1" data-product-slide>
+    <div class="grid grid-cols-2 gap-4">
+      {{> home/partials/mobile-product-card href="/products/ngoi-am-duong/detail.html" image="/assets/images/am-duong-detail.png" title="Ngói âm dương 27 xanh đồng" code="MSP: 1234RDS" price="675.000 đ/m2"}}
+      {{> home/partials/mobile-product-card href="/products/ngoi-am-duong/detail.html" image="/assets/images/ngoi-am-duong-01.jpg" title="Ngói âm dương nâu đen" code="MSP: 1234RDS" price="675.000 đ/m2"}}
+      {{> home/partials/mobile-product-card href="/products/ngoi-am-duong/detail.html" image="/assets/images/ngoi-am-duong-02.png" title="Ngói âm dương tráng men" code="MSP: 1234RDS" price="675.000 đ/m2"}}
+      {{> home/partials/mobile-product-card href="/products/ngoi-am-duong/detail.html" image="/assets/images/ngoi-05.jpg" title="Ngói âm dương cổ" code="MSP: 1234RDS" price="675.000 đ/m2"}}
+    </div>
+  </article>
+{{/home/partials/product-section}}
