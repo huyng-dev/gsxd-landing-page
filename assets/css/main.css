@@ -110,3 +110,14 @@
     transform: rotate(-90deg);
   }
 }
+
+@media (max-width: 767px) {
+  body[data-page="index"] main section h2 {
+    font-family: "Archivo", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+}
