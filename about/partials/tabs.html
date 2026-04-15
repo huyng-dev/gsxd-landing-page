@@ -1,0 +1,129 @@
+<!-- Tabs Section -->
+<section class="py-16 bg-neutral-2">
+  <!-- Tab Headers -->
+  <div class="w-[85%] lg:w-[85%] max-w-[1320px] mx-auto px-4">
+    <div class="flex w-full mx-auto mb-12">
+      <button
+        class="tab-btn active group flex-1 py-4 text-sm md:text-3xl font-bold text-secondary border-b-4 border-secondary transition-all duration-300 uppercase focus:outline-none"
+        data-tab="tab-introduction"
+      >
+        VỀ GỐM SỨ THANH HẢI
+      </button>
+      <button
+        class="tab-btn group flex-1 py-4 text-sm md:text-3xl font-bold text-secondary border-b-4 border-gray-300 hover:border-secondary transition-all duration-300 uppercase focus:outline-none"
+        data-tab="tab-craft"
+      >
+        NGHỆ THUẬT THỦ CÔNG
+      </button>
+    </div>
+  </div>
+
+  {{> about/partials/tab-introduction}}
+  {{> about/partials/tab-craft}}
+</section>
+
+{{#push "scripts"}}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Timeline Intersection Observer
+    const timelineItems = document.querySelectorAll(".timeline-item");
+    const imageLayers = document.querySelectorAll(".timeline-image-layer");
+
+    if (timelineItems.length > 0 && imageLayers.length > 0) {
+      const observerOptions = {
+        root: null,
+        // Trigger when item is in the middle of the screen
+        rootMargin: "-45% 0px -45% 0px",
+        threshold: 0,
+      };
+
+      const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const activeIndex = parseInt(
+              entry.target.getAttribute("data-index"),
+            );
+
+            imageLayers.forEach((layer) => {
+              const layerIndex = parseInt(layer.getAttribute("data-index"));
+
+              // Reset Y position
+              layer.classList.remove("translate-y-0", "translate-y-full");
+
+              // Stack logic
+              if (layerIndex <= activeIndex) {
+                // Current image OR past image:
+                // Place in the middle of the screen.
+                // Thanks to the fixed Z-index in HTML, images with higher index will automatically overlay images with lower index.
+                layer.classList.add("translate-y-0");
+              } else {
+                // Future image:
+                // Wait at the bottom of the screen.
+                layer.classList.add("translate-y-full");
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      timelineItems.forEach((item) => timelineObserver.observe(item));
+    }
+
+    const tabs = document.querySelectorAll(".tab-btn");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        // Reset all tabs to inactive state
+        tabs.forEach((t) => {
+          t.classList.remove("border-secondary");
+          t.classList.add("border-gray-300");
+        });
+
+        // Set active state for clicked tab
+        tab.classList.remove("border-gray-300");
+        tab.classList.add("border-secondary");
+
+        // Hide all contents
+        contents.forEach((c) => c.classList.add("hidden"));
+
+        // Show target content
+        const targetId = tab.getAttribute("data-tab");
+        const targetContent = document.getElementById(targetId);
+        if (targetContent) {
+          targetContent.classList.remove("hidden");
+
+          // Update Swipers when tab becomes visible
+          if (targetId === "tab-introduction") {
+            // Use a small timeout to ensure DOM is updated
+            setTimeout(() => {
+              window.dispatchEvent(new Event("awards:refresh"));
+              if (certificatesSwiper) certificatesSwiper.update();
+            }, 10);
+          }
+        }
+      });
+    });
+  });
+
+  // Certificates Swiper
+  var certificatesSwiper = new Swiper(".certificates-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".certificates-next",
+      prevEl: ".certificates-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 0,
+      },
+    },
+  });
+</script>
+{{/push}}

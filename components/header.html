@@ -1,8 +1,8 @@
 <header
   id="site-header"
-  class="{{#if isHome}}bg-primary bg-opacity-60 fixed top-0 left-0 right-0{{else}}bg-primary sticky top-0{{/if}} text-white h-[94px] z-50 transition-all duration-300"
+  class="{{#if isHome}}bg-primary bg-opacity-60 fixed top-0 left-0 right-0{{else}}bg-primary sticky top-0{{/if}} text-white h-[49px] xl:h-[94px] z-50 transition-all duration-300"
 >
-  <div class="w-[85%] max-w-[1320px] mx-auto h-full">
+  <div class="hidden xl:block w-[85%] max-w-[1320px] mx-auto h-full">
     <nav class="flex items-center justify-between h-full">
       <!-- Logo -->
       <div class="flex-shrink-0 mr-[8%]">
@@ -288,17 +288,13 @@
         >
       </div>
 
-      <!-- Icons & Mobile Menu -->
-      <div class="flex items-center gap-5">
+      <!-- Desktop Icons -->
+      <div class="hidden xl:flex items-center gap-5">
         <button
           class="hover:text-secondary transition-colors"
           aria-label="Search"
         >
-          <img
-            src="/assets/images/search.svg"
-            alt="search"
-            class="w-4 h-4"
-          />
+          <img src="/assets/images/search.svg" alt="search" class="w-4 h-4" />
         </button>
         <a
           href="/cart/gio-hang.html"
@@ -314,15 +310,52 @@
         >
           <img src="/assets/images/user.svg" alt="user" class="w-4 h-4" />
         </a>
+      </div>
+    </nav>
+  </div>
 
-        <!-- Mobile menu button -->
+  <!-- Mobile Header -->
+  <div
+    class="xl:hidden h-full bg-[linear-gradient(90deg,_#2F302C_0%,_#262720_100%)]"
+  >
+    <nav class="relative flex items-center justify-center h-full">
+      <button
+        id="mobile-menu-button"
+        class="absolute left-[23px] text-white hover:text-secondary transition-colors"
+        aria-label="Toggle menu"
+      >
+        <img src="/assets/images/menu.svg" alt="menu" class="w-4 h-4" />
+      </button>
+
+      <a href="/" class="block">
+        <img
+          src="/assets/images/logo.png"
+          alt="Logo"
+          class="h-[29px] w-[29px]"
+        />
+      </a>
+
+      <div class="absolute right-[23px] flex items-center gap-[14px]">
         <button
-          class="xl:hidden text-white"
-          id="mobile-menu-button"
-          aria-label="Toggle menu"
+          class="hover:text-secondary transition-colors"
+          aria-label="Search"
         >
-          <img src="/assets/images/menu.svg" alt="menu" class="w-4 h-4" />
+          <img src="/assets/images/search.svg" alt="search" class="w-4 h-4" />
         </button>
+        <a
+          href="/cart/gio-hang.html"
+          class="hover:text-secondary transition-colors"
+          aria-label="Cart"
+        >
+          <img src="/assets/images/cart-2.svg" alt="cart" class="w-4 h-4" />
+        </a>
+        <a
+          href="/dich-vu-khach-hang/trang-thai-don-hang.html"
+          class="hover:text-secondary transition-colors"
+          aria-label="User"
+        >
+          <img src="/assets/images/user.svg" alt="user" class="w-4 h-4" />
+        </a>
       </div>
     </nav>
   </div>
@@ -332,7 +365,9 @@
     id="mobile-menu"
     class="hidden fixed inset-0 bg-primary z-50 overflow-y-auto"
   >
-    <div class="w-[85%] max-w-[1320px] mx-auto py-4 relative min-h-full flex flex-col">
+    <div
+      class="w-[85%] max-w-[1320px] mx-auto py-4 relative min-h-full flex flex-col"
+    >
       <div class="flex justify-between items-center mb-8 shrink-0">
         <a href="/" class="block">
           <img
@@ -346,22 +381,14 @@
             class="hover:text-secondary transition-colors"
             aria-label="Search"
           >
-            <img
-              src="/assets/images/search.svg"
-              alt="search"
-              class="w-4 h-4"
-            />
+            <img src="/assets/images/search.svg" alt="search" class="w-4 h-4" />
           </button>
           <a
             href="/cart/gio-hang.html"
             class="hover:text-secondary transition-colors"
             aria-label="Cart"
           >
-            <img
-              src="/assets/images/cart-2.svg"
-              alt="cart"
-              class="w-4 h-4"
-            />
+            <img src="/assets/images/cart-2.svg" alt="cart" class="w-4 h-4" />
           </a>
           <a
             href="/dich-vu-khach-hang/trang-thai-don-hang.html"
@@ -615,7 +642,7 @@
       <img
         src="/assets/images/background-decorate.svg"
         alt="background-decorate"
-        class="fixed -bottom-32 -right-52 w-[480px] h-[480px] pointer-events-none opacity-100"
+        class="fixed top-[395px] left-[124px] w-[480px] h-[480px] pointer-events-none opacity-100"
       />
     </div>
   </div>

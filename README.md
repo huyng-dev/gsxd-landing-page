@@ -1,72 +1,84 @@
 # GSXD Landing Page
 
-Website da trang (multi-page) cho GSXD, xay dung voi Vite + Tailwind CSS + Handlebars partials.
+A static multi-page website built with Vite, Tailwind CSS, and Handlebars partials.
 
-README nay duoc viet theo hien trang codebase thuc te, bao gom cau truc trang, luong build, quy uoc mo rong, va thao tac Git cho thu muc local-only.
+This README describes the current codebase structure, build/render flow, page organization, and contribution workflow in clear English.
 
-## 1. Tong Quan
+## Overview
 
-- Loai du an: Static multi-page website
-- Cong nghe chinh:
-  - Vite 5 (dev server + build)
-  - Tailwind CSS 3
-  - PostCSS + Autoprefixer
-  - vite-plugin-handlebars (tai su dung partials)
-- Kieu route:
-  - Root route: `index.html`
-  - Cart route: `cart/gio-hang.html`, `cart/thanh-toan.html`
-  - Nested route theo folder: `about/index.html`, `products/...`, `news/...`, ...
-- So trang HTML nguon hien tai (khong tinh `dist/`, `components/`, `node_modules/`): **41 trang**
+| Item | Value |
+|---|---|
+| Project type | Static multi-page website |
+| Build tool | Vite 5 |
+| Styling | Tailwind CSS 3 + PostCSS + Autoprefixer |
+| Templating | Handlebars via `vite-plugin-handlebars` |
+| Source page count | 41 HTML pages (excluding `components`, `partials`, `dist`, `node_modules`) |
 
-## 2. Yeu Cau Moi Truong
+## Routing Model
 
-- Node.js: >= 18
-- npm: >= 8
+- Root page: `index.html`
+- Cart pages:
+  - `cart/gio-hang.html`
+  - `cart/thanh-toan.html`
+- Nested pages by section:
+  - `about/index.html`
+  - `contact/index.html`
+  - `factory/index.html`
+  - `faq/index.html`
+  - `news/index.html`
+  - `news/detail.html`
+  - `projects/index.html`
+  - `showroom/index.html`
+  - `dich-vu-khach-hang/*`
+  - `products/**`
 
-Kiem tra nhanh:
+## Requirements
+
+- Node.js 18+
+- npm 8+
+
+Verify your environment:
 
 ```bash
 node -v
 npm -v
 ```
 
-## 3. Cai Dat Va Chay Du An
+## Quick Start
 
-### 3.1 Cai dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-### 3.2 Chay local dev
+Start development server:
 
 ```bash
 npm run dev
 ```
 
-- Vite se mo server mac dinh tai `http://localhost:5173`
-
-### 3.3 Build production
+Build for production:
 
 ```bash
 npm run build
 ```
 
-- Output nam trong thu muc `dist/`
-
-### 3.4 Preview ban build
+Preview production output:
 
 ```bash
 npm run preview
 ```
 
-## 4. Scripts Trong package.json
+## Scripts
 
-- `npm run dev`: chay Vite development server
-- `npm run build`: build static files cho production
-- `npm run preview`: chay preview tren ban build trong `dist/`
+| Command | Purpose |
+|---|---|
+| `npm run dev` | Start Vite development server |
+| `npm run build` | Build static production files into `dist/` |
+| `npm run preview` | Preview the built site from `dist/` |
 
-## 5. Cau Truc Thu Muc Chinh
+## Project Structure
 
 ```text
 .
@@ -91,38 +103,35 @@ npm run preview
 │  ├─ header.html
 │  ├─ footer.html
 │  ├─ products/
-│  └─ ... (partials dung chung toan site)
+│  └─ ...
 ├─ home/partials/
 ├─ news/partials/
 ├─ factory/partials/
 ├─ projects/partials/
-└─ dich-vu-khach-hang/partials/
+├─ dich-vu-khach-hang/partials/
 ├─ tailwind.config.js
 ├─ postcss.config.js
 └─ vite.config.js
 ```
 
-## 6. Kien Truc Build Va Render
+## Build and Render Architecture
 
-### 6.1 Vite multi-page input (auto-scan HTML)
+### 1) Multi-page HTML entry discovery
 
-Trong `vite.config.js`, du an tu dong quet `**/*.html` va bo qua:
+In `vite.config.js`, Vite auto-discovers `**/*.html` and ignores:
 
 - `node_modules/**`
 - `dist/**`
+- `components/**`
+- `**/partials/**`
 
-Dieu nay co nghia:
+That means all page HTML files are auto-included as build entries without manual `rollupOptions.input` maintenance.
 
-- Tat ca file HTML o root/folder con (ngoai `node_modules`, `dist`) deu tro thanh page entry
-- Ban co the them page moi ma khong can sua tay `rollupOptions.input`
+### 2) Handlebars partial resolution
 
-### 6.2 Handlebars partials
+`vite-plugin-handlebars` is configured with `partialDirectory` at workspace root.
 
-Plugin `vite-plugin-handlebars` duoc cau hinh voi:
-
-- `partialDirectory`: 1 root duy nhat la workspace (`.`)
-
-Vi vay, co the tai su dung cac block nhu header/footer/section bang cu phap:
+Example usage:
 
 ```html
 {{> components/header}}
@@ -130,9 +139,74 @@ Vi vay, co the tai su dung cac block nhu header/footer/section bang cu phap:
 {{> home/partials/banner}}
 ```
 
-### 6.3 Tailwind scan content
+### 3) Handlebars `push/stack` system
 
-`tailwind.config.js` dang scan:
+The project supports Larravel-Blade-like `push/stack` helpers:
+
+- `{{#push "styles"}}...{{/push}}`
+- `{{#push "scripts"}}...{{/push}}`
+- `{{{stack "styles"}}}`
+- `{{{stack "scripts"}}}`
+
+Implementation detail:
+
+- `push` writes marker tokens into generated HTML.
+- A Vite `transformIndexHtml` hook resolves markers and injects collected stack content.
+- This makes stack behavior independent of partial rendering order.
+
+### Rendering flow at a glance
+
+```text
+Page HTML + Partials
+        |
+        v
+Handlebars render (push emits markers)
+        |
+        v
+Vite transformIndexHtml resolves markers
+        |
+        v
+Final HTML with stack-injected styles/scripts
+```
+
+## Styling and Script Strategy
+
+- Global/shared runtime stays in `assets/js/main.js`.
+- Component-specific inline CSS/JS should stay in the component/partial that owns it.
+- Wrap component/partial inline assets in `push` blocks so they are injected through page-level stacks.
+
+Recommended pattern in partials/components:
+
+```html
+{{#push "styles"}}
+<style>
+  .example { color: #222; }
+</style>
+{{/push}}
+
+{{#push "scripts"}}
+<script>
+  console.log("component script");
+</script>
+{{/push}}
+```
+
+Required in pages:
+
+```html
+<head>
+  ...
+  {{{stack "styles"}}}
+</head>
+<body>
+  ...
+  {{{stack "scripts"}}}
+</body>
+```
+
+## Tailwind Content Scanning
+
+`tailwind.config.js` currently scans:
 
 - `./*.html`
 - `./**/*.html`
@@ -140,114 +214,34 @@ Vi vay, co the tai su dung cac block nhu header/footer/section bang cu phap:
 - `./components/**/*.html`
 - `./**/partials/**/*.html`
 
-Luu y:
+If you add Tailwind classes in files outside these patterns, update Tailwind `content` config accordingly.
 
-- Neu them class Tailwind o file khong nam trong cac pattern tren, can cap nhat `content`.
+## How to Add New Pages
 
-### 6.4 JavaScript runtime
+1. Create a new HTML page in root or a nested folder.
+2. Add page-specific markup and optional inline page code.
+3. Reuse components/partials via Handlebars includes.
+4. Ensure the page contains both stack placeholders:
+   - `{{{stack "styles"}}}` before `</head>`
+   - `{{{stack "scripts"}}}` before `</body>`
+5. Run `npm run dev` and validate route rendering.
 
-File `assets/js/main.js` chi giu logic dung chung cho toan bo website.
+## How to Add New Partials/Components
 
-JS/CSS rieng theo page khong dat trong file module doc lap nua ma duoc dat truc tiep trong page HTML tuong ung (`<script>`, `<style>`).
+1. Add shared partials in `components/`.
+2. Add page-scoped partials under relevant `*/partials/` folder.
+3. Keep local CSS/JS in the same partial/component file.
+4. Wrap inline `<style>` and `<script>` using `push` blocks.
+5. Include partials in pages with clear, explicit paths.
 
-JS/CSS cua component duoc dat ngay trong partial component trong `components/**` hoac `*/partials/**`.
+## Local-only Folders
 
-Voi component/partial co inline CSS/JS, uu tien bo trong `{{#push "styles"}}...{{/push}}` va `{{#push "scripts"}}...{{/push}}` de page render qua stack.
-
-Muc tieu la tach ro: phan "dung chung" o `main.js` va phan "dac thu" nam cung noi su dung.
-
-## 7. Danh Muc Trang Hien Co
-
-### 7.1 Trang root
-
-- `index.html`
-
-### 7.2 Trang cart
-
-- `cart/gio-hang.html`
-- `cart/thanh-toan.html`
-
-### 7.3 Trang theo nhom
-
-- `about/index.html`
-- `contact/index.html`
-- `factory/index.html`
-- `faq/index.html`
-- `news/index.html`
-- `news/detail.html`
-- `projects/index.html`
-- `showroom/index.html`
-- `dich-vu-khach-hang/*`
-- `products/**` (cac danh muc va detail pages)
-
-Tong cong: **41** HTML pages nguon.
-
-## 8. Huong Dan Mo Rong
-
-### 8.1 Them trang moi
-
-1. Tao file HTML moi trong root hoac folder con.
-2. Neu can JS/CSS rieng cho page, dat truc tiep trong page do bang the `<script>` / `<style>`.
-3. Neu la JS/CSS cua component, dat trong partial component tuong ung trong `components/**` hoac partial folder cua page, va wrap bang `push` de page in qua `stack`.
-4. Chay `npm run dev` de test route.
-
-### 8.2 Them partial moi
-
-1. Tao partial dung chung trong `components/`.
-2. Tao partial rieng trang trong folder `partials` cua trang do (vi du `home/partials`, `news/partials`).
-3. Goi partial trong page HTML:
-
-```html
-{{> components/header}}
-{{> components/products/recommendations}}
-{{> home/partials/banner}}
-{{> news/partials/hero}}
-```
-
-4. Neu partial o subfolder, giu quy uoc ten ro rang de de tim kiem/bao tri.
-
-### 6.2.1 Handlebars stack/push (giong PHP template)
-
-Project da duoc setup 2 helper:
-
-- `{{#push "styles"}} ... {{/push}}`
-- `{{#push "scripts"}} ... {{/push}}`
-
-Va render stack tai page:
-
-- `{{{stack "styles"}}}` trong `<head>`
-- `{{{stack "scripts"}}}` truoc `</body>`
-
-Vi du trong partial:
-
-```html
-{{#push "scripts"}}
-<script>
-  console.log("partial script");
-</script>
-{{/push}}
-```
-
-Luu y:
-
-- Chi cac page co dat `{{{stack "scripts"}}}` / `{{{stack "styles"}}}` moi in ra noi dung da `push`.
-- Co the dung cho script/style cua component de tranh dat script truc tiep tai vi tri include partial.
-
-### 8.3 Them style/global component
-
-- Base va component styles dang nam o `assets/css/main.css`
-- Uu tien utility classes cua Tailwind truoc, chi viet CSS custom khi can
-
-## 9. Quy Uoc Git Va Thu Muc Local-Only
-
-Du an co 2 thu muc chi dung local (khong dua len remote):
+The following folders are local workspace folders and should not be pushed:
 
 - `.vscode/`
 - `.agents/`
 
-Hai thu muc nay da duoc them vao `.gitignore`.
-
-Neu truoc do da bi track, can bo track khoi Git index (van giu file local):
+If they were accidentally tracked before:
 
 ```bash
 git rm -r --cached .vscode .agents
@@ -255,17 +249,30 @@ git commit -m "chore: stop tracking local editor and agent folders"
 git push
 ```
 
-## 10. Troubleshooting Nhanh
+## Troubleshooting
 
-- CSS khong cap nhat:
-  - Kiem tra class co nam trong file duoc Tailwind scan hay khong
-  - Restart `npm run dev`
-- Partial khong render:
-  - Kiem tra ten partial va duong dan trong `components/` hoac cac folder `*/partials/`
-- JS page khong chay:
-  - Kiem tra the `<script>` da duoc dat dung trong page hoac partial chua
-  - Kiem tra selector trong script co khop voi HTML thuc te khong
+### Styles not updating
 
-## 11. License
+- Verify class names are in files matched by Tailwind `content` globs.
+- Restart the dev server.
+
+### Partial does not render
+
+- Verify the include path from workspace root (for example `components/...` or `home/partials/...`).
+- Check file extension and naming consistency.
+
+### Component script/style not injected
+
+- Confirm the partial uses `{{#push "styles"}}` / `{{#push "scripts"}}` correctly.
+- Confirm the page includes both stack placeholders.
+
+### Route not found
+
+- Verify file location and naming under section folders.
+- For cart routes, use:
+  - `/cart/gio-hang.html`
+  - `/cart/thanh-toan.html`
+
+## License
 
 ISC

@@ -1,282 +1,292 @@
-<section class="banner-section relative bg-primary overflow-hidden">
-  <!-- Decorative background images -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <!-- Left decorative element (mirrored) -->
-    <img
-      src="/assets/images/background-decorate.svg"
-      alt=""
-      class="banner-decor-left absolute left-0 xl:left-[160px] bottom-0 lg:-bottom-[275px] h-full object-contain opacity-60"
-      style="
-        transform: scaleX(-1);
-        max-width: 440px;
-        clip-path: inset(0 1px 43% 0);
-      "
-    />
-    <!-- Right decorative element -->
-    <img
-      src="/assets/images/background-decorate.svg"
-      alt=""
-      class="banner-decor-right absolute -right-[130px] xl:right-[50px] w-[300px] lg:w-auto -top-36 lg:-top-[85px] h-full object-contain opacity-60"
-      style="max-width: 700px"
-    />
-  </div>
-  <!-- Carousel container centered -->
-  <div
-    class="banner-carousel relative w-[85%] max-w-[1320px] mx-auto h-full z-10"
-  >
-    <!-- Slides -->
-    <div
-      class="banner-slide active absolute inset-0 transition-opacity duration-500"
-    >
+  <section class="banner-section relative bg-primary overflow-hidden pt-[58px] md:pt-[154px]">
+    <!-- Decorative background images -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <!-- Left decorative element (mirrored) -->
       <img
-        src="/assets/images/home-hero-01.png"
-        alt="Banner 1"
-        class="w-full h-full object-cover"
+        src="/assets/images/background-decorate.svg"
+        alt=""
+        class="banner-decor-left absolute top-[44px] lg:top-auto right-[182px] lg:right-auto xl:left-[160px] bottom-0 lg:-bottom-[275px] lg:h-full object-contain opacity-60"
+        style="
+          transform: scaleX(-1);
+          max-width: 440px;
+          clip-path: inset(0 1px 43% 0);
+        "
       />
-      <div class="absolute inset-0 flex items-end justify-center pb-16">
-        <a href="#" class="banner-cta-btn"> XEM CHI TIẾT </a>
-      </div>
-    </div>
-
-    <div
-      class="banner-slide active absolute inset-0 transition-opacity duration-500"
-    >
+      <!-- Right decorative element -->
       <img
-        src="/assets/images/home-hero-01.png"
-        alt="Banner 2"
-        class="w-full h-full object-cover"
+        src="/assets/images/background-decorate.svg"
+        alt=""
+        class="banner-decor-right w-[312px] absolute top-[234px] left-[203px] lg:left-auto xl:right-[50px] lg:w-auto lg:-top-[85px] lg:h-full object-contain opacity-60"
+        style="max-width: 700px"
       />
-      <div class="absolute inset-0 flex items-end justify-center pb-16">
-        <a href="#" class="banner-cta-btn"> XEM CHI TIẾT </a>
-      </div>
     </div>
-
+    <!-- Carousel container centered -->
     <div
-      class="banner-slide active absolute inset-0 transition-opacity duration-500"
+      class="banner-carousel relative w-[85%] max-w-[1320px] mx-auto h-[488px] md:h-full z-10"
     >
-      <img
-        src="/assets/images/home-hero-01.png"
-        alt="Banner 3"
-        class="w-full h-full object-cover"
-      />
-      <div class="absolute inset-0 flex items-end justify-center pb-16">
-        <a href="#" class="banner-cta-btn"> XEM CHI TIẾT </a>
-      </div>
-    </div>
-
-    <div
-      class="banner-slide active absolute inset-0 transition-opacity duration-500"
-    >
-      <img
-        src="/assets/images/home-hero-01.png"
-        alt="Banner 4"
-        class="w-full h-full object-cover"
-      />
-      <div class="absolute inset-0 flex items-end justify-center pb-16">
-        <a href="#" class="banner-cta-btn"> XEM CHI TIẾT </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Banner Navigation & Dots Row -->
-  <div
-    class="flex items-center justify-between w-[85%] max-w-[1320px] mx-auto mt-6 z-20"
-  >
-    <!-- Prev Button -->
-    <button
-      class="banner-prev w-10 h-10 border border-white/50 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all"
-      aria-label="Previous slide"
-    >
-      <svg
-        class="w-5 h-5"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
+      <!-- Slides -->
+      <div
+        class="banner-slide active absolute inset-0 transition-opacity duration-500"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M15 19l-7-7 7-7"
-        ></path>
-      </svg>
-    </button>
+        <img
+          src="/assets/images/home-hero-01.png"
+          alt="Banner 1"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 flex items-end justify-center pb-[29px] md:pb-16">
+          <a href="#" class="banner-cta-btn"> XEM CHI TIẾT </a>
+        </div>
+      </div>
 
-    <!-- Banner Dots -->
-    <div class="flex gap-3">
-      <button
-        class="banner-dot active w-3 h-3 rounded-full bg-secondary transition-all"
-        data-slide="0"
-        aria-label="Slide 1"
-      ></button>
-      <button
-        class="banner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all"
-        data-slide="1"
-        aria-label="Slide 2"
-      ></button>
-      <button
-        class="banner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all"
-        data-slide="2"
-        aria-label="Slide 3"
-      ></button>
-      <button
-        class="banner-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all"
-        data-slide="3"
-        aria-label="Slide 4"
-      ></button>
+      <div
+        class="banner-slide active absolute inset-0 transition-opacity duration-500"
+      >
+        <img
+          src="/assets/images/home-hero-01.png"
+          alt="Banner 2"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 flex items-end justify-center pb-[29px] md:pb-16">
+          <a href="#" class="banner-cta-btn"> XEM CHI TIẾT </a>
+        </div>
+      </div>
+
+      <div
+        class="banner-slide active absolute inset-0 transition-opacity duration-500"
+      >
+        <img
+          src="/assets/images/home-hero-01.png"
+          alt="Banner 3"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 flex items-end justify-center pb-[29px] md:pb-16">
+          <a href="#" class="banner-cta-btn"> XEM CHI TIẾT </a>
+        </div>
+      </div>
+
+      <div
+        class="banner-slide active absolute inset-0 transition-opacity duration-500"
+      >
+        <img
+          src="/assets/images/home-hero-01.png"
+          alt="Banner 4"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 flex items-end justify-center pb-[29px] md:pb-16">
+          <a href="#" class="banner-cta-btn"> XEM CHI TIẾT </a>
+        </div>
+      </div>
     </div>
 
-    <!-- Next Button -->
-    <button
-      class="banner-next w-10 h-10 border border-white/50 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all"
-      aria-label="Next slide"
+    <!-- Banner Navigation & Dots -->
+    <div
+      class="w-[85%] max-w-[1320px] mx-auto mt-[10px] md:mt-6 flex items-center justify-center md:justify-between z-20"
     >
-      <svg
-        class="w-5 h-5"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
+      <!-- Prev Button (desktop/tablet only) -->
+      <button
+        class="banner-prev hidden md:flex w-10 h-10 border border-white/50 rounded-full items-center justify-center text-white/70 hover:border-white hover:text-white transition-all"
+        aria-label="Previous slide"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M9 5l7 7-7 7"
-        ></path>
-      </svg>
-    </button>
-  </div>
-</section>
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          ></path>
+        </svg>
+      </button>
 
-{{#push "styles"}}
-<style>
-  .banner-section {
-    height: 760px;
-    padding: 120px 0;
-  }
+      <div class="banner-dots flex items-center gap-[3px] md:gap-3">
+        <button
+          class="banner-dot active w-[4px] h-[4px] md:w-3 md:h-3 rounded-full bg-secondary transition-all"
+          data-slide="0"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          class="banner-dot w-[4px] h-[4px] md:w-3 md:h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all"
+          data-slide="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          class="banner-dot w-[4px] h-[4px] md:w-3 md:h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all"
+          data-slide="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          class="banner-dot w-[4px] h-[4px] md:w-3 md:h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all"
+          data-slide="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
 
-  @media (min-width: 768px) {
+      <!-- Next Button (desktop/tablet only) -->
+      <button
+        class="banner-next hidden md:flex w-10 h-10 border border-white/50 rounded-full items-center justify-center text-white/70 hover:border-white hover:text-white transition-all"
+        aria-label="Next slide"
+      >
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  {{#push "styles"}}
+  <style>
     .banner-section {
-      height: 680px;
-      padding: 120px 0;
+      height: 100%;
+      /* padding: 59px 0; */
     }
-  }
 
-  @media (min-width: 1024px) {
-    .banner-section {
-      height: 885px;
-      padding: 160px 0 100px;
+    @media (min-width: 768px) {
+      .banner-section {
+        height: 680px;
+        padding: 120px 0;
+      }
     }
-  }
 
-  .banner-carousel {
-    width: 75%;
-    animation: banner-slide-in 0.3s ease-in-out;
-  }
+    @media (min-width: 1024px) {
+      .banner-section {
+        height: 885px;
+        padding: 160px 0 100px;
+      }
+    }
 
-  .banner-slide {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
+    .banner-carousel {
+      width: 75%;
+      animation: banner-slide-in 0.3s ease-in-out;
+    }
 
-  .banner-slide.active,
-  .banner-slide.opacity-100 {
-    opacity: 1;
-  }
-
-  @keyframes banner-slide-in {
-    from {
+    .banner-slide {
       opacity: 0;
+      transition: opacity 0.5s ease-in-out;
     }
-    to {
+
+    .banner-slide.active,
+    .banner-slide.opacity-100 {
       opacity: 1;
     }
-  }
 
-  .banner-cta-btn {
-    display: inline-block;
-    padding: 12px 36px;
-    border: 1.5px solid rgba(255, 255, 255, 0.85);
-    color: #fff;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    text-align: center;
-    transition: all 0.3s ease;
-    border-radius: 4px;
-  }
+    @keyframes banner-slide-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
 
-  .banner-cta-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: #fff;
-  }
+    .banner-cta-btn {
+      font-family: "Archivo", sans-serif;
+      font-style: normal;
+      display: inline-block;
+      padding: 5px 20px;
+      border: 0.5px solid rgba(255, 255, 255, 0.85);
+      color: #fff;
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-align: center;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
 
-  .banner-dot.active {
-    background-color: #c76e00;
-  }
-</style>
-{{/push}} {{#push "scripts"}}
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const bannerSection = document.querySelector(".banner-section");
-    if (!bannerSection) return;
+    @media (min-width: 768px) {
+      .banner-cta-btn {
+        font-family: inherit;
+        padding: 12px 36px;
+        border: 1.5px solid rgba(255, 255, 255, 0.85);
+        font-size: 14px;
+      }
+    }
 
-    const bannerSlides = Array.from(
-      bannerSection.querySelectorAll(".banner-slide"),
-    );
-    const bannerDots = Array.from(
-      bannerSection.querySelectorAll(".banner-dot"),
-    );
-    const bannerNext = bannerSection.querySelector(".banner-next");
-    const bannerPrev = bannerSection.querySelector(".banner-prev");
+    .banner-cta-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: #fff;
+    }
 
-    if (!bannerSlides.length) return;
+    .banner-dot.active {
+      background-color: #c76e00;
+    }
+  </style>
+  {{/push}} {{#push "scripts"}}
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const bannerSection = document.querySelector(".banner-section");
+      if (!bannerSection) return;
 
-    let bannerCurrentSlide = 0;
-    const totalBannerSlides = bannerSlides.length;
+      const bannerSlides = Array.from(
+        bannerSection.querySelectorAll(".banner-slide"),
+      );
+      const bannerDots = Array.from(
+        bannerSection.querySelectorAll(".banner-dot"),
+      );
+      const bannerNext = bannerSection.querySelector(".banner-next");
+      const bannerPrev = bannerSection.querySelector(".banner-prev");
 
-    const showBannerSlide = (index) => {
-      bannerSlides.forEach((slide, slideIndex) => {
-        const isActive = slideIndex === index;
-        slide.classList.toggle("active", isActive);
-        slide.classList.toggle("opacity-100", isActive);
-        slide.classList.toggle("opacity-0", !isActive);
-      });
+      if (!bannerSlides.length) return;
 
-      bannerDots.forEach((dot, dotIndex) => {
-        const isActive = dotIndex === index;
-        dot.classList.toggle("active", isActive);
-        dot.classList.toggle("bg-secondary", isActive);
-        dot.classList.toggle("bg-white/40", !isActive);
-      });
-    };
+      let bannerCurrentSlide = 0;
+      const totalBannerSlides = bannerSlides.length;
 
-    const nextBannerSlide = () => {
-      bannerCurrentSlide = (bannerCurrentSlide + 1) % totalBannerSlides;
-      showBannerSlide(bannerCurrentSlide);
-    };
+      const showBannerSlide = (index) => {
+        bannerSlides.forEach((slide, slideIndex) => {
+          const isActive = slideIndex === index;
+          slide.classList.toggle("active", isActive);
+          slide.classList.toggle("opacity-100", isActive);
+          slide.classList.toggle("opacity-0", !isActive);
+        });
 
-    const prevBannerSlide = () => {
-      bannerCurrentSlide =
-        (bannerCurrentSlide - 1 + totalBannerSlides) % totalBannerSlides;
-      showBannerSlide(bannerCurrentSlide);
-    };
+        bannerDots.forEach((dot, dotIndex) => {
+          const isActive = dotIndex === index;
+          dot.classList.toggle("active", isActive);
+          dot.classList.toggle("bg-secondary", isActive);
+          dot.classList.toggle("bg-white/40", !isActive);
+        });
+      };
 
-    bannerNext?.addEventListener("click", nextBannerSlide);
-    bannerPrev?.addEventListener("click", prevBannerSlide);
-
-    bannerDots.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        const targetIndex = Number.parseInt(dot.dataset.slide || "0", 10);
-        if (Number.isNaN(targetIndex)) return;
-        bannerCurrentSlide = targetIndex;
+      const nextBannerSlide = () => {
+        bannerCurrentSlide = (bannerCurrentSlide + 1) % totalBannerSlides;
         showBannerSlide(bannerCurrentSlide);
-      });
-    });
+      };
 
-    showBannerSlide(bannerCurrentSlide);
-    window.setInterval(nextBannerSlide, 5000);
-  });
-</script>
-{{/push}}
+      const prevBannerSlide = () => {
+        bannerCurrentSlide =
+          (bannerCurrentSlide - 1 + totalBannerSlides) % totalBannerSlides;
+        showBannerSlide(bannerCurrentSlide);
+      };
+
+      bannerNext?.addEventListener("click", nextBannerSlide);
+      bannerPrev?.addEventListener("click", prevBannerSlide);
+
+      bannerDots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          const targetIndex = Number.parseInt(dot.dataset.slide || "0", 10);
+          if (Number.isNaN(targetIndex)) return;
+          bannerCurrentSlide = targetIndex;
+          showBannerSlide(bannerCurrentSlide);
+        });
+      });
+
+      showBannerSlide(bannerCurrentSlide);
+      window.setInterval(nextBannerSlide, 5000);
+    });
+  </script>
+  {{/push}}
