@@ -25,7 +25,8 @@
     opacity: var(--aw-opacity);
     transform-origin: center center;
     transform-style: preserve-3d;
-    transform: translate3d(var(--aw-tx), var(--aw-ty), var(--aw-tz)) rotateY(var(--aw-ry));
+    transform: translate3d(var(--aw-tx), var(--aw-ty), var(--aw-tz))
+      rotateY(var(--aw-ry));
     backface-visibility: hidden;
     will-change: width, height, transform, opacity;
     transition:
@@ -176,24 +177,41 @@
       height: 461px;
     }
 
-    .awards-component .awards-swiper .swiper-slide > div.absolute.bottom-0.left-0.right-0 {
+    .awards-component
+      .awards-swiper
+      .swiper-slide
+      > div.absolute.bottom-0.left-0.right-0 {
       top: 0;
       bottom: 0;
       padding: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+      );
       transition:
         margin-top 0.78s cubic-bezier(0.22, 1, 0.36, 1),
         margin-bottom 0.78s cubic-bezier(0.22, 1, 0.36, 1);
       will-change: margin-top, margin-bottom;
     }
 
-    .awards-component .awards-swiper .swiper-slide-prev > div.absolute.bottom-0.left-0.right-0,
-    .awards-component .awards-swiper .swiper-slide-next > div.absolute.bottom-0.left-0.right-0 {
+    .awards-component
+      .awards-swiper
+      .swiper-slide-prev
+      > div.absolute.bottom-0.left-0.right-0,
+    .awards-component
+      .awards-swiper
+      .swiper-slide-next
+      > div.absolute.bottom-0.left-0.right-0 {
       margin-top: 25px;
       margin-bottom: 25px;
     }
 
-    .awards-component .awards-swiper .swiper-slide > div.absolute.bottom-0.left-0.right-0 > p {
+    .awards-component
+      .awards-swiper
+      .swiper-slide
+      > div.absolute.bottom-0.left-0.right-0
+      > p {
       position: absolute;
       left: 21px;
       width: 261px;
@@ -206,12 +224,24 @@
       word-wrap: break-word;
     }
 
-    .awards-component .awards-swiper .swiper-slide-active > div.absolute.bottom-0.left-0.right-0 > p {
+    .awards-component
+      .awards-swiper
+      .swiper-slide-active
+      > div.absolute.bottom-0.left-0.right-0
+      > p {
       bottom: 23px;
     }
 
-    .awards-component .awards-swiper .swiper-slide-prev > div.absolute.bottom-0.left-0.right-0 > p,
-    .awards-component .awards-swiper .swiper-slide-next > div.absolute.bottom-0.left-0.right-0 > p {
+    .awards-component
+      .awards-swiper
+      .swiper-slide-prev
+      > div.absolute.bottom-0.left-0.right-0
+      > p,
+    .awards-component
+      .awards-swiper
+      .swiper-slide-next
+      > div.absolute.bottom-0.left-0.right-0
+      > p {
       bottom: 23px;
     }
 
@@ -226,7 +256,9 @@
 
     .awards-mobile-lightbox-image,
     .awards-mobile-lightbox-close {
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
     }
 
     .awards-mobile-lightbox.is-open .awards-mobile-lightbox-image,
@@ -238,87 +270,169 @@
 </style>
 {{/push}}
 
-<div class="awards-component w-full max-w-[1320px] mx-auto relative px-0 lg:px-0">
+<div
+  class="awards-component w-full max-w-[1320px] mx-auto relative px-0 lg:px-0"
+>
   <div class="swiper awards-swiper w-full py-0 lg:py-10">
     <div class="swiper-wrapper">
       <!-- Slide 1 -->
       <div class="swiper-slide aspect-[10/17] relative overflow-hidden">
-        <img src="/assets/images/award-01.jpg" alt="Award 1" class="w-full h-full object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-          <p class="text-white font-medium text-sm">Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà
-            Nội trao tặng</p>
+        <img
+          src="/assets/images/award-01.jpg"
+          alt="Award 1"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20"
+        >
+          <p class="text-white font-medium text-sm">
+            Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà
+            Nội trao tặng
+          </p>
         </div>
       </div>
       <!-- Slide 2 -->
       <div class="swiper-slide aspect-[10/17] relative overflow-hidden">
-        <img src="/assets/images/ceo.jpg" alt="Award 2" class="w-full h-full object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-          <p class="text-white font-medium text-sm">Ông Vũ Mạnh Hải - Nghệ nhân Hà Nội năm 2024 do UBND thành phố Hà Nội
-            trao tặng</p>
+        <img
+          src="/assets/images/ceo.jpg"
+          alt="Award 2"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20"
+        >
+          <p class="text-white font-medium text-sm">
+            Ông Vũ Mạnh Hải - Nghệ nhân Hà Nội năm 2024 do UBND thành phố Hà Nội
+            trao tặng
+          </p>
         </div>
       </div>
       <!-- Slide 3 -->
       <div class="swiper-slide aspect-[10/17] relative overflow-hidden">
-        <img src="/assets/images/award-03.jpg" alt="Award 3" class="w-full h-full object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-          <p class="text-white font-medium text-sm">Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà
-            Nội trao tặng</p>
+        <img
+          src="/assets/images/award-03.jpg"
+          alt="Award 3"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20"
+        >
+          <p class="text-white font-medium text-sm">
+            Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà
+            Nội trao tặng
+          </p>
         </div>
       </div>
       <!-- Slide 4 -->
       <div class="swiper-slide aspect-[10/17] relative overflow-hidden">
-        <img src="/assets/images/award-02.jpg" alt="Award 4" class="w-full h-full object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-          <p class="text-white font-medium text-sm">Ông Vũ Mạnh Hải - Nghệ nhân Hà Nội năm 2024 do UBND thành phố Hà Nội
-            trao tặng</p>
+        <img
+          src="/assets/images/award-02.jpg"
+          alt="Award 4"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20"
+        >
+          <p class="text-white font-medium text-sm">
+            Ông Vũ Mạnh Hải - Nghệ nhân Hà Nội năm 2024 do UBND thành phố Hà Nội
+            trao tặng
+          </p>
         </div>
       </div>
       <!-- Slide 5 -->
       <div class="swiper-slide aspect-[10/17] relative overflow-hidden">
-        <img src="/assets/images/award-05.jpg" alt="Award 5" class="w-full h-full object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-          <p class="text-white font-medium text-sm">Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà
-            Nội trao tặng</p>
+        <img
+          src="/assets/images/award-05.jpg"
+          alt="Award 5"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20"
+        >
+          <p class="text-white font-medium text-sm">
+            Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà
+            Nội trao tặng
+          </p>
         </div>
       </div>
       <!-- Slide 6 -->
       <div class="swiper-slide aspect-[10/17] relative overflow-hidden">
-        <img src="/assets/images/award-01.jpg" alt="Award 1" class="w-full h-full object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-          <p class="text-white font-medium text-sm">Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà
-            Nội trao tặng</p>
+        <img
+          src="/assets/images/award-01.jpg"
+          alt="Award 1"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20"
+        >
+          <p class="text-white font-medium text-sm">
+            Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà
+            Nội trao tặng
+          </p>
         </div>
       </div>
       <!-- Slide 7 -->
       <div class="swiper-slide aspect-[10/17] relative overflow-hidden">
-        <img src="/assets/images/ceo.jpg" alt="Award 2" class="w-full h-full object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-          <p class="text-white font-medium text-sm">Ông Vũ Mạnh Hải - Nghệ nhân Hà Nội năm 2024 do UBND thành phố Hà Nội
-            trao tặng</p>
+        <img
+          src="/assets/images/ceo.jpg"
+          alt="Award 2"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20"
+        >
+          <p class="text-white font-medium text-sm">
+            Ông Vũ Mạnh Hải - Nghệ nhân Hà Nội năm 2024 do UBND thành phố Hà Nội
+            trao tặng
+          </p>
         </div>
       </div>
       <!-- Slide 8 -->
       <div class="swiper-slide aspect-[10/17] relative overflow-hidden">
-        <img src="/assets/images/award-03.jpg" alt="Award 3" class="w-full h-full object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-          <p class="text-white font-medium text-sm">Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà
-            Nội trao tặng</p>
+        <img
+          src="/assets/images/award-03.jpg"
+          alt="Award 3"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20"
+        >
+          <p class="text-white font-medium text-sm">
+            Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà
+            Nội trao tặng
+          </p>
         </div>
       </div>
       <!-- Slide 9 -->
       <div class="swiper-slide aspect-[10/17] relative overflow-hidden">
-        <img src="/assets/images/award-02.jpg" alt="Award 4" class="w-full h-full object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-          <p class="text-white font-medium text-sm">Ông Vũ Mạnh Hải - Nghệ nhân Hà Nội năm 2024 do UBND thành phố Hà Nội
-            trao tặng</p>
+        <img
+          src="/assets/images/award-02.jpg"
+          alt="Award 4"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20"
+        >
+          <p class="text-white font-medium text-sm">
+            Ông Vũ Mạnh Hải - Nghệ nhân Hà Nội năm 2024 do UBND thành phố Hà Nội
+            trao tặng
+          </p>
         </div>
       </div>
       <!-- Slide 10 -->
       <div class="swiper-slide aspect-[10/17] relative overflow-hidden">
-        <img src="/assets/images/award-05.jpg" alt="Award 5" class="w-full h-full object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-          <p class="text-white font-medium text-sm">Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà
-            Nội trao tặng</p>
+        <img
+          src="/assets/images/award-05.jpg"
+          alt="Award 5"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20"
+        >
+          <p class="text-white font-medium text-sm">
+            Bà Nguyễn Thị Thanh - Nghệ nhân Hà Nội năm 2025 do UBND thành phố Hà
+            Nội trao tặng
+          </p>
         </div>
       </div>
     </div>
@@ -326,22 +440,50 @@
 
   <!-- Swiper Navigation -->
   <div
-    class="awards-prev hidden lg:flex absolute -left-[20%] lg:-left-[6%] top-[50%] -translate-y-1/2 z-20 w-10 h-10 border border-black/50 rounded-full items-center justify-center text-black/70 hover:border-black hover:text-black transition-all cursor-pointer">
+    class="awards-prev hidden lg:flex absolute -left-[20%] lg:-left-[6%] top-[50%] -translate-y-1/2 z-20 w-10 h-10 border border-black/50 rounded-full items-center justify-center text-black/70 hover:border-black hover:text-black transition-all cursor-pointer"
+  >
     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M15 19l-7-7 7-7"
+      ></path>
     </svg>
   </div>
 
   <div
-    class="awards-next hidden lg:flex absolute -right-[20%] lg:-right-[6%] top-[50%] -translate-y-1/2 z-20 w-10 h-10 border border-black/50 rounded-full items-center justify-center text-black/70 hover:border-black hover:text-black transition-all cursor-pointer">
+    class="awards-next hidden lg:flex absolute -right-[20%] lg:-right-[6%] top-[50%] -translate-y-1/2 z-20 w-10 h-10 border border-black/50 rounded-full items-center justify-center text-black/70 hover:border-black hover:text-black transition-all cursor-pointer"
+  >
     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M9 5l7 7-7 7"
+      ></path>
     </svg>
   </div>
 
-  <div id="awards-mobile-lightbox" class="awards-mobile-lightbox fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 p-4 opacity-0 pointer-events-none lg:hidden" aria-hidden="true">
-    <button id="awards-mobile-lightbox-close" type="button" aria-label="Close image preview" class="awards-mobile-lightbox-close absolute right-4 top-4 text-white text-4xl leading-none opacity-0 translate-y-2 scale-95">&times;</button>
-    <img id="awards-mobile-lightbox-image" src="" alt="" class="awards-mobile-lightbox-image max-w-[95vw] max-h-[88vh] object-contain opacity-0 scale-95 translate-y-2 shadow-2xl" />
+  <div
+    id="awards-mobile-lightbox"
+    class="awards-mobile-lightbox fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 p-4 opacity-0 pointer-events-none lg:hidden"
+    aria-hidden="true"
+  >
+    <button
+      id="awards-mobile-lightbox-close"
+      type="button"
+      aria-label="Close image preview"
+      class="awards-mobile-lightbox-close absolute right-4 top-4 text-white text-4xl leading-none opacity-0 translate-y-2 scale-95"
+    >
+      &times;
+    </button>
+    <img
+      id="awards-mobile-lightbox-image"
+      src=""
+      alt=""
+      class="awards-mobile-lightbox-image max-w-[95vw] max-h-[88vh] object-contain opacity-0 scale-95 translate-y-2 shadow-2xl"
+    />
   </div>
 </div>
 
@@ -366,7 +508,6 @@
       }
 
       var isAboutPage = window.location.pathname.indexOf("/about") === 0;
-      var isHomePage = document.body && document.body.dataset.page === "index";
       var isMobile = window.matchMedia("(max-width: 767px)").matches;
       var transitionSpeed = isMobile ? 780 : 620;
       var swiper = new Swiper(swiperEl, {
@@ -411,13 +552,22 @@
       }
       window.__awardsSwiperInstances.push(swiper);
 
-      if (isMobile && isHomePage) {
+      if (isMobile) {
         var mobileLightbox = root.querySelector("#awards-mobile-lightbox");
-        var mobileLightboxImage = root.querySelector("#awards-mobile-lightbox-image");
-        var mobileLightboxClose = root.querySelector("#awards-mobile-lightbox-close");
+        var mobileLightboxImage = root.querySelector(
+          "#awards-mobile-lightbox-image",
+        );
+        var mobileLightboxClose = root.querySelector(
+          "#awards-mobile-lightbox-close",
+        );
         var awardSlides = Array.from(root.querySelectorAll(".swiper-slide"));
 
-        if (mobileLightbox && mobileLightboxImage && mobileLightboxClose && awardSlides.length) {
+        if (
+          mobileLightbox &&
+          mobileLightboxImage &&
+          mobileLightboxClose &&
+          awardSlides.length
+        ) {
           var closeMobileLightbox = function () {
             mobileLightbox.classList.remove("is-open");
             document.body.classList.remove("overflow-hidden");
@@ -439,33 +589,65 @@
             });
           };
 
-          awardSlides.forEach(function (slide) {
+          var triggerLightboxFromSlide = function (slide, event) {
+            if (!slide || !window.matchMedia("(max-width: 767px)").matches) {
+              return;
+            }
+
             var slideImage = slide.querySelector("img");
             if (!slideImage) {
               return;
             }
 
+            if (event && typeof event.preventDefault === "function") {
+              event.preventDefault();
+            }
+
+            if (event && typeof event.stopPropagation === "function") {
+              event.stopPropagation();
+            }
+
+            openMobileLightbox(
+              slideImage.currentSrc || slideImage.src,
+              slideImage.alt,
+            );
+          };
+
+          var triggerLightboxFromTarget = function (target, event) {
+            if (!target || typeof target.closest !== "function") {
+              return;
+            }
+
+            var slide = target.closest(".swiper-slide");
+            triggerLightboxFromSlide(slide, event);
+          };
+
+          awardSlides.forEach(function (slide) {
             slide.classList.add("cursor-zoom-in");
             slide.setAttribute("role", "button");
             slide.setAttribute("tabindex", "0");
 
-            var triggerLightbox = function (event) {
-              if (!window.matchMedia("(max-width: 767px)").matches) {
-                return;
-              }
-
-              event.preventDefault();
-              event.stopPropagation();
-              openMobileLightbox(slideImage.currentSrc || slideImage.src, slideImage.alt);
-            };
-
-            slide.addEventListener("click", triggerLightbox);
             slide.addEventListener("keydown", function (event) {
               if (event.key === "Enter" || event.key === " ") {
-                triggerLightbox(event);
+                triggerLightboxFromSlide(slide, event);
               }
             });
           });
+
+          swiperEl.addEventListener("click", function (event) {
+            triggerLightboxFromTarget(event.target, event);
+          });
+
+          if (typeof swiper.on === "function") {
+            swiper.on("tap", function (swiperInstance, event) {
+              if (event && event.target) {
+                triggerLightboxFromTarget(event.target, event);
+                return;
+              }
+
+              triggerLightboxFromSlide(swiperInstance.clickedSlide, event);
+            });
+          }
 
           mobileLightboxClose.addEventListener("click", closeMobileLightbox);
           mobileLightbox.addEventListener("click", function (event) {
@@ -475,7 +657,10 @@
           });
 
           document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape" && mobileLightbox.classList.contains("is-open")) {
+            if (
+              event.key === "Escape" &&
+              mobileLightbox.classList.contains("is-open")
+            ) {
               closeMobileLightbox();
             }
           });
@@ -488,7 +673,9 @@
     }
 
     function initAllAwardsComponents() {
-      document.querySelectorAll(".awards-component").forEach(initAwardsComponent);
+      document
+        .querySelectorAll(".awards-component")
+        .forEach(initAwardsComponent);
     }
 
     if (!window.__awardsComponentRefreshBound) {

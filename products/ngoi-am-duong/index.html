@@ -12,6 +12,41 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
     </style>
+    <style>
+      .size-options-scroll {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-gutter: stable both-edges;
+        scrollbar-width: auto;
+        scrollbar-color: #c76e00 #fff1e3;
+        padding-bottom: 12px;
+        scroll-behavior: smooth;
+      }
+
+      .size-options-scroll::-webkit-scrollbar {
+        height: 16px;
+      }
+
+      .size-options-scroll::-webkit-scrollbar-track {
+        background: linear-gradient(180deg, #fff7ee 0%, #fff1e3 100%);
+        border-radius: 9999px;
+        box-shadow:
+          inset 0 0 0 1px rgba(249, 115, 22, 0.12),
+          0 2px 8px rgba(249, 115, 22, 0.08);
+      }
+
+      .size-options-scroll::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #fdba74 0%, #c76e00 100%);
+        border-radius: 9999px;
+        border: 4px solid #fff1e3;
+        box-shadow: 0 2px 6px rgba(249, 115, 22, 0.22);
+      }
+
+      .size-options-scroll::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #fed7aa 0%, #c76e00 100%);
+      }
+    </style>
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link
       rel="stylesheet"
@@ -30,7 +65,7 @@
     <main class="flex-grow bg-background-secondary">
       <!-- Top Banner -->
       <section
-        class="relative min-h-[675px] md:min-h-[600px] flex items-center pt-[15px] md:pt-24 md:pb-8 overflow-hidden"
+        class="relative min-h-[675px] md:min-h-[600px] flex items-center md:pt-24 md:pb-8 overflow-hidden"
       >
         <div class="absolute inset-0 z-0">
           <img
@@ -45,7 +80,7 @@
         </div>
 
         <div
-          class="relative z-10 w-[85%] max-w-[1320px] mx-auto flex flex-col h-full justify-between md:mt-0"
+          class="z-10 w-[85%] max-w-[1320px] mx-auto flex flex-col h-full justify-between mt-[45px] md:mt-0"
         >
           <div class="text-center pb-12 md:pb-24 space-y-4 md:space-y-8">
             <h1
@@ -56,7 +91,7 @@
               Ngói Âm Dương
             </h1>
             <p
-              class="font-italianno text-[30px] leading-[37.5px] md:text-5xl lg:text-[48px] md:leading-tight text-white/80 drop-shadow-md max-w-4xl mx-auto"
+              class="font-italianno text-[30px] leading-[37.5px] md:text-5xl lg:text-[48px] md:leading-tight text-white/80 drop-shadow-md max-w-4xl mx-auto text-nowrap"
               data-aos="fade-up"
               data-aos-delay="200"
               data-aos-duration="1000"
@@ -76,7 +111,7 @@
               data-aos-delay="400"
             >
               <p
-                class="font-charm text-[24px] leading-[39px] tracking-[0.6px] md:text-[32px] md:leading-relaxed md:tracking-wide text-primary font-medium"
+                class="text-nowrap font-charm text-[24px] leading-[39px] tracking-[0.6px] md:text-[32px] md:leading-relaxed md:tracking-wide text-primary font-medium"
               >
                 Âm dương hòa hợp, đất hóa linh<br />
                 Thanh Hải kết tinh, vạn công trình<br />
@@ -91,7 +126,7 @@
               data-aos-delay="400"
             >
               <div
-                class="bg-white p-3 gap-3 md:p-6 md:gap-6 flex w-full max-w-[860px] transform translate-y-0 md:-translate-y-8 rounded shadow-sm md:shadow-none"
+                class="bg-white p-3 gap-3 md:p-6 md:gap-6 flex w-full max-w-[860px] transform translate-y-0 md:-translate-y-8 rounded md:shadow-none"
               >
                 <div
                   class="w-1/2 aspect-[167/138] md:aspect-square flex items-center justify-center"
@@ -137,11 +172,12 @@
           Đa dạng kích thước -<br class="block md:hidden" />
           phong phú chọn lựa
         </h2>
-        <div class="w-full flex justify-center">
+        <div class="size-options-scroll w-full pb-2">
           <img
             src="/assets/images/ngoi-am-duong-size.png"
             alt="Đa dạng kích thước ngói âm dương"
-            class="w-full h-auto object-contain"
+            class="h-auto object-contain max-w-none"
+            style="width: 200%"
           />
         </div>
       </section>
@@ -160,7 +196,7 @@
           <img
             src="/assets/images/ngoi-am-duong-pk.png"
             alt="Phụ kiện ngói âm dương"
-            class="w-[80%] h-auto object-contain"
+            class="w-[100%] h-auto object-contain"
           />
         </div>
       </section>
