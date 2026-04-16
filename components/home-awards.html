@@ -366,6 +366,7 @@
       }
 
       var isAboutPage = window.location.pathname.indexOf("/about") === 0;
+      var isHomePage = document.body && document.body.dataset.page === "index";
       var isMobile = window.matchMedia("(max-width: 767px)").matches;
       var transitionSpeed = isMobile ? 780 : 620;
       var swiper = new Swiper(swiperEl, {
@@ -410,7 +411,7 @@
       }
       window.__awardsSwiperInstances.push(swiper);
 
-      if (isMobile) {
+      if (isMobile && isHomePage) {
         var mobileLightbox = root.querySelector("#awards-mobile-lightbox");
         var mobileLightboxImage = root.querySelector("#awards-mobile-lightbox-image");
         var mobileLightboxClose = root.querySelector("#awards-mobile-lightbox-close");
