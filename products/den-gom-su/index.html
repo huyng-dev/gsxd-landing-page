@@ -2,39 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Đèn Gốm Sứ - Thanh Hải Ceramics</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/assets/images/logo.png"
-    />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Carattere&family=Charm:wght@400;700&family=Ephesis&family=Italianno&display=swap");
     </style>
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     {{{stack "styles"}}}
-</head>
+  </head>
   <body
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}} {{> components/catalog-button}}
+    {{> components/header}}
+    {{> components/catalog-button}}
 
     <main class="flex-grow">
       <!-- Banner Section -->
@@ -53,37 +41,31 @@
           class="absolute bottom-12 right-12 md:bottom-32 md:right-24 lg:bottom-44 lg:right-[10%] z-10 text-white text-right"
           data-aos="fade-left"
         >
-          <h1 class="font-carattere text-[48px] md:text-[80px] lg:text-[128px] leading-[0.8] drop-shadow-2xl select-none">Đèn gốm sứ</h1>
+          <h1
+            class="font-carattere text-[48px] md:text-[80px] lg:text-[128px] leading-[0.8] drop-shadow-2xl select-none"
+          >
+            Đèn gốm sứ
+          </h1>
         </div>
       </section>
 
       <div class="w-[85%] max-w-[1320px] mx-auto pt-10">
         <!-- Breadcrumb -->
         <div class="pb-6 relative z-10">
-          <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
-            <a
-              href="/"
-              class="hover:text-secondary transition-colors"
-            >
-              Trang chủ
-            </a>
-            <span class="mx-1">/</span>
-            <span class="text-primary font-semibold border-primary">Đèn Gốm Sứ</span>
-          </p>
+          {{> components/products/breadcrumb textClass="font-bold text-primary/60 uppercase text-xs md:text-base" linkClass="hover:text-secondary transition-colors" separatorClass="mx-1" currentClass="text-primary font-semibold border-primary" currentLabel="Đèn Gốm Sứ"}}
         </div>
 
         <hr class="border-t border-black/10 mb-4 w-full" />
 
-        <section
-          class="pb-4"
-          data-aos="fade-up"
-        >
+        <section class="pb-4" data-aos="fade-up">
           <!-- Filter Button -->
           <div class="mb-10 block">
             <button
               class="flex items-center gap-3 text-textPrimary hover:text-secondary transition-colors font-bold uppercase tracking-[0.05em] text-[13px]"
             >
-              <div class="w-8 h-8 flex items-center justify-center border border-black/60 rounded text-black/60">
+              <div
+                class="w-8 h-8 flex items-center justify-center border border-black/60 rounded text-black/60"
+              >
                 <svg
                   class="w-4 h-4"
                   fill="none"
@@ -105,12 +87,11 @@
       </div>
       <!-- Image Section 1 -->
       <section class="pb-16 md:pb-24 max-w-[1920px] mx-auto">
-        <div class="ml-[calc(max(7.5%,(100%-1320px)/2))] flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24">
+        <div
+          class="ml-[calc(max(7.5%,(100%-1320px)/2))] flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24"
+        >
           <!-- Image 1: Left (Portrait) -->
-          <div
-            class="w-full md:w-[30%] lg:w-[32%]"
-            data-aos="fade-up"
-          >
+          <div class="w-full md:w-[30%] lg:w-[32%]" data-aos="fade-up">
             <div class="aspect-[4/6] overflow-hidden rounded-2xl shadow-xl">
               <img
                 src="/assets/images/den-gom-01.png"
@@ -145,8 +126,14 @@
                     onerror="this.style.display = 'none'"
                   />
 
-                  <div class="absolute inset-0 flex items-center justify-center pt-[8%] pb-[8%]">
-                    <h2 class="text-[#C76E00] font-semibold text-2xl md:text-3xl lg:text-[40px] uppercase">ĐÈN GỐM</h2>
+                  <div
+                    class="absolute inset-0 flex items-center justify-center pt-[8%] pb-[8%]"
+                  >
+                    <h2
+                      class="text-[#C76E00] font-semibold text-[20px] md:text-3xl lg:text-[40px] uppercase"
+                    >
+                      ĐÈN GỐM
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -155,11 +142,15 @@
         </div>
       </section>
 
-      <div class="w-[85%] max-w-[1320px] mx-auto pb-4">{{> components/products/product-grid-2x4 category="den-gom-su"}}</div>
+      <div class="w-[85%] max-w-[1320px] mx-auto pb-4">
+        {{> components/products/product-grid-2x4 category="den-gom-su"}}
+      </div>
 
       <!-- Image Section 2 -->
       <section class="pb-16 md:pb-24 max-w-[1920px] mx-auto">
-        <div class="mr-[calc(max(7.5%,(100%-1320px)/2))] flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24">
+        <div
+          class="mr-[calc(max(7.5%,(100%-1320px)/2))] flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24"
+        >
           <!-- Image 2: Right (Large with Title) -->
           <div
             class="w-full md:w-[70%] lg:w-[68%] relative group"
@@ -184,18 +175,21 @@
                     onerror="this.style.display = 'none'"
                   />
 
-                  <div class="absolute inset-0 flex items-center justify-center pt-[8%] pb-[8%]">
-                    <h2 class="text-[#C76E00] font-semibold text-2xl md:text-3xl lg:text-[40px] uppercase">ĐÈN SỨ</h2>
+                  <div
+                    class="absolute inset-0 flex items-center justify-center pt-[8%] pb-[8%]"
+                  >
+                    <h2
+                      class="text-[#C76E00] font-semibold text-[20px] md:text-3xl lg:text-[40px] uppercase"
+                    >
+                      ĐÈN SỨ
+                    </h2>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- Image 1: Left (Portrait) -->
-          <div
-            class="w-full md:w-[30%] lg:w-[32%]"
-            data-aos="fade-up"
-          >
+          <div class="w-full md:w-[30%] lg:w-[32%]" data-aos="fade-up">
             <div class="aspect-[4/6] overflow-hidden rounded-2xl shadow-xl">
               <img
                 src="/assets/images/den-gom-01.png"
@@ -214,13 +208,15 @@
       <section class="pb-16 bg-background-secondary overflow-hidden pt-4">
         <div class="w-[85%] max-w-[1320px] mx-auto">
           <h2
-            class="text-secondary text-2xl md:text-3xl font-semibold uppercase text-center mb-16 md:mb-32 mt-1"
+            class="text-secondary text-[20px] md:text-3xl font-semibold uppercase text-center mb-16 md:mb-32 mt-1"
             data-aos="fade-up"
           >
             Ưu điểm vượt trội
           </h2>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 items-start">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 items-start"
+          >
             <!-- Card 1 -->
             <div
               class="relative group h-full pt-12"
@@ -235,21 +231,33 @@
                   class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 scale-[1.02]"
                   alt="background"
                 />
-                <div class="absolute inset-0 bg-black/40 z-10 transition-opacity group-hover:opacity-50"></div>
-                <p class="relative z-20 text-white text-sm lg:text-lg leading-relaxed font-normal drop-shadow-md mb-16">
-                  Chịu tốt mọi thời tiết, không han gỉ hay nứt vỡ như sắt và thủy tinh. Chất liệu đất nung tự nhiên cực kỳ an toàn và thân
+                <div
+                  class="absolute inset-0 bg-black/40 z-10 transition-opacity group-hover:opacity-50"
+                ></div>
+                <p
+                  class="relative z-20 text-white text-sm lg:text-lg leading-relaxed font-normal drop-shadow-md mb-16"
+                >
+                  Chịu tốt mọi thời tiết, không han gỉ hay nứt vỡ như sắt và
+                  thủy tinh. Chất liệu đất nung tự nhiên cực kỳ an toàn và thân
                   thiện môi trường
                 </p>
                 <!-- Footer Decor -->
                 <div class="absolute bottom-[-1px] left-0 w-full z-30">
-                  <div class="relative overflow-hidden rounded-b-xl border-b border-black/5">
+                  <div
+                    class="relative overflow-hidden rounded-b-xl border-b border-black/5"
+                  >
                     <img
                       src="/assets/images/den-gom-decorate-2.svg"
                       class="w-full h-auto block scale-x-110"
                       alt="decorate"
                     />
-                    <div class="absolute inset-0 flex items-center justify-center pt-2">
-                      <span class="text-[#C76E00] font-bold text-sm lg:text-base tracking-wider">Bền bỉ & Thân thiện</span>
+                    <div
+                      class="absolute inset-0 flex items-center justify-center pt-2"
+                    >
+                      <span
+                        class="text-[#C76E00] font-bold text-sm lg:text-base tracking-wider"
+                        >Bền bỉ & Thân thiện</span
+                      >
                     </div>
                   </div>
                 </div>
@@ -270,20 +278,32 @@
                   class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 scale-[1.02]"
                   alt="background"
                 />
-                <div class="absolute inset-0 bg-black/40 z-10 transition-opacity group-hover:opacity-50"></div>
-                <p class="relative z-20 text-white text-sm lg:text-lg leading-relaxed font-normal drop-shadow-md mb-16">
-                  Kết tinh từ Thổ - Hỏa, mang lại nguồn năng lượng ấm áp và vẻ đẹp độc bản từ đôi bàn tay nghệ nhân
+                <div
+                  class="absolute inset-0 bg-black/40 z-10 transition-opacity group-hover:opacity-50"
+                ></div>
+                <p
+                  class="relative z-20 text-white text-sm lg:text-lg leading-relaxed font-normal drop-shadow-md mb-16"
+                >
+                  Kết tinh từ Thổ - Hỏa, mang lại nguồn năng lượng ấm áp và vẻ
+                  đẹp độc bản từ đôi bàn tay nghệ nhân
                 </p>
                 <!-- Footer Decor -->
                 <div class="absolute bottom-[-1px] left-0 w-full z-30">
-                  <div class="relative overflow-hidden rounded-b-xl border-b border-black/5">
+                  <div
+                    class="relative overflow-hidden rounded-b-xl border-b border-black/5"
+                  >
                     <img
                       src="/assets/images/den-gom-decorate-2.svg"
                       class="w-full h-auto block scale-x-110"
                       alt="decorate"
                     />
-                    <div class="absolute inset-0 flex items-center justify-center pt-2">
-                      <span class="text-[#C76E00] font-semibold text-base lg:text-[18px]">Giá trị phong thủy</span>
+                    <div
+                      class="absolute inset-0 flex items-center justify-center pt-2"
+                    >
+                      <span
+                        class="text-[#C76E00] font-semibold text-base lg:text-[18px]"
+                        >Giá trị phong thủy</span
+                      >
                     </div>
                   </div>
                 </div>
@@ -304,20 +324,32 @@
                   class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 scale-[1.02]"
                   alt="background"
                 />
-                <div class="absolute inset-0 bg-black/40 z-10 transition-opacity group-hover:opacity-50"></div>
-                <p class="relative z-20 text-white text-sm lg:text-lg leading-relaxed font-normal drop-shadow-md mb-16">
-                  Thiết kế thông minh giúp việc tháo lắp, thay bóng hay vệ sinh trở nên đơn giản, tiện lợi cho mọi không gian
+                <div
+                  class="absolute inset-0 bg-black/40 z-10 transition-opacity group-hover:opacity-50"
+                ></div>
+                <p
+                  class="relative z-20 text-white text-sm lg:text-lg leading-relaxed font-normal drop-shadow-md mb-16"
+                >
+                  Thiết kế thông minh giúp việc tháo lắp, thay bóng hay vệ sinh
+                  trở nên đơn giản, tiện lợi cho mọi không gian
                 </p>
                 <!-- Footer Decor -->
                 <div class="absolute bottom-[-1px] left-0 w-full z-30">
-                  <div class="relative overflow-hidden rounded-b-xl border-b border-black/5">
+                  <div
+                    class="relative overflow-hidden rounded-b-xl border-b border-black/5"
+                  >
                     <img
                       src="/assets/images/den-gom-decorate-2.svg"
                       class="w-full h-auto block scale-x-110"
                       alt="decorate"
                     />
-                    <div class="absolute inset-0 flex items-center justify-center pt-2">
-                      <span class="text-[#C76E00] font-semibold text-base lg:text-[18px]">Linh hoạt & Dễ dùng</span>
+                    <div
+                      class="absolute inset-0 flex items-center justify-center pt-2"
+                    >
+                      <span
+                        class="text-[#C76E00] font-semibold text-base lg:text-[18px]"
+                        >Linh hoạt & Dễ dùng</span
+                      >
                     </div>
                   </div>
                 </div>
@@ -338,20 +370,32 @@
                   class="absolute inset-0 w-full h-full object-cover z-0 opacity-100 scale-[1.02]"
                   alt="background"
                 />
-                <div class="absolute inset-0 bg-black/40 z-10 transition-opacity group-hover:opacity-50"></div>
-                <p class="relative z-20 text-white text-sm lg:text-lg leading-relaxed font-medium drop-shadow-md mb-16">
-                  Chất gốm khuếch tán ánh sáng dịu nhẹ qua các đường chạm khắc, tạo hiệu ứng bóng đổ lung linh và thư thái
+                <div
+                  class="absolute inset-0 bg-black/40 z-10 transition-opacity group-hover:opacity-50"
+                ></div>
+                <p
+                  class="relative z-20 text-white text-sm lg:text-lg leading-relaxed font-medium drop-shadow-md mb-16"
+                >
+                  Chất gốm khuếch tán ánh sáng dịu nhẹ qua các đường chạm khắc,
+                  tạo hiệu ứng bóng đổ lung linh và thư thái
                 </p>
                 <!-- Footer Decor -->
                 <div class="absolute bottom-[-1px] left-0 w-full z-30">
-                  <div class="relative overflow-hidden rounded-b-xl border-b border-black/5">
+                  <div
+                    class="relative overflow-hidden rounded-b-xl border-b border-black/5"
+                  >
                     <img
                       src="/assets/images/den-gom-decorate-2.svg"
                       class="w-full h-auto block scale-x-110"
                       alt="decorate"
                     />
-                    <div class="absolute inset-0 flex items-center justify-center pt-2">
-                      <span class="text-[#C76E00] font-semibold text-base lg:text-[18px]">Ánh sáng nghệ thuật</span>
+                    <div
+                      class="absolute inset-0 flex items-center justify-center pt-2"
+                    >
+                      <span
+                        class="text-[#C76E00] font-semibold text-base lg:text-[18px]"
+                        >Ánh sáng nghệ thuật</span
+                      >
                     </div>
                   </div>
                 </div>
@@ -361,7 +405,9 @@
         </div>
       </section>
 
-      {{> components/products/fabrication-process}} {{> components/products/journey-video hideTitle=true}} {{> components/products/recommendations}}
+      {{> components/products/fabrication-process}}
+      {{> components/products/journey-video hideTitle=true}}
+      {{> components/products/recommendations}}
 
       <!-- FAQ Section -->
       <section
@@ -374,10 +420,7 @@
 
     {{> components/footer hideNewsletter=true}}
 
-    <script
-      type="module"
-      src="/assets/js/main.js"
-    ></script>
+    <script type="module" src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -386,10 +429,16 @@
         AOS.init({ duration: 800, once: true, offset: 100 });
 
         // Initialize Fabrication Slider
-        const fabricationRoot = document.querySelector(".fabrication-slider")?.closest(".group") || document;
-        const fabricationNextEl = fabricationRoot.querySelector(".fabrication-next");
-        const fabricationPrevEl = fabricationRoot.querySelector(".fabrication-prev");
-        const fabricationPaginationEl = fabricationRoot.querySelector(".fabrication-pagination");
+        const fabricationRoot =
+          document.querySelector(".fabrication-slider")?.closest(".group") ||
+          document;
+        const fabricationNextEl =
+          fabricationRoot.querySelector(".fabrication-next");
+        const fabricationPrevEl =
+          fabricationRoot.querySelector(".fabrication-prev");
+        const fabricationPaginationEl = fabricationRoot.querySelector(
+          ".fabrication-pagination",
+        );
 
         new Swiper(".fabrication-slider", {
           slidesPerView: "auto",
@@ -444,5 +493,5 @@
       });
     </script>
     {{{stack "scripts"}}}
-</body>
+  </body>
 </html>

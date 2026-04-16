@@ -1,0 +1,17 @@
+<p class="{{textClass}}">
+  <a
+    href="/"
+    class="{{linkClass}}"
+    >Trang chủ</a
+  >
+  <span class="{{separatorClass}}">/</span>
+  {{#if parentLabel}}
+    <a
+      href="{{parentHref}}"
+      class="{{linkClass}}"
+      >{{parentLabel}}</a
+    >
+    <span class="{{separatorClass}}">/</span>
+  {{/if}}
+  <span class="{{currentClass}}">{{currentLabel}}</span>
+</p>

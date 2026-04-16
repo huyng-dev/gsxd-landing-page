@@ -2,21 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ngói Hài Văn Miếu - Thanh Hải Ceramics</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/assets/images/logo.png"
-    />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
     </style>
@@ -24,17 +14,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     {{{stack "styles"}}}
-</head>
-  <body
-    data-page="products"
-    class="min-h-screen flex flex-col bg-neutral-1"
-  >
-    {{> components/header}} {{> components/catalog-button}}
+  </head>
+  <body data-page="products" class="min-h-screen flex flex-col bg-neutral-1">
+    {{> components/header}}
+    {{> components/catalog-button}}
 
     <main class="flex-grow bg-background-secondary">
       <!-- Top Banner -->
@@ -48,13 +33,23 @@
           />
           <div
             class="absolute inset-0"
-            style="background: linear-gradient(188deg, #000 -7.92%, rgba(0, 0, 0, 0) 94.09%);"
+            style="
+              background: linear-gradient(
+                188deg,
+                #000 -7.92%,
+                rgba(0, 0, 0, 0) 94.09%
+              );
+            "
           ></div>
-          <div class="absolute bottom-0 left-0 right-0 h-32 bg-background-secondary"></div>
+          <div
+            class="absolute bottom-0 left-0 right-0 h-32 bg-background-secondary"
+          ></div>
         </div>
 
         <!-- Content Container -->
-        <div class="relative z-10 w-[85%] max-w-[1320px] mx-auto flex flex-col items-center">
+        <div
+          class="relative z-10 w-[85%] max-w-[1320px] mx-auto flex flex-col items-center"
+        >
           <!-- Title -->
           <h1
             class="text-[30px] md:text-[40px] font-archivo font-bold uppercase text-white leading-[42px] md:leading-[55px] mb-8 md:mb-16 text-center"
@@ -65,7 +60,9 @@
           </h1>
 
           <!-- 3 Images Layout -->
-          <div class="flex flex-row justify-center items-start gap-6 md:gap-8 lg:gap-10 w-full max-w-[1200px]">
+          <div
+            class="flex flex-row justify-center items-start gap-6 md:gap-8 lg:gap-10 w-full max-w-[1200px]"
+          >
             <!-- Item 1 -->
             <div
               class="flex flex-col items-center w-full md:w-1/3 md:mt-8 pl-4 pt-4 sm:pl-5 sm:pt-5 pr-2"
@@ -82,7 +79,9 @@
                   class="relative z-10 w-full h-auto aspect-[3/5] object-cover shadow-2xl"
                 />
               </div>
-              <h3 class="font-charm text-[20px] lg:text-[32px] text-textPrimary text-center drop-shadow-sm -translate-x-2">
+              <h3
+                class="font-charm text-[20px] lg:text-[32px] text-textPrimary text-center drop-shadow-sm -translate-x-2"
+              >
                 Ngói văn miếu tròn
               </h3>
             </div>
@@ -103,7 +102,9 @@
                   class="relative z-10 w-full h-auto aspect-[3/5] object-cover shadow-2xl"
                 />
               </div>
-              <h3 class="font-charm text-[20px] lg:text-[32px] text-textPrimary text-center drop-shadow-sm -translate-x-2">
+              <h3
+                class="font-charm text-[20px] lg:text-[32px] text-textPrimary text-center drop-shadow-sm -translate-x-2"
+              >
                 Ngói văn miếu mũi
               </h3>
             </div>
@@ -124,7 +125,11 @@
                   class="relative z-10 w-full h-auto aspect-[3/5] object-cover shadow-2xl"
                 />
               </div>
-              <h3 class="font-charm text-[20px] lg:text-[32px] text-textPrimary text-center drop-shadow-sm -translate-x-2">Ngói hài cổ</h3>
+              <h3
+                class="font-charm text-[20px] lg:text-[32px] text-textPrimary text-center drop-shadow-sm -translate-x-2"
+              >
+                Ngói hài cổ
+              </h3>
             </div>
           </div>
         </div>
@@ -132,25 +137,22 @@
 
       <!-- Breadcrumb -->
       <div class="w-[85%] max-w-[1320px] mx-auto pb-6 pt-4 relative z-10">
-        <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
-          <a
-            href="/"
-            class="hover:text-secondary transition-colors"
-            >Trang chủ</a
-          >
-          <span class="mx-1">/</span> <span class="text-primary font-semibold border-primary">Ngói Hài Văn Miếu</span>
-        </p>
+        {{> components/products/breadcrumb textClass="font-bold text-primary/60 uppercase text-xs md:text-base" linkClass="hover:text-secondary transition-colors" separatorClass="mx-1" currentClass="text-primary font-semibold border-primary" currentLabel="Ngói Hài Văn Miếu"}}
       </div>
 
-      {{> components/products/product-grid category="ngoi-hai-van-mieu" link1="ngoi-hai-co-nau-den.html" name1="Ngói hài cổ nâu đen"
-      image1="ngoi-hai-detail.png" link2="ngoi-van-mieu-ghi-anh-kim.html" name2="Ngói văn miếu ghi ánh kim"
-      image2="ngoi-van-mieu-detail.png" }}
+      {{> components/products/product-grid category="ngoi-hai-van-mieu" link1="ngoi-hai-co-nau-den.html" name1="Ngói hài cổ nâu đen" image1="ngoi-hai-detail.png" link2="ngoi-van-mieu-ghi-anh-kim.html" name2="Ngói văn miếu ghi ánh kim" image2="ngoi-van-mieu-detail.png"}}
 
       <!-- Difference Section -->
-      <section class="relative w-full overflow-hidden bg-background-secondary mb-16">
+      <section
+        class="relative w-full overflow-hidden bg-background-secondary mb-16"
+      >
         <!-- Section Title -->
         <div class="w-[85%] max-w-[1320px] mx-auto text-center mb-16">
-          <h2 class="text-2xl md:text-3xl font-semibold text-secondary uppercase mt-1">Điều gì khiến ngói hài Thanh Hải khác biệt?</h2>
+          <h2
+            class="text-[20px] md:text-3xl font-semibold text-secondary uppercase mt-1"
+          >
+            Điều gì khiến ngói hài Thanh Hải khác biệt?
+          </h2>
         </div>
         <!-- Full width Background Image -->
         <div class="absolute inset-x-0 w-full h-full z-0">
@@ -163,22 +165,32 @@
         </div>
 
         <!-- Content Container -->
-        <div class="relative z-10 w-[85%] max-w-[1320px] mx-auto py-16 md:py-24">
+        <div
+          class="relative z-10 w-[85%] max-w-[1320px] mx-auto py-16 md:py-24"
+        >
           <!-- Grid for Text Items (Left side of the background) -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24">
             <!-- Left Column (Text Content) -->
-            <div class="md:col-span-2 flex flex-col justify-center items-start space-y-24 lg:space-y-40 md:pr-8 lg:pr-16">
+            <div
+              class="md:col-span-2 flex flex-col justify-center items-start space-y-24 lg:space-y-40 md:pr-8 lg:pr-16"
+            >
               <!-- Item 1 -->
               <div
                 class="text-left md:text-center pr-12 md:pr-0 lg:pl-[5%]"
                 data-aos="fade-up"
               >
-                <h3 class="text-2xl lg:text-[36px] font-bold text-[#333] mb-4 leading-normal">
+                <h3
+                  class="text-2xl lg:text-[36px] font-bold text-[#333] mb-4 leading-normal"
+                >
                   Xương sứ vĩnh cửu,<br />thách thức thời gian
                 </h3>
-                <p class="text-[#444] text-[13px] md:text-[16px] font-medium leading-relaxed md:max-w-xl max-w-xs mr-auto md:mx-auto">
-                  Nung ở 1.300C giúp xương ngói đanh hóa sành, độ hút nước cực thấp 0,87% (vượt xa tiêu chuẩn TCVN 9133:2011). Chỉ số này
-                  giúp ngói chống thấm tuyệt đối, không bị nứt vỡ do giãn nở nhiệt hay đóng băng bào tử rêu.
+                <p
+                  class="text-[#444] text-[13px] md:text-[16px] font-medium leading-relaxed md:max-w-xl max-w-xs mr-auto md:mx-auto"
+                >
+                  Nung ở 1.300C giúp xương ngói đanh hóa sành, độ hút nước cực
+                  thấp 0,87% (vượt xa tiêu chuẩn TCVN 9133:2011). Chỉ số này
+                  giúp ngói chống thấm tuyệt đối, không bị nứt vỡ do giãn nở
+                  nhiệt hay đóng băng bào tử rêu.
                 </p>
               </div>
 
@@ -188,12 +200,18 @@
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <h3 class="text-2xl lg:text-[36px] font-bold text-[#333] mb-4 leading-normal">
+                <h3
+                  class="text-2xl lg:text-[36px] font-bold text-[#333] mb-4 leading-normal"
+                >
                   Tuyệt tác men hỏa biến<br />kháng rêu mốc vĩnh cửu
                 </h3>
-                <p class="text-[#444] text-[13px] md:text-[16px] font-medium leading-relaxed md:max-w-2xl max-w-xs mr-auto md:mx-auto">
-                  Lớp men dày dặn đóng vai trò như màng chắn thủy tinh siêu cứng, ngăn chặn bụi bẩn và rêu mốc bám dính. Nhờ độ trơn bóng
-                  cao, mái nhà có khả năng "tự làm sạch" hoàn toàn sau mưa, giữ vững vẻ thẩm mỹ tôn nghiêm hàng trăm năm.
+                <p
+                  class="text-[#444] text-[13px] md:text-[16px] font-medium leading-relaxed md:max-w-2xl max-w-xs mr-auto md:mx-auto"
+                >
+                  Lớp men dày dặn đóng vai trò như màng chắn thủy tinh siêu
+                  cứng, ngăn chặn bụi bẩn và rêu mốc bám dính. Nhờ độ trơn bóng
+                  cao, mái nhà có khả năng "tự làm sạch" hoàn toàn sau mưa, giữ
+                  vững vẻ thẩm mỹ tôn nghiêm hàng trăm năm.
                 </p>
               </div>
 
@@ -203,12 +221,18 @@
                 data-aos="fade-up"
                 data-aos-delay="400"
               >
-                <h3 class="text-2xl lg:text-[36px] font-bold text-[#333] mb-4 leading-normal">
+                <h3
+                  class="text-2xl lg:text-[36px] font-bold text-[#333] mb-4 leading-normal"
+                >
                   Khả năng chịu lực và<br />Giải pháp kinh tế thông minh
                 </h3>
-                <p class="text-[#444] text-[13px] md:text-[16px] font-medium leading-relaxed md:max-w-2xl max-w-xs mr-auto md:mx-auto">
-                  Tải trọng uốn gãy đạt 628 N/cm, vượt mức tiêu chuẩn quốc gia (540 N/cm), đảm bảo an toàn khi thi công. Trọng lượng nhẹ
-                  (0,7 - 0,8 kg/viên) giúp giảm áp lực kết cấu và tiết kiệm 30% chi phí điện năng nhờ hệ số cách nhiệt vượt trội.
+                <p
+                  class="text-[#444] text-[13px] md:text-[16px] font-medium leading-relaxed md:max-w-2xl max-w-xs mr-auto md:mx-auto"
+                >
+                  Tải trọng uốn gãy đạt 628 N/cm, vượt mức tiêu chuẩn quốc gia
+                  (540 N/cm), đảm bảo an toàn khi thi công. Trọng lượng nhẹ (0,7
+                  - 0,8 kg/viên) giúp giảm áp lực kết cấu và tiết kiệm 30% chi
+                  phí điện năng nhờ hệ số cách nhiệt vượt trội.
                 </p>
               </div>
             </div>
@@ -221,7 +245,8 @@
         </div>
       </section>
 
-      {{> components/products/journey-video}} {{> components/products/works}}
+      {{> components/products/journey-video}}
+      {{> components/products/works}}
 
       <!-- FAQ Section -->
       <section
@@ -246,10 +271,7 @@
 
     {{> components/footer}}
 
-    <script
-      type="module"
-      src="/assets/js/main.js"
-    ></script>
+    <script type="module" src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -260,5 +282,5 @@
       });
     </script>
     {{{stack "scripts"}}}
-</body>
+  </body>
 </html>

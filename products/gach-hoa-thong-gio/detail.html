@@ -77,21 +77,7 @@
 
       <!-- Sub Breadcrumb -->
       <div class="w-[85%] max-w-[1320px] mx-auto py-8">
-        <p class="font-semibold text-primary/60 uppercase text-[14px] md:text-base">
-          <a
-            href="/"
-            class="hover:text-primary transition-colors"
-            >Trang chủ</a
-          >
-          <span class="mx-1">/</span>
-          <a
-            href="/products/gach-hoa-thong-gio/"
-            class="hover:text-primary transition-colors"
-            >Sản phẩm</a
-          >
-          <span class="mx-1">/</span>
-          <span class="text-primary font-semibold pb-1">Gạch Hoa Thông Gió</span>
-        </p>
+        {{> components/products/breadcrumb textClass="font-semibold text-primary/60 uppercase text-[14px] md:text-base" linkClass="hover:text-primary transition-colors" separatorClass="mx-1" parentHref="/products/gach-hoa-thong-gio/" parentLabel="Sản phẩm" currentClass="text-primary font-semibold pb-1" currentLabel="Gạch Hoa Thông Gió"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 

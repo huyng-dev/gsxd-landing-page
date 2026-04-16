@@ -2,16 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phụ Kiện Ngói - Thanh Hải Ceramics</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/assets/images/logo.png"
-    />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
@@ -27,30 +20,27 @@
         object-fit: contain !important;
       }
     </style>
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    />
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
     />
     {{{stack "styles"}}}
-</head>
+  </head>
   <body
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}} {{> components/catalog-button}}
+    {{> components/header}}
+    {{> components/catalog-button}}
 
     <main class="flex-grow bg-background-secondary overflow-hidden">
       <!-- Banner Section -->
       <section class="relative w-full">
-        <div class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]">
+        <div
+          class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]"
+        >
           <img
             src="/assets/images/pk-banner.png"
             alt="Phụ Kiện Ngói"
@@ -61,8 +51,12 @@
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="text-center text-white px-4 w-[85%] max-w-[1320px] mx-auto">
-              <h1 class="font-sans text-[26px] md:text-4xl lg:text-[44px] font-bold uppercase mb-2 md:mb-6 drop-shadow-md">
+            <div
+              class="text-center text-white px-4 w-[85%] max-w-[1320px] mx-auto"
+            >
+              <h1
+                class="font-sans text-[26px] md:text-4xl lg:text-[44px] font-bold uppercase mb-2 md:mb-6 drop-shadow-md"
+              >
                 PHỤ KIỆN NGÓI
               </h1>
               <p
@@ -73,7 +67,8 @@
               <p
                 class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95"
               >
-                Phụ kiện Thanh Hải: Điểm nhấn tâm linh, hoàn thiện dáng hình kiến trúc Việt
+                Phụ kiện Thanh Hải: Điểm nhấn tâm linh, hoàn thiện dáng hình
+                kiến trúc Việt
               </p>
             </div>
           </div>
@@ -92,7 +87,11 @@
             alt=""
             class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-25"
           />
-          <h2 class="text-2xl md:text-3xl font-semibold text-[#C47526] uppercase">Danh Mục Sản Phẩm</h2>
+          <h2
+            class="text-[20px] lg:text-3xl font-semibold text-[#C47526] uppercase"
+          >
+            Danh Mục Sản Phẩm
+          </h2>
           <img
             src="/assets/images/title-right.svg"
             alt=""
@@ -108,15 +107,22 @@
           data-aos-delay="100"
         >
           <!-- Featured Image & Brush Title -->
-          <div class="flex flex-col-reverse lg:flex-row gap-8 lg:gap-16 max-w-[1320px]">
+          <div
+            class="flex flex-col-reverse lg:flex-row gap-8 lg:gap-16 max-w-[1320px]"
+          >
             <!-- Left Column: Products Grid & Pagination -->
             <div class="w-full lg:w-[55%] flex flex-col justify-between">
               <!-- Products Grid -->
-              <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
+              <div
+                class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10"
+              >
                 <!-- Product Card 1 -->
                 <div
                   class="flex flex-col group cursor-pointer"
-                  onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'"
+                  onclick="
+                    window.location.href =
+                      '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+                  "
                 >
                   <div
                     class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -127,10 +133,7 @@
                       class="w-full h-full object-cover"
                     />
                     <div class="product-overlay">
-                      <img
-                        src="/assets/images/eye.svg"
-                        alt="Search"
-                      />
+                      <img src="/assets/images/eye.svg" alt="Search" />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -139,14 +142,23 @@
                   >
                     Riềm Âm Dương Sen Bầu
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                    MSP: 1234RDS
+                  </p>
+                  <p
+                    class="font-bold text-[#C47526] text-[13px] lg:text-[14px]"
+                  >
+                    Giá: 675.000 đ/m2
+                  </p>
                 </div>
 
                 <!-- Product Card 2 -->
                 <div
                   class="flex flex-col group cursor-pointer"
-                  onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'"
+                  onclick="
+                    window.location.href =
+                      '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+                  "
                 >
                   <div
                     class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -157,10 +169,7 @@
                       class="w-full h-full object-cover"
                     />
                     <div class="product-overlay">
-                      <img
-                        src="/assets/images/eye.svg"
-                        alt="Search"
-                      />
+                      <img src="/assets/images/eye.svg" alt="Search" />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -169,14 +178,23 @@
                   >
                     Riềm Âm Dương Sen Bầu
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                    MSP: 1234RDS
+                  </p>
+                  <p
+                    class="font-bold text-[#C47526] text-[13px] lg:text-[14px]"
+                  >
+                    Giá: 675.000 đ/m2
+                  </p>
                 </div>
 
                 <!-- Product Card 3 -->
                 <div
                   class="flex flex-col group cursor-pointer"
-                  onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'"
+                  onclick="
+                    window.location.href =
+                      '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+                  "
                 >
                   <div
                     class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -187,10 +205,7 @@
                       class="w-full h-full object-cover"
                     />
                     <div class="product-overlay">
-                      <img
-                        src="/assets/images/eye.svg"
-                        alt="Search"
-                      />
+                      <img src="/assets/images/eye.svg" alt="Search" />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -199,14 +214,23 @@
                   >
                     Riềm Âm Dương Sen Bầu
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                    MSP: 1234RDS
+                  </p>
+                  <p
+                    class="font-bold text-[#C47526] text-[13px] lg:text-[14px]"
+                  >
+                    Giá: 675.000 đ/m2
+                  </p>
                 </div>
 
                 <!-- Product Card 4 -->
                 <div
                   class="flex flex-col group cursor-pointer"
-                  onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'"
+                  onclick="
+                    window.location.href =
+                      '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+                  "
                 >
                   <div
                     class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -217,10 +241,7 @@
                       class="w-full h-full object-cover"
                     />
                     <div class="product-overlay">
-                      <img
-                        src="/assets/images/eye.svg"
-                        alt="Search"
-                      />
+                      <img src="/assets/images/eye.svg" alt="Search" />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -229,13 +250,21 @@
                   >
                     Riềm Âm Dương Sen Bầu
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                    MSP: 1234RDS
+                  </p>
+                  <p
+                    class="font-bold text-[#C47526] text-[13px] lg:text-[14px]"
+                  >
+                    Giá: 675.000 đ/m2
+                  </p>
                 </div>
               </div>
 
               <!-- Pagination -->
-              <div class="flex items-center justify-center gap-5 mt-10 lg:mt-auto">
+              <div
+                class="flex items-center justify-center gap-5 mt-10 lg:mt-auto"
+              >
                 <button
                   class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
                 >
@@ -274,8 +303,12 @@
             </div>
 
             <!-- Right Column: Featured Image & Brush Title -->
-            <div class="w-full lg:w-[45%] mr-0 lg:mr-[10%] flex flex-col justify-stretch">
-              <div class="w-full flex-grow relative shadow-lg overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px]">
+            <div
+              class="w-full lg:w-[45%] mr-0 lg:mr-[10%] flex flex-col justify-stretch"
+            >
+              <div
+                class="w-full flex-grow relative shadow-lg overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px]"
+              >
                 <img
                   src="/assets/images/bo-noc.png"
                   alt=""
@@ -316,10 +349,16 @@
           data-aos-delay="100"
         >
           <!-- Featured Image & Brush Title -->
-          <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-[1320px] ml-auto">
+          <div
+            class="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-[1320px] ml-auto"
+          >
             <!-- Left Column: Featured Image & Brush Title -->
-            <div class="w-full lg:w-[45%] ml-0 lg:ml-[10%] flex flex-col justify-stretch">
-              <div class="w-full flex-grow relative shadow-lg overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px]">
+            <div
+              class="w-full lg:w-[45%] ml-0 lg:ml-[10%] flex flex-col justify-stretch"
+            >
+              <div
+                class="w-full flex-grow relative shadow-lg overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px]"
+              >
                 <img
                   src="/assets/images/dao-kim.png"
                   alt=""
@@ -349,11 +388,16 @@
             <!-- Right Column: Products Grid & Pagination -->
             <div class="w-full lg:w-[55%] flex flex-col justify-between">
               <!-- Products Grid -->
-              <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
+              <div
+                class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10"
+              >
                 <!-- Product Card 1 -->
                 <div
                   class="flex flex-col group cursor-pointer"
-                  onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'"
+                  onclick="
+                    window.location.href =
+                      '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+                  "
                 >
                   <div
                     class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -364,10 +408,7 @@
                       class="w-full h-full object-cover"
                     />
                     <div class="product-overlay">
-                      <img
-                        src="/assets/images/eye.svg"
-                        alt="Search"
-                      />
+                      <img src="/assets/images/eye.svg" alt="Search" />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -376,14 +417,23 @@
                   >
                     Riềm Âm Dương Sen Bầu
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                    MSP: 1234RDS
+                  </p>
+                  <p
+                    class="font-bold text-[#C47526] text-[13px] lg:text-[14px]"
+                  >
+                    Giá: 675.000 đ/m2
+                  </p>
                 </div>
 
                 <!-- Product Card 2 -->
                 <div
                   class="flex flex-col group cursor-pointer"
-                  onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'"
+                  onclick="
+                    window.location.href =
+                      '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+                  "
                 >
                   <div
                     class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -394,10 +444,7 @@
                       class="w-full h-full object-cover"
                     />
                     <div class="product-overlay">
-                      <img
-                        src="/assets/images/eye.svg"
-                        alt="Search"
-                      />
+                      <img src="/assets/images/eye.svg" alt="Search" />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -406,14 +453,23 @@
                   >
                     Riềm Âm Dương Sen Bầu
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                    MSP: 1234RDS
+                  </p>
+                  <p
+                    class="font-bold text-[#C47526] text-[13px] lg:text-[14px]"
+                  >
+                    Giá: 675.000 đ/m2
+                  </p>
                 </div>
 
                 <!-- Product Card 3 -->
                 <div
                   class="flex flex-col group cursor-pointer"
-                  onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'"
+                  onclick="
+                    window.location.href =
+                      '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+                  "
                 >
                   <div
                     class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -424,10 +480,7 @@
                       class="w-full h-full object-cover"
                     />
                     <div class="product-overlay">
-                      <img
-                        src="/assets/images/eye.svg"
-                        alt="Search"
-                      />
+                      <img src="/assets/images/eye.svg" alt="Search" />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -436,14 +489,23 @@
                   >
                     Riềm Âm Dương Sen Bầu
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                    MSP: 1234RDS
+                  </p>
+                  <p
+                    class="font-bold text-[#C47526] text-[13px] lg:text-[14px]"
+                  >
+                    Giá: 675.000 đ/m2
+                  </p>
                 </div>
 
                 <!-- Product Card 4 -->
                 <div
                   class="flex flex-col group cursor-pointer"
-                  onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'"
+                  onclick="
+                    window.location.href =
+                      '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+                  "
                 >
                   <div
                     class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -454,10 +516,7 @@
                       class="w-full h-full object-cover"
                     />
                     <div class="product-overlay">
-                      <img
-                        src="/assets/images/eye.svg"
-                        alt="Search"
-                      />
+                      <img src="/assets/images/eye.svg" alt="Search" />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -466,13 +525,21 @@
                   >
                     Riềm Âm Dương Sen Bầu
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                    MSP: 1234RDS
+                  </p>
+                  <p
+                    class="font-bold text-[#C47526] text-[13px] lg:text-[14px]"
+                  >
+                    Giá: 675.000 đ/m2
+                  </p>
                 </div>
               </div>
 
               <!-- Pagination -->
-              <div class="flex items-center justify-center gap-5 mt-10 lg:mt-auto">
+              <div
+                class="flex items-center justify-center gap-5 mt-10 lg:mt-auto"
+              >
                 <button
                   class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
                 >
@@ -540,7 +607,10 @@
             <!-- Product 1 -->
             <div
               class="flex flex-col col-span-2 lg:col-start-2 lg:col-span-3 group cursor-pointer"
-              onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'"
+              onclick="
+                window.location.href =
+                  '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+              "
             >
               <div
                 class="product-card relative w-full aspect-[2/1] lg:aspect-[2.8/1] shadow mb-4 lg:mb-6 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -551,10 +621,7 @@
                   class="w-full h-full object-cover"
                 />
                 <div class="product-overlay">
-                  <img
-                    src="/assets/images/eye.svg"
-                    alt="Search"
-                  />
+                  <img src="/assets/images/eye.svg" alt="Search" />
                   <span>Xem chi tiết</span>
                 </div>
               </div>
@@ -563,8 +630,12 @@
               >
                 Riềm Âm Dương Sen Bầu
               </h3>
-              <p class="text-gray-500 text-[13px] lg:text-[14px] mb-1">MSP: 1234RDS</p>
-              <p class="font-bold text-[#C47526] text-[14px] lg:text-[15px]">Giá: 675.000 đ/m2</p>
+              <p class="text-gray-500 text-[13px] lg:text-[14px] mb-1">
+                MSP: 1234RDS
+              </p>
+              <p class="font-bold text-[#C47526] text-[14px] lg:text-[15px]">
+                Giá: 675.000 đ/m2
+              </p>
             </div>
 
             <!-- Product 2 -->
@@ -572,7 +643,10 @@
               class="flex flex-col col-span-2 lg:col-span-2 group cursor-pointer"
               data-aos="fade-up"
               data-aos-delay="100"
-              onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'"
+              onclick="
+                window.location.href =
+                  '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+              "
             >
               <div
                 class="product-card relative w-full aspect-[2/1] md:aspect-[19/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -583,10 +657,7 @@
                   class="w-full h-full object-cover"
                 />
                 <div class="product-overlay">
-                  <img
-                    src="/assets/images/eye.svg"
-                    alt="Search"
-                  />
+                  <img src="/assets/images/eye.svg" alt="Search" />
                   <span>Xem chi tiết</span>
                 </div>
               </div>
@@ -595,15 +666,22 @@
               >
                 Riềm Âm Dương Sen Bầu
               </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                MSP: 1234RDS
+              </p>
+              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+                Giá: 675.000 đ/m2
+              </p>
             </div>
             <!-- Product 3 -->
             <div
               class="flex flex-col group cursor-pointer"
               data-aos="fade-up"
               data-aos-delay="200"
-              onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'"
+              onclick="
+                window.location.href =
+                  '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+              "
             >
               <div
                 class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -614,10 +692,7 @@
                   class="w-full h-full object-cover"
                 />
                 <div class="product-overlay">
-                  <img
-                    src="/assets/images/eye.svg"
-                    alt="Search"
-                  />
+                  <img src="/assets/images/eye.svg" alt="Search" />
                   <span>Xem chi tiết</span>
                 </div>
               </div>
@@ -626,15 +701,22 @@
               >
                 Riềm Âm Dương Sen Bầu
               </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                MSP: 1234RDS
+              </p>
+              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+                Giá: 675.000 đ/m2
+              </p>
             </div>
             <!-- Product 4 -->
             <div
               class="flex flex-col group cursor-pointer"
               data-aos="fade-up"
               data-aos-delay="300"
-              onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'"
+              onclick="
+                window.location.href =
+                  '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+              "
             >
               <div
                 class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -645,10 +727,7 @@
                   class="w-full h-full object-cover"
                 />
                 <div class="product-overlay">
-                  <img
-                    src="/assets/images/eye.svg"
-                    alt="Search"
-                  />
+                  <img src="/assets/images/eye.svg" alt="Search" />
                   <span>Xem chi tiết</span>
                 </div>
               </div>
@@ -657,15 +736,22 @@
               >
                 Riềm Âm Dương Sen Bầu
               </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                MSP: 1234RDS
+              </p>
+              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+                Giá: 675.000 đ/m2
+              </p>
             </div>
             <!-- Product 5 -->
             <div
               class="flex flex-col group cursor-pointer"
               data-aos="fade-up"
               data-aos-delay="400"
-              onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'"
+              onclick="
+                window.location.href =
+                  '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+              "
             >
               <div
                 class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -676,10 +762,7 @@
                   class="w-full h-full object-cover"
                 />
                 <div class="product-overlay">
-                  <img
-                    src="/assets/images/eye.svg"
-                    alt="Search"
-                  />
+                  <img src="/assets/images/eye.svg" alt="Search" />
                   <span>Xem chi tiết</span>
                 </div>
               </div>
@@ -688,15 +771,22 @@
               >
                 Riềm Âm Dương Sen Bầu
               </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                MSP: 1234RDS
+              </p>
+              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+                Giá: 675.000 đ/m2
+              </p>
             </div>
             <!-- Product 6 -->
             <div
               class="flex flex-col group cursor-pointer"
               data-aos="fade-up"
               data-aos-delay="500"
-              onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'"
+              onclick="
+                window.location.href =
+                  '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+              "
             >
               <div
                 class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
@@ -707,10 +797,7 @@
                   class="w-full h-full object-cover"
                 />
                 <div class="product-overlay">
-                  <img
-                    src="/assets/images/eye.svg"
-                    alt="Search"
-                  />
+                  <img src="/assets/images/eye.svg" alt="Search" />
                   <span>Xem chi tiết</span>
                 </div>
               </div>
@@ -719,8 +806,12 @@
               >
                 Riềm Âm Dương Sen Bầu
               </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+                MSP: 1234RDS
+              </p>
+              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+                Giá: 675.000 đ/m2
+              </p>
             </div>
           </div>
         </div>
@@ -730,23 +821,22 @@
       <section class="relative w-full pb-10 lg:pb-16 overflow-hidden">
         <div class="relative z-10 w-[85%] max-w-[1320px] mx-auto mt-1">
           <!-- Title -->
-          <div
-            class="text-center mb-8 lg:mb-16"
-            data-aos="fade-up"
-          >
-            <h2 class="text-2xl lg:text-3xl font-semibold text-[#C47526] uppercase">Dấu Ấn Trên Những Công Trình</h2>
+          <div class="text-center mb-8 lg:mb-16" data-aos="fade-up">
+            <h2
+              class="text-[20px] lg:text-3xl font-semibold text-[#C47526] uppercase"
+            >
+              Dấu Ấn Trên Những Công Trình
+            </h2>
           </div>
 
           <!-- Grid Container for Images (6 place folders) -->
           <div class="flex flex-col gap-2 md:gap-4">
             <!-- Top Row -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-end">
+            <div
+              class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-end"
+            >
               <!-- Image 1 -->
-              <div
-                class="col-span-1"
-                data-aos="fade-up"
-                data-aos-delay="0"
-              >
+              <div class="col-span-1" data-aos="fade-up" data-aos-delay="0">
                 <a
                   href="/assets/images/pk-07.jpg"
                   class="glightbox w-full aspect-[1.1/1] shadow overflow-hidden relative group block"
@@ -759,11 +849,7 @@
                 </a>
               </div>
               <!-- Brown Block 1 -->
-              <div
-                class="col-span-1"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
+              <div class="col-span-1" data-aos="fade-up" data-aos-delay="100">
                 <div class="w-full aspect-[8/10] bg-[#BD724F] shadow"></div>
               </div>
               <!-- Image 2 (Wide) -->
@@ -806,13 +892,11 @@
             </div>
 
             <!-- Bottom Row -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-start">
+            <div
+              class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-start"
+            >
               <!-- Image 3 -->
-              <div
-                class="col-span-1"
-                data-aos="fade-up"
-                data-aos-delay="0"
-              >
+              <div class="col-span-1" data-aos="fade-up" data-aos-delay="0">
                 <a
                   href="/assets/images/pk-03.jpg"
                   class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block"
@@ -845,11 +929,7 @@
                 ></div>
               </div>
               <!-- Image 5 -->
-              <div
-                class="col-span-1"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
+              <div class="col-span-1" data-aos="fade-up" data-aos-delay="200">
                 <a
                   href="/assets/images/dao-kim.jpg"
                   class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block"
@@ -862,11 +942,7 @@
                 </a>
               </div>
               <!-- Image 6 -->
-              <div
-                class="col-span-1"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
+              <div class="col-span-1" data-aos="fade-up" data-aos-delay="300">
                 <a
                   href="/assets/images/pk-04.jpg"
                   class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block"
@@ -906,10 +982,7 @@
 
     {{> components/footer}}
 
-    <script
-      type="module"
-      src="/assets/js/main.js"
-    ></script>
+    <script type="module" src="/assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
@@ -935,5 +1008,5 @@
       });
     </script>
     {{{stack "scripts"}}}
-</body>
+  </body>
 </html>

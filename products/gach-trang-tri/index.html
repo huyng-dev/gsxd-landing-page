@@ -93,9 +93,7 @@
 
     <!-- Breadcrumb -->
     <div class="w-[85%] max-w-[1320px] mx-auto pb-1 pt-6 relative z-10">
-      <p class="font-archivo uppercase text-[16px] leading-[55px] font-semibold">
-        <a href="/" class="text-[#A5A5A5] hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1 text-[#A5A5A5]">/</span> <span class="text-primary">Gạch Trang Trí</span>
-        </p>
+      {{> components/products/breadcrumb textClass="font-archivo uppercase text-[16px] leading-[55px] font-semibold" linkClass="text-[#A5A5A5] hover:text-secondary transition-colors" separatorClass="mx-1 text-[#A5A5A5]" currentClass="text-primary" currentLabel="Gạch Trang Trí"}}
     </div>
 
     {{> components/products/product-grid category="gach-trang-tri"}}

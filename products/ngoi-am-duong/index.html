@@ -1,131 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ngói Âm Dương - Thanh Hải Ceramics</title>
-  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-  </style>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap');
-  </style>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-{{{stack "styles"}}}
-</head>
-<body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
-  {{> components/header}}
-  {{> components/catalog-button}}
-  
-  <main class="flex-grow bg-background-secondary">
-    <!-- Top Banner -->
-    <section class="relative min-h-[600px] flex items-center pt-24 pb-8 overflow-hidden">
-      <!-- Background Image with Dark Overlay and Bottom Blur/Gradient -->
-      <div class="absolute inset-0 z-0">
-        <img src="/assets/images/ngoi-am-duong-banner.jpg" alt="Ngói Âm Dương Banner" class="w-full h-full object-cover object-bottom">
-        <div class="absolute inset-0 bg-black/70"></div>
-        <!-- Bottom layered gradient: Wide white band starts earlier (from bottom) -->
-        <div class="absolute bottom-0 left-0 right-0 h-3/5 bg-[linear-gradient(to_top,#F5EDE7_10%,white_25%,white_60%,transparent_100%)]"></div>
-      </div>
-  
-      <!-- Content Container -->
-      <div class="relative z-10 w-[85%] max-w-[1320px] mx-auto flex flex-col h-full justify-between">
-        
-        <!-- Header text -->
-        <div class="text-center pb-16 md:pb-24 space-y-8">
-          <h1 class="text-2xl md:text-4xl lg:text-[44px] font-bold mb-4 uppercase text-white drop-shadow-md" data-aos="fade-up" data-aos-duration="1000">Ngói Âm Dương</h1>
-          <p class="font-italianno text-3xl md:text-5xl lg:text-[48px] text-white/80 leading-tight drop-shadow-md max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-             "Chưng cất tinh đất, tôi luyện qua lửa<br>Thanh Hải kiến tạo dáng hình di sản trong từng lớp ngói âm dương"
-          </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngói Âm Dương - Thanh Hải Ceramics</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    {{{stack "styles"}}}
+  </head>
+  <body
+    data-page="products"
+    class="min-h-screen flex flex-col bg-background-secondary"
+  >
+    {{> components/header}}
+    {{> components/catalog-button}}
+
+    <main class="flex-grow bg-background-secondary">
+      <!-- Top Banner -->
+      <section
+        class="relative min-h-[675px] md:min-h-[600px] flex items-center pt-[15px] md:pt-24 md:pb-8 overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            src="/assets/images/ngoi-am-duong-banner.jpg"
+            alt="Ngói Âm Dương Banner"
+            class="w-full h-full object-cover object-bottom"
+          />
+          <div class="absolute inset-0 bg-black/70"></div>
+          <div
+            class="absolute bottom-0 left-0 right-0 h-3/5 md:h-3/5 bg-[linear-gradient(to_top,#F5EDE7_10%,white_25%,white_60%,transparent_100%)]"
+          ></div>
         </div>
 
-        <!-- Lower specific content overlapping the fade -->
-        <div class="flex flex-col-reverse md:flex-row items-end justify-between gap-12 w-full mt-auto pb-4">
-           <!-- Poem/Text -->
-           <div class="w-full md:w-1/2 text-center md:text-left z-20 pb-10 lg:ml-12" data-aos="fade-right" data-aos-delay="400">
-              <p class="font-charm text-2xl md:text-[32px] text-primary leading-relaxed tracking-wide font-medium">
-                  Âm dương hòa hợp, đất hóa linh<br>
-                  Thanh Hải kết tinh, vạn công trình<br>
-                  Mái ngói nghiêng soi hình dáng cổ<br>
-                  Vững bền năm tháng, trọn niềm tin
+        <div
+          class="relative z-10 w-[85%] max-w-[1320px] mx-auto flex flex-col h-full justify-between md:mt-0"
+        >
+          <div class="text-center pb-12 md:pb-24 space-y-4 md:space-y-8">
+            <h1
+              class="text-[24px] leading-[32px] md:text-4xl lg:text-[44px] font-bold mb-0 md:mb-4 uppercase text-white drop-shadow-md"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Ngói Âm Dương
+            </h1>
+            <p
+              class="font-italianno text-[30px] leading-[37.5px] md:text-5xl lg:text-[48px] md:leading-tight text-white/80 drop-shadow-md max-w-4xl mx-auto"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+            >
+              "Chưng cất tinh đất, tôi luyện qua lửa<br />Thanh Hải kiến tạo
+              dáng hình di sản trong<br class="block md:hidden" />
+              từng lớp ngói âm dương"
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col-reverse md:flex-row items-center md:items-end justify-between gap-8 md:gap-12 w-full mt-auto pb-4"
+          >
+            <div
+              class="w-full md:w-1/2 text-center md:text-left z-20 pb-4 md:pb-10 lg:ml-12"
+              data-aos="fade-right"
+              data-aos-delay="400"
+            >
+              <p
+                class="font-charm text-[24px] leading-[39px] tracking-[0.6px] md:text-[32px] md:leading-relaxed md:tracking-wide text-primary font-medium"
+              >
+                Âm dương hòa hợp, đất hóa linh<br />
+                Thanh Hải kết tinh, vạn công trình<br />
+                Mái ngói nghiêng soi hình dáng cổ<br />
+                Vững bền năm tháng, trọn niềm tin
               </p>
-           </div>
-           
-           <!-- Images Placeholder -->
-           <div class="w-full md:w-1/2 flex justify-center md:justify-end z-20" data-aos="fade-left" data-aos-delay="400">
-              <div class="bg-white p-6 flex gap-6 w-full max-w-[860px] transform translate-y-8 md:-translate-y-8 rounded">
-                 <!-- Image 1 (Placeholder) -->
-                 <div class="w-1/2 aspect-square flex items-center justify-center">
-                     <img src="/assets/images/ngoi-am-duong-01.jpg" alt="Ngói Âm Dương 01" class="w-full h-full object-cover">
-                 </div>
-                 <!-- Image 2 (Placeholder) -->
-                 <div class="w-1/2 aspect-square flex items-center justify-center">
-                     <img src="/assets/images/ngoi-am-duong-02.png" alt="Ngói Âm Dương 02" class="w-full h-full object-cover">
-                 </div>
+            </div>
+
+            <div
+              class="w-full md:w-1/2 flex justify-center md:justify-end z-20"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
+              <div
+                class="bg-white p-3 gap-3 md:p-6 md:gap-6 flex w-full max-w-[860px] transform translate-y-0 md:-translate-y-8 rounded shadow-sm md:shadow-none"
+              >
+                <div
+                  class="w-1/2 aspect-[167/138] md:aspect-square flex items-center justify-center"
+                >
+                  <img
+                    src="/assets/images/ngoi-am-duong-01.jpg"
+                    alt="Ngói Âm Dương 01"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-1/2 aspect-[167/138] md:aspect-square flex items-center justify-center"
+                >
+                  <img
+                    src="/assets/images/ngoi-am-duong-02.png"
+                    alt="Ngói Âm Dương 02"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
               </div>
-           </div>
+            </div>
+          </div>
         </div>
+      </section>
 
+      <!-- Breadcrumb -->
+      <div
+        class="w-[85%] max-w-[1320px] mx-auto py-[10px] md:pb-6 md:pt-8 relative z-10"
+      >
+        {{> components/products/breadcrumb textClass="font-bold text-primary/60 uppercase text-xs md:text-base" linkClass="hover:text-secondary transition-colors" separatorClass="mx-1" currentClass="text-primary font-semibold border-primary" currentLabel="Ngói Âm Dương"}}
       </div>
-    </section>
 
-    <!-- Breadcrumb -->
-    <div class="w-[85%] max-w-[1320px] mx-auto pb-6 pt-8 relative z-10">
-        <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
-            <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-semibold border-primary">Ngói Âm Dương</span>
-        </p>
-    </div>
+      {{> components/products/product-grid category="ngoi-am-duong"}}
 
-    {{> components/products/product-grid category="ngoi-am-duong"}}
-    
-    <!-- Sizes Options Section -->
-    <section class="w-[85%] max-w-[1320px] mx-auto pb-16 pt-1" data-aos="fade-up">
-        <h2 class="text-2xl md:text-3xl font-bold text-center text-secondary mb-12 uppercase tracking-wide">Đa dạng kích thước - phong phú chọn lựa</h2>
+      <!-- Sizes Options Section -->
+      <section
+        class="w-[85%] max-w-[1320px] mx-auto pb-[40px] md:pb-16 pt-1"
+        data-aos="fade-up"
+      >
+        <h2
+          class="text-[20px] leading-[32px] tracking-[0.6px] md:text-3xl md:leading-normal md:tracking-wide font-bold text-center text-secondary mb-6 md:mb-12 uppercase break-words"
+        >
+          Đa dạng kích thước -<br class="block md:hidden" />
+          phong phú chọn lựa
+        </h2>
         <div class="w-full flex justify-center">
-            <img src="/assets/images/ngoi-am-duong-size.png" alt="Đa dạng kích thước ngói âm dương" class="w-full h-auto object-contain">
+          <img
+            src="/assets/images/ngoi-am-duong-size.png"
+            alt="Đa dạng kích thước ngói âm dương"
+            class="w-full h-auto object-contain"
+          />
         </div>
-    </section>
+      </section>
 
-    <!-- Accessories Section -->
-    <section class="w-[85%] max-w-[1320px] mx-auto pb-20" data-aos="fade-up">
-        <h2 class="text-2xl md:text-3xl font-bold text-center text-secondary mb-12 uppercase tracking-wide">Phụ kiện ngói</h2>
+      <!-- Accessories Section -->
+      <section
+        class="w-[85%] max-w-[1320px] mx-auto pb-12 md:pb-20"
+        data-aos="fade-up"
+      >
+        <h2
+          class="text-[20px] md:text-3xl font-bold text-center text-secondary mb-6 md:mb-12 uppercase tracking-wide"
+        >
+          Phụ kiện ngói
+        </h2>
         <div class="w-full flex justify-center">
-            <img src="/assets/images/ngoi-am-duong-pk.png" alt="Phụ kiện ngói âm dương" class="w-[80%] h-auto object-contain">
+          <img
+            src="/assets/images/ngoi-am-duong-pk.png"
+            alt="Phụ kiện ngói âm dương"
+            class="w-[80%] h-auto object-contain"
+          />
         </div>
+      </section>
+    </main>
+
+    {{> components/products/outstanding-value}}
+    {{> components/products/journey-video}}
+    {{> components/products/works}}
+
+    <!-- FAQ Section -->
+    <section
+      class="w-full relative pb-20 md:pb-32 bg-background-secondary overflow-hidden"
+      data-aos="fade-up"
+    >
+      <!-- Background Decoration -->
+      <img
+        src="/assets/images/background-decorate-03.svg"
+        class="absolute top-[20%] -translate-y-1/2 md:left-4 -left-[20%] md:translate-x-[10%] translate-x-0 w-auto object-contain opacity-100 pointer-events-none z-0"
+        alt=""
+      />
+      <img
+        src="/assets/images/background-decorate-02.svg"
+        class="absolute md:top-[62%] top-[80%] -translate-y-1/2 right-0 translate-x-[60%] w-auto object-contain opacity-50 pointer-events-none z-0"
+        alt=""
+      />
+
+      {{> components/products/faq-content}}
     </section>
-  </main>
 
-  {{> components/products/outstanding-value}}
+    {{> components/footer}}
 
-  {{> components/products/journey-video}}
-
-  {{> components/products/works}}
-
-  <!-- FAQ Section -->
-  <section class="w-full relative pb-32 bg-background-secondary overflow-hidden" data-aos="fade-up">
-    <!-- Background Decoration -->
-    <img src="/assets/images/background-decorate-03.svg" class="absolute top-[20%] -translate-y-1/2 md:left-4 -left-[20%] md:translate-x-[10%] translate-x-0 w-auto object-contain opacity-100 pointer-events-none z-0" alt="">
-    <img src="/assets/images/background-decorate-02.svg" class="absolute md:top-[62%] top-[80%] -translate-y-1/2 right-0 translate-x-[60%] w-auto object-contain opacity-50 pointer-events-none z-0" alt="">
-
-    {{> components/products/faq-content}}
-  </section>
-
-  {{> components/footer}}
-  
-  <script type="module" src="/assets/js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100,
-    });
-  </script>
-{{{stack "scripts"}}}
-</body>
+    <script type="module" src="/assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+    </script>
+    {{{stack "scripts"}}}
+  </body>
 </html>

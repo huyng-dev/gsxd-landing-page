@@ -8,7 +8,11 @@
       <!-- Left: Calculator Form -->
       <div class="space-y-4 col-span-1 lg:col-span-3">
         <!-- Dropdowns Row -->
-        <h2 class="text-2xl md:text-3xl font-semibold text-center text-secondary mb-5 uppercase">CÁCH TÍNH KHỐI LƯỢNG</h2>
+        <h2
+          class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-5 uppercase"
+        >
+          CÁCH TÍNH KHỐI LƯỢNG
+        </h2>
         <hr class="border-t border-black/10 mt-4 w-full" />
         <div class="grid grid-cols-2 gap-6">
           <div class="relative">
@@ -16,39 +20,21 @@
               id="roof-style"
               class="w-full h-[44px] px-4 pr-10 border border-black/10 rounded-sm bg-transparent text-[13px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
             >
-              <option
-                value=""
-                disabled
-                selected
-              >
-                KIỂU MÁI
-              </option>
-              <option
-                value="2-slope"
-                data-factor="1.0"
-              >
+              <option value="" disabled selected>KIỂU MÁI</option>
+              <option value="2-slope" data-factor="1.0">
                 Mái dốc 2 mặt (Mái chữ A)
               </option>
-              <option
-                value="4-slope"
-                data-factor="1.0"
-              >
+              <option value="4-slope" data-factor="1.0">
                 Mái dốc 4 mặt (Mái bánh ít)
               </option>
-              <option
-                value="chong-diem"
-                data-factor="1.0"
-              >
+              <option value="chong-diem" data-factor="1.0">
                 Mái chồng diêm
               </option>
-              <option
-                value="dao"
-                data-factor="1.1"
-              >
-                Mái đao
-              </option>
+              <option value="dao" data-factor="1.1">Mái đao</option>
             </select>
-            <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+            <div
+              class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+            >
               <svg
                 class="w-4 h-4 text-secondary"
                 fill="none"
@@ -69,39 +55,20 @@
               id="tile-type"
               class="w-full h-[44px] px-4 pr-10 border border-black/10 rounded-sm bg-transparent text-[13px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
             >
-              <option
-                value=""
-                disabled
-                selected
-              >
-                LOẠI NGÓI
-              </option>
-              <option
-                value="dai"
-                data-am="27"
-                data-duong="27"
-                data-diem="5"
-              >
+              <option value="" disabled selected>LOẠI NGÓI</option>
+              <option value="dai" data-am="27" data-duong="27" data-diem="5">
                 Ngói Âm Dương cỡ Đại
               </option>
-              <option
-                value="trung"
-                data-am="40"
-                data-duong="27"
-                data-diem="5"
-              >
+              <option value="trung" data-am="40" data-duong="27" data-diem="5">
                 Ngói Âm Dương cỡ Trung
               </option>
-              <option
-                value="tieu"
-                data-am="60"
-                data-duong="60"
-                data-diem="5"
-              >
+              <option value="tieu" data-am="60" data-duong="60" data-diem="5">
                 Ngói Âm Dương cỡ Tiểu
               </option>
             </select>
-            <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+            <div
+              class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+            >
               <svg
                 class="w-4 h-4 text-secondary"
                 fill="none"
@@ -122,7 +89,9 @@
         <!-- DIỆN TÍCH 1 -->
         <div class="flex flex-col md:flex-row gap-4 items-end">
           <div class="w-full md:w-[150px] shrink-0 pb-1">
-            <span class="font-semibold text-primary uppercase text-base">DIỆN TÍCH 1</span>
+            <span class="font-semibold text-primary uppercase text-base"
+              >DIỆN TÍCH 1</span
+            >
           </div>
           <div class="flex-1 w-full grid grid-cols-12 gap-7 items-end">
             <div class="col-span-12 md:col-span-3">
@@ -133,7 +102,9 @@
                   <option selected>HÌNH CHỮ NHẬT</option>
                   <option>HÌNH THANG</option>
                 </select>
-                <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary">
+                <div
+                  class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary"
+                >
                   <svg
                     class="w-3 h-3"
                     fill="none"
@@ -151,8 +122,13 @@
               </div>
             </div>
             <div class="col-span-6 md:col-span-3 flex flex-col gap-2">
-              <label class="text-[16px] uppercase font-semibold text-primary text-center"
-                >CHIỀU DÀI <span class="block text-[12px] font-normal italic normal-case text-secondary">Chiều tính diềm mái</span></label
+              <label
+                class="text-[16px] uppercase font-semibold text-primary text-center"
+                >CHIỀU DÀI
+                <span
+                  class="block text-[12px] font-normal italic normal-case text-secondary"
+                  >Chiều tính diềm mái</span
+                ></label
               >
               <div class="relative">
                 <input
@@ -160,12 +136,17 @@
                   placeholder="00"
                   class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
                 />
-                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
+                <span
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
+                  >m</span
+                >
               </div>
             </div>
             <div class="col-span-6 md:col-span-3 flex flex-col gap-2">
-              <label class="text-[16px] uppercase font-semibold text-primary text-center"
-                >CHIỀU RỘNG <span class="block text-[12px] opacity-0">-</span></label
+              <label
+                class="text-[16px] uppercase font-semibold text-primary text-center"
+                >CHIỀU RỘNG
+                <span class="block text-[12px] opacity-0">-</span></label
               >
               <div class="relative">
                 <input
@@ -173,15 +154,20 @@
                   placeholder="00"
                   class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
                 />
-                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
+                <span
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
+                  >m</span
+                >
               </div>
             </div>
             <div
               class="col-span-4 md:col-span-3 flex flex-col gap-2"
               style="display: none"
             >
-              <label class="text-[16px] uppercase font-semibold text-primary text-center"
-                >CHIỀU CAO <span class="block text-[12px] opacity-0">-</span></label
+              <label
+                class="text-[16px] uppercase font-semibold text-primary text-center"
+                >CHIỀU CAO
+                <span class="block text-[12px] opacity-0">-</span></label
               >
               <div class="relative">
                 <input
@@ -189,7 +175,10 @@
                   placeholder="00"
                   class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
                 />
-                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
+                <span
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
+                  >m</span
+                >
               </div>
             </div>
           </div>
@@ -198,8 +187,14 @@
         <!-- DIỆN TÍCH 2 -->
         <div class="flex flex-col md:flex-row gap-4 items-end">
           <div class="w-full md:w-[150px] shrink-0 pb-1 flex flex-col">
-            <span class="font-semibold text-primary uppercase text-base">DIỆN TÍCH 2</span>
-            <button class="text-[14px] text-secondary underline text-left font-medium ml-4">Loại bỏ</button>
+            <span class="font-semibold text-primary uppercase text-base"
+              >DIỆN TÍCH 2</span
+            >
+            <button
+              class="text-[14px] text-secondary underline text-left font-medium ml-4"
+            >
+              Loại bỏ
+            </button>
           </div>
           <div class="flex-1 w-full grid grid-cols-12 gap-7 items-end">
             <div class="col-span-12 md:col-span-3">
@@ -210,7 +205,9 @@
                   <option>HÌNH CHỮ NHẬT</option>
                   <option selected>HÌNH THANG</option>
                 </select>
-                <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary">
+                <div
+                  class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary"
+                >
                   <svg
                     class="w-3 h-3"
                     fill="none"
@@ -228,8 +225,13 @@
               </div>
             </div>
             <div class="col-span-4 md:col-span-3 flex flex-col gap-2">
-              <label class="text-[16px] uppercase font-semibold text-primary text-center"
-                >ĐÁY LỚN <span class="block text-[12px] font-normal italic normal-case text-secondary">Chiều tính diềm mái</span></label
+              <label
+                class="text-[16px] uppercase font-semibold text-primary text-center"
+                >ĐÁY LỚN
+                <span
+                  class="block text-[12px] font-normal italic normal-case text-secondary"
+                  >Chiều tính diềm mái</span
+                ></label
               >
               <div class="relative">
                 <input
@@ -237,12 +239,17 @@
                   placeholder="00"
                   class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
                 />
-                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
+                <span
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
+                  >m</span
+                >
               </div>
             </div>
             <div class="col-span-4 md:col-span-3 flex flex-col gap-2">
-              <label class="text-[16px] uppercase font-semibold text-primary text-center"
-                >ĐÁY BÉ <span class="block text-[12px] opacity-0">-</span></label
+              <label
+                class="text-[16px] uppercase font-semibold text-primary text-center"
+                >ĐÁY BÉ
+                <span class="block text-[12px] opacity-0">-</span></label
               >
               <div class="relative">
                 <input
@@ -250,12 +257,17 @@
                   placeholder="00"
                   class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
                 />
-                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
+                <span
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
+                  >m</span
+                >
               </div>
             </div>
             <div class="col-span-4 md:col-span-3 flex flex-col gap-2">
-              <label class="text-[16px] uppercase font-semibold text-primary text-center"
-                >CHIỀU CAO <span class="block text-[12px] opacity-0">-</span></label
+              <label
+                class="text-[16px] uppercase font-semibold text-primary text-center"
+                >CHIỀU CAO
+                <span class="block text-[12px] opacity-0">-</span></label
               >
               <div class="relative">
                 <input
@@ -263,14 +275,19 @@
                   placeholder="00"
                   class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
                 />
-                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
+                <span
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
+                  >m</span
+                >
               </div>
             </div>
           </div>
         </div>
 
         <div class="text-center">
-          <button class="text-secondary font-semibold text-sm underline">+ Thêm diện tích</button>
+          <button class="text-secondary font-semibold text-sm underline">
+            + Thêm diện tích
+          </button>
         </div>
 
         <button
@@ -283,7 +300,11 @@
         <div class="pt-8">
           <div class="grid grid-cols-12 gap-4 pb-4 items-center">
             <div class="col-span-6 md:col-span-5">
-              <h4 class="font-semibold text-primary uppercase text-base tracking-wider">KẾT QUẢ</h4>
+              <h4
+                class="font-semibold text-primary uppercase text-base tracking-wider"
+              >
+                KẾT QUẢ
+              </h4>
             </div>
             <div class="col-span-3 md:col-span-4 text-center">
               <span class="text-base font-semibold text-primary">Định mức</span>
@@ -297,32 +318,44 @@
             <!-- Ngói âm -->
             <div class="grid grid-cols-12 gap-4 items-center">
               <div class="col-span-3 md:col-span-3">
-                <span class="text-primary/80 font-medium text-base">Ngói âm</span>
+                <span class="text-primary/80 font-medium text-base"
+                  >Ngói âm</span
+                >
               </div>
               <div class="col-span-3 md:col-span-2 text-right">
                 <span class="text-primary/80 font-medium text-base">00 m²</span>
               </div>
               <div class="col-span-3 md:col-span-4 text-center">
-                <span class="text-primary/80 font-medium text-base">40 viên/m²</span>
+                <span class="text-primary/80 font-medium text-base"
+                  >40 viên/m²</span
+                >
               </div>
               <div class="col-span-3 md:col-span-3 text-right">
-                <span class="text-primary font-extrabold text-[16px]">00 viên</span>
+                <span class="text-primary font-extrabold text-[16px]"
+                  >00 viên</span
+                >
               </div>
             </div>
 
             <!-- Ngói dương -->
             <div class="grid grid-cols-12 gap-4 items-center">
               <div class="col-span-3 md:col-span-3">
-                <span class="text-primary/80 font-medium text-base">Ngói dương</span>
+                <span class="text-primary/80 font-medium text-base"
+                  >Ngói dương</span
+                >
               </div>
               <div class="col-span-3 md:col-span-2 text-right">
                 <span class="text-primary/80 font-medium text-base">00 m²</span>
               </div>
               <div class="col-span-3 md:col-span-4 text-center">
-                <span class="text-primary/80 font-medium text-base">27 viên/m²</span>
+                <span class="text-primary/80 font-medium text-base"
+                  >27 viên/m²</span
+                >
               </div>
               <div class="col-span-3 md:col-span-3 text-right">
-                <span class="text-primary font-extrabold text-[16px]">00 viên</span>
+                <span class="text-primary font-extrabold text-[16px]"
+                  >00 viên</span
+                >
               </div>
             </div>
 
@@ -335,10 +368,14 @@
                 <span class="text-primary/80 font-medium text-base">00 md</span>
               </div>
               <div class="col-span-3 md:col-span-4 text-center">
-                <span class="text-primary/80 font-medium text-base">5 cặp/md</span>
+                <span class="text-primary/80 font-medium text-base"
+                  >5 cặp/md</span
+                >
               </div>
               <div class="col-span-3 md:col-span-3 text-right">
-                <span class="text-primary font-extrabold text-[16px]">00 cặp</span>
+                <span class="text-primary font-extrabold text-[16px]"
+                  >00 cặp</span
+                >
               </div>
             </div>
           </div>
@@ -347,11 +384,7 @@
 
         <!-- Extras -->
         <div class="space-y-6">
-          <input
-            type="checkbox"
-            id="extra-loss"
-            class="peer sr-only"
-          />
+          <input type="checkbox" id="extra-loss" class="peer sr-only" />
           <label
             for="extra-loss"
             class="w-fit flex items-center gap-2 cursor-pointer select-none peer-checked:[&_.loss-checkbox-box]:border-secondary peer-checked:[&_.loss-checkbox-box]:bg-secondary peer-checked:[&_.loss-checkbox-icon]:opacity-100 peer-focus-visible:[&_.loss-checkbox-box]:ring-2 peer-focus-visible:[&_.loss-checkbox-box]:ring-secondary/40 peer-focus-visible:[&_.loss-checkbox-box]:ring-offset-1"
@@ -373,15 +406,20 @@
                 ></path>
               </svg>
             </span>
-            <span class="text-[15px] font-medium text-primary/80">Cộng thêm hao hụt</span>
+            <span class="text-[15px] font-medium text-primary/80"
+              >Cộng thêm hao hụt</span
+            >
             <span class="group relative inline-block ml-1">
-              <span class="w-5 h-5 rounded-full text-primary border-primary border flex items-center justify-center text-[12px] font-bold">
+              <span
+                class="w-5 h-5 rounded-full text-primary border-primary border flex items-center justify-center text-[12px] font-bold"
+              >
                 ?
               </span>
               <span
                 class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-primary text-white text-[12px] rounded-sm opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity shadow-lg z-10 leading-relaxed"
               >
-                Tính toán dựa trên độ dốc mái thực tế và hao hụt vận chuyển/thi công.
+                Tính toán dựa trên độ dốc mái thực tế và hao hụt vận chuyển/thi
+                công.
               </span>
             </span>
           </label>
@@ -395,9 +433,13 @@
                   class="peer appearance-none w-5 h-5 border border-black/30 rounded-full checked:border-primary transition-all cursor-pointer"
                   checked
                 />
-                <div class="absolute w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"></div>
+                <div
+                  class="absolute w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"
+                ></div>
               </div>
-              <span class="text-[14px] text-primary/70 font-medium">Thêm 15% (Độ dốc mái)</span>
+              <span class="text-[14px] text-primary/70 font-medium"
+                >Thêm 15% (Độ dốc mái)</span
+              >
             </label>
             <label class="flex items-center gap-3 cursor-pointer group">
               <div class="relative flex items-center justify-center">
@@ -406,9 +448,13 @@
                   name="loss-rate"
                   class="peer appearance-none w-5 h-5 border border-black/30 rounded-full checked:border-primary transition-all cursor-pointer"
                 />
-                <div class="absolute w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"></div>
+                <div
+                  class="absolute w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"
+                ></div>
               </div>
-              <span class="text-[14px] text-primary/70 font-medium">Thêm 20% (Độ dốc mái + hao vỡ)</span>
+              <span class="text-[14px] text-primary/70 font-medium"
+                >Thêm 20% (Độ dốc mái + hao vỡ)</span
+              >
             </label>
           </div>
         </div>
@@ -439,17 +485,23 @@
 {{#push "scripts"}}
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const calculatorSection = document.querySelector("[data-weight-calculator]");
+    const calculatorSection = document.querySelector(
+      "[data-weight-calculator]",
+    );
     if (!calculatorSection) return;
 
     const roofStyleSelect = calculatorSection.querySelector("#roof-style");
     const tileTypeSelect = calculatorSection.querySelector("#tile-type");
-    const areasContainer = calculatorSection.querySelector(".space-y-4.col-span-1.lg\\:col-span-3");
+    const areasContainer = calculatorSection.querySelector(
+      ".space-y-4.col-span-1.lg\\:col-span-3",
+    );
 
     if (!areasContainer || !roofStyleSelect || !tileTypeSelect) return;
 
     const allInitialBlocks = Array.from(areasContainer.children).filter(
-      (el) => el.classList.contains("flex") && el.querySelector("span")?.textContent.includes("DIỆN TÍCH"),
+      (el) =>
+        el.classList.contains("flex") &&
+        el.querySelector("span")?.textContent.includes("DIỆN TÍCH"),
     );
 
     const masterTemplate = (
@@ -460,40 +512,59 @@
     )?.cloneNode(true);
 
     const buttons = areasContainer.querySelectorAll("button");
-    const addAreaBtn = Array.from(buttons).find((btn) => btn.textContent.includes("+ Thêm diện tích"));
-    const calculateBtn = Array.from(buttons).find((btn) => btn.textContent.includes("TÍNH TOÁN KHỐI LƯỢNG"));
+    const addAreaBtn = Array.from(buttons).find((btn) =>
+      btn.textContent.includes("+ Thêm diện tích"),
+    );
+    const calculateBtn = Array.from(buttons).find((btn) =>
+      btn.textContent.includes("TÍNH TOÁN KHỐI LƯỢNG"),
+    );
 
-    const resultRows = calculatorSection.querySelectorAll(".pt-8 .space-y-4 > .grid.grid-cols-12");
+    const resultRows = calculatorSection.querySelectorAll(
+      ".pt-8 .space-y-4 > .grid.grid-cols-12",
+    );
     const resultTilesAm = resultRows[0];
     const resultTilesDuong = resultRows[1];
     const resultDiem = resultRows[2];
 
     const extraLossCheckbox = calculatorSection.querySelector("#extra-loss");
-    const lossRadios = Array.from(calculatorSection.querySelectorAll('input[name="loss-rate"]'));
+    const lossRadios = Array.from(
+      calculatorSection.querySelectorAll('input[name="loss-rate"]'),
+    );
 
     const vnFormatter = new Intl.NumberFormat("vi-VN");
     const format = (num) => vnFormatter.format(num);
 
     const getAreaBlocks = () =>
       Array.from(areasContainer.children).filter(
-        (el) => el.classList.contains("flex") && el.querySelector("span")?.textContent.includes("DIỆN TÍCH"),
+        (el) =>
+          el.classList.contains("flex") &&
+          el.querySelector("span")?.textContent.includes("DIỆN TÍCH"),
       );
 
-    const getAreaTitle = (block) => Array.from(block.querySelectorAll("span")).find((span) => /DIỆN\s*TÍCH/i.test(span.textContent || ""));
+    const getAreaTitle = (block) =>
+      Array.from(block.querySelectorAll("span")).find((span) =>
+        /DIỆN\s*TÍCH/i.test(span.textContent || ""),
+      );
 
     const updateCoeffLabels = () => {
       const selectedTile = tileTypeSelect.options[tileTypeSelect.selectedIndex];
 
       if (!selectedTile || selectedTile.value === "") {
-        if (resultTilesAm) resultTilesAm.querySelectorAll("span")[2].textContent = "-- viên/m²";
-        if (resultTilesDuong) resultTilesDuong.querySelectorAll("span")[2].textContent = "-- viên/m²";
-        if (resultDiem) resultDiem.querySelectorAll("span")[2].textContent = "-- cặp/md";
+        if (resultTilesAm)
+          resultTilesAm.querySelectorAll("span")[2].textContent = "-- viên/m²";
+        if (resultTilesDuong)
+          resultTilesDuong.querySelectorAll("span")[2].textContent =
+            "-- viên/m²";
+        if (resultDiem)
+          resultDiem.querySelectorAll("span")[2].textContent = "-- cặp/md";
         return;
       }
 
       const amCoeff = Number.parseFloat(selectedTile.dataset.am || "0") || 40;
-      const duongCoeff = Number.parseFloat(selectedTile.dataset.duong || "0") || 27;
-      const diemCoeff = Number.parseFloat(selectedTile.dataset.diem || "0") || 5;
+      const duongCoeff =
+        Number.parseFloat(selectedTile.dataset.duong || "0") || 27;
+      const diemCoeff =
+        Number.parseFloat(selectedTile.dataset.diem || "0") || 5;
 
       if (resultTilesAm) {
         const coeffSpan = resultTilesAm.querySelectorAll("span")[2];
@@ -520,7 +591,8 @@
         if (!select) return;
 
         const inputs = Array.from(block.querySelectorAll("input")).filter(
-          (input) => input.closest(".relative")?.parentElement.style.display !== "none",
+          (input) =>
+            input.closest(".relative")?.parentElement.style.display !== "none",
         );
 
         const type = select.value || select.options[select.selectedIndex].text;
@@ -555,34 +627,49 @@
 
       const styleFactor =
         roofStyleSelect.value !== ""
-          ? Number.parseFloat(roofStyleSelect.options[roofStyleSelect.selectedIndex].dataset.factor || "1") || 1
+          ? Number.parseFloat(
+              roofStyleSelect.options[roofStyleSelect.selectedIndex].dataset
+                .factor || "1",
+            ) || 1
           : 0;
 
       factor *= styleFactor;
       updateCoeffLabels();
 
       const selectedTile = tileTypeSelect.options[tileTypeSelect.selectedIndex];
-      const amCoeff = selectedTile?.value ? Number.parseFloat(selectedTile.dataset.am || "0") || 0 : 0;
-      const duongCoeff = selectedTile?.value ? Number.parseFloat(selectedTile.dataset.duong || "0") || 0 : 0;
-      const diemCoeff = selectedTile?.value ? Number.parseFloat(selectedTile.dataset.diem || "0") || 0 : 0;
+      const amCoeff = selectedTile?.value
+        ? Number.parseFloat(selectedTile.dataset.am || "0") || 0
+        : 0;
+      const duongCoeff = selectedTile?.value
+        ? Number.parseFloat(selectedTile.dataset.duong || "0") || 0
+        : 0;
+      const diemCoeff = selectedTile?.value
+        ? Number.parseFloat(selectedTile.dataset.diem || "0") || 0
+        : 0;
 
       const ngoiAm = Math.ceil(totalS * amCoeff * factor);
       const ngoiDuong = Math.ceil(totalS * duongCoeff * factor);
       const diem = Math.ceil(totalL * diemCoeff * factor);
 
       if (resultTilesAm) {
-        resultTilesAm.querySelectorAll("span")[1].textContent = `${format(totalS)} m²`;
-        resultTilesAm.querySelectorAll("span")[3].textContent = `${format(ngoiAm)} viên`;
+        resultTilesAm.querySelectorAll("span")[1].textContent =
+          `${format(totalS)} m²`;
+        resultTilesAm.querySelectorAll("span")[3].textContent =
+          `${format(ngoiAm)} viên`;
       }
 
       if (resultTilesDuong) {
-        resultTilesDuong.querySelectorAll("span")[1].textContent = `${format(totalS)} m²`;
-        resultTilesDuong.querySelectorAll("span")[3].textContent = `${format(ngoiDuong)} viên`;
+        resultTilesDuong.querySelectorAll("span")[1].textContent =
+          `${format(totalS)} m²`;
+        resultTilesDuong.querySelectorAll("span")[3].textContent =
+          `${format(ngoiDuong)} viên`;
       }
 
       if (resultDiem) {
-        resultDiem.querySelectorAll("span")[1].textContent = `${format(totalL)} md`;
-        resultDiem.querySelectorAll("span")[3].textContent = `${format(diem)} cặp`;
+        resultDiem.querySelectorAll("span")[1].textContent =
+          `${format(totalL)} md`;
+        resultDiem.querySelectorAll("span")[3].textContent =
+          `${format(diem)} cặp`;
       }
     };
 
@@ -598,14 +685,15 @@
         const label1 = inputWrappers[1]?.querySelector("label");
         if (label1) {
           label1.innerHTML =
-            "CHIỀU DÀI <span class=\"block text-[12px] font-normal italic normal-case text-secondary/70\">Chiều tính diềm mái</span>";
+            'CHIỀU DÀI <span class="block text-[12px] font-normal italic normal-case text-secondary/70">Chiều tính diềm mái</span>';
         }
 
         inputWrappers[1]?.classList.replace("col-span-4", "col-span-6");
 
         const label2 = inputWrappers[2]?.querySelector("label");
         if (label2) {
-          label2.innerHTML = "CHIỀU RỘNG <span class=\"block text-[12px] opacity-0\">&nbsp;</span>";
+          label2.innerHTML =
+            'CHIỀU RỘNG <span class="block text-[12px] opacity-0">&nbsp;</span>';
         }
 
         inputWrappers[2]?.classList.replace("col-span-4", "col-span-6");
@@ -614,14 +702,15 @@
         const label1 = inputWrappers[1]?.querySelector("label");
         if (label1) {
           label1.innerHTML =
-            "ĐÁY LỚN <span class=\"block text-[12px] font-normal italic normal-case text-secondary/70\">Chiều tính diềm mái</span>";
+            'ĐÁY LỚN <span class="block text-[12px] font-normal italic normal-case text-secondary/70">Chiều tính diềm mái</span>';
         }
 
         inputWrappers[1]?.classList.replace("col-span-6", "col-span-4");
 
         const label2 = inputWrappers[2]?.querySelector("label");
         if (label2) {
-          label2.innerHTML = "ĐÁY BÉ <span class=\"block text-[12px] opacity-0\">&nbsp;</span>";
+          label2.innerHTML =
+            'ĐÁY BÉ <span class="block text-[12px] opacity-0">&nbsp;</span>';
         }
 
         inputWrappers[2]?.classList.replace("col-span-6", "col-span-4");
@@ -632,17 +721,26 @@
 
           const label3 = inputWrappers[3].querySelector("label");
           if (label3) {
-            label3.innerHTML = "CHIỀU CAO <span class=\"block text-[12px] opacity-0\">&nbsp;</span>";
+            label3.innerHTML =
+              'CHIỀU CAO <span class="block text-[12px] opacity-0">&nbsp;</span>';
           }
         }
       }
 
-      [inputWrappers[1], inputWrappers[2], inputWrappers[3]].forEach((wrapper) => {
-        const label = wrapper?.querySelector("label");
-        if (!label) return;
-        label.classList.remove("min-h-[42px]");
-        label.classList.add("h-[44px]", "flex", "flex-col", "items-center", "justify-start");
-      });
+      [inputWrappers[1], inputWrappers[2], inputWrappers[3]].forEach(
+        (wrapper) => {
+          const label = wrapper?.querySelector("label");
+          if (!label) return;
+          label.classList.remove("min-h-[42px]");
+          label.classList.add(
+            "h-[44px]",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-start",
+          );
+        },
+      );
     };
 
     const renumberAreas = () => {
@@ -689,7 +787,8 @@
           titleWrapper.classList.add("flex", "flex-col");
           removeBtn = document.createElement("button");
           removeBtn.type = "button";
-          removeBtn.className = "text-[14px] text-secondary underline text-left font-bold";
+          removeBtn.className =
+            "text-[14px] text-secondary underline text-left font-bold";
           removeBtn.textContent = "Loại bỏ";
           titleWrapper.appendChild(removeBtn);
         }
@@ -716,7 +815,9 @@
     });
 
     extraLossCheckbox?.addEventListener("change", updateResults);
-    lossRadios.forEach((radio) => radio.addEventListener("change", updateResults));
+    lossRadios.forEach((radio) =>
+      radio.addEventListener("change", updateResults),
+    );
 
     const checkButtonState = () => {
       if (!calculateBtn) return;
@@ -726,7 +827,10 @@
 
       calculateBtn.disabled = !(isStyleSelected && isTileSelected);
       calculateBtn.classList.toggle("opacity-50", calculateBtn.disabled);
-      calculateBtn.classList.toggle("cursor-not-allowed", calculateBtn.disabled);
+      calculateBtn.classList.toggle(
+        "cursor-not-allowed",
+        calculateBtn.disabled,
+      );
     };
 
     roofStyleSelect.addEventListener("change", checkButtonState);

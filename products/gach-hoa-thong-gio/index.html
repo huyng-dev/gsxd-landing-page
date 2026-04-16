@@ -2,16 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gạch Hoa Thông Gió - Thanh Hải Ceramics</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/assets/images/logo.png"
-    />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
@@ -34,25 +27,20 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    />
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
     />
     {{{stack "styles"}}}
-</head>
+  </head>
   <body
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}} {{> components/catalog-button}}
+    {{> components/header}}
+    {{> components/catalog-button}}
 
     <main class="flex-grow bg-background-secondary overflow-hidden">
       <section
@@ -108,7 +96,9 @@
         </div>
 
         <!-- Content -->
-        <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-12 w-[85%] max-w-[1320px] mx-auto">
+        <div
+          class="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-12 w-[85%] max-w-[1320px] mx-auto"
+        >
           <h1
             class="font-archivo text-[3rem] md:text-[5rem] lg:text-[8rem] xl:text-[11rem] font-bold text-secondary tracking-normal leading-tight uppercase drop-shadow-sm mb-48 md:mb-60 lg:mb-[450px]"
             style="text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5)"
@@ -120,8 +110,10 @@
             class="font-italianno text-3xl md:text-5xl text-primary leading-relaxed max-w-6xl mx-auto tracking-wide md:mt-24 lg:mt-0"
             style="text-shadow: 0px 1px 0px #fff"
           >
-            Kết tinh từ cốt gốm đanh thép, tôi luyện giữa lò nung nghìn độ, Thanh Hải phục dựng tinh hoa gạch thông gió cổ qua những nét
-            chạm thủ công và sắc men độc bản, mở ra không gian tràn đầy sinh khí và dấu ấn nghệ thuật trường tồn.
+            Kết tinh từ cốt gốm đanh thép, tôi luyện giữa lò nung nghìn độ,
+            Thanh Hải phục dựng tinh hoa gạch thông gió cổ qua những nét chạm
+            thủ công và sắc men độc bản, mở ra không gian tràn đầy sinh khí và
+            dấu ấn nghệ thuật trường tồn.
           </p>
         </div>
       </section>
@@ -159,7 +151,9 @@
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <div class="swiper-slide w-full">
-                <div class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[2.5/1]">
+                <div
+                  class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[2.5/1]"
+                >
                   <!-- Colored Squares -->
                   <div
                     class="absolute bg-[#C0815F]"
@@ -279,7 +273,9 @@
 
               <!-- Slide 2 (Placeholder for demonstration) -->
               <div class="swiper-slide w-full">
-                <div class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[2.5/1]">
+                <div
+                  class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[2.5/1]"
+                >
                   <!-- Colored Squares -->
                   <div
                     class="absolute bg-[#C0815F]"
@@ -399,7 +395,9 @@
 
               <!-- Slide 3 (Placeholder for demonstration) -->
               <div class="swiper-slide w-full">
-                <div class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[2.5/1]">
+                <div
+                  class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[2.5/1]"
+                >
                   <!-- Colored Squares -->
                   <div
                     class="absolute bg-[#C0815F]"
@@ -541,7 +539,9 @@
               </svg>
             </div>
 
-            <div class="collage-pagination flex items-center justify-center gap-5 select-none"></div>
+            <div
+              class="collage-pagination flex items-center justify-center gap-5 select-none"
+            ></div>
 
             <div
               class="collage-button-next shrink-0 w-10 h-10 border-2 border-black/20 rounded-full flex items-center justify-center text-black/40 hover:border-black hover:text-black transition-all cursor-pointer"
@@ -566,14 +566,7 @@
 
       <!-- Breadcrumb -->
       <div class="w-[85%] max-w-[1320px] mx-auto pb-6 pt-4 relative z-10">
-        <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
-          <a
-            href="/"
-            class="hover:text-secondary transition-colors"
-            >Trang chủ</a
-          >
-          <span class="mx-1">/</span> <span class="text-primary font-semibold border-primary">Gạch Hoa Thông Gió</span>
-        </p>
+        {{> components/products/breadcrumb textClass="font-bold text-primary/60 uppercase text-xs md:text-base" linkClass="hover:text-secondary transition-colors" separatorClass="mx-1" currentClass="text-primary font-semibold border-primary" currentLabel="Gạch Hoa Thông Gió"}}
       </div>
 
       {{> components/products/product-grid category="gach-hoa-thong-gio"}}
@@ -581,11 +574,12 @@
       <!-- Video Section -->
       <section class="w-full max-w-[1920px] mx-auto pb-16 animate-fade-in-up">
         <!-- Section Title -->
-        <div
-          class="text-center mb-16"
-          data-aos="fade-up"
-        >
-          <h2 class="text-2xl md:text-3xl font-semibold text-secondary uppercase">Hành trình chế tác</h2>
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2
+            class="text-[20px] md:text-3xl font-semibold text-secondary uppercase"
+          >
+            Hành trình chế tác
+          </h2>
         </div>
         <div class="flex">
           <a
@@ -631,11 +625,12 @@
       <!-- Giá trị vượt trội Section -->
       <section class="w-[85%] max-w-[1320px] mx-auto pb-20 pt-12">
         <!-- Section Title -->
-        <div
-          class="text-center mb-16 md:mb-20"
-          data-aos="fade-up"
-        >
-          <h2 class="text-2xl md:text-3xl font-semibold text-secondary uppercase">GIÁ TRỊ VƯỢT TRỘI</h2>
+        <div class="text-center mb-16 md:mb-20" data-aos="fade-up">
+          <h2
+            class="text-[20px] md:text-3xl font-semibold text-secondary uppercase"
+          >
+            GIÁ TRỊ VƯỢT TRỘI
+          </h2>
         </div>
 
         <div
@@ -648,9 +643,13 @@
             <div class="w-full flex justify-center mb-10 lg:mb-36">
               <div class="relative w-full aspect-[10/9]">
                 <!-- Blue Background -->
-                <div class="absolute top-0 left-0 w-full h-[70%] bg-[#1D78AD]"></div>
+                <div
+                  class="absolute top-0 left-0 w-full h-[70%] bg-[#1D78AD]"
+                ></div>
                 <!-- Image Container -->
-                <div class="absolute top-[20%] left-[18%] right-[18%] bottom-[-15%] shadow-lg bg-black/5 overflow-hidden">
+                <div
+                  class="absolute top-[20%] left-[18%] right-[18%] bottom-[-15%] shadow-lg bg-black/5 overflow-hidden"
+                >
                   <a
                     href="/assets/images/gach-hoa-value.png"
                     class="glightbox group block w-full h-full cursor-zoom-in"
@@ -665,30 +664,52 @@
                 </div>
               </div>
             </div>
-            <div class="text-center mt-6 px-2 flex-grow flex flex-col justify-start">
-              <h3 class="text-[22px] lg:text-[36px] font-bold text-textPrimary mb-3 leading-snug">Tuyệt tác men<br />hỏa biến kháng</h3>
-              <p class="text-[14px] lg:text-base font-medium text-textPrimary leading-relaxed max-w-[290px] mx-auto">
-                Lớp men dày dặn đóng vai trò như màng chắn thủy tinh siêu cứng, ngăn chặn bụi bẩn và rêu mốc bám dính. Nhờ độ trơn bóng cao,
-                mái nhà có khả năng "tự làm sạch"
+            <div
+              class="text-center mt-6 px-2 flex-grow flex flex-col justify-start"
+            >
+              <h3
+                class="text-[22px] lg:text-[36px] font-bold text-textPrimary mb-3 leading-snug"
+              >
+                Tuyệt tác men<br />hỏa biến kháng
+              </h3>
+              <p
+                class="text-[14px] lg:text-base font-medium text-textPrimary leading-relaxed max-w-[290px] mx-auto"
+              >
+                Lớp men dày dặn đóng vai trò như màng chắn thủy tinh siêu cứng,
+                ngăn chặn bụi bẩn và rêu mốc bám dính. Nhờ độ trơn bóng cao, mái
+                nhà có khả năng "tự làm sạch"
               </p>
             </div>
           </div>
 
           <!-- Column 2 -->
           <div class="flex flex-col box-border">
-            <div class="text-center mb-12 md:mb-6 px-2 flex-grow flex flex-col justify-start">
-              <h3 class="text-[22px] lg:text-[36px] font-bold text-textPrimary mb-3 leading-snug">Tuyệt tác men<br />hỏa biến kháng</h3>
-              <p class="text-[14px] lg:text-base font-medium text-textPrimary leading-relaxed max-w-[290px] mx-auto">
-                Lớp men dày dặn đóng vai trò như màng chắn thủy tinh siêu cứng, ngăn chặn bụi bẩn và rêu mốc bám dính. Nhờ độ trơn bóng cao,
-                mái nhà có khả năng "tự làm sạch"
+            <div
+              class="text-center mb-12 md:mb-6 px-2 flex-grow flex flex-col justify-start"
+            >
+              <h3
+                class="text-[22px] lg:text-[36px] font-bold text-textPrimary mb-3 leading-snug"
+              >
+                Tuyệt tác men<br />hỏa biến kháng
+              </h3>
+              <p
+                class="text-[14px] lg:text-base font-medium text-textPrimary leading-relaxed max-w-[290px] mx-auto"
+              >
+                Lớp men dày dặn đóng vai trò như màng chắn thủy tinh siêu cứng,
+                ngăn chặn bụi bẩn và rêu mốc bám dính. Nhờ độ trơn bóng cao, mái
+                nhà có khả năng "tự làm sạch"
               </p>
             </div>
             <div class="w-full flex justify-center mt-12 md:mt-10">
               <div class="relative w-full aspect-[10/9]">
                 <!-- Green Background -->
-                <div class="absolute bottom-0 left-0 w-full h-[70%] bg-[#5A7E46]"></div>
+                <div
+                  class="absolute bottom-0 left-0 w-full h-[70%] bg-[#5A7E46]"
+                ></div>
                 <!-- Image Container -->
-                <div class="absolute bottom-[20%] left-[18%] right-[18%] top-[-15%] shadow-lg bg-black/5 overflow-hidden">
+                <div
+                  class="absolute bottom-[20%] left-[18%] right-[18%] top-[-15%] shadow-lg bg-black/5 overflow-hidden"
+                >
                   <a
                     href="/assets/images/work-03.jpg"
                     class="glightbox group block w-full h-full cursor-zoom-in"
@@ -710,9 +731,13 @@
             <div class="w-full flex justify-center mb-10 lg:mb-36">
               <div class="relative w-full aspect-[10/9]">
                 <!-- Brown Background -->
-                <div class="absolute top-0 left-0 w-full h-[70%] bg-[#B28373]"></div>
+                <div
+                  class="absolute top-0 left-0 w-full h-[70%] bg-[#B28373]"
+                ></div>
                 <!-- Image Container -->
-                <div class="absolute top-[20%] left-[18%] right-[18%] bottom-[-15%] shadow-lg bg-black/5 overflow-hidden">
+                <div
+                  class="absolute top-[20%] left-[18%] right-[18%] bottom-[-15%] shadow-lg bg-black/5 overflow-hidden"
+                >
                   <a
                     href="/assets/images/value-01.png"
                     class="glightbox group block w-full h-full cursor-zoom-in"
@@ -727,11 +752,20 @@
                 </div>
               </div>
             </div>
-            <div class="text-center mt-6 px-2 flex-grow flex flex-col justify-start">
-              <h3 class="text-[22px] lg:text-[36px] font-bold text-textPrimary mb-3 leading-snug">Tuyệt tác men<br />hỏa biến kháng</h3>
-              <p class="text-[14px] lg:text-base font-medium text-textPrimary leading-relaxed max-w-[290px] mx-auto">
-                Lớp men dày dặn đóng vai trò như màng chắn thủy tinh siêu cứng, ngăn chặn bụi bẩn và rêu mốc bám dính. Nhờ độ trơn bóng cao,
-                mái nhà có khả năng "tự làm sạch"
+            <div
+              class="text-center mt-6 px-2 flex-grow flex flex-col justify-start"
+            >
+              <h3
+                class="text-[22px] lg:text-[36px] font-bold text-textPrimary mb-3 leading-snug"
+              >
+                Tuyệt tác men<br />hỏa biến kháng
+              </h3>
+              <p
+                class="text-[14px] lg:text-base font-medium text-textPrimary leading-relaxed max-w-[290px] mx-auto"
+              >
+                Lớp men dày dặn đóng vai trò như màng chắn thủy tinh siêu cứng,
+                ngăn chặn bụi bẩn và rêu mốc bám dính. Nhờ độ trơn bóng cao, mái
+                nhà có khả năng "tự làm sạch"
               </p>
             </div>
           </div>
@@ -773,10 +807,7 @@
 
     {{> components/footer}}
 
-    <script
-      type="module"
-      src="/assets/js/main.js"
-    ></script>
+    <script type="module" src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
@@ -833,5 +864,5 @@
       });
     </script>
     {{{stack "scripts"}}}
-</body>
+  </body>
 </html>
