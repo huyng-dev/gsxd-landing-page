@@ -19,7 +19,6 @@ Format:
 
 Registry:
 - ".claude/skills/terminal-problem-logger/SKILL.md" | terminal-driven work with repeated failures | create a new incident note in .claude/problems after repeated failure loops and redact probable secrets
-- ".claude/skills/coding-skill/SKILL.md" | writing, reviewing, refactoring code | keep changes simple, surgical, and verifiable
 - ".claude/skills/powershell-windows/SKILL.md" | running PowerShell commands | use correct PowerShell syntax and safe command patterns
 - ".claude/skills/regex-expert/SKILL.md" | crafting or debugging regex | produce precise and tested regex patterns
 

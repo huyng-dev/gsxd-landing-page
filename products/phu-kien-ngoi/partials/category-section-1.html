@@ -1,0 +1,279 @@
+<!-- Danh Mục Sản Phẩm Section 1 -->
+<section class="w-full md:pb-16 pt-2 md:pt-8">
+  <!-- Section Title -->
+  <div
+    class="flex items-center justify-center gap-4 md:gap-5 md:mb-10 max-w-[315px] md:max-w-full mx-auto"
+    data-aos="fade-up"
+  >
+    <img
+      src="/assets/images/title-left.svg"
+      alt=""
+      class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-25 scale-[60%] md:scale-100"
+    />
+    <h2
+      class="text-[20px] lg:text-3xl font-semibold text-[#C47526] uppercase text-nowrap"
+    >
+      Danh Mục Sản Phẩm
+    </h2>
+    <img
+      src="/assets/images/title-right.svg"
+      alt=""
+      class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-25 scale-[60%] md:scale-100"
+    />
+  </div>
+
+  <!-- Main Container -->
+  <div
+    class="bg-[# ] opacity-80 p-6 lg:p-10"
+    style="margin-left: max(0px, calc((100% - 1320px) / 2))"
+    data-aos="fade-up"
+    data-aos-delay="100"
+  >
+    <!-- Featured Image & Brush Title -->
+    <div
+      class="flex flex-col-reverse lg:flex-row gap-8 lg:gap-16 max-w-[1320px]"
+    >
+      <!-- Left Column: Products Grid & Pagination -->
+      <div class="w-full lg:w-[55%] flex flex-col justify-between">
+        <div class="lg:hidden" data-product-section>
+          <div
+            class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+            data-product-carousel
+          >
+            <article
+              class="flex-shrink-0 w-full snap-start pb-1"
+              data-product-slide
+            >
+              <div class="grid grid-cols-2 gap-4">
+                {{> components/products/mobile-product-card href="/products/phu-kien-ngoi/bo-noc-chu-van.html" image="/assets/images/bo-noc.png" title="Bộ bò nóc chữ vạn men nâu" code="MSP: PKN-BN01" price="845.000 đ/bộ"}}
+                {{> components/products/mobile-product-card href="/products/phu-kien-ngoi/ngoi-bo-noc.html" image="/assets/images/dao-kim.png" title="Đao kim tráng men xanh rêu" code="MSP: PKN-DK02" price="525.000 đ/cặp"}}
+                {{> components/products/mobile-product-card href="/products/phu-kien-ngoi/bo-noc-chu-van.html" image="/assets/images/pk-03.jpg" title="Phù điêu đuôi mái cổ điển" code="MSP: PKN-PD03" price="395.000 đ/chiếc"}}
+                {{> components/products/mobile-product-card href="/products/phu-kien-ngoi/ngoi-bo-noc.html" image="/assets/images/pk-04.jpg" title="Con kìm trang trí mái đình" code="MSP: PKN-CK04" price="460.000 đ/chiếc"}}
+              </div>
+            </article>
+          </div>
+
+          <div
+            class="mt-3 flex justify-center gap-[3px]"
+            aria-label="Product mobile pagination"
+          >
+            <button
+              class="product-section-dot h-1 w-1 rounded-full bg-secondary"
+              data-product-dot="0"
+              aria-label="Slide 1"
+            ></button>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div
+          class="hidden lg:grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10"
+        >
+          <div
+            class="flex flex-col group cursor-pointer"
+            onclick="
+              window.location.href =
+                '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+            "
+          >
+            <div
+              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+            >
+              <img
+                src="/assets/images/bo-noc.png"
+                alt="Bộ bò nóc chữ vạn men nâu"
+                class="w-full h-full object-cover"
+              />
+              <div class="product-overlay">
+                <img src="/assets/images/eye.svg" alt="Search" />
+                <span>Xem chi tiết</span>
+              </div>
+            </div>
+            <h3
+              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+            >
+              Bộ bò nóc chữ vạn men nâu
+            </h3>
+            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+              MSP: PKN-BN01
+            </p>
+            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+              Giá: 845.000 đ/bộ
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col group cursor-pointer"
+            onclick="
+              window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+            "
+          >
+            <div
+              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+            >
+              <img
+                src="/assets/images/dao-kim.png"
+                alt="Đao kim tráng men xanh rêu"
+                class="w-full h-full object-cover"
+              />
+              <div class="product-overlay">
+                <img src="/assets/images/eye.svg" alt="Search" />
+                <span>Xem chi tiết</span>
+              </div>
+            </div>
+            <h3
+              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+            >
+              Đao kim tráng men xanh rêu
+            </h3>
+            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+              MSP: PKN-DK02
+            </p>
+            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+              Giá: 525.000 đ/cặp
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col group cursor-pointer"
+            onclick="
+              window.location.href =
+                '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+            "
+          >
+            <div
+              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+            >
+              <img
+                src="/assets/images/pk-03.jpg"
+                alt="Phù điêu đuôi mái cổ điển"
+                class="w-full h-full object-cover"
+              />
+              <div class="product-overlay">
+                <img src="/assets/images/eye.svg" alt="Search" />
+                <span>Xem chi tiết</span>
+              </div>
+            </div>
+            <h3
+              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+            >
+              Phù điêu đuôi mái cổ điển
+            </h3>
+            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+              MSP: PKN-PD03
+            </p>
+            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+              Giá: 395.000 đ/chiếc
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col group cursor-pointer"
+            onclick="
+              window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+            "
+          >
+            <div
+              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+            >
+              <img
+                src="/assets/images/pk-04.jpg"
+                alt="Con kìm trang trí mái đình"
+                class="w-full h-full object-cover"
+              />
+              <div class="product-overlay">
+                <img src="/assets/images/eye.svg" alt="Search" />
+                <span>Xem chi tiết</span>
+              </div>
+            </div>
+            <h3
+              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+            >
+              Con kìm trang trí mái đình
+            </h3>
+            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+              MSP: PKN-CK04
+            </p>
+            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+              Giá: 460.000 đ/chiếc
+            </p>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div
+          class="hidden lg:flex items-center justify-center gap-5 mt-10 lg:mt-auto"
+        >
+          <button
+            class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="w-[40px] h-[40px] rounded-full bg-secondary flex items-center justify-center text-white hover:opacity-90 transition-all duration-300"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Column: Featured Image & Brush Title -->
+      <div
+        class="w-full lg:w-[45%] mr-0 lg:mr-[10%] flex flex-col justify-stretch"
+      >
+        <div
+          class="w-full flex-grow relative shadow-lg overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px]"
+        >
+          <img
+            src="/assets/images/bo-noc.png"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+
+          <!-- Brush Title Overlay inside image container -->
+          <div
+            class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300"
+          >
+            <div class="relative w-full flex items-center justify-center">
+              <img
+                src="/assets/images/brush.svg"
+                alt=""
+                class="w-full drop-shadow-xl"
+              />
+              <span
+                class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
+                style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)"
+              >
+                Ngói Bò Nóc
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

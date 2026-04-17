@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngói Âm Dương - Thanh Hải Ceramics</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    {{{stack "styles"}}}
+  </head>
+  <body
+    data-page="products"
+    class="min-h-screen flex flex-col bg-background-secondary"
+  >
+    {{> components/header}}
+
+    <main class="flex-grow bg-background-secondary pb-20">
+      <!-- Top Banner for Detail -->
+      <section
+        class="relative w-full h-[180px] md:h-[210px] flex items-center justify-center overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            src="/assets/images/detail-banner.png"
+            alt="Ngói Âm Dương Banner"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="relative z-10 text-center text-white px-4 pt-4">
+          <h1 class="text-2xl md:text-3xl font-bold mb-2.5 uppercase">
+            NGÓI ÂM DƯƠNG
+          </h1>
+          <p class="text-xs md:text-sm text-white/80">
+            <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+            <svg
+              class="w-2.5 h-2.5 inline-block mx-2 fill-current opacity-80"
+              viewBox="0 0 35 35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5797 31.4214C11.1695 31.0111 10.9391 30.4548 10.9391 29.8747C10.9391 29.2946 11.1695 28.7383 11.5797 28.3281L22.4078 17.5L11.5797 6.67184C11.1937 6.25726 10.9836 5.70915 10.9936 5.14283C11.0036 4.5765 11.2328 4.03612 11.6331 3.63539C12.0334 3.23465 12.5735 3.0048 13.1399 2.99421C13.7062 2.98361 14.2545 3.1931 14.6695 3.57858L27.046 15.9516C27.4561 16.3618 27.6865 16.9182 27.6865 17.4983C27.6865 18.0783 27.4561 18.6347 27.046 19.0449L14.6729 31.4214C14.2627 31.8315 13.7064 32.0619 13.1263 32.0619C12.5462 32.0619 11.9899 31.8315 11.5797 31.4214Z"
+                fill="currentColor"
+              />
+            </svg>
+            <a
+              href="/products/ngoi-am-duong/"
+              class="hover:text-white transition-colors"
+              >Ngói âm dương</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- Sub Breadcrumb -->
+      <div class="w-[85%] max-w-[1320px] mx-auto py-8">
+        {{> components/products/breadcrumb textClass="font-semibold text-primary/60 uppercase text-[14px] md:text-base" linkClass="hover:text-primary transition-colors" separatorClass="mx-1" parentHref="/products/ngoi-am-duong/" parentLabel="Sản phẩm" currentClass="text-primary font-semibold pb-1" currentLabel="NGÓI ÂM DƯƠNG"}}
+        <hr class="border-t border-black/10 mt-4 w-full" />
+      </div>
+
+      <!-- Product Detail Container -->
+      <section
+        class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-6 xl:gap-8 pb-16 lg:pb-24 pt-4"
+      >
+        <!-- Left: Images -->
+        <div class="flex flex-col gap-5 lg:col-span-3">
+          <!-- Main Image -->
+          <div
+            class="w-full aspect-square shadow-lg relative overflow-hidden group"
+          >
+            <img
+              src="/assets/images/am-duong-detail.png"
+              alt="Ngói Âm Dương 27 Xanh Đồng"
+              class="w-full h-full object-cover object-center mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+          <!-- Thumbnails -->
+          <div class="flex gap-5 w-full mt-2">
+            <div
+              class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"
+            ></div>
+            <div
+              class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"
+            ></div>
+            <div
+              class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"
+            ></div>
+            <div
+              class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"
+            ></div>
+            <div
+              class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"
+            ></div>
+            <div
+              class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"
+            ></div>
+            <div
+              class="flex-1 aspect-square bg-gradient-to-r from-[#5C2321] to-[#EFE4DE] cursor-pointer opacity-90 relative"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Right: Info -->
+        <div class="flex flex-col lg:col-span-2">
+          <div class="flex items-center gap-4 mb-8 text-[16px]">
+            <span class="text-primary">Mã SP</span>
+            <span class="text-primary font-semibold">THC 100-GDS</span>
+          </div>
+
+          <h2
+            class="text-xl md:text-2xl lg:text-[32px] font-semibold text-secondary uppercase !leading-normal mb-14 pb-1 tracking-tight"
+          >
+            Ngói Âm Dương 27 Xanh <br />
+            Đồng
+          </h2>
+
+          <p class="text-2xl md:text-[32px] font-semibold text-primary mb-16">
+            675.000 đ/m2
+          </p>
+
+          <hr class="border-t border-black/10 mb-8 w-full" />
+
+          <ul
+            class="list-disc pl-5 space-y-4 mb-16 text-primary font-medium text-lg md:text-xl leading-relaxed"
+          >
+            <li>Timeless beauty to be treasured</li>
+            <li>High-quality and classic design, suitable for decoration</li>
+            <li>Beginner friendly and improves intelligence</li>
+          </ul>
+
+          <!-- Actions -->
+          <div class="flex flex-wrap items-center gap-6 mb-16">
+            <!-- Quantity -->
+            <div class="flex items-center gap-4 text-primary">
+              <button
+                class="w-6 h-6 flex items-center justify-center text-xl hover:text-secondary transition-colors focus:outline-none"
+              >
+                -
+              </button>
+              <div
+                class="w-12 h-12 flex items-center justify-center border border-black/40 rounded-full text-base shadow-sm"
+              >
+                1
+              </div>
+              <button
+                class="w-6 h-6 flex items-center justify-center text-xl hover:text-secondary transition-colors focus:outline-none"
+              >
+                +
+              </button>
+            </div>
+
+            <!-- Add to cart -->
+            <button
+              class="bg-[#C16A00] hover:bg-secondary text-[#EFE4DE] px-8 md:px-12 py-4 font-semibold transition-colors shadow-md rounded-[2px] flex items-center justify-center text-sm ml-4"
+            >
+              THÊM VÀO GIỎ HÀNG
+            </button>
+          </div>
+
+          <!-- Contacts -->
+          <div class="flex flex-col gap-5 mt-2">
+            <!-- Hotline -->
+            <div class="flex items-center gap-5">
+              <div
+                class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10"
+              >
+                <img
+                  src="/assets/images/phone-call.svg"
+                  alt="Phone Call"
+                  class="w-6 h-6"
+                />
+              </div>
+              <div>
+                <p class="text-base text-secondary">Đặt hàng ngay</p>
+                <p class="text-secondary font-semibold text-lg md:text-xl">
+                  Hotline: 0966 55 8808
+                </p>
+              </div>
+            </div>
+            <!-- Zalo -->
+            <div class="flex items-center gap-5">
+              <div
+                class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10"
+              >
+                <img
+                  src="/assets/images/zalo.png"
+                  alt="Zalo"
+                  class="w-[80%] h-[80%] object-cover"
+                />
+              </div>
+              <div>
+                <p class="text-secondary font-semibold text-lg md:text-xl">
+                  Chat với chúng tôi
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {{> components/products/journey-video hideTitle=true}}
+
+      <!-- Sizes Options Section -->
+      <section class="w-[85%] max-w-[1320px] mx-auto pb-12" data-aos="fade-up">
+        <h2
+          class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-12 uppercase"
+        >
+          Đa dạng kích thước - phong phú chọn lựa
+        </h2>
+        <div class="w-full flex justify-center">
+          <img
+            src="/assets/images/ngoi-am-duong-size.png"
+            alt="Đa dạng kích thước ngói âm dương"
+            class="w-full h-auto object-contain"
+          />
+        </div>
+      </section>
+
+      <!-- Color Palette Section -->
+      <section class="w-[85%] max-w-[1320px] mx-auto pb-24" data-aos="fade-up">
+        <h2
+          class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-12 uppercase"
+        >
+          Bảng màu
+        </h2>
+
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-28 gap-y-14"
+        >
+          <!-- Row 1 -->
+          <div class="flex flex-col items-center gap-4">
+            <div
+              class="w-full aspect-[5/4] rounded-[22px] overflow-hidden shadow-sm bg-[#FBF9F7]"
+            >
+              <img
+                src="/assets/images/do-co.png"
+                alt="Đỏ cờ"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span
+              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
+              style="font-family: &quot;Italianno&quot;, cursive"
+              >Đỏ cờ</span
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-4">
+            <div
+              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#A67B5B]"
+            ></div>
+            <span
+              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
+              style="font-family: &quot;Italianno&quot;, cursive"
+              >Nâu đỏ</span
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-4">
+            <div
+              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#B22222]"
+            ></div>
+            <span
+              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
+              style="font-family: &quot;Italianno&quot;, cursive"
+              >Gấm đỏ</span
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-4">
+            <div
+              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#5D5FEF]"
+            ></div>
+            <span
+              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
+              style="font-family: &quot;Italianno&quot;, cursive"
+              >Xanh đồng</span
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-4">
+            <div
+              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#2ECC71]"
+            ></div>
+            <span
+              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
+              style="font-family: &quot;Italianno&quot;, cursive"
+              >Xanh ngọc</span
+            >
+          </div>
+
+          <!-- Row 2 -->
+          <div class="flex flex-col items-center gap-4">
+            <div
+              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#CC7A00]"
+            ></div>
+            <span
+              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
+              style="font-family: &quot;Italianno&quot;, cursive"
+              >Hổ phách</span
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-4">
+            <div
+              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#009432]"
+            ></div>
+            <span
+              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
+              style="font-family: &quot;Italianno&quot;, cursive"
+              >Nâu đen</span
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-4">
+            <div
+              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#D1D1E9]"
+            ></div>
+            <span
+              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
+              style="font-family: &quot;Italianno&quot;, cursive"
+              >Sô cô la</span
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-4">
+            <div
+              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#00BFFF]"
+            ></div>
+            <span
+              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
+              style="font-family: &quot;Italianno&quot;, cursive"
+              >Ghi ánh kim</span
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-4">
+            <div
+              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#FFD700]"
+            ></div>
+            <span
+              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
+              style="font-family: &quot;Italianno&quot;, cursive"
+              >Hoàng thổ</span
+            >
+          </div>
+        </div>
+      </section>
+
+      {{> components/products/weight-calculator}}
+      {{> components/products/applications}}
+      {{> components/products/installation-guide}}
+      {{> components/products/works}}
+      {{> components/products/recommendations}}
+      {{> components/products/faq2}}
+    </main>
+
+    {{> components/footer hideNewsletter=true}}
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
+    </script>
+    {{{stack "scripts"}}}
+  </body>
+</html>

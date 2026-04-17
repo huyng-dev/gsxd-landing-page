@@ -11,8 +11,6 @@ build/
 .env.production
 
 # Editor directories and files
-.vscode/
-.agents/
 .idea/
 *.swp
 *.swo
@@ -36,3 +34,7 @@ yarn-error.log*
 # Added by CodebaseTracker
 _codebase/
 .github/
+.prompts/
+.vscode/
+.claude/
+auto_production.py

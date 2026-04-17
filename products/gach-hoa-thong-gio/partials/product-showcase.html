@@ -1,0 +1,12 @@
+<!-- Breadcrumb + Product Grid -->
+<section class="w-full gach-hoa-product-showcase-section">
+  <div
+    class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pt-4 md:pb-6 relative z-10"
+  >
+    {{> components/products/breadcrumb textClass="font-bold text-primary/60 uppercase text-xs md:text-base gach-hoa-breadcrumb" linkClass="hover:text-secondary transition-colors gach-hoa-breadcrumb-link" separatorClass="mx-1 gach-hoa-breadcrumb-separator" currentClass="text-primary font-semibold border-primary gach-hoa-breadcrumb-current" currentLabel="Gạch Hoa Thông Gió"}}
+  </div>
+
+  <div class="gach-hoa-product-grid-shell">
+    {{> components/products/product-grid category="gach-hoa-thong-gio"}}
+  </div>
+</section>

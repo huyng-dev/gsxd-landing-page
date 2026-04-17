@@ -31,7 +31,7 @@ export default {
                 },
                 background: {
                     primary: "#FFF",
-                    secondary: "#F5EDE7",
+                    secondary: "#EFE4DE",
                 },
             },
             fontFamily: {

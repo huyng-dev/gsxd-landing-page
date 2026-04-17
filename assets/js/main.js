@@ -131,6 +131,7 @@ const initAboutTabs = () => {
 
 let certificatesSwiper = null;
 let certificatesSwiperMode = null;
+let mobileFloatingActionsInitialized = false;
 
 const initCertificatesSwiper = () => {
     if (typeof window.Swiper !== "function") {
@@ -219,10 +220,43 @@ const initCertificatesSwiper = () => {
     }
 };
 
+const initMobileFloatingActions = () => {
+    if (mobileFloatingActionsInitialized) {
+        return;
+    }
+
+    const backToTopButton = document.querySelector("[data-back-to-top]");
+
+    if (!backToTopButton) {
+        return;
+    }
+
+    mobileFloatingActionsInitialized = true;
+
+    const toggleBackToTop = () => {
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        const shouldShow = isMobile && window.scrollY > 260;
+
+        backToTopButton.classList.toggle("opacity-0", !shouldShow);
+        backToTopButton.classList.toggle("translate-y-2", !shouldShow);
+        backToTopButton.classList.toggle("pointer-events-none", !shouldShow);
+    };
+
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    window.addEventListener("scroll", toggleBackToTop, { passive: true });
+    window.addEventListener("resize", toggleBackToTop);
+
+    toggleBackToTop();
+};
+
 const initSharedScripts = () => {
     initProductSectionCarousels();
     initAboutTabs();
     initCertificatesSwiper();
+    initMobileFloatingActions();
 };
 
 document.addEventListener("DOMContentLoaded", initSharedScripts);
