@@ -1,7 +1,6 @@
 ---
-name: coding-guidelines
+trigger: always_on
 description: "Behavioral guidelines for writing, reviewing, and refactoring code."
-applyTo: "**"
 ---
 
 # Coding Guidelines

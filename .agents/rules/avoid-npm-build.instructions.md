@@ -1,7 +1,6 @@
 ---
-name: avoid-npm-build
+trigger: manual
 description: "Project rule: Ngăn agent chạy `npm run build` tự động trên máy phát triển vì có thể gây lag/giật VS Code"
-applyTo: "**"
 ---
 
 Mục đích

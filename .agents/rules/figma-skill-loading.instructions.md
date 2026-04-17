@@ -1,7 +1,8 @@
 ---
-name: "Figma Skill Loading"
+trigger: always_on
 description: "Use when tasks involve Figma URLs, node IDs, Figma MCP server setup, design-to-code implementation, or building UI from Figma. Require loading figma-related skills and following the Figma MCP workflow."
 ---
+
 # Figma Skill Loading
 
 - When a task involves Figma or the Figma MCP server, load and follow these skills before implementation:

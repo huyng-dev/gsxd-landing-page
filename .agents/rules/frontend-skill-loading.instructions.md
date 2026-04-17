@@ -1,8 +1,8 @@
 ---
-name: "Frontend Skill Loading"
+trigger: always_on
 description: "Use when generating or implementing UI in HTML, CSS, React, JSX, TSX, Vue, or Svelte, including landing pages, dashboards, and visual components. Require loading frontend-related skills before writing interface code."
-applyTo: "**/*.{html,jsx,tsx,vue,svelte}"
 ---
+
 # Frontend Skill Loading
 
 - When the task is to generate or implement UI in HTML, React, Vue, or Svelte, load and follow these skills before writing code:
