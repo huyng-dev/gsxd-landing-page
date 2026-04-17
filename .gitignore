@@ -34,7 +34,6 @@ yarn-error.log*
 # Added by CodebaseTracker
 _codebase/
 .github/
-.prompts/
 .vscode/
 .claude/
 auto_production.py
