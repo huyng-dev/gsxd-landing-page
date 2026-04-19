@@ -37,9 +37,9 @@
   >
     {{> components/header}}
 
-    <main class="flex-grow bg-background-secondary pb-20">
+    <main class="flex-grow bg-background-secondary pb-14 md:pb-20">
       <!-- Top Banner for Detail -->
-      <section class="relative w-full h-[180px] md:h-[210px] flex items-center justify-center overflow-hidden">
+      <section class="hidden md:flex relative w-full h-[180px] md:h-[210px] items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
           <img
             src="/assets/images/detail-banner.png"
@@ -66,25 +66,39 @@
       </section>
 
             <!-- Sub Breadcrumb -->
-      <div class="w-[85%] max-w-[1320px] mx-auto py-8">
+      <div class="hidden md:block w-[85%] max-w-[1320px] mx-auto py-8">
         {{> components/products/breadcrumb textClass="font-semibold text-primary/60 uppercase text-[14px] md:text-base" linkClass="hover:text-primary transition-colors" separatorClass="mx-1" parentHref="/products/gach-co-bat-trang/" parentLabel="Sản phẩm" currentClass="text-primary font-semibold pb-1" currentLabel="Gạch cổ Bát Tràng"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
       <!-- Product Detail Container -->
-      <section class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-6 xl:gap-8 pb-16 lg:pb-24 pt-4">
+      <section class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-10 lg:pb-24 pt-0 md:pt-4">
         <!-- Left: Images -->
-        <div class="flex flex-col gap-5 lg:col-span-3">
+        <div class="flex flex-col md:gap-5 lg:col-span-3">
           <!-- Main Image -->
-          <div class="w-full aspect-square shadow-lg relative overflow-hidden group">
+          <div class="w-full aspect-square bg-white md:shadow-lg relative overflow-hidden group">
             <img
               src="/assets/images/gach-bat-detail-1.png" 
               alt="Gạch bát 300x300x50"
               class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
             />
+          
+
+          
+
+                      <!-- Mobile Dots Pagination (Figma Layout) -->
+            <div class="md:hidden absolute bottom-[13px] left-1/2 -translate-x-1/2 w-[152px] h-[17px]">
+              <div class="absolute inset-0 bg-[#C76E00] opacity-10 rounded-[17px]"></div>
+              <div class="absolute w-[10px] h-[6px] left-[21px] top-[5px] bg-[#C76E00] rounded-full"></div>
+              <div class="absolute w-[6px] h-[6px] left-[45px] top-[5px] bg-white opacity-50 rounded-full"></div>
+              <div class="absolute w-[6px] h-[6px] left-[65px] top-[5px] bg-white opacity-50 rounded-full"></div>
+              <div class="absolute w-[6px] h-[6px] left-[85px] top-[5px] bg-white opacity-50 rounded-full"></div>
+              <div class="absolute w-[6px] h-[6px] left-[105px] top-[5px] bg-white opacity-50 rounded-full"></div>
+              <div class="absolute w-[6px] h-[6px] left-[125px] top-[5px] bg-white opacity-50 rounded-full"></div>
+            </div>
           </div>
           <!-- Thumbnails -->
-          <div class="flex gap-5 w-full mt-2">
+          <div class="hidden md:flex gap-5 w-full mt-2">
             <img src="/assets/images/gach-bat-02.jpg" class="flex-1 w-[88px] aspect-square cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></img>
             <img src="/assets/images/gach-bat-detail-2.png" class="flex-1 w-[88px] aspect-square cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></img>
             <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
@@ -95,50 +109,72 @@
           </div>
         </div>
 
+        
         <!-- Right: Info -->
-        <div class="flex flex-col lg:col-span-2">
-          <div class="flex items-center gap-4 mb-8 text-[16px]">
-            <span class="text-primary">Mã SP</span>
-            <span class="text-primary font-semibold">THC 100-GDS</span>
+        <div class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-6 md:pt-0">
+          
+          <!-- SKU -->
+          <div class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] order-2 md:order-1 mt-1 md:mt-0">
+            <span class="text-[#656663] md:text-primary font-light md:font-normal">Mã SP:</span>
+            <span class="text-[#656663] md:text-primary font-semibold">THC 100-GDS</span>
           </div>
 
-          <h2 class="text-xl md:text-2xl lg:text-[32px] font-semibold text-secondary uppercase !leading-normal mb-14 pb-1 tracking-tight">
+          <!-- Title -->
+          <h2
+            class="text-[20px] text-[#C76E00] md:text-2xl lg:text-[32px] font-semibold md:text-secondary uppercase leading-[30px] md:!leading-normal mb-0 md:mb-14 pb-0 md:pb-1 tracking-tight order-1 md:order-2"
+          >
             Gạch thẻ 300x100x30
           </h2>
 
-          <p class="text-2xl md:text-[32px] font-semibold text-primary mb-16">675.000 đ/m2</p>
+          <!-- Price -->
+          <p class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal order-3 mt-0.5 md:mt-0">
+            675.000 đ/m²
+          </p>
 
-          <hr class="border-t border-black/10 mb-8 w-full" />
+          <!-- Separator -->
+          <hr class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full order-4 hidden md:block" />
+          <hr class="border-t border-black/10 w-full order-4 md:hidden mb-4" />
 
-          <ul class="list-disc pl-5 space-y-4 mb-16 text-primary font-medium text-lg md:text-xl leading-relaxed">
+          <!-- Details List -->
+          <ul
+            class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed order-5"
+          >
             <li>Timeless beauty to be treasured</li>
             <li>High-quality and classic design, suitable for decoration</li>
             <li>Beginner friendly and improves intelligence</li>
           </ul>
 
           <!-- Actions -->
-          <div class="flex flex-wrap items-center gap-6 mb-16">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-[15px] md:mb-16 order-6 w-full">
             <!-- Quantity -->
-            <div class="flex items-center gap-4 text-primary">
-              <button class="w-6 h-6 flex items-center justify-center text-xl hover:text-secondary transition-colors focus:outline-none">
+            <div class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0">
+              <button
+                class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors"
+              >
                 -
               </button>
-              <div class="w-12 h-12 flex items-center justify-center border border-black/40 rounded-full text-base shadow-sm">1</div>
-              <button class="w-6 h-6 flex items-center justify-center text-xl hover:text-secondary transition-colors focus:outline-none">
+              <div
+                class="w-12 h-12 flex items-center justify-center rounded-full text-[16px] md:text-base font-normal shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:shadow-sm outline outline-1 outline-black/40 outline-offset-[-1px] md:outline-none md:border md:border-black/40 bg-transparent"
+              >
+                1
+              </div>
+              <button
+                class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors"
+              >
                 +
               </button>
             </div>
 
             <!-- Add to cart -->
             <button
-              class="bg-[#C16A00] hover:bg-secondary text-[#EFE4DE] px-8 md:px-12 py-4 font-semibold transition-colors shadow-md rounded-[2px] flex items-center justify-center text-sm"
+              class="w-full md:w-auto bg-[#C16A00] hover:bg-secondary text-[#EFE4DE] px-8 py-4 font-semibold md:transition-colors md:shadow-md rounded-[2px] flex items-center justify-center text-[14px] md:text-sm tracking-[0.28px] md:tracking-normal md:ml-4"
             >
               THÊM VÀO GIỎ HÀNG
             </button>
           </div>
 
           <!-- Contacts -->
-          <div class="flex flex-col gap-5 mt-2">
+          <div class="hidden md:flex flex-col gap-5 mt-2 order-7">
             <!-- Hotline -->
             <div class="flex items-center gap-5">
               <div
@@ -152,7 +188,9 @@
               </div>
               <div>
                 <p class="text-base text-secondary">Đặt hàng ngay</p>
-                <p class="text-secondary font-semibold text-lg md:text-xl">Hotline: 0966 55 8808</p>
+                <p class="text-secondary font-semibold text-lg md:text-xl">
+                  Hotline: 0966 55 8808
+                </p>
               </div>
             </div>
             <!-- Zalo -->
@@ -167,7 +205,9 @@
                 />
               </div>
               <div>
-                <p class="text-secondary font-semibold text-lg md:text-xl">Chat với chúng tôi</p>
+                <p class="text-secondary font-semibold text-lg md:text-xl">
+                  Chat với chúng tôi
+                </p>
               </div>
             </div>
           </div>
@@ -184,7 +224,7 @@
       {{> components/products/fabrication-process}}
       {{> components/products/journey-video hideTitle=true}}
       {{> components/products/trang-tri-process}}
-      <hr class="mb-16" />
+      <hr class="md:mb-16 mb-8" />
       {{> components/products/works-simple showNav=true}}
       {{> components/products/recommendations}}
       {{> components/products/faq2}}
