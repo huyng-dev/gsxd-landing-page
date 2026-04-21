@@ -54,7 +54,7 @@
   }
 
   /* Hide Swiper's default pagination if not used */
-  .swiper-pagination {
+  .swiper-pagination:not(.product-list-pagination):not(.fabrication-pagination):not(.projects-pagination) {
     display: none !important;
   }
 
@@ -81,18 +81,25 @@
     font-weight: bold;
     text-align: center;
   }
+
+  .spec-table th,
+  .spec-table td {
+    @apply py-[10px] md:py-4 text-center;
+  }
 }
 
 @layer utilities {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
+  @media (min-width: 768px) {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
 
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .scrollbar-hide {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .scrollbar-hide {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
   }
 
   .catalog-text-vertical {

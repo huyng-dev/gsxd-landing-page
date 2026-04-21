@@ -76,8 +76,12 @@
           font-size: 14px;
           font-weight: 600;
           line-height: 20px;
-          text-transform: none;
+          text-transform: lowercase;
           word-wrap: break-word;
+        }
+
+        .page-ngoi-hai-van-mieu .ngoi-hai-product-grid-scope h3::first-letter {
+          text-transform: uppercase;
         }
 
         .page-ngoi-hai-van-mieu .ngoi-hai-product-grid-scope p.text-gray-500 {
@@ -369,8 +373,7 @@
     data-page="products"
     class="page-ngoi-hai-van-mieu min-h-screen flex flex-col bg-neutral-1"
   >
-    {{> components/header}}
-    {{> components/catalog-button}}
+    {{> components/header}} {{> components/catalog-button}}
 
     <main class="flex-grow bg-background-secondary">
       <!-- Top Banner -->
@@ -584,13 +587,16 @@
 
       <!-- Breadcrumb -->
       <div
-        class="ngoi-hai-breadcrumb-scope w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-4 relative z-10"
+        class="ngoi-hai-breadcrumb-scope w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
       >
-        {{> components/products/breadcrumb textClass="font-bold text-primary/60 uppercase text-xs md:text-base" linkClass="hover:text-secondary transition-colors" separatorClass="mx-1" currentClass="text-primary font-semibold border-primary" currentLabel="Ngói Hài Văn Miếu"}}
+        {{> components/products/breadcrumb currentLabel="Ngói Hài Văn Miếu"}}
       </div>
 
       <div class="ngoi-hai-product-grid-scope">
-        {{> components/products/product-grid category="ngoi-hai-van-mieu" link1="ngoi-hai-co-nau-den.html" name1="Ngói hài cổ nâu đen" image1="ngoi-hai-detail.png" link2="ngoi-van-mieu-ghi-anh-kim.html" name2="Ngói văn miếu ghi ánh kim" image2="ngoi-van-mieu-detail.png"}}
+        {{> components/products/product-grid category="ngoi-hai-van-mieu"
+        link1="ngoi-hai-co-nau-den.html" name1="Ngói hài cổ nâu đen"
+        image1="ngoi-hai-detail.png" link2="ngoi-van-mieu-ghi-anh-kim.html"
+        name2="Ngói văn miếu ghi ánh kim" image2="ngoi-van-mieu-detail.png"}}
       </div>
 
       <!-- Difference Section -->
@@ -618,7 +624,7 @@
           <img
             src="/assets/images/khac-biet-1.png"
             alt="Khác biệt"
-            class="md:hidden w-full h-full "
+            class="md:hidden w-full h-full"
           />
           <div class="absolute inset-x-0 top-0 md:h-24"></div>
         </div>
@@ -655,7 +661,7 @@
 
               <!-- Item 2 -->
               <div
-                class="text-left md:text-center pr-12 md:pr-0 md:pl-16 lg:pl-[20%]"
+                class="ps-[27px] md:ps-0 text-left md:text-center pr-12 md:pr-0 md:pl-16 lg:pl-[20%]"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -707,9 +713,7 @@
       <div class="ngoi-hai-journey-scope">
         {{> components/products/journey-video}}
       </div>
-      <div class="ngoi-hai-works-scope">
-        {{> components/products/works}}
-      </div>
+      <div class="ngoi-hai-works-scope">{{> components/products/works}}</div>
 
       <!-- FAQ Section -->
       <section
@@ -734,9 +738,7 @@
       </section>
     </main>
 
-    <div class="ngoi-hai-footer-scope">
-      {{> components/footer}}
-    </div>
+    <div class="ngoi-hai-footer-scope">{{> components/footer}}</div>
 
     <script type="module" src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>

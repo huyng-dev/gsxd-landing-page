@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,19 +15,192 @@
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      @media (max-width: 767.98px) {
+        .page-lan-can-gom-su .lan-can-category-title {
+          color: #c76e00;
+          font-size: 24px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 600;
+          text-transform: uppercase;
+          line-height: 32px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su
+          h2[class*="text-[20px] md:text-3xl font-semibold text-secondary uppercase"]:not(
+            .lan-can-category-title
+          ) {
+          color: #c76e00;
+          font-size: 20px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 600;
+          text-transform: uppercase;
+          line-height: 32px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su .lan-can-brush-title {
+          color: #fff;
+          font-size: 24px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          line-height: 36px;
+          letter-spacing: 1.2px;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su
+          h3[class*="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide"] {
+          color: #212121;
+          font-size: 14px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          line-height: 21px;
+          letter-spacing: 0.35px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su
+          p[class*="text-gray-500 text-[12px] lg:text-[13px] mb-1"] {
+          color: #6b7280;
+          font-size: 12px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 400;
+          line-height: 18px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su
+          p[class*="font-bold text-[#C47526] text-[13px] lg:text-[14px]"] {
+          color: #c47526;
+          font-size: 13px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 700;
+          line-height: 19.5px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su .product-card .product-overlay span {
+          color: #fff;
+          font-size: 14px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 400;
+          text-transform: uppercase;
+          line-height: 21px;
+          letter-spacing: 1px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su #slide-title {
+          color: #000;
+          font-size: 16px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          line-height: 24px;
+          letter-spacing: 0.4px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su #slide-meta,
+        .page-lan-can-gom-su #slide-meta p,
+        .page-lan-can-gom-su #slide-meta span {
+          color: #000;
+          font-size: 15px;
+          font-family: "Archivo", sans-serif;
+          line-height: 22.5px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su #slide-meta .font-bold {
+          font-weight: 700;
+        }
+
+        .page-lan-can-gom-su #slide-meta span {
+          font-weight: 400;
+        }
+
+        .page-lan-can-gom-su #slide-link {
+          color: #000;
+          font-size: 13px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 700;
+          line-height: 19.5px;
+          letter-spacing: 0.65px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su [data-faq-component] h2 {
+          color: #c76e00;
+          font-size: 20px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 600;
+          text-transform: uppercase;
+          line-height: 36px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su
+          [data-faq-component]
+          .faq-button
+          > span:first-child {
+          color: #2e2f2a;
+          font-size: 14px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 700;
+          line-height: 21px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su [data-faq-component] .faq-content {
+          color: #4b5563;
+          font-size: 14px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 400;
+          line-height: 22.75px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su [data-faq-component] .faq-content .font-bold {
+          color: #2e2f2a;
+          font-weight: 700;
+        }
+
+        .page-lan-can-gom-su [data-faq-component] .faq-item .faq-content a {
+          color: #2e2f2a;
+          font-size: 14px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 700;
+          line-height: 22.75px;
+          overflow-wrap: break-word;
+        }
+
+        .page-lan-can-gom-su [data-faq-component] .mt-8 > a {
+          color: #2e2f2a;
+          font-size: 14px;
+          font-family: "Archivo", sans-serif;
+          font-weight: 700;
+          line-height: 21px;
+          overflow-wrap: break-word;
+        }
+      }
+    </style>
     {{{stack "styles"}}}
   </head>
   <body
     data-page="products"
-    class="min-h-screen flex flex-col bg-background-secondary"
+    class="page-lan-can-gom-su min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}}
-    {{> components/catalog-button}}
+    {{> components/header}} {{> components/catalog-button}}
 
     <main class="flex-grow">
       <!-- Banner Section -->
       <section
-        class="relative h-[70vh] min-h-[500px] max-h-[740px] lg:h-[663px] flex items-center justify-center text-neutral-1 overflow-hidden"
+        class="relative h-[320px] md:h-[70vh] md:min-h-[500px] md:max-h-[740px] lg:h-[663px] flex items-center justify-center text-neutral-1 overflow-hidden"
       >
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
@@ -63,26 +236,26 @@
           data-aos-duration="1000"
         >
           <h1
-            class="text-xl md:text-2xl font-semibold mb-4 uppercase tracking-wide text-neutral-1"
+            class="text-[20px] leading-[28px] tracking-[0.5px] font-semibold mb-[1px] md:text-2xl md:mb-4 md:tracking-wide uppercase text-neutral-1"
           >
             GỐM SỨ THANH HẢI
           </h1>
           <h2
-            class="text-[32px] md:text-[48px] font-archivo font-extrabold uppercase leading-[44px] md:leading-[65px] max-w-4xl text-neutral-1"
+            class="text-[32px] leading-[44px] font-archivo font-extrabold uppercase md:text-[48px] md:leading-[65px] max-w-4xl text-neutral-1"
           >
             LAN CAN GỐM SỨ
           </h2>
         </div>
       </section>
       <!-- Danh Mục Sản Phẩm Section 1 -->
-      <section class="w-full pb-16 pt-8">
+      <section class="w-full md:pb-16 pt-[30px]">
         <!-- Section Title -->
         <div
-          class="flex items-center justify-center mt-8 mb-16"
+          class="flex items-center justify-center mt-0 mb-[30px] lg:mt-8 lg:mb-16"
           data-aos="fade-up"
         >
           <h2
-            class="text-[20px] md:text-3xl font-semibold text-secondary uppercase"
+            class="lan-can-category-title text-[20px] md:text-3xl font-semibold text-secondary uppercase"
           >
             Danh Mục Sản Phẩm
           </h2>
@@ -103,7 +276,7 @@
             <div class="w-full lg:w-[55%] flex flex-col justify-between">
               <!-- Products Grid -->
               <div
-                class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10"
+                class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-8 lg:gap-y-12 mb-10"
               >
                 <!-- Product Card 1 -->
                 <div
@@ -240,7 +413,7 @@
 
               <!-- Pagination -->
               <div
-                class="flex items-center justify-center gap-5 mt-10 lg:mt-auto"
+                class="flex items-center justify-center gap-5 md:mt-10 lg:mt-auto"
               >
                 <button
                   class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
@@ -303,7 +476,7 @@
                       class="w-full drop-shadow-xl opacity-90"
                     />
                     <span
-                      class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
+                      class="lan-can-brush-title absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
                       style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)"
                     >
                       LAN CAN GIỌT LỆ
@@ -317,19 +490,16 @@
       </section>
 
       <!-- Danh Mục Sản Phẩm Section 2 -->
-      <section class="w-full pb-16">
-        <!-- Main Container -->
+      <section class="w-full pb-[30px] md:pb-16">
         <div
           class="bg-[#EBCEC1] opacity-80 p-6 lg:p-10"
           style="margin-right: max(0px, calc((100% - 1320px) / 2))"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <!-- Featured Image & Brush Title -->
           <div
             class="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-[1320px] ml-auto"
           >
-            <!-- Left Column: Featured Image & Brush Title -->
             <div
               class="w-full lg:w-[45%] ml-0 lg:ml-[10%] flex flex-col justify-stretch"
             >
@@ -342,7 +512,6 @@
                   class="absolute inset-0 w-full h-full object-cover"
                 />
 
-                <!-- Brush Title Overlay inside image container -->
                 <div
                   class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300"
                 >
@@ -353,7 +522,7 @@
                       class="w-full drop-shadow-xl opacity-90"
                     />
                     <span
-                      class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
+                      class="lan-can-brush-title absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
                       style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)"
                     >
                       LAN CAN BẦU
@@ -362,13 +531,10 @@
                 </div>
               </div>
             </div>
-            <!-- Right Column: Products Grid & Pagination -->
             <div class="w-full lg:w-[55%] flex flex-col justify-between">
-              <!-- Products Grid -->
               <div
-                class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10"
+                class="grid grid-cols-2 gap-x-4 md:gap-x-8 lg:gap-x-16 gap-y-6 md:gap-y-10 lg:gap-y-12 mb-6 md:mb-10"
               >
-                <!-- Product Card 1 -->
                 <div
                   class="flex flex-col group cursor-pointer"
                   onclick="window.location.href = '#'"
@@ -401,7 +567,6 @@
                   </p>
                 </div>
 
-                <!-- Product Card 2 -->
                 <div
                   class="flex flex-col group cursor-pointer"
                   onclick="window.location.href = '#'"
@@ -434,7 +599,6 @@
                   </p>
                 </div>
 
-                <!-- Product Card 3 -->
                 <div
                   class="flex flex-col group cursor-pointer"
                   onclick="window.location.href = '#'"
@@ -467,7 +631,6 @@
                   </p>
                 </div>
 
-                <!-- Product Card 4 -->
                 <div
                   class="flex flex-col group cursor-pointer"
                   onclick="window.location.href = '#'"
@@ -501,9 +664,8 @@
                 </div>
               </div>
 
-              <!-- Pagination -->
               <div
-                class="flex items-center justify-center gap-5 mt-10 lg:mt-auto"
+                class="flex items-center justify-center gap-5 mt-0 md:mt-10 lg:mt-auto"
               >
                 <button
                   class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
@@ -544,7 +706,6 @@
           </div>
         </div>
       </section>
-
       <!-- Product List Section -->
       <section class="relative mx-auto pb-10 lg:pb-16 overflow-visible">
         <div class="relative w-[85%] max-w-[1320px] mx-auto z-10">
@@ -651,11 +812,8 @@
         </div>
       </section>
 
-      {{> components/products/outstanding-value}}
-
-      {{> components/products/journey-video}}
-
-      {{> components/products/works}}
+      {{> components/products/outstanding-value}} {{>
+      components/products/journey-video}} {{> components/products/works}}
 
       <!-- FAQ Section -->
       <section

@@ -85,7 +85,20 @@
           font-weight: 600;
           line-height: 20px;
           overflow-wrap: break-word;
-          text-transform: none;
+          text-transform: lowercase;
+        }
+
+        .page-phu-kien-ngoi
+          main
+          > section:nth-of-type(2)
+          .product-card
+          + h3::first-letter,
+        .page-phu-kien-ngoi
+          main
+          > section:nth-of-type(3)
+          .product-card
+          + h3::first-letter {
+          text-transform: uppercase;
         }
 
         .page-phu-kien-ngoi
@@ -137,7 +150,15 @@
           font-weight: 600;
           line-height: 20px;
           overflow-wrap: break-word;
-          text-transform: none;
+          text-transform: lowercase;
+        }
+
+        .page-phu-kien-ngoi
+          main
+          > section:nth-of-type(4)
+          .product-card
+          + h3::first-letter {
+          text-transform: uppercase;
         }
 
         .page-phu-kien-ngoi
@@ -256,8 +277,7 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary page-phu-kien-ngoi"
   >
-    {{> components/header}}
-    {{> components/catalog-button}}
+    {{> components/header}} {{> components/catalog-button}}
 
     <main class="flex-grow bg-background-secondary overflow-hidden">
       <!-- Banner Section -->
@@ -299,9 +319,8 @@
         </div>
       </section>
 
-      {{> products/phu-kien-ngoi/partials/category-section-1}}
-
-      {{> products/phu-kien-ngoi/partials/category-section-2}}
+      {{> products/phu-kien-ngoi/partials/category-section-1}} {{>
+      products/phu-kien-ngoi/partials/category-section-2}}
 
       <!-- Danh Mục Sản Phẩm Section 3 -->
       <section class="relative mx-auto pb-10 lg:pb-16 overflow-visible">
@@ -681,6 +700,15 @@
                   />
                 </a>
               </div>
+            </div>
+
+            <div class="mt-4 md:mt-6 flex justify-end">
+              <a
+                href="/projects/"
+                class="font-archivo text-sm md:text-base font-medium uppercase tracking-[0.08em] text-secondary transition-opacity duration-300 hover:opacity-70"
+              >
+                Xem thêm
+              </a>
             </div>
           </div>
         </div>

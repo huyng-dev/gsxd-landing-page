@@ -16,12 +16,18 @@
       .size-options-scroll {
         overflow-x: scroll;
         overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
         scrollbar-gutter: stable both-edges;
         scrollbar-width: auto;
         scrollbar-color: #c76e00 #fff1e3;
         padding-bottom: 12px;
         scroll-behavior: smooth;
+      }
+
+      @media (max-width: 767.98px) {
+        .size-options-scroll {
+          padding-bottom: 16px;
+          -webkit-overflow-scrolling: auto;
+        }
       }
 
       .size-options-scroll::-webkit-scrollbar {
@@ -59,8 +65,7 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}}
-    {{> components/catalog-button}}
+    {{> components/header}} {{> components/catalog-button}}
 
     <main class="flex-grow bg-background-secondary">
       <!-- Top Banner -->
@@ -156,7 +161,7 @@
       <div
         class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
       >
-        {{> components/products/breadcrumb textClass="font-bold text-primary/60 uppercase text-xs md:text-base" linkClass="hover:text-secondary transition-colors" separatorClass="mx-1" currentClass="text-primary font-semibold border-primary" currentLabel="Ngói Âm Dương"}}
+        {{> components/products/breadcrumb currentLabel="Ngói Âm Dương"}}
       </div>
 
       {{> components/products/product-grid category="ngoi-am-duong"}}
@@ -202,9 +207,8 @@
       </section>
     </main>
 
-    {{> components/products/outstanding-value}}
-    {{> components/products/journey-video}}
-    {{> components/products/works}}
+    {{> components/products/outstanding-value}} {{>
+    components/products/journey-video}} {{> components/products/works}}
 
     <!-- FAQ Section -->
     <section

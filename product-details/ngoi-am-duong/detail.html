@@ -63,8 +63,11 @@
       </section>
 
       <!-- Sub Breadcrumb -->
-      <div class="w-[85%] max-w-[1320px] mx-auto py-8">
-        {{> components/products/breadcrumb textClass="font-semibold text-primary/60 uppercase text-[14px] md:text-base" linkClass="hover:text-primary transition-colors" separatorClass="mx-1" parentHref="/products/ngoi-am-duong/" parentLabel="Sản phẩm" currentClass="text-primary font-semibold pb-1" currentLabel="NGÓI ÂM DƯƠNG"}}
+      <div
+        class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
+      >
+        {{> components/products/breadcrumb parentHref="/products/ngoi-am-duong/"
+        parentLabel="Sản phẩm" currentLabel="NGÓI ÂM DƯƠNG"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
@@ -357,12 +360,10 @@
         </div>
       </section>
 
-      {{> components/products/weight-calculator}}
-      {{> components/products/applications}}
-      {{> components/products/installation-guide}}
-      {{> components/products/works}}
-      {{> components/products/recommendations}}
-      {{> components/products/faq2}}
+      {{> components/products/weight-calculator}} {{>
+      components/products/applications}} {{>
+      components/products/installation-guide}} {{> components/products/works}}
+      {{> components/products/recommendations}} {{> components/products/faq2}}
     </main>
 
     {{> components/footer hideNewsletter=true}}

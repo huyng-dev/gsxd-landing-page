@@ -1,6 +1,7 @@
 <!-- Giá trị vượt trội Section -->
 <section
   class="w-[85%] max-w-[1320px] mx-auto md:pb-20 pt-[30px] md:pt-12 gach-hoa-value-section"
+  data-product-section
 >
   <!-- Section Title -->
   <div class="text-center mb-[30px] md:mb-20" data-aos="fade-up">
@@ -13,11 +14,15 @@
 
   <div
     class="gach-hoa-value-slider flex md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none touch-pan-x"
+    data-product-carousel
     data-aos="fade-up"
     data-aos-delay="200"
   >
     <!-- Column 1 -->
-    <div class="flex flex-col box-border min-w-full md:min-w-0 snap-start">
+    <div
+      class="flex flex-col box-border min-w-full md:min-w-0 snap-start"
+      data-product-slide
+    >
       <div class="w-full flex justify-center mb-10 lg:mb-36">
         <div class="relative w-full aspect-[10/9]">
           <!-- Blue Background -->
@@ -57,7 +62,10 @@
     </div>
 
     <!-- Column 2 -->
-    <div class="flex flex-col box-border min-w-full md:min-w-0 snap-start">
+    <div
+      class="flex flex-col box-border min-w-full md:min-w-0 snap-start"
+      data-product-slide
+    >
       <div
         class="text-center mb-12 md:mb-6 px-2 flex-grow flex flex-col justify-start"
       >
@@ -101,7 +109,10 @@
     </div>
 
     <!-- Column 3 -->
-    <div class="flex flex-col box-border min-w-full md:min-w-0 snap-start">
+    <div
+      class="flex flex-col box-border min-w-full md:min-w-0 snap-start"
+      data-product-slide
+    >
       <div class="w-full flex justify-center mb-10 lg:mb-36">
         <div class="relative w-full aspect-[10/9]">
           <!-- Brown Background -->
@@ -139,5 +150,32 @@
         </p>
       </div>
     </div>
+  </div>
+
+  <div
+    class="mt-6 flex items-center justify-center gap-2 md:hidden"
+    aria-label="Giá trị vượt trội mobile pagination"
+  >
+    <button
+      type="button"
+      class="product-section-dot h-1 w-1 rounded-full bg-secondary"
+      data-product-dot="0"
+      aria-label="Slide 1"
+      aria-current="true"
+    ></button>
+    <button
+      type="button"
+      class="product-section-dot h-1 w-1 rounded-full bg-[#656663]"
+      data-product-dot="1"
+      aria-label="Slide 2"
+      aria-current="false"
+    ></button>
+    <button
+      type="button"
+      class="product-section-dot h-1 w-1 rounded-full bg-[#656663]"
+      data-product-dot="2"
+      aria-label="Slide 3"
+      aria-current="false"
+    ></button>
   </div>
 </section>

@@ -1,0 +1,60 @@
+<div {{#if wrapperClass}}class="{{wrapperClass}}"{{/if}}>
+  <h3
+    class="text-[24px] leading-[36px] tracking-[0.75px] md:text-3xl md:leading-tight md:tracking-wide lg:text-4xl font-bold text-secondary mb-[10px] md:mb-9 {{titleClass}}"
+  >
+    {{title}}
+  </h3>
+  <p
+    class="font-italianno text-[28px] lg:text-[36px] text-primary mb-[15px] md:mb-12 leading-none"
+  >
+    {{subtitle}}
+  </p>
+
+  <!-- Color Swatches -->
+  <div class="flex gap-7 mb-[20px] md:mb-12 items-center justify-center">
+    <div
+      class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#A98467] rounded-2xl shadow-sm"
+    ></div>
+    <div
+      class="w-[70px] h-[90px] md:w-[134px] md:h-[144px] bg-[#B22222] rounded-2xl shadow-sm"
+    ></div>
+    <div
+      class="w-[70px] h-[90px] md:w-[120px] md:h-[129px] bg-[#5D5FEF] rounded-2xl shadow-sm"
+    ></div>
+  </div>
+
+  <p
+    class="text-[12px] leading-[21.13px] md:text-[15px] md:leading-relaxed text-primary italic font-thin mb-[15px] md:mb-12 max-w-2xl"
+  >
+    Sự không đồng màu này không phải là lỗi kỹ thuật, mà chính là
+    "chứng chỉ" cho nghệ thuật chế tác thủ công. Chính sự biến thiên
+    của lửa trong lò bầu, lò ếch ngày xưa đã tạo nên vẻ đẹp "vạn
+    biến" mà các dòng gạch công nghiệp hiện đại khó lòng mô phỏng
+    được.
+  </p>
+
+  <!-- Spec Table -->
+  <table class="w-full text-primary spec-table">
+    <thead>
+      <tr
+        class="border-b border-black/10 text-[14px] leading-[24px] md:text-[20px] md:leading-normal font-bold"
+      >
+        <th class="font-bold">
+          Kích thước<br />(mm)
+        </th>
+        <th class="font-bold">
+          Định mức<br />(viên/m2)
+        </th>
+        <th class="font-bold">
+          Cân nặng<br />(kg)
+        </th>
+        <th class="py-[10px] md:py-4 text-center font-bold">Giá<br />(VND)</th>
+      </tr>
+    </thead>
+    <tbody
+      class="text-[14px] leading-[24px] md:text-[20px] md:leading-normal text-primary font-light"
+    >
+      {{> @partial-block}}
+    </tbody>
+  </table>
+</div>

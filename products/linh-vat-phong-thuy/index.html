@@ -22,13 +22,12 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}}
-    {{> components/catalog-button}}
+    {{> components/header}} {{> components/catalog-button}}
 
     <main class="flex-grow">
       <!-- Banner Section -->
       <section
-        class="relative w-full h-[600px] md:h-[720px] lg:h-[840px] overflow-hidden flex items-start"
+        class="relative w-full h-[530px] md:h-[720px] lg:h-[840px] overflow-hidden flex items-start"
       >
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
@@ -46,10 +45,10 @@
           <!-- Main Title - Positioned more towards top-right/center like the image -->
           <div
             data-aos="fade-down"
-            class="mt-12 md:mt-16 self-start lg:translate-x-32 ml-[20%]"
+            class="mt-[25px] md:mt-16 self-center md:self-start lg:translate-x-32 md:ml-[20%] w-full md:w-auto"
           >
             <h1
-              class="font-lavishly text-[48px] md:text-[64px] lg:text-[80px] text-white leading-tight drop-shadow-2xl"
+              class="font-lavishly text-[48px] md:text-[64px] lg:text-[80px] text-white leading-[60px] md:leading-tight drop-shadow-2xl text-center md:text-left"
             >
               Nghê thiêng trấn thổ
             </h1>
@@ -58,10 +57,10 @@
           <!-- Poem - Positioned on the left like the image -->
           <div
             data-aos="fade-right"
-            class="mt-12 md:mt-16 max-w-2xl text-white self-start text-center -ml-12"
+            class="mt-[127px] md:mt-16 max-w-2xl text-white self-center md:self-start text-center md:-ml-12 px-4 md:px-0 w-full"
           >
             <p
-              class="font-ephesis text-2xl md:text-3xl lg:text-[36px] md:leading-[1.2] lg:leading-[1.4] tracking-wider drop-shadow-lg opacity-90"
+              class="font-ephesis text-[24px] md:text-3xl lg:text-[36px] leading-[32px] md:leading-[1.2] lg:leading-[1.4] tracking-[1.2px] md:tracking-wider drop-shadow-lg opacity-90"
             >
               Oai phong bệ vệ trước sân đình
               <br />
@@ -83,10 +82,11 @@
         </div>
       </section>
 
-      <div class="w-[85%] max-w-[1320px] mx-auto pt-6 md:pt-16">
+      <div class="w-[85%] max-w-[1320px] mx-auto">
         <!-- Breadcrumb -->
-        <div class="pb-3 md:pb-6 relative z-10">
-          {{> components/products/breadcrumb textClass="font-bold text-primary/60 uppercase text-xs md:text-base" linkClass="hover:text-secondary transition-colors" separatorClass="mx-1" currentClass="text-primary font-semibold border-primary" currentLabel="Linh Vật Phong Thủy"}}
+        <div class="pt-6 pb-3 md:pb-6 md:pt-8 relative z-10">
+          {{> components/products/breadcrumb currentLabel="Linh Vật Phong
+          Thủy"}}
         </div>
 
         <hr class="border-t border-black/10 mb-4 w-full" />
@@ -94,7 +94,7 @@
         <!-- Product Grid Section -->
         <section class="pb-8" data-aos="fade-up">
           <!-- Filter Button -->
-          <div class="mb-10 block">
+          <div class="mb-[20px] md:mb-10 block">
             <button
               class="flex items-center gap-3 text-textPrimary hover:text-secondary transition-colors font-bold uppercase tracking-[0.05em] text-[13px]"
             >
@@ -120,12 +120,14 @@
           </div>
 
           <!-- Nghê Intro Section -->
-          <section class="mb-20 md:mb-24 relative" data-aos="fade-up">
+          <section class="mb-[50px] md:mb-24 relative" data-aos="fade-up">
             <div class="flex flex-col md:flex-row items-center">
               <!-- Image Container -->
-              <div class="w-full md:w-[68%] z-0">
+              <div
+                class="w-full h-full max-h-[438px] md:max-h-full md:w-[68%] z-0"
+              >
                 <div
-                  class="aspect-[5/6] md:aspect-auto overflow-hidden rounded-sm shadow-xl"
+                  class="h-full md:aspect-auto overflow-hidden rounded-sm shadow-xl"
                 >
                   <img
                     src="/assets/images/nghe.png"
@@ -157,7 +159,7 @@
             </div>
           </section>
 
-          {{> components/products/product-grid-2x4 category="linh-vat-phong-thuy"}}
+          {{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
 
           <!-- Phượng Intro Section -->
           <section class="mt-8 mb-20 relative" data-aos="fade-up">
@@ -196,7 +198,8 @@
             </div>
           </section>
 
-          {{> components/products/product-grid-1x4 category="linh-vat-phong-thuy"}}
+          {{>
+          products/linh-vat-phong-thuy/partials/linh-vat-collection-products}}
 
           <!-- Đầu Rồng Intro Section -->
           <section class="mt-8 mb-20 relative" data-aos="fade-up">
@@ -238,7 +241,8 @@
             </div>
           </section>
 
-          {{> components/products/product-grid-1x4 category="linh-vat-phong-thuy"}}
+          {{>
+          products/linh-vat-phong-thuy/partials/linh-vat-collection-products}}
         </section>
       </div>
       <!-- Product Grid Section -->
@@ -427,9 +431,9 @@
         </div>
       </section>
 
-      {{> components/products/fabrication-process}}
-      {{> components/products/journey-video hideTitle=true}}
-      {{> components/products/recommendations}}
+      {{> components/products/fabrication-process}} {{>
+      components/products/journey-video hideTitle=true}} {{>
+      components/products/recommendations}}
 
       <!-- FAQ Section -->
       <section

@@ -63,8 +63,12 @@
       </section>
 
       <!-- Sub Breadcrumb -->
-      <div class="w-[85%] max-w-[1320px] mx-auto py-8">
-        {{> components/products/breadcrumb textClass="font-semibold text-primary/60 uppercase text-[14px] md:text-base" linkClass="hover:text-primary transition-colors" separatorClass="mx-1" parentHref="/products/gach-trang-tri/" parentLabel="Sản phẩm" currentClass="text-primary font-semibold pb-1" currentLabel="Gạch Trang Trí"}}
+      <div
+        class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
+      >
+        {{> components/products/breadcrumb
+        parentHref="/products/gach-trang-tri/" parentLabel="Sản phẩm"
+        currentLabel="Gạch Trang Trí"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
@@ -208,14 +212,15 @@
         </div>
       </section>
 
-      {{> components/products/quantity-calculator image="/assets/images/gtt-size.png"}}
-      {{> components/products/fabrication-process}}
-      {{> components/products/journey-video hideTitle=true}}
-      {{> components/products/trang-tri-process}}
+      {{> components/products/quantity-calculator
+      image="/assets/images/gtt-size.png"}} {{>
+      components/products/fabrication-process}} {{>
+      components/products/journey-video hideTitle=true}} {{>
+      components/products/trang-tri-process}}
       <hr class="mb-16" />
-      {{> components/products/works-simple showNav=true}}
-      {{> components/products/recommendations showDecor=true}}
-      {{> components/products/faq2}}
+      {{> components/products/works-simple showNav=true}} {{>
+      components/products/recommendations showDecor=true}} {{>
+      components/products/faq2}}
     </main>
 
     {{> components/footer hideNewsletter=true}}

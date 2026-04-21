@@ -22,3 +22,4 @@ Vui lòng tuân thủ nghiêm ngặt các quy tắc sau khi phân tích:
 
 Đầu vào của tôi: Ảnh của component
 Đầu ra mong muốn: Phân tích layout chi tiết theo cấu trúc trên.
+

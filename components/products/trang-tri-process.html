@@ -7,30 +7,66 @@
   <div class="w-full mb-[10px] md:mb-10">
     <div class="flex flex-col w-full">
       <h2
-        class="text-secondary font-italianno text-[45px] md:text-[60px] leading-none text-left drop-shadow-sm"
+        class="text-nowrap text-secondary font-italianno text-[28px] md:text-[60px] leading-[45px] md:leading-none text-left drop-shadow-sm mt-[25px] md:mt-auto"
       >
         Cùng chúng tôi hiện thực hóa mẫu gạch trong mơ...
       </h2>
       <h2
-        class="text-secondary font-italianno text-[45px] md:text-[60px] leading-none text-right mt-2 drop-shadow-sm"
+        class="text-secondary font-italianno text-[28px] md:text-[60px] leading-[45px] md:leading-none text-right mt-2 drop-shadow-sm"
       >
         Yêu cầu của bạn là gì?
       </h2>
     </div>
   </div>
 
+  {{#push "styles"}}
+  <style>
+    @media (max-width: 767px) {
+      .process-mobile-scroll {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scrollbar-gutter: stable both-edges;
+        scrollbar-width: auto;
+        scrollbar-color: #c76e00 #fff1e3;
+        padding-bottom: 16px;
+        -webkit-overflow-scrolling: auto;
+        scroll-behavior: smooth;
+      }
+
+      .process-mobile-scroll::-webkit-scrollbar {
+        height: 12px;
+      }
+
+      .process-mobile-scroll::-webkit-scrollbar-track {
+        background: linear-gradient(180deg, #fff7ee 0%, #fff1e3 100%);
+        border-radius: 9999px;
+      }
+
+      .process-mobile-scroll::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #fdba74 0%, #c76e00 100%);
+        border-radius: 9999px;
+        border: 3px solid #fff1e3;
+      }
+    }
+  </style>
+  {{/push}}
+
   <!-- Image Process -->
-  <div class="w-full flex justify-center mb-[15px] md:mb-6">
+  <div
+    class="w-full flex md:justify-center mb-[15px] md:mb-6 process-mobile-scroll"
+  >
     <img
       src="/assets/images/process.png"
       alt="Quy trình chế tác gạch"
-      class="w-full h-auto object-contain"
+      class="h-auto object-contain w-[200%] max-w-none md:w-full md:max-w-[100%]"
     />
   </div>
 
   <!-- Note Text -->
   <div class="w-full">
-    <p class="text-base md:text-xl italic text-primary font-thin">
+    <p
+      class="text-[10px] leading-[18px] md:text-xl md:leading-normal italic text-primary font-thin"
+    >
       * Để đảm bảo sự hoàn mỹ: Quá trình chế tác mẫu có tính phí và thời gian
       thực hiện tùy thuộc vào độ tinh xảo của sản phẩm
     </p>
@@ -39,18 +75,85 @@
 
 <!-- 2 Images Section -->
 <section class="w-full max-w-[1920px] mx-auto">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6">
+  <div class="trang-tri-swiper-mobile md:hidden">
+    <div class="swiper trang-tri-two-image-swiper overflow-hidden">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="/assets/images/trang-tri-01.png"
+            alt="Gạch Trang Trí 1"
+            class="w-full h-auto object-contain shadow-lg bg-white"
+            loading="lazy"
+            decoding="async"
+            data-aos="fade-up"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="/assets/images/trang-tri-02.png"
+            alt="Gạch Trang Trí 2"
+            class="w-full h-auto object-contain shadow-lg bg-white"
+            loading="lazy"
+            decoding="async"
+            data-aos="fade-up"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden md:grid md:grid-cols-1 md:gap-8 lg:grid-cols-2 lg:gap-6">
     <img
       src="/assets/images/trang-tri-01.png"
       alt="Gạch Trang Trí 1"
       class="w-full h-auto object-contain shadow-lg bg-white"
+      loading="lazy"
+      decoding="async"
       data-aos="fade-up"
     />
     <img
       src="/assets/images/trang-tri-02.png"
       alt="Gạch Trang Trí 2"
-      class="hidden md:block w-full h-auto object-contain shadow-lg bg-white"
+      class="w-full h-auto object-contain shadow-lg bg-white"
+      loading="lazy"
+      decoding="async"
       data-aos="fade-up"
     />
   </div>
 </section>
+
+{{#push "scripts"}}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof Swiper === "undefined") return;
+
+    var sliderSections = document.querySelectorAll(".trang-tri-swiper-mobile");
+    if (!sliderSections.length) return;
+
+    function syncTrangTriMobileSwiper() {
+      var isMobile = window.innerWidth < 768;
+
+      sliderSections.forEach(function (section) {
+        var sliderEl = section.querySelector(".trang-tri-two-image-swiper");
+        if (!sliderEl) return;
+
+        if (isMobile && !sliderEl.swiper) {
+          new Swiper(sliderEl, {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed: 480,
+            grabCursor: true,
+            watchOverflow: true,
+            resistanceRatio: 0.85,
+          });
+        } else if (!isMobile && sliderEl.swiper) {
+          sliderEl.swiper.destroy(true, true);
+        }
+      });
+    }
+
+    syncTrangTriMobileSwiper();
+    window.addEventListener("resize", syncTrangTriMobileSwiper);
+  });
+</script>
+{{/push}}

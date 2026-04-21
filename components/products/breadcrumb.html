@@ -1,17 +1,13 @@
-<p class="{{textClass}}">
-  <a
-    href="/"
-    class="{{linkClass}}"
-    >Trang chủ</a
-  >
-  <span class="{{separatorClass}}">/</span>
+<p class="font-bold text-primary/60 uppercase text-xs md:text-base">
+  <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
+  <span class="mx-1">/</span>
   {{#if parentLabel}}
-    <a
-      href="{{parentHref}}"
-      class="{{linkClass}}"
-      >{{parentLabel}}</a
-    >
-    <span class="{{separatorClass}}">/</span>
+  <a href="{{parentHref}}" class="hover:text-secondary transition-colors"
+    >{{parentLabel}}</a
+  >
+  <span class="mx-1">/</span>
   {{/if}}
-  <span class="{{currentClass}}">{{currentLabel}}</span>
+  <span class="text-primary font-semibold border-primary"
+    >{{currentLabel}}</span
+  >
 </p>

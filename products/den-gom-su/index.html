@@ -21,8 +21,7 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}}
-    {{> components/catalog-button}}
+    {{> components/header}} {{> components/catalog-button}}
 
     <main class="flex-grow">
       <!-- Banner Section -->
@@ -49,10 +48,10 @@
         </div>
       </section>
 
-      <div class="w-[85%] max-w-[1320px] mx-auto pt-6 md:pt-10">
+      <div class="w-[85%] max-w-[1320px] mx-auto">
         <!-- Breadcrumb -->
-        <div class="pb-3 md:pb-6 relative z-10">
-          {{> components/products/breadcrumb textClass="font-bold text-primary/60 uppercase text-xs md:text-base" linkClass="hover:text-secondary transition-colors" separatorClass="mx-1" currentClass="text-primary font-semibold border-primary" currentLabel="Đèn Gốm Sứ"}}
+        <div class="pt-6 pb-3 md:pb-6 md:pt-8 relative z-10">
+          {{> components/products/breadcrumb currentLabel="Đèn Gốm Sứ"}}
         </div>
 
         <hr class="border-t border-black/10 mb-4 w-full" />
@@ -143,7 +142,7 @@
       </section>
 
       <div class="w-[85%] max-w-[1320px] mx-auto pb-4">
-        {{> components/products/product-grid-2x4 category="den-gom-su"}}
+        {{> products/den-gom-su/partials/product-list}}
       </div>
 
       <!-- Image Section 2 -->
@@ -202,7 +201,9 @@
         </div>
       </section>
 
-      <div class="w-[85%] max-w-[1320px] mx-auto">{{> components/products/product-grid-2x4 category="den-gom-su"}}</div>
+      <div class="w-[85%] max-w-[1320px] mx-auto">
+        {{> products/den-gom-su/partials/product-list}}
+      </div>
 
       <!-- Advantages Section -->
       <section class="pb-16 bg-background-secondary overflow-hidden pt-4">
@@ -405,9 +406,9 @@
         </div>
       </section>
 
-      {{> components/products/fabrication-process}}
-      {{> components/products/journey-video hideTitle=true}}
-      {{> components/products/recommendations}}
+      {{> components/products/fabrication-process}} {{>
+      components/products/journey-video hideTitle=true}} {{>
+      components/products/recommendations}}
 
       <!-- FAQ Section -->
       <section

@@ -63,8 +63,12 @@
       </section>
 
       <!-- Sub Breadcrumb -->
-      <div class="w-[85%] max-w-[1320px] mx-auto py-8">
-        {{> components/products/breadcrumb textClass="font-semibold text-primary/60 uppercase text-[14px] md:text-base" linkClass="hover:text-primary transition-colors" separatorClass="mx-1" parentHref="/products/ngoi-hai-van-mieu/" parentLabel="Sản phẩm" currentClass="text-primary font-semibold pb-1" currentLabel="Ngói hài văn miếu"}}
+      <div
+        class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
+      >
+        {{> components/products/breadcrumb
+        parentHref="/products/ngoi-hai-van-mieu/" parentLabel="Sản phẩm"
+        currentLabel="Ngói hài văn miếu"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
@@ -243,14 +247,15 @@
         </div>
       </section>
 
-      {{> components/products/hai-vm-calculator image="/assets/images/ngoi-hai-size.png" label1="Ngói trên mái gỗ" rate1="125 viên/m²" label2="Ngói trên mái bê tông" rate2="75 viên/m²"}}
-      {{> components/products/fabrication-process}}
-      {{> components/products/journey-video hideTitle=true}}
-      {{> components/products/trang-tri-process}}
+      {{> components/products/hai-vm-calculator
+      image="/assets/images/ngoi-hai-size.png" label1="Ngói trên mái gỗ"
+      rate1="125 viên/m²" label2="Ngói trên mái bê tông" rate2="75 viên/m²"}}
+      {{> components/products/fabrication-process}} {{>
+      components/products/journey-video hideTitle=true}} {{>
+      components/products/trang-tri-process}}
       <hr class="mb-16" />
-      {{> components/products/works-simple showNav=true}}
-      {{> components/products/recommendations}}
-      {{> components/products/faq2}}
+      {{> components/products/works-simple showNav=true}} {{>
+      components/products/recommendations}} {{> components/products/faq2}}
     </main>
 
     {{> components/footer hideNewsletter=true}}

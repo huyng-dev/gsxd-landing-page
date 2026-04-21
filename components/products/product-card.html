@@ -1,0 +1,40 @@
+<a
+  href="{{#if href}}{{href}}{{else}}/products/{{category}}/{{#if link}}{{link}}{{else}}detail.html{{/if}}{{/if}}"
+  class="{{#if wrapperClass}}{{wrapperClass}}{{else}}flex flex-col group cursor-pointer{{/if}}"
+>
+  <div
+    class="{{#if imageContainerClass}}{{imageContainerClass}}{{else}}product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1{{/if}}"
+  >
+    <img
+      src="{{#if image}}{{image}}{{else}}/assets/images/{{#if imageName}}{{imageName}}{{else}}{{#if fallbackImageName}}{{fallbackImageName}}{{else}}ngoi-01.jpg{{/if}}{{/if}}{{/if}}"
+      alt="{{#if alt}}{{alt}}{{else}}{{#if title}}{{title}}{{else}}Riềm âm dương sen bầu{{/if}}{{/if}}"
+      class="{{#if imageClass}}{{imageClass}}{{else}}w-full h-full object-cover mix-blend-multiply{{/if}}"
+    />
+    {{#if showOverlay}}
+    <div class="product-overlay">
+      <img src="/assets/images/eye.svg" alt="Search" />
+      <span
+        >{{#if overlayLabel}}{{overlayLabel}}{{else}}Xem chi tiết{{/if}}</span
+      >
+    </div>
+    {{/if}}
+  </div>
+  <h3
+    class="{{#if titleClass}}{{titleClass}}{{else}}text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary{{/if}}"
+  >
+    <span class="block lowercase first-letter:uppercase md:uppercase">
+      {{#if title}}{{title}}{{else}}Riềm âm dương sen bầu{{/if}}
+    </span>
+  </h3>
+  <p
+    class="{{#if codeClass}}{{codeClass}}{{else}}text-gray-500 text-[13px] mb-2{{/if}}"
+  >
+    {{#if code}}{{code}}{{else}}MSP: 1234RDS{{/if}}
+  </p>
+  <p
+    class="{{#if priceClass}}{{priceClass}}{{else}}text-secondary font-bold text-[14px]{{/if}}"
+  >
+    {{#if pricePrefix}}{{pricePrefix}}: {{/if}}{{#if
+    price}}{{price}}{{else}}675.000 đ/m2{{/if}}
+  </p>
+</a>
