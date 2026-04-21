@@ -4,9 +4,63 @@ const initProductSectionCarousels = () => {
             return;
         }
 
+        const swiperElement = section.querySelector("[data-product-carousel-swiper]");
         const carousel = section.querySelector("[data-product-carousel]");
         const slides = Array.from(section.querySelectorAll("[data-product-slide]"));
         const dots = Array.from(section.querySelectorAll("[data-product-dot]"));
+
+        if (swiperElement) {
+            const paginationElement = section.querySelector(
+                "[data-product-swiper-pagination]"
+            );
+
+            if (
+                typeof window.Swiper !== "function" ||
+                slides.length === 0 ||
+                !paginationElement
+            ) {
+                return;
+            }
+
+            section.dataset.productCarouselInitialized = "true";
+
+            const syncSwiperDots = (swiperInstance) => {
+                const paginationDots = Array.from(
+                    paginationElement.querySelectorAll(".product-section-dot")
+                );
+
+                paginationDots.forEach((dot, dotIndex) => {
+                    const isActive = dotIndex === swiperInstance.realIndex;
+                    dot.classList.toggle("bg-[#C76E00]", isActive);
+                    dot.classList.toggle("bg-[#C76E00]/30", !isActive);
+                    dot.setAttribute("aria-current", isActive ? "true" : "false");
+                });
+            };
+
+            new window.Swiper(swiperElement, {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 600,
+                autoHeight: true,
+                watchOverflow: true,
+                pagination: {
+                    el: paginationElement,
+                    clickable: true,
+                    renderBullet: (index, className) =>
+                        `<button class="product-section-dot h-1 w-1 rounded-full bg-[#C76E00]/30 ${className}" type="button" aria-label="Slide ${index + 1}" aria-current="false"></button>`,
+                },
+                on: {
+                    init() {
+                        syncSwiperDots(this);
+                    },
+                    slideChange() {
+                        syncSwiperDots(this);
+                    },
+                },
+            });
+
+            return;
+        }
 
         if (!carousel || slides.length === 0 || dots.length === 0) {
             return;

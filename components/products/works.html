@@ -1,10 +1,13 @@
-<!-- Works Section -->
+<!-- ============================================== -->
+<!-- COMPONENT DẤU ẤN CÔNG TRÌNH (WORKS SECTION)      -->
+<!-- ============================================== -->
 <section
   class="w-full bg-background-secondary pb-12 md:pb-16 relative overflow-visible animate-fade-in-up xl:min-h-[760px]"
   data-aos="fade-up"
 >
   {{#push "styles"}}
   <style>
+    /* CSS custom cho hiệu ứng chuyển động mượt mà của slider và phóng to ảnh */
     .product-works-swiper .swiper-wrapper {
       display: flex;
       align-items: flex-end;
@@ -58,6 +61,7 @@
       transform: translateZ(0) scale(1) !important;
     }
 
+    /* Hiệu ứng của nội dung text thay đổi */
     .slide-text-transition {
       transition-property: opacity, transform !important;
       transition-duration: 400ms !important;
@@ -67,7 +71,7 @@
   </style>
   {{/push}}
 
-  <!-- Section Title -->
+  <!-- Tiêu đề Section -->
   <div class="text-center mb-8 md:mb-16">
     <h2
       class="text-[20px] md:text-3xl font-semibold text-secondary uppercase drop-shadow-sm"
@@ -76,9 +80,9 @@
     </h2>
   </div>
 
-  <!-- Main Content Area: Swiper + Text Block -->
+  <!-- Main Content Area: Chứa Swiper Carousel và Khối Text -->
   <div class="relative w-full flex flex-col md:block">
-    <!-- Swiper Container (Order 1 for mobile) -->
+    <!-- Khung Swiper (Trên mobile hiển thị trên khối Text - Order 1) -->
     <div
       class="swiper product-works-swiper w-full pb-[15px] md:pb-10 pr-[20%] order-1"
     >
@@ -193,13 +197,14 @@
       </div>
     </div>
 
-    <!-- Text Block (Relative on mobile, Absolute on desktop) (Order 2 for mobile) -->
+    <!-- Khối Text thay đổi tùy theo Slide hiển thị (Trên desktop được đưa lên góc trên) -->
     <div
       class="w-full px-4 relative xl:absolute xl:inset-x-0 xl:top-0 xl:pointer-events-none z-10 order-2"
     >
       <div
         class="xl:absolute xl:top-0 xl:right-[max(1rem,calc(60%-808px))] w-full xl:max-w-[400px] bg-transparent pt-8 pointer-events-auto"
       >
+        <!-- Tên dự án -->
         <div
           class="flex justify-between items-start pb-4 border-b border-black/10 xl:border-none"
         >
@@ -211,6 +216,7 @@
           </h3>
         </div>
 
+        <!-- Chi tiết Địa điểm và Sản phẩm -->
         <div
           class="space-y-3 text-[15px] mt-[13px] mb-[15px] md:mt-8 md:mb-12 slide-text-transition"
           id="slide-meta"
@@ -225,6 +231,7 @@
           </p>
         </div>
 
+        <!-- Nút Xem chi tiết dự án -->
         <a
           href="#"
           id="slide-link"

@@ -68,25 +68,32 @@
     {{> components/header}} {{> components/catalog-button}}
 
     <main class="flex-grow bg-background-secondary">
-      <!-- Top Banner -->
+      <!-- ============================================== -->
+      <!-- SECTION 1: TOP BANNER                          -->
+      <!-- ============================================== -->
       <section
         class="relative min-h-[675px] md:min-h-[600px] flex items-center md:pt-24 md:pb-8 overflow-hidden"
       >
+        <!-- Lớp hình nền chính của dải banner -->
         <div class="absolute inset-0 z-0">
           <img
             src="/assets/images/ngoi-am-duong-banner.jpg"
             alt="Ngói Âm Dương Banner"
             class="w-full h-full object-cover object-bottom"
           />
+          <!-- Lớp phủ tối mờ (Overlay) ở nền giúp chữ dễ đọc -->
           <div class="absolute inset-0 bg-black/70"></div>
+          <!-- Lớp phủ gradient sáng dưới đáy để tạo hiệu ứng chuyển tiếp mượt mà cắt với nền của trang -->
           <div
             class="absolute bottom-0 left-0 right-0 h-3/5 md:h-3/5 bg-[linear-gradient(to_top,#EFE4DE_10%,white_25%,white_60%,transparent_100%)]"
           ></div>
         </div>
 
+        <!-- Khung chứa toàn bộ nội dung của banner (chữ và hình ảnh con) -->
         <div
           class="z-10 w-[85%] max-w-[1320px] mx-auto flex flex-col h-full justify-between mt-[45px] md:mt-0"
         >
+          <!-- Khối Tiêu đề chính và slogan (phía trên, căn giữa) -->
           <div class="text-center pb-12 md:pb-24 space-y-4 md:space-y-8">
             <h1
               class="text-[24px] leading-[32px] md:text-4xl lg:text-[44px] font-bold mb-0 md:mb-4 uppercase text-white drop-shadow-md"
@@ -107,9 +114,11 @@
             </p>
           </div>
 
+          <!-- Khối Nội dung phía dưới banner: Thơ (Trái) & 2 Ảnh (Phải) -->
           <div
             class="flex flex-col-reverse md:flex-row items-center md:items-end justify-between gap-8 md:gap-12 w-full mt-auto pb-4"
           >
+            <!-- Bên trái: Đoạn thơ giới thiệu sản phẩm -->
             <div
               class="w-full md:w-1/2 text-center md:text-left z-20 pb-4 md:pb-10 lg:ml-12"
               data-aos="fade-right"
@@ -125,6 +134,7 @@
               </p>
             </div>
 
+            <!-- Bên phải: Khối hình ảnh bổ trợ kép (Hai ảnh nằm trên thẻ trắng) -->
             <div
               class="w-full md:w-1/2 flex justify-center md:justify-end z-20"
               data-aos="fade-left"
@@ -133,6 +143,7 @@
               <div
                 class="bg-white p-3 gap-3 md:p-6 md:gap-6 flex w-full max-w-[860px] transform translate-y-0 md:-translate-y-8 rounded md:shadow-none"
               >
+                <!-- Ảnh bên trái trong khung -->
                 <div
                   class="w-1/2 aspect-[167/138] md:aspect-square flex items-center justify-center"
                 >
@@ -142,6 +153,7 @@
                     class="w-full h-full object-cover"
                   />
                 </div>
+                <!-- Ảnh bên phải trong khung -->
                 <div
                   class="w-1/2 aspect-[167/138] md:aspect-square flex items-center justify-center"
                 >
@@ -157,27 +169,39 @@
         </div>
       </section>
 
-      <!-- Breadcrumb -->
+      <!-- ============================================== -->
+      <!-- SECTION 2: BREADCRUMB (THANH ĐIỀU HƯỚNG MỤC) -->
+      <!-- ============================================== -->
       <div
         class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
       >
         {{> components/products/breadcrumb currentLabel="Ngói Âm Dương"}}
       </div>
 
-      {{> components/products/product-grid category="ngoi-am-duong"}}
+      <!-- ============================================== -->
+      <!-- SECTION 3: PRODUCT GRID (LƯỚI HIỂN THỊ SẢN PHẨM) -->
+      <!-- ============================================== -->
+      {{> components/products/product-filter}} {{>
+      components/products/product-grid category="ngoi-am-duong"}}
 
-      <!-- Sizes Options Section -->
+      <!-- ============================================== -->
+      <!-- SECTION 4: SIZE OPTIONS (BẢNG KÍCH THƯỚC)      -->
+      <!-- ============================================== -->
       <section
         class="w-[85%] max-w-[1320px] mx-auto pb-[40px] md:pb-16 pt-1"
         data-aos="fade-up"
       >
+        <!-- Tiêu đề "Đa dạng kích thước" -->
         <h2
           class="text-[20px] leading-[32px] tracking-[0.6px] md:text-3xl md:leading-normal md:tracking-wide font-bold text-center text-secondary mb-6 md:mb-12 uppercase break-words"
         >
           Đa dạng kích thước -<br class="block md:hidden" />
           phong phú chọn lựa
         </h2>
+
+        <!-- Khung bao bọc cuộn ngang để chứa bản đồ/hình ảnh kích thước -->
         <div class="size-options-scroll w-full pb-2">
+          <!-- Hình ảnh chi tiết kích thước (hiển thị vượt ngoài width gốc để vuốt ngang) -->
           <img
             src="/assets/images/ngoi-am-duong-size.png"
             alt="Đa dạng kích thước ngói âm dương"
@@ -187,16 +211,21 @@
         </div>
       </section>
 
-      <!-- Accessories Section -->
+      <!-- ============================================== -->
+      <!-- SECTION 5: ACCESSORIES (PHỤ KIỆN NGÓI)         -->
+      <!-- ============================================== -->
       <section
         class="w-[85%] max-w-[1320px] mx-auto pb-12 md:pb-20"
         data-aos="fade-up"
       >
+        <!-- Tiêu đề phần Phụ kiện -->
         <h2
           class="text-[20px] md:text-3xl font-bold text-center text-secondary mb-6 md:mb-12 uppercase tracking-wide"
         >
           Phụ kiện ngói
         </h2>
+
+        <!-- Khung chứa ảnh phụ kiện -->
         <div class="w-full flex justify-center">
           <img
             src="/assets/images/ngoi-am-duong-pk.png"
@@ -207,26 +236,32 @@
       </section>
     </main>
 
+    <!-- Các Component dùng chung của Layout Sản phẩm -->
     {{> components/products/outstanding-value}} {{>
     components/products/journey-video}} {{> components/products/works}}
 
-    <!-- FAQ Section -->
+    <!-- ============================================== -->
+    <!-- SECTION 6: FAQ (CÂU HỎI THƯỜNG GẶP)            -->
+    <!-- ============================================== -->
     <section
       class="w-full relative pb-20 md:pb-32 bg-background-secondary overflow-hidden"
       data-aos="fade-up"
     >
-      <!-- Background Decoration -->
+      <!-- Background Decoration (Đồ họa trang trí nền chìm) -->
+      <!-- Trang trí bên trái dọc theo màn hình -->
       <img
         src="/assets/images/background-decorate-03.svg"
         class="absolute top-[20%] -translate-y-1/2 md:left-4 -left-[20%] md:translate-x-[10%] translate-x-0 w-auto object-contain opacity-100 pointer-events-none z-0"
         alt=""
       />
+      <!-- Trang trí bên phải dưới màn hình -->
       <img
         src="/assets/images/background-decorate-02.svg"
         class="absolute md:top-[62%] top-[80%] -translate-y-1/2 right-0 translate-x-[60%] w-auto object-contain opacity-50 pointer-events-none z-0"
         alt=""
       />
 
+      <!-- Nội dung Dropdown nội dung các Câu Hỏi Thường Gặp -->
       {{> components/products/faq-content}}
     </section>
 

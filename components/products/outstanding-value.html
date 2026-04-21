@@ -1,36 +1,43 @@
-<!-- Value Section -->
+<!-- ============================================== -->
+<!-- COMPONENT GIÁ TRỊ VƯỢT TRỘI                      -->
+<!-- (Component tương tác: Hover hình nhỏ để đối title/text lớn) -->
+<!-- ============================================== -->
 <section class="w-full relative pb-8 md:pb-16" data-aos="fade-up">
-  <!-- Section Title -->
+  <!-- Section Title (Tiêu đề trên cùng) -->
   <div class="text-center mb-8 md:mb-12">
     <h2 class="text-[20px] md:text-3xl font-semibold text-secondary uppercase">
       Giá trị vượt trội
     </h2>
   </div>
 
-  <!-- Background Image Container -->
+  <!-- Background Image Container (Khung chứa hình nền lớn và toàn bộ nội dung tương tác) -->
   <div
     class="relative w-full overflow-hidden flex flex-col min-h-[511px] md:min-h-[900px]"
   >
-    <!-- Background Image -->
+    <!-- Background Image (Hình nền toàn màn hình của khối) -->
     <img
       src="/assets/images/gia-tri-vuot-troi.png"
       alt="Giá trị vượt trội nền"
       class="absolute inset-0 w-full h-full object-cover z-0"
     />
+    <!-- Overlay Gradient mờ (chỉ xuất hiện trên mobile) giúp che bớt nền, làm nổi bật text -->
     <div
       class="absolute inset-0 z-[1] md:hidden bg-[linear-gradient(92deg,rgba(255,255,255,0)_0%,rgba(116,44,44,0.54)_55%,rgba(116,44,44,0.60)_84%),rgba(186,113,113,0.34)]"
     ></div>
 
-    <!-- Text Content -->
+    <!-- Text Content (Nội dung văn bản thay đổi linh hoạt theo hình được chọn) -->
     <div
       class="relative z-10 container mx-auto px-6 lg:px-[140px] flex-grow flex flex-col items-end justify-start md:justify-center text-end text-white pt-[44px] md:pt-32"
     >
+      <!-- Tiêu đề thay đổi động (id="value-title") -->
       <h3
         id="value-title"
         class="text-[20px] leading-[32px] md:text-3xl font-semibold mb-[5px] md:mb-10 tracking-[0.6px] md:tracking-wide drop-shadow-md transition-all duration-500"
       >
         CỐT ĐẤT LUYỆN LỬA
       </h3>
+      
+      <!-- Khối mô tả thay đổi động (id="value-description") -->
       <div class="w-full max-w-[383px] md:max-w-none md:shadow-none">
         <p
           id="value-description"
@@ -43,13 +50,14 @@
       </div>
     </div>
 
-    <!-- 4 Images Bottom Left -->
+    <!-- Khối 4 Hình ảnh Nhỏ (Các thẻ hình tương tác ở góc trái dưới) -->
     <div
       class="absolute top-[261px] left-0 z-10 w-full md:relative md:top-auto md:left-auto mb-0 md:mb-16 md:px-0 max-w-[1920px] mx-auto"
     >
       <div
         class="flex flex-row justify-center md:justify-start gap-2 md:gap-5 items-end translate-y-0 md:translate-y-[20px] px-2 md:px-0"
       >
+        <!-- Item 1 (Được active mặc định ban đầu) -->
         <div
           class="value-image-item active aspect-[19/33] w-[80px] md:w-[200px] flex-shrink-0 shadow-lg"
           data-title="CỐT ĐẤT LUYỆN LỬA"
@@ -61,6 +69,7 @@
             class="w-full h-full object-cover"
           />
         </div>
+        <!-- Item 2 -->
         <div
           class="value-image-item aspect-[19/33] w-[80px] md:w-[200px] flex-shrink-0 shadow-lg"
           data-title="KIẾN TRÚC TRƯỜNG TỒN"
@@ -72,6 +81,7 @@
             class="w-full h-full object-cover"
           />
         </div>
+        <!-- Item 3 -->
         <div
           class="value-image-item aspect-[19/33] w-[80px] md:w-[200px] flex-shrink-0 shadow-lg"
           data-title="NGHỆ THUẬT GỐM SỨ"
@@ -83,6 +93,7 @@
             class="w-full h-full object-cover"
           />
         </div>
+        <!-- Item 4 -->
         <div
           class="value-image-item aspect-[19/33] w-[80px] md:w-[200px] flex-shrink-0 shadow-lg"
           data-title="SẮC MEN ĐỘC BẢN"

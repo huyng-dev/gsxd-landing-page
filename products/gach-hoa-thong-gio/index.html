@@ -170,9 +170,7 @@
         .page-gach-hoa-thong-gio
           .gach-hoa-product-showcase-section
           .gach-hoa-product-grid-shell
-          > section
-          > div:first-of-type
-          > button {
+          .product-filter-trigger {
           font-size: 13px;
           line-height: 19.5px;
           letter-spacing: 0.65px;
@@ -182,7 +180,7 @@
           .gach-hoa-product-showcase-section
           .gach-hoa-product-grid-shell
           > section
-          > div:nth-of-type(2)
+          > div.grid
           > a
           > h3 {
           color: #000;
@@ -197,7 +195,7 @@
           .gach-hoa-product-showcase-section
           .gach-hoa-product-grid-shell
           > section
-          > div:nth-of-type(2)
+          > div.grid
           > a
           > p:first-of-type {
           color: #6b7280;
@@ -212,7 +210,7 @@
           .gach-hoa-product-showcase-section
           .gach-hoa-product-grid-shell
           > section
-          > div:nth-of-type(2)
+          > div.grid
           > a
           > p:last-of-type {
           color: #c76e00;
@@ -265,17 +263,16 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary page-gach-hoa-thong-gio"
   >
-    {{> components/header}}
-    {{> components/catalog-button}}
+    {{> components/header}} {{> components/catalog-button}}
 
     <main class="flex-grow bg-background-secondary overflow-hidden">
-      {{> products/gach-hoa-thong-gio/partials/hero}}
-      {{> products/gach-hoa-thong-gio/partials/collage-carousel}}
-      {{> products/gach-hoa-thong-gio/partials/product-showcase}}
-      {{> products/gach-hoa-thong-gio/partials/video-section}}
-      {{> products/gach-hoa-thong-gio/partials/value-section}}
-      {{> products/gach-hoa-thong-gio/partials/process-section}}
-      {{> products/gach-hoa-thong-gio/partials/faq-section}}
+      {{> products/gach-hoa-thong-gio/partials/hero}} {{>
+      products/gach-hoa-thong-gio/partials/collage-carousel}} {{>
+      products/gach-hoa-thong-gio/partials/product-showcase}} {{>
+      products/gach-hoa-thong-gio/partials/video-section}} {{>
+      products/gach-hoa-thong-gio/partials/value-section}} {{>
+      products/gach-hoa-thong-gio/partials/process-section}} {{>
+      products/gach-hoa-thong-gio/partials/faq-section}}
     </main>
 
     {{> components/footer}}

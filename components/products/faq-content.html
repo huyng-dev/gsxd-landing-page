@@ -1,9 +1,12 @@
-<!-- FAQ Content -->
+<!-- ============================================== -->
+<!-- COMPONENT CÂU HỎI THƯỜNG GẶP (FAQ)               -->
+<!-- Bản chất là danh sách Accordion (Click để mở)    -->
+<!-- ============================================== -->
 <div
   class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto"
   data-faq-component
 >
-  <!-- Section Title -->
+  <!-- Tiêu đề Section CÂU HỎI THƯỜNG GẶP -->
   <div
     class="w-[85%] max-w-[1320px] mx-auto text-center mb-[22px] md:mb-16"
     data-aos="fade-up"
@@ -15,20 +18,22 @@
     </h2>
   </div>
 
-  <!-- FAQ Card -->
+  <!-- Khung Thẻ Card trắng chứa toàn bộ danh sách câu hỏi -->
   <div
     class="bg-white px-6 md:px-10 py-8 shadow-lg relative"
     data-aos="fade-up"
     data-aos-delay="200"
   >
-    <!-- FAQ Item 1 -->
+    <!-- Câu Hỏi Item 1 (Mặc định được hiển thị mở rộng sẵn) -->
     <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+      <!-- Nút để click đóng/mở nội dung -->
       <button
         class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
       >
         <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
           >Showroom của Gốm sứ Thanh Hải ở đâu?</span
         >
+        <!-- Icon Mũi tên Dropdown -->
         <span
           class="faq-icon w-6 h-6 flex-shrink-0 bg-textPrimary rounded-full flex items-center justify-center text-white transition-all duration-300"
         >
@@ -47,6 +52,7 @@
           </svg>
         </span>
       </button>
+      <!-- Khối nội dung câu trả lời -->
       <div
         class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed block overflow-hidden transition-all duration-300"
       >

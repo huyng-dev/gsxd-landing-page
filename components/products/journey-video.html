@@ -1,28 +1,36 @@
-<!-- Video Section -->
+<!-- ============================================== -->
+<!-- COMPONENT VIDEO HÀNH TRÌNH CHẾ TÁC               -->
+<!-- ============================================== -->
 <section class="w-full mx-auto pb-[30px] md:pb-16 max-w-[1920px]">
+  <!-- Tiêu đề (Có thể ẩn đi nếu tham số hideTitle = true) -->
   {{#unless hideTitle}}
-  <!-- Section Title -->
   <div class="text-center mb-8 md:mb-16" data-aos="fade-up">
     <h2 class="text-[20px] md:text-3xl font-semibold text-secondary uppercase">
       Hành trình chế tác
     </h2>
   </div>
   {{/unless}}
+
+  <!-- Khung chứa Video (Tỷ lệ 16:9 - aspect-video) -->
   <div
     class="relative w-full aspect-video overflow-hidden cursor-pointer group"
     data-aos="fade-up"
     data-aos-delay="200"
   >
+    <!-- Ảnh Thumbnail đại diện cho video (Khi hover sẽ tối đi) -->
     <img
       src="/assets/images/video-placeholder-02.png"
       alt="Video placeholder"
       class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300"
     />
-    <!-- Play Button -->
+    
+    <!-- Lớp phủ chứa Nút Play ở giữa màn hình -->
     <div class="absolute inset-0 flex items-center justify-center">
+      <!-- Vòng tròn mờ (backdrop-blur) của nút Play -->
       <div
         class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300"
       >
+        <!-- Icon tam giác Play -->
         <svg
           class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1"
           fill="currentColor"
