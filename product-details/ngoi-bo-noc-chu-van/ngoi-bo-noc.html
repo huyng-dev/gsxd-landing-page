@@ -26,7 +26,7 @@
 
     <main class="flex-grow bg-background-secondary pb-14 md:pb-20">
       <!-- Top Banner for Detail -->
-      <section class="relative w-full">
+      <section class="relative w-full hidden md:block">
         <div
           class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]"
         >
@@ -71,7 +71,7 @@
       </div>
 
       <!-- Product Detail Container -->
-      <section class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-10 lg:pb-24 pt-0 md:pt-4"
+      <section class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-0 md:pb-10 lg:pb-24 pt-0 md:pt-4"
       >
         <!-- Left: Images -->
         <div class="flex flex-col md:gap-5 lg:col-span-3">
@@ -130,20 +130,20 @@
             Ngói bò nóc chữ vạn
           </h2>
 
-          <div class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] order-2 md:order-1 mt-1 md:mt-0">
+          <div class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] mt-1 md:mt-0">
             <span class="text-[#656663] md:text-primary font-light md:font-normal">Mã SP:</span>
             <span class="text-[#656663] md:text-primary font-semibold">THC 100-GDS</span>
           </div>
 
-          <p class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal order-3 mt-0.5 md:mt-0">
+          <p class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal mt-0.5 md:mt-0">
             675.000 đ/m2
           </p>
 
           <!-- Separator -->
-          <hr class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full order-4 hidden md:block" />
-          <hr class="border-t border-black/10 w-full order-4 md:hidden mb-4" />
+          <hr class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full hidden md:block" />
+          <hr class="border-t border-black/10 w-full md:hidden mb-4" />
 
-          <ul class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed order-5"
+          <ul class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed"
           >
             <li>Timeless beauty to be treasured</li>
             <li>High-quality and classic design, suitable for decoration</li>
@@ -151,16 +151,28 @@
           </ul>
 
           <!-- Variants -->
-          <div class="flex flex-col md:flex-row gap-4 mb-16 w-full xl:w-[95%]">
+          <div
+            class="flex flex-wrap gap-3.5 md:gap-4 mb-6 md:mb-16 w-full xl:w-[95%]"
+          >
             <button
-              class="border flex-1 md:flex-none border-black/20 text-primary uppercase text-[12px] md:text-[13px] font-medium py-2 px-3 text-center hover:border-black/50 hover:bg-black/5 transition-all outline-none"
+              class="w-[54%] md:w-auto md:min-w-[240px] border border-black/20 text-primary uppercase text-[10px] md:text-[13px] font-medium md:py-3 py-2 px-1 text-center hover:border-black/50 hover:bg-black/5 transition-all outline-none flex items-center justify-center leading-tight"
             >
-              COMBO NGÓI + PHỤ KIỆN
+              COMBO NGÓI + PHỤ KIỆN CỠ NHỎ
             </button>
             <button
-              class="border flex-1 md:flex-none border-black/20 text-primary uppercase text-[12px] md:text-[13px] font-medium py-2 px-3 text-center hover:border-black/50 hover:bg-black/5 transition-all outline-none"
+              class="flex-1 md:w-auto md:min-w-[200px] border border-black/20 text-primary uppercase text-[10px] md:text-[13px] font-medium md:py-3 py-2 px-1 text-center hover:border-black/50 hover:bg-black/5 transition-all outline-none flex items-center justify-center leading-tight"
             >
-              NGÓI BÒ CHỮ VẠN
+              NGÓI BÒ CHỮ VẠN CỠ NHỎ
+            </button>
+            <button
+              class="w-[54%] md:w-auto md:min-w-[240px] border border-black/20 text-primary uppercase text-[10px] md:text-[13px] font-medium md:py-3 py-2 px-1 text-center hover:border-black/50 hover:bg-black/5 transition-all outline-none flex items-center justify-center leading-tight"
+            >
+              COMBO NGÓI + PHỤ KIỆN CỠ LỚN
+            </button>
+            <button
+              class="flex-1 md:w-auto md:min-w-[200px] border border-black/20 text-primary uppercase text-[10px] md:text-[13px] font-medium md:py-3 py-2 px-1 text-center hover:border-black/50 hover:bg-black/5 transition-all outline-none flex items-center justify-center leading-tight"
+            >
+              NGÓI BÒ CHỮ VẠN CỠ LỚN
             </button>
           </div>
 
@@ -194,7 +206,7 @@
           </div>
 
           <!-- Contacts -->
-          <div class="hidden md:flex flex-col gap-5 mt-2 order-[8] md:order-[none]">
+          <div class="hidden md:flex flex-col gap-5 mt-2">
             <!-- Hotline -->
             <div class="flex items-center gap-5">
               <div
@@ -235,18 +247,19 @@
       </section>
 
       <!-- Product Description Section -->
-      <section class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-10 lg:pb-24 pt-0 md:pt-4">
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center"
-        >
+      <section class="w-[85%] max-w-[1320px] mx-auto pb-16 lg:pb-24 pt-0 md:pt-4">
+        <!-- Section Title -->
+        <div class="text-center mb-8 md:mb-16" data-aos="fade-up">
+          <h3
+            class="text-[20px] md:text-3xl font-semibold text-secondary uppercase drop-shadow-sm"
+          >
+            Mô tả sản phẩm
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
           <!-- Left Image -->
-          <div class="flex items-center flex-col" data-aos="fade-right">
-            <h3
-              class="text-[20px] md:text-3xl font-semibold text-secondary uppercase mb-8 md:mb-12"
-              data-aos="fade-up"
-            >
-              Mô tả sản phẩm
-            </h3>
+          <div class="flex items-center justify-center" data-aos="fade-right">
             <img
               src="/assets/images/gach-bat-size-1.png"
               alt="Mô tả kích thước"
@@ -256,7 +269,7 @@
           <!-- Right List -->
           <div class="flex flex-col justify-center" data-aos="fade-left">
             <ul
-              class="list-disc pl-5 md:pl-16 space-y-2 md:space-y-4 text-primary font-medium text-[16px] md:text-[20px] leading-relaxed"
+              class="list-disc pl-5 md:pl-16 space-y-3 md:space-y-4 text-primary font-medium text-[15px] md:text-[20px] leading-relaxed"
             >
               <li>Timeless beauty to be treasured</li>
               <li>High-quality and classic design, suitable for decoration</li>
