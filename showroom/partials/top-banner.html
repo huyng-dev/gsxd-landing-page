@@ -1,13 +1,20 @@
 <!-- Top Banner -->
-<section class="relative w-full h-[220px] md:h-[260px] flex items-center justify-center overflow-hidden">
+<section class="relative w-full h-[300px] md:h-[260px] flex items-center justify-center overflow-hidden">
   <div class="absolute inset-0 z-0">
+    <!-- Mobile Image -->
+    <img
+      src="/assets/images/showroom-banner-02.png"
+      alt="Showroom Banner Mobile"
+      class="w-full h-full object-cover mix-blend-multiply opacity-100 md:hidden"
+    />
+    <!-- Desktop Image -->
     <img
       src="/assets/images/showroom-banner.png"
       alt="Showroom Banner"
-      class="w-full h-full object-cover mix-blend-multiply opacity-100"
+      class="w-full h-full object-cover mix-blend-multiply opacity-100 hidden md:block"
     />
   </div>
-  <div class="relative z-10 text-center text-white px-4 pt-12">
+  <div class="relative z-20 text-center text-white px-4 pt-0 md:pt-12">
     <h1 class="text-2xl md:text-[30px] font-bold mb-3 uppercase drop-shadow-lg">SHOWROOM</h1>
     <p class="text-[11px] md:text-sm text-white drop-shadow-md">
       <a

@@ -13,19 +13,20 @@
 {{{stack "styles"}}}
 </head>
 
-<body data-page="factory" class="bg-white min-h-screen flex flex-col">
+<body data-page="factory" class="bg-background-secondary min-h-screen flex flex-col">
     {{> components/header}}
 
-    <main class="flex-grow">
+    <main class="flex-grow pb-14 lg:pb-20">
         {{> factory/partials/hero}}
         {{> factory/partials/intro}}
         {{> factory/partials/gallery-1}}
         {{> factory/partials/process}}
         {{> factory/partials/material}}
         {{> factory/partials/gallery-2}}
+        {{> components/products/faq2}}
     </main>
 
-    {{> components/footer}}
+    {{> components/footer hideNewsletter=true}}
 
     <script type="module" src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>

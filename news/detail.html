@@ -33,15 +33,16 @@
     >
         {{> components/header}}
 
-        <main class="flex-grow">
+        <main class="flex-grow pb-14 lg:pb-20">
             {{> news/partials/detail-hero}}
             {{> news/partials/detail-content}}
             {{> news/partials/catalog-section}}
             {{> news/partials/author-section}}
             {{> news/partials/detail-related}}
+            {{> components/products/faq2}}
         </main>
 
-        {{> components/footer}}
+        {{> components/footer hideNewsletter=true}}
 
         <script
             type="module"
