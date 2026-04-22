@@ -76,33 +76,77 @@
         <!-- Left: Images -->
         <div class="flex flex-col md:gap-5 lg:col-span-3">
           <!-- Main Image -->
-          <div class="w-full aspect-square bg-white md:shadow-lg relative overflow-hidden group">
-            <img
-              src="/assets/images/ngoi-van-mieu-detail.png" 
-              alt="Gạch bát 300x300x50"
-              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-            />
-
-            <!-- Mobile Dots Pagination (Figma Layout) -->
-            <div class="md:hidden absolute bottom-[13px] left-1/2 -translate-x-1/2 w-[152px] h-[17px]">
-              <div class="absolute inset-0 bg-[#C76E00] opacity-10 rounded-[17px]"></div>
-              <div class="absolute w-[10px] h-[6px] left-[21px] top-[5px] bg-[#C76E00] rounded-full"></div>
-              <div class="absolute w-[6px] h-[6px] left-[45px] top-[5px] bg-white opacity-50 rounded-full"></div>
-              <div class="absolute w-[6px] h-[6px] left-[65px] top-[5px] bg-white opacity-50 rounded-full"></div>
-              <div class="absolute w-[6px] h-[6px] left-[85px] top-[5px] bg-white opacity-50 rounded-full"></div>
-              <div class="absolute w-[6px] h-[6px] left-[105px] top-[5px] bg-white opacity-50 rounded-full"></div>
-              <div class="absolute w-[6px] h-[6px] left-[125px] top-[5px] bg-white opacity-50 rounded-full"></div>
+          <div
+            class="w-full aspect-square bg-white md:shadow-lg relative overflow-hidden group swiper product-main-swiper"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide w-full h-full">
+                <img
+                  src="/assets/images/ngoi-van-mieu-detail.png"
+                  alt="Ngói văn miếu ghi ánh kim 1"
+                  class="w-full h-full object-cover object-center mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <img
+                  src="/assets/images/ngoi-van-mieu-detail.png"
+                  alt="Ngói văn miếu ghi ánh kim 2"
+                  class="w-full h-full object-cover object-center mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <img
+                  src="/assets/images/ngoi-van-mieu-detail.png"
+                  alt="Ngói văn miếu ghi ánh kim 3"
+                  class="w-full h-full object-cover object-center mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <img
+                  src="/assets/images/ngoi-van-mieu-detail.png"
+                  alt="Ngói văn miếu ghi ánh kim 4"
+                  class="w-full h-full object-cover object-center mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <img
+                  src="/assets/images/ngoi-van-mieu-detail.png"
+                  alt="Ngói văn miếu ghi ánh kim 5"
+                  class="w-full h-full object-cover object-center mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <img
+                  src="/assets/images/ngoi-van-mieu-detail.png"
+                  alt="Ngói văn miếu ghi ánh kim 6"
+                  class="w-full h-full object-cover object-center mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <img
+                  src="/assets/images/ngoi-van-mieu-detail.png"
+                  alt="Ngói văn miếu ghi ánh kim 7"
+                  class="w-full h-full object-cover object-center mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+            </div>
+            
+            <!-- Mobile Dots Pagination (Exact Figma Dimensions) -->
+            <div class="md:hidden absolute bottom-[13px] left-1/2 -translate-x-1/2 z-10">
+              <div class="product-main-pagination h-[17px] px-[21px] bg-[#C76E00]/10 rounded-[17px] flex items-center justify-center gap-[14px]"></div>
             </div>
           </div>
           <!-- Thumbnails -->
-          <div class="hidden md:flex gap-5 w-full mt-2">
-            <img src="/assets/images/ngoi-van-mieu-detail-2.png" class="flex-1 w-[88px] aspect-square cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></img>
-            <img src="/assets/images/gach-bat-detail-2.png" class="flex-1 w-[88px] aspect-square cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></img>
-            <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-            <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-            <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-            <div class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-            <div class="flex-1 aspect-square bg-gradient-to-r from-[#5C2321] to-[#EFE4DE] cursor-pointer opacity-90 relative"></div>
+          <div class="hidden md:block w-full mt-2 overflow-hidden swiper product-thumb-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
+              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
+              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
+              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
+              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
+              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
+              <div class="swiper-slide aspect-square bg-gradient-to-r from-[#5C2321] to-[#EFE4DE] cursor-pointer opacity-90 relative"></div>
+            </div>
           </div>
         </div>
 
@@ -255,6 +299,26 @@
         // Initialize AOS
         AOS.init({ duration: 800, once: true, offset: 100 });
 
+        // Initialize Product Sliders
+        var thumbSwiper = new Swiper(".product-thumb-swiper", {
+          spaceBetween: 20,
+          slidesPerView: 7,
+          freeMode: true,
+          watchSlidesProgress: true,
+        });
+
+        new Swiper(".product-main-swiper", {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          pagination: {
+            el: ".product-main-pagination",
+            clickable: true,
+          },
+          thumbs: {
+            swiper: thumbSwiper,
+          },
+        });
+
         // Initialize Fabrication Slider
         const fabricationRoot = document.querySelector('.fabrication-slider')?.closest('.group') || document;
         const fabricationNextEl = fabricationRoot.querySelector('.fabrication-next');
@@ -333,6 +397,20 @@
                 background-color: #C76E00 !important;
                 width: 12px !important;
                 border-radius: 6px !important;
+            }
+            .product-main-pagination .swiper-pagination-bullet {
+                width: 6px;
+                height: 6px;
+                background: white;
+                opacity: 0.5;
+                margin: 0 !important;
+                border-radius: 9999px;
+                transition: all 0.3s ease;
+            }
+            .product-main-pagination .swiper-pagination-bullet-active {
+                width: 10px;
+                background: #C76E00;
+                opacity: 1;
             }
         `;
         document.head.appendChild(style);
