@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=dich-vu-khach-hang/tai-catalog.html uid=6f4f9251 -->
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -24,25 +25,37 @@
     data-page="customer-service"
     class="bg-white"
   >
-    {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-catalog.html include=components/header idx=001 uid=07ead4e4 -->
+{{> components/header}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/tai-catalog.html tag=main idx=001 uid=5d91b4f1 -->
 
     <main class="bg-background-secondary min-h-screen font-archivo">
       <div class="w-[85%] max-w-[1320px] mx-auto">
-        {{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Tải Catalog"}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-catalog.html include=dich-vu-khach-hang/partials/customer-service/breadcrumb idx=002 uid=8cbf4c85 -->
+{{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Tải Catalog"}}
 
         <div class="flex flex-col lg:flex-row gap-12 mb-6 lg:mb-12">
-          {{> dich-vu-khach-hang/partials/customer-service/sidebar activeCatalog=true}}
-          {{> dich-vu-khach-hang/partials/customer-service/catalog-content}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-catalog.html include=dich-vu-khach-hang/partials/customer-service/sidebar idx=003 uid=23c32f85 -->
+{{> dich-vu-khach-hang/partials/customer-service/sidebar activeCatalog=true}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-catalog.html include=dich-vu-khach-hang/partials/customer-service/catalog-content idx=004 uid=d59f0276 -->
+{{> dich-vu-khach-hang/partials/customer-service/catalog-content}}
         </div>
-        {{> components/faq/faq-contact}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-catalog.html include=components/faq/faq-contact idx=005 uid=8c8a090c -->
+{{> components/faq/faq-contact}}
       </div>
     </main>
-
-    {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-catalog.html include=components/footer idx=006 uid=55a2043c -->
+{{> components/footer}}
     <script
       type="module"
       src="/assets/js/main.js"
     ></script>
     {{{stack "scripts"}}}
+<!-- GSXD-DEBUG:END type=PAGE file=dich-vu-khach-hang/tai-catalog.html uid=6f4f9251 -->
 </body>
 </html>
+
+
+
+

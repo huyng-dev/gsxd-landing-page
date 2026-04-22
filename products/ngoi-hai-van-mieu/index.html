@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/ngoi-hai-van-mieu/index.html uid=3fd492f7 -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -373,11 +374,15 @@
     data-page="products"
     class="page-ngoi-hai-van-mieu min-h-screen flex flex-col bg-neutral-1"
   >
-    {{> components/header}} {{> components/catalog-button}}
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-hai-van-mieu/index.html include=components/header idx=001 uid=9eda2929 -->
+{{> components/header}} {{> components/catalog-button}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=products/ngoi-hai-van-mieu/index.html tag=main idx=001 uid=92da9087 -->
 
     <main class="flex-grow bg-background-secondary">
       <!-- Top Banner -->
-      <section class="relative w-full pt-0 md:pt-20 pb-0 md:pb-8 lg:pb-10">
+<!-- GSXD-SECTION:BEGIN file=products/ngoi-hai-van-mieu/index.html tag=section idx=001 uid=83f0ae04 -->
+<section class="relative w-full pt-0 md:pt-20 pb-0 md:pb-8 lg:pb-10">
         <!-- Mobile Top Banner -->
         <div class="md:hidden relative h-[403px] overflow-hidden">
           <div class="absolute inset-x-0 top-0 h-[245px] z-0">
@@ -589,11 +594,13 @@
       <div
         class="ngoi-hai-breadcrumb-scope w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
       >
-        {{> components/products/breadcrumb currentLabel="Ngói Hài Văn Miếu"}}
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-hai-van-mieu/index.html include=components/products/breadcrumb idx=002 uid=c4bde9fe -->
+{{> components/products/breadcrumb currentLabel="Ngói Hài Văn Miếu"}}
       </div>
 
       <div class="ngoi-hai-product-grid-scope">
-        {{> components/products/product-filter}} {{>
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-hai-van-mieu/index.html include=components/products/product-filter idx=003 uid=b67deab5 -->
+{{> components/products/product-filter}} {{>
         components/products/product-grid category="ngoi-hai-van-mieu"
         link1="ngoi-hai-co-nau-den.html" name1="Ngói hài cổ nâu đen"
         image1="ngoi-hai-detail.png" link2="ngoi-van-mieu-ghi-anh-kim.html"
@@ -601,7 +608,8 @@
       </div>
 
       <!-- Difference Section -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/ngoi-hai-van-mieu/index.html tag=section idx=002 uid=f2b401db -->
+<section
         class="relative w-full overflow-hidden bg-background-secondary mb-[35px] md:mb-16"
       >
         <!-- Section Title -->
@@ -712,12 +720,14 @@
       </section>
 
       <div class="ngoi-hai-journey-scope">
-        {{> components/products/journey-video}}
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-hai-van-mieu/index.html include=components/products/journey-video idx=004 uid=3697d229 -->
+{{> components/products/journey-video}}
       </div>
       <div class="ngoi-hai-works-scope">{{> components/products/works}}</div>
 
       <!-- FAQ Section -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/ngoi-hai-van-mieu/index.html tag=section idx=003 uid=902f7088 -->
+<section
         class="w-full relative pb-[65px] md:pb-32 bg-background-secondary overflow-hidden"
         data-aos="fade-up"
       >
@@ -734,7 +744,8 @@
         />
 
         <div class="ngoi-hai-faq-scope">
-          {{> components/products/faq-content}}
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-hai-van-mieu/index.html include=components/products/faq-content idx=005 uid=2796c15d -->
+{{> components/products/faq-content}}
         </div>
       </section>
     </main>
@@ -752,5 +763,10 @@
       });
     </script>
     {{{stack "scripts"}}}
-  </body>
+<!-- GSXD-DEBUG:END type=PAGE file=products/ngoi-hai-van-mieu/index.html uid=3fd492f7 -->
+</body>
 </html>
+
+
+
+

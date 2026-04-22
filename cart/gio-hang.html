@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=cart/gio-hang.html uid=ab659ee5 -->
 <html lang="vi">
 
 <head>
@@ -12,11 +13,15 @@
 </head>
 
 <body data-page="cart" class="bg-white">
-  {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=cart/gio-hang.html include=components/header idx=001 uid=a30f26e5 -->
+{{> components/header}}
+
+  <!-- GSXD-ELEMENT:BEGIN file=cart/gio-hang.html tag=main idx=001 uid=9ff249f0 -->
 
   <main class="bg-background-secondary min-h-screen py-10">
     <div class="w-[85%] max-w-[1320px] mx-auto pb-12 md:pb-16">
       <!-- Breadcrumb -->
+      <!-- GSXD-ELEMENT:BEGIN file=cart/gio-hang.html tag=nav idx=001 uid=a7de5b3d -->
       <nav class="flex items-center gap-2 text-sm text-primary mb-8 font-archivo">
         <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
         <span>&gt;</span>
@@ -178,14 +183,21 @@
         </div>
       </div>
     </div>
-    
-    {{> components/products/recommendations}}
-    {{> components/faq/faq-contact}}
+<!-- GSXD-PARTIAL:BEGIN file=cart/gio-hang.html include=components/products/recommendations idx=002 uid=bfff8ca0 -->
+{{> components/products/recommendations}}
+<!-- GSXD-PARTIAL:BEGIN file=cart/gio-hang.html include=components/faq/faq-contact idx=003 uid=24672f3b -->
+{{> components/faq/faq-contact}}
   </main>
-  {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=cart/gio-hang.html include=components/footer idx=004 uid=6e5d14e3 -->
+{{> components/footer}}
 
   <script type="module" src="/assets/js/main.js"></script>
 {{{stack "scripts"}}}
+<!-- GSXD-DEBUG:END type=PAGE file=cart/gio-hang.html uid=ab659ee5 -->
 </body>
 
 </html>
+
+
+
+

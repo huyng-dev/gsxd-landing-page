@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=product-details/linh-vat/detail.html uid=a9e47de4 -->
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -22,11 +23,15 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/linh-vat/detail.html include=components/header idx=001 uid=a46472d5 -->
+{{> components/header}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=product-details/linh-vat/detail.html tag=main idx=001 uid=5f1fb4fa -->
 
     <main class="flex-grow bg-background-secondary pb-20">
       <!-- Top Banner for Detail -->
-      <section class="relative w-full">
+<!-- GSXD-SECTION:BEGIN file=product-details/linh-vat/detail.html tag=section idx=001 uid=5db52c3d -->
+<section class="relative w-full">
         <div
           class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]"
         >
@@ -68,14 +73,16 @@
       <div
         class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
       >
-        {{> components/products/breadcrumb
+<!-- GSXD-PARTIAL:BEGIN file=product-details/linh-vat/detail.html include=components/products/breadcrumb idx=002 uid=9d07fef7 -->
+{{> components/products/breadcrumb
         parentHref="/products/linh-vat-phong-thuy/" parentLabel="Sản phẩm"
         currentLabel="PHỤ KIỆN NGÓI"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
       <!-- Product Detail Container -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=product-details/linh-vat/detail.html tag=section idx=002 uid=195823ab -->
+<section
         class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-6 xl:gap-8 pb-16 lg:pb-24 pt-4"
       >
         <!-- Left: Images -->
@@ -230,7 +237,8 @@
       </section>
 
       <!-- Product Description Section -->
-      <section class="w-[85%] max-w-[1320px] mx-auto pb-16 lg:pb-24">
+<!-- GSXD-SECTION:BEGIN file=product-details/linh-vat/detail.html tag=section idx=003 uid=c25a0dee -->
+<section class="w-[85%] max-w-[1320px] mx-auto pb-16 lg:pb-24">
         <div
           class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center"
         >
@@ -265,7 +273,8 @@
       </section>
 
       <!-- Locations Section -->
-      <section class="max-w-[1320px] w-[85%] mx-auto pb-16 lg:pb-24">
+<!-- GSXD-SECTION:BEGIN file=product-details/linh-vat/detail.html tag=section idx=004 uid=b2d4f46d -->
+<section class="max-w-[1320px] w-[85%] mx-auto pb-16 lg:pb-24">
         <h2
           class="text-[20px] md:text-3xl font-semibold text-secondary uppercaser text-center mb-10 md:mb-16"
           data-aos="fade-up"
@@ -386,12 +395,13 @@
           </div>
         </div>
       </section>
-      {{> components/products/works-simple showNav=true}} {{>
+<!-- GSXD-PARTIAL:BEGIN file=product-details/linh-vat/detail.html include=components/products/works-simple idx=003 uid=b927d347 -->
+{{> components/products/works-simple showNav=true}} {{>
       components/products/journey-video}} {{>
       components/products/recommendations}} {{> components/products/faq2}}
     </main>
-
-    {{> components/footer hideNewsletter=true}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/linh-vat/detail.html include=components/footer idx=004 uid=72201ba6 -->
+{{> components/footer hideNewsletter=true}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
@@ -469,5 +479,10 @@
       });
     </script>
     {{{stack "scripts"}}}
-  </body>
+<!-- GSXD-DEBUG:END type=PAGE file=product-details/linh-vat/detail.html uid=a9e47de4 -->
+</body>
 </html>
+
+
+
+

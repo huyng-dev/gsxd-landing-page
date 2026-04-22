@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=cart/thanh-toan.html uid=49c25150 -->
 <html lang="vi">
 
 <head>
@@ -12,11 +13,15 @@
 </head>
 
 <body data-page="checkout" class="bg-white">
-  {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=cart/thanh-toan.html include=components/header idx=001 uid=dfb2cc41 -->
+{{> components/header}}
+
+  <!-- GSXD-ELEMENT:BEGIN file=cart/thanh-toan.html tag=main idx=001 uid=b811790e -->
 
   <main class="bg-background-secondary min-h-screen py-10">
     <div class="w-[85%] max-w-[1320px] mx-auto pb-12 md:pb-16">
       <!-- Breadcrumb -->
+      <!-- GSXD-ELEMENT:BEGIN file=cart/thanh-toan.html tag=nav idx=001 uid=181a5d8f -->
       <nav class="flex items-center gap-2 text-sm text-primary mb-8 font-archivo letter-spacing-wider">
         <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
         <span>&gt;</span>
@@ -29,7 +34,8 @@
         <!-- Left: Checkout Forms -->
         <div class="w-full lg:w-[55%] space-y-8">
             <!-- Shipping Address -->
-            <section class="space-y-4">
+<!-- GSXD-SECTION:BEGIN file=cart/thanh-toan.html tag=section idx=001 uid=a144d7d4 -->
+<section class="space-y-4">
                 <h2 class="text-base font-bold text-primary uppercase tracking-wider">Địa chỉ giao hàng</h2>
                 <div class="space-y-4">
                     <input type="text" placeholder="Tên khách hàng" class="w-full bg-white border border-gray-200 rounded-md px-5 py-4 text-sm focus:outline-none focus:border-secondary transition-colors placeholder:text-gray-400">
@@ -53,7 +59,8 @@
             </section>
 
             <!-- Shipping Method -->
-            <section class="space-y-4">
+<!-- GSXD-SECTION:BEGIN file=cart/thanh-toan.html tag=section idx=002 uid=83e6a2cb -->
+<section class="space-y-4">
                 <h2 class="text-base font-bold text-primary uppercase tracking-wider">Phương thức vận chuyển</h2>
                 <div class="relative">
                     <select class="w-full appearance-none bg-white border border-gray-200 rounded-md px-5 py-4 text-sm focus:outline-none focus:border-secondary transition-colors text-gray-400">
@@ -68,7 +75,8 @@
             </section>
 
             <!-- Payment Method -->
-            <section class="space-y-4">
+<!-- GSXD-SECTION:BEGIN file=cart/thanh-toan.html tag=section idx=003 uid=80dfdf38 -->
+<section class="space-y-4">
                 <h2 class="text-base font-bold text-primary uppercase tracking-wider">Phương thức thanh toán</h2>
                 <div class="bg-white border border-gray-200 rounded-md overflow-hidden">
                     <label class="flex items-center gap-4 px-6 py-5 cursor-pointer hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0 group">
@@ -171,13 +179,19 @@
         </div>
       </div>
     </div>
-    {{> components/faq/faq-contact}}
+<!-- GSXD-PARTIAL:BEGIN file=cart/thanh-toan.html include=components/faq/faq-contact idx=002 uid=3a4b6029 -->
+{{> components/faq/faq-contact}}
   </main>
-
-  {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=cart/thanh-toan.html include=components/footer idx=003 uid=7c650e3e -->
+{{> components/footer}}
 
   <script type="module" src="/assets/js/main.js"></script>
 {{{stack "scripts"}}}
+<!-- GSXD-DEBUG:END type=PAGE file=cart/thanh-toan.html uid=49c25150 -->
 </body>
 
 </html>
+
+
+
+

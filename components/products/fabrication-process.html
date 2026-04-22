@@ -1,4 +1,6 @@
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/fabrication-process.html uid=85016928 -->
 <!-- CÔNG ĐOẠN CHẾ TÁC SECTION -->
+<!-- GSXD-SECTION:BEGIN file=components/products/fabrication-process.html tag=section idx=001 uid=87e0010d -->
 <section
   class="w-full py-8 md:py-16 bg-background-secondary overflow-hidden"
   data-aos="fade-up"
@@ -178,7 +180,39 @@
   />
 </div>
 
-{{#push "scripts"}}
+{{#push "styles"}}
+<style>
+  .fabrication-pagination {
+    align-items: center;
+    gap: 12px;
+  }
+
+  .fabrication-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 !important;
+    border-radius: 9999px;
+    background-color: rgba(199, 110, 0, 0.3);
+    background-image: none !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition:
+      transform 0.2s ease,
+      background-color 0.2s ease,
+      width 0.2s ease;
+  }
+
+  .fabrication-pagination .swiper-pagination-bullet-active {
+    width: 12px;
+    background-color: #c76e00 !important;
+    opacity: 1 !important;
+  }
+</style>
+{{/push}} {{#push "scripts"}}
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const lightbox = document.getElementById("fabrication-lightbox");
@@ -245,3 +279,4 @@
   });
 </script>
 {{/push}}
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/fabrication-process.html uid=85016928 -->

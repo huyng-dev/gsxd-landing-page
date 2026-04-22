@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=product-details/ngoi-am-duong/detail.html uid=77679751 -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -22,11 +23,15 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-am-duong/detail.html include=components/header idx=001 uid=fe89a5e6 -->
+{{> components/header}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=product-details/ngoi-am-duong/detail.html tag=main idx=001 uid=b668b9d6 -->
 
     <main class="flex-grow bg-background-secondary pb-20">
       <!-- Top Banner for Detail -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=product-details/ngoi-am-duong/detail.html tag=section idx=001 uid=4bef14dd -->
+<section
         class="relative w-full h-[180px] md:h-[210px] flex items-center justify-center overflow-hidden"
       >
         <div class="absolute inset-0 z-0">
@@ -66,13 +71,15 @@
       <div
         class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
       >
-        {{> components/products/breadcrumb parentHref="/products/ngoi-am-duong/"
+<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-am-duong/detail.html include=components/products/breadcrumb idx=002 uid=30a03d3c -->
+{{> components/products/breadcrumb parentHref="/products/ngoi-am-duong/"
         parentLabel="Sản phẩm" currentLabel="NGÓI ÂM DƯƠNG"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
       <!-- Product Detail Container -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=product-details/ngoi-am-duong/detail.html tag=section idx=002 uid=0b9929e5 -->
+<section
         class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-6 xl:gap-8 pb-16 lg:pb-24 pt-4"
       >
         <!-- Left: Images -->
@@ -210,11 +217,12 @@
           </div>
         </div>
       </section>
-
-      {{> components/products/journey-video hideTitle=true}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-am-duong/detail.html include=components/products/journey-video idx=003 uid=5158b735 -->
+{{> components/products/journey-video hideTitle=true}}
 
       <!-- Sizes Options Section -->
-      <section class="w-[85%] max-w-[1320px] mx-auto pb-12" data-aos="fade-up">
+<!-- GSXD-SECTION:BEGIN file=product-details/ngoi-am-duong/detail.html tag=section idx=003 uid=8b1aee34 -->
+<section class="w-[85%] max-w-[1320px] mx-auto pb-12" data-aos="fade-up">
         <h2
           class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-12 uppercase"
         >
@@ -230,7 +238,8 @@
       </section>
 
       <!-- Color Palette Section -->
-      <section class="w-[85%] max-w-[1320px] mx-auto pb-24" data-aos="fade-up">
+<!-- GSXD-SECTION:BEGIN file=product-details/ngoi-am-duong/detail.html tag=section idx=004 uid=cc7731ca -->
+<section class="w-[85%] max-w-[1320px] mx-auto pb-24" data-aos="fade-up">
         <h2
           class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-12 uppercase"
         >
@@ -359,14 +368,15 @@
           </div>
         </div>
       </section>
-
-      {{> components/products/weight-calculator}} {{>
+<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-am-duong/detail.html include=components/products/weight-calculator idx=004 uid=dea0ad76 -->
+{{> components/products/weight-calculator}} {{>
       components/products/applications}} {{>
       components/products/installation-guide}} {{> components/products/works}}
-      {{> components/products/recommendations}} {{> components/products/faq2}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-am-duong/detail.html include=components/products/recommendations idx=005 uid=035d0e53 -->
+{{> components/products/recommendations}} {{> components/products/faq2}}
     </main>
-
-    {{> components/footer hideNewsletter=true}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-am-duong/detail.html include=components/footer idx=006 uid=5bba9b73 -->
+{{> components/footer hideNewsletter=true}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
@@ -375,5 +385,10 @@
       AOS.init({ duration: 800, once: true, offset: 100 });
     </script>
     {{{stack "scripts"}}}
-  </body>
+<!-- GSXD-DEBUG:END type=PAGE file=product-details/ngoi-am-duong/detail.html uid=77679751 -->
+</body>
 </html>
+
+
+
+

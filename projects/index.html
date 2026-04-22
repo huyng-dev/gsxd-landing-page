@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=projects/index.html uid=78af7e27 -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -36,14 +37,19 @@
     {{{stack "styles"}}}
 </head>
   <body class="min-h-screen flex flex-col bg-background-secondary">
-    {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=components/header idx=001 uid=62fc0222 -->
+{{> components/header}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=projects/index.html tag=main idx=001 uid=9724f38f -->
 
     <main class="flex-grow">
-      {{> projects/partials/list}}
-      {{> projects/partials/catalog-section}}
+<!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=projects/partials/list idx=002 uid=335a2013 -->
+{{> projects/partials/list}}
+<!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=projects/partials/catalog-section idx=003 uid=3aed97cc -->
+{{> projects/partials/catalog-section}}
     </main>
-
-    {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=components/footer idx=004 uid=a370b289 -->
+{{> components/footer}}
 
     <script
       type="module"
@@ -76,5 +82,10 @@
       }
     </script>
     {{{stack "scripts"}}}
+<!-- GSXD-DEBUG:END type=PAGE file=projects/index.html uid=78af7e27 -->
 </body>
 </html>
+
+
+
+

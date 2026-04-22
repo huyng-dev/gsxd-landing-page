@@ -1,3 +1,5 @@
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=home/partials/product-section.html uid=a65b0c53 -->
+<!-- GSXD-SECTION:BEGIN file=home/partials/product-section.html tag=section idx=001 uid=479f2a8c -->
 <section class="bg-neutral-2 {{sectionClass}}" data-product-section>
   <div class="w-[85%] max-w-[1320px] mx-auto">
     <div class="flex justify-between items-center mb-6 lg:mb-12" data-aos="fade-up">
@@ -12,7 +14,8 @@
 
     <div class="lg:hidden" data-product-carousel-shell>
       <div class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide" data-product-carousel>
-        {{> @partial-block}}
+<!-- GSXD-PARTIAL:BEGIN file=home/partials/product-section.html include=@partial-block idx=001 uid=015e7802 -->
+{{> @partial-block}}
       </div>
 
       <div class="mt-3 flex justify-center gap-[3px]" aria-label="Product mobile pagination">
@@ -76,3 +79,7 @@
     </div>
   </div>
 </section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=home/partials/product-section.html uid=a65b0c53 -->
+
+
+

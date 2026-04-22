@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=product-details/gach-co-bat-trang/detail-300x100x30.html uid=b4b8b1d4 -->
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -35,11 +36,15 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html include=components/header idx=001 uid=1561d900 -->
+{{> components/header}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html tag=main idx=001 uid=2d5bf9f8 -->
 
     <main class="flex-grow bg-background-secondary pb-20">
       <!-- Top Banner for Detail -->
-      <section class="relative w-full h-[180px] md:h-[210px] flex items-center justify-center overflow-hidden">
+<!-- GSXD-SECTION:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html tag=section idx=001 uid=be62ec4a -->
+<section class="relative w-full h-[180px] md:h-[210px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
           <img
             src="/assets/images/detail-banner.png"
@@ -67,12 +72,14 @@
 
             <!-- Sub Breadcrumb -->
       <div class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10">
-        {{> components/products/breadcrumb parentHref="/products/gach-co-bat-trang/" parentLabel="Sản phẩm" currentLabel="Gạch cổ Bát Tràng"}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html include=components/products/breadcrumb idx=002 uid=7715e615 -->
+{{> components/products/breadcrumb parentHref="/products/gach-co-bat-trang/" parentLabel="Sản phẩm" currentLabel="Gạch cổ Bát Tràng"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
       <!-- Product Detail Container -->
-      <section class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-6 xl:gap-8 pb-16 lg:pb-24 pt-4">
+<!-- GSXD-SECTION:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html tag=section idx=002 uid=1c7b918a -->
+<section class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-6 xl:gap-8 pb-16 lg:pb-24 pt-4">
         <!-- Left: Images -->
         <div class="flex flex-col gap-5 lg:col-span-3">
           <!-- Main Image -->
@@ -173,26 +180,31 @@
           </div>
         </div>
       </section>
-
-      {{> components/products/quantity-calculator 
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html include=components/products/quantity-calculator idx=003 uid=63574431 -->
+{{> components/products/quantity-calculator 
         image="/assets/images/gach-bat-size-1.png"
         showInfo=true
         label1="Gạch"
         rate1="32 viên/m²"
       }}
-
-      {{> components/products/fabrication-process}}
-      {{> components/products/journey-video hideTitle=true}}
-      {{> components/products/trang-tri-process}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html include=components/products/fabrication-process idx=004 uid=45d44fa6 -->
+{{> components/products/fabrication-process}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html include=components/products/journey-video idx=005 uid=2fa9c521 -->
+{{> components/products/journey-video hideTitle=true}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html include=components/products/trang-tri-process idx=006 uid=3ec495a2 -->
+{{> components/products/trang-tri-process}}
       <hr class="mb-16" />
-      {{> components/products/works-simple showNav=true}}
-      {{> components/products/recommendations}}
-      {{> components/products/faq2}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html include=components/products/works-simple idx=007 uid=d2c3f354 -->
+{{> components/products/works-simple showNav=true}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html include=components/products/recommendations idx=008 uid=e6500a25 -->
+{{> components/products/recommendations}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html include=components/products/faq2 idx=009 uid=6f087ae7 -->
+{{> components/products/faq2}}
 
 
     </main>
-
-    {{> components/footer hideNewsletter=true}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-co-bat-trang/detail-300x100x30.html include=components/footer idx=010 uid=b1b2f746 -->
+{{> components/footer hideNewsletter=true}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script
@@ -289,5 +301,10 @@
       });
     </script>
     {{{stack "scripts"}}}
+<!-- GSXD-DEBUG:END type=PAGE file=product-details/gach-co-bat-trang/detail-300x100x30.html uid=b4b8b1d4 -->
 </body>
 </html>
+
+
+
+

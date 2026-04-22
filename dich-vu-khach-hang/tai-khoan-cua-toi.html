@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=dich-vu-khach-hang/tai-khoan-cua-toi.html uid=f911a0ba -->
 <html lang="vi">
 
 <head>
@@ -12,23 +13,35 @@
 </head>
 
 <body data-page="customer-service" class="bg-white">
-  {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-khoan-cua-toi.html include=components/header idx=001 uid=4f1f64be -->
+{{> components/header}}
+
+  <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/tai-khoan-cua-toi.html tag=main idx=001 uid=cff30e7c -->
 
   <main class="bg-background-secondary min-h-screen">
     <div class="w-[85%] max-w-[1320px] mx-auto">
-      {{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Tài khoản của tôi"}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-khoan-cua-toi.html include=dich-vu-khach-hang/partials/customer-service/breadcrumb idx=002 uid=fae266fc -->
+{{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Tài khoản của tôi"}}
       
       <div class="flex flex-col lg:flex-row gap-12 mb-6 lg:mb-12">
-        {{> dich-vu-khach-hang/partials/customer-service/sidebar activeAccount=true}}
-        {{> dich-vu-khach-hang/partials/customer-service/account-content}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-khoan-cua-toi.html include=dich-vu-khach-hang/partials/customer-service/sidebar idx=003 uid=f6058b04 -->
+{{> dich-vu-khach-hang/partials/customer-service/sidebar activeAccount=true}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-khoan-cua-toi.html include=dich-vu-khach-hang/partials/customer-service/account-content idx=004 uid=ff133bbf -->
+{{> dich-vu-khach-hang/partials/customer-service/account-content}}
       </div>
-      {{> components/faq/faq-contact}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-khoan-cua-toi.html include=components/faq/faq-contact idx=005 uid=31fb5ad8 -->
+{{> components/faq/faq-contact}}
     </div>
   </main>
-
-  {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-khoan-cua-toi.html include=components/footer idx=006 uid=5d0ecc8c -->
+{{> components/footer}}
   <script type="module" src="/assets/js/main.js"></script>
 {{{stack "scripts"}}}
+<!-- GSXD-DEBUG:END type=PAGE file=dich-vu-khach-hang/tai-khoan-cua-toi.html uid=f911a0ba -->
 </body>
 
 </html>
+
+
+
+

@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=showroom/index.html uid=4d98e5ed -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -32,16 +33,23 @@
     {{{stack "styles"}}}
 </head>
   <body class="min-h-screen flex flex-col bg-primary text-white font-archivo">
-    {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=components/header idx=001 uid=5b0f8819 -->
+{{> components/header}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=showroom/index.html tag=main idx=001 uid=b2197621 -->
 
     <main class="flex-grow">
-      {{> showroom/partials/top-banner}}
-      {{> showroom/partials/showroom-main-content}}
-      {{> showroom/partials/room-display-content}}
-      {{> showroom/partials/showroom-map-section}}
+<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/top-banner idx=002 uid=aeef3329 -->
+{{> showroom/partials/top-banner}}
+<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/showroom-main-content idx=003 uid=1d6c2176 -->
+{{> showroom/partials/showroom-main-content}}
+<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/room-display-content idx=004 uid=857829cd -->
+{{> showroom/partials/room-display-content}}
+<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/showroom-map-section idx=005 uid=8d5eca96 -->
+{{> showroom/partials/showroom-map-section}}
     </main>
-
-    {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=components/footer idx=006 uid=8a4370e4 -->
+{{> components/footer}}
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -78,5 +86,10 @@
       }
     </script>
     {{{stack "scripts"}}}
+<!-- GSXD-DEBUG:END type=PAGE file=showroom/index.html uid=4d98e5ed -->
 </body>
 </html>
+
+
+
+

@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=factory/index.html uid=b137d4e1 -->
 <html lang="vi">
 
 <head>
@@ -14,18 +15,27 @@
 </head>
 
 <body data-page="factory" class="bg-white min-h-screen flex flex-col">
-    {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=factory/index.html include=components/header idx=001 uid=5a377897 -->
+{{> components/header}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=factory/index.html tag=main idx=001 uid=6dd6525e -->
 
     <main class="flex-grow">
-        {{> factory/partials/hero}}
-        {{> factory/partials/intro}}
-        {{> factory/partials/gallery-1}}
-        {{> factory/partials/process}}
-        {{> factory/partials/material}}
-        {{> factory/partials/gallery-2}}
+<!-- GSXD-PARTIAL:BEGIN file=factory/index.html include=factory/partials/hero idx=002 uid=48a64da0 -->
+{{> factory/partials/hero}}
+<!-- GSXD-PARTIAL:BEGIN file=factory/index.html include=factory/partials/intro idx=003 uid=d6945a97 -->
+{{> factory/partials/intro}}
+<!-- GSXD-PARTIAL:BEGIN file=factory/index.html include=factory/partials/gallery-1 idx=004 uid=e43a5be6 -->
+{{> factory/partials/gallery-1}}
+<!-- GSXD-PARTIAL:BEGIN file=factory/index.html include=factory/partials/process idx=005 uid=82f01aa4 -->
+{{> factory/partials/process}}
+<!-- GSXD-PARTIAL:BEGIN file=factory/index.html include=factory/partials/material idx=006 uid=f5b707be -->
+{{> factory/partials/material}}
+<!-- GSXD-PARTIAL:BEGIN file=factory/index.html include=factory/partials/gallery-2 idx=007 uid=0a4dd976 -->
+{{> factory/partials/gallery-2}}
     </main>
-
-    {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=factory/index.html include=components/footer idx=008 uid=65d2682e -->
+{{> components/footer}}
 
     <script type="module" src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -38,6 +48,11 @@
         });
     </script>
 {{{stack "scripts"}}}
+<!-- GSXD-DEBUG:END type=PAGE file=factory/index.html uid=b137d4e1 -->
 </body>
 
 </html>
+
+
+
+

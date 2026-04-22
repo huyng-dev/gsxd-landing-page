@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=dich-vu-khach-hang/quy-trinh-dat-hang.html uid=db23615c -->
 <html lang="vi">
 
 <head>
@@ -12,23 +13,35 @@
 </head>
 
 <body data-page="customer-service" class="bg-white">
-  {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/quy-trinh-dat-hang.html include=components/header idx=001 uid=061c0546 -->
+{{> components/header}}
+
+  <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/quy-trinh-dat-hang.html tag=main idx=001 uid=8417d715 -->
 
   <main class="bg-background-secondary min-h-screen font-archivo">
     <div class="w-[85%] max-w-[1320px] mx-auto">
-      {{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Quy trình đặt hàng"}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/quy-trinh-dat-hang.html include=dich-vu-khach-hang/partials/customer-service/breadcrumb idx=002 uid=2a0b6f95 -->
+{{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Quy trình đặt hàng"}}
       
       <div class="flex flex-col lg:flex-row gap-12 mb-6 lg:mb-12">
-        {{> dich-vu-khach-hang/partials/customer-service/sidebar activeProcess=true}}
-        {{> dich-vu-khach-hang/partials/customer-service/order-process-content}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/quy-trinh-dat-hang.html include=dich-vu-khach-hang/partials/customer-service/sidebar idx=003 uid=c272aae5 -->
+{{> dich-vu-khach-hang/partials/customer-service/sidebar activeProcess=true}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/quy-trinh-dat-hang.html include=dich-vu-khach-hang/partials/customer-service/order-process-content idx=004 uid=39630241 -->
+{{> dich-vu-khach-hang/partials/customer-service/order-process-content}}
       </div>
-      {{> components/faq/faq-contact}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/quy-trinh-dat-hang.html include=components/faq/faq-contact idx=005 uid=d8e32742 -->
+{{> components/faq/faq-contact}}
     </div>
   </main>
-
-  {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/quy-trinh-dat-hang.html include=components/footer idx=006 uid=6402d7be -->
+{{> components/footer}}
   <script type="module" src="/assets/js/main.js"></script>
 {{{stack "scripts"}}}
+<!-- GSXD-DEBUG:END type=PAGE file=dich-vu-khach-hang/quy-trinh-dat-hang.html uid=db23615c -->
 </body>
 
 </html>
+
+
+
+

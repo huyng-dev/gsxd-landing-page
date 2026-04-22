@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=news/detail.html uid=474da354 -->
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -31,17 +32,25 @@
         data-page="news-detail"
         class="min-h-screen flex flex-col bg-background-secondary"
     >
-        {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=news/detail.html include=components/header idx=001 uid=bb5d13fc -->
+{{> components/header}}
+
+        <!-- GSXD-ELEMENT:BEGIN file=news/detail.html tag=main idx=001 uid=cff47315 -->
 
         <main class="flex-grow">
-            {{> news/partials/detail-hero}}
-            {{> news/partials/detail-content}}
-            {{> news/partials/catalog-section}}
-            {{> news/partials/author-section}}
-            {{> news/partials/detail-related}}
+<!-- GSXD-PARTIAL:BEGIN file=news/detail.html include=news/partials/detail-hero idx=002 uid=4e624e71 -->
+{{> news/partials/detail-hero}}
+<!-- GSXD-PARTIAL:BEGIN file=news/detail.html include=news/partials/detail-content idx=003 uid=f9f659e3 -->
+{{> news/partials/detail-content}}
+<!-- GSXD-PARTIAL:BEGIN file=news/detail.html include=news/partials/catalog-section idx=004 uid=05d27766 -->
+{{> news/partials/catalog-section}}
+<!-- GSXD-PARTIAL:BEGIN file=news/detail.html include=news/partials/author-section idx=005 uid=1bc3f39a -->
+{{> news/partials/author-section}}
+<!-- GSXD-PARTIAL:BEGIN file=news/detail.html include=news/partials/detail-related idx=006 uid=38918c4e -->
+{{> news/partials/detail-related}}
         </main>
-
-        {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=news/detail.html include=components/footer idx=007 uid=ce9ac118 -->
+{{> components/footer}}
 
         <script
             type="module"
@@ -57,5 +66,10 @@
             });
         </script>
         {{{stack "scripts"}}}
+<!-- GSXD-DEBUG:END type=PAGE file=news/detail.html uid=474da354 -->
 </body>
 </html>
+
+
+
+

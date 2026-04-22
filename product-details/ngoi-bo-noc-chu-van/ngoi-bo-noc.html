@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html uid=e0a98bd4 -->
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -22,11 +23,15 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html include=components/header idx=001 uid=d9375693 -->
+{{> components/header}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html tag=main idx=001 uid=962ba171 -->
 
     <main class="flex-grow bg-background-secondary pb-20">
       <!-- Top Banner for Detail -->
-      <section class="relative w-full">
+<!-- GSXD-SECTION:BEGIN file=product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html tag=section idx=001 uid=f000e144 -->
+<section class="relative w-full">
         <div
           class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]"
         >
@@ -68,13 +73,15 @@
       <div
         class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
       >
-        {{> components/products/breadcrumb parentHref="/products/phu-kien-ngoi/"
+<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html include=components/products/breadcrumb idx=002 uid=991639b5 -->
+{{> components/products/breadcrumb parentHref="/products/phu-kien-ngoi/"
         parentLabel="Sản phẩm" currentLabel="PHỤ KIỆN NGÓI"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
       <!-- Product Detail Container -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html tag=section idx=002 uid=f1df8e1e -->
+<section
         class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-6 xl:gap-8 pb-16 lg:pb-24 pt-4"
       >
         <!-- Left: Images -->
@@ -227,7 +234,8 @@
       </section>
 
       <!-- Product Description Section -->
-      <section class="w-[85%] max-w-[1320px] mx-auto pb-16 lg:pb-24">
+<!-- GSXD-SECTION:BEGIN file=product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html tag=section idx=003 uid=69b200f2 -->
+<section class="w-[85%] max-w-[1320px] mx-auto pb-16 lg:pb-24">
         <div
           class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center"
         >
@@ -260,14 +268,14 @@
           </div>
         </div>
       </section>
-
-      {{> components/products/works-simple showNav=true}} {{>
+<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html include=components/products/works-simple idx=003 uid=932f3c38 -->
+{{> components/products/works-simple showNav=true}} {{>
       components/products/outstanding-value}} {{>
       components/products/journey-video}} {{>
       components/products/recommendations}} {{> components/products/faq2}}
     </main>
-
-    {{> components/footer hideNewsletter=true}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html include=components/footer idx=004 uid=c963242d -->
+{{> components/footer hideNewsletter=true}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
@@ -345,5 +353,10 @@
       });
     </script>
     {{{stack "scripts"}}}
-  </body>
+<!-- GSXD-DEBUG:END type=PAGE file=product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html uid=e0a98bd4 -->
+</body>
 </html>
+
+
+
+

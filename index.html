@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=index.html uid=f6013a00 -->
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -16,17 +17,28 @@
   </head>
 
   <body data-page="index" class="bg-white">
-    {{> components/header isHome=true}}
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=components/header idx=001 uid=e9c7744e -->
+{{> components/header isHome=true}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=index.html tag=main idx=001 uid=810d0852 -->
 
     <main>
-      {{> home/partials/banner}}
-      {{> home/partials/works}}
-      {{> home/partials/partners}}
-      {{> home/partials/products-ngoi-am-duong}}
-      {{> home/partials/products-ngoi-hai}}
-      {{> home/partials/products-gach-hoa}}
-      {{> home/partials/thank-you}}
-      <section class="bg-neutral-2 pt-8 lg:pt-20 overflow-hidden">
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=home/partials/banner idx=002 uid=fdf58c1f -->
+{{> home/partials/banner}}
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=home/partials/works idx=003 uid=e7937b41 -->
+{{> home/partials/works}}
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=home/partials/partners idx=004 uid=62ee0fdc -->
+{{> home/partials/partners}}
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=home/partials/products-ngoi-am-duong idx=005 uid=5ad3adb5 -->
+{{> home/partials/products-ngoi-am-duong}}
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=home/partials/products-ngoi-hai idx=006 uid=34ee4ed8 -->
+{{> home/partials/products-ngoi-hai}}
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=home/partials/products-gach-hoa idx=007 uid=87791a07 -->
+{{> home/partials/products-gach-hoa}}
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=home/partials/thank-you idx=008 uid=2798b7a5 -->
+{{> home/partials/thank-you}}
+<!-- GSXD-SECTION:BEGIN file=index.html tag=section idx=001 uid=ae14986d -->
+<section class="bg-neutral-2 pt-8 lg:pt-20 overflow-hidden">
         <div class="w-[85%] max-w-[1320px] mx-auto mb-5 lg:mb-12">
           <h2
             class="text-center text-secondary text-[20px] leading-[24px] md:text-left lg:text-left lg:text-4xl font-bold uppercase"
@@ -35,14 +47,18 @@
             Giải thưởng & thành tựu
           </h2>
         </div>
-        {{> components/home-awards}}
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=components/home-awards idx=009 uid=302f341c -->
+{{> components/home-awards}}
       </section>
-      {{> home/partials/press}}
-      {{> home/partials/why-choose-us}}
-      {{> home/partials/showroom}}
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=home/partials/press idx=010 uid=0a950cf9 -->
+{{> home/partials/press}}
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=home/partials/why-choose-us idx=011 uid=73b2399a -->
+{{> home/partials/why-choose-us}}
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=home/partials/showroom idx=012 uid=6a35fe4d -->
+{{> home/partials/showroom}}
     </main>
-
-    {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=index.html include=components/footer idx=013 uid=22bf9385 -->
+{{> components/footer}}
 
     <script type="module" src="/assets/js/main.js"></script>
 
@@ -56,5 +72,9 @@
         offset: 100,
       });
     </script>
-  </body>
+<!-- GSXD-DEBUG:END type=PAGE file=index.html uid=f6013a00 -->
+</body>
 </html>
+
+
+

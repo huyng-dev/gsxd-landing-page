@@ -1,12 +1,16 @@
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=products/den-gom-su/partials/product-list.html uid=a0808b53 -->
+<!-- GSXD-SECTION:BEGIN file=products/den-gom-su/partials/product-list.html tag=section idx=001 uid=06fc1bfc -->
 <section class="w-full pb-16 animate-fade-in-up" data-product-section>
   <div class="lg:hidden" data-product-carousel-shell>
     <div
       class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
       data-product-carousel
     >
+      <!-- GSXD-ELEMENT:BEGIN file=products/den-gom-su/partials/product-list.html tag=article idx=001 uid=4e32b1fe -->
       <article class="flex-shrink-0 w-full snap-start pb-1" data-product-slide>
         <div class="grid grid-cols-2 gap-4">
-          {{> components/products/product-card
+<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/partials/product-list.html include=components/products/product-card idx=001 uid=3fc24e35 -->
+{{> components/products/product-card
           href="/products/den-gom-su/detail.html"
           image="/assets/images/ngoi-01.jpg" alt="Riềm Âm Dương Sen Bầu"
           title="Riềm âm dương sen bầu" code="MSP: 1234RDS" price="675.000 đ/m2"
@@ -49,9 +53,12 @@
         </div>
       </article>
 
+      <!-- GSXD-ELEMENT:BEGIN file=products/den-gom-su/partials/product-list.html tag=article idx=002 uid=827e929b -->
+
       <article class="flex-shrink-0 w-full snap-start pb-1" data-product-slide>
         <div class="grid grid-cols-2 gap-4">
-          {{> components/products/product-card
+<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/partials/product-list.html include=components/products/product-card idx=002 uid=a8bfaa9c -->
+{{> components/products/product-card
           href="/products/den-gom-su/detail.html"
           image="/assets/images/ngoi-01.jpg" alt="Riềm Âm Dương Sen Bầu"
           title="Riềm âm dương sen bầu" code="MSP: 1234RDS" price="675.000 đ/m2"
@@ -119,7 +126,8 @@
     data-aos="fade-up"
     data-aos-delay="200"
   >
-    {{> components/products/product-card href="/products/den-gom-su/detail.html"
+<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/partials/product-list.html include=components/products/product-card idx=003 uid=3404f9d7 -->
+{{> components/products/product-card href="/products/den-gom-su/detail.html"
     image="/assets/images/ngoi-01.jpg" alt="Riềm Âm Dương Sen Bầu" title="Riềm
     âm dương sen bầu" code="MSP: 1234RDS" price="675.000 đ/m2" pricePrefix="Giá"
     showOverlay=true}} {{> components/products/product-card
@@ -205,3 +213,7 @@
     </button>
   </div>
 </section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=products/den-gom-su/partials/product-list.html uid=a0808b53 -->
+
+
+

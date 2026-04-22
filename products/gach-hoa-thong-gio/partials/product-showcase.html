@@ -1,13 +1,21 @@
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=products/gach-hoa-thong-gio/partials/product-showcase.html uid=2df7259f -->
 <!-- Breadcrumb + Product Grid -->
+<!-- GSXD-SECTION:BEGIN file=products/gach-hoa-thong-gio/partials/product-showcase.html tag=section idx=001 uid=7f692414 -->
 <section class="w-full gach-hoa-product-showcase-section">
   <div
     class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
   >
-    {{> components/products/breadcrumb currentLabel="Gạch Hoa Thông Gió"}}
+<!-- GSXD-PARTIAL:BEGIN file=products/gach-hoa-thong-gio/partials/product-showcase.html include=components/products/breadcrumb idx=001 uid=90a443d4 -->
+{{> components/products/breadcrumb currentLabel="Gạch Hoa Thông Gió"}}
   </div>
 
   <div class="gach-hoa-product-grid-shell">
-    {{> components/products/product-filter}} {{>
+<!-- GSXD-PARTIAL:BEGIN file=products/gach-hoa-thong-gio/partials/product-showcase.html include=components/products/product-filter idx=002 uid=1413a5ed -->
+{{> components/products/product-filter}} {{>
     components/products/product-grid category="gach-hoa-thong-gio"}}
   </div>
 </section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=products/gach-hoa-thong-gio/partials/product-showcase.html uid=2df7259f -->
+
+
+

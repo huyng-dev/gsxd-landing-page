@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/lan-can-gom-su/index.html uid=99a940ad -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -195,11 +196,15 @@
     data-page="products"
     class="page-lan-can-gom-su min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}} {{> components/catalog-button}}
+<!-- GSXD-PARTIAL:BEGIN file=products/lan-can-gom-su/index.html include=components/header idx=001 uid=fdd91a2b -->
+{{> components/header}} {{> components/catalog-button}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=products/lan-can-gom-su/index.html tag=main idx=001 uid=f1c42221 -->
 
     <main class="flex-grow">
       <!-- Banner Section -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/lan-can-gom-su/index.html tag=section idx=001 uid=3547502b -->
+<section
         class="relative h-[320px] md:h-[70vh] md:min-h-[500px] md:max-h-[740px] lg:h-[663px] flex items-center justify-center text-neutral-1 overflow-hidden"
       >
         <!-- Background Image -->
@@ -248,7 +253,8 @@
         </div>
       </section>
       <!-- Danh Mục Sản Phẩm Section 1 -->
-      <section class="w-full md:pb-16 pt-[30px]">
+<!-- GSXD-SECTION:BEGIN file=products/lan-can-gom-su/index.html tag=section idx=002 uid=968c89e3 -->
+<section class="w-full md:pb-16 pt-[30px]">
         <!-- Section Title -->
         <div
           class="flex items-center justify-center mt-0 mb-[30px] lg:mt-8 lg:mb-16"
@@ -490,7 +496,8 @@
       </section>
 
       <!-- Danh Mục Sản Phẩm Section 2 -->
-      <section class="w-full pb-[30px] md:pb-16">
+<!-- GSXD-SECTION:BEGIN file=products/lan-can-gom-su/index.html tag=section idx=003 uid=60a5f38a -->
+<section class="w-full pb-[30px] md:pb-16">
         <div
           class="bg-[#EBCEC1] opacity-80 p-6 lg:p-10"
           style="margin-right: max(0px, calc((100% - 1320px) / 2))"
@@ -707,7 +714,8 @@
         </div>
       </section>
       <!-- Product List Section -->
-      <section class="relative mx-auto pb-10 lg:pb-16 overflow-visible">
+<!-- GSXD-SECTION:BEGIN file=products/lan-can-gom-su/index.html tag=section idx=004 uid=f74c8a72 -->
+<section class="relative mx-auto pb-10 lg:pb-16 overflow-visible">
         <div class="relative w-[85%] max-w-[1320px] mx-auto z-10">
           <div
             class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 gap-y-4 lg:gap-y-6"
@@ -811,20 +819,22 @@
           </div>
         </div>
       </section>
-
-      {{> components/products/outstanding-value}} {{>
+<!-- GSXD-PARTIAL:BEGIN file=products/lan-can-gom-su/index.html include=components/products/outstanding-value idx=002 uid=fde3832f -->
+{{> components/products/outstanding-value}} {{>
       components/products/journey-video}} {{> components/products/works}}
 
       <!-- FAQ Section -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/lan-can-gom-su/index.html tag=section idx=005 uid=b78d53e2 -->
+<section
         class="w-full relative pb-16 bg-background-secondary overflow-visible"
         data-aos="fade-up"
       >
-        {{> components/products/faq-content}}
+<!-- GSXD-PARTIAL:BEGIN file=products/lan-can-gom-su/index.html include=components/products/faq-content idx=003 uid=d616c5db -->
+{{> components/products/faq-content}}
       </section>
     </main>
-
-    {{> components/footer hideNewsletter=true}}
+<!-- GSXD-PARTIAL:BEGIN file=products/lan-can-gom-su/index.html include=components/footer idx=004 uid=030d4643 -->
+{{> components/footer hideNewsletter=true}}
 
     <script type="module" src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -833,5 +843,10 @@
       AOS.init({ duration: 800, once: true, offset: 100 });
     </script>
     {{{stack "scripts"}}}
-  </body>
+<!-- GSXD-DEBUG:END type=PAGE file=products/lan-can-gom-su/index.html uid=99a940ad -->
+</body>
 </html>
+
+
+
+

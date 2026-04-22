@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=product-details/gach-trang-tri/detail.html uid=ffe21627 -->
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -22,11 +23,15 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-trang-tri/detail.html include=components/header idx=001 uid=f9d5e492 -->
+{{> components/header}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=product-details/gach-trang-tri/detail.html tag=main idx=001 uid=6f9361fc -->
 
     <main class="flex-grow bg-background-secondary pb-20">
       <!-- Top Banner for Detail -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=product-details/gach-trang-tri/detail.html tag=section idx=001 uid=05f9dbad -->
+<section
         class="relative w-full h-[180px] md:h-[210px] flex items-center justify-center overflow-hidden"
       >
         <div class="absolute inset-0 z-0">
@@ -66,14 +71,16 @@
       <div
         class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
       >
-        {{> components/products/breadcrumb
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-trang-tri/detail.html include=components/products/breadcrumb idx=002 uid=3e7c26f5 -->
+{{> components/products/breadcrumb
         parentHref="/products/gach-trang-tri/" parentLabel="Sản phẩm"
         currentLabel="Gạch Trang Trí"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
       <!-- Product Detail Container -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=product-details/gach-trang-tri/detail.html tag=section idx=002 uid=80670e18 -->
+<section
         class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-6 xl:gap-8 pb-16 lg:pb-24 pt-4"
       >
         <!-- Left: Images -->
@@ -211,19 +218,20 @@
           </div>
         </div>
       </section>
-
-      {{> components/products/quantity-calculator
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-trang-tri/detail.html include=components/products/quantity-calculator idx=003 uid=464209c2 -->
+{{> components/products/quantity-calculator
       image="/assets/images/gtt-size.png"}} {{>
       components/products/fabrication-process}} {{>
       components/products/journey-video hideTitle=true}} {{>
       components/products/trang-tri-process}}
       <hr class="mb-16" />
-      {{> components/products/works-simple showNav=true}} {{>
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-trang-tri/detail.html include=components/products/works-simple idx=004 uid=3e8f551d -->
+{{> components/products/works-simple showNav=true}} {{>
       components/products/recommendations showDecor=true}} {{>
       components/products/faq2}}
     </main>
-
-    {{> components/footer hideNewsletter=true}}
+<!-- GSXD-PARTIAL:BEGIN file=product-details/gach-trang-tri/detail.html include=components/footer idx=005 uid=61d8477c -->
+{{> components/footer hideNewsletter=true}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
@@ -344,5 +352,10 @@
       });
     </script>
     {{{stack "scripts"}}}
-  </body>
+<!-- GSXD-DEBUG:END type=PAGE file=product-details/gach-trang-tri/detail.html uid=ffe21627 -->
+</body>
 </html>
+
+
+
+

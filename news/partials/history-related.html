@@ -1,4 +1,6 @@
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=news/partials/history-related.html uid=8729446f -->
 <!-- Related Articles & Recently Viewed Products -->
+<!-- GSXD-SECTION:BEGIN file=news/partials/history-related.html tag=section idx=001 uid=08e3f8d9 -->
 <section class="pb-24 md:pb-32">
   <div class="w-[85%] max-w-[1320px] mx-auto">
     <!-- BÀI VIẾT ĐÃ XEM LIÊN QUAN -->
@@ -9,9 +11,10 @@
       >
         Bài viết đã xem liên quan
       </h2>
-
-      {{> news/partials/related-articles-grid}}
-      {{> news/partials/related-articles-pagination}}
+<!-- GSXD-PARTIAL:BEGIN file=news/partials/history-related.html include=news/partials/related-articles-grid idx=001 uid=482239b2 -->
+{{> news/partials/related-articles-grid}}
+<!-- GSXD-PARTIAL:BEGIN file=news/partials/history-related.html include=news/partials/related-articles-pagination idx=002 uid=85f456be -->
+{{> news/partials/related-articles-pagination}}
     </div>
 
     <!-- ĐÃ XEM GẦN ĐÂY -->
@@ -70,3 +73,7 @@
     </div>
   </div>
 </section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=news/partials/history-related.html uid=8729446f -->
+
+
+

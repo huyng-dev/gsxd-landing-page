@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/phu-kien-ngoi/index.html uid=bd02ff09 -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -277,11 +278,15 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary page-phu-kien-ngoi"
   >
-    {{> components/header}} {{> components/catalog-button}}
+<!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/index.html include=components/header idx=001 uid=30e4e90a -->
+{{> components/header}} {{> components/catalog-button}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=products/phu-kien-ngoi/index.html tag=main idx=001 uid=a13734f0 -->
 
     <main class="flex-grow bg-background-secondary overflow-hidden">
       <!-- Banner Section -->
-      <section class="relative w-full">
+<!-- GSXD-SECTION:BEGIN file=products/phu-kien-ngoi/index.html tag=section idx=001 uid=1ba2c33c -->
+<section class="relative w-full">
         <div
           class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]"
         >
@@ -318,12 +323,13 @@
           </div>
         </div>
       </section>
-
-      {{> products/phu-kien-ngoi/partials/category-section-1}} {{>
+<!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/index.html include=products/phu-kien-ngoi/partials/category-section-1 idx=002 uid=8fc68c40 -->
+{{> products/phu-kien-ngoi/partials/category-section-1}} {{>
       products/phu-kien-ngoi/partials/category-section-2}}
 
       <!-- Danh Mục Sản Phẩm Section 3 -->
-      <section class="relative mx-auto pb-10 lg:pb-16 overflow-visible">
+<!-- GSXD-SECTION:BEGIN file=products/phu-kien-ngoi/index.html tag=section idx=002 uid=0b57b1e8 -->
+<section class="relative mx-auto pb-10 lg:pb-16 overflow-visible">
         <!-- Background Decorations -->
         <img
           src="/assets/images/pk-decorate-left.svg"
@@ -560,7 +566,8 @@
       </section>
 
       <!-- Dấu Ấn Công Trình Section -->
-      <section class="relative w-full pb-10 lg:pb-16 overflow-hidden">
+<!-- GSXD-SECTION:BEGIN file=products/phu-kien-ngoi/index.html tag=section idx=003 uid=9d43590d -->
+<section class="relative w-full pb-10 lg:pb-16 overflow-hidden">
         <div class="relative z-10 w-[85%] max-w-[1320px] mx-auto mt-1">
           <!-- Title -->
           <div class="text-center mb-8 lg:mb-16" data-aos="fade-up">
@@ -715,7 +722,8 @@
       </section>
 
       <!-- FAQ Section -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/phu-kien-ngoi/index.html tag=section idx=004 uid=6a2a4780 -->
+<section
         class="w-full relative pb-[70px] md:pb-32 bg-background-secondary overflow-visible"
         data-aos="fade-up"
       >
@@ -730,12 +738,12 @@
             class="w-full origin-center md:opacity-80 opacity-60 drop-shadow-sm"
           />
         </div>
-
-        {{> components/products/faq-content}}
+<!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/index.html include=components/products/faq-content idx=003 uid=2440ea45 -->
+{{> components/products/faq-content}}
       </section>
     </main>
-
-    {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/index.html include=components/footer idx=004 uid=0972ea43 -->
+{{> components/footer}}
 
     <script type="module" src="/assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -763,5 +771,10 @@
       });
     </script>
     {{{stack "scripts"}}}
-  </body>
+<!-- GSXD-DEBUG:END type=PAGE file=products/phu-kien-ngoi/index.html uid=bd02ff09 -->
+</body>
 </html>
+
+
+
+

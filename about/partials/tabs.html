@@ -1,4 +1,6 @@
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=about/partials/tabs.html uid=d36c6440 -->
 <!-- Tabs Section -->
+<!-- GSXD-SECTION:BEGIN file=about/partials/tabs.html tag=section idx=001 uid=3f81c41f -->
 <section class="py-[20px] md:py-16 bg-neutral-2">
   <!-- Tab Headers -->
   <div class="w-[85%] lg:w-[85%] max-w-[1320px] mx-auto md:px-4">
@@ -17,6 +19,12 @@
       </button>
     </div>
   </div>
-  {{> about/partials/tab-introduction}}
-  {{> about/partials/tab-craft}}
+<!-- GSXD-PARTIAL:BEGIN file=about/partials/tabs.html include=about/partials/tab-introduction idx=001 uid=48b28cff -->
+{{> about/partials/tab-introduction}}
+<!-- GSXD-PARTIAL:BEGIN file=about/partials/tabs.html include=about/partials/tab-craft idx=002 uid=b588cae7 -->
+{{> about/partials/tab-craft}}
 </section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=about/partials/tabs.html uid=d36c6440 -->
+
+
+

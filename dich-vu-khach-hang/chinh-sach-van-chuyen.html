@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=dich-vu-khach-hang/chinh-sach-van-chuyen.html uid=7cd3f707 -->
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -24,25 +25,37 @@
     data-page="customer-service"
     class="bg-white"
   >
-    {{> components/header}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=components/header idx=001 uid=13796812 -->
+{{> components/header}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html tag=main idx=001 uid=7526136c -->
 
     <main class="bg-background-secondary min-h-screen font-archivo text-primary">
       <div class="w-[85%] max-w-[1320px] mx-auto">
-        {{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Chính sách vận chuyển"}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=dich-vu-khach-hang/partials/customer-service/breadcrumb idx=002 uid=a807d7c4 -->
+{{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Chính sách vận chuyển"}}
 
         <div class="flex flex-col lg:flex-row gap-12 mb-4 lg:mb-8">
-          {{> dich-vu-khach-hang/partials/customer-service/sidebar activeShipping=true}}
-          {{> dich-vu-khach-hang/partials/customer-service/shipping-policy-content}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=dich-vu-khach-hang/partials/customer-service/sidebar idx=003 uid=bc4554a6 -->
+{{> dich-vu-khach-hang/partials/customer-service/sidebar activeShipping=true}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=dich-vu-khach-hang/partials/customer-service/shipping-policy-content idx=004 uid=2232dedc -->
+{{> dich-vu-khach-hang/partials/customer-service/shipping-policy-content}}
         </div>
-        {{> components/faq/faq-contact}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=components/faq/faq-contact idx=005 uid=3949ad55 -->
+{{> components/faq/faq-contact}}
       </div>
     </main>
-
-    {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=components/footer idx=006 uid=21135a1d -->
+{{> components/footer}}
     <script
       type="module"
       src="/assets/js/main.js"
     ></script>
     {{{stack "scripts"}}}
+<!-- GSXD-DEBUG:END type=PAGE file=dich-vu-khach-hang/chinh-sach-van-chuyen.html uid=7cd3f707 -->
 </body>
 </html>
+
+
+
+

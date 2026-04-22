@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/ngoi-am-duong/index.html uid=2b5ab964 -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -65,13 +66,17 @@
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-    {{> components/header}} {{> components/catalog-button}}
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-am-duong/index.html include=components/header idx=001 uid=76bf1f6d -->
+{{> components/header}} {{> components/catalog-button}}
+
+    <!-- GSXD-ELEMENT:BEGIN file=products/ngoi-am-duong/index.html tag=main idx=001 uid=b7a90eec -->
 
     <main class="flex-grow bg-background-secondary">
       <!-- ============================================== -->
       <!-- SECTION 1: TOP BANNER                          -->
       <!-- ============================================== -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/ngoi-am-duong/index.html tag=section idx=001 uid=8325028f -->
+<section
         class="relative min-h-[675px] md:min-h-[600px] flex items-center md:pt-24 md:pb-8 overflow-hidden"
       >
         <!-- Lớp hình nền chính của dải banner -->
@@ -175,19 +180,22 @@
       <div
         class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
       >
-        {{> components/products/breadcrumb currentLabel="Ngói Âm Dương"}}
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-am-duong/index.html include=components/products/breadcrumb idx=002 uid=706badc4 -->
+{{> components/products/breadcrumb currentLabel="Ngói Âm Dương"}}
       </div>
 
       <!-- ============================================== -->
       <!-- SECTION 3: PRODUCT GRID (LƯỚI HIỂN THỊ SẢN PHẨM) -->
       <!-- ============================================== -->
-      {{> components/products/product-filter}} {{>
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-am-duong/index.html include=components/products/product-filter idx=003 uid=522b0cbb -->
+{{> components/products/product-filter}} {{>
       components/products/product-grid category="ngoi-am-duong"}}
 
       <!-- ============================================== -->
       <!-- SECTION 4: SIZE OPTIONS (BẢNG KÍCH THƯỚC)      -->
       <!-- ============================================== -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/ngoi-am-duong/index.html tag=section idx=002 uid=3fbba305 -->
+<section
         class="w-[85%] max-w-[1320px] mx-auto pb-[40px] md:pb-16 pt-1"
         data-aos="fade-up"
       >
@@ -214,7 +222,8 @@
       <!-- ============================================== -->
       <!-- SECTION 5: ACCESSORIES (PHỤ KIỆN NGÓI)         -->
       <!-- ============================================== -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/ngoi-am-duong/index.html tag=section idx=003 uid=dd616949 -->
+<section
         class="w-[85%] max-w-[1320px] mx-auto pb-12 md:pb-20"
         data-aos="fade-up"
       >
@@ -237,13 +246,15 @@
     </main>
 
     <!-- Các Component dùng chung của Layout Sản phẩm -->
-    {{> components/products/outstanding-value}} {{>
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-am-duong/index.html include=components/products/outstanding-value idx=004 uid=049f5e93 -->
+{{> components/products/outstanding-value}} {{>
     components/products/journey-video}} {{> components/products/works}}
 
     <!-- ============================================== -->
     <!-- SECTION 6: FAQ (CÂU HỎI THƯỜNG GẶP)            -->
     <!-- ============================================== -->
-    <section
+<!-- GSXD-SECTION:BEGIN file=products/ngoi-am-duong/index.html tag=section idx=004 uid=c14cf24e -->
+<section
       class="w-full relative pb-20 md:pb-32 bg-background-secondary overflow-hidden"
       data-aos="fade-up"
     >
@@ -262,10 +273,11 @@
       />
 
       <!-- Nội dung Dropdown nội dung các Câu Hỏi Thường Gặp -->
-      {{> components/products/faq-content}}
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-am-duong/index.html include=components/products/faq-content idx=005 uid=90bd21a5 -->
+{{> components/products/faq-content}}
     </section>
-
-    {{> components/footer}}
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-am-duong/index.html include=components/footer idx=006 uid=20c6afd9 -->
+{{> components/footer}}
 
     <script type="module" src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -278,5 +290,10 @@
       });
     </script>
     {{{stack "scripts"}}}
-  </body>
+<!-- GSXD-DEBUG:END type=PAGE file=products/ngoi-am-duong/index.html uid=2b5ab964 -->
+</body>
 </html>
+
+
+
+
