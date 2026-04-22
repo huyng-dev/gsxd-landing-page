@@ -73,83 +73,7 @@
 
       <!-- Product Detail Container -->
       <section class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-10 lg:pb-24 pt-0 md:pt-4">
-        <!-- Left: Images -->
-        <div class="flex flex-col md:gap-5 lg:col-span-3">
-          <!-- Main Image -->
-          <div
-            class="w-full aspect-square bg-white md:shadow-lg relative overflow-hidden group swiper product-main-swiper"
-          >
-            <div class="swiper-wrapper">
-              <div class="swiper-slide w-full h-full">
-                <img
-                  src="/assets/images/gach-bat-detail-1.png"
-                  alt="Gạch bát 300x300x50"
-                  class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <!-- Placeholder slides for desktop/mobile swiping -->
-              <div class="swiper-slide w-full h-full">
-                <img
-                  src="/assets/images/gach-bat-detail-1.png"
-                  alt="Gạch bát 300x300x50"
-                  class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div class="swiper-slide w-full h-full">
-                <img
-                  src="/assets/images/gach-bat-detail-1.png"
-                  alt="Gạch bát 300x300x50"
-                  class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div class="swiper-slide w-full h-full">
-                <img
-                  src="/assets/images/gach-bat-detail-1.png"
-                  alt="Gạch bát 300x300x50"
-                  class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div class="swiper-slide w-full h-full">
-                <img
-                  src="/assets/images/gach-bat-detail-1.png"
-                  alt="Gạch bát 300x300x50"
-                  class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div class="swiper-slide w-full h-full">
-                <img
-                  src="/assets/images/gach-bat-detail-1.png"
-                  alt="Gạch bát 300x300x50"
-                  class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div class="swiper-slide w-full h-full">
-                <img
-                  src="/assets/images/gach-bat-detail-1.png"
-                  alt="Gạch bát 300x300x50"
-                  class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-            </div>
-            
-            <!-- Mobile Dots Pagination (Exact Figma Dimensions) -->
-            <div class="md:hidden absolute bottom-[13px] left-1/2 -translate-x-1/2 z-10">
-              <div class="product-main-pagination h-[17px] px-[21px] bg-[#C76E00]/10 rounded-[17px] flex items-center justify-center gap-[14px]"></div>
-            </div>
-          </div>
-          <!-- Thumbnails -->
-          <div class="hidden md:block w-full mt-2 overflow-hidden swiper product-thumb-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-              <div class="swiper-slide aspect-square bg-gradient-to-r from-[#5C2321] to-[#EFE4DE] cursor-pointer opacity-90 relative"></div>
-            </div>
-          </div>
-        </div>
+        {{> product-details/partials/product-image-swiper}}
 
         
         <!-- Right: Info -->
@@ -312,23 +236,17 @@
                 prevEl: fabricationPrevEl,
             },
             breakpoints: {
-              768: {
-                spaceBetween: 40,
-              },
-              1280: {
-                spaceBetween: 80,
-              }
+              768: { spaceBetween: 40 },
+              1280: { spaceBetween: 80 }
             },
             on: {
                 init: function() {
-                    setTimeout(() => {
-                        if (typeof AOS !== 'undefined') AOS.refresh();
-                    }, 500);
+                    setTimeout(() => { if (typeof AOS !== 'undefined') AOS.refresh(); }, 500);
                 }
             }
         });
 
-        // Initialize Works/Projects Slider if present
+        // Initialize Works/Projects Slider
         new Swiper('.projects-slider', {
             slidesPerView: 1.2,
             spaceBetween: 20,
@@ -341,25 +259,14 @@
                     return '<span class="' + className + ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>';
                 }
             },
-            navigation: {
-                nextEl: '.projects-next',
-                prevEl: '.projects-prev',
-            },
+            navigation: { nextEl: '.projects-next', prevEl: '.projects-prev' },
             breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                    centeredSlides: false,
-                },
-                1024: {
-                    slidesPerView: 2,
-                    spaceBetween: 60,
-                    centeredSlides: true,
-                }
+                768: { slidesPerView: 2, spaceBetween: 30, centeredSlides: false },
+                1024: { slidesPerView: 2, spaceBetween: 60, centeredSlides: true }
             }
         });
 
-        // Add bullet style
+        // Add bullet style for fabrication + projects pagination
         const style = document.createElement('style');
         style.innerHTML = `
             .fabrication-pagination .swiper-pagination-bullet-active,
@@ -372,43 +279,6 @@
         document.head.appendChild(style);
       });
     </script>
-    <script>
-      // Initialize Product Sliders
-      var thumbSwiper = new Swiper(".product-thumb-swiper", {
-        spaceBetween: 20,
-        slidesPerView: 7,
-        freeMode: true,
-        watchSlidesProgress: true,
-      });
-
-      new Swiper(".product-main-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        pagination: {
-          el: ".product-main-pagination",
-          clickable: true,
-        },
-        thumbs: {
-          swiper: thumbSwiper,
-        },
-      });
-    </script>
-    <style>
-      .product-main-pagination .swiper-pagination-bullet {
-        width: 6px;
-        height: 6px;
-        background: white;
-        opacity: 0.5;
-        margin: 0 !important;
-        border-radius: 9999px;
-        transition: all 0.3s ease;
-      }
-      .product-main-pagination .swiper-pagination-bullet-active {
-        width: 10px;
-        background: #C76E00;
-        opacity: 1;
-      }
-    </style>
     {{{stack "scripts"}}}
 </body>
 </html>

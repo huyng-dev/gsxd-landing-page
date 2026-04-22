@@ -4,37 +4,7 @@
 >
   {{#push "styles"}}
   <style>
-    /* Ẩn scrollbar trên mobile */
-    .custom-recommend-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .custom-recommend-scrollbar {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-    }
-
-    /* Hiển thị thanh cuộn tuỳ chỉnh trên desktop (từ 768px trở lên) */
-    @media (min-width: 768px) {
-      .custom-recommend-scrollbar::-webkit-scrollbar {
-        display: block;
-        height: 4px;
-      }
-
-      .custom-recommend-scrollbar::-webkit-scrollbar-track {
-        background: white;
-        border-radius: 10px;
-      }
-
-      .custom-recommend-scrollbar::-webkit-scrollbar-thumb {
-        background: #c76e00cc;
-        border-radius: 10px;
-      }
-
-      .custom-recommend-scrollbar {
-        scrollbar-width: thin;
-        scrollbar-color: #c76e00cc rgba(0, 0, 0, 0.05);
-      }
-    }
+    /* Native scrollbar hidden - JS scroll indicator handles display */
   </style>
 {{/push}}
 
@@ -51,7 +21,7 @@
     <h2 class="text-[20px] md:text-3xl font-semibold text-secondary text-center uppercase mb-5 md:mb-16">CÓ THỂ BẠN QUAN TÂM</h2>
 
     <div class="relative">
-      <div class="overflow-x-auto pb-6 custom-recommend-scrollbar">
+      <div class="overflow-x-auto pb-6 custom-recommend-scrollbar mobile-scroll-visible">
         <div class="min-w-[900px] md:min-w-[1000px]">
           <!-- Product Info Row -->
           <div class="flex gap-0 md:gap-10 mb-4 md:mb-8">

@@ -58,6 +58,27 @@
     display: none !important;
   }
 
+  /* Fix Swiper bullet double-color glitch on mobile:
+     Swiper sets its own background + opacity on bullets which conflicts
+     with Tailwind bg-secondary/30. Override all Swiper defaults here. */
+  .fabrication-pagination .swiper-pagination-bullet,
+  .projects-pagination .swiper-pagination-bullet {
+    background: rgba(199, 110, 0, 0.3) !important;
+    opacity: 1 !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 9999px !important;
+    transition: all 0.3s ease !important;
+    margin: 0 6px !important;
+  }
+
+  .fabrication-pagination .swiper-pagination-bullet-active,
+  .projects-pagination .swiper-pagination-bullet-active {
+    background: #C76E00 !important;
+    width: 12px !important;
+    border-radius: 6px !important;
+  }
+
   /* Hide Swiper's default scrollbar */
   .swiper-scrollbar {
     display: none !important;
@@ -100,6 +121,37 @@
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
     }
+  }
+
+  /* Custom scroll indicator for horizontal scroll (JS-created) */
+  /* Hide native scrollbar everywhere - JS indicator replaces it */
+  .mobile-scroll-visible {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .mobile-scroll-visible::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Custom scroll indicator track + thumb (JS-created) */
+  .scroll-indicator-track {
+    height: 4px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scroll-indicator-thumb {
+    height: 100%;
+    background: #c76e00cc;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.1s ease, left 0.1s ease;
   }
 
   .catalog-text-vertical {
