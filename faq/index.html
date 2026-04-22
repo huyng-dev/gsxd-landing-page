@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- GSXD-DEBUG:BEGIN type=PAGE file=faq/index.html uid=cd17c21a -->
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -34,15 +33,11 @@
   <body
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-<!-- GSXD-PARTIAL:BEGIN file=faq/index.html include=components/header idx=001 uid=69a189c1 -->
-{{> components/header}}
-
-    <!-- GSXD-ELEMENT:BEGIN file=faq/index.html tag=main idx=001 uid=9bfbdc67 -->
+    {{> components/header}}
 
     <main class="flex-grow bg-background-secondary">
       <!-- FAQ Banner -->
-<!-- GSXD-SECTION:BEGIN file=faq/index.html tag=section idx=001 uid=d78a66fc -->
-<section class="relative w-full h-[300px] md:h-[400px] flex items-end justify-center overflow-hidden pb-8 md:pb-12">
+      <section class="relative w-full h-[300px] md:h-[400px] flex items-end justify-center overflow-hidden pb-8 md:pb-12">
         <div class="absolute inset-0 z-0">
           <img
             src="/assets/images/faq-banner.png"
@@ -78,17 +73,14 @@
       </section>
 
       <!-- FAQ Main Content -->
-<!-- GSXD-SECTION:BEGIN file=faq/index.html tag=section idx=002 uid=903bcdc0 -->
-<section class="w-[85%] max-w-[1320px] mx-auto py-12 md:py-20 grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-20">
+      <section class="w-[85%] max-w-[1320px] mx-auto pt-12 pb-4 md:py-20 grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-20">
         
         <!-- Sidebar -->
         <div class="lg:col-span-1 lg:sticky lg:top-28 h-fit">
           <div class="mb-8">
-            <h1 class="text-4xl md:text-5xl font-aref text-primary mb-12 font-bold">FAQ</h1>
+            <h1 class="text-4xl md:text-5xl font-aref text-primary mb-8 md:mb-12 font-bold">FAQ</h1>
             <hr class="border-t border-black/10 w-full" />
           </div>
-
-          <!-- GSXD-ELEMENT:BEGIN file=faq/index.html tag=nav idx=001 uid=873aa664 -->
 
           <nav class="flex flex-col gap-5">
             <a href="#san-pham" class="text-xs md:text-sm font-medium text-secondary uppercase hover:opacity-80 transition-opacity">Sản phẩm</a>
@@ -205,7 +197,7 @@
           </div>
 
           <!-- Section: Giá cả & Đặt hàng -->
-          <div id="gia-ca" class="mt-20 pt-4 scroll-mt-24">
+          <div id="gia-ca" class="mt-12 md:mt-20 pt-4 scroll-mt-24">
             <!-- Section Title -->
             <div class="flex items-center gap-5 mb-8 pt-10">
               <div class="w-[2px] h-8 bg-secondary"></div>
@@ -302,7 +294,7 @@
           </div>
 
           <!-- Section: Vận chuyển & Lắp đặt -->
-          <div id="van-chuyen" class="mt-20 pt-4 scroll-mt-24">
+          <div id="van-chuyen" class="mt-12 md:mt-20 pt-4 scroll-mt-24">
             <!-- Section Title -->
             <div class="flex items-center gap-5 mb-8 pt-10">
               <div class="w-[2px] h-8 bg-secondary"></div>
@@ -406,11 +398,11 @@
         </div>
 
       </section>
-<!-- GSXD-PARTIAL:BEGIN file=faq/index.html include=components/faq/faq-contact idx=002 uid=76215fca -->
-{{> components/faq/faq-contact}}
+
+      {{> components/faq/faq-contact}}
     </main>
-<!-- GSXD-PARTIAL:BEGIN file=faq/index.html include=components/footer idx=003 uid=5e10f126 -->
-{{> components/footer hideNewsletter=true}}
+
+    {{> components/footer hideNewsletter=true}}
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -496,10 +488,5 @@
       });
     </script>
     {{{stack "scripts"}}}
-<!-- GSXD-DEBUG:END type=PAGE file=faq/index.html uid=cd17c21a -->
 </body>
 </html>
-
-
-
-

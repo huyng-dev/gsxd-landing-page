@@ -1,31 +1,44 @@
-<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/recommendations.html uid=7056d384 -->
-<!-- GSXD-SECTION:BEGIN file=components/products/recommendations.html tag=section idx=001 uid=26a9e7b5 -->
 <section
-  class="w-full pb-[30px] md:pb-16 bg-background-secondary relative {{#if showDecor}}overflow-visible{{/if}}"
+  class="w-full pb-0 md:pb-16 bg-background-secondary relative {{#if showDecor}}overflow-visible{{/if}}"
   data-aos="fade-up"
 >
   {{#push "styles"}}
   <style>
+    /* Ẩn scrollbar trên mobile */
     .custom-recommend-scrollbar::-webkit-scrollbar {
-      height: 4px;
+      display: none;
     }
-
-    .custom-recommend-scrollbar::-webkit-scrollbar-track {
-      background: white;
-      border-radius: 10px;
-    }
-
-    .custom-recommend-scrollbar::-webkit-scrollbar-thumb {
-      background: #c76e00cc;
-      border-radius: 10px;
-    }
-
     .custom-recommend-scrollbar {
-      scrollbar-width: thin;
-      scrollbar-color: #c76e00cc rgba(0, 0, 0, 0.05);
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+    /* Hiển thị thanh cuộn tuỳ chỉnh trên desktop (từ 768px trở lên) */
+    @media (min-width: 768px) {
+      .custom-recommend-scrollbar::-webkit-scrollbar {
+        display: block;
+        height: 4px;
+      }
+
+      .custom-recommend-scrollbar::-webkit-scrollbar-track {
+        background: white;
+        border-radius: 10px;
+      }
+
+      .custom-recommend-scrollbar::-webkit-scrollbar-thumb {
+        background: #c76e00cc;
+        border-radius: 10px;
+      }
+
+      .custom-recommend-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #c76e00cc rgba(0, 0, 0, 0.05);
+      }
     }
   </style>
-  {{/push}} {{#if showDecor}}
+{{/push}}
+
+  {{#if showDecor}}
   <!-- Decorative image -->
   <img
     src="/assets/images/gtt-decorate-right.svg"
@@ -35,45 +48,35 @@
   {{/if}}
 
   <div class="max-w-[1320px] w-[85%] mx-auto relative z-10">
-    <h2
-      class="text-[20px] leading-[32px] md:text-3xl md:leading-none font-semibold text-secondary text-center uppercase mb-[20px] md:mb-16"
-    >
-      CÓ THỂ BẠN QUAN TÂM
-    </h2>
+    <h2 class="text-[20px] md:text-3xl font-semibold text-secondary text-center uppercase mb-5 md:mb-16">CÓ THỂ BẠN QUAN TÂM</h2>
 
     <div class="relative">
       <div class="overflow-x-auto pb-6 custom-recommend-scrollbar">
-        <div class="w-max md:w-full md:min-w-[1000px]">
+        <div class="min-w-[900px] md:min-w-[1000px]">
           <!-- Product Info Row -->
-          <div class="flex gap-[10px] md:gap-10 mb-[15px] md:mb-8">
-            <!-- Empty space for labels -->
-            <div
-              class="hidden md:block w-[140px] shrink-0 sticky left-0 bg-background-secondary z-20"
-            ></div>
+          <div class="flex gap-0 md:gap-10 mb-4 md:mb-8">
+            <!-- Empty space - Hidden on Mobile -->
+            <div class="hidden md:block w-[140px] shrink-0 sticky left-0 bg-background-secondary z-10"></div>
 
-            <div class="flex-grow flex gap-[10px] md:gap-8 w-max">
+            <div class="flex-grow flex gap-4 md:gap-10">
               <!-- Product 1 -->
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start gap-[5px] md:gap-0"
-              >
+              <div class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start">
                 <a
                   href="/products/ngoi-am-duong/detail.html"
                   class="w-full group"
                 >
-                  <div
-                    class="product-card relative h-[182px] w-[175px] md:h-auto md:aspect-[6/5] md:w-full mb-0 md:mb-4 bg-gray-100 md:rounded-sm overflow-hidden"
-                  >
+                  <div class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden">
                     <img
                       src="/assets/images/gach-co-work-2.jpg"
                       alt="Ngói Âm Dương 27 Nâu Đỏ"
                       class="object-cover w-full h-full"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x400/eee/999?text=Product'
-                      "
+                      onerror="this.src = 'https://placehold.co/400x400/eee/999?text=Product'"
                     />
                     <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
+                      <img
+                        src="/assets/images/eye.svg"
+                        alt="Search"
+                      />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -82,31 +85,26 @@
                   href="/products/ngoi-am-duong/detail.html"
                   class="text-[#004B8D] hover:text-secondary transition-colors"
                 >
-                  <h3
-                    class="font-bold text-[12px] leading-[19.25px] md:text-base md:leading-snug md:h-12 overflow-hidden mt-[5px] md:mt-0"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
+                  <h3 class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2">Ngói Âm Dương 27 Nâu Đỏ</h3>
                 </a>
                 <button
-                  class="border border-secondary text-secondary text-[9px] leading-[16px] md:text-[13px] md:leading-normal font-bold py-0 px-0 md:py-2 md:px-6 w-[79px] h-[18px] md:w-auto md:h-auto rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition-all mt-[5px] md:mt-0"
+                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
                 >
                   Thêm vào giỏ
                 </button>
               </div>
               <!-- Product 2 -->
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start gap-[5px] md:gap-0"
-              >
+              <div class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start">
                 <a
                   href="/products/ngoi-am-duong/detail.html"
                   class="w-full group"
                 >
-                  <div
-                    class="product-card relative h-[182px] w-[175px] md:h-auto md:aspect-[6/5] md:w-full mb-0 md:mb-4 bg-[#E5E5E5] md:rounded-sm overflow-hidden"
-                  >
+                  <div class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-[#E5E5E5] rounded-sm overflow-hidden">
                     <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
+                      <img
+                        src="/assets/images/eye.svg"
+                        alt="Search"
+                      />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -115,31 +113,26 @@
                   href="/products/ngoi-am-duong/detail.html"
                   class="text-[#004B8D] hover:text-secondary transition-colors"
                 >
-                  <h3
-                    class="font-bold text-[12px] leading-[19.25px] md:text-base md:leading-snug md:h-12 overflow-hidden mt-[5px] md:mt-0"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
+                  <h3 class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2">Ngói Âm Dương 27 Nâu Đỏ</h3>
                 </a>
                 <button
-                  class="border border-secondary text-secondary text-[9px] leading-[16px] md:text-[13px] md:leading-normal font-bold py-0 px-0 md:py-2 md:px-6 w-[79px] h-[18px] md:w-auto md:h-auto rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition-all mt-[5px] md:mt-0"
+                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
                 >
                   Thêm vào giỏ
                 </button>
               </div>
               <!-- Product 3 -->
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start gap-[5px] md:gap-0"
-              >
+              <div class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start">
                 <a
                   href="/products/ngoi-am-duong/detail.html"
                   class="w-full group"
                 >
-                  <div
-                    class="product-card relative h-[182px] w-[175px] md:h-auto md:aspect-[6/5] md:w-full mb-0 md:mb-4 bg-[#E5E5E5] md:rounded-sm overflow-hidden"
-                  >
+                  <div class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-[#E5E5E5] rounded-sm overflow-hidden">
                     <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
+                      <img
+                        src="/assets/images/eye.svg"
+                        alt="Search"
+                      />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -148,31 +141,26 @@
                   href="/products/ngoi-am-duong/detail.html"
                   class="text-[#004B8D] hover:text-secondary transition-colors"
                 >
-                  <h3
-                    class="font-bold text-[12px] leading-[19.25px] md:text-base md:leading-snug md:h-12 overflow-hidden mt-[5px] md:mt-0"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
+                  <h3 class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2">Ngói Âm Dương 27 Nâu Đỏ</h3>
                 </a>
                 <button
-                  class="border border-secondary text-secondary text-[9px] leading-[16px] md:text-[13px] md:leading-normal font-bold py-0 px-0 md:py-2 md:px-6 w-[79px] h-[18px] md:w-auto md:h-auto rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition-all mt-[5px] md:mt-0"
+                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
                 >
                   Thêm vào giỏ
                 </button>
               </div>
               <!-- Product 4 -->
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start gap-[5px] md:gap-0"
-              >
+              <div class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start">
                 <a
                   href="/products/ngoi-am-duong/detail.html"
                   class="w-full group"
                 >
-                  <div
-                    class="product-card relative h-[182px] w-[175px] md:h-auto md:aspect-[6/5] md:w-full mb-0 md:mb-4 bg-[#E5E5E5] md:rounded-sm overflow-hidden"
-                  >
+                  <div class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-[#E5E5E5] rounded-sm overflow-hidden">
                     <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
+                      <img
+                        src="/assets/images/eye.svg"
+                        alt="Search"
+                      />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -181,31 +169,26 @@
                   href="/products/ngoi-am-duong/detail.html"
                   class="text-[#004B8D] hover:text-secondary transition-colors"
                 >
-                  <h3
-                    class="font-bold text-[12px] leading-[19.25px] md:text-base md:leading-snug md:h-12 overflow-hidden mt-[5px] md:mt-0"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
+                  <h3 class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2">Ngói Âm Dương 27 Nâu Đỏ</h3>
                 </a>
                 <button
-                  class="border border-secondary text-secondary text-[9px] leading-[16px] md:text-[13px] md:leading-normal font-bold py-0 px-0 md:py-2 md:px-6 w-[79px] h-[18px] md:w-auto md:h-auto rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition-all mt-[5px] md:mt-0"
+                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
                 >
                   Thêm vào giỏ
                 </button>
               </div>
               <!-- Product 5 -->
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start gap-[5px] md:gap-0"
-              >
+              <div class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start">
                 <a
                   href="/products/ngoi-am-duong/detail.html"
                   class="w-full group"
                 >
-                  <div
-                    class="product-card relative h-[182px] w-[175px] md:h-auto md:aspect-[6/5] md:w-full mb-0 md:mb-4 bg-[#E5E5E5] md:rounded-sm overflow-hidden"
-                  >
+                  <div class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-[#E5E5E5] rounded-sm overflow-hidden">
                     <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
+                      <img
+                        src="/assets/images/eye.svg"
+                        alt="Search"
+                      />
                       <span>Xem chi tiết</span>
                     </div>
                   </div>
@@ -214,14 +197,10 @@
                   href="/products/ngoi-am-duong/detail.html"
                   class="text-[#004B8D] hover:text-secondary transition-colors"
                 >
-                  <h3
-                    class="font-bold text-[12px] leading-[19.25px] md:text-base md:leading-snug md:h-12 overflow-hidden mt-[5px] md:mt-0"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
+                  <h3 class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2">Ngói Âm Dương 27 Nâu Đỏ</h3>
                 </a>
                 <button
-                  class="border border-secondary text-secondary text-[9px] leading-[16px] md:text-[13px] md:leading-normal font-bold py-0 px-0 md:py-2 md:px-6 w-[79px] h-[18px] md:w-auto md:h-auto rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition-all mt-[5px] md:mt-0"
+                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
                 >
                   Thêm vào giỏ
                 </button>
@@ -232,120 +211,57 @@
           <!-- Comparison Table -->
           <div class="flex flex-col border-t border-black/10">
             <!-- Price Row -->
-            <div
-              class="flex flex-col md:flex-row gap-[5px] md:gap-10 group pt-[10px] md:pt-0"
-            >
+            <div class="flex gap-0 md:gap-10 group">
               <div
-                class="w-max md:w-[140px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal font-bold text-[#2E2F2A] md:text-primary flex items-center sticky left-0 z-20 bg-background-secondary"
+                class="hidden md:flex w-[140px] shrink-0 py-0 md:py-3 text-base font-bold text-primary items-center sticky left-0 bg-background-secondary z-10"
               >
                 Giá
               </div>
-              <div
-                class="flex-grow flex gap-[10px] md:gap-10 w-max pb-[10px] md:pb-0"
-              >
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal text-[rgba(46,47,42,0.80)] md:text-primary/80"
-                >
+              <div class="flex-grow flex gap-4 md:gap-10">
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80">
+                  <span class="block md:hidden font-bold text-[#2E2F2A] mb-1">Giá</span>
                   675.000 đ/m²
                 </div>
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal text-[rgba(46,47,42,0.80)] md:text-primary/80"
-                >
-                  675.000 đ/m²
-                </div>
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal text-[rgba(46,47,42,0.80)] md:text-primary/80"
-                >
-                  675.000 đ/m²
-                </div>
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal text-[rgba(46,47,42,0.80)] md:text-primary/80"
-                >
-                  675.000 đ/m²
-                </div>
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal text-[rgba(46,47,42,0.80)] md:text-primary/80"
-                >
-                  675.000 đ/m²
-                </div>
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 self-end">675.000 đ/m²</div>
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 self-end">675.000 đ/m²</div>
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 self-end">675.000 đ/m²</div>
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 self-end">675.000 đ/m²</div>
               </div>
             </div>
             <!-- Color Row -->
-            <div
-              class="flex flex-col md:flex-row gap-[5px] md:gap-10 border-t border-black/10 group pt-[10px] md:pt-0"
-            >
+            <div class="flex gap-0 md:gap-10 border-t border-black/10 group">
               <div
-                class="w-max md:w-[140px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal font-bold text-[#2E2F2A] md:text-primary flex items-center sticky left-0 z-20 bg-background-secondary"
+                class="hidden md:flex w-[140px] shrink-0 py-1 md:py-3 text-base font-bold text-primary items-center sticky left-0 bg-background-secondary z-10"
               >
                 Màu sắc
               </div>
-              <div
-                class="flex-grow flex gap-[10px] md:gap-10 w-max pb-[10px] md:pb-0"
-              >
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal text-[rgba(46,47,42,0.80)] md:text-primary/80"
-                >
+              <div class="flex-grow flex gap-4 md:gap-10">
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80">
+                  <span class="block md:hidden font-bold text-[#2E2F2A] mb-1">Màu sắc</span>
                   Nâu đỏ
                 </div>
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal text-[rgba(46,47,42,0.80)] md:text-primary/80"
-                >
-                  Nâu đỏ
-                </div>
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal text-[rgba(46,47,42,0.80)] md:text-primary/80"
-                >
-                  Nâu đỏ
-                </div>
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal text-[rgba(46,47,42,0.80)] md:text-primary/80"
-                >
-                  Nâu đỏ
-                </div>
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal text-[rgba(46,47,42,0.80)] md:text-primary/80"
-                >
-                  Nâu đỏ
-                </div>
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 self-end">Nâu đỏ</div>
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 self-end">Nâu đỏ</div>
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 self-end">Nâu đỏ</div>
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 self-end">Nâu đỏ</div>
               </div>
             </div>
             <!-- Size Row -->
-            <div
-              class="flex flex-col md:flex-row gap-[5px] md:gap-10 border-t border-black/10 md:border-black/5 group pt-[10px] md:pt-0"
-            >
+            <div class="flex gap-0 md:gap-10 border-y border-black/10 group">
               <div
-                class="w-max md:w-[140px] shrink-0 py-0 md:py-3 text-[12px] leading-[21px] md:text-base md:leading-normal font-bold text-[#2E2F2A] md:text-primary flex items-center sticky left-0 z-20 bg-background-secondary"
+                class="hidden md:flex w-[140px] shrink-0 py-1 md:py-3 text-base font-bold text-primary items-center sticky left-0 bg-background-secondary z-10"
               >
                 Kích thước
               </div>
-              <div
-                class="flex-grow flex gap-[10px] md:gap-10 w-max pb-[10px] md:pb-0"
-              >
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[22.75px] md:text-base text-[rgba(46,47,42,0.80)] md:text-primary/80 md:leading-relaxed"
-                >
+              <div class="flex-grow flex gap-4 md:gap-10">
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 leading-relaxed">
+                  <span class="block md:hidden font-bold text-[#2E2F2A] mb-1">Kích thước</span>
                   L280 x W280 x H54mm
                 </div>
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[22.75px] md:text-base text-[rgba(46,47,42,0.80)] md:text-primary/80 md:leading-relaxed"
-                >
-                  L280 x W280 x H54mm
-                </div>
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[22.75px] md:text-base text-[rgba(46,47,42,0.80)] md:text-primary/80 md:leading-relaxed"
-                >
-                  L280 x W280 x H54mm
-                </div>
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[22.75px] md:text-base text-[rgba(46,47,42,0.80)] md:text-primary/80 md:leading-relaxed"
-                >
-                  L280 x W280 x H54mm
-                </div>
-                <div
-                  class="w-[175px] md:w-[220px] shrink-0 py-0 md:py-3 text-[12px] leading-[22.75px] md:text-base text-[rgba(46,47,42,0.80)] md:text-primary/80 md:leading-relaxed"
-                >
-                  L280 x W280 x H54mm
-                </div>
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 leading-relaxed self-end">L280 x W280 x H54mm</div>
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 leading-relaxed self-end">L280 x W280 x H54mm</div>
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 leading-relaxed self-end">L280 x W280 x H54mm</div>
+                <div class="w-[175px] md:w-[220px] shrink-0 py-1 md:py-3 text-[12px] md:text-base text-primary/80 leading-relaxed self-end">L280 x W280 x H54mm</div>
               </div>
             </div>
           </div>
@@ -354,7 +270,3 @@
     </div>
   </div>
 </section>
-<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/recommendations.html uid=7056d384 -->
-
-
-

@@ -1,26 +1,32 @@
 <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/weight-calculator.html uid=a5f647f3 -->
 <!-- GSXD-SECTION:BEGIN file=components/products/weight-calculator.html tag=section idx=001 uid=58f661f6 -->
 <section
-  class="w-full py-12 lg:py-16 bg-background-secondary"
+  class="w-full pb-12 pt-8 lg:pt-16 lg:pb-16 bg-background-secondary"
   data-aos="fade-up"
   data-weight-calculator
 >
   <div class="w-[85%] max-w-[1320px] mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24 items-start">
+    <!-- Mobile Title above grid -->
+    <h2 class="text-[20px] font-semibold text-center text-secondary mb-8 uppercase block lg:hidden">
+      CÁCH TÍNH KHỐI LƯỢNG
+    </h2>
+
+    <div class="flex flex-col-reverse lg:grid lg:grid-cols-5 gap-8 lg:gap-24 items-start">
       <!-- Left: Calculator Form -->
-      <div class="space-y-4 col-span-1 lg:col-span-3">
+      <div class="w-full space-y-4 col-span-1 lg:col-span-3">
         <!-- Dropdowns Row -->
         <h2
-          class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-5 uppercase"
+          class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-5 uppercase hidden lg:block"
         >
           CÁCH TÍNH KHỐI LƯỢNG
         </h2>
-        <hr class="border-t border-black/10 mt-4 w-full" />
-        <div class="grid grid-cols-2 gap-6">
+        <hr class="border-t border-black/10 w-full mb-6 lg:mb-0 block lg:hidden" />
+        <hr class="border-t border-black/10 mt-4 w-full hidden lg:block" />
+        <div class="grid grid-cols-2 gap-5 lg:gap-6">
           <div class="relative">
             <select
               id="roof-style"
-              class="w-full h-[44px] px-4 pr-10 border border-black/10 rounded-sm bg-transparent text-[13px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
+              class="w-full h-[26px] lg:h-[44px] px-2 lg:px-4 pr-6 lg:pr-10 border border-black/10 rounded-sm bg-transparent text-[10px] lg:text-[13px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
             >
               <option value="" disabled selected>KIỂU MÁI</option>
               <option value="2-slope" data-factor="1.0">
@@ -35,10 +41,10 @@
               <option value="dao" data-factor="1.1">Mái đao</option>
             </select>
             <div
-              class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+              class="absolute right-2 lg:right-4 top-1/2 -translate-y-1/2 pointer-events-none"
             >
               <svg
-                class="w-4 h-4 text-secondary"
+                class="w-3 h-3 lg:w-4 lg:h-4 text-secondary"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -55,7 +61,7 @@
           <div class="relative">
             <select
               id="tile-type"
-              class="w-full h-[44px] px-4 pr-10 border border-black/10 rounded-sm bg-transparent text-[13px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
+              class="w-full h-[26px] lg:h-[44px] px-2 lg:px-4 pr-6 lg:pr-10 border border-black/10 rounded-sm bg-transparent text-[10px] lg:text-[13px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
             >
               <option value="" disabled selected>LOẠI NGÓI</option>
               <option value="dai" data-am="27" data-duong="27" data-diem="5">
@@ -69,10 +75,10 @@
               </option>
             </select>
             <div
-              class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+              class="absolute right-2 lg:right-4 top-1/2 -translate-y-1/2 pointer-events-none"
             >
               <svg
-                class="w-4 h-4 text-secondary"
+                class="w-3 h-3 lg:w-4 lg:h-4 text-secondary"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -89,198 +95,154 @@
         </div>
 
         <!-- DIỆN TÍCH 1 -->
-        <div class="flex flex-col md:flex-row gap-4 items-end">
-          <div class="w-full md:w-[150px] shrink-0 pb-1">
-            <span class="font-semibold text-primary uppercase text-base"
-              >DIỆN TÍCH 1</span
-            >
+        <div class="flex flex-col lg:flex-row gap-2 lg:gap-4 items-start lg:items-end mb-6 lg:mb-0">
+          <!-- Desktop Label -->
+          <div class="hidden lg:flex w-full lg:w-[150px] shrink-0 pb-1 flex-col">
+            <span class="font-semibold text-primary uppercase text-base">DIỆN TÍCH 1</span>
           </div>
-          <div class="flex-1 w-full grid grid-cols-12 gap-7 items-end">
-            <div class="col-span-12 md:col-span-3">
+          <!-- Form Row -->
+          <div class="flex-1 w-full flex flex-row lg:grid lg:grid-cols-12 gap-2 lg:gap-7 items-end">
+            <!-- Select -->
+            <div class="w-[111px] md:w-[111px] lg:w-auto shrink-0 col-span-12 lg:col-span-3 flex flex-col justify-end">
+              <!-- Mobile Label -->
+              <span class="font-semibold text-primary uppercase text-[11px] lg:hidden mb-2 pl-2">DIỆN TÍCH 1</span>
               <div class="relative">
                 <select
-                  class="w-full h-[45px] px-3 pr-6 border border-black/10 rounded-sm bg-transparent text-[11px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
+                  class="w-full h-[30px] lg:h-[45px] px-2 lg:px-3 pr-5 lg:pr-6 border border-black/10 rounded-sm bg-transparent text-[9px] lg:text-[11px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
                 >
                   <option selected>HÌNH CHỮ NHẬT</option>
                   <option>HÌNH THANG</option>
                 </select>
                 <div
-                  class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary"
+                  class="absolute right-1 lg:right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary"
                 >
-                  <svg
-                    class="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
+                  <svg class="w-2.5 h-2.5 lg:w-3 lg:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </div>
               </div>
             </div>
-            <div class="col-span-6 md:col-span-3 flex flex-col gap-2">
-              <label
-                class="text-[16px] uppercase font-semibold text-primary text-center"
-                >CHIỀU DÀI
-                <span
-                  class="block text-[12px] font-normal italic normal-case text-secondary"
-                  >Chiều tính diềm mái</span
-                ></label
-              >
+            
+            <div class="flex-1 lg:col-span-3 flex flex-col gap-1 lg:gap-2">
+              <label class="text-[9px] lg:text-[16px] uppercase font-semibold text-primary text-center tracking-tight leading-none min-h-[16px] lg:min-h-auto">
+                CHIỀU DÀI
+                <span class="block text-[7px] lg:text-[12px] font-normal italic normal-case text-secondary/70 mt-[2px] lg:mt-1 tracking-normal">Chiều tính diềm mái</span>
+              </label>
               <div class="relative">
                 <input
                   type="text"
                   placeholder="00"
-                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
+                  class="w-full h-[30px] lg:h-[45px] p-2 lg:p-3 border border-black/10 rounded-sm bg-transparent text-[12px] lg:text-base text-left pr-4 lg:pr-6 focus:border-secondary outline-none transition-colors"
                 />
-                <span
-                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
-                  >m</span
-                >
+                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
               </div>
             </div>
-            <div class="col-span-6 md:col-span-3 flex flex-col gap-2">
-              <label
-                class="text-[16px] uppercase font-semibold text-primary text-center"
-                >CHIỀU RỘNG
-                <span class="block text-[12px] opacity-0">-</span></label
-              >
+
+            <div class="flex-1 lg:col-span-3 flex flex-col gap-1 lg:gap-2">
+              <label class="text-[9px] lg:text-[16px] uppercase font-semibold text-primary text-center tracking-tight leading-none min-h-[16px] lg:min-h-auto">
+                CHIỀU RỘNG
+                <span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>
+              </label>
               <div class="relative">
                 <input
                   type="text"
                   placeholder="00"
-                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
+                  class="w-full h-[30px] lg:h-[45px] p-2 lg:p-3 border border-black/10 rounded-sm bg-transparent text-[12px] lg:text-base text-left pr-4 lg:pr-6 focus:border-secondary outline-none transition-colors"
                 />
-                <span
-                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
-                  >m</span
-                >
+                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
               </div>
             </div>
-            <div
-              class="col-span-4 md:col-span-3 flex flex-col gap-2"
-              style="display: none"
-            >
-              <label
-                class="text-[16px] uppercase font-semibold text-primary text-center"
-                >CHIỀU CAO
-                <span class="block text-[12px] opacity-0">-</span></label
-              >
+
+            <div class="flex-1 lg:col-span-3 flex flex-col gap-1 lg:gap-2" style="display: none">
+              <label class="text-[9px] lg:text-[16px] uppercase font-semibold text-primary text-center tracking-tight leading-none min-h-[16px] lg:min-h-auto">
+                CHIỀU CAO
+                <span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>
+              </label>
               <div class="relative">
                 <input
                   type="text"
                   placeholder="00"
-                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
+                  class="w-full h-[30px] lg:h-[45px] p-2 lg:p-3 border border-black/10 rounded-sm bg-transparent text-[12px] lg:text-base text-left pr-4 lg:pr-6 focus:border-secondary outline-none transition-colors"
                 />
-                <span
-                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
-                  >m</span
-                >
+                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- DIỆN TÍCH 2 -->
-        <div class="flex flex-col md:flex-row gap-4 items-end">
-          <div class="w-full md:w-[150px] shrink-0 pb-1 flex flex-col">
-            <span class="font-semibold text-primary uppercase text-base"
-              >DIỆN TÍCH 2</span
-            >
-            <button
-              class="text-[14px] text-secondary underline text-left font-medium ml-4"
-            >
-              Loại bỏ
-            </button>
+        <div class="flex flex-col lg:flex-row gap-2 lg:gap-4 items-start lg:items-end mb-6 lg:mb-0">
+          <!-- Desktop Label -->
+          <div class="hidden lg:flex w-full lg:w-[150px] shrink-0 pb-1 flex-col">
+            <span class="font-semibold text-primary uppercase text-base">DIỆN TÍCH 2</span>
+            <button class="text-[14px] text-secondary underline text-left font-bold w-fit ml-4 mt-1">Loại bỏ</button>
           </div>
-          <div class="flex-1 w-full grid grid-cols-12 gap-7 items-end">
-            <div class="col-span-12 md:col-span-3">
+          <!-- Form Row -->
+          <div class="flex-1 w-full flex flex-row lg:grid lg:grid-cols-12 gap-2 lg:gap-7 items-end">
+            <!-- Select -->
+            <div class="w-[111px] md:w-[111px] lg:w-auto shrink-0 col-span-12 lg:col-span-3 flex flex-col justify-end">
+              <!-- Mobile Label -->
+              <div class="flex items-center gap-2 lg:hidden mb-2 pl-2">
+                <span class="font-semibold text-primary uppercase text-[11px] leading-tight">DIỆN TÍCH 2</span>
+                <button class="text-[8px] text-secondary/70 underline italic font-bold">Loại bỏ</button>
+              </div>
               <div class="relative">
                 <select
-                  class="w-full h-[45px] px-3 pr-6 border border-black/10 rounded-sm bg-transparent text-[11px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
+                  class="w-full h-[30px] lg:h-[45px] px-2 lg:px-3 pr-5 lg:pr-6 border border-black/10 rounded-sm bg-transparent text-[9px] lg:text-[11px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
                 >
                   <option>HÌNH CHỮ NHẬT</option>
                   <option selected>HÌNH THANG</option>
                 </select>
-                <div
-                  class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary"
-                >
-                  <svg
-                    class="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
+                <div class="absolute right-1 lg:right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary">
+                  <svg class="w-2.5 h-2.5 lg:w-3 lg:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </div>
               </div>
             </div>
-            <div class="col-span-4 md:col-span-3 flex flex-col gap-2">
-              <label
-                class="text-[16px] uppercase font-semibold text-primary text-center"
-                >ĐÁY LỚN
-                <span
-                  class="block text-[12px] font-normal italic normal-case text-secondary"
-                  >Chiều tính diềm mái</span
-                ></label
-              >
+
+            <div class="flex-1 lg:col-span-3 flex flex-col gap-1 lg:gap-2">
+              <label class="text-[9px] lg:text-[16px] uppercase font-semibold text-primary text-center tracking-tight leading-none min-h-[16px] lg:min-h-auto">
+                ĐÁY LỚN
+                <span class="block text-[7px] lg:text-[12px] font-normal italic normal-case text-secondary/70 mt-[2px] lg:mt-1 tracking-normal">Chiều tính diềm mái</span>
+              </label>
               <div class="relative">
                 <input
                   type="text"
                   placeholder="00"
-                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
+                  class="w-full h-[30px] lg:h-[45px] p-2 lg:p-3 border border-black/10 rounded-sm bg-transparent text-[12px] lg:text-base text-left pr-4 lg:pr-6 focus:border-secondary outline-none transition-colors"
                 />
-                <span
-                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
-                  >m</span
-                >
+                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
               </div>
             </div>
-            <div class="col-span-4 md:col-span-3 flex flex-col gap-2">
-              <label
-                class="text-[16px] uppercase font-semibold text-primary text-center"
-                >ĐÁY BÉ
-                <span class="block text-[12px] opacity-0">-</span></label
-              >
+
+            <div class="flex-1 lg:col-span-3 flex flex-col gap-1 lg:gap-2">
+              <label class="text-[9px] lg:text-[16px] uppercase font-semibold text-primary text-center tracking-tight leading-none min-h-[16px] lg:min-h-auto">
+                ĐÁY BÉ
+                <span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>
+              </label>
               <div class="relative">
                 <input
                   type="text"
                   placeholder="00"
-                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
+                  class="w-full h-[30px] lg:h-[45px] p-2 lg:p-3 border border-black/10 rounded-sm bg-transparent text-[12px] lg:text-base text-left pr-4 lg:pr-6 focus:border-secondary outline-none transition-colors"
                 />
-                <span
-                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
-                  >m</span
-                >
+                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
               </div>
             </div>
-            <div class="col-span-4 md:col-span-3 flex flex-col gap-2">
-              <label
-                class="text-[16px] uppercase font-semibold text-primary text-center"
-                >CHIỀU CAO
-                <span class="block text-[12px] opacity-0">-</span></label
-              >
+
+            <div class="flex-1 lg:col-span-3 flex flex-col gap-1 lg:gap-2">
+              <label class="text-[9px] lg:text-[16px] uppercase font-semibold text-primary text-center tracking-tight leading-none min-h-[16px] lg:min-h-auto">
+                CHIỀU CAO
+                <span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>
+              </label>
               <div class="relative">
                 <input
                   type="text"
                   placeholder="00"
-                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
+                  class="w-full h-[30px] lg:h-[45px] p-2 lg:p-3 border border-black/10 rounded-sm bg-transparent text-[12px] lg:text-base text-left pr-4 lg:pr-6 focus:border-secondary outline-none transition-colors"
                 />
-                <span
-                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
-                  >m</span
-                >
+                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
               </div>
             </div>
           </div>
@@ -540,12 +502,14 @@
       Array.from(areasContainer.children).filter(
         (el) =>
           el.classList.contains("flex") &&
-          el.querySelector("span")?.textContent.includes("DIỆN TÍCH"),
+          Array.from(el.querySelectorAll("span")).some((span) =>
+            /DIỆN\s*TÍCH/i.test(span.textContent || "")
+          )
       );
 
-    const getAreaTitle = (block) =>
-      Array.from(block.querySelectorAll("span")).find((span) =>
-        /DIỆN\s*TÍCH/i.test(span.textContent || ""),
+    const getAreaTitles = (block) =>
+      Array.from(block.querySelectorAll("span")).filter((span) =>
+        /DIỆN\s*TÍCH/i.test(span.textContent || "")
       );
 
     const updateCoeffLabels = () => {
@@ -677,7 +641,7 @@
 
     const handleTypeChange = (block) => {
       const select = block.querySelector("select");
-      const inputGrid = block.querySelector(".grid-cols-12");
+      const inputGrid = block.querySelector(".lg\\:grid-cols-12") || block.querySelector(".flex-1.w-full");
       if (!select || !inputGrid) return;
 
       const type = select.value || select.options[select.selectedIndex].text;
@@ -687,7 +651,7 @@
         const label1 = inputWrappers[1]?.querySelector("label");
         if (label1) {
           label1.innerHTML =
-            'CHIỀU DÀI <span class="block text-[12px] font-normal italic normal-case text-secondary/70">Chiều tính diềm mái</span>';
+            'CHIỀU DÀI\n<span class="block text-[7px] lg:text-[12px] font-normal italic normal-case text-secondary/70 mt-[2px] lg:mt-1 tracking-normal">Chiều tính diềm mái</span>';
         }
 
         inputWrappers[1]?.classList.replace("col-span-4", "col-span-6");
@@ -695,7 +659,7 @@
         const label2 = inputWrappers[2]?.querySelector("label");
         if (label2) {
           label2.innerHTML =
-            'CHIỀU RỘNG <span class="block text-[12px] opacity-0">&nbsp;</span>';
+            'CHIỀU RỘNG\n<span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>';
         }
 
         inputWrappers[2]?.classList.replace("col-span-4", "col-span-6");
@@ -704,7 +668,7 @@
         const label1 = inputWrappers[1]?.querySelector("label");
         if (label1) {
           label1.innerHTML =
-            'ĐÁY LỚN <span class="block text-[12px] font-normal italic normal-case text-secondary/70">Chiều tính diềm mái</span>';
+            'ĐÁY LỚN\n<span class="block text-[7px] lg:text-[12px] font-normal italic normal-case text-secondary/70 mt-[2px] lg:mt-1 tracking-normal">Chiều tính diềm mái</span>';
         }
 
         inputWrappers[1]?.classList.replace("col-span-6", "col-span-4");
@@ -712,7 +676,7 @@
         const label2 = inputWrappers[2]?.querySelector("label");
         if (label2) {
           label2.innerHTML =
-            'ĐÁY BÉ <span class="block text-[12px] opacity-0">&nbsp;</span>';
+            'ĐÁY BÉ\n<span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>';
         }
 
         inputWrappers[2]?.classList.replace("col-span-6", "col-span-4");
@@ -724,7 +688,7 @@
           const label3 = inputWrappers[3].querySelector("label");
           if (label3) {
             label3.innerHTML =
-              'CHIỀU CAO <span class="block text-[12px] opacity-0">&nbsp;</span>';
+              'CHIỀU CAO\n<span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>';
           }
         }
       }
@@ -733,13 +697,12 @@
         (wrapper) => {
           const label = wrapper?.querySelector("label");
           if (!label) return;
-          label.classList.remove("min-h-[42px]");
           label.classList.add(
-            "h-[44px]",
             "flex",
             "flex-col",
             "items-center",
-            "justify-start",
+            "justify-end",
+            "lg:h-[44px]"
           );
         },
       );
@@ -747,8 +710,10 @@
 
     const renumberAreas = () => {
       getAreaBlocks().forEach((block, index) => {
-        const titleSpan = getAreaTitle(block);
-        if (titleSpan) titleSpan.textContent = `DIỆN TÍCH ${index + 1}`;
+        const titleSpans = getAreaTitles(block);
+        titleSpans.forEach((span) => {
+          span.textContent = `DIỆN TÍCH ${index + 1}`;
+        });
       });
     };
 
@@ -760,15 +725,17 @@
         handleTypeChange(block);
       }
 
-      const removeBtn = block.querySelector("button.underline");
-      if (removeBtn && removeBtn.textContent.includes("Loại bỏ")) {
-        removeBtn.addEventListener("click", (event) => {
-          event.preventDefault();
-          block.remove();
-          renumberAreas();
-          updateResults();
-        });
-      }
+      const removeBtns = block.querySelectorAll("button.underline");
+      removeBtns.forEach((removeBtn) => {
+        if (removeBtn && removeBtn.textContent.includes("Loại bỏ")) {
+          removeBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            block.remove();
+            renumberAreas();
+            updateResults();
+          });
+        }
+      });
     };
 
     const addArea = () => {
@@ -778,23 +745,6 @@
       newBlock.querySelectorAll("input").forEach((input) => {
         input.value = "";
       });
-
-      let removeBtn = newBlock.querySelector("button.underline");
-
-      if (!removeBtn || !removeBtn.textContent.includes("Loại bỏ")) {
-        const titleSpan = newBlock.querySelector("span.tracking-widest");
-        const titleWrapper = titleSpan?.parentElement;
-
-        if (titleWrapper) {
-          titleWrapper.classList.add("flex", "flex-col");
-          removeBtn = document.createElement("button");
-          removeBtn.type = "button";
-          removeBtn.className =
-            "text-[14px] text-secondary underline text-left font-bold";
-          removeBtn.textContent = "Loại bỏ";
-          titleWrapper.appendChild(removeBtn);
-        }
-      }
 
       const triggerDiv = addAreaBtn?.parentElement;
       if (!triggerDiv) return;

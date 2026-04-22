@@ -1,13 +1,11 @@
-<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/fabrication-process.html uid=85016928 -->
 <!-- CÔNG ĐOẠN CHẾ TÁC SECTION -->
-<!-- GSXD-SECTION:BEGIN file=components/products/fabrication-process.html tag=section idx=001 uid=87e0010d -->
 <section
   class="w-full py-8 md:py-16 bg-background-secondary overflow-hidden"
   data-aos="fade-up"
 >
   <div class="max-w-[1920px] mx-auto">
     <h2
-      class="text-[20px] leading-[32px] md:text-3xl md:leading-none font-semibold text-secondary text-center uppercase mb-[20px] md:mb-20"
+      class="text-[20px] md:text-3xl font-semibold text-secondary text-center uppercase mb-5 md:mb-16"
     >
       CÔNG ĐOẠN CHẾ TÁC
     </h2>
@@ -24,7 +22,9 @@
           >
             <div
               class="h-full aspect-[4/6] overflow-hidden rounded-sm bg-[#E5E5E5]"
-            ></div>
+            >
+              <img src="/assets/images/cong-doan-01.jpg" alt="Công đoạn chế tác" class="w-full h-full object-cover">
+            </div>
           </div>
           <!-- Slide 2 -->
           <div
@@ -106,7 +106,9 @@
           >
             <div
               class="h-full aspect-[4/6] overflow-hidden rounded-sm bg-[#E5E5E5]"
-            ></div>
+            >
+              <img src="/assets/images/cong-doan-02.jpg" alt="Công đoạn chế tác" class="w-full h-full object-cover">
+            </div>
           </div>
         </div>
       </div>
@@ -180,39 +182,7 @@
   />
 </div>
 
-{{#push "styles"}}
-<style>
-  .fabrication-pagination {
-    align-items: center;
-    gap: 12px;
-  }
-
-  .fabrication-pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    margin: 0 !important;
-    border-radius: 9999px;
-    background-color: rgba(199, 110, 0, 0.3);
-    background-image: none !important;
-    box-shadow: none !important;
-    opacity: 1 !important;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transition:
-      transform 0.2s ease,
-      background-color 0.2s ease,
-      width 0.2s ease;
-  }
-
-  .fabrication-pagination .swiper-pagination-bullet-active {
-    width: 12px;
-    background-color: #c76e00 !important;
-    opacity: 1 !important;
-  }
-</style>
-{{/push}} {{#push "scripts"}}
+{{#push "scripts"}}
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const lightbox = document.getElementById("fabrication-lightbox");
@@ -279,4 +249,3 @@
   });
 </script>
 {{/push}}
-<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/fabrication-process.html uid=85016928 -->

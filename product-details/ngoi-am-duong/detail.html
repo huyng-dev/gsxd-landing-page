@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- GSXD-DEBUG:BEGIN type=PAGE file=product-details/ngoi-am-duong/detail.html uid=77679751 -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,22 +16,53 @@
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      .size-options-scroll {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-gutter: stable both-edges;
+        scrollbar-width: auto;
+        scrollbar-color: #c76e00 #fff1e3;
+        padding-bottom: 12px;
+        scroll-behavior: smooth;
+      }
+
+      .size-options-scroll::-webkit-scrollbar {
+        height: 16px;
+      }
+
+      .size-options-scroll::-webkit-scrollbar-track {
+        background: linear-gradient(180deg, #fff7ee 0%, #fff1e3 100%);
+        border-radius: 9999px;
+        box-shadow:
+          inset 0 0 0 1px rgba(249, 115, 22, 0.12),
+          0 2px 8px rgba(249, 115, 22, 0.08);
+      }
+
+      .size-options-scroll::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #fdba74 0%, #c76e00 100%);
+        border-radius: 9999px;
+        border: 4px solid #fff1e3;
+        box-shadow: 0 2px 6px rgba(249, 115, 22, 0.22);
+      }
+
+      .size-options-scroll::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #fed7aa 0%, #c76e00 100%);
+      }
+    </style>
     {{{stack "styles"}}}
   </head>
   <body
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
   >
-<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-am-duong/detail.html include=components/header idx=001 uid=fe89a5e6 -->
-{{> components/header}}
+    {{> components/header}}
 
-    <!-- GSXD-ELEMENT:BEGIN file=product-details/ngoi-am-duong/detail.html tag=main idx=001 uid=b668b9d6 -->
-
-    <main class="flex-grow bg-background-secondary pb-20">
+    <main class="flex-grow bg-background-secondary pb-14 md:pb-20">
       <!-- Top Banner for Detail -->
-<!-- GSXD-SECTION:BEGIN file=product-details/ngoi-am-duong/detail.html tag=section idx=001 uid=4bef14dd -->
-<section
-        class="relative w-full h-[180px] md:h-[210px] flex items-center justify-center overflow-hidden"
+      <section
+        class="hidden md:flex relative w-full h-[180px] md:h-[210px] items-center justify-center overflow-hidden"
       >
         <div class="absolute inset-0 z-0">
           <img
@@ -68,34 +98,40 @@
       </section>
 
       <!-- Sub Breadcrumb -->
-      <div
-        class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
-      >
-<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-am-duong/detail.html include=components/products/breadcrumb idx=002 uid=30a03d3c -->
-{{> components/products/breadcrumb parentHref="/products/ngoi-am-duong/"
-        parentLabel="Sản phẩm" currentLabel="NGÓI ÂM DƯƠNG"}}
+      <div class="hidden md:block w-[85%] max-w-[1320px] mx-auto py-8">
+        {{> components/products/breadcrumb textClass="font-semibold text-primary/60 uppercase text-[14px] md:text-base" linkClass="hover:text-primary transition-colors" separatorClass="mx-1" parentHref="/products/ngoi-am-duong/" parentLabel="Sản phẩm" currentClass="text-primary font-semibold pb-1" currentLabel="NGÓI ÂM DƯƠNG"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
       <!-- Product Detail Container -->
-<!-- GSXD-SECTION:BEGIN file=product-details/ngoi-am-duong/detail.html tag=section idx=002 uid=0b9929e5 -->
-<section
-        class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-6 xl:gap-8 pb-16 lg:pb-24 pt-4"
+      <section
+        class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-10 lg:pb-24 pt-0 md:pt-4"
       >
         <!-- Left: Images -->
-        <div class="flex flex-col gap-5 lg:col-span-3">
+        <div class="flex flex-col md:gap-5 lg:col-span-3">
           <!-- Main Image -->
           <div
-            class="w-full aspect-square shadow-lg relative overflow-hidden group"
+            class="w-full aspect-square bg-white md:shadow-lg relative overflow-hidden group"
           >
             <img
-              src="/assets/images/am-duong-detail.png"
+              src="/assets/images/nad-detail.png"
               alt="Ngói Âm Dương 27 Xanh Đồng"
               class="w-full h-full object-cover object-center mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
             />
+            
+            <!-- Mobile Dots Pagination (Figma Layout) -->
+            <div class="md:hidden absolute bottom-[13px] left-1/2 -translate-x-1/2 w-[152px] h-[17px]">
+              <div class="absolute inset-0 bg-[#C76E00] opacity-10 rounded-[17px]"></div>
+              <div class="absolute w-[10px] h-[6px] left-[21px] top-[5px] bg-[#C76E00] rounded-full"></div>
+              <div class="absolute w-[6px] h-[6px] left-[45px] top-[5px] bg-white opacity-50 rounded-full"></div>
+              <div class="absolute w-[6px] h-[6px] left-[65px] top-[5px] bg-white opacity-50 rounded-full"></div>
+              <div class="absolute w-[6px] h-[6px] left-[85px] top-[5px] bg-white opacity-50 rounded-full"></div>
+              <div class="absolute w-[6px] h-[6px] left-[105px] top-[5px] bg-white opacity-50 rounded-full"></div>
+              <div class="absolute w-[6px] h-[6px] left-[125px] top-[5px] bg-white opacity-50 rounded-full"></div>
+            </div>
           </div>
           <!-- Thumbnails -->
-          <div class="flex gap-5 w-full mt-2">
+          <div class="hidden md:flex gap-5 w-full mt-2">
             <div
               class="flex-1 aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"
             ></div>
@@ -121,27 +157,34 @@
         </div>
 
         <!-- Right: Info -->
-        <div class="flex flex-col lg:col-span-2">
-          <div class="flex items-center gap-4 mb-8 text-[16px]">
-            <span class="text-primary">Mã SP</span>
-            <span class="text-primary font-semibold">THC 100-GDS</span>
+        <div class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-[18px] md:pt-0">
+          
+          <!-- SKU -->
+          <div class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] order-2 md:order-1 mt-1 md:mt-0">
+            <span class="text-[#656663] md:text-primary font-light md:font-normal">Mã SP:</span>
+            <span class="text-[#656663] md:text-primary font-semibold">THC 100-GDS</span>
           </div>
 
+          <!-- Title -->
           <h2
-            class="text-xl md:text-2xl lg:text-[32px] font-semibold text-secondary uppercase !leading-normal mb-14 pb-1 tracking-tight"
+            class="text-[20px] text-[#C76E00] md:text-2xl lg:text-[32px] font-semibold md:text-secondary uppercase leading-[30px] md:!leading-normal mb-0 md:mb-14 pb-0 md:pb-1 tracking-tight order-1 md:order-2"
           >
-            Ngói Âm Dương 27 Xanh <br />
+            Ngói Âm Dương 27 Xanh <br class="hidden md:block" />
             Đồng
           </h2>
 
-          <p class="text-2xl md:text-[32px] font-semibold text-primary mb-16">
-            675.000 đ/m2
+          <!-- Price -->
+          <p class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal order-3 mt-0.5 md:mt-0">
+            675.000 đ/m²
           </p>
 
-          <hr class="border-t border-black/10 mb-8 w-full" />
+          <!-- Separator -->
+          <hr class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full order-4 hidden md:block" />
+          <hr class="border-t border-black/10 w-full order-4 md:hidden mb-4" />
 
+          <!-- Details List -->
           <ul
-            class="list-disc pl-5 space-y-4 mb-16 text-primary font-medium text-lg md:text-xl leading-relaxed"
+            class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed order-5"
           >
             <li>Timeless beauty to be treasured</li>
             <li>High-quality and classic design, suitable for decoration</li>
@@ -149,21 +192,21 @@
           </ul>
 
           <!-- Actions -->
-          <div class="flex flex-wrap items-center gap-6 mb-16">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-[15px] md:mb-16 order-6 w-full">
             <!-- Quantity -->
-            <div class="flex items-center gap-4 text-primary">
+            <div class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0">
               <button
-                class="w-6 h-6 flex items-center justify-center text-xl hover:text-secondary transition-colors focus:outline-none"
+                class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors"
               >
                 -
               </button>
               <div
-                class="w-12 h-12 flex items-center justify-center border border-black/40 rounded-full text-base shadow-sm"
+                class="w-12 h-12 flex items-center justify-center rounded-full text-[16px] md:text-base font-normal shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:shadow-sm outline outline-1 outline-black/40 outline-offset-[-1px] md:outline-none md:border md:border-black/40 bg-transparent"
               >
                 1
               </div>
               <button
-                class="w-6 h-6 flex items-center justify-center text-xl hover:text-secondary transition-colors focus:outline-none"
+                class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors"
               >
                 +
               </button>
@@ -171,14 +214,14 @@
 
             <!-- Add to cart -->
             <button
-              class="bg-[#C16A00] hover:bg-secondary text-[#EFE4DE] px-8 md:px-12 py-4 font-semibold transition-colors shadow-md rounded-[2px] flex items-center justify-center text-sm ml-4"
+              class="w-full md:w-auto bg-[#C16A00] hover:bg-secondary text-[#EFE4DE] px-8 py-4 font-semibold md:transition-colors md:shadow-md rounded-[2px] flex items-center justify-center text-[14px] md:text-sm tracking-[0.28px] md:tracking-normal md:ml-4"
             >
               THÊM VÀO GIỎ HÀNG
             </button>
           </div>
 
           <!-- Contacts -->
-          <div class="flex flex-col gap-5 mt-2">
+          <div class="hidden md:flex flex-col gap-5 mt-2 order-7">
             <!-- Hotline -->
             <div class="flex items-center gap-5">
               <div
@@ -217,166 +260,301 @@
           </div>
         </div>
       </section>
-<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-am-duong/detail.html include=components/products/journey-video idx=003 uid=5158b735 -->
-{{> components/products/journey-video hideTitle=true}}
 
-      <!-- Sizes Options Section -->
-<!-- GSXD-SECTION:BEGIN file=product-details/ngoi-am-duong/detail.html tag=section idx=003 uid=8b1aee34 -->
-<section class="w-[85%] max-w-[1320px] mx-auto pb-12" data-aos="fade-up">
-        <h2
-          class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-12 uppercase"
+      {{> components/products/journey-video hideTitle=true}}
+
+      <!-- Flex Container for Mobile Reordering -->
+      <div class="flex flex-col w-full">
+        <!-- Sizes Options Section -->
+        <section
+          class="order-2 md:order-1 w-[85%] max-w-[1320px] mx-auto pb-[40px] md:pb-16 pt-1"
+          data-aos="fade-up"
         >
-          Đa dạng kích thước - phong phú chọn lựa
+        <h2
+          class="text-[20px] leading-[32px] tracking-[0.6px] md:text-3xl md:leading-normal md:tracking-wide font-semibold text-center text-secondary mb-6 md:mb-12 uppercase break-words"
+        >
+          Bảng kích thước
         </h2>
-        <div class="w-full flex justify-center">
+        <div class="size-options-scroll w-full pb-2">
           <img
             src="/assets/images/ngoi-am-duong-size.png"
             alt="Đa dạng kích thước ngói âm dương"
-            class="w-full h-auto object-contain"
+            class="h-auto object-contain max-w-none"
+            style="width: 200%"
           />
         </div>
       </section>
 
-      <!-- Color Palette Section -->
-<!-- GSXD-SECTION:BEGIN file=product-details/ngoi-am-duong/detail.html tag=section idx=004 uid=cc7731ca -->
-<section class="w-[85%] max-w-[1320px] mx-auto pb-24" data-aos="fade-up">
-        <h2
-          class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-12 uppercase"
-        >
-          Bảng màu
-        </h2>
+      <!-- Sections Wrapped in Accordion for Mobile -->
+      <div class="order-1 md:order-2 w-full flex flex-col pt-0 pb-2 md:pb-0">
+        <script>
+          function toggleMobileAccordion(btn) {
+            const content = btn.nextElementSibling;
+            const chevron = btn.querySelector('.chevron');
+            // Toggle visibility
+            if (content.classList.contains('hidden')) {
+              content.classList.remove('hidden');
+              chevron.classList.add('rotate-180');
+            } else {
+              content.classList.add('hidden');
+              chevron.classList.remove('rotate-180');
+            }
+          }
+        </script>
 
-        <div
-          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-28 gap-y-14"
-        >
-          <!-- Row 1 -->
-          <div class="flex flex-col items-center gap-4">
-            <div
-              class="w-full aspect-[5/4] rounded-[22px] overflow-hidden shadow-sm bg-[#FBF9F7]"
-            >
-              <img
-                src="/assets/images/do-co.png"
-                alt="Đỏ cờ"
-                class="w-full h-full object-cover"
-              />
+        <!-- Product Color Palette Accordion Item -->
+        <div class="md:border-none">
+          <button class="md:hidden w-full flex justify-between items-center py-[20px] px-[30px]" onclick="toggleMobileAccordion(this)">
+            <span class="text-[#2E2F2A] text-[14px] font-bold tracking-tight">Bảng màu</span>
+            <div class="chevron w-6 h-6 bg-[#E5E7EB] rounded-full flex justify-center items-center transition-transform duration-300">
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="#6B7280" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <span
-              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
-              style="font-family: &quot;Italianno&quot;, cursive"
-              >Đỏ cờ</span
-            >
-          </div>
-
-          <div class="flex flex-col items-center gap-4">
-            <div
-              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#A67B5B]"
-            ></div>
-            <span
-              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
-              style="font-family: &quot;Italianno&quot;, cursive"
-              >Nâu đỏ</span
-            >
-          </div>
-
-          <div class="flex flex-col items-center gap-4">
-            <div
-              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#B22222]"
-            ></div>
-            <span
-              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
-              style="font-family: &quot;Italianno&quot;, cursive"
-              >Gấm đỏ</span
-            >
-          </div>
-
-          <div class="flex flex-col items-center gap-4">
-            <div
-              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#5D5FEF]"
-            ></div>
-            <span
-              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
-              style="font-family: &quot;Italianno&quot;, cursive"
-              >Xanh đồng</span
-            >
-          </div>
-
-          <div class="flex flex-col items-center gap-4">
-            <div
-              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#2ECC71]"
-            ></div>
-            <span
-              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
-              style="font-family: &quot;Italianno&quot;, cursive"
-              >Xanh ngọc</span
-            >
-          </div>
-
-          <!-- Row 2 -->
-          <div class="flex flex-col items-center gap-4">
-            <div
-              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#CC7A00]"
-            ></div>
-            <span
-              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
-              style="font-family: &quot;Italianno&quot;, cursive"
-              >Hổ phách</span
-            >
-          </div>
-
-          <div class="flex flex-col items-center gap-4">
-            <div
-              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#009432]"
-            ></div>
-            <span
-              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
-              style="font-family: &quot;Italianno&quot;, cursive"
-              >Nâu đen</span
-            >
-          </div>
-
-          <div class="flex flex-col items-center gap-4">
-            <div
-              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#D1D1E9]"
-            ></div>
-            <span
-              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
-              style="font-family: &quot;Italianno&quot;, cursive"
-              >Sô cô la</span
-            >
-          </div>
-
-          <div class="flex flex-col items-center gap-4">
-            <div
-              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#00BFFF]"
-            ></div>
-            <span
-              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
-              style="font-family: &quot;Italianno&quot;, cursive"
-              >Ghi ánh kim</span
-            >
-          </div>
-
-          <div class="flex flex-col items-center gap-4">
-            <div
-              class="w-full aspect-[5/4] rounded-[22px] shadow-sm bg-[#FFD700]"
-            ></div>
-            <span
-              class="text-2xl md:text-3xl lg:text-[40px] text-primary"
-              style="font-family: &quot;Italianno&quot;, cursive"
-              >Hoàng thổ</span
-            >
+          </button>
+          <div class="accordion-content hidden md:block w-full pb-6 md:pb-0 pt-2 md:pt-0">
+            <!-- Color Palette Section -->
+            <section class="w-[85%] max-w-[1320px] mx-auto md:mb-16" data-aos="fade-up">
+              <h2
+                class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-5 md:mb-12 uppercase"
+              >
+                Bảng màu
+              </h2>
+      
+              <div
+                class="grid grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-x-[17px] gap-y-[25px] md:gap-x-28 md:gap-y-14"
+              >
+                <!-- Row 1 -->
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] overflow-hidden shadow-sm bg-[#FBF9F7]"
+                  >
+                    <img
+                      src="/assets/images/do-co.png"
+                      alt="Đỏ cờ"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Đỏ cờ</span
+                  >
+                </div>
+      
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#A67B5B]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Nâu đỏ</span
+                  >
+                </div>
+      
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#B22222]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Gấm đỏ</span
+                  >
+                </div>
+      
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#5D5FEF]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Xanh đồng</span
+                  >
+                </div>
+      
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#2ECC71]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Xanh ngọc</span
+                  >
+                </div>
+      
+                <!-- Row 2 -->
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#CC7A00]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Hổ phách</span
+                  >
+                </div>
+      
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#009432]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Nâu đen</span
+                  >
+                </div>
+      
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#D1D1E9]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Sô cô la</span
+                  >
+                </div>
+      
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#00BFFF]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Xanh ngọc</span
+                  >
+                </div>
+      
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#FFD700]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Hoàng thổ</span
+                  >
+                </div>
+      
+                <!-- Row 3 -->
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#2980B9]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Xanh dương</span
+                  >
+                </div>
+      
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#4A5D23]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Xanh rêu</span
+                  >
+                </div>
+      
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#B07D35]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Da lươn</span
+                  >
+                </div>
+      
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#7F8C8D]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Ghi xám</span
+                  >
+                </div>
+      
+                <div class="flex flex-col items-center gap-0 md:gap-4">
+                  <div
+                    class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#2C3E50]"
+                  ></div>
+                  <span
+                    class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal"
+                    style="font-family: &quot;Italianno&quot;, cursive"
+                    >Đen nhám</span
+                  >
+                </div>
+              </div>
+            </section>
           </div>
         </div>
-      </section>
-<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-am-duong/detail.html include=components/products/weight-calculator idx=004 uid=dea0ad76 -->
-{{> components/products/weight-calculator}} {{>
-      components/products/applications}} {{>
-      components/products/installation-guide}} {{> components/products/works}}
-<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-am-duong/detail.html include=components/products/recommendations idx=005 uid=035d0e53 -->
-{{> components/products/recommendations}} {{> components/products/faq2}}
+
+        <hr class="mx-[30px] border-t border-black/10 md:hidden" />
+
+        <!-- Weight Calculator Accordion Item -->
+        <div class="md:border-none">
+          <button class="md:hidden w-full flex justify-between items-center py-[20px] px-[30px]" onclick="toggleMobileAccordion(this)">
+            <span class="text-[#2E2F2A] text-[14px] font-bold tracking-tight">Ước tính khối lượng</span>
+            <div class="chevron w-6 h-6 bg-[#E5E7EB] rounded-full flex justify-center items-center transition-transform duration-300">
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="#6B7280" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </button>
+          <div class="accordion-content hidden md:block w-full pb-6 md:pb-0">
+             {{> components/products/weight-calculator}}
+          </div>
+        </div>
+
+        <hr class="mx-[30px] border-t border-black/10 md:hidden" />
+
+        <!-- Applications Accordion Item -->
+        <div class="md:border-none">
+          <button class="md:hidden w-full flex justify-between items-center py-[20px] px-[30px]" onclick="toggleMobileAccordion(this)">
+            <span class="text-[#2E2F2A] text-[14px] font-bold tracking-tight">Ứng dụng</span>
+            <div class="chevron w-6 h-6 bg-[#E5E7EB] rounded-full flex justify-center items-center transition-transform duration-300">
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="#6B7280" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </button>
+          <div class="accordion-content hidden md:block w-full pb-6 md:pb-0">
+             {{> components/products/applications}}
+          </div>
+        </div>
+
+        <hr class="mx-[30px] border-t border-black/10 md:hidden" />
+
+        <!-- Installation Guide Accordion Item -->
+        <div class="md:border-none">
+          <button class="md:hidden w-full flex justify-between items-center py-[20px] px-[30px]" onclick="toggleMobileAccordion(this)">
+            <span class="text-[#2E2F2A] text-[14px] font-bold tracking-tight">Hướng dẫn lắp đặt</span>
+            <div class="chevron w-6 h-6 bg-[#E5E7EB] rounded-full flex justify-center items-center transition-transform duration-300">
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="#6B7280" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </button>
+          <div class="accordion-content hidden md:block w-full pb-6 md:pb-0">
+             {{> components/products/installation-guide}}
+          </div>
+        </div>
+
+        <hr class="mx-[30px] border-t border-black/10 md:hidden mb-8 md:mb-0" />
+      </div>
+      </div> <!-- End Flex Container for Mobile Reordering -->
+      
+      {{> components/products/works}}
+      {{> components/products/recommendations}}
+      {{> components/products/faq2}}
     </main>
-<!-- GSXD-PARTIAL:BEGIN file=product-details/ngoi-am-duong/detail.html include=components/footer idx=006 uid=5bba9b73 -->
-{{> components/footer hideNewsletter=true}}
+
+    {{> components/footer hideNewsletter=true}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
@@ -385,10 +563,5 @@
       AOS.init({ duration: 800, once: true, offset: 100 });
     </script>
     {{{stack "scripts"}}}
-<!-- GSXD-DEBUG:END type=PAGE file=product-details/ngoi-am-duong/detail.html uid=77679751 -->
-</body>
+  </body>
 </html>
-
-
-
-

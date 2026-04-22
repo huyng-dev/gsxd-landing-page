@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- GSXD-DEBUG:BEGIN type=PAGE file=news/index.html uid=42a6e7cd -->
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -32,21 +31,16 @@
         data-page="news"
         class="min-h-screen flex flex-col bg-neutral-2"
     >
-<!-- GSXD-PARTIAL:BEGIN file=news/index.html include=components/header idx=001 uid=75658375 -->
-{{> components/header}}
+        {{> components/header}}
 
-        <!-- GSXD-ELEMENT:BEGIN file=news/index.html tag=main idx=001 uid=375b0989 -->
-
-        <main class="flex-grow">
-<!-- GSXD-PARTIAL:BEGIN file=news/index.html include=news/partials/hero idx=002 uid=ecc32970 -->
-{{> news/partials/hero}}
-<!-- GSXD-PARTIAL:BEGIN file=news/index.html include=news/partials/main-content idx=003 uid=718cb345 -->
-{{> news/partials/main-content}}
-<!-- GSXD-PARTIAL:BEGIN file=news/index.html include=news/partials/history-related idx=004 uid=2e226290 -->
-{{> news/partials/history-related}}
+        <main class="flex-grow pb-14 lg:pb-20">
+            {{> news/partials/hero}}
+            {{> news/partials/main-content}}
+            {{> news/partials/history-related}}
+            {{> components/products/faq2}}
         </main>
-<!-- GSXD-PARTIAL:BEGIN file=news/index.html include=components/footer idx=005 uid=1707d48e -->
-{{> components/footer}}
+
+        {{> components/footer hideNewsletter=true}}
 
         <script
             type="module"
@@ -62,10 +56,5 @@
             });
         </script>
         {{{stack "scripts"}}}
-<!-- GSXD-DEBUG:END type=PAGE file=news/index.html uid=42a6e7cd -->
 </body>
 </html>
-
-
-
-
