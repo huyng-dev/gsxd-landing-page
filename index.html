@@ -1,5 +1,25 @@
+<!doctype html>
 <!-- GSXD-DEBUG:BEGIN type=PAGE file=index.html uid=f6013a00 -->
-{{#> layouts/main pageName="index" bodyClass="bg-white" isHome=true title="Thanh Hải Ceramics - Ngói và Gạch Hoa Truyền Thống"}}
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Hải Ceramics - Ngói và Gạch Hoa Truyền Thống</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    {{{stack "styles"}}}
+  </head>
+
+  <body data-page="index" class="bg-white">
+    <!-- GSXD-PARTIAL:BEGIN file=index.html include=components/header idx=001 uid=e9c7744e -->
+    {{> components/header isHome=true}}
+
     <!-- GSXD-ELEMENT:BEGIN file=index.html tag=main idx=001 uid=810d0852 -->
 
     <main>
@@ -37,5 +57,21 @@
       <!-- GSXD-PARTIAL:BEGIN file=index.html include=home/partials/showroom idx=012 uid=6a35fe4d -->
       {{> home/partials/showroom}}
     </main>
-{{/layouts/main}}
-<!-- GSXD-DEBUG:END type=PAGE file=index.html uid=f6013a00 -->
+    <!-- GSXD-PARTIAL:BEGIN file=index.html include=components/footer idx=013 uid=22bf9385 -->
+    {{> components/footer}}
+
+    <script type="module" src="/assets/js/app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    {{{stack "scripts"}}}
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+    </script>
+    <!-- GSXD-DEBUG:END type=PAGE file=index.html uid=f6013a00 -->
+  </body>
+</html>

@@ -30,6 +30,19 @@
     @media (min-width: 768px) {
       .mobile-compare-row {
         height: auto;
+        align-items: center;
+      }
+      .mobile-compare-row > div {
+        align-items: center;
+      }
+      .compare-cell-text {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
       }
     }
   </style>
@@ -53,7 +66,7 @@
       <div
         class="overflow-x-auto pb-6 custom-recommend-scrollbar mobile-scroll-visible"
       >
-        <div class="min-w-[900px] md:min-w-[1000px]">
+        <div class="min-w-[900px] md:min-w-[1000px] w-max">
           <!-- Product Info Row -->
           <div class="flex gap-0 md:gap-10 mb-4 md:mb-8">
             <!-- Empty space - Hidden on Mobile -->
@@ -124,13 +137,13 @@
                   <span class="mobile-compare-label">Giá</span>
                 </div>
                 <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
                 >
                   675.000 đ/m²
                 </div>
                 {{#for 4}}
                 <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
                 >
                   675.000 đ/m²
                 </div>
@@ -153,13 +166,13 @@
                   <span class="mobile-compare-label">Màu sắc</span>
                 </div>
                 <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
                 >
                   Nâu đỏ
                 </div>
                 {{#for 4}}
                 <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
                 >
                   Nâu đỏ
                 </div>
@@ -182,13 +195,13 @@
                   <span class="mobile-compare-label">Kích thước</span>
                 </div>
                 <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
+                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4 md:mr-auto"
                 >
                   L280 x W280 x H54mm
                 </div>
                 {{#for 4}}
                 <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
+                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4 md:mr-auto"
                 >
                   L280 x W280 x H54mm
                 </div>

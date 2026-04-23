@@ -149,6 +149,13 @@
     margin-bottom: 15px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    .scroll-indicator-track {
+      height: 8px;
+    }
   }
 
   .scroll-indicator-thumb {
@@ -159,6 +166,13 @@
     top: 0;
     left: 0;
     transition: width 0.1s ease, left 0.1s ease;
+    cursor: grab;
+  }
+
+  .scroll-indicator-thumb:active,
+  .scroll-indicator-thumb.is-dragging {
+    cursor: grabbing;
+    background: #c76e00;
   }
 
   .catalog-text-vertical {

@@ -1,4 +1,21 @@
-{{#> layouts/main pageName="factory" bodyClass="bg-background-secondary min-h-screen flex flex-col" hideNewsletter=true title="Xưởng sản xuất - Thanh Hải Ceramics"}}
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xưởng sản xuất - Thanh Hải Ceramics</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/assets/css/main.css">
+{{{stack "styles"}}}
+</head>
+
+<body data-page="factory" class="bg-background-secondary min-h-screen flex flex-col">
+    {{> components/header}}
+
     <main class="flex-grow pb-14 lg:pb-20">
         {{> factory/partials/hero}}
         {{> factory/partials/intro}}
@@ -8,4 +25,20 @@
         {{> factory/partials/gallery-2}}
         {{> components/products/faq2}}
     </main>
-{{/layouts/main}}
+
+    {{> components/footer hideNewsletter=true}}
+
+    <script type="module" src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+    </script>
+{{{stack "scripts"}}}
+</body>
+
+</html>

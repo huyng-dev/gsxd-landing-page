@@ -47,7 +47,7 @@ function resolveHandlebarsStacks(html) {
 
 // Auto-scan all HTML files
 const htmlFiles = glob.sync("**/*.html", {
-  ignore: ["node_modules/**", "dist/**", "components/**", "**/partials/**", "layouts/**"],
+  ignore: ["node_modules/**", "dist/**", "components/**", "**/partials/**"],
 });
 
 // Create input object for all HTML files
