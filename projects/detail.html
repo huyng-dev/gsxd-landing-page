@@ -32,20 +32,18 @@
     <main class="flex-grow">
       {{> projects/partials/detail-hero}} {{> projects/partials/detail-content}}
       {{> projects/partials/detail-related}}
-      <div class="pb-8">
-        {{> components/products/faq2}}
-      </div>
+      <div class="py-16 lg:py-24">{{> components/products/faq2}}</div>
       <!-- CTA Section -->
-      <section class="py-20 md:py-32 bg-primary text-white">
+      <section class="py-16 lg:py-24 bg-primary text-white">
         <div class="w-[85%] max-w-[1000px] mx-auto text-center">
           <h2
-            class="text-3xl md:text-5xl font-arima font-medium mb-6"
+            class="text-[30px] lg:text-[40px] font-arima font-medium mb-10 lg:mb-16"
             data-aos="fade-up"
           >
             Bạn có dự án tương tự?
           </h2>
           <p
-            class="text-lg opacity-90 mb-10 max-w-2xl mx-auto font-light"
+            class="text-[15px] opacity-90 mb-10 lg:mb-16 max-w-2xl mx-auto font-light leading-relaxed"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -111,8 +109,8 @@
             640: {
               slidesPerView: 2.15,
               spaceBetween: 20,
-            }
-          }
+            },
+          },
         });
       }
     </script>
