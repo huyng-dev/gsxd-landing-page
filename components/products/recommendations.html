@@ -2,51 +2,7 @@
   class="w-full pb-0 md:pb-16 bg-background-secondary relative {{#if showDecor}}overflow-visible{{/if}}"
   data-aos="fade-up"
 >
-  {{#push "styles"}}
-  <style>
-    /* Native scrollbar hidden - JS scroll indicator handles display */
-
-    .compare-cell-text {
-      margin-top: 27px;
-      margin-bottom: 7px;
-      padding-left: 0;
-      text-align: left;
-      text-indent: 0;
-    }
-
-    .mobile-compare-label {
-      position: absolute;
-      top: 5px;
-      left: 0;
-      color: #2e2f2a;
-      font-size: 12px;
-      font-family: Archivo, sans-serif;
-      font-weight: 700;
-      line-height: 21px;
-      word-wrap: break-word;
-      white-space: nowrap;
-    }
-
-    @media (min-width: 768px) {
-      .mobile-compare-row {
-        height: auto;
-        align-items: center;
-      }
-      .mobile-compare-row > div {
-        align-items: center;
-      }
-      .compare-cell-text {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-      }
-    }
-  </style>
-  {{/push}} {{#if showDecor}}
+  {{#if showDecor}}
   <!-- Decorative image -->
   <img
     src="/assets/images/gtt-decorate-right.svg"
@@ -214,3 +170,48 @@
     </div>
   </div>
 </section>
+{{#push "styles"}}
+<style>
+  /* Native scrollbar hidden - JS scroll indicator handles display */
+
+  .compare-cell-text {
+    margin-top: 27px;
+    margin-bottom: 7px;
+    padding-left: 0;
+    text-align: left;
+    text-indent: 0;
+  }
+
+  .mobile-compare-label {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    color: #2e2f2a;
+    font-size: 12px;
+    font-family: Archivo, sans-serif;
+    font-weight: 700;
+    line-height: 21px;
+    word-wrap: break-word;
+    white-space: nowrap;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-compare-row {
+      height: auto;
+      align-items: center;
+    }
+    .mobile-compare-row > div {
+      align-items: center;
+    }
+    .compare-cell-text {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+</style>
+{{/push}}

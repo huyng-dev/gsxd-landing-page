@@ -12,142 +12,146 @@
       @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
     </style>
     <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
     {{{stack "styles"}}}
   </head>
   <body data-page="products" class="min-h-screen flex flex-col bg-neutral-1">
-    {{> components/header}}
-
-    {{#push "styles"}}
-<style>
+    {{> components/header}} {{#push "styles"}}
+    <style>
       @import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap");
     </style>
-<style>
+    <style>
       @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
     </style>
-<style>
+    <style>
       @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
     </style>
-<style>
-          .project-showcase-swiper {
-            --project-side-width: 10%;
-            --project-center-width: 50%;
-            --project-height: 780px;
-            --project-radius: 80px;
-            width: 100%;
-            height: var(--project-height);
-            overflow: hidden;
-            touch-action: pan-y;
-          }
+    <style>
+      .project-showcase-swiper {
+        --project-side-width: 10%;
+        --project-center-width: 50%;
+        --project-height: 780px;
+        --project-radius: 80px;
+        width: 100%;
+        height: var(--project-height);
+        overflow: hidden;
+        touch-action: pan-y;
+      }
 
-          .project-showcase-swiper .swiper-wrapper {
-            align-items: stretch;
-          }
+      .project-showcase-swiper .swiper-wrapper {
+        align-items: stretch;
+      }
 
-          .project-showcase-swiper .swiper-slide {
-            width: var(--project-side-width) !important;
-            height: var(--project-height);
-            border-radius: var(--project-radius);
-            overflow: hidden;
-            flex-shrink: 0;
-            will-change: width;
-            transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-          }
+      .project-showcase-swiper .swiper-slide {
+        width: var(--project-side-width) !important;
+        height: var(--project-height);
+        border-radius: var(--project-radius);
+        overflow: hidden;
+        flex-shrink: 0;
+        will-change: width;
+        transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
 
-          .project-showcase-swiper.is-dragging .swiper-slide {
-            transition: none !important;
-          }
+      .project-showcase-swiper.is-dragging .swiper-slide {
+        transition: none !important;
+      }
 
-          .project-showcase-swiper .swiper-slide-active {
-            width: var(--project-center-width) !important;
-          }
+      .project-showcase-swiper .swiper-slide-active {
+        width: var(--project-center-width) !important;
+      }
 
-          .project-showcase-swiper:not(.swiper-initialized)
-            .swiper-slide:first-child {
-            width: var(--project-center-width) !important;
-          }
+      .project-showcase-swiper:not(.swiper-initialized)
+        .swiper-slide:first-child {
+        width: var(--project-center-width) !important;
+      }
 
-          .project-showcase-swiper .project-overlay {
-            opacity: 0;
-            transition: opacity 0.7s ease;
-          }
+      .project-showcase-swiper .project-overlay {
+        opacity: 0;
+        transition: opacity 0.7s ease;
+      }
 
-          .project-showcase-swiper .project-content {
-            left: 80px;
-            bottom: 65px;
-            opacity: 0;
-            transform: translateY(16px);
-            pointer-events: none;
-            transition: all 0.7s ease;
-          }
+      .project-showcase-swiper .project-content {
+        left: 80px;
+        bottom: 65px;
+        opacity: 0;
+        transform: translateY(16px);
+        pointer-events: none;
+        transition: all 0.7s ease;
+      }
 
-          .project-showcase-swiper .swiper-slide-active .project-overlay {
-            opacity: 1;
-          }
+      .project-showcase-swiper .swiper-slide-active .project-overlay {
+        opacity: 1;
+      }
 
-          .project-showcase-swiper .swiper-slide-active .project-content {
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-          }
+      .project-showcase-swiper .swiper-slide-active .project-content {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
 
-          .project-showcase-swiper:not(.swiper-initialized)
-            .swiper-slide:first-child
-            .project-overlay {
-            opacity: 1;
-          }
+      .project-showcase-swiper:not(.swiper-initialized)
+        .swiper-slide:first-child
+        .project-overlay {
+        opacity: 1;
+      }
 
-          .project-showcase-swiper:not(.swiper-initialized)
-            .swiper-slide:first-child
-            .project-content {
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-          }
+      .project-showcase-swiper:not(.swiper-initialized)
+        .swiper-slide:first-child
+        .project-content {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
 
-          @media (max-width: 1023px) {
-            .project-showcase-swiper {
-              --project-side-width: min(76vw, 420px);
-              --project-center-width: min(76vw, 420px);
-              --project-height: 520px;
-              --project-radius: 42px;
-            }
+      @media (max-width: 1023px) {
+        .project-showcase-swiper {
+          --project-side-width: min(76vw, 420px);
+          --project-center-width: min(76vw, 420px);
+          --project-height: 520px;
+          --project-radius: 42px;
+        }
 
-            .project-showcase-swiper .swiper-slide {
-              width: var(--project-side-width) !important;
-              height: var(--project-height);
-              border-radius: var(--project-radius);
-            }
+        .project-showcase-swiper .swiper-slide {
+          width: var(--project-side-width) !important;
+          height: var(--project-height);
+          border-radius: var(--project-radius);
+        }
 
-            .project-showcase-swiper .project-content {
-              left: 28px;
-              bottom: 28px;
-            }
-          }
+        .project-showcase-swiper .project-content {
+          left: 28px;
+          bottom: 28px;
+        }
+      }
 
-          @media (max-width: 767px) {
-            .project-showcase-swiper {
-              --project-side-width: min(82vw, 320px);
-              --project-center-width: min(82vw, 320px);
-              --project-height: 380px;
-              --project-radius: 30px;
-            }
+      @media (max-width: 767px) {
+        .project-showcase-swiper {
+          --project-side-width: min(82vw, 320px);
+          --project-center-width: min(82vw, 320px);
+          --project-height: 380px;
+          --project-radius: 30px;
+        }
 
-            .project-showcase-swiper .swiper-slide {
-              width: var(--project-side-width) !important;
-              height: var(--project-height);
-              border-radius: var(--project-radius);
-            }
+        .project-showcase-swiper .swiper-slide {
+          width: var(--project-side-width) !important;
+          height: var(--project-height);
+          border-radius: var(--project-radius);
+        }
 
-            .project-showcase-swiper .project-content {
-              left: 20px;
-              bottom: 20px;
-            }
-          }
-        </style>
-<style>
+        .project-showcase-swiper .project-content {
+          left: 20px;
+          bottom: 20px;
+        }
+      }
+    </style>
+    <style>
       .project-dot {
         background-color: rgba(199, 110, 0, 0.3);
       }
@@ -156,10 +160,10 @@
         width: 8px;
       }
     </style>
-{{/push}}
+    {{/push}}
 
     <!-- GSXD-PARTIAL:BEGIN file=products/gach-trang-tri/index.html include=components/header idx=001 uid=2f21a96d -->
-     {{> components/catalog-button}}
+    {{> components/catalog-button}}
 
     <!-- GSXD-ELEMENT:BEGIN file=products/gach-trang-tri/index.html tag=main idx=001 uid=2e3771be -->
 
@@ -433,7 +437,7 @@
       <!-- Dấu ấn trên những công trình Section -->
       <!-- GSXD-SECTION:BEGIN file=products/gach-trang-tri/index.html tag=section idx=005 uid=79d01305 -->
       <section
-        class="max-w-[1320px] w-[85%] mx-auto overflow-x-hidden"
+        class="max-w-[1320px] w-[85%] mx-auto overflow-x-hidden mt-5 md:mt-auto"
         data-aos="fade-up"
       >
         <h2
@@ -750,7 +754,7 @@
     </main>
     <!-- GSXD-PARTIAL:BEGIN file=products/gach-trang-tri/index.html include=components/footer idx=006 uid=6e9190c9 -->
 
-{{#push "scripts"}}
+    {{#push "scripts"}}
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -895,11 +899,9 @@
         width: 8px;
       }
     </style>
-    
-    <!-- GSXD-DEBUG:END type=PAGE file=products/gach-trang-tri/index.html uid=c8361727 -->
-{{/push}}
 
-    {{> components/footer hideNewsletter=true}}
+    <!-- GSXD-DEBUG:END type=PAGE file=products/gach-trang-tri/index.html uid=c8361727 -->
+    {{/push}} {{> components/footer hideNewsletter=true}}
 
     <script type="module" src="/assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -932,4 +934,3 @@
   </body>
 </html>
 <!-- GSXD-DEBUG:END type=PAGE file=products/gach-trang-tri/index.html -->
-
