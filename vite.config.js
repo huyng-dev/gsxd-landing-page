@@ -88,6 +88,13 @@ export default defineConfig({
           }
           return accum;
         },
+        list(...args) {
+          // The last argument is the options object from Handlebars
+          return args.slice(0, -1);
+        },
+        object(options) {
+          return options.hash;
+        },
       },
     }),
     {
