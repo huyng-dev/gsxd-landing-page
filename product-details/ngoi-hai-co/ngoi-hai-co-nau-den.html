@@ -26,8 +26,7 @@
 
     <main class="flex-grow bg-background-secondary pb-14 md:pb-20">
       <!-- Top Banner for Detail -->
-      <section
-        class="hidden md:flex relative w-full h-[180px] md:h-[210px] items-center justify-center overflow-hidden"
+      <section class="hidden md:flex relative w-full h-[180px] md:h-[210px] items-center justify-center overflow-hidden"
       >
         <div class="absolute inset-0 z-0">
           <img
@@ -64,57 +63,36 @@
 
       <!-- Sub Breadcrumb -->
       <div class="hidden md:block w-[85%] max-w-[1320px] mx-auto py-8">
-        {{> components/products/breadcrumb textClass="font-semibold
-        text-primary/60 uppercase text-[14px] md:text-base"
-        linkClass="hover:text-primary transition-colors" separatorClass="mx-1"
-        parentHref="/products/ngoi-hai-van-mieu/" parentLabel="Sản phẩm"
-        currentClass="text-primary font-semibold pb-1" currentLabel="Ngói hài
-        văn miếu"}}
+        {{> components/products/breadcrumb textClass="font-semibold text-primary/60 uppercase text-[14px] md:text-base" linkClass="hover:text-primary transition-colors" separatorClass="mx-1" parentHref="/products/ngoi-hai-van-mieu/" parentLabel="Sản phẩm" currentClass="text-primary font-semibold pb-1" currentLabel="Ngói hài văn miếu"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
       <!-- Product Detail Container -->
-      <section
-        class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-0 md:pb-10 lg:pb-24 pt-0 md:pt-4"
+      <section class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-0 md:pb-10 lg:pb-24 pt-0 md:pt-4"
       >
         {{> product-details/partials/product-image-swiper}}
 
         <!-- Right: Info -->
-        <div
-          class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-[18px] md:pt-0"
-        >
-          <div
-            class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] order-2 md:order-1 mt-1 md:mt-0"
-          >
-            <span
-              class="text-[#656663] md:text-primary font-light md:font-normal"
-              >Mã SP:</span
-            >
-            <span class="text-[#656663] md:text-primary font-semibold"
-              >THC 100-GDS</span
-            >
+        <div class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-[18px] md:pt-0">
+          <div class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] order-2 md:order-1 mt-1 md:mt-0">
+            <span class="text-[#656663] md:text-primary font-light md:font-normal">Mã SP:</span>
+            <span class="text-[#656663] md:text-primary font-semibold">THC 100-GDS</span>
           </div>
 
-          <h2
-            class="text-[20px] text-[#C76E00] md:text-2xl lg:text-[32px] font-semibold md:text-secondary uppercase leading-[30px] md:!leading-normal mb-0 md:mb-14 pb-0 md:pb-1 tracking-tight order-1 md:order-2"
+          <h2 class="text-[20px] text-[#C76E00] md:text-2xl lg:text-[32px] font-semibold md:text-secondary uppercase leading-[30px] md:!leading-normal mb-0 md:mb-14 pb-0 md:pb-1 tracking-tight order-1 md:order-2"
           >
             Ngói hài cổ nâu đen
           </h2>
 
-          <p
-            class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal order-3 mt-0.5 md:mt-0"
-          >
+          <p class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal order-3 mt-0.5 md:mt-0">
             675.000 đ/m2
           </p>
 
           <!-- Separator -->
-          <hr
-            class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full order-4 hidden md:block"
-          />
+          <hr class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full order-4 hidden md:block" />
           <hr class="border-t border-black/10 w-full order-4 md:hidden mb-4" />
 
-          <ul
-            class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed order-5"
+          <ul class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed order-5"
           >
             <li>Timeless beauty to be treasured</li>
             <li>High-quality and classic design, suitable for decoration</li>
@@ -122,63 +100,45 @@
           </ul>
 
           <!-- Colors -->
-          <div
-            class="grid grid-cols-4 md:flex md:flex-wrap items-start md:items-center gap-6 md:gap-8 mb-[15px] md:mb-8 order-[6] md:order-[none] w-full"
-          >
-            <div
-              class="flex flex-col items-center gap-[11px] md:gap-3 cursor-pointer group"
-            >
+          <div class="grid grid-cols-4 md:flex md:flex-wrap items-start md:items-center gap-6 md:gap-8 mb-[15px] md:mb-8 order-[6] md:order-[none] w-full">
+            <div class="flex flex-col items-center gap-[11px] md:gap-3 cursor-pointer group">
               <div
                 class="w-[70px] h-[35px] md:w-[90px] md:h-[45px] bg-[#D9D9D9] shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:shadow-sm group-hover:opacity-80 transition-opacity"
               ></div>
-              <span
-                class="text-[13px] text-nowrap md:text-sm text-[#2E2F2A] md:text-primary font-medium md:font-medium leading-[19.5px] md:leading-normal text-center px-1"
+              <span class="text-[13px] text-nowrap md:text-sm text-[#2E2F2A] md:text-primary font-medium md:font-medium leading-[19.5px] md:leading-normal text-center px-1"
                 >Xanh đồng</span
               >
             </div>
-            <div
-              class="flex flex-col items-center gap-[11px] md:gap-3 cursor-pointer group"
-            >
+            <div class="flex flex-col items-center gap-[11px] md:gap-3 cursor-pointer group">
               <div
                 class="w-[70px] h-[35px] md:w-[90px] md:h-[45px] bg-[#D9D9D9] shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:shadow-sm group-hover:opacity-80 transition-opacity"
               ></div>
-              <span
-                class="text-[13px] text-nowrap md:text-sm text-[#2E2F2A] md:text-primary font-medium md:font-medium leading-[19.5px] md:leading-normal text-center px-1"
+              <span class="text-[13px] text-nowrap md:text-sm text-[#2E2F2A] md:text-primary font-medium md:font-medium leading-[19.5px] md:leading-normal text-center px-1"
                 >Xanh thiên thanh</span
               >
             </div>
-            <div
-              class="flex flex-col items-center gap-[11px] md:gap-3 cursor-pointer group"
-            >
+            <div class="flex flex-col items-center gap-[11px] md:gap-3 cursor-pointer group">
               <div
                 class="w-[70px] h-[35px] md:w-[90px] md:h-[45px] bg-[#D9D9D9] shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:shadow-sm group-hover:opacity-80 transition-opacity"
               ></div>
-              <span
-                class="text-[13px] text-nowrap md:text-sm text-[#2E2F2A] md:text-primary font-medium md:font-medium leading-[19.5px] md:leading-normal text-center px-1"
+              <span class="text-[13px] text-nowrap md:text-sm text-[#2E2F2A] md:text-primary font-medium md:font-medium leading-[19.5px] md:leading-normal text-center px-1"
                 >Vàng</span
               >
             </div>
-            <div
-              class="flex flex-col items-center gap-[11px] md:gap-3 cursor-pointer group"
-            >
+            <div class="flex flex-col items-center gap-[11px] md:gap-3 cursor-pointer group">
               <div
                 class="w-[70px] h-[35px] md:w-[90px] md:h-[45px] bg-[#D9D9D9] shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:shadow-sm group-hover:opacity-80 transition-opacity"
               ></div>
-              <span
-                class="text-[13px] text-nowrap md:text-sm text-[#2E2F2A] md:text-primary font-medium md:font-medium leading-[19.5px] md:leading-normal text-center px-1"
+              <span class="text-[13px] text-nowrap md:text-sm text-[#2E2F2A] md:text-primary font-medium md:font-medium leading-[19.5px] md:leading-normal text-center px-1"
                 >Nâu đen</span
               >
             </div>
           </div>
 
           <!-- Actions -->
-          <div
-            class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-[15px] md:mb-16 order-[7] md:order-[none] w-full"
-          >
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-[15px] md:mb-16 order-[7] md:order-[none] w-full">
             <!-- Quantity -->
-            <div
-              class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0"
-            >
+            <div class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0">
               <button
                 class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors"
               >
@@ -205,9 +165,7 @@
           </div>
 
           <!-- Contacts -->
-          <div
-            class="hidden md:flex flex-col gap-5 mt-2 order-[8] md:order-[none]"
-          >
+          <div class="hidden md:flex flex-col gap-5 mt-2 order-[8] md:order-[none]">
             <!-- Hotline -->
             <div class="flex items-center gap-5">
               <div
@@ -247,162 +205,25 @@
         </div>
       </section>
 
-      {{> components/products/hai-vm-calculator
-      image="/assets/images/ngoi-hai-size.png" label1="Ngói trên mái gỗ"
-      rate1="125 viên/m²" label2="Ngói trên mái bê tông" rate2="75 viên/m²"}}
-      {{> components/products/fabrication-process}} {{>
-      components/products/journey-video hideTitle=true}} {{>
-      components/products/trang-tri-process}}
+      {{> components/products/hai-vm-calculator image="/assets/images/ngoi-hai-size.png" label1="Ngói trên mái gỗ" rate1="125 viên/m²" label2="Ngói trên mái bê tông" rate2="75 viên/m²"}}
+      {{> components/products/fabrication-process}}
+      {{> components/products/journey-video hideTitle=true}}
+      {{> components/products/trang-tri-process}}
       <hr class="md:mb-16 mb-8" />
-      {{> components/products/works-simple showNav=true}} {{>
-      components/products/recommendations}} {{> components/products/faq2}}
+      {{> components/products/works-simple showNav=true}}
+      {{> components/products/recommendations}}
+      {{> components/products/faq2}}
     </main>
 
     {{> components/footer hideNewsletter=true}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script type="module" src="/assets/js/app.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         // Initialize AOS
         AOS.init({ duration: 800, once: true, offset: 100 });
-
-        const productThumbSwiperEl = document.querySelector(
-          ".product-thumb-swiper",
-        );
-        const productThumbSwiper = productThumbSwiperEl
-          ? new Swiper(productThumbSwiperEl, {
-              spaceBetween: 20,
-              slidesPerView: 7,
-              freeMode: true,
-              watchSlidesProgress: true,
-            })
-          : null;
-
-        new Swiper(".product-main-swiper", {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          pagination: {
-            el: ".product-main-pagination",
-            clickable: true,
-          },
-          thumbs: productThumbSwiper
-            ? {
-                swiper: productThumbSwiper,
-              }
-            : undefined,
-        });
-
-        // Initialize Fabrication Slider
-        const fabricationRoot =
-          document.querySelector(".fabrication-slider")?.closest(".group") ||
-          document;
-        const fabricationNextEl =
-          fabricationRoot.querySelector(".fabrication-next");
-        const fabricationPrevEl =
-          fabricationRoot.querySelector(".fabrication-prev");
-        const fabricationPaginationEl = fabricationRoot.querySelector(
-          ".fabrication-pagination",
-        );
-
-        new Swiper(".fabrication-slider", {
-          slidesPerView: "auto",
-          spaceBetween: 20,
-          centeredSlides: true,
-          loop: true,
-          pagination: {
-            el: fabricationPaginationEl,
-            clickable: true,
-            renderBullet: function (index, className) {
-              return (
-                '<span class="' +
-                className +
-                ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
-              );
-            },
-          },
-          navigation: {
-            nextEl: fabricationNextEl,
-            prevEl: fabricationPrevEl,
-          },
-          breakpoints: {
-            768: {
-              spaceBetween: 40,
-            },
-            1280: {
-              spaceBetween: 80,
-            },
-          },
-          on: {
-            init: function () {
-              setTimeout(() => {
-                if (typeof AOS !== "undefined") AOS.refresh();
-              }, 500);
-            },
-          },
-        });
-
-        // Initialize Works/Projects Slider if present
-        new Swiper(".projects-slider", {
-          slidesPerView: 1.2,
-          spaceBetween: 20,
-          centeredSlides: true,
-          loop: true,
-          pagination: {
-            el: ".projects-pagination",
-            clickable: true,
-            renderBullet: function (index, className) {
-              return (
-                '<span class="' +
-                className +
-                ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
-              );
-            },
-          },
-          navigation: {
-            nextEl: ".projects-next",
-            prevEl: ".projects-prev",
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-              centeredSlides: false,
-            },
-            1024: {
-              slidesPerView: 2,
-              spaceBetween: 60,
-              centeredSlides: true,
-            },
-          },
-        });
-
-        // Add bullet style
-        const style = document.createElement("style");
-        style.innerHTML = `
-            .product-main-pagination .swiper-pagination-bullet {
-                width: 6px !important;
-                height: 6px !important;
-                background: white !important;
-                opacity: 0.5 !important;
-                margin: 0 !important;
-                border-radius: 9999px !important;
-                transition: all 0.3s ease !important;
-            }
-            .product-main-pagination .swiper-pagination-bullet-active {
-                width: 10px !important;
-                background: #C76E00 !important;
-                opacity: 1 !important;
-            }
-            .fabrication-pagination .swiper-pagination-bullet-active,
-            .projects-pagination .swiper-pagination-bullet-active {
-                background-color: #C76E00 !important;
-                width: 12px !important;
-                border-radius: 6px !important;
-            }
-        `;
-        document.head.appendChild(style);
       });
     </script>
     {{{stack "scripts"}}}

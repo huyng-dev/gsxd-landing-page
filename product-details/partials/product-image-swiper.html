@@ -32,12 +32,11 @@
       </div>
     </div>
 
-    <!-- Mobile Dots Pagination (Exact Figma Dimensions) -->
-    <div class="md:hidden absolute bottom-[13px] left-1/2 -translate-x-1/2 z-10">
-      <div
-        class="product-main-pagination h-[17px] px-[21px] bg-[#C76E00]/10 rounded-[17px] flex items-center justify-center gap-[14px]"
-      ></div>
-    </div>
+  </div>
+
+  <!-- Mobile Dots Pagination -->
+  <div class="md:hidden flex justify-center mt-5">
+    <div class="product-main-pagination flex justify-center gap-3"></div>
   </div>
 
   <!-- Thumbnails (Desktop only) -->
@@ -58,10 +57,10 @@
 <style>
   /* ── Product Main Swiper: Mobile Dots Pagination ─────────────────────── */
   .product-main-pagination .swiper-pagination-bullet {
-    width: 6px;
-    height: 6px;
-    background: white;
-    opacity: 0.5;
+    width: 8px;
+    height: 8px;
+    background: rgba(199, 110, 0, 0.3);
+    opacity: 1;
     margin: 0 !important;
     border-radius: 9999px;
     transition: all 0.3s ease;
@@ -69,9 +68,7 @@
     flex-shrink: 0;
   }
   .product-main-pagination .swiper-pagination-bullet-active {
-    width: 10px;
     background: #C76E00;
-    opacity: 1;
   }
 </style>
 {{/push}}
