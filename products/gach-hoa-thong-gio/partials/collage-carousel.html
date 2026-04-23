@@ -36,6 +36,23 @@
       <div class="swiper-wrapper" id="collage-swiper-wrapper"></div>
     </div>
 
+    <!--
+      Asset preload hints — hidden from users, required for Vite build.
+      Vite only copies assets it finds in static HTML. Images used only
+      in JS strings are invisible to the bundler and get dropped from dist.
+      These hidden <img> tags make Vite aware of the PNG files.
+    -->
+    <div aria-hidden="true" class="hidden">
+      <img src="/assets/images/gach-hoa-01.png" alt="" />
+      <img src="/assets/images/gach-hoa-02.png" alt="" />
+      <img src="/assets/images/gach-hoa-03.png" alt="" />
+      <img src="/assets/images/gach-hoa-04.png" alt="" />
+      <img src="/assets/images/gach-hoa-05.png" alt="" />
+      <img src="/assets/images/gach-hoa-06.png" alt="" />
+      <img src="/assets/images/gach-hoa-07.png" alt="" />
+      <img src="/assets/images/gach-hoa-08.png" alt="" />
+    </div>
+
     <!-- Custom Page-Number Navigation -->
     <div
       class="flex items-center justify-between gap-6 md:mt-16 w-full max-w-[1320px] mx-auto text-textPrimary font-bold text-[17px] z-20"

@@ -192,7 +192,7 @@
             <img
               src="/assets/images/gtt-process.svg"
               alt="Công đoạn chế tác"
-              class="w-full max-w-[95%] h-auto relative z-10 drop-shadow-sm"
+              class="w-full md:max-w-[95%] h-auto relative z-10 drop-shadow-sm scale-[1.1]"
             />
           </div>
         </div>
@@ -570,13 +570,28 @@
           </div>
         </div>
 
-        <div class="mt-4 md:mt-6 flex justify-end" data-aos="fade-up">
-          <a
-            href="/projects/"
-            class="font-archivo text-sm md:text-base font-medium uppercase tracking-[0.08em] text-secondary transition-opacity duration-300 hover:opacity-70"
-          >
-            Xem thêm
-          </a>
+        <!-- Pagination Dots -->
+        <div class="flex justify-center gap-2 mt-6 md:hidden">
+          <button
+            class="project-dot active w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="0"
+          ></button>
+          <button
+            class="project-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="1"
+          ></button>
+          <button
+            class="project-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="2"
+          ></button>
+          <button
+            class="project-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="3"
+          ></button>
+          <button
+            class="project-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="4"
+          ></button>
         </div>
       </section>
 
@@ -603,7 +618,7 @@
     <!-- GSXD-PARTIAL:BEGIN file=products/gach-trang-tri/index.html include=components/footer idx=006 uid=6e9190c9 -->
     {{> components/footer hideNewsletter=true}}
 
-    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -644,7 +659,7 @@
         var finalSlideCount = wrapperEl.children.length;
         var initialSlide = finalSlideCount > 2 ? 2 : 0;
 
-        new Swiper(projectShowcaseEl, {
+        var projectShowcaseSwiper = new Swiper(projectShowcaseEl, {
           slidesPerView: "auto",
           slidesPerGroup: 1,
           centeredSlides: true,
@@ -691,6 +706,26 @@
             },
           },
         });
+
+        // Project showcase dots handler
+        var projectDots = document.querySelectorAll(".project-dot");
+        if (projectDots.length) {
+          projectShowcaseSwiper.on("slideChange", function () {
+            // Get the actual original slide index (accounting for cloned slides)
+            var realIndex = projectShowcaseSwiper.realIndex || 0;
+            var dotIndex = realIndex % originalSlides.length;
+            projectDots.forEach((dot, index) => {
+              dot.classList.toggle("active", index === dotIndex);
+            });
+          });
+
+          projectDots.forEach((dot) => {
+            dot.addEventListener("click", () => {
+              var index = parseInt(dot.dataset.index);
+              projectShowcaseSwiper.slideToLoop(index);
+            });
+          });
+        }
       });
     </script>
     <script>
@@ -722,6 +757,16 @@
         window.addEventListener("resize", initArtValueSwiper);
       });
     </script>
+    <!-- Project Dots Style -->
+    <style>
+      .project-dot {
+        background-color: rgba(199, 110, 0, 0.3);
+      }
+      .project-dot.active {
+        background-color: #c76e00;
+        width: 8px;
+      }
+    </style>
     {{{stack "scripts"}}}
     <!-- GSXD-DEBUG:END type=PAGE file=products/gach-trang-tri/index.html uid=c8361727 -->
   </body>

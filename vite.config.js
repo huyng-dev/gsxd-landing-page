@@ -88,6 +88,33 @@ export default defineConfig({
           }
           return accum;
         },
+        productSlides(perSlide, ...args) {
+          const options = args.pop();
+          const repeat = Number(options.hash?.repeat) || 1;
+          const baseItems = args.map((arg) => {
+            const parts = String(arg).split("|");
+            return {
+              href: parts[0] || "",
+              image: parts[1] || "",
+              title: parts[2] || "",
+              code: parts[3] || "",
+              price: parts[4] || "",
+            };
+          });
+
+          let items = [];
+          for (let r = 0; r < repeat; r++) {
+            items = items.concat(baseItems);
+          }
+
+          const slides = [];
+          const step = Number(perSlide) || 4;
+          for (let i = 0; i < items.length; i += step) {
+            slides.push(items.slice(i, i + step));
+          }
+
+          return options.fn({ ...this, slides, slideCount: slides.length });
+        },
       },
     }),
     {

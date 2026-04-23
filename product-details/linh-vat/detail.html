@@ -66,37 +66,57 @@
 
       <!-- Sub Breadcrumb -->
       <div class="hidden md:block w-[85%] max-w-[1320px] mx-auto py-8">
-        {{> components/products/breadcrumb textClass="font-semibold text-primary/60 uppercase text-[14px] md:text-base" linkClass="hover:text-primary transition-colors" separatorClass="mx-1" parentHref="/products/linh-vat-phong-thuy/" parentLabel="Sản phẩm" currentClass="text-primary font-semibold pb-1" currentLabel="PHỤ KIỆN NGÓI"}}
+        {{> components/products/breadcrumb textClass="font-semibold
+        text-primary/60 uppercase text-[14px] md:text-base"
+        linkClass="hover:text-primary transition-colors" separatorClass="mx-1"
+        parentHref="/products/linh-vat-phong-thuy/" parentLabel="Sản phẩm"
+        currentClass="text-primary font-semibold pb-1" currentLabel="PHỤ KIỆN
+        NGÓI"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
       <!-- Product Detail Container -->
-      <section class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-0 lg:pb-24 pt-0 md:pt-4"
+      <section
+        class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-0 lg:pb-24 pt-0 md:pt-4"
       >
         {{> product-details/partials/product-image-swiper}}
 
         <!-- Right: Info -->
-        <div class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-[18px] md:pt-0">
+        <div
+          class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-[18px] md:pt-0"
+        >
           <h2
             class="text-xl md:text-2xl lg:text-[32px] font-semibold text-secondary uppercase !leading-normal pb-1 tracking-tight"
           >
             NGHÊ TRƯỜN CỔ
           </h2>
 
-          <div class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] mt-1 md:mt-0">
-            <span class="text-[#656663] md:text-primary font-light md:font-normal">Mã SP:</span>
-            <span class="text-[#656663] md:text-primary font-semibold">THC 100-GDS</span>
+          <div
+            class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] mt-1 md:mt-0"
+          >
+            <span
+              class="text-[#656663] md:text-primary font-light md:font-normal"
+              >Mã SP:</span
+            >
+            <span class="text-[#656663] md:text-primary font-semibold"
+              >THC 100-GDS</span
+            >
           </div>
 
-          <p class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal mt-0.5 md:mt-0">
+          <p
+            class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal mt-0.5 md:mt-0"
+          >
             675.000 đ/m2
           </p>
 
           <!-- Separator -->
-          <hr class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full hidden md:block" />
+          <hr
+            class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full hidden md:block"
+          />
           <hr class="border-t border-black/10 w-full md:hidden mb-4" />
 
-          <ul class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed"
+          <ul
+            class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed"
           >
             <li>Timeless beauty to be treasured</li>
             <li>High-quality and classic design, suitable for decoration</li>
@@ -122,7 +142,9 @@
           <!-- Actions -->
           <div class="flex flex-wrap items-center gap-6 mb-12">
             <!-- Quantity -->
-            <div class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0">
+            <div
+              class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0"
+            >
               <button
                 class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors"
               >
@@ -209,7 +231,10 @@
             />
           </div>
           <!-- Right List -->
-          <div class="flex flex-col justify-center md:mt-0 mt-8" data-aos="fade-left">
+          <div
+            class="flex flex-col justify-center md:mt-0 mt-8"
+            data-aos="fade-left"
+          >
             <ul
               class="list-disc pl-5 md:pl-16 space-y-0 md:space-y-4 text-black md:text-primary font-light md:font-medium text-[13px] md:text-[20px] leading-[28px] md:leading-relaxed"
             >
@@ -233,7 +258,7 @@
         </h2>
 
         <div
-          class="flex flex-nowrap md:grid md:grid-cols-2 gap-4 md:gap-x-16 lg:gap-x-24 md:gap-y-12 lg:gap-y-16 xl:w-[70%] mx-auto overflow-x-auto lg:overflow-visible snap-x snap-mandatory pb-4 md:pb-0"
+          class="position-locations-scroll flex flex-nowrap md:grid md:grid-cols-2 gap-4 md:gap-x-16 lg:gap-x-24 md:gap-y-12 lg:gap-y-16 xl:w-[70%] mx-auto overflow-x-auto lg:overflow-visible snap-x snap-mandatory pb-4 md:pb-0"
           style="scrollbar-width: none"
         >
           <!-- Card 1 -->
@@ -345,24 +370,53 @@
             </div>
           </div>
         </div>
+        <!-- Pagination Dots (Mobile only) -->
+        <div class="flex justify-center gap-2 md:hidden mt-4">
+          <button
+            class="position-dot active w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="0"
+          ></button>
+          <button
+            class="position-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="1"
+          ></button>
+          <button
+            class="position-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="2"
+          ></button>
+          <button
+            class="position-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="3"
+          ></button>
+        </div>
       </section>
       {{> components/products/works-simple showNav=true}}
-      <div class="hidden md:block">
-      {{> components/products/journey-video}}
-      </div>
-      {{> components/products/recommendations}}
-      {{> components/products/faq2}}
+      <div class="hidden md:block">{{> components/products/journey-video}}</div>
+      {{> components/products/recommendations}} {{> components/products/faq2}}
     </main>
 
     {{> components/footer hideNewsletter=true}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/app.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         // Initialize AOS
         AOS.init({ duration: 800, once: true, offset: 100 });
+
+        const productThumbSwiperEl = document.querySelector(
+          ".product-thumb-swiper",
+        );
+        const productThumbSwiper = productThumbSwiperEl
+          ? new Swiper(productThumbSwiperEl, {
+              spaceBetween: 20,
+              slidesPerView: 7,
+              freeMode: true,
+              watchSlidesProgress: true,
+            })
+          : null;
+
         new Swiper(".product-main-swiper", {
           slidesPerView: 1,
           spaceBetween: 0,
@@ -370,9 +424,11 @@
             el: ".product-main-pagination",
             clickable: true,
           },
-          thumbs: {
-            swiper: thumbSwiper,
-          },
+          thumbs: productThumbSwiper
+            ? {
+                swiper: productThumbSwiper,
+              }
+            : undefined,
         });
 
         // Refresh AOS when all assets (like images) finish loading
@@ -454,8 +510,49 @@
             }
         `;
         document.head.appendChild(style);
+
+        // Position locations scroll dots handler
+        const positionLocationsScroll = document.querySelector(
+          ".position-locations-scroll",
+        );
+        const positionDots = document.querySelectorAll(".position-dot");
+
+        if (positionLocationsScroll && positionDots.length) {
+          // Update dots on scroll
+          positionLocationsScroll.addEventListener("scroll", () => {
+            const scrollLeft = positionLocationsScroll.scrollLeft;
+            const containerWidth = positionLocationsScroll.offsetWidth;
+            const currentIndex = Math.round(scrollLeft / containerWidth);
+
+            positionDots.forEach((dot, index) => {
+              dot.classList.toggle("active", index === currentIndex);
+            });
+          });
+
+          // Click handler for dots to scroll to card
+          positionDots.forEach((dot) => {
+            dot.addEventListener("click", () => {
+              const index = parseInt(dot.dataset.index);
+              const targetScroll = index * positionLocationsScroll.offsetWidth;
+              positionLocationsScroll.scrollTo({
+                left: targetScroll,
+                behavior: "smooth",
+              });
+            });
+          });
+        }
       });
     </script>
+    <!-- Pagination Dots Style -->
+    <style>
+      .position-dot {
+        background-color: rgba(199, 110, 0, 0.3);
+      }
+      .position-dot.active {
+        background-color: #c76e00;
+        width: 8px;
+      }
+    </style>
     {{{stack "scripts"}}}
   </body>
 </html>

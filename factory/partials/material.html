@@ -35,7 +35,7 @@
             <div class="aspect-[12/5] overflow-hidden shadow-lg bg-neutral-1">
               <img
                 src="/assets/images/factory-04.jpg"
-                onerror="this.src = '/assets/images/factory-02.jpg'"
+                onerror="this.src = '/assets/images/factory-01.jpg'"
                 alt="Phân xưởng"
                 class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
               />
@@ -52,7 +52,9 @@
     <div class="grid-overlay absolute inset-0 z-0 pointer-events-none">
       <div class="w-full md:w-[85%] max-w-[1320px] mx-auto h-full relative">
         <!-- Horizontal line between Slider and Info -->
-        <div class="absolute top-[26%] left-[28px] right-0 h-px bg-black/10 md:hidden"></div>
+        <div
+          class="absolute top-[26%] left-[28px] right-0 h-px bg-black/10 md:hidden"
+        ></div>
 
         <!-- Vertical line separating Number "1" and Text -->
         <div
@@ -73,7 +75,9 @@
       data-aos="fade-up"
     >
       <!-- Numeral Col -->
-      <div class="w-[78px] md:w-[10%] pt-6 md:pt-2 md:ml-12 flex justify-center">
+      <div
+        class="w-[78px] md:w-[10%] pt-6 md:pt-2 md:ml-12 flex justify-center"
+      >
         <span
           id="section4-step-number"
           class="text-[48px] md:text-[80px] lg:text-[96px] leading-none text-[#909090] font-arbutus select-none"
@@ -144,6 +148,22 @@
         </div>
       </div>
     </div>
+
+    <!-- Dots Pagination - Mobile Only -->
+    <div class="flex justify-center gap-2 mt-2 md:mt-12 md:hidden">
+      <button
+        class="material-dot active w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+        data-index="0"
+      ></button>
+      <button
+        class="material-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+        data-index="1"
+      ></button>
+      <button
+        class="material-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+        data-index="2"
+      ></button>
+    </div>
   </div>
 </section>
 
@@ -213,11 +233,77 @@
       section4Swiper.on("slideChange", () => {
         updateSection4Text(section4Swiper.realIndex);
       });
+
+      // Material dots handler
+      var materialDots = document.querySelectorAll(".material-dot");
+      if (materialDots.length) {
+        section4Swiper.on("slideChange", function () {
+          var currentIndex = section4Swiper.realIndex;
+          materialDots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+          });
+        });
+
+        materialDots.forEach((dot) => {
+          dot.addEventListener("click", () => {
+            var index = parseInt(dot.dataset.index);
+            section4Swiper.slideToLoop(index);
+          });
+        });
+      }
+
+      // Text wrapper swipe handler for mobile
+      var textWrapper = section4StepNumber
+        ? section4StepNumber.closest("[data-aos]")
+        : null;
+      if (textWrapper && window.innerWidth < 768) {
+        var touchStartX = 0;
+        var touchEndX = 0;
+
+        textWrapper.addEventListener(
+          "touchstart",
+          (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+          },
+          false,
+        );
+
+        textWrapper.addEventListener(
+          "touchend",
+          (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+          },
+          false,
+        );
+
+        function handleSwipe() {
+          var swipeThreshold = 50;
+          var diff = touchStartX - touchEndX;
+
+          if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+              // Swiped left - next slide
+              section4Swiper.slideNext();
+            } else {
+              // Swiped right - previous slide
+              section4Swiper.slidePrev();
+            }
+          }
+        }
+      }
     }
   });
 </script>
+<!-- Material Dots Style -->
+<style>
+  .material-dot {
+    background-color: rgba(199, 110, 0, 0.3);
+  }
+  .material-dot.active {
+    background-color: #c76e00;
+    width: 8px;
+  }
+</style>
 {{/push}}
 <!-- GSXD-DEBUG:END type=LAYOUT file=factory/partials/material.html uid=29480f4b -->
-
-
-

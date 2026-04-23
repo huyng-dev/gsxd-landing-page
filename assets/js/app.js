@@ -47,7 +47,7 @@ const initProductSectionCarousels = () => {
                     el: paginationElement,
                     clickable: true,
                     renderBullet: (index, className) =>
-                        `<button class="product-section-dot h-1 w-1 rounded-full bg-[#C76E00]/30 ${className}" type="button" aria-label="Slide ${index + 1}" aria-current="false"></button>`,
+                        `<button class="product-section-dot h-2 w-2 rounded-full bg-[#C76E00]/30 mx-[1.5px] ${className}" type="button" aria-label="Slide ${index + 1}" aria-current="false"></button>`,
                 },
                 on: {
                     init() {

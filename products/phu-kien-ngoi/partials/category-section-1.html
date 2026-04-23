@@ -37,174 +37,82 @@
     >
       <!-- Left Column: Products Grid & Pagination -->
       <div class="w-full lg:w-[55%] flex flex-col justify-between">
+        <!-- Mobile: 16 items, 4 slides -->
         <div class="lg:hidden" data-product-section>
-          <div
-            class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
-            data-product-carousel
-          >
-            <!-- GSXD-ELEMENT:BEGIN file=products/phu-kien-ngoi/partials/category-section-1.html tag=article idx=001 uid=52eb8fc5 -->
-            <article
-              class="flex-shrink-0 w-full snap-start pb-1"
-              data-product-slide
+          {{#productSlides 4
+            "/products/phu-kien-ngoi/bo-noc-chu-van.html|/assets/images/bo-noc.png|Bộ bò nóc chữ vạn men nâu|MSP: PKN-BN01|845.000 đ/bộ"
+            "/products/phu-kien-ngoi/ngoi-bo-noc.html|/assets/images/dao-kim.png|Đao kim tráng men xanh rêu|MSP: PKN-DK02|525.000 đ/cặp"
+            "/products/phu-kien-ngoi/bo-noc-chu-van.html|/assets/images/pk-03.jpg|Phù điêu đuôi mái cổ điển|MSP: PKN-PD03|395.000 đ/chiếc"
+            "/products/phu-kien-ngoi/ngoi-bo-noc.html|/assets/images/pk-04.jpg|Con kìm trang trí mái đình|MSP: PKN-CK04|460.000 đ/chiếc"
+            repeat=4
+          }}
+            <div
+              class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+              data-product-carousel
             >
-              <div class="grid grid-cols-2 gap-4">
-<!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/partials/category-section-1.html include=components/products/mobile-product-card idx=001 uid=2f46abde -->
-{{> components/products/mobile-product-card href="/products/phu-kien-ngoi/bo-noc-chu-van.html" image="/assets/images/bo-noc.png" title="Bộ bò nóc chữ vạn men nâu" code="MSP: PKN-BN01" price="845.000 đ/bộ"}}
-<!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/partials/category-section-1.html include=components/products/mobile-product-card idx=002 uid=ea4f590e -->
-{{> components/products/mobile-product-card href="/products/phu-kien-ngoi/ngoi-bo-noc.html" image="/assets/images/dao-kim.png" title="Đao kim tráng men xanh rêu" code="MSP: PKN-DK02" price="525.000 đ/cặp"}}
-<!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/partials/category-section-1.html include=components/products/mobile-product-card idx=003 uid=3bcc2806 -->
-{{> components/products/mobile-product-card href="/products/phu-kien-ngoi/bo-noc-chu-van.html" image="/assets/images/pk-03.jpg" title="Phù điêu đuôi mái cổ điển" code="MSP: PKN-PD03" price="395.000 đ/chiếc"}}
-<!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/partials/category-section-1.html include=components/products/mobile-product-card idx=004 uid=a00f2ee7 -->
-{{> components/products/mobile-product-card href="/products/phu-kien-ngoi/ngoi-bo-noc.html" image="/assets/images/pk-04.jpg" title="Con kìm trang trí mái đình" code="MSP: PKN-CK04" price="460.000 đ/chiếc"}}
-              </div>
-            </article>
-          </div>
+              {{#each slides}}
+                <article
+                  class="flex-shrink-0 w-full snap-start pb-1"
+                  data-product-slide
+                >
+                  <div class="grid grid-cols-2 gap-4">
+                    {{#each this}}
+                      {{> components/products/mobile-product-card
+                        href=href image=image title=title code=code price=price
+                      }}
+                    {{/each}}
+                  </div>
+                </article>
+              {{/each}}
+            </div>
 
-          <div
-            class="mt-3 flex justify-center gap-[3px]"
-            aria-label="Product mobile pagination"
-          >
-            <button
-              class="product-section-dot h-1 w-1 rounded-full bg-secondary"
-              data-product-dot="0"
-              aria-label="Slide 1"
-            ></button>
-          </div>
+            <div
+              class="mt-3 flex justify-center gap-[3px]"
+              aria-label="Product mobile pagination"
+            >
+              {{#each slides}}
+                <button
+                  class="product-section-dot h-2 w-2 rounded-full {{#if @first}}bg-secondary{{else}}bg-[#656663]{{/if}}"
+                  data-product-dot="{{@index}}"
+                  aria-label="Slide {{@index}}"
+                ></button>
+              {{/each}}
+            </div>
+          {{/productSlides}}
         </div>
 
-        <!-- Products Grid -->
+        <!-- Desktop: 4 items only -->
         <div
           class="hidden lg:grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10"
         >
-          <div
-            class="flex flex-col group cursor-pointer"
-            onclick="
-              window.location.href =
-                '/products/phu-kien-ngoi/bo-noc-chu-van.html'
-            "
-          >
-            <div
-              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-            >
-              <img
-                src="/assets/images/bo-noc.png"
-                alt="Bộ bò nóc chữ vạn men nâu"
-                class="w-full h-full object-cover"
-              />
-              <div class="product-overlay">
-                <img src="/assets/images/eye.svg" alt="Search" />
-                <span>Xem chi tiết</span>
-              </div>
-            </div>
-            <h3
-              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-            >
-              Bộ bò nóc chữ vạn men nâu
-            </h3>
-            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-              MSP: PKN-BN01
-            </p>
-            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-              Giá: 845.000 đ/bộ
-            </p>
-          </div>
-
-          <div
-            class="flex flex-col group cursor-pointer"
-            onclick="
-              window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'
-            "
-          >
-            <div
-              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-            >
-              <img
-                src="/assets/images/dao-kim.png"
-                alt="Đao kim tráng men xanh rêu"
-                class="w-full h-full object-cover"
-              />
-              <div class="product-overlay">
-                <img src="/assets/images/eye.svg" alt="Search" />
-                <span>Xem chi tiết</span>
-              </div>
-            </div>
-            <h3
-              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-            >
-              Đao kim tráng men xanh rêu
-            </h3>
-            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-              MSP: PKN-DK02
-            </p>
-            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-              Giá: 525.000 đ/cặp
-            </p>
-          </div>
-
-          <div
-            class="flex flex-col group cursor-pointer"
-            onclick="
-              window.location.href =
-                '/products/phu-kien-ngoi/bo-noc-chu-van.html'
-            "
-          >
-            <div
-              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-            >
-              <img
-                src="/assets/images/pk-03.jpg"
-                alt="Phù điêu đuôi mái cổ điển"
-                class="w-full h-full object-cover"
-              />
-              <div class="product-overlay">
-                <img src="/assets/images/eye.svg" alt="Search" />
-                <span>Xem chi tiết</span>
-              </div>
-            </div>
-            <h3
-              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-            >
-              Phù điêu đuôi mái cổ điển
-            </h3>
-            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-              MSP: PKN-PD03
-            </p>
-            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-              Giá: 395.000 đ/chiếc
-            </p>
-          </div>
-
-          <div
-            class="flex flex-col group cursor-pointer"
-            onclick="
-              window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'
-            "
-          >
-            <div
-              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-            >
-              <img
-                src="/assets/images/pk-04.jpg"
-                alt="Con kìm trang trí mái đình"
-                class="w-full h-full object-cover"
-              />
-              <div class="product-overlay">
-                <img src="/assets/images/eye.svg" alt="Search" />
-                <span>Xem chi tiết</span>
-              </div>
-            </div>
-            <h3
-              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-            >
-              Con kìm trang trí mái đình
-            </h3>
-            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-              MSP: PKN-CK04
-            </p>
-            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-              Giá: 460.000 đ/chiếc
-            </p>
-          </div>
+          {{> components/products/desktop-product-card
+            href="/products/phu-kien-ngoi/bo-noc-chu-van.html"
+            image="/assets/images/bo-noc.png"
+            title="Bộ bò nóc chữ vạn men nâu"
+            code="MSP: PKN-BN01"
+            price="Giá: 845.000 đ/bộ"
+          }}
+          {{> components/products/desktop-product-card
+            href="/products/phu-kien-ngoi/ngoi-bo-noc.html"
+            image="/assets/images/dao-kim.png"
+            title="Đao kim tráng men xanh rêu"
+            code="MSP: PKN-DK02"
+            price="Giá: 525.000 đ/cặp"
+          }}
+          {{> components/products/desktop-product-card
+            href="/products/phu-kien-ngoi/bo-noc-chu-van.html"
+            image="/assets/images/pk-03.jpg"
+            title="Phù điêu đuôi mái cổ điển"
+            code="MSP: PKN-PD03"
+            price="Giá: 395.000 đ/chiếc"
+          }}
+          {{> components/products/desktop-product-card
+            href="/products/phu-kien-ngoi/ngoi-bo-noc.html"
+            image="/assets/images/pk-04.jpg"
+            title="Con kìm trang trí mái đình"
+            code="MSP: PKN-CK04"
+            price="Giá: 460.000 đ/chiếc"
+          }}
         </div>
 
         <!-- Pagination -->
@@ -285,6 +193,3 @@
   </div>
 </section>
 <!-- GSXD-DEBUG:END type=LAYOUT file=products/phu-kien-ngoi/partials/category-section-1.html uid=ab5c98b7 -->
-
-
-

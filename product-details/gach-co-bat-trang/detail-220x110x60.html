@@ -2,35 +2,22 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gạch Thất 220x110x60 - Thanh Hải Ceramics</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/assets/images/logo.png"
-    />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
     </style>
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     {{{stack "styles"}}}
-</head>
+  </head>
   <body
     data-page="products"
     class="min-h-screen flex flex-col bg-background-secondary"
@@ -39,7 +26,9 @@
 
     <main class="flex-grow bg-background-secondary pb-14 md:pb-20">
       <!-- Top Banner for Detail -->
-      <section class="hidden md:flex relative w-full h-[180px] md:h-[210px] items-center justify-center overflow-hidden">
+      <section
+        class="hidden md:flex relative w-full h-[180px] md:h-[210px] items-center justify-center overflow-hidden"
+      >
         <div class="absolute inset-0 z-0">
           <img
             src="/assets/images/detail-banner.png"
@@ -48,14 +37,22 @@
           />
         </div>
         <div class="relative z-10 text-center text-white px-4 pt-4">
-          <h1 class="text-2xl md:text-3xl font-bold mb-2.5 uppercase">Gạch cổ Bát Tràng</h1>
+          <h1 class="text-2xl md:text-3xl font-bold mb-2.5 uppercase">
+            Gạch cổ Bát Tràng
+          </h1>
           <p class="text-xs md:text-sm text-white/80">
-            <a
-              href="/"
-              class="hover:text-white transition-colors"
-              >Trang chủ</a
+            <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+            <svg
+              class="w-2.5 h-2.5 inline-block mx-2 fill-current opacity-80"
+              viewBox="0 0 35 35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-            <svg class="w-2.5 h-2.5 inline-block mx-2 fill-current opacity-80" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5797 31.4214C11.1695 31.0111 10.9391 30.4548 10.9391 29.8747C10.9391 29.2946 11.1695 28.7383 11.5797 28.3281L22.4078 17.5L11.5797 6.67184C11.1937 6.25726 10.9836 5.70915 10.9936 5.14283C11.0036 4.5765 11.2328 4.03612 11.6331 3.63539C12.0334 3.23465 12.5735 3.0048 13.1399 2.99421C13.7062 2.98361 14.2545 3.1931 14.6695 3.57858L27.046 15.9516C27.4561 16.3618 27.6865 16.9182 27.6865 17.4983C27.6865 18.0783 27.4561 18.6347 27.046 19.0449L14.6729 31.4214C14.2627 31.8315 13.7064 32.0619 13.1263 32.0619C12.5462 32.0619 11.9899 31.8315 11.5797 31.4214Z" fill="currentColor"/></svg>
+              <path
+                d="M11.5797 31.4214C11.1695 31.0111 10.9391 30.4548 10.9391 29.8747C10.9391 29.2946 11.1695 28.7383 11.5797 28.3281L22.4078 17.5L11.5797 6.67184C11.1937 6.25726 10.9836 5.70915 10.9936 5.14283C11.0036 4.5765 11.2328 4.03612 11.6331 3.63539C12.0334 3.23465 12.5735 3.0048 13.1399 2.99421C13.7062 2.98361 14.2545 3.1931 14.6695 3.57858L27.046 15.9516C27.4561 16.3618 27.6865 16.9182 27.6865 17.4983C27.6865 18.0783 27.4561 18.6347 27.046 19.0449L14.6729 31.4214C14.2627 31.8315 13.7064 32.0619 13.1263 32.0619C12.5462 32.0619 11.9899 31.8315 11.5797 31.4214Z"
+                fill="currentColor"
+              />
+            </svg>
             <a
               href="/products/gach-co-bat-trang/"
               class="hover:text-white transition-colors"
@@ -65,24 +62,38 @@
         </div>
       </section>
 
-            <!-- Sub Breadcrumb -->
+      <!-- Sub Breadcrumb -->
       <div class="hidden md:block w-[85%] max-w-[1320px] mx-auto py-8">
-        {{> components/products/breadcrumb textClass="font-semibold text-primary/60 uppercase text-[14px] md:text-base" linkClass="hover:text-primary transition-colors" separatorClass="mx-1" parentHref="/products/gach-co-bat-trang/" parentLabel="Sản phẩm" currentClass="text-primary font-semibold pb-1" currentLabel="Gạch cổ Bát Tràng"}}
+        {{> components/products/breadcrumb textClass="font-semibold
+        text-primary/60 uppercase text-[14px] md:text-base"
+        linkClass="hover:text-primary transition-colors" separatorClass="mx-1"
+        parentHref="/products/gach-co-bat-trang/" parentLabel="Sản phẩm"
+        currentClass="text-primary font-semibold pb-1" currentLabel="Gạch cổ Bát
+        Tràng"}}
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
 
       <!-- Product Detail Container -->
-      <section class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-10 lg:pb-24 pt-0 md:pt-4">
+      <section
+        class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-10 lg:pb-24 pt-0 md:pt-4"
+      >
         {{> product-details/partials/product-image-swiper}}
 
-        
         <!-- Right: Info -->
-        <div class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-[18px] md:pt-0">
-          
+        <div
+          class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-[18px] md:pt-0"
+        >
           <!-- SKU -->
-          <div class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] order-2 md:order-1 mt-1 md:mt-0">
-            <span class="text-[#656663] md:text-primary font-light md:font-normal">Mã SP:</span>
-            <span class="text-[#656663] md:text-primary font-semibold">THC 100-GDS</span>
+          <div
+            class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] order-2 md:order-1 mt-1 md:mt-0"
+          >
+            <span
+              class="text-[#656663] md:text-primary font-light md:font-normal"
+              >Mã SP:</span
+            >
+            <span class="text-[#656663] md:text-primary font-semibold"
+              >THC 100-GDS</span
+            >
           </div>
 
           <!-- Title -->
@@ -93,12 +104,16 @@
           </h2>
 
           <!-- Price -->
-          <p class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal order-3 mt-0.5 md:mt-0">
+          <p
+            class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal order-3 mt-0.5 md:mt-0"
+          >
             675.000 đ/m²
           </p>
 
           <!-- Separator -->
-          <hr class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full order-4 hidden md:block" />
+          <hr
+            class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full order-4 hidden md:block"
+          />
           <hr class="border-t border-black/10 w-full order-4 md:hidden mb-4" />
 
           <!-- Details List -->
@@ -111,9 +126,13 @@
           </ul>
 
           <!-- Actions -->
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-[15px] md:mb-16 order-6 w-full">
+          <div
+            class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-[15px] md:mb-16 order-6 w-full"
+          >
             <!-- Quantity -->
-            <div class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0">
+            <div
+              class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0"
+            >
               <button
                 class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors"
               >
@@ -180,38 +199,42 @@
         </div>
       </section>
 
-      {{> components/products/quantity-calculator 
-        image="/assets/images/gach-bat-size-1.png"
-        showInfo=true
-        label1="Gạch"
-        rate1="60 viên/m²"
-      }}
+      {{> components/products/quantity-calculator
+      image="/assets/images/gach-bat-size-1.png" showInfo=true label1="Gạch"
+      rate1="60 viên/m²" }}
 
       <div class="hidden md:block">
-      {{> components/products/fabrication-process}}
-      {{> components/products/journey-video hideTitle=true}}
-      {{> components/products/trang-tri-process}}
+        {{> components/products/fabrication-process}} {{>
+        components/products/journey-video hideTitle=true}} {{>
+        components/products/trang-tri-process}}
       </div>
       <hr class="md:mb-16 mb-8" />
-      {{> components/products/works-simple showNav=true}}
-      {{> components/products/recommendations}}
-      {{> components/products/faq2}}
-
-
+      {{> components/products/works-simple showNav=true}} {{>
+      components/products/recommendations}} {{> components/products/faq2}}
     </main>
 
     {{> components/footer hideNewsletter=true}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script
-      type="module"
-      src="/assets/js/main.js"
-    ></script>
+    <script type="module" src="/assets/js/app.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener("DOMContentLoaded", () => {
         // Initialize AOS
         AOS.init({ duration: 800, once: true, offset: 100 });
+
+        const productThumbSwiperEl = document.querySelector(
+          ".product-thumb-swiper",
+        );
+        const productThumbSwiper = productThumbSwiperEl
+          ? new Swiper(productThumbSwiperEl, {
+              spaceBetween: 20,
+              slidesPerView: 7,
+              freeMode: true,
+              watchSlidesProgress: true,
+            })
+          : null;
+
         new Swiper(".product-main-swiper", {
           slidesPerView: 1,
           spaceBetween: 0,
@@ -219,83 +242,99 @@
             el: ".product-main-pagination",
             clickable: true,
           },
-          thumbs: {
-            swiper: thumbSwiper,
-          },
+          thumbs: productThumbSwiper
+            ? {
+                swiper: productThumbSwiper,
+              }
+            : undefined,
         });
 
         // Initialize Fabrication Slider
-        const fabricationRoot = document.querySelector('.fabrication-slider')?.closest('.group') || document;
-        const fabricationNextEl = fabricationRoot.querySelector('.fabrication-next');
-        const fabricationPrevEl = fabricationRoot.querySelector('.fabrication-prev');
-        const fabricationPaginationEl = fabricationRoot.querySelector('.fabrication-pagination');
+        const fabricationRoot =
+          document.querySelector(".fabrication-slider")?.closest(".group") ||
+          document;
+        const fabricationNextEl =
+          fabricationRoot.querySelector(".fabrication-next");
+        const fabricationPrevEl =
+          fabricationRoot.querySelector(".fabrication-prev");
+        const fabricationPaginationEl = fabricationRoot.querySelector(
+          ".fabrication-pagination",
+        );
 
-        new Swiper('.fabrication-slider', {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            centeredSlides: true,
-            loop: true,
-            pagination: {
-                el: fabricationPaginationEl,
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>';
-                }
+        new Swiper(".fabrication-slider", {
+          slidesPerView: "auto",
+          spaceBetween: 20,
+          centeredSlides: true,
+          loop: true,
+          pagination: {
+            el: fabricationPaginationEl,
+            clickable: true,
+            renderBullet: function (index, className) {
+              return (
+                '<span class="' +
+                className +
+                ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
+              );
             },
-            navigation: {
-                nextEl: fabricationNextEl,
-                prevEl: fabricationPrevEl,
+          },
+          navigation: {
+            nextEl: fabricationNextEl,
+            prevEl: fabricationPrevEl,
+          },
+          breakpoints: {
+            768: {
+              spaceBetween: 40,
             },
-            breakpoints: {
-              768: {
-                spaceBetween: 40,
-              },
-              1280: {
-                spaceBetween: 80,
-              }
+            1280: {
+              spaceBetween: 80,
             },
-            on: {
-                init: function() {
-                    setTimeout(() => {
-                        if (typeof AOS !== 'undefined') AOS.refresh();
-                    }, 500);
-                }
-            }
+          },
+          on: {
+            init: function () {
+              setTimeout(() => {
+                if (typeof AOS !== "undefined") AOS.refresh();
+              }, 500);
+            },
+          },
         });
 
         // Initialize Works/Projects Slider if present
-        new Swiper('.projects-slider', {
-            slidesPerView: 1.2,
-            spaceBetween: 20,
-            centeredSlides: true,
-            loop: true,
-            pagination: {
-                el: '.projects-pagination',
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>';
-                }
+        new Swiper(".projects-slider", {
+          slidesPerView: 1.2,
+          spaceBetween: 20,
+          centeredSlides: true,
+          loop: true,
+          pagination: {
+            el: ".projects-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+              return (
+                '<span class="' +
+                className +
+                ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
+              );
             },
-            navigation: {
-                nextEl: '.projects-next',
-                prevEl: '.projects-prev',
+          },
+          navigation: {
+            nextEl: ".projects-next",
+            prevEl: ".projects-prev",
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+              centeredSlides: false,
             },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                    centeredSlides: false,
-                },
-                1024: {
-                    slidesPerView: 2,
-                    spaceBetween: 60,
-                    centeredSlides: true,
-                }
-            }
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 60,
+              centeredSlides: true,
+            },
+          },
         });
 
         // Add bullet style
-        const style = document.createElement('style');
+        const style = document.createElement("style");
         style.innerHTML = `
             .fabrication-pagination .swiper-pagination-bullet-active,
             .projects-pagination .swiper-pagination-bullet-active {
@@ -322,5 +361,5 @@
       });
     </script>
     {{{stack "scripts"}}}
-</body>
+  </body>
 </html>

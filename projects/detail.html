@@ -1,0 +1,122 @@
+<!-- Tệp: projects/detail.html -->
+<!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=projects/detail.html uid=a9f2e6b1 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết dự án - Thanh Hải Ceramics</title>
+    <meta
+      name="description"
+      content="Khám phá chi tiết công trình Thanh Hải Plaza - một biểu tượng kiến trúc bền vững với gốm sứ cao cấp."
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    {{{stack "styles"}}}
+  </head>
+  <body
+    data-page="project-detail"
+    class="min-h-screen flex flex-col bg-background-secondary overflow-x-hidden"
+  >
+    {{> components/header}}
+    <main class="flex-grow">
+      {{> projects/partials/detail-hero}} {{> projects/partials/detail-content}}
+      {{> projects/partials/detail-related}}
+      <div class="pb-8">
+        {{> components/products/faq2}}
+      </div>
+      <!-- CTA Section -->
+      <section class="py-20 md:py-32 bg-primary text-white">
+        <div class="w-[85%] max-w-[1000px] mx-auto text-center">
+          <h2
+            class="text-3xl md:text-5xl font-arima font-medium mb-6"
+            data-aos="fade-up"
+          >
+            Bạn có dự án tương tự?
+          </h2>
+          <p
+            class="text-lg opacity-90 mb-10 max-w-2xl mx-auto font-light"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Hãy liên hệ với chúng tôi để tư vấn về các giải pháp gốm sứ cao cấp
+            cho công trình của bạn.
+          </p>
+          <div
+            class="flex flex-col md:flex-row gap-4 justify-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <a
+              href="/contact/"
+              class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-neutral-1 transition-all"
+            >
+              Liên Hệ Tư Vấn
+            </a>
+            <a
+              href="/dich-vu-khach-hang/quy-trinh-dat-hang.html"
+              class="px-10 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition-all"
+            >
+              Xem Quy Trình
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> components/footer hideNewsletter=true}}
+    <script type="module" src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+      if (typeof GLightbox !== "undefined") {
+        document.querySelectorAll(".glightbox").forEach((anchor) => {
+          const image = anchor.querySelector("img");
+          if (image) {
+            anchor.setAttribute("href", image.currentSrc || image.src);
+          }
+        });
+        GLightbox({
+          touchNavigation: true,
+          loop: true,
+          autoplayVideos: true,
+        });
+      }
+
+      // Khởi tạo Swiper cho Gallery trên Mobile
+      if (typeof Swiper !== "undefined") {
+        new Swiper(".detail-gallery-swiper", {
+          slidesPerView: 1.15,
+          spaceBetween: 16,
+          pagination: {
+            el: ".projects-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2.15,
+              spaceBetween: 20,
+            }
+          }
+        });
+      }
+    </script>
+    {{{stack "scripts"}}}
+  </body>
+</html>
+<!-- GSXD-DEBUG:END type=PAGE file=projects/detail.html uid=a9f2e6b1 -->
