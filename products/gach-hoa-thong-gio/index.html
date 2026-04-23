@@ -1,16 +1,9 @@
-<!doctype html>
-<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/gach-hoa-thong-gio/index.html uid=6a25ca62 -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gạch Hoa Thông Gió - Thanh Hải Ceramics</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+{{#> layouts/main pageName="products" lang="en" bodyClass="min-h-screen flex flex-col bg-background-secondary page-gach-hoa-thong-gio" title="Gạch Hoa Thông Gió - Thanh Hải Ceramics" hideNewsletter=true}}
+{{#push "styles"}}
+<style>
       @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
     </style>
-    <style>
+<style>
       @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
       /* Force GLightbox images to be large even if low-res */
       .glightbox-container .gslide-image {
@@ -24,7 +17,7 @@
         object-fit: contain !important;
       }
     </style>
-    <style>
+<style>
       @media (max-width: 767.98px) {
         .page-gach-hoa-thong-gio .gach-hoa-hero-brand {
           color: #1f2937;
@@ -247,24 +240,10 @@
         }
       }
     </style>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
-    />
-    {{{stack "styles"}}}
-  </head>
-  <body
-    data-page="products"
-    class="min-h-screen flex flex-col bg-background-secondary page-gach-hoa-thong-gio"
-  >
+{{/push}}
+
     <!-- GSXD-PARTIAL:BEGIN file=products/gach-hoa-thong-gio/index.html include=components/header idx=001 uid=26ea64d1 -->
-    {{> components/header}} {{> components/catalog-button}}
+     {{> components/catalog-button}}
 
     <!-- GSXD-ELEMENT:BEGIN file=products/gach-hoa-thong-gio/index.html tag=main idx=001 uid=cca953f4 -->
 
@@ -279,11 +258,10 @@
       products/gach-hoa-thong-gio/partials/faq-section}}
     </main>
     <!-- GSXD-PARTIAL:BEGIN file=products/gach-hoa-thong-gio/index.html include=components/footer idx=003 uid=79bda2c5 -->
-    {{> components/footer}}
 
-    <script type="module" src="/assets/js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+{{#push "scripts"}}
+</script>
+
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
       AOS.init({ duration: 800, once: true, offset: 100 });
@@ -337,7 +315,7 @@
         });
       });
     </script>
-    {{{stack "scripts"}}}
+    
     <!-- GSXD-DEBUG:END type=PAGE file=products/gach-hoa-thong-gio/index.html uid=6a25ca62 -->
-  </body>
-</html>
+{{/push}}
+{{/layouts/main}}

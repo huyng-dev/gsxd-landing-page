@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=layouts/main.html -->
+<html lang="{{#if lang}}{{lang}}{{else}}vi{{/if}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{#if title}}{{title}}{{else}}Thanh Hải Ceramics - Ngói và Gạch Hoa Truyền Thống{{/if}}</title>
+    {{#if description}}
+    <meta name="description" content="{{description}}" />
+    {{/if}}
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    {{{stack "styles"}}}
+  </head>
+  <body {{#if pageName}}data-page="{{pageName}}"{{/if}} class="{{#if bodyClass}}{{bodyClass}}{{else}}min-h-screen flex flex-col bg-background-secondary{{/if}}">
+    {{#if isHome}}
+    {{> components/header isHome=true}}
+    {{else}}
+    {{> components/header}}
+    {{/if}}
+
+    {{> @partial-block }}
+
+    {{#if hideNewsletter}}
+    {{> components/footer hideNewsletter=true}}
+    {{else}}
+    {{> components/footer}}
+    {{/if}}
+
+    <script type="module" src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    {{{stack "scripts"}}}
+    <script>
+      if (window.AOS) {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100,
+        });
+      }
+
+      if (typeof GLightbox !== "undefined") {
+        document.querySelectorAll(".glightbox").forEach((anchor) => {
+          const image = anchor.querySelector("img");
+          if (image) {
+            anchor.setAttribute("href", image.currentSrc || image.src);
+          }
+        });
+        GLightbox({
+          touchNavigation: true,
+          loop: true,
+          autoplayVideos: true,
+        });
+      }
+    </script>
+  </body>
+</html>
+<!-- GSXD-DEBUG:END type=LAYOUT file=layouts/main.html -->

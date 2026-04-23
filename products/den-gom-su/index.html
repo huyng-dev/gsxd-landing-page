@@ -1,29 +1,12 @@
-<!doctype html>
-<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/den-gom-su/index.html uid=b8e4c1ed -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đèn Gốm Sứ - Thanh Hải Ceramics</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+{{#> layouts/main pageName="products" lang="en" bodyClass="min-h-screen flex flex-col bg-background-secondary" title="Đèn Gốm Sứ - Thanh Hải Ceramics" hideNewsletter=true}}
+{{#push "styles"}}
+<style>
       @import url("https://fonts.googleapis.com/css2?family=Carattere&family=Charm:wght@400;700&family=Ephesis&family=Italianno&display=swap");
     </style>
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    {{{stack "styles"}}}
-  </head>
-  <body
-    data-page="products"
-    class="min-h-screen flex flex-col bg-background-secondary"
-  >
+{{/push}}
+
 <!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=components/header idx=001 uid=64b80681 -->
-{{>components/header}} {{>components/catalog-button}}
+ {{>components/catalog-button}}
 
     <!-- GSXD-ELEMENT:BEGIN file=products/den-gom-su/index.html tag=main idx=001 uid=18b021ab -->
 
@@ -66,11 +49,10 @@
       </section>
     </main>
 <!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=components/footer idx=013 uid=da5cac4f -->
-{{>components/footer hideNewsletter=true}}
 
-    <script type="module" src="/assets/js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+{{#push "scripts"}}
+</script>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         // Initialize AOS
@@ -140,11 +122,7 @@
         document.head.appendChild(style);
       });
     </script>
-    {{{stack "scripts"}}}
+    
 <!-- GSXD-DEBUG:END type=PAGE file=products/den-gom-su/index.html uid=b8e4c1ed -->
-</body>
-</html>
-
-
-
-
+{{/push}}
+{{/layouts/main}}

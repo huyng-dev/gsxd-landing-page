@@ -1,13 +1,6 @@
-<!doctype html>
-<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/phu-kien-ngoi/index.html uid=bd02ff09 -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phụ Kiện Ngói - Thanh Hải Ceramics</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+{{#> layouts/main pageName="products" lang="en" bodyClass="min-h-screen flex flex-col bg-background-secondary page-phu-kien-ngoi" title="Phụ Kiện Ngói - Thanh Hải Ceramics" hideNewsletter=true}}
+{{#push "styles"}}
+<style>
       @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
 
       .glightbox-container .gslide-image {
@@ -21,7 +14,7 @@
         object-fit: contain !important;
       }
     </style>
-    <style>
+<style>
       @media (max-width: 767.98px) {
         .page-phu-kien-ngoi main > section:first-of-type h1 {
           color: #fff;
@@ -266,20 +259,10 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
-    />
-    {{{stack "styles"}}}
-  </head>
-  <body
-    data-page="products"
-    class="min-h-screen flex flex-col bg-background-secondary page-phu-kien-ngoi"
-  >
+{{/push}}
+
     <!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/index.html include=components/header idx=001 uid=30e4e90a -->
-    {{> components/header}} {{> components/catalog-button}}
+     {{> components/catalog-button}}
 
     <!-- GSXD-ELEMENT:BEGIN file=products/phu-kien-ngoi/index.html tag=main idx=001 uid=a13734f0 -->
 
@@ -746,10 +729,10 @@
       </section>
     </main>
     <!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/index.html include=components/footer idx=004 uid=0972ea43 -->
-    {{> components/footer}}
 
-    <script type="module" src="/assets/js/app.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+{{#push "scripts"}}
+</script>
+    
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
       AOS.init({ duration: 800, once: true, offset: 100 });
@@ -773,7 +756,7 @@
         height: "auto",
       });
     </script>
-    {{{stack "scripts"}}}
+    
     <!-- GSXD-DEBUG:END type=PAGE file=products/phu-kien-ngoi/index.html uid=bd02ff09 -->
-  </body>
-</html>
+{{/push}}
+{{/layouts/main}}

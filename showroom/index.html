@@ -1,41 +1,5 @@
-<!doctype html>
 <!-- GSXD-DEBUG:BEGIN type=PAGE file=showroom/index.html uid=4d98e5ed -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Showroom - Thanh Hải Ceramics</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/assets/images/logo.png"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
-    </style>
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
-    {{{stack "styles"}}}
-</head>
-  <body class="min-h-screen flex flex-col bg-primary text-white font-archivo">
-<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=components/header idx=001 uid=5b0f8819 -->
-{{> components/header}}
-
+{{#> layouts/main pageName="showroom" lang="en" bodyClass="min-h-screen flex flex-col bg-primary text-white font-archivo" title="Showroom - Thanh Hải Ceramics"}}
     <!-- GSXD-ELEMENT:BEGIN file=showroom/index.html tag=main idx=001 uid=b2197621 -->
 
     <main class="flex-grow">
@@ -48,23 +12,10 @@
 <!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/showroom-map-section idx=005 uid=8d5eca96 -->
 {{> showroom/partials/showroom-map-section}}
     </main>
-<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=components/footer idx=006 uid=8a4370e4 -->
-{{> components/footer}}
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script
-      type="module"
-      src="/assets/js/app.js"
-    ></script>
-
+{{#push "scripts"}}
     <!-- Swiper Initialization -->
     <script>
-      if (window.AOS) {
-        AOS.init({ once: true, duration: 800, offset: 50 });
-      }
-
       if (window.Swiper) {
         new Swiper(".showroomSwiper", {
           slidesPerView: "auto",
@@ -85,11 +36,6 @@
         });
       }
     </script>
-    {{{stack "scripts"}}}
+{{/push}}
+{{/layouts/main}}
 <!-- GSXD-DEBUG:END type=PAGE file=showroom/index.html uid=4d98e5ed -->
-</body>
-</html>
-
-
-
-

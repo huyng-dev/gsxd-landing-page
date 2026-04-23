@@ -1,18 +1,5 @@
-<!doctype html>
-<html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>FAQ - Câu hỏi thường gặp - Thanh Hải Ceramics</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/assets/images/logo.png"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
+{{#> layouts/main pageName="faq" bodyClass="min-h-screen flex flex-col bg-background-secondary" hideNewsletter=true title="FAQ - Câu hỏi thường gặp - Thanh Hải Ceramics"}}
+{{#push "styles"}}
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;600;700&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap");
@@ -20,21 +7,7 @@
       .font-arima { font-family: 'Arima', cursive; }
       .font-aref { font-family: 'Aref Ruqaa', serif; }
     </style>
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    />
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
-    {{{stack "styles"}}}
-</head>
-  <body
-    class="min-h-screen flex flex-col bg-background-secondary"
-  >
-    {{> components/header}}
-
+{{/push}}
     <main class="flex-grow bg-background-secondary">
       <!-- FAQ Banner -->
       <section class="relative w-full h-[300px] md:h-[400px] flex items-end justify-center overflow-hidden pb-8 md:pb-12">
@@ -402,13 +375,9 @@
       {{> components/faq/faq-contact}}
     </main>
 
-    {{> components/footer hideNewsletter=true}}
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+{{#push "scripts"}}
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        AOS.init({ duration: 800, once: true });
-
         // Accordion Logic
         const accordionButtons = document.querySelectorAll('.accordion-button');
         
@@ -487,6 +456,5 @@
         setTimeout(handleScrollHighlight, 500);
       });
     </script>
-    {{{stack "scripts"}}}
-</body>
-</html>
+{{/push}}
+{{/layouts/main}}

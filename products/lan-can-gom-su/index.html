@@ -1,22 +1,9 @@
-<!doctype html>
-<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/lan-can-gom-su/index.html uid=99a940ad -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lan Can Gốm Sứ - Thanh Hải Ceramics</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+{{#> layouts/main pageName="products" lang="en" bodyClass="page-lan-can-gom-su min-h-screen flex flex-col bg-background-secondary" title="Lan Can Gốm Sứ - Thanh Hải Ceramics" hideNewsletter=true}}
+{{#push "styles"}}
+<style>
       @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
     </style>
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <style>
+<style>
       @media (max-width: 767.98px) {
         .page-lan-can-gom-su .lan-can-category-title {
           color: #c76e00;
@@ -190,14 +177,10 @@
         }
       }
     </style>
-    {{{stack "styles"}}}
-  </head>
-  <body
-    data-page="products"
-    class="page-lan-can-gom-su min-h-screen flex flex-col bg-background-secondary"
-  >
+{{/push}}
+
 <!-- GSXD-PARTIAL:BEGIN file=products/lan-can-gom-su/index.html include=components/header idx=001 uid=fdd91a2b -->
-{{> components/header}} {{> components/catalog-button}}
+ {{> components/catalog-button}}
 
     <!-- GSXD-ELEMENT:BEGIN file=products/lan-can-gom-su/index.html tag=main idx=001 uid=f1c42221 -->
 
@@ -834,19 +817,10 @@
       </section>
     </main>
 <!-- GSXD-PARTIAL:BEGIN file=products/lan-can-gom-su/index.html include=components/footer idx=004 uid=030d4643 -->
-{{> components/footer hideNewsletter=true}}
 
-    <script type="module" src="/assets/js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 800, once: true, offset: 100 });
-    </script>
-    {{{stack "scripts"}}}
+{{#push "scripts"}}
+</script>
+
 <!-- GSXD-DEBUG:END type=PAGE file=products/lan-can-gom-su/index.html uid=99a940ad -->
-</body>
-</html>
-
-
-
-
+{{/push}}
+{{/layouts/main}}

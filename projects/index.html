@@ -1,45 +1,5 @@
-<!doctype html>
 <!-- GSXD-DEBUG:BEGIN type=PAGE file=projects/index.html uid=78af7e27 -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Dự án - Thanh Hải Ceramics</title>
-    <meta
-      name="description"
-      content="Khám phá các công trình ấn tượng sử dụng gốm sứ xây dựng Thanh Hải. Sự kết hợp hoàn hảo giữa nghệ thuật truyền thống và kiến trúc hiện đại."
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/assets/images/logo.png"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
-    />
-    {{{stack "styles"}}}
-</head>
-  <body class="min-h-screen flex flex-col bg-background-secondary">
-<!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=components/header idx=001 uid=62fc0222 -->
-{{> components/header}}
-
+{{#> layouts/main pageName="projects" lang="en" hideNewsletter=true title="Dự án - Thanh Hải Ceramics" description="Khám phá các công trình ấn tượng sử dụng gốm sứ xây dựng Thanh Hải. Sự kết hợp hoàn hảo giữa nghệ thuật truyền thống và kiến trúc hiện đại."}}
     <!-- GSXD-ELEMENT:BEGIN file=projects/index.html tag=main idx=001 uid=9724f38f -->
 
     <main class="flex-grow">
@@ -48,44 +8,5 @@
 <!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=projects/partials/catalog-section idx=003 uid=3aed97cc -->
 {{> projects/partials/catalog-section}}
     </main>
-<!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=components/footer idx=004 uid=a370b289 -->
-{{> components/footer hideNewsletter=true}}
-
-    <script
-      type="module"
-      src="/assets/js/app.js"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100,
-      });
-
-      if (typeof GLightbox !== "undefined") {
-        // Use actual rendered img URLs so lightbox works with Vite asset hashing.
-        document.querySelectorAll(".glightbox").forEach((anchor) => {
-          const image = anchor.querySelector("img");
-          if (image) {
-            anchor.setAttribute("href", image.currentSrc || image.src);
-          }
-        });
-
-        GLightbox({
-          touchNavigation: true,
-          loop: true,
-          autoplayVideos: true,
-        });
-      }
-    </script>
-    {{{stack "scripts"}}}
+{{/layouts/main}}
 <!-- GSXD-DEBUG:END type=PAGE file=projects/index.html uid=78af7e27 -->
-</body>
-</html>
-
-
-
-

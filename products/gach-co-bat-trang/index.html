@@ -1,32 +1,15 @@
-<!doctype html>
-<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/gach-co-bat-trang/index.html uid=9cb91761 -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gạch Cổ Bát Tràng - Thanh Hải Ceramics</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+{{#> layouts/main pageName="products" lang="en" bodyClass="min-h-screen flex flex-col bg-background-secondary" title="Gạch Cổ Bát Tràng - Thanh Hải Ceramics" hideNewsletter=true}}
+{{#push "styles"}}
+<style>
       @import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap");
     </style>
-    <style>
+<style>
       @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Ephesis&family=Italianno&display=swap");
     </style>
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    {{{stack "styles"}}}
-  </head>
-  <body
-    data-page="products"
-    class="min-h-screen flex flex-col bg-background-secondary"
-  >
+{{/push}}
+
     <!-- GSXD-PARTIAL:BEGIN file=products/gach-co-bat-trang/index.html include=components/header idx=001 uid=81d11631 -->
-    {{> components/header}} {{> components/catalog-button}}
+     {{> components/catalog-button}}
 
     <!-- GSXD-ELEMENT:BEGIN file=products/gach-co-bat-trang/index.html tag=main idx=001 uid=783ba3c2 -->
 
@@ -701,11 +684,10 @@
       </section>
     </main>
     <!-- GSXD-PARTIAL:BEGIN file=products/gach-co-bat-trang/index.html include=components/footer idx=025 uid=b132b85e -->
-    {{> components/footer hideNewsletter=true}}
 
-    <script type="module" src="/assets/js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+{{#push "scripts"}}
+</script>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         // Initialize AOS
@@ -884,7 +866,7 @@
         document.head.appendChild(style);
       });
     </script>
-    {{{stack "scripts"}}}
+    
     <!-- GSXD-DEBUG:END type=PAGE file=products/gach-co-bat-trang/index.html uid=9cb91761 -->
-  </body>
-</html>
+{{/push}}
+{{/layouts/main}}
