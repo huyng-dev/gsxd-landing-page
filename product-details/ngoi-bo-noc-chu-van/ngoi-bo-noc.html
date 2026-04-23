@@ -251,17 +251,6 @@
       document.addEventListener("DOMContentLoaded", () => {
         // Initialize AOS
         AOS.init({ duration: 800, once: true, offset: 100 });
-        new Swiper(".product-main-swiper", {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          pagination: {
-            el: ".product-main-pagination",
-            clickable: true,
-          },
-          thumbs: {
-            swiper: thumbSwiper,
-          },
-        });
 
         // Refresh AOS when all assets (like images) finish loading
         window.addEventListener("load", () => {
@@ -275,73 +264,6 @@
             AOS.refresh();
           }, 1500);
         });
-
-        // Initialize Works/Projects Slider if present
-        new Swiper(".projects-slider", {
-          slidesPerView: 1.2,
-          spaceBetween: 20,
-          centeredSlides: true,
-          loop: true,
-          pagination: {
-            el: ".projects-pagination",
-            clickable: true,
-            renderBullet: function (index, className) {
-              return (
-                '<span class="' +
-                className +
-                ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
-              );
-            },
-          },
-          navigation: {
-            nextEl: ".projects-next",
-            prevEl: ".projects-prev",
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-              centeredSlides: false,
-            },
-            1024: {
-              slidesPerView: 2,
-              spaceBetween: 60,
-              centeredSlides: true,
-            },
-          },
-          on: {
-            init: function () {
-              setTimeout(() => {
-                if (typeof AOS !== "undefined") AOS.refresh();
-              }, 500);
-            },
-          },
-        });
-
-        // Add bullet style
-        const style = document.createElement("style");
-        style.innerHTML = `
-            .product-main-pagination .swiper-pagination-bullet {
-                width: 6px !important;
-                height: 6px !important;
-                background: white !important;
-                opacity: 0.5 !important;
-                margin: 0 !important;
-                border-radius: 9999px !important;
-                transition: all 0.3s ease !important;
-            }
-            .product-main-pagination .swiper-pagination-bullet-active {
-                width: 10px !important;
-                background: #C76E00 !important;
-                opacity: 1 !important;
-            }
-            .projects-pagination .swiper-pagination-bullet-active {
-                background-color: #C76E00 !important;
-                width: 12px !important;
-                border-radius: 6px !important;
-            }
-        `;
-        document.head.appendChild(style);
       });
     </script>
     {{{stack "scripts"}}}

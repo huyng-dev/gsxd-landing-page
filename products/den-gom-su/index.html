@@ -75,69 +75,6 @@
       document.addEventListener("DOMContentLoaded", () => {
         // Initialize AOS
         AOS.init({ duration: 800, once: true, offset: 100 });
-
-        // Initialize Fabrication Slider
-        const fabricationRoot =
-          document.querySelector(".fabrication-slider")?.closest(".group") ||
-          document;
-        const fabricationNextEl =
-          fabricationRoot.querySelector(".fabrication-next");
-        const fabricationPrevEl =
-          fabricationRoot.querySelector(".fabrication-prev");
-        const fabricationPaginationEl = fabricationRoot.querySelector(
-          ".fabrication-pagination",
-        );
-
-        new Swiper(".fabrication-slider", {
-          slidesPerView: "auto",
-          spaceBetween: 20,
-          centeredSlides: true,
-          loop: true,
-          pagination: {
-            el: fabricationPaginationEl,
-            clickable: true,
-            renderBullet: function (index, className) {
-              return (
-                '<span class="' +
-                className +
-                ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
-              );
-            },
-          },
-          navigation: {
-            nextEl: fabricationNextEl,
-            prevEl: fabricationPrevEl,
-          },
-          breakpoints: {
-            768: {
-              spaceBetween: 40,
-            },
-            1280: {
-              spaceBetween: 80,
-            },
-          },
-          on: {
-            init: function () {
-              // Refresh AOS once Swiper is ready to recalculate positions
-              setTimeout(() => {
-                AOS.refresh();
-              }, 500);
-            },
-          },
-        });
-
-        // Add CSS for active bullets manually if needed or via Swiper class
-        const style = document.createElement("style");
-        style.innerHTML = `
-            .fabrication-pagination .swiper-pagination-bullet-active {
-                background-color: #C76E00 !important;
-                width: 12px !important;
-                border-radius: 6px !important;
-            }
-
-            }
-        `;
-        document.head.appendChild(style);
       });
     </script>
     {{{stack "scripts"}}}
