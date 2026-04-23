@@ -1,33 +1,61 @@
-{{#> layouts/main pageName="products" lang="en" bodyClass="min-h-screen flex flex-col bg-background-secondary" title="Linh Vật Phong Thủy - Thanh Hải Ceramics" hideNewsletter=true}}
-{{#push "styles"}}
-<style>
+<!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/linh-vat-phong-thuy/index.html -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linh Vật Phong Thủy - Thanh Hải Ceramics</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    {{{stack "styles"}}}
+  </head>
+  <body
+    data-page="products"
+    class="min-h-screen flex flex-col bg-background-secondary"
+  >
+    {{> components/header}} {{#push "styles"}}
+    <style>
       @import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Ephesis&family=Italianno&display=swap");
     </style>
-{{/push}}
+    {{/push}}
 
-<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/header idx=001 uid=98a2635d -->
- {{> components/catalog-button}}
+    <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/header idx=001 uid=98a2635d -->
+    {{> components/catalog-button}}
 
     <!-- GSXD-ELEMENT:BEGIN file=products/linh-vat-phong-thuy/index.html tag=main idx=001 uid=5697e7c8 -->
 
     <main class="flex-grow">
-<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/banner-section idx=002 uid=8ccaf1ad -->
-{{>products/linh-vat-phong-thuy/partials/banner-section}}
+      <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/banner-section idx=002 uid=8ccaf1ad -->
+      {{>products/linh-vat-phong-thuy/partials/banner-section}}
 
       <div class="w-[85%] max-w-[1320px] mx-auto">
         <!-- Breadcrumb -->
         <div class="pt-6 pb-3 md:pb-6 md:pt-8 relative z-10">
-<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/breadcrumb idx=003 uid=efe09016 -->
-{{> components/products/breadcrumb currentLabel="Linh Vật Phong
+          <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/breadcrumb idx=003 uid=efe09016 -->
+          {{> components/products/breadcrumb currentLabel="Linh Vật Phong
           Thủy"}}
         </div>
 
         <hr class="border-t border-black/10 mb-4 w-full" />
 
         <!-- Product Grid Section -->
-<!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=001 uid=8d87b5cd -->
-<section class="md:pb-8" data-aos="fade-up">
+        <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=001 uid=8d87b5cd -->
+        <section class="md:pb-8" data-aos="fade-up">
           <!-- Filter Button -->
           <div class="mb-[20px] md:mb-10 block">
             <button
@@ -55,8 +83,8 @@
           </div>
 
           <!-- Nghê Intro Section -->
-<!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=002 uid=a790105f -->
-<section class="mb-[50px] md:mb-24 relative" data-aos="fade-up">
+          <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=002 uid=a790105f -->
+          <section class="mb-[50px] md:mb-24 relative" data-aos="fade-up">
             <div class="flex flex-col md:flex-row items-center">
               <!-- Image Container -->
               <div
@@ -94,12 +122,12 @@
               </div>
             </div>
           </section>
-<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/nghe-featured-products idx=004 uid=b2938da9 -->
-{{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
+          <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/nghe-featured-products idx=004 uid=b2938da9 -->
+          {{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
 
           <!-- Phượng Intro Section -->
-<!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=003 uid=732fe4d0 -->
-<section class="mt-8 mb-20 relative" data-aos="fade-up">
+          <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=003 uid=732fe4d0 -->
+          <section class="mt-8 mb-20 relative" data-aos="fade-up">
             <div class="flex flex-col md:flex-row-reverse items-center">
               <!-- Image Container -->
               <div class="w-full md:w-[68%] z-0">
@@ -134,12 +162,12 @@
               </div>
             </div>
           </section>
-<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/nghe-featured-products idx=005 uid=7516cb63 -->
-{{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
+          <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/nghe-featured-products idx=005 uid=7516cb63 -->
+          {{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
 
           <!-- Đầu Rồng Intro Section -->
-<!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=004 uid=6a3ae18c -->
-<section class="mt-8 mb-20 relative" data-aos="fade-up">
+          <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=004 uid=6a3ae18c -->
+          <section class="mt-8 mb-8 md:mb-20 relative" data-aos="fade-up">
             <div class="flex flex-col md:flex-row items-center">
               <!-- Image Container -->
               <div class="w-full md:w-[68%] z-0">
@@ -177,14 +205,14 @@
               </div>
             </div>
           </section>
-<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/nghe-featured-products idx=006 uid=45b70c77 -->
-{{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
+          <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/nghe-featured-products idx=006 uid=45b70c77 -->
+          {{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
         </section>
       </div>
 
       <!-- Product Grid Section -->
-<!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=005 uid=3242f5b9 -->
-<section class="relative mx-auto pb-8 overflow-visible">
+      <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=005 uid=3242f5b9 -->
+      <section class="mt-8 md:mt-auto relative mx-auto pb-8 overflow-visible">
         <div class="relative w-[85%] md:w-full max-w-[1920px] mx-auto z-10">
           <div
             class="md:ml-[15.5%] grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 gap-y-[30px] lg:gap-y-6"
@@ -368,27 +396,26 @@
           </div>
         </div>
       </section>
-<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/fabrication-process idx=007 uid=aae3ded4 -->
-{{>components/products/fabrication-process}}
-<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/journey-video idx=008 uid=a09f5b77 -->
-{{>components/products/journey-video hideTitle=true}}
-<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/recommendations idx=009 uid=5373c3e1 -->
-{{>components/products/recommendations}}
+      <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/fabrication-process idx=007 uid=aae3ded4 -->
+      {{>components/products/fabrication-process}}
+      <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/journey-video idx=008 uid=a09f5b77 -->
+      {{>components/products/journey-video hideTitle=true}}
+      <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/recommendations idx=009 uid=5373c3e1 -->
+      {{>components/products/recommendations}}
 
       <!-- FAQ Section -->
-<!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=006 uid=c2832d17 -->
-<section
+      <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=006 uid=c2832d17 -->
+      <section
         class="w-full relative pb-[70px] md:pb-32 bg-background-secondary overflow-visible"
         data-aos="fade-up"
       >
-<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/faq-content idx=010 uid=79fdfd7a -->
-{{> components/products/faq-content}}
+        <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/faq-content idx=010 uid=79fdfd7a -->
+        {{> components/products/faq-content}}
       </section>
     </main>
-<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/footer idx=011 uid=461f88f6 -->
+    <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/footer idx=011 uid=461f88f6 -->
 
-{{#push "scripts"}}
-</script>
+    {{#push "scripts"}}
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -396,7 +423,38 @@
         AOS.init({ duration: 800, once: true, offset: 100 });
       });
     </script>
-    
-<!-- GSXD-DEBUG:END type=PAGE file=products/linh-vat-phong-thuy/index.html uid=1f8bf6c4 -->
-{{/push}}
-{{/layouts/main}}
+
+    <!-- GSXD-DEBUG:END type=PAGE file=products/linh-vat-phong-thuy/index.html uid=1f8bf6c4 -->
+    {{/push}} {{> components/footer hideNewsletter=true}}
+
+    <script type="module" src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    {{{stack "scripts"}}}
+    <script>
+      if (window.AOS) {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100,
+        });
+      }
+
+      if (typeof GLightbox !== "undefined") {
+        document.querySelectorAll(".glightbox").forEach((anchor) => {
+          const image = anchor.querySelector("img");
+          if (image) {
+            anchor.setAttribute("href", image.currentSrc || image.src);
+          }
+        });
+        GLightbox({
+          touchNavigation: true,
+          loop: true,
+          autoplayVideos: true,
+        });
+      }
+    </script>
+  </body>
+</html>
+<!-- GSXD-DEBUG:END type=PAGE file=products/linh-vat-phong-thuy/index.html -->

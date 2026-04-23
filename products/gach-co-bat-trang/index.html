@@ -1,5 +1,26 @@
-{{#> layouts/main pageName="products" lang="en" bodyClass="min-h-screen flex flex-col bg-background-secondary" title="Gạch Cổ Bát Tràng - Thanh Hải Ceramics" hideNewsletter=true}}
-{{#push "styles"}}
+<!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/gach-co-bat-trang/index.html -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gạch Cổ Bát Tràng - Thanh Hải Ceramics</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    {{{stack "styles"}}}
+  </head>
+  <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
+    {{> components/header}}
+
+    {{#push "styles"}}
 <style>
       @import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap");
     </style>
@@ -291,7 +312,7 @@
                 </div>
               </div>
               <div
-                class="swiper-pagination gach-bat-products-pagination product-list-pagination md:!hidden mt-4 relative flex justify-center w-full"
+                class="swiper-pagination gach-bat-products-pagination product-list-pagination md:!hidden mt-10 relative flex justify-center w-full"
               ></div>
             </div>
           </div>
@@ -480,7 +501,7 @@
                 </div>
               </div>
               <div
-                class="swiper-pagination gach-that-products-pagination product-list-pagination md:!hidden mt-4 relative flex justify-center w-full"
+                class="swiper-pagination gach-that-products-pagination product-list-pagination md:!hidden mt-10 relative flex justify-center w-full"
               ></div>
             </div>
           </div>
@@ -653,7 +674,7 @@
                 </div>
               </div>
               <div
-                class="swiper-pagination gach-the-products-pagination product-list-pagination md:!hidden mt-4 relative flex justify-center w-full"
+                class="swiper-pagination gach-the-products-pagination product-list-pagination md:!hidden mt-10 relative flex justify-center w-full"
               ></div>
             </div>
           </div>
@@ -686,7 +707,6 @@
     <!-- GSXD-PARTIAL:BEGIN file=products/gach-co-bat-trang/index.html include=components/footer idx=025 uid=b132b85e -->
 
 {{#push "scripts"}}
-</script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -749,26 +769,44 @@
           ".gach-the-products-pagination",
         );
 
-        // Add CSS for active bullets manually if needed or via Swiper class
-        const style = document.createElement("style");
-        style.innerHTML = `
-            .fabrication-pagination .swiper-pagination-bullet-active,
-            .projects-pagination .swiper-pagination-bullet-active,
-            .product-list-pagination .swiper-pagination-bullet-active {
-                background-color: #c76e00 !important;
-                width: 12px !important;
-                border-radius: 6px !important;
-            }
-
-            .product-list-nav-btn.swiper-button-disabled {
-                opacity: 0.35;
-                cursor: not-allowed;
-            }
-        `;
-        document.head.appendChild(style);
+        // Pagination bullet styles are handled globally in main.css
       });
     </script>
     
     <!-- GSXD-DEBUG:END type=PAGE file=products/gach-co-bat-trang/index.html uid=9cb91761 -->
 {{/push}}
-{{/layouts/main}}
+
+    {{> components/footer hideNewsletter=true}}
+
+    <script type="module" src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    {{{stack "scripts"}}}
+    <script>
+      if (window.AOS) {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100,
+        });
+      }
+
+      if (typeof GLightbox !== "undefined") {
+        document.querySelectorAll(".glightbox").forEach((anchor) => {
+          const image = anchor.querySelector("img");
+          if (image) {
+            anchor.setAttribute("href", image.currentSrc || image.src);
+          }
+        });
+        GLightbox({
+          touchNavigation: true,
+          loop: true,
+          autoplayVideos: true,
+        });
+      }
+    </script>
+  </body>
+</html>
+<!-- GSXD-DEBUG:END type=PAGE file=products/gach-co-bat-trang/index.html -->
+

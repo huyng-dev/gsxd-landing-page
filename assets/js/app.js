@@ -47,7 +47,7 @@ const initProductSectionCarousels = () => {
                     el: paginationElement,
                     clickable: true,
                     renderBullet: (index, className) =>
-                        `<button class="product-section-dot h-2 w-2 rounded-full bg-[#C76E00]/30 mx-[1.5px] ${className}" type="button" aria-label="Slide ${index + 1}" aria-current="false"></button>`,
+                        `<button class="product-section-dot h-2 w-2 rounded-full bg-[#C76E00]/30 mx-[3.5px] ${className}" type="button" aria-label="Slide ${index + 1}" aria-current="false"></button>`,
                 },
                 on: {
                     init() {
@@ -72,7 +72,7 @@ const initProductSectionCarousels = () => {
             dots.forEach((dot, dotIndex) => {
                 const isActive = dotIndex === activeIndex;
                 dot.classList.toggle("bg-secondary", isActive);
-                dot.classList.toggle("bg-[#656663]", !isActive);
+                dot.classList.toggle("bg-[#C76E00]/30", !isActive);
                 dot.setAttribute("aria-current", isActive ? "true" : "false");
             });
         };

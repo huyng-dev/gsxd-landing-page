@@ -54,35 +54,53 @@
   }
 
   /* Hide Swiper's default pagination if not used */
-  .swiper-pagination:not(.product-list-pagination):not(.fabrication-pagination):not(.projects-pagination) {
+  .swiper-pagination:not(.product-list-pagination):not(.fabrication-pagination):not(.projects-pagination):not(.advantage-pagination):not(.art-value-pagination):not(.detail2-pagination):not(.product-main-pagination) {
     display: none !important;
   }
 
-  /* Fix Swiper bullet double-color glitch on mobile:
-     Swiper sets its own background + opacity on bullets which conflicts
-     with Tailwind bg-secondary/30. Override all Swiper defaults here. */
+  /* ── Unified bullet pagination token ────────────────────────────────────
+     All standard Swiper dot paginations share the same sizing:
+     Mobile  : 8px  dot  (w-2 h-2), gap = 7px  (3.5px each side)
+     Desktop : 12px dot  (w-3 h-3), gap = 12px (6px  each side)
+     Active  : same size circle, secondary color #C76E00 (no stretch)
+  ──────────────────────────────────────────────────────────────────────── */
   .fabrication-pagination .swiper-pagination-bullet,
-  .projects-pagination .swiper-pagination-bullet {
+  .projects-pagination .swiper-pagination-bullet,
+  .product-list-pagination .swiper-pagination-bullet,
+  .advantage-pagination .swiper-pagination-bullet,
+  .art-value-pagination .swiper-pagination-bullet,
+  .detail2-pagination .swiper-pagination-bullet,
+  .product-main-pagination .swiper-pagination-bullet {
     background: rgba(199, 110, 0, 0.3) !important;
     opacity: 1 !important;
-    width: 8px !important;
-    height: 8px !important;
+    width: 12px !important;
+    height: 12px !important;
     border-radius: 9999px !important;
-    transition: all 0.3s ease !important;
+    transition: background 0.3s ease !important;
     margin: 0 6px !important;
   }
 
   .fabrication-pagination .swiper-pagination-bullet-active,
-  .projects-pagination .swiper-pagination-bullet-active {
+  .projects-pagination .swiper-pagination-bullet-active,
+  .product-list-pagination .swiper-pagination-bullet-active,
+  .advantage-pagination .swiper-pagination-bullet-active,
+  .art-value-pagination .swiper-pagination-bullet-active,
+  .detail2-pagination .swiper-pagination-bullet-active,
+  .product-main-pagination .swiper-pagination-bullet-active {
     background: #C76E00 !important;
-    width: 12px !important;
-    border-radius: 6px !important;
   }
 
   @media (max-width: 767px) {
     .fabrication-pagination .swiper-pagination-bullet,
-    .projects-pagination .swiper-pagination-bullet {
-      margin: 0 1.5px !important;
+    .projects-pagination .swiper-pagination-bullet,
+    .product-list-pagination .swiper-pagination-bullet,
+    .advantage-pagination .swiper-pagination-bullet,
+    .art-value-pagination .swiper-pagination-bullet,
+    .detail2-pagination .swiper-pagination-bullet,
+    .product-main-pagination .swiper-pagination-bullet {
+      width: 8px !important;
+      height: 8px !important;
+      margin: 0 3.5px !important;
     }
   }
 
@@ -117,17 +135,15 @@
 }
 
 @layer utilities {
-  @media (min-width: 768px) {
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none;
-    }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .scrollbar-hide {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 
   /* Custom scroll indicator for horizontal scroll (JS-created) */

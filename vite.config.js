@@ -47,7 +47,7 @@ function resolveHandlebarsStacks(html) {
 
 // Auto-scan all HTML files
 const htmlFiles = glob.sync("**/*.html", {
-  ignore: ["node_modules/**", "dist/**", "components/**", "**/partials/**"],
+  ignore: ["node_modules/**", "dist/**", "components/**", "**/partials/**", "layouts/**"],
 });
 
 // Create input object for all HTML files
@@ -130,6 +130,41 @@ export default defineConfig({
         return resolveHandlebarsStacks(html);
       },
     },
+    // Cache-busting: cập nhật tên file có hash vào các asset tĩnh hardcode trong HTML
+    // Plugin này lưu lại mapping tên gốc -> tên đã hash sau khi Rollup generate bundle,
+    // sau đó transformIndexHtml thay thế đúng tên mới vào mỗi HTML file.
+    (() => {
+      // Dùng closure để lưu mapping giữa các hook
+      const assetMap = {};
+      return {
+        name: "cache-bust-assets",
+        apply: "build",
+        generateBundle(_options, bundle) {
+          for (const [fileName, chunk] of Object.entries(bundle)) {
+            const originalName = chunk.name || "";
+            if (originalName) {
+              assetMap[originalName] = fileName;
+            }
+          }
+        },
+        transformIndexHtml(html) {
+          let result = html;
+          for (const [original, hashed] of Object.entries(assetMap)) {
+            // Thay thế đường dẫn hardcode trong HTML bằng tên file có hash
+            // Ví dụ: /assets/css/main.css -> /assets/css/main-AbCd1234.css
+            result = result.replaceAll(
+              `/assets/css/${original}.css`,
+              `/${hashed}`
+            );
+            result = result.replaceAll(
+              `/assets/js/${original}.js`,
+              `/${hashed}`
+            );
+          }
+          return result;
+        },
+      };
+    })(),
   ],
   build: {
     // [Đã có] Không nén code
@@ -148,14 +183,14 @@ export default defineConfig({
     rollupOptions: {
       input,
       output: {
-        // [Đã có] Giữ nguyên tên file, không sinh mã hash
-        entryFileNames: "assets/js/[name].js",
-        chunkFileNames: "assets/js/[name].js",
+        // Tên file có hash để bust cache trình duyệt mỗi lần build
+        entryFileNames: "assets/js/[name]-[hash].js",
+        chunkFileNames: "assets/js/[name]-[hash].js",
         assetFileNames: ({ name }) => {
           if (name && name.endsWith(".css")) {
-            return "assets/css/[name][extname]";
+            return "assets/css/[name]-[hash][extname]";
           }
-          return "assets/images/[name][extname]"; // Đổi tên thư mục chung chung thành images (tùy chọn)
+          return "assets/images/[name][extname]";
         },
       },
       // [THÊM MỚI] Bỏ cảnh báo giới hạn dung lượng file vì chúng ta không quan tâm performance

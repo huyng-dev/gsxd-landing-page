@@ -1,5 +1,26 @@
-{{#> layouts/main pageName="products" lang="en" bodyClass="min-h-screen flex flex-col bg-background-secondary" title="Ngói Âm Dương - Thanh Hải Ceramics" hideNewsletter=true}}
-{{#push "styles"}}
+<!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/ngoi-am-duong/index.html -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngói Âm Dương - Thanh Hải Ceramics</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    {{{stack "styles"}}}
+  </head>
+  <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
+    {{> components/header}}
+
+    {{#push "styles"}}
 <style>
       @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
     </style>
@@ -8,7 +29,19 @@
     </style>
 <style>
       .size-options-scroll {
+        overflow-x: auto;
         scroll-behavior: smooth;
+      }
+      .size-options-scroll .size-img {
+        width: 200%;
+      }
+      @media (min-width: 768px) {
+        .size-options-scroll {
+          overflow-x: visible;
+        }
+        .size-options-scroll .size-img {
+          width: 100%;
+        }
       }
     </style>
 {{/push}}
@@ -155,13 +188,13 @@
         </h2>
 
         <!-- Khung bao bọc cuộn ngang để chứa bản đồ/hình ảnh kích thước -->
-        <div class="size-options-scroll mobile-scroll-visible w-full pb-2">
-          <!-- Hình ảnh chi tiết kích thước (hiển thị vượt ngoài width gốc để vuốt ngang) -->
+        <div class="size-options-scroll mobile-scroll-visible w-full pb-2 overflow-x-scroll md:overflow-x-hidden">
+          <!-- Mobile: 200% width + cuộn ngang | Desktop: 100% width bình thường -->
           <img
             src="/assets/images/ngoi-am-duong-size.png"
             alt="Đa dạng kích thước ngói âm dương"
-            class="h-auto object-contain max-w-none"
-            style="width: 200%"
+            class="size-img h-auto object-contain max-w-none w-[200%] md:w-full"
+            onload="window.dispatchEvent(new Event('resize'))"
           />
         </div>
       </section>
@@ -226,8 +259,41 @@
 <!-- GSXD-PARTIAL:BEGIN file=products/ngoi-am-duong/index.html include=components/footer idx=006 uid=20c6afd9 -->
 
 {{#push "scripts"}}
-</script>
 
 <!-- GSXD-DEBUG:END type=PAGE file=products/ngoi-am-duong/index.html uid=2b5ab964 -->
 {{/push}}
-{{/layouts/main}}
+
+    {{> components/footer hideNewsletter=true}}
+
+    <script type="module" src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    {{{stack "scripts"}}}
+    <script>
+      if (window.AOS) {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100,
+        });
+      }
+
+      if (typeof GLightbox !== "undefined") {
+        document.querySelectorAll(".glightbox").forEach((anchor) => {
+          const image = anchor.querySelector("img");
+          if (image) {
+            anchor.setAttribute("href", image.currentSrc || image.src);
+          }
+        });
+        GLightbox({
+          touchNavigation: true,
+          loop: true,
+          autoplayVideos: true,
+        });
+      }
+    </script>
+  </body>
+</html>
+<!-- GSXD-DEBUG:END type=PAGE file=products/ngoi-am-duong/index.html -->
+

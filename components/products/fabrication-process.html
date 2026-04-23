@@ -123,7 +123,7 @@
 
       <!-- Navigation Buttons -->
       <div
-        class="fabrication-prev absolute left-2 md:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
+        class="hidden md:flex fabrication-prev absolute left-2 md:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
       >
         <div class="-rotate-45">
           <svg
@@ -142,7 +142,7 @@
         </div>
       </div>
       <div
-        class="fabrication-next absolute right-2 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
+        class="fabrication-next absolute right-2 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 hidden md:flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
       >
         <div class="-rotate-45">
           <svg
@@ -163,7 +163,7 @@
 
       <!-- Pagination dots -->
       <div
-        class="fabrication-pagination mt-10 md:mt-12 flex justify-center gap-3"
+        class="fabrication-pagination mt-10 md:mt-12 flex justify-center gap-[7px] md:gap-3"
       ></div>
     </div>
   </div>
@@ -197,9 +197,13 @@
     const fabricationSlider = document.querySelector(".fabrication-slider");
     if (fabricationSlider) {
       const fabricationRoot = fabricationSlider.closest(".group") || document;
-      const fabricationNextEl = fabricationRoot.querySelector(".fabrication-next");
-      const fabricationPrevEl = fabricationRoot.querySelector(".fabrication-prev");
-      const fabricationPaginationEl = fabricationRoot.querySelector(".fabrication-pagination");
+      const fabricationNextEl =
+        fabricationRoot.querySelector(".fabrication-next");
+      const fabricationPrevEl =
+        fabricationRoot.querySelector(".fabrication-prev");
+      const fabricationPaginationEl = fabricationRoot.querySelector(
+        ".fabrication-pagination",
+      );
 
       new Swiper(".fabrication-slider", {
         slidesPerView: "auto",
@@ -213,7 +217,7 @@
             return (
               '<span class="' +
               className +
-              ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
+              ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-[3.5px] inline-block"></span>'
             );
           },
         },

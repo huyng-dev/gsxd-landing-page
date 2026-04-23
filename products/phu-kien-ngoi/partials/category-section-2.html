@@ -51,44 +51,44 @@
         <!-- Mobile: 16 items, 4 slides -->
         <div class="lg:hidden" data-product-section>
           {{#productSlides 4
-            "/products/phu-kien-ngoi/ngoi-bo-noc.html|/assets/images/pk-03.jpg|Ngói bò nóc chữ vạn cỡ lớn|MSP: PKN-BN05|975.000 đ/bộ"
-            "/products/phu-kien-ngoi/bo-noc-chu-van.html|/assets/images/pk-04.jpg|Bộ bò nóc men cổ phục dựng|MSP: PKN-BN06|1.050.000 đ/bộ"
-            "/products/phu-kien-ngoi/ngoi-bo-noc.html|/assets/images/ngoi-05.jpg|Phụ kiện đỉnh mái hoa sen|MSP: PKN-DM07|580.000 đ/chiếc"
-            "/products/phu-kien-ngoi/bo-noc-chu-van.html|/assets/images/ngoi-04.jpg|Đầu hồi mái ngói cổ|MSP: PKN-DH08|620.000 đ/chiếc"
-            repeat=4
-          }}
-            <div
-              class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
-              data-product-carousel
+          "/products/phu-kien-ngoi/ngoi-bo-noc.html|/assets/images/pk-03.jpg|Ngói
+          bò nóc chữ vạn cỡ lớn|MSP: PKN-BN05|975.000 đ/bộ"
+          "/products/phu-kien-ngoi/bo-noc-chu-van.html|/assets/images/pk-04.jpg|Bộ
+          bò nóc men cổ phục dựng|MSP: PKN-BN06|1.050.000 đ/bộ"
+          "/products/phu-kien-ngoi/ngoi-bo-noc.html|/assets/images/ngoi-05.jpg|Phụ
+          kiện đỉnh mái hoa sen|MSP: PKN-DM07|580.000 đ/chiếc"
+          "/products/phu-kien-ngoi/bo-noc-chu-van.html|/assets/images/ngoi-04.jpg|Đầu
+          hồi mái ngói cổ|MSP: PKN-DH08|620.000 đ/chiếc" repeat=4 }}
+          <div
+            class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+            data-product-carousel
+          >
+            {{#each slides}}
+            <article
+              class="flex-shrink-0 w-full snap-start pb-1"
+              data-product-slide
             >
-              {{#each slides}}
-                <article
-                  class="flex-shrink-0 w-full snap-start pb-1"
-                  data-product-slide
-                >
-                  <div class="grid grid-cols-2 gap-4">
-                    {{#each this}}
-                      {{> components/products/mobile-product-card
-                        href=href image=image title=title code=code price=price
-                      }}
-                    {{/each}}
-                  </div>
-                </article>
-              {{/each}}
-            </div>
+              <div class="grid grid-cols-2 gap-4">
+                {{#each this}} {{> components/products/mobile-product-card
+                href=href image=image title=title code=code price=price }}
+                {{/each}}
+              </div>
+            </article>
+            {{/each}}
+          </div>
 
-            <div
-              class="mt-3 flex justify-center gap-[3px]"
-              aria-label="Product mobile pagination"
-            >
-              {{#each slides}}
-                <button
-                  class="product-section-dot h-2 w-2 rounded-full {{#if @first}}bg-secondary{{else}}bg-[#656663]{{/if}}"
-                  data-product-dot="{{@index}}"
-                  aria-label="Slide {{@index}}"
-                ></button>
-              {{/each}}
-            </div>
+          <div
+            class="mt-5 flex justify-center gap-[7px]"
+            aria-label="Product mobile pagination"
+          >
+            {{#each slides}}
+            <button
+              class="product-section-dot h-2 w-2 rounded-full {{#if @first}}bg-secondary{{else}}bg-[#C76E00]/30{{/if}}"
+              data-product-dot="{{@index}}"
+              aria-label="Slide {{@index}}"
+            ></button>
+            {{/each}}
+          </div>
           {{/productSlides}}
         </div>
 
@@ -97,33 +97,21 @@
           class="hidden lg:grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10"
         >
           {{> components/products/desktop-product-card
-            href="/products/phu-kien-ngoi/ngoi-bo-noc.html"
-            image="/assets/images/pk-03.jpg"
-            title="Ngói bò nóc chữ vạn cỡ lớn"
-            code="MSP: PKN-BN05"
-            price="Giá: 975.000 đ/bộ"
-          }}
-          {{> components/products/desktop-product-card
-            href="/products/phu-kien-ngoi/bo-noc-chu-van.html"
-            image="/assets/images/pk-04.jpg"
-            title="Bộ bò nóc men cổ phục dựng"
-            code="MSP: PKN-BN06"
-            price="Giá: 1.050.000 đ/bộ"
-          }}
-          {{> components/products/desktop-product-card
-            href="/products/phu-kien-ngoi/ngoi-bo-noc.html"
-            image="/assets/images/ngoi-05.jpg"
-            title="Phụ kiện đỉnh mái hoa sen"
-            code="MSP: PKN-DM07"
-            price="Giá: 580.000 đ/chiếc"
-          }}
-          {{> components/products/desktop-product-card
-            href="/products/phu-kien-ngoi/bo-noc-chu-van.html"
-            image="/assets/images/ngoi-04.jpg"
-            title="Đầu hồi mái ngói cổ"
-            code="MSP: PKN-DH08"
-            price="Giá: 620.000 đ/chiếc"
-          }}
+          href="/products/phu-kien-ngoi/ngoi-bo-noc.html"
+          image="/assets/images/pk-03.jpg" title="Ngói bò nóc chữ vạn cỡ lớn"
+          code="MSP: PKN-BN05" price="Giá: 975.000 đ/bộ" }} {{>
+          components/products/desktop-product-card
+          href="/products/phu-kien-ngoi/bo-noc-chu-van.html"
+          image="/assets/images/pk-04.jpg" title="Bộ bò nóc men cổ phục dựng"
+          code="MSP: PKN-BN06" price="Giá: 1.050.000 đ/bộ" }} {{>
+          components/products/desktop-product-card
+          href="/products/phu-kien-ngoi/ngoi-bo-noc.html"
+          image="/assets/images/ngoi-05.jpg" title="Phụ kiện đỉnh mái hoa sen"
+          code="MSP: PKN-DM07" price="Giá: 580.000 đ/chiếc" }} {{>
+          components/products/desktop-product-card
+          href="/products/phu-kien-ngoi/bo-noc-chu-van.html"
+          image="/assets/images/ngoi-04.jpg" title="Đầu hồi mái ngói cổ"
+          code="MSP: PKN-DH08" price="Giá: 620.000 đ/chiếc" }}
         </div>
 
         <!-- Pagination -->

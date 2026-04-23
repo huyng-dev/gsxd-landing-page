@@ -120,6 +120,7 @@
         </h2>
 
         <div
+          id="linh-vat-positions-scroll"
           class="flex flex-nowrap md:grid md:grid-cols-2 gap-4 md:gap-x-16 lg:gap-x-24 md:gap-y-12 lg:gap-y-16 xl:w-[70%] mx-auto overflow-x-auto lg:overflow-visible snap-x snap-mandatory pb-4 md:pb-0"
           style="scrollbar-width: none"
         >
@@ -232,6 +233,9 @@
             </div>
           </div>
         </div>
+
+        <!-- Pagination dots (mobile only) -->
+        <div id="linh-vat-positions-pagination" class="md:hidden mt-3 flex justify-center gap-[7px]"></div>
       </section>
       {{> components/products/works-simple showNav=true}}
       <div class="hidden md:block">
@@ -263,6 +267,46 @@
             AOS.refresh();
           }, 1500);
         });
+
+        // ── Mobile dots navigation for "CÁC VỊ TRÍ" section ──────────────
+        const positionsScroll = document.getElementById(
+          "linh-vat-positions-scroll"
+        );
+        const positionsPagination = document.getElementById(
+          "linh-vat-positions-pagination"
+        );
+
+        if (positionsScroll && positionsPagination) {
+          const cards = positionsScroll.querySelectorAll(".snap-center");
+          const totalDots = cards.length;
+
+          // Build dots
+          cards.forEach((_, i) => {
+            const dot = document.createElement("span");
+            dot.className =
+              "w-2 h-2 rounded-full transition-all cursor-pointer mx-[3.5px] inline-block " +
+              (i === 0 ? "bg-secondary" : "bg-secondary/30");
+            dot.addEventListener("click", () => {
+              cards[i].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+            });
+            positionsPagination.appendChild(dot);
+          });
+
+          const dots = positionsPagination.querySelectorAll("span");
+
+          const updateDots = () => {
+            const scrollLeft = positionsScroll.scrollLeft;
+            const cardWidth = positionsScroll.offsetWidth;
+            const activeIndex = Math.round(scrollLeft / cardWidth);
+            dots.forEach((d, i) => {
+              d.className =
+                "w-2 h-2 rounded-full transition-all cursor-pointer mx-[3.5px] inline-block " +
+                (i === activeIndex ? "bg-secondary" : "bg-secondary/30");
+            });
+          };
+
+          positionsScroll.addEventListener("scroll", updateDots, { passive: true });
+        }
       });
     </script>
     {{{stack "scripts"}}}

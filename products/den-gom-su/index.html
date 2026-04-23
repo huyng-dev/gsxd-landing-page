@@ -1,5 +1,26 @@
-{{#> layouts/main pageName="products" lang="en" bodyClass="min-h-screen flex flex-col bg-background-secondary" title="Đèn Gốm Sứ - Thanh Hải Ceramics" hideNewsletter=true}}
-{{#push "styles"}}
+<!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/den-gom-su/index.html -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đèn Gốm Sứ - Thanh Hải Ceramics</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    {{{stack "styles"}}}
+  </head>
+  <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
+    {{> components/header}}
+
+    {{#push "styles"}}
 <style>
       @import url("https://fonts.googleapis.com/css2?family=Carattere&family=Charm:wght@400;700&family=Ephesis&family=Italianno&display=swap");
     </style>
@@ -51,7 +72,6 @@
 <!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=components/footer idx=013 uid=da5cac4f -->
 
 {{#push "scripts"}}
-</script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -62,4 +82,38 @@
     
 <!-- GSXD-DEBUG:END type=PAGE file=products/den-gom-su/index.html uid=b8e4c1ed -->
 {{/push}}
-{{/layouts/main}}
+
+    {{> components/footer hideNewsletter=true}}
+
+    <script type="module" src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    {{{stack "scripts"}}}
+    <script>
+      if (window.AOS) {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100,
+        });
+      }
+
+      if (typeof GLightbox !== "undefined") {
+        document.querySelectorAll(".glightbox").forEach((anchor) => {
+          const image = anchor.querySelector("img");
+          if (image) {
+            anchor.setAttribute("href", image.currentSrc || image.src);
+          }
+        });
+        GLightbox({
+          touchNavigation: true,
+          loop: true,
+          autoplayVideos: true,
+        });
+      }
+    </script>
+  </body>
+</html>
+<!-- GSXD-DEBUG:END type=PAGE file=products/den-gom-su/index.html -->
+

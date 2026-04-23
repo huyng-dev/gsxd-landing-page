@@ -36,7 +36,7 @@
 
   <!-- Mobile Dots Pagination -->
   <div class="md:hidden flex justify-center mt-5">
-    <div class="product-main-pagination flex justify-center gap-3"></div>
+    <div class="product-main-pagination flex justify-center gap-[7px]"></div>
   </div>
 
   <!-- Thumbnails (Desktop only) -->
@@ -53,25 +53,7 @@
   </div>
 </div>
 
-{{#push "styles"}}
-<style>
-  /* ── Product Main Swiper: Mobile Dots Pagination ─────────────────────── */
-  .product-main-pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    background: rgba(199, 110, 0, 0.3);
-    opacity: 1;
-    margin: 0 !important;
-    border-radius: 9999px;
-    transition: all 0.3s ease;
-    display: inline-block;
-    flex-shrink: 0;
-  }
-  .product-main-pagination .swiper-pagination-bullet-active {
-    background: #C76E00;
-  }
-</style>
-{{/push}}
+{{!-- Pagination styles are handled globally in main.css --}}
 
 {{#push "scripts"}}
 <script>
