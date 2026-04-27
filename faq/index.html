@@ -1,109 +1,97 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>FAQ - Câu hỏi thường gặp - Thanh Hải Ceramics</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/assets/images/logo.png"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;600;700&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700&display=swap");
-      .font-arima { font-family: 'Arima', cursive; }
-      .font-aref { font-family: 'Aref Ruqaa', serif; }
-    </style>
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    />
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
-    {{{stack "styles"}}}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - Câu hỏi thường gặp - Thanh Hải Ceramics</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700&display=swap");
+
+    .font-arima {
+      font-family: 'Arima', cursive;
+    }
+
+    .font-aref {
+      font-family: 'Aref Ruqaa', serif;
+    }
+  </style>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  {{{stack "styles"}}}
 </head>
-  <body
-    class="min-h-screen flex flex-col bg-background-secondary"
-  >
-    {{> components/header}}
 
-    <main class="flex-grow bg-background-secondary">
-      <!-- FAQ Banner -->
-      <section class="relative w-full h-[300px] md:h-[400px] flex items-end justify-center overflow-hidden pb-8 md:pb-12">
-        <div class="absolute inset-0 z-0">
-          <img
-            src="/assets/images/faq-banner.png"
-            alt="FAQ Banner"
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <!-- Search Bar -->
-        <div class="relative z-10 w-[90%] max-w-[735px]">
-          <div class="relative group">
-            <input
-              type="text"
-              placeholder="Nhập nội dung tìm kiếm..."
-              class="w-full font-extralight h-12 md:h-16 px-6 pl-16 text:base lg:text-lg rounded-full bg-white/20 backdrop-blur-md border-[2px] border-white focus:bg-white/30 focus:outline-none transition-all text-white placeholder:text-white italic shadow-2xl"
-            />
-            <div class="absolute left-5 top-1/2 -translate-y-1/2 text-white">
-              <svg
-                class="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2.5"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                ></path>
-              </svg>
-            </div>
+<body class="min-h-screen flex flex-col bg-background-secondary">
+  {{> components/header}}
+
+  <main class="flex-grow bg-background-secondary">
+    <!-- FAQ Banner -->
+    <section class="relative w-full h-[300px] md:h-[400px] flex items-end justify-center overflow-hidden pb-8 md:pb-12">
+      <div class="absolute inset-0 z-0">
+        <img src="/assets/images/faq-banner.png" alt="FAQ Banner" class="w-full h-full object-cover" />
+      </div>
+      <!-- Search Bar -->
+      <div class="relative z-10 w-[90%] max-w-[735px]">
+        <div class="relative group">
+          <input type="text" placeholder="Nhập nội dung tìm kiếm..."
+            class="w-full font-extralight h-12 md:h-16 px-6 pl-16 text:base lg:text-lg rounded-full bg-white/20 backdrop-blur-md border-[2px] border-white focus:bg-white/30 focus:outline-none transition-all text-white placeholder:text-white italic shadow-2xl" />
+          <div class="absolute left-5 top-1/2 -translate-y-1/2 text-white">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- FAQ Main Content -->
-      <section class="w-[85%] max-w-[1320px] mx-auto pt-12 pb-4 md:py-20 grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-20">
-        
-        <!-- Sidebar -->
-        <div class="lg:col-span-1 lg:sticky lg:top-28 h-fit">
-          <div class="mb-8">
-            <h1 class="text-4xl md:text-5xl font-aref text-primary mb-8 md:mb-12 font-bold">FAQ</h1>
-            <hr class="border-t border-black/10 w-full" />
-          </div>
+    <!-- FAQ Main Content -->
+    <section
+      class="w-[85%] max-w-[1320px] mx-auto pt-12 pb-4 md:py-20 grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-20">
 
-          <nav class="flex flex-col gap-5">
-            <a href="#san-pham" class="text-xs md:text-sm font-medium text-secondary uppercase hover:opacity-80 transition-opacity">Sản phẩm</a>
-            <a href="#gia-ca" class="text-xs md:text-sm font-medium text-primary uppercase hover:text-secondary transition-colors">Báo giá</a>
-            <a href="#van-chuyen" class="text-xs md:text-sm font-medium text-primary uppercase hover:text-secondary transition-colors leading-tight">Vận chuyển & thời gian giao hàng</a>
-            <a href="#bao-tri" class="text-xs md:text-sm font-medium text-primary uppercase hover:text-secondary transition-colors leading-tight">Lắp đặt & bảo trì</a>
-            <a href="#doi-tra" class="text-xs md:text-sm font-medium text-primary uppercase hover:text-secondary transition-colors">Đổi trả</a>
-          </nav>
+      <!-- Sidebar -->
+      <div class="lg:col-span-1 lg:sticky lg:top-28 h-fit">
+        <div class="mb-8">
+          <h1 class="text-4xl md:text-5xl font-aref text-primary mb-8 md:mb-12 font-bold">FAQ</h1>
+          <hr class="border-t border-black/10 w-full" />
         </div>
 
-        <!-- Content Area -->
-        <div class="lg:col-span-3">
-          <!-- Breadcrumb -->
-          <div class="flex items-center gap-2 text-xs md:text-sm text-primary/60 mb-8 font-medium">
-            <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
-            <span>&gt;</span>
-            <span class="text-primary/80">Câu hỏi thường gặp</span>
-          </div>
+        <nav class="flex flex-col gap-5">
+          <a href="#san-pham"
+            class="text-xs md:text-sm font-medium text-secondary uppercase hover:opacity-80 transition-opacity">Sản
+            phẩm</a>
+          <a href="#gia-ca"
+            class="text-xs md:text-sm font-medium text-primary uppercase hover:text-secondary transition-colors">Báo
+            giá</a>
+          <a href="#van-chuyen"
+            class="text-xs md:text-sm font-medium text-primary uppercase hover:text-secondary transition-colors leading-tight">Vận
+            chuyển & thời gian giao hàng</a>
+          <a href="#bao-tri"
+            class="text-xs md:text-sm font-medium text-primary uppercase hover:text-secondary transition-colors leading-tight">Lắp
+            đặt & bảo trì</a>
+          <a href="#doi-tra"
+            class="text-xs md:text-sm font-medium text-primary uppercase hover:text-secondary transition-colors">Đổi
+            trả</a>
+        </nav>
+      </div>
 
-          <!-- Section: Sản phẩm -->
-          <div id="san-pham" class="pt-4 scroll-mt-24">
-            <!-- Section Title -->
-            <div class="flex items-center gap-5 mb-8">
+      <!-- Content Area -->
+      <div class="lg:col-span-3">
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2 text-xs md:text-sm text-primary/60 mb-8 font-medium">
+          <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
+          <span>&gt;</span>
+          <span class="text-primary/80">Câu hỏi thường gặp</span>
+        </div>
+
+        <!-- Section: Sản phẩm -->
+        <div id="san-pham" class="pt-4 scroll-mt-24">
+          <!-- Section Title -->
+          <div class="flex items-center gap-5 mb-8">
             <div class="w-[2px] h-8 bg-secondary"></div>
             <h2 class="text-2xl md:text-[32px] font-semibold text-primary font-arima">Sản phẩm</h2>
           </div>
@@ -112,25 +100,37 @@
           <div class="space-y-4 border-t border-black/5 pt-6">
             <!-- FAQ Item 1 (Active) -->
             <div class="accordion-item border-b border-black/5 pb-6">
-              <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                <span class="text-base md:text-lg font-semibold text-primary group-hover:text-secondary transition-colors font-arima">Gốm sứ xây dựng Thanh Hải có phải là hàng thủ công không?</span>
+              <button
+                class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                <span
+                  class="text-base md:text-lg font-semibold text-primary group-hover:text-secondary transition-colors font-arima">Gốm
+                  sứ xây dựng Thanh Hải có phải là hàng thủ công không?</span>
                 <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path></svg>
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                  </svg>
                 </span>
               </button>
               <div class="accordion-content overflow-hidden transition-all duration-300 mt-4 max-h-[1000px]">
                 <p class="text-sm/7 md:text-base/8 text-primary text-justify">
-                  Đúng vậy. Chúng tôi tự hào duy trì quy trình sản xuất thủ công truyền thống. Từ khâu chọn đất, tạo hình, đến tráng men và nung lò. Mỗi sản phẩm đều mang dấu ấn bàn tay khéo léo của các nghệ nhân. Điều này tạo nên vẻ đẹp độc bản mà các loại gạch ngói công nghiệp sản xuất hàng loạt không thể có được.
+                  Đúng vậy. Chúng tôi tự hào duy trì quy trình sản xuất thủ công truyền thống. Từ khâu chọn đất, tạo
+                  hình, đến tráng men và nung lò. Mỗi sản phẩm đều mang dấu ấn bàn tay khéo léo của các nghệ nhân. Điều
+                  này tạo nên vẻ đẹp độc bản mà các loại gạch ngói công nghiệp sản xuất hàng loạt không thể có được.
                 </p>
               </div>
             </div>
 
             <!-- FAQ Item 2 -->
             <div class="accordion-item border-b border-black/5 py-6">
-              <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                <span class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Tôi có thể mua hàng như thế nào?</span>
+              <button
+                class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                <span
+                  class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Tôi
+                  có thể mua hàng như thế nào?</span>
                 <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                  </svg>
                 </span>
               </button>
               <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
@@ -142,10 +142,15 @@
 
             <!-- FAQ Item 3 -->
             <div class="accordion-item border-b border-black/5 py-6">
-              <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                <span class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Tôi có thể lấy mẫu thử không?</span>
+              <button
+                class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                <span
+                  class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Tôi
+                  có thể lấy mẫu thử không?</span>
                 <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                  </svg>
                 </span>
               </button>
               <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
@@ -157,25 +162,36 @@
 
             <!-- FAQ Item 4 -->
             <div class="accordion-item border-b border-black/5 py-6">
-              <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                <span class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Các sản phẩm của gốm sứ Thanh Hải có bền khi sử dụng ngoài trời hay không?</span>
+              <button
+                class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                <span
+                  class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Các
+                  sản phẩm của gốm sứ Thanh Hải có bền khi sử dụng ngoài trời hay không?</span>
                 <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                  </svg>
                 </span>
               </button>
               <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
                 <p class="text-sm/7 md:text-base/8 text-primary text-justify pt-4">
-                  Tất cả sản phẩm của chúng tôi đều được nung ở nhiệt độ cao, đảm bảo độ bền tuyệt đối khi sử dụng ngoài trời.
+                  Tất cả sản phẩm của chúng tôi đều được nung ở nhiệt độ cao, đảm bảo độ bền tuyệt đối khi sử dụng ngoài
+                  trời.
                 </p>
               </div>
             </div>
 
             <!-- FAQ Item 5 -->
             <div class="accordion-item border-b border-black/5 py-6">
-              <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                <span class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Màu men có bị phai dưới ánh nắng mặt trời không?</span>
+              <button
+                class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                <span
+                  class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Màu
+                  men có bị phai dưới ánh nắng mặt trời không?</span>
                 <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                  </svg>
                 </span>
               </button>
               <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
@@ -188,10 +204,14 @@
             <!-- Section Navigation -->
             <div class="flex justify-end gap-6">
               <button class="text-primary/20 cursor-default">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
               </button>
               <button class="text-primary hover:text-secondary transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
               </button>
             </div>
           </div>
@@ -208,25 +228,37 @@
             <div class="space-y-4 border-t border-black/5 pt-6">
               <!-- Item 1 -->
               <div class="accordion-item border-b border-black/5 pb-6">
-                <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                  <span class="text-base md:text-lg font-semibold text-primary group-hover:text-secondary transition-colors font-arima">Giá sản phẩm được tính như thế nào?</span>
+                <button
+                  class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                  <span
+                    class="text-base md:text-lg font-semibold text-primary group-hover:text-secondary transition-colors font-arima">Giá
+                    sản phẩm được tính như thế nào?</span>
                   <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
                   </span>
                 </button>
                 <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
                   <p class="text-sm/7 md:text-base/8 text-primary text-justify pt-4">
-                    Giá gốm sứ xây dựng thường được tính theo mét vuông (m2), mét dài (md) hoặc theo viên/ cặp đối với các dòng sản phẩm gạch, ngói và tính theo đơn vị đôi/ chiếc đối với các sản phẩm đơn lẻ khác. Giá cả phụ thuộc vào kích thước, loại men, hay độ phức tạp của hình dáng sản phẩm.
+                    Giá gốm sứ xây dựng thường được tính theo mét vuông (m2), mét dài (md) hoặc theo viên/ cặp đối với
+                    các dòng sản phẩm gạch, ngói và tính theo đơn vị đôi/ chiếc đối với các sản phẩm đơn lẻ khác. Giá cả
+                    phụ thuộc vào kích thước, loại men, hay độ phức tạp của hình dáng sản phẩm.
                   </p>
                 </div>
               </div>
 
               <!-- Item 2 -->
               <div class="accordion-item border-b border-black/5 py-6">
-                <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                  <span class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Đặt hàng số lượng lớn có được chiết khấu không?</span>
+                <button
+                  class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                  <span
+                    class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Đặt
+                    hàng số lượng lớn có được chiết khấu không?</span>
                   <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
                   </span>
                 </button>
                 <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
@@ -238,10 +270,15 @@
 
               <!-- Item 3 -->
               <div class="accordion-item border-b border-black/5 py-6">
-                <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                  <span class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Có yêu cầu số lượng đặt hàng tối thiểu không?</span>
+                <button
+                  class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                  <span
+                    class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Có
+                    yêu cầu số lượng đặt hàng tối thiểu không?</span>
                   <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
                   </span>
                 </button>
                 <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
@@ -253,30 +290,42 @@
 
               <!-- Item 4 -->
               <div class="accordion-item border-b border-black/5 py-6">
-                <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                  <span class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Màu sắc có ảnh hưởng đến giá sản phẩm không?</span>
+                <button
+                  class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                  <span
+                    class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Màu
+                    sắc có ảnh hưởng đến giá sản phẩm không?</span>
                   <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
                   </span>
                 </button>
                 <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
                   <p class="text-sm/7 md:text-base/8 text-primary text-justify pt-4">
-                    Một số màu men hỏa biến đặc biệt hoặc các yêu cầu pha chế màu riêng có thể có sự chênh lệch nhẹ về giá.
+                    Một số màu men hỏa biến đặc biệt hoặc các yêu cầu pha chế màu riêng có thể có sự chênh lệch nhẹ về
+                    giá.
                   </p>
                 </div>
               </div>
 
               <!-- Item 5 -->
               <div class="accordion-item border-b border-black/5 py-6">
-                <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                  <span class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Tại sao các kích thước nhỏ lại đắt hơn nhiều so với các kích thước lớn?</span>
+                <button
+                  class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                  <span
+                    class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Tại
+                    sao các kích thước nhỏ lại đắt hơn nhiều so với các kích thước lớn?</span>
                   <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
                   </span>
                 </button>
                 <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
                   <p class="text-sm/7 md:text-base/8 text-primary text-justify pt-4">
-                    Kích thước nhỏ thường đòi hỏi sự tỉ mỉ cao hơn trong khâu tạo hình và hoàn thiện thủ công, công sức bỏ ra cho mỗi cm2 là lớn hơn.
+                    Kích thước nhỏ thường đòi hỏi sự tỉ mỉ cao hơn trong khâu tạo hình và hoàn thiện thủ công, công sức
+                    bỏ ra cho mỗi cm2 là lớn hơn.
                   </p>
                 </div>
               </div>
@@ -285,10 +334,14 @@
             <!-- Section Navigation -->
             <div class="flex justify-end gap-6 mt-4">
               <button class="text-primary/20 hover:text-secondary transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
               </button>
               <button class="text-primary hover:text-secondary transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
               </button>
             </div>
           </div>
@@ -305,17 +358,23 @@
             <div class="space-y-4 border-t border-black/5 pt-6">
               <!-- Item 1 -->
               <div class="accordion-item border-b border-black/5 pb-6">
-                <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                  <span class="text-base md:text-lg font-semibold text-primary group-hover:text-secondary transition-colors font-arima">Thời gian sản xuất và giao hàng là bao lâu?</span>
+                <button
+                  class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                  <span
+                    class="text-base md:text-lg font-semibold text-primary group-hover:text-secondary transition-colors font-arima">Thời
+                    gian sản xuất và giao hàng là bao lâu?</span>
                   <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
                   </span>
                 </button>
                 <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
                   <div class="text-sm/7 md:text-base/8 text-primary text-justify pt-4">
                     <ul class="list-disc pl-7 space-y-2">
                       <li>Đối với hàng có sẵn: Chúng tôi có thể giao hàng trong vòng 2-5 ngày làm việc.</li>
-                      <li>Đối với hàng đặt sản xuất: Thường mất từ 3-6 tuần tùy vào quy mô đơn hàng và điều kiện thời tiết (ảnh hưởng đến quá trình phơi gốm mộc).</li>
+                      <li>Đối với hàng đặt sản xuất: Thường mất từ 3-6 tuần tùy vào quy mô đơn hàng và điều kiện thời
+                        tiết (ảnh hưởng đến quá trình phơi gốm mộc).</li>
                     </ul>
                   </div>
                 </div>
@@ -323,10 +382,15 @@
 
               <!-- Item 2 -->
               <div class="accordion-item border-b border-black/5 py-6">
-                <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                  <span class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Các bạn có giao hàng toàn quốc không?</span>
+                <button
+                  class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                  <span
+                    class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Các
+                    bạn có giao hàng toàn quốc không?</span>
                   <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
                   </span>
                 </button>
                 <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
@@ -338,25 +402,36 @@
 
               <!-- Item 3 -->
               <div class="accordion-item border-b border-black/5 py-6">
-                <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                  <span class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Tôi nên lưu ý gì khi lắp đặt gốm thủ công?</span>
+                <button
+                  class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                  <span
+                    class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Tôi
+                    nên lưu ý gì khi lắp đặt gốm thủ công?</span>
                   <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
                   </span>
                 </button>
                 <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
                   <p class="text-sm/7 md:text-base/8 text-primary text-justify pt-4">
-                    Nên sử dụng thợ có tay nghề và hiểu về đặc tính gốm. Chúng tôi luôn cung cấp tài liệu hướng dẫn lắp đặt đi kèm.
+                    Nên sử dụng thợ có tay nghề và hiểu về đặc tính gốm. Chúng tôi luôn cung cấp tài liệu hướng dẫn lắp
+                    đặt đi kèm.
                   </p>
                 </div>
               </div>
 
               <!-- Item 4 -->
               <div class="accordion-item border-b border-black/5 py-6">
-                <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                  <span class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Các bạn có vận chuyển quốc tế không?</span>
+                <button
+                  class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                  <span
+                    class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Các
+                    bạn có vận chuyển quốc tế không?</span>
                   <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
                   </span>
                 </button>
                 <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
@@ -368,10 +443,15 @@
 
               <!-- Item 5 -->
               <div class="accordion-item border-b border-black/5 py-6">
-                <button class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
-                  <span class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Tôi có thể tự đến lấy hàng trực tiếp không?</span>
+                <button
+                  class="accordion-button w-full flex justify-between items-center text-left gap-4 group focus:outline-none">
+                  <span
+                    class="text-base md:text-lg font-semibold text-primary/80 group-hover:text-secondary transition-colors font-arima">Tôi
+                    có thể tự đến lấy hàng trực tiếp không?</span>
                   <span class="accordion-icon flex-shrink-0 text-secondary transition-transform duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
                   </span>
                 </button>
                 <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
@@ -385,10 +465,14 @@
             <!-- Section Navigation -->
             <div class="flex justify-end gap-6 mt-4">
               <button class="text-primary/20 hover:text-secondary transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
               </button>
               <button class="text-primary hover:text-secondary transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
               </button>
             </div>
           </div>
@@ -397,96 +481,97 @@
           <!-- End of content pagination removed as it was moved into sections -->
         </div>
 
-      </section>
+    </section>
 
-      {{> components/faq/faq-contact}}
-    </main>
+    {{> components/faq/faq-contact}}
+  </main>
 
-    {{> components/footer hideNewsletter=true}}
+  {{> components/footer hideNewsletter=true}}
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        AOS.init({ duration: 800, once: true });
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 800, once: true });
 
-        // Accordion Logic
-        const accordionButtons = document.querySelectorAll('.accordion-button');
-        
-        accordionButtons.forEach(button => {
-          button.addEventListener('click', () => {
-            const item = button.parentElement;
-            const content = item.querySelector('.accordion-content');
-            const icon = item.querySelector('.accordion-icon');
-            const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+      // Accordion Logic
+      const accordionButtons = document.querySelectorAll('.accordion-button');
 
-            if (isOpen) {
-              content.style.maxHeight = '0px';
-              icon.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>';
-            } else {
-              content.style.maxHeight = content.scrollHeight + 'px';
-              icon.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path></svg>';
-            }
-          });
-        });
+      accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const item = button.parentElement;
+          const content = item.querySelector('.accordion-content');
+          const icon = item.querySelector('.accordion-icon');
+          const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
 
-        // Smooth Scroll Logic
-        const navLinks = document.querySelectorAll('nav a[href^="#"]');
-        navLinks.forEach(link => {
-          link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-              window.scrollTo({
-                top: targetElement.offsetTop - 100,
-                behavior: 'smooth'
-              });
-            }
-          });
-        });
-
-        // Highlight Nav on Scroll
-        const sections = document.querySelectorAll('div[id]');
-        
-        const updateActiveNav = (id) => {
-          navLinks.forEach(link => {
-            link.classList.remove('text-secondary');
-            link.classList.add('text-primary');
-            if (link.getAttribute('href') === `#${id}`) {
-              link.classList.add('text-secondary');
-              link.classList.remove('text-primary');
-            }
-          });
-        };
-
-        const handleScrollHighlight = () => {
-          let currentId = 'san-pham';
-          // Find which section is currently active based on scroll position
-          // Using a scanner at 30% of viewport height is often more intuitive
-          const scrollPosition = window.scrollY + (window.innerHeight * 0.3);
-
-          sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (scrollPosition >= sectionTop) {
-              currentId = section.getAttribute('id');
-            }
-          });
-
-          // If we are at the very top of the page (above all sections), force the first one
-          if (window.scrollY < 100) {
-            currentId = 'san-pham';
+          if (isOpen) {
+            content.style.maxHeight = '0px';
+            icon.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>';
+          } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path></svg>';
           }
-
-          updateActiveNav(currentId);
-        };
-
-        window.addEventListener('scroll', handleScrollHighlight);
-        window.addEventListener('load', handleScrollHighlight); // More reliable for layout
-        handleScrollHighlight(); // Immediate call
-        // One more check after a delay to account for any layout shifts (banner ads, lazy images, etc)
-        setTimeout(handleScrollHighlight, 500);
+        });
       });
-    </script>
-    {{{stack "scripts"}}}
+
+      // Smooth Scroll Logic
+      const navLinks = document.querySelectorAll('nav a[href^="#"]');
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Highlight Nav on Scroll
+      const sections = document.querySelectorAll('div[id]');
+
+      const updateActiveNav = (id) => {
+        navLinks.forEach(link => {
+          link.classList.remove('text-secondary');
+          link.classList.add('text-primary');
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('text-secondary');
+            link.classList.remove('text-primary');
+          }
+        });
+      };
+
+      const handleScrollHighlight = () => {
+        let currentId = 'san-pham';
+        // Find which section is currently active based on scroll position
+        // Using a scanner at 30% of viewport height is often more intuitive
+        const scrollPosition = window.scrollY + (window.innerHeight * 0.3);
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          if (scrollPosition >= sectionTop) {
+            currentId = section.getAttribute('id');
+          }
+        });
+
+        // If we are at the very top of the page (above all sections), force the first one
+        if (window.scrollY < 100) {
+          currentId = 'san-pham';
+        }
+
+        updateActiveNav(currentId);
+      };
+
+      window.addEventListener('scroll', handleScrollHighlight);
+      window.addEventListener('load', handleScrollHighlight); // More reliable for layout
+      handleScrollHighlight(); // Immediate call
+      // One more check after a delay to account for any layout shifts (banner ads, lazy images, etc)
+      setTimeout(handleScrollHighlight, 500);
+    });
+  </script>
+  {{{stack "scripts"}}}
 </body>
+
 </html>

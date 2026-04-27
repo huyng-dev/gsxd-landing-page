@@ -1,60 +1,47 @@
 <!doctype html>
 <!-- GSXD-DEBUG:BEGIN type=PAGE file=dich-vu-khach-hang/chinh-sach-van-chuyen.html uid=7cd3f707 -->
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Chính sách vận chuyển - Dịch vụ khách hàng - Thanh Hải Ceramics</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/assets/images/logo.png"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    />
-    {{{stack "styles"}}}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Chính sách vận chuyển - Dịch vụ khách hàng - Thanh Hải Ceramics
+  </title>
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  {{{stack "styles"}}}
 </head>
 
-  <body
-    data-page="customer-service"
-    class="bg-white"
-  >
-<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=components/header idx=001 uid=13796812 -->
-{{> components/header}}
+<body data-page="customer-service" class="bg-white">
+  <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=components/header idx=001 uid=13796812 -->
+  {{> components/header}}
 
-    <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html tag=main idx=001 uid=7526136c -->
+  <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html tag=main idx=001 uid=7526136c -->
 
-    <main class="bg-background-secondary min-h-screen font-archivo text-primary">
-      <div class="w-[85%] max-w-[1320px] mx-auto">
-<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=dich-vu-khach-hang/partials/customer-service/breadcrumb idx=002 uid=a807d7c4 -->
-{{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Chính sách vận chuyển"}}
+  <main class="bg-background-secondary min-h-screen font-archivo text-primary">
+    <div class="w-[85%] max-w-[1320px] mx-auto">
+      <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=dich-vu-khach-hang/partials/customer-service/breadcrumb idx=002 uid=a807d7c4 -->
+      {{> dich-vu-khach-hang/partials/customer-service/breadcrumb
+      currentPage="Chính sách vận chuyển"}}
 
-        <div class="flex flex-col lg:flex-row gap-12 mb-4 lg:mb-8">
-<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=dich-vu-khach-hang/partials/customer-service/sidebar idx=003 uid=bc4554a6 -->
-{{> dich-vu-khach-hang/partials/customer-service/sidebar activeShipping=true}}
-<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=dich-vu-khach-hang/partials/customer-service/shipping-policy-content idx=004 uid=2232dedc -->
-{{> dich-vu-khach-hang/partials/customer-service/shipping-policy-content}}
-        </div>
+      <div class="flex flex-col lg:flex-row gap-12 mb-4 lg:mb-8">
+        <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=dich-vu-khach-hang/partials/customer-service/sidebar idx=003 uid=bc4554a6 -->
+        {{> dich-vu-khach-hang/partials/customer-service/sidebar
+        activeShipping=true}}
+        <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=dich-vu-khach-hang/partials/customer-service/shipping-policy-content idx=004 uid=2232dedc -->
+        {{>
+        dich-vu-khach-hang/partials/customer-service/shipping-policy-content}}
       </div>
-      {{> components/faq/faq-contact}}
-    </main>
-<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=components/footer idx=006 uid=21135a1d -->
-{{> components/footer}}
-    <script
-      type="module"
-      src="/assets/js/app.js"
-    ></script>
-    {{{stack "scripts"}}}
-<!-- GSXD-DEBUG:END type=PAGE file=dich-vu-khach-hang/chinh-sach-van-chuyen.html uid=7cd3f707 -->
+    </div>
+    {{> components/faq/faq-contact}}
+  </main>
+  <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-van-chuyen.html include=components/footer idx=006 uid=21135a1d -->
+  {{> components/footer}}
+  <script type="module" src="/assets/js/app.js"></script>
+  {{{stack "scripts"}}}
+  <!-- GSXD-DEBUG:END type=PAGE file=dich-vu-khach-hang/chinh-sach-van-chuyen.html uid=7cd3f707 -->
 </body>
+
 </html>
-
-
-
-

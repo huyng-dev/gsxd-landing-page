@@ -3,42 +3,44 @@
 <html lang="vi">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trạng thái đơn hàng - Dịch vụ khách hàng - Thanh Hải Ceramics</title>
-  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css">
-{{{stack "styles"}}}
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  {{{stack "styles"}}}
 </head>
 
 <body data-page="customer-service" class="bg-white">
-<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/trang-thai-don-hang.html include=components/header idx=001 uid=ce0c0397 -->
-{{> components/header}}
+  <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/trang-thai-don-hang.html include=components/header idx=001 uid=ce0c0397 -->
+  {{> components/header}}
 
   <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/trang-thai-don-hang.html tag=main idx=001 uid=654316b3 -->
 
   <main class="bg-background-secondary min-h-screen">
     <div class="w-[85%] max-w-[1320px] mx-auto">
-<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/trang-thai-don-hang.html include=dich-vu-khach-hang/partials/customer-service/breadcrumb idx=002 uid=a6f509aa -->
-{{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Trạng thái đơn hàng"}}
+      <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/trang-thai-don-hang.html include=dich-vu-khach-hang/partials/customer-service/breadcrumb idx=002 uid=a6f509aa -->
+      {{> dich-vu-khach-hang/partials/customer-service/breadcrumb
+      currentPage="Trạng thái đơn hàng"}}
 
       <div class="flex flex-col lg:flex-row gap-12 mb-0 lg:mb-12">
         <!-- Sidebar -->
-<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/trang-thai-don-hang.html include=dich-vu-khach-hang/partials/customer-service/sidebar idx=003 uid=92845ecd -->
-{{> dich-vu-khach-hang/partials/customer-service/sidebar activeOrder=true}}
+        <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/trang-thai-don-hang.html include=dich-vu-khach-hang/partials/customer-service/sidebar idx=003 uid=92845ecd -->
+        {{> dich-vu-khach-hang/partials/customer-service/sidebar
+        activeOrder=true}}
 
         <!-- Content Area -->
-<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/trang-thai-don-hang.html include=dich-vu-khach-hang/partials/customer-service/order-status idx=004 uid=3c81d58a -->
-{{> dich-vu-khach-hang/partials/customer-service/order-status}}
+        <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/trang-thai-don-hang.html include=dich-vu-khach-hang/partials/customer-service/order-status idx=004 uid=3c81d58a -->
+        {{> dich-vu-khach-hang/partials/customer-service/order-status}}
       </div>
     </div>
     {{> components/faq/faq-contact}}
   </main>
-<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/trang-thai-don-hang.html include=components/footer idx=006 uid=af0f04e7 -->
-{{> components/footer}}
+  <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/trang-thai-don-hang.html include=components/footer idx=006 uid=af0f04e7 -->
+  {{> components/footer}}
 
   <script type="module" src="/assets/js/app.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -49,11 +51,8 @@
       offset: 100,
     });
   </script>
-{{{stack "scripts"}}}
-<!-- GSXD-DEBUG:END type=PAGE file=dich-vu-khach-hang/trang-thai-don-hang.html uid=e0190339 -->
+  {{{stack "scripts"}}}
+  <!-- GSXD-DEBUG:END type=PAGE file=dich-vu-khach-hang/trang-thai-don-hang.html uid=e0190339 -->
 </body>
 
 </html>
-
-
-

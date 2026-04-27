@@ -1,95 +1,75 @@
 <!doctype html>
 <!-- GSXD-DEBUG:BEGIN type=PAGE file=showroom/index.html uid=4d98e5ed -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Showroom - Thanh Hải Ceramics</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/assets/images/logo.png"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
-    </style>
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
-    {{{stack "styles"}}}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Showroom - Thanh Hải Ceramics</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+  </style>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  {{{stack "styles"}}}
 </head>
-  <body class="min-h-screen flex flex-col bg-primary text-white font-archivo">
-<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=components/header idx=001 uid=5b0f8819 -->
-{{> components/header}}
 
-    <!-- GSXD-ELEMENT:BEGIN file=showroom/index.html tag=main idx=001 uid=b2197621 -->
+<body class="min-h-screen flex flex-col bg-primary text-white font-archivo">
+  <!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=components/header idx=001 uid=5b0f8819 -->
+  {{> components/header}}
 
-    <main class="flex-grow">
-<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/top-banner idx=002 uid=aeef3329 -->
-{{> showroom/partials/top-banner}}
-<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/showroom-main-content idx=003 uid=1d6c2176 -->
-{{> showroom/partials/showroom-main-content}}
-<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/room-display-content idx=004 uid=857829cd -->
-{{> showroom/partials/room-display-content}}
-<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/showroom-map-section idx=005 uid=8d5eca96 -->
-{{> showroom/partials/showroom-map-section}}
-    </main>
-<!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=components/footer idx=006 uid=8a4370e4 -->
-{{> components/footer}}
+  <!-- GSXD-ELEMENT:BEGIN file=showroom/index.html tag=main idx=001 uid=b2197621 -->
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script
-      type="module"
-      src="/assets/js/app.js"
-    ></script>
+  <main class="flex-grow">
+    <!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/top-banner idx=002 uid=aeef3329 -->
+    {{> showroom/partials/top-banner}}
+    <!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/showroom-main-content idx=003 uid=1d6c2176 -->
+    {{> showroom/partials/showroom-main-content}}
+    <!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/room-display-content idx=004 uid=857829cd -->
+    {{> showroom/partials/room-display-content}}
+    <!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=showroom/partials/showroom-map-section idx=005 uid=8d5eca96 -->
+    {{> showroom/partials/showroom-map-section}}
+  </main>
+  <!-- GSXD-PARTIAL:BEGIN file=showroom/index.html include=components/footer idx=006 uid=8a4370e4 -->
+  {{> components/footer}}
 
-    <!-- Swiper Initialization -->
-    <script>
-      if (window.AOS) {
-        AOS.init({ once: true, duration: 800, offset: 50 });
-      }
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="module" src="/assets/js/app.js"></script>
 
-      if (window.Swiper) {
-        new Swiper(".showroomSwiper", {
-          slidesPerView: "auto",
-          spaceBetween: 24,
-          loop: false,
-          navigation: {
-            nextEl: ".showroom-next",
-            prevEl: ".showroom-prev",
-          },
-        });
+  <!-- Swiper Initialization -->
+  <script>
+    if (window.AOS) {
+      AOS.init({ once: true, duration: 800, offset: 50 });
+    }
 
-        new Swiper(".showroomSwiper2", {
-          slidesPerView: "auto",
-          spaceBetween: 24,
-          loop: false,
-          initialSlide: 1,
-          rtl: true,
-        });
-      }
-    </script>
-    {{{stack "scripts"}}}
-<!-- GSXD-DEBUG:END type=PAGE file=showroom/index.html uid=4d98e5ed -->
+    if (window.Swiper) {
+      new Swiper(".showroomSwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 24,
+        loop: false,
+        navigation: {
+          nextEl: ".showroom-next",
+          prevEl: ".showroom-prev",
+        },
+      });
+
+      new Swiper(".showroomSwiper2", {
+        slidesPerView: "auto",
+        spaceBetween: 24,
+        loop: false,
+        initialSlide: 1,
+        rtl: true,
+      });
+    }
+  </script>
+  {{{stack "scripts"}}}
+  <!-- GSXD-DEBUG:END type=PAGE file=showroom/index.html uid=4d98e5ed -->
 </body>
+
 </html>
-
-
-
-

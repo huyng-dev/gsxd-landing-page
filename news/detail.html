@@ -1,62 +1,43 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-        />
-        <title>Chi tiết tin tức - Thanh Hải Ceramics</title>
-        <link
-            rel="icon"
-            type="image/svg+xml"
-            href="/assets/images/logo.png"
-        />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link
-            rel="stylesheet"
-            href="/assets/css/main.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-        />
-        <link
-            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-            rel="stylesheet"
-        />
-        {{{stack "styles"}}}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết tin tức - Thanh Hải Ceramics</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    {{{stack "styles"}}}
 </head>
-    <body
-        data-page="news-detail"
-        class="min-h-screen flex flex-col bg-background-secondary"
-    >
-        {{> components/header}}
 
-        <main class="flex-grow pb-14 lg:pb-20">
-            {{> news/partials/detail-hero}}
-            {{> news/partials/detail-content}}
-            {{> news/partials/catalog-section}}
-            {{> news/partials/author-section}}
-            {{> news/partials/detail-related}}
-            {{> components/products/faq2}}
-        </main>
+<body data-page="news-detail" class="min-h-screen flex flex-col bg-background-secondary">
+    {{> components/header}}
 
-        {{> components/footer hideNewsletter=true}}
+    <main class="flex-grow pb-14 lg:pb-20">
+        {{> news/partials/detail-hero}}
+        {{> news/partials/detail-content}}
+        {{> news/partials/catalog-section}}
+        {{> news/partials/author-section}}
+        {{> news/partials/detail-related}}
+        {{> components/products/faq2}}
+    </main>
 
-        <script
-            type="module"
-            src="/assets/js/app.js"
-        ></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 800,
-                once: true,
-                offset: 100,
-            });
-        </script>
-        {{{stack "scripts"}}}
+    {{> components/footer hideNewsletter=true}}
+
+    <script type="module" src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+    </script>
+    {{{stack "scripts"}}}
 </body>
+
 </html>

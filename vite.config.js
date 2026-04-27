@@ -47,7 +47,13 @@ function resolveHandlebarsStacks(html) {
 
 // Auto-scan all HTML files
 const htmlFiles = glob.sync("**/*.html", {
-  ignore: ["node_modules/**", "dist/**", "components/**", "**/partials/**", "layouts/**"],
+  ignore: [
+    "node_modules/**",
+    "dist/**",
+    "components/**",
+    "**/partials/**",
+    "layouts/**",
+  ],
 });
 
 // Create input object for all HTML files
@@ -154,11 +160,11 @@ export default defineConfig({
             // Ví dụ: /assets/css/main.css -> /assets/css/main-AbCd1234.css
             result = result.replaceAll(
               `/assets/css/${original}.css`,
-              `/${hashed}`
+              `/${hashed}`,
             );
             result = result.replaceAll(
               `/assets/js/${original}.js`,
-              `/${hashed}`
+              `/${hashed}`,
             );
           }
           return result;
