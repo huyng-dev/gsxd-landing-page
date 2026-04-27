@@ -1,119 +1,62 @@
-<!doctype html>
-<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/den-gom-su/index.html -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đèn Gốm Sứ - Thanh Hải Ceramics</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
-    </style>
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    {{{stack "styles"}}}
-  </head>
-  <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
-    {{> components/header}}
+{{#> layouts/main
+title="Đèn Gốm Sứ"
+dataPage="products"
+mainClass="bg-background-secondary overflow-hidden"
+hideNewsletter=true
+}}
 
-    {{#push "styles"}}
+{{#push "styles"}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 <style>
-      @import url("https://fonts.googleapis.com/css2?family=Carattere&family=Charm:wght@400;700&family=Ephesis&family=Italianno&display=swap");
-    </style>
+  @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Carattere&family=Charm:wght@400;700&family=Ephesis&display=swap");
+</style>
 {{/push}}
 
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=components/header idx=001 uid=64b80681 -->
- {{>components/catalog-button}}
+{{> components/catalog-button}}
 
-    <!-- GSXD-ELEMENT:BEGIN file=products/den-gom-su/index.html tag=main idx=001 uid=18b021ab -->
+{{> products/den-gom-su/partials/banner}}
+{{> products/den-gom-su/partials/filter-section}}
 
-    <main class="flex-grow">
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=products/den-gom-su/partials/banner idx=002 uid=427ea269 -->
-{{>products/den-gom-su/partials/banner}}
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=products/den-gom-su/partials/filter-section idx=003 uid=abab7cbd -->
-{{>products/den-gom-su/partials/filter-section}}
+<!-- Danh mục Đèn Gốm -->
+{{> products/den-gom-su/partials/category-den-gom}}
+{{> components/products/product-grid}}
 
-      <!-- Danh mục Đèn Gốm -->
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=products/den-gom-su/partials/category-den-gom idx=004 uid=6713e593 -->
-{{>products/den-gom-su/partials/category-den-gom}}
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=components/products/product-grid idx=005 uid=683e4255 -->
-{{>components/products/product-grid}}
+<!-- Danh mục Đèn Sứ -->
+{{> products/den-gom-su/partials/category-den-su}}
+{{> components/products/product-grid}}
 
-      <!-- Danh mục Đèn Sứ -->
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=products/den-gom-su/partials/category-den-su idx=006 uid=363f828a -->
-{{>products/den-gom-su/partials/category-den-su}}
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=components/products/product-grid idx=007 uid=097e15ec -->
-{{>components/products/product-grid}}
+<!-- Các phần khác -->
+{{> products/den-gom-su/partials/advantages-section}}
+{{> components/products/fabrication-process}}
+{{> components/products/journey-video hideTitle=true}}
+{{> components/products/recommendations}}
 
-      <!-- Các phần khác -->
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=products/den-gom-su/partials/advantages-section idx=008 uid=121010ac -->
-{{>products/den-gom-su/partials/advantages-section}}
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=components/products/fabrication-process idx=009 uid=6e999a37 -->
-{{>components/products/fabrication-process}}
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=components/products/journey-video idx=010 uid=4b0e876e -->
-{{>components/products/journey-video hideTitle=true}}
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=components/products/recommendations idx=011 uid=8ffd4434 -->
-{{>components/products/recommendations}}
-
-      <!-- FAQ Section -->
-<!-- GSXD-SECTION:BEGIN file=products/den-gom-su/index.html tag=section idx=001 uid=29afce34 -->
-<section
-        class="w-full relative pb-[70px] md:pb-32 bg-background-secondary overflow-visible"
-        data-aos="fade-up"
-      >
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=components/products/faq-content idx=012 uid=a8ab9d1a -->
-{{>components/products/faq-content}}
-      </section>
-    </main>
-<!-- GSXD-PARTIAL:BEGIN file=products/den-gom-su/index.html include=components/footer idx=013 uid=da5cac4f -->
+<!-- FAQ Section -->
+<section class="w-full relative pb-[70px] md:pb-32 bg-background-secondary overflow-visible" data-aos="fade-up">
+  {{> components/products/faq-content}}
+</section>
 
 {{#push "scripts"}}
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Initialize AOS
-        AOS.init({ duration: 800, once: true, offset: 100 });
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof GLightbox !== "undefined") {
+      document.querySelectorAll(".glightbox").forEach((anchor) => {
+        const image = anchor.querySelector("img");
+        if (image) {
+          anchor.setAttribute("href", image.currentSrc || image.src);
+        }
       });
-    </script>
-    
-<!-- GSXD-DEBUG:END type=PAGE file=products/den-gom-su/index.html uid=b8e4c1ed -->
+      GLightbox({
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true,
+      });
+    }
+  });
+</script>
 {{/push}}
 
-    {{> components/footer hideNewsletter=true}}
-
-    <script type="module" src="/assets/js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    {{{stack "scripts"}}}
-    <script>
-      if (window.AOS) {
-        AOS.init({
-          duration: 800,
-          once: true,
-          offset: 100,
-        });
-      }
-
-      if (typeof GLightbox !== "undefined") {
-        document.querySelectorAll(".glightbox").forEach((anchor) => {
-          const image = anchor.querySelector("img");
-          if (image) {
-            anchor.setAttribute("href", image.currentSrc || image.src);
-          }
-        });
-        GLightbox({
-          touchNavigation: true,
-          loop: true,
-          autoplayVideos: true,
-        });
-      }
-    </script>
-  </body>
-</html>
-<!-- GSXD-DEBUG:END type=PAGE file=products/den-gom-su/index.html -->
-
+{{/layouts/main}}

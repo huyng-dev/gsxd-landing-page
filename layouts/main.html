@@ -1,0 +1,59 @@
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=layouts/main.html -->
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title & Meta -->
+    <title>{{#if title}}{{title}} - Thanh Hải Ceramics{{else}}Thanh Hải Ceramics - Ngói và Gạch Hoa Truyền Thống{{/if}}
+    </title>
+    {{#if description}}
+    <meta name="description" content="{{description}}" />
+    {{/if}}
+
+    <!-- Global CSS & Fonts -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <!-- Style riêng của từng page -->
+    {{{stack "styles"}}}
+</head>
+
+<!-- Body hoàn toàn TĨNH, không nhận bất kỳ biến nào -->
+
+<body class="min-h-screen flex flex-col font-archivo text-primary">
+
+    {{> components/header}}
+
+    <!-- Main Content: Đón toàn bộ biến động (data-page, class nền, v.v...) -->
+    <main {{#if dataPage}}data-page="{{dataPage}}" {{/if}}
+        class="flex-grow {{#if mainClass}}{{mainClass}}{{else}}bg-white{{/if}}">
+        {{> @partial-block}}
+    </main>
+
+    {{> components/footer hideNewsletter=hideNewsletter}}
+
+    <!-- Global JS -->
+    <script type="module" src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Init Global -->
+    <script>
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, once: true, offset: 100 });
+        }
+    </script>
+
+    <!-- Script riêng của từng page -->
+    {{{stack "scripts"}}}
+
+</body>
+
+</html>
+<!-- GSXD-DEBUG:END type=LAYOUT file=layouts/main.html -->

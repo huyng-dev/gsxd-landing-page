@@ -1,41 +1,14 @@
-<!doctype html>
-<html lang="en">
+{{#> layouts/main
+title="Tin tức"
+dataPage="news"
+mainClass="bg-neutral-2 pb-14 lg:pb-20"
+hideNewsletter=true
+}}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tin tức - Thanh Hải Ceramics</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    {{{stack "styles"}}}
-</head>
+<!-- Nội dung chính của trang Tin tức -->
+{{> news/partials/hero}}
+{{> news/partials/main-content}}
+{{> news/partials/history-related}}
+{{> components/products/faq2}}
 
-<body data-page="news" class="min-h-screen flex flex-col bg-neutral-2">
-    {{> components/header}}
-
-    <main class="flex-grow pb-14 lg:pb-20">
-        {{> news/partials/hero}}
-        {{> news/partials/main-content}}
-        {{> news/partials/history-related}}
-        {{> components/products/faq2}}
-    </main>
-
-    {{> components/footer hideNewsletter=true}}
-
-    <script type="module" src="/assets/js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100,
-        });
-    </script>
-    {{{stack "scripts"}}}
-</body>
-
-</html>
+{{/layouts/main}}

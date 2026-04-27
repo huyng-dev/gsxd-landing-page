@@ -1,816 +1,547 @@
-<!doctype html>
-<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/phu-kien-ngoi/index.html -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phụ Kiện Ngói - Thanh Hải Ceramics</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
-    </style>
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    {{{stack "styles"}}}
-  </head>
-  <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary page-phu-kien-ngoi">
-    {{> components/header}}
+{{#> layouts/main
+title="Phụ Kiện Ngói"
+dataPage="products"
+mainClass="bg-background-secondary overflow-hidden page-phu-kien-ngoi"
+}}
 
-    {{#push "styles"}}
+{{#push "styles"}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 <style>
-      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
 
-      .glightbox-container .gslide-image {
-        min-width: 30vw !important;
-        max-width: 95vw !important;
-      }
-      .glightbox-container .gslide-image img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: 90vh !important;
-        object-fit: contain !important;
-      }
-    </style>
-<style>
-      @media (max-width: 767.98px) {
-        .page-phu-kien-ngoi main > section:first-of-type h1 {
-          color: #fff;
-          font-size: 26px;
-          font-family: "Segoe UI", sans-serif;
-          font-weight: 700;
-          text-transform: uppercase;
-          line-height: 39px;
-          overflow-wrap: break-word;
-        }
+  .glightbox-container .gslide-image {
+    min-width: 30vw !important;
+    max-width: 95vw !important;
+  }
 
-        .page-phu-kien-ngoi main > section:first-of-type p {
-          color: rgba(255, 255, 255, 0.95);
-          font-size: 20px;
-          font-family: "Italianno", cursive;
-          font-weight: 400;
-          line-height: 20px;
-          letter-spacing: 0.5px;
-          overflow-wrap: break-word;
-        }
+  .glightbox-container .gslide-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 90vh !important;
+    object-fit: contain !important;
+  }
 
-        .page-phu-kien-ngoi main > section:nth-of-type(2) h2,
-        .page-phu-kien-ngoi main > section:nth-of-type(5) h2 {
-          color: #c47526;
-          font-size: 20px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 600;
-          text-transform: uppercase;
-          line-height: 32px;
-          overflow-wrap: break-word;
-        }
+  /* Mobile specific styles */
+  @media (max-width: 767.98px) {
+    .page-phu-kien-ngoi main>section:first-of-type h1 {
+      color: #fff;
+      font-size: 26px;
+      font-family: "Segoe UI", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 39px;
+      overflow-wrap: break-word;
+    }
 
-        .page-phu-kien-ngoi main > section:nth-of-type(2) .absolute > span,
-        .page-phu-kien-ngoi main > section:nth-of-type(3) .absolute > span {
-          color: #fff;
-          font-size: 24px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 700;
-          text-transform: uppercase;
-          line-height: 36px;
-          letter-spacing: 1.2px;
-          overflow-wrap: break-word;
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-        }
+    .page-phu-kien-ngoi main>section:first-of-type p {
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 20px;
+      font-family: "Italianno", cursive;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+      overflow-wrap: break-word;
+    }
 
-        .page-phu-kien-ngoi .product-overlay span {
-          color: #fff;
-          font-size: 14px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 400;
-          text-transform: uppercase;
-          line-height: 21px;
-          letter-spacing: 1px;
-          overflow-wrap: break-word;
-        }
+    .page-phu-kien-ngoi main>section:nth-of-type(2) h2,
+    .page-phu-kien-ngoi main>section:nth-of-type(5) h2 {
+      color: #c47526;
+      font-size: 20px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 32px;
+      overflow-wrap: break-word;
+    }
 
-        .page-phu-kien-ngoi main > section:nth-of-type(2) .product-card + h3,
-        .page-phu-kien-ngoi main > section:nth-of-type(3) .product-card + h3 {
-          color: #000;
-          font-size: 14px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 600;
-          line-height: 20px;
-          overflow-wrap: break-word;
-          text-transform: lowercase;
-        }
+    .page-phu-kien-ngoi main>section:nth-of-type(2) .absolute>span,
+    .page-phu-kien-ngoi main>section:nth-of-type(3) .absolute>span {
+      color: #fff;
+      font-size: 24px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 36px;
+      letter-spacing: 1.2px;
+      overflow-wrap: break-word;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    }
 
-        .page-phu-kien-ngoi
-          main
-          > section:nth-of-type(2)
-          .product-card
-          + h3::first-letter,
-        .page-phu-kien-ngoi
-          main
-          > section:nth-of-type(3)
-          .product-card
-          + h3::first-letter {
-          text-transform: uppercase;
-        }
+    .page-phu-kien-ngoi .product-overlay span {
+      color: #fff;
+      font-size: 14px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      line-height: 21px;
+      letter-spacing: 1px;
+      overflow-wrap: break-word;
+    }
 
-        .page-phu-kien-ngoi
-          main
-          > section:nth-of-type(2)
-          .product-card
-          + h3
-          + p,
-        .page-phu-kien-ngoi
-          main
-          > section:nth-of-type(3)
-          .product-card
-          + h3
-          + p {
-          color: #6b7280;
-          font-size: 12px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 400;
-          line-height: 19.5px;
-          overflow-wrap: break-word;
-        }
+    .page-phu-kien-ngoi main>section:nth-of-type(2) .product-card+h3,
+    .page-phu-kien-ngoi main>section:nth-of-type(3) .product-card+h3 {
+      color: #000;
+      font-size: 14px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 600;
+      line-height: 20px;
+      overflow-wrap: break-word;
+      text-transform: lowercase;
+    }
 
-        .page-phu-kien-ngoi
-          main
-          > section:nth-of-type(2)
-          .product-card
-          + h3
-          + p
-          + p,
-        .page-phu-kien-ngoi
-          main
-          > section:nth-of-type(3)
-          .product-card
-          + h3
-          + p
-          + p {
-          color: #c47526;
-          font-size: 13px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 700;
-          line-height: 19.5px;
-          overflow-wrap: break-word;
-        }
+    .page-phu-kien-ngoi main>section:nth-of-type(2) .product-card+h3::first-letter,
+    .page-phu-kien-ngoi main>section:nth-of-type(3) .product-card+h3::first-letter {
+      text-transform: uppercase;
+    }
 
-        .page-phu-kien-ngoi main > section:nth-of-type(4) .product-card + h3 {
-          color: #000;
-          font-size: 14px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 600;
-          line-height: 20px;
-          overflow-wrap: break-word;
-          text-transform: lowercase;
-        }
+    .page-phu-kien-ngoi main>section:nth-of-type(2) .product-card+h3+p,
+    .page-phu-kien-ngoi main>section:nth-of-type(3) .product-card+h3+p {
+      color: #6b7280;
+      font-size: 12px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 400;
+      line-height: 19.5px;
+      overflow-wrap: break-word;
+    }
 
-        .page-phu-kien-ngoi
-          main
-          > section:nth-of-type(4)
-          .product-card
-          + h3::first-letter {
-          text-transform: uppercase;
-        }
+    .page-phu-kien-ngoi main>section:nth-of-type(2) .product-card+h3+p+p,
+    .page-phu-kien-ngoi main>section:nth-of-type(3) .product-card+h3+p+p {
+      color: #c47526;
+      font-size: 13px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      line-height: 19.5px;
+      overflow-wrap: break-word;
+    }
 
-        .page-phu-kien-ngoi
-          main
-          > section:nth-of-type(4)
-          .product-card
-          + h3
-          + p {
-          color: #6b7280;
-          font-size: 12px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 400;
-          line-height: 20px;
-          overflow-wrap: break-word;
-        }
+    .page-phu-kien-ngoi main>section:nth-of-type(4) .product-card+h3 {
+      color: #000;
+      font-size: 14px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 600;
+      line-height: 20px;
+      overflow-wrap: break-word;
+      text-transform: lowercase;
+    }
 
-        .page-phu-kien-ngoi
-          main
-          > section:nth-of-type(4)
-          .product-card
-          + h3
-          + p
-          + p {
-          color: #c76e00;
-          font-size: 14px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 700;
-          line-height: 20px;
-          overflow-wrap: break-word;
-        }
+    .page-phu-kien-ngoi main>section:nth-of-type(4) .product-card+h3::first-letter {
+      text-transform: uppercase;
+    }
 
-        .page-phu-kien-ngoi [data-faq-component] h2 {
-          color: #c76e00;
-          font-size: 24px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 600;
-          text-transform: uppercase;
-          line-height: 36px;
-          overflow-wrap: break-word;
-        }
+    .page-phu-kien-ngoi main>section:nth-of-type(4) .product-card+h3+p {
+      color: #6b7280;
+      font-size: 12px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+      overflow-wrap: break-word;
+    }
 
-        .page-phu-kien-ngoi
-          [data-faq-component]
-          .faq-button
-          > span:first-child {
-          color: #2e2f2a;
-          font-size: 14px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 700;
-          line-height: 21px;
-          overflow-wrap: break-word;
-        }
+    .page-phu-kien-ngoi main>section:nth-of-type(4) .product-card+h3+p+p {
+      color: #c76e00;
+      font-size: 14px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      line-height: 20px;
+      overflow-wrap: break-word;
+    }
 
-        .page-phu-kien-ngoi [data-faq-component] .faq-content {
-          color: #4b5563;
-          font-size: 14px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 400;
-          line-height: 22.75px;
-          overflow-wrap: break-word;
-        }
+    .page-phu-kien-ngoi [data-faq-component] h2 {
+      color: #c76e00;
+      font-size: 24px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 36px;
+      overflow-wrap: break-word;
+    }
 
-        .page-phu-kien-ngoi [data-faq-component] .faq-content .font-bold {
-          color: #2e2f2a;
-          font-size: 14px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 700;
-          line-height: 22.75px;
-        }
+    .page-phu-kien-ngoi [data-faq-component] .faq-button>span:first-child {
+      color: #2e2f2a;
+      font-size: 14px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      line-height: 21px;
+      overflow-wrap: break-word;
+    }
 
-        .page-phu-kien-ngoi [data-faq-component] .faq-content a {
-          color: #2e2f2a;
-          font-size: 14px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 700;
-          line-height: 22.75px;
-          overflow-wrap: break-word;
-        }
+    .page-phu-kien-ngoi [data-faq-component] .faq-content {
+      color: #4b5563;
+      font-size: 14px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 400;
+      line-height: 22.75px;
+      overflow-wrap: break-word;
+    }
 
-        .page-phu-kien-ngoi [data-faq-component] .mt-8 a {
-          color: #2e2f2a;
-          font-size: 14px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 700;
-          line-height: 21px;
-          overflow-wrap: break-word;
-        }
+    .page-phu-kien-ngoi [data-faq-component] .faq-content .font-bold {
+      color: #2e2f2a;
+      font-size: 14px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      line-height: 22.75px;
+    }
 
-        .page-phu-kien-ngoi footer > div:first-of-type h2 {
-          color: #efe4de;
-          font-size: 28px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 600;
-          line-height: 35px;
-          overflow-wrap: break-word;
-        }
+    .page-phu-kien-ngoi [data-faq-component] .faq-content a {
+      color: #2e2f2a;
+      font-size: 14px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      line-height: 22.75px;
+      overflow-wrap: break-word;
+    }
 
-        .page-phu-kien-ngoi footer > div:first-of-type input::placeholder {
-          color: #9ca3af;
-          font-size: 14px;
-          font-family: "Archivo", sans-serif;
-          font-weight: 300;
-          overflow-wrap: break-word;
-        }
-      }
-    </style>
+    .page-phu-kien-ngoi [data-faq-component] .mt-8 a {
+      color: #2e2f2a;
+      font-size: 14px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 700;
+      line-height: 21px;
+      overflow-wrap: break-word;
+    }
+
+    .page-phu-kien-ngoi footer>div:first-of-type h2 {
+      color: #efe4de;
+      font-size: 28px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 600;
+      line-height: 35px;
+      overflow-wrap: break-word;
+    }
+
+    .page-phu-kien-ngoi footer>div:first-of-type input::placeholder {
+      color: #9ca3af;
+      font-size: 14px;
+      font-family: "Archivo", sans-serif;
+      font-weight: 300;
+      overflow-wrap: break-word;
+    }
+  }
+</style>
 {{/push}}
 
-    <!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/index.html include=components/header idx=001 uid=30e4e90a -->
-     {{> components/catalog-button}}
 
-    <!-- GSXD-ELEMENT:BEGIN file=products/phu-kien-ngoi/index.html tag=main idx=001 uid=a13734f0 -->
+{{> components/catalog-button}}
 
-    <main class="flex-grow bg-background-secondary overflow-hidden">
-      <!-- Banner Section -->
-      <!-- GSXD-SECTION:BEGIN file=products/phu-kien-ngoi/index.html tag=section idx=001 uid=1ba2c33c -->
-      <section class="relative w-full">
+<!-- Banner Section -->
+<section class="relative w-full">
+  <div
+    class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]">
+    <img src="/assets/images/pk-banner.png" alt="Phụ Kiện Ngói" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 flex flex-col items-center pt-[5%] md:pt-[5%] lg:pt-[5%]" data-aos="fade-up"
+      data-aos-delay="100">
+      <div class="text-center text-white px-4 w-[85%] max-w-[1320px] mx-auto">
+        <h1 class="font-sans text-[26px] md:text-4xl lg:text-[44px] font-bold uppercase mb-2 md:mb-6 drop-shadow-md">
+          PHỤ KIỆN NGÓI
+        </h1>
+        <p
+          class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95">
+          Nâng niu nét chạm trổ, sắt son cùng thời gian
+        </p>
+        <p
+          class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95">
+          Phụ kiện Thanh Hải: Điểm nhấn tâm linh, hoàn thiện dáng hình
+          kiến trúc Việt
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{> products/phu-kien-ngoi/partials/category-section-1}}
+{{> products/phu-kien-ngoi/partials/category-section-2}}
+
+<!-- Danh Mục Sản Phẩm Section 3 -->
+<section class="relative mx-auto pb-10 lg:pb-16 overflow-visible">
+  <!-- Background Decorations -->
+  <img src="/assets/images/pk-decorate-left.svg" alt=""
+    class="absolute top-10 lg:-top-[11%] left-0 w-[60%] max-w-[400px] lg:max-w-[620px] opacity-70 z-0 pointer-events-none"
+    data-aos="fade-right" data-aos-duration="1000" />
+  <img src="/assets/images/pk-decorate-right.svg" alt=""
+    class="absolute bottom-[-5%] lg:bottom-[-18%] right-0 w-[70%] max-w-[500px] lg:max-w-[780px] opacity-70 z-0 pointer-events-none"
+    data-aos="fade-left" data-aos-duration="1000" />
+
+  <!-- Main Container -->
+  <div class="relative w-[85%] max-w-[1320px] mx-auto z-10">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 gap-y-4 lg:gap-y-6" data-aos="fade-up">
+      <!-- Product 1 -->
+      <div class="flex flex-col col-span-2 lg:col-start-2 lg:col-span-3 group cursor-pointer"
+        onclick="window.location.href ='/products/phu-kien-ngoi/bo-noc-chu-van.html'">
         <div
-          class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]"
-        >
-          <img
-            src="/assets/images/pk-banner.png"
-            alt="Phụ Kiện Ngói"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="absolute inset-0 flex flex-col items-center pt-[5%] md:pt-[5%] lg:pt-[5%]"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div
-              class="text-center text-white px-4 w-[85%] max-w-[1320px] mx-auto"
-            >
-              <h1
-                class="font-sans text-[26px] md:text-4xl lg:text-[44px] font-bold uppercase mb-2 md:mb-6 drop-shadow-md"
-              >
-                PHỤ KIỆN NGÓI
-              </h1>
-              <p
-                class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95"
-              >
-                Nâng niu nét chạm trổ, sắt son cùng thời gian
-              </p>
-              <p
-                class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95"
-              >
-                Phụ kiện Thanh Hải: Điểm nhấn tâm linh, hoàn thiện dáng hình
-                kiến trúc Việt
-              </p>
-            </div>
+          class="product-card relative w-full aspect-[2/1] lg:aspect-[2.8/1] shadow mb-4 lg:mb-6 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+          <img src="/assets/images/pk-01.jpg" alt="Riềm Âm Dương Sen Bầu" class="w-full h-full object-cover" />
+          <div class="product-overlay">
+            <img src="/assets/images/eye.svg" alt="Search" />
+            <span>Xem chi tiết</span>
           </div>
         </div>
-      </section>
-      <!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/index.html include=products/phu-kien-ngoi/partials/category-section-1 idx=002 uid=8fc68c40 -->
-      {{> products/phu-kien-ngoi/partials/category-section-1}} {{>
-      products/phu-kien-ngoi/partials/category-section-2}}
+        <h3
+          class="font-bold text-[#212121] text-[15px] lg:text-[18px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">
+          Riềm Âm Dương Sen Bầu
+        </h3>
+        <p class="text-gray-500 text-[13px] lg:text-[14px] mb-1">
+          MSP: 1234RDS
+        </p>
+        <p class="font-bold text-[#C47526] text-[14px] lg:text-[15px]">
+          Giá: 675.000 đ/m2
+        </p>
+      </div>
 
-      <!-- Danh Mục Sản Phẩm Section 3 -->
-      <!-- GSXD-SECTION:BEGIN file=products/phu-kien-ngoi/index.html tag=section idx=002 uid=0b57b1e8 -->
-      <section class="relative mx-auto pb-10 lg:pb-16 overflow-visible">
-        <!-- Background Decorations -->
-        <img
-          src="/assets/images/pk-decorate-left.svg"
-          alt=""
-          class="absolute top-10 lg:-top-[11%] left-0 w-[60%] max-w-[400px] lg:max-w-[620px] opacity-70 z-0 pointer-events-none"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        />
-        <img
-          src="/assets/images/pk-decorate-right.svg"
-          alt=""
-          class="absolute bottom-[-5%] lg:bottom-[-18%] right-0 w-[70%] max-w-[500px] lg:max-w-[780px] opacity-70 z-0 pointer-events-none"
-          data-aos="fade-left"
-          data-aos-duration="1000"
-        />
-
-        <!-- Main Container -->
-        <div class="relative w-[85%] max-w-[1320px] mx-auto z-10">
-          <div
-            class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 gap-y-4 lg:gap-y-6"
-            data-aos="fade-up"
-          >
-            <!-- Product 1 -->
-            <div
-              class="flex flex-col col-span-2 lg:col-start-2 lg:col-span-3 group cursor-pointer"
-              onclick="
-                window.location.href =
-                  '/products/phu-kien-ngoi/bo-noc-chu-van.html'
-              "
-            >
-              <div
-                class="product-card relative w-full aspect-[2/1] lg:aspect-[2.8/1] shadow mb-4 lg:mb-6 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-              >
-                <img
-                  src="/assets/images/pk-01.jpg"
-                  alt="Riềm Âm Dương Sen Bầu"
-                  class="w-full h-full object-cover"
-                />
-                <div class="product-overlay">
-                  <img src="/assets/images/eye.svg" alt="Search" />
-                  <span>Xem chi tiết</span>
-                </div>
-              </div>
-              <h3
-                class="font-bold text-[#212121] text-[15px] lg:text-[18px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-              >
-                Riềm Âm Dương Sen Bầu
-              </h3>
-              <p class="text-gray-500 text-[13px] lg:text-[14px] mb-1">
-                MSP: 1234RDS
-              </p>
-              <p class="font-bold text-[#C47526] text-[14px] lg:text-[15px]">
-                Giá: 675.000 đ/m2
-              </p>
-            </div>
-
-            <!-- Product 2 -->
-            <div
-              class="flex flex-col col-span-2 lg:col-span-2 group cursor-pointer"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              onclick="
-                window.location.href =
-                  '/products/phu-kien-ngoi/bo-noc-chu-van.html'
-              "
-            >
-              <div
-                class="product-card relative w-full aspect-[2/1] md:aspect-[19/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-              >
-                <img
-                  src="/assets/images/pk-02.jpg"
-                  alt="Riềm Âm Dương Sen Bầu"
-                  class="w-full h-full object-cover"
-                />
-                <div class="product-overlay">
-                  <img src="/assets/images/eye.svg" alt="Search" />
-                  <span>Xem chi tiết</span>
-                </div>
-              </div>
-              <h3
-                class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-              >
-                Riềm Âm Dương Sen Bầu
-              </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                MSP: 1234RDS
-              </p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                Giá: 675.000 đ/m2
-              </p>
-            </div>
-            <!-- Product 3 -->
-            <div
-              class="flex flex-col group cursor-pointer"
-              data-aos="fade-up"
-              data-aos-delay="200"
-              onclick="
-                window.location.href =
-                  '/products/phu-kien-ngoi/bo-noc-chu-van.html'
-              "
-            >
-              <div
-                class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-              >
-                <img
-                  src="/assets/images/pk-03.jpg"
-                  alt="Riềm Âm Dương Sen Bầu"
-                  class="w-full h-full object-cover"
-                />
-                <div class="product-overlay">
-                  <img src="/assets/images/eye.svg" alt="Search" />
-                  <span>Xem chi tiết</span>
-                </div>
-              </div>
-              <h3
-                class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-              >
-                Riềm Âm Dương Sen Bầu
-              </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                MSP: 1234RDS
-              </p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                Giá: 675.000 đ/m2
-              </p>
-            </div>
-            <!-- Product 4 -->
-            <div
-              class="flex flex-col group cursor-pointer"
-              data-aos="fade-up"
-              data-aos-delay="300"
-              onclick="
-                window.location.href =
-                  '/products/phu-kien-ngoi/ngoi-bo-noc.html'
-              "
-            >
-              <div
-                class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-              >
-                <img
-                  src="/assets/images/pk-04.jpg"
-                  alt="Riềm Âm Dương Sen Bầu"
-                  class="w-full h-full object-cover"
-                />
-                <div class="product-overlay">
-                  <img src="/assets/images/eye.svg" alt="Search" />
-                  <span>Xem chi tiết</span>
-                </div>
-              </div>
-              <h3
-                class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-              >
-                Riềm Âm Dương Sen Bầu
-              </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                MSP: 1234RDS
-              </p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                Giá: 675.000 đ/m2
-              </p>
-            </div>
-            <!-- Product 5 -->
-            <div
-              class="flex flex-col group cursor-pointer"
-              data-aos="fade-up"
-              data-aos-delay="400"
-              onclick="
-                window.location.href =
-                  '/products/phu-kien-ngoi/ngoi-bo-noc.html'
-              "
-            >
-              <div
-                class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-              >
-                <img
-                  src="/assets/images/pk-05.jpg"
-                  alt="Riềm Âm Dương Sen Bầu"
-                  class="w-full h-full object-cover"
-                />
-                <div class="product-overlay">
-                  <img src="/assets/images/eye.svg" alt="Search" />
-                  <span>Xem chi tiết</span>
-                </div>
-              </div>
-              <h3
-                class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-              >
-                Riềm Âm Dương Sen Bầu
-              </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                MSP: 1234RDS
-              </p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                Giá: 675.000 đ/m2
-              </p>
-            </div>
-            <!-- Product 6 -->
-            <div
-              class="flex flex-col group cursor-pointer"
-              data-aos="fade-up"
-              data-aos-delay="500"
-              onclick="
-                window.location.href =
-                  '/products/phu-kien-ngoi/ngoi-bo-noc.html'
-              "
-            >
-              <div
-                class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-              >
-                <img
-                  src="/assets/images/pk-06.jpg"
-                  alt="Riềm Âm Dương Sen Bầu"
-                  class="w-full h-full object-cover"
-                />
-                <div class="product-overlay">
-                  <img src="/assets/images/eye.svg" alt="Search" />
-                  <span>Xem chi tiết</span>
-                </div>
-              </div>
-              <h3
-                class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-              >
-                Riềm Âm Dương Sen Bầu
-              </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                MSP: 1234RDS
-              </p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                Giá: 675.000 đ/m2
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Dấu Ấn Công Trình Section -->
-      <!-- GSXD-SECTION:BEGIN file=products/phu-kien-ngoi/index.html tag=section idx=003 uid=9d43590d -->
-      <section class="relative w-full pb-10 lg:pb-16 overflow-hidden">
-        <div class="relative z-10 w-[85%] max-w-[1320px] mx-auto mt-1">
-          <!-- Title -->
-          <div class="text-center mb-8 lg:mb-16" data-aos="fade-up">
-            <h2
-              class="text-[20px] lg:text-3xl font-semibold text-[#C47526] uppercase"
-            >
-              Dấu Ấn Trên Những Công Trình
-            </h2>
-          </div>
-
-          <!-- Grid Container for Images (6 place folders) -->
-          <div class="flex flex-col gap-2 md:gap-4">
-            <!-- Top Row -->
-            <div
-              class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-end"
-            >
-              <!-- Image 1 -->
-              <div class="col-span-1" data-aos="fade-up" data-aos-delay="0">
-                <a
-                  href="/assets/images/pk-07.jpg"
-                  class="glightbox w-full aspect-[1.1/1] shadow overflow-hidden relative group block"
-                >
-                  <img
-                    src="/assets/images/pk-07.jpg"
-                    alt=""
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </a>
-              </div>
-              <!-- Brown Block 1 -->
-              <div class="col-span-1" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-full aspect-[8/10] bg-[#BD724F] shadow"></div>
-              </div>
-              <!-- Image 2 (Wide) -->
-              <div
-                class="col-span-2 hidden md:block"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <a
-                  href="/assets/images/pk-08.jpg"
-                  class="glightbox w-full aspect-[11/5] shadow overflow-hidden relative group block"
-                >
-                  <img
-                    src="/assets/images/pk-08.jpg"
-                    alt=""
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <!-- Image 2 (Wide) - Mobile -->
-            <div
-              class="grid grid-cols-1 md:hidden gap-2 md:gap-4"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="col-span-1">
-                <a
-                  href="/assets/images/pk-08.jpg"
-                  class="glightbox w-full aspect-[22/10] shadow overflow-hidden relative group block"
-                >
-                  <img
-                    src="/assets/images/pk-08.jpg"
-                    alt=""
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <!-- Bottom Row -->
-            <div
-              class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-start"
-            >
-              <!-- Image 3 -->
-              <div
-                class="col-span-1 row-span-2 md:row-span-1 h-full"
-                data-aos="fade-up"
-                data-aos-delay="0"
-              >
-                <a
-                  href="/assets/images/pk-03.jpg"
-                  class="glightbox w-full h-full md:aspect-[8/10] shadow overflow-hidden relative group block"
-                >
-                  <img
-                    src="/assets/images/pk-03.jpg"
-                    alt=""
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </a>
-              </div>
-              <!-- Image 4 + Brown Block 2 -->
-              <div class="contents md:flex md:flex-col md:gap-4">
-                <a
-                  href="/assets/images/gach-hoa-02.jpg"
-                  class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <img
-                    src="/assets/images/gach-hoa-02.png"
-                    alt=""
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </a>
-                <div
-                  class="w-full aspect-[19/10] bg-[#BD724F] shadow"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                ></div>
-              </div>
-              <!-- Image 5 -->
-              <div class="col-span-1" data-aos="fade-up" data-aos-delay="200">
-                <a
-                  href="/assets/images/dao-kim.jpg"
-                  class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block"
-                >
-                  <img
-                    src="/assets/images/dao-kim.png"
-                    alt=""
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </a>
-              </div>
-              <!-- Image 6 -->
-              <div class="col-span-1" data-aos="fade-up" data-aos-delay="300">
-                <a
-                  href="/assets/images/pk-04.jpg"
-                  class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block"
-                >
-                  <img
-                    src="/assets/images/pk-04.jpg"
-                    alt=""
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <div class="mt-4 md:mt-6 flex justify-end items-center" data-aos="fade-up">
-              <a
-                href="/projects/"
-                class="font-archivo text-sm md:text-base font-bold uppercase tracking-[0.08em] text-secondary transition-opacity duration-300 hover:opacity-70 inline-flex items-center gap-2"
-              >
-                Xem thêm
-                <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.707 2.29292C10.5184 2.11076 10.2658 2.00997 10.0036 2.01224C9.7414 2.01452 9.49059 2.11969 9.30518 2.3051C9.11977 2.49051 9.0146 2.74132 9.01233 3.00352C9.01005 3.26571 9.11084 3.51832 9.293 3.70692L12.586 6.99992H1C0.734784 6.99992 0.48043 7.10528 0.292893 7.29281C0.105357 7.48035 0 7.7347 0 7.99992C0 8.26514 0.105357 8.51949 0.292893 8.70703C0.48043 8.89456 0.734784 8.99992 1 8.99992H12.586L9.293 12.2929C9.19749 12.3852 9.12131 12.4955 9.0689 12.6175C9.01649 12.7395 8.9889 12.8707 8.98775 13.0035C8.9866 13.1363 9.0119 13.268 9.06218 13.3909C9.11246 13.5138 9.18671 13.6254 9.28061 13.7193C9.3745 13.8132 9.48615 13.8875 9.60905 13.9377C9.73194 13.988 9.86362 14.0133 9.9964 14.0122C10.1292 14.011 10.2604 13.9834 10.3824 13.931C10.5044 13.8786 10.6148 13.8024 10.707 13.7069L15.707 8.70692C15.8945 8.51939 15.9998 8.26508 15.9998 7.99992C15.9998 7.73475 15.8945 7.48045 15.707 7.29292L10.707 2.29292Z" fill="currentColor"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ Section -->
-      <!-- GSXD-SECTION:BEGIN file=products/phu-kien-ngoi/index.html tag=section idx=004 uid=6a2a4780 -->
-      <section
-        class="w-full relative pb-[70px] md:pb-32 bg-background-secondary overflow-visible"
-        data-aos="fade-up"
-      >
-        <!-- Background Decoration -->
+      <!-- Product 2 -->
+      <div class="flex flex-col col-span-2 lg:col-span-2 group cursor-pointer" data-aos="fade-up" data-aos-delay="100"
+        onclick="window.location.href ='/products/phu-kien-ngoi/bo-noc-chu-van.html'">
         <div
-          class="absolute z-[2] lg:-top-[23%] lg:left-[11.5%] -left-[10%] w-[120%] lg:w-[77%] pointer-events-none"
-          data-aos="fade-up-right"
-        >
-          <img
-            src="/assets/images/pk-decorate.svg"
-            alt=""
-            class="w-full origin-center md:opacity-80 opacity-60 drop-shadow-sm"
-          />
+          class="product-card relative w-full aspect-[2/1] md:aspect-[19/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+          <img src="/assets/images/pk-02.jpg" alt="Riềm Âm Dương Sen Bầu" class="w-full h-full object-cover" />
+          <div class="product-overlay">
+            <img src="/assets/images/eye.svg" alt="Search" />
+            <span>Xem chi tiết</span>
+          </div>
         </div>
-        <!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/index.html include=components/products/faq-content idx=003 uid=2440ea45 -->
-        {{> components/products/faq-content}}
-      </section>
-    </main>
-    <!-- GSXD-PARTIAL:BEGIN file=products/phu-kien-ngoi/index.html include=components/footer idx=004 uid=0972ea43 -->
+        <h3
+          class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">
+          Riềm Âm Dương Sen Bầu
+        </h3>
+        <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+          MSP: 1234RDS
+        </p>
+        <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+          Giá: 675.000 đ/m2
+        </p>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="flex flex-col group cursor-pointer" data-aos="fade-up" data-aos-delay="200"
+        onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'">
+        <div
+          class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+          <img src="/assets/images/pk-03.jpg" alt="Riềm Âm Dương Sen Bầu" class="w-full h-full object-cover" />
+          <div class="product-overlay">
+            <img src="/assets/images/eye.svg" alt="Search" />
+            <span>Xem chi tiết</span>
+          </div>
+        </div>
+        <h3
+          class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">
+          Riềm Âm Dương Sen Bầu
+        </h3>
+        <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+          MSP: 1234RDS
+        </p>
+        <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+          Giá: 675.000 đ/m2
+        </p>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="flex flex-col group cursor-pointer" data-aos="fade-up" data-aos-delay="300"
+        onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'">
+        <div
+          class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+          <img src="/assets/images/pk-04.jpg" alt="Riềm Âm Dương Sen Bầu" class="w-full h-full object-cover" />
+          <div class="product-overlay">
+            <img src="/assets/images/eye.svg" alt="Search" />
+            <span>Xem chi tiết</span>
+          </div>
+        </div>
+        <h3
+          class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">
+          Riềm Âm Dương Sen Bầu
+        </h3>
+        <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+          MSP: 1234RDS
+        </p>
+        <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+          Giá: 675.000 đ/m2
+        </p>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="flex flex-col group cursor-pointer" data-aos="fade-up" data-aos-delay="400"
+        onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'">
+        <div
+          class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+          <img src="/assets/images/pk-05.jpg" alt="Riềm Âm Dương Sen Bầu" class="w-full h-full object-cover" />
+          <div class="product-overlay">
+            <img src="/assets/images/eye.svg" alt="Search" />
+            <span>Xem chi tiết</span>
+          </div>
+        </div>
+        <h3
+          class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">
+          Riềm Âm Dương Sen Bầu
+        </h3>
+        <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+          MSP: 1234RDS
+        </p>
+        <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+          Giá: 675.000 đ/m2
+        </p>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="flex flex-col group cursor-pointer" data-aos="fade-up" data-aos-delay="500"
+        onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'">
+        <div
+          class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+          <img src="/assets/images/pk-06.jpg" alt="Riềm Âm Dương Sen Bầu" class="w-full h-full object-cover" />
+          <div class="product-overlay">
+            <img src="/assets/images/eye.svg" alt="Search" />
+            <span>Xem chi tiết</span>
+          </div>
+        </div>
+        <h3
+          class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">
+          Riềm Âm Dương Sen Bầu
+        </h3>
+        <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+          MSP: 1234RDS
+        </p>
+        <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+          Giá: 675.000 đ/m2
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dấu Ấn Công Trình Section -->
+<section class="relative w-full pb-10 lg:pb-16 overflow-hidden">
+  <div class="relative z-10 w-[85%] max-w-[1320px] mx-auto mt-1">
+    <!-- Title -->
+    <div class="text-center mb-8 lg:mb-16" data-aos="fade-up">
+      <h2 class="text-[20px] lg:text-3xl font-semibold text-[#C47526] uppercase">
+        Dấu Ấn Trên Những Công Trình
+      </h2>
+    </div>
+
+    <!-- Grid Container for Images (6 place folders) -->
+    <div class="flex flex-col gap-2 md:gap-4">
+      <!-- Top Row -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-end">
+        <!-- Image 1 -->
+        <div class="col-span-1" data-aos="fade-up" data-aos-delay="0">
+          <a href="/assets/images/pk-07.jpg"
+            class="glightbox w-full aspect-[1.1/1] shadow overflow-hidden relative group block">
+            <img src="/assets/images/pk-07.jpg" alt=""
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </a>
+        </div>
+        <!-- Brown Block 1 -->
+        <div class="col-span-1" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-full aspect-[8/10] bg-[#BD724F] shadow"></div>
+        </div>
+        <!-- Image 2 (Wide) -->
+        <div class="col-span-2 hidden md:block" data-aos="fade-up" data-aos-delay="200">
+          <a href="/assets/images/pk-08.jpg"
+            class="glightbox w-full aspect-[11/5] shadow overflow-hidden relative group block">
+            <img src="/assets/images/pk-08.jpg" alt=""
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Image 2 (Wide) - Mobile -->
+      <div class="grid grid-cols-1 md:hidden gap-2 md:gap-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-span-1">
+          <a href="/assets/images/pk-08.jpg"
+            class="glightbox w-full aspect-[22/10] shadow overflow-hidden relative group block">
+            <img src="/assets/images/pk-08.jpg" alt=""
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 items-start">
+        <!-- Image 3 -->
+        <div class="col-span-1 row-span-2 md:row-span-1 h-full" data-aos="fade-up" data-aos-delay="0">
+          <a href="/assets/images/pk-03.jpg"
+            class="glightbox w-full h-full md:aspect-[8/10] shadow overflow-hidden relative group block">
+            <img src="/assets/images/pk-03.jpg" alt=""
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </a>
+        </div>
+        <!-- Image 4 + Brown Block 2 -->
+        <div class="contents md:flex md:flex-col md:gap-4">
+          <a href="/assets/images/gach-hoa-02.jpg"
+            class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block" data-aos="fade-up"
+            data-aos-delay="100">
+            <img src="/assets/images/gach-hoa-02.png" alt=""
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </a>
+          <div class="w-full aspect-[19/10] bg-[#BD724F] shadow" data-aos="fade-up" data-aos-delay="200"></div>
+        </div>
+        <!-- Image 5 -->
+        <div class="col-span-1" data-aos="fade-up" data-aos-delay="200">
+          <a href="/assets/images/dao-kim.jpg"
+            class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block">
+            <img src="/assets/images/dao-kim.png" alt=""
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </a>
+        </div>
+        <!-- Image 6 -->
+        <div class="col-span-1" data-aos="fade-up" data-aos-delay="300">
+          <a href="/assets/images/pk-04.jpg"
+            class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block">
+            <img src="/assets/images/pk-04.jpg" alt=""
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-4 md:mt-6 flex justify-end items-center" data-aos="fade-up">
+        <a href="/projects/"
+          class="font-archivo text-sm md:text-base font-bold uppercase tracking-[0.08em] text-secondary transition-opacity duration-300 hover:opacity-70 inline-flex items-center gap-2">
+          Xem thêm
+          <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.707 2.29292C10.5184 2.11076 10.2658 2.00997 10.0036 2.01224C9.7414 2.01452 9.49059 2.11969 9.30518 2.3051C9.11977 2.49051 9.0146 2.74132 9.01233 3.00352C9.01005 3.26571 9.11084 3.51832 9.293 3.70692L12.586 6.99992H1C0.734784 6.99992 0.48043 7.10528 0.292893 7.29281C0.105357 7.48035 0 7.7347 0 7.99992C0 8.26514 0.105357 8.51949 0.292893 8.70703C0.48043 8.89456 0.734784 8.99992 1 8.99992H12.586L9.293 12.2929C9.19749 12.3852 9.12131 12.4955 9.0689 12.6175C9.01649 12.7395 8.9889 12.8707 8.98775 13.0035C8.9866 13.1363 9.0119 13.268 9.06218 13.3909C9.11246 13.5138 9.18671 13.6254 9.28061 13.7193C9.3745 13.8132 9.48615 13.8875 9.60905 13.9377C9.73194 13.988 9.86362 14.0133 9.9964 14.0122C10.1292 14.011 10.2604 13.9834 10.3824 13.931C10.5044 13.8786 10.6148 13.8024 10.707 13.7069L15.707 8.70692C15.8945 8.51939 15.9998 8.26508 15.9998 7.99992C15.9998 7.73475 15.8945 7.48045 15.707 7.29292L10.707 2.29292Z"
+              fill="currentColor" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="w-full relative pb-[70px] md:pb-32 bg-background-secondary overflow-visible" data-aos="fade-up">
+  <!-- Background Decoration -->
+  <div class="absolute z-[2] lg:-top-[23%] lg:left-[11.5%] -left-[10%] w-[120%] lg:w-[77%] pointer-events-none"
+    data-aos="fade-up-right">
+    <img src="/assets/images/pk-decorate.svg" alt=""
+      class="w-full origin-center md:opacity-80 opacity-60 drop-shadow-sm" />
+  </div>
+  {{> components/products/faq-content}}
+</section>
+
 
 {{#push "scripts"}}
-    
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script>
-      AOS.init({ duration: 800, once: true, offset: 100 });
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  if (typeof GLightbox !== "undefined") {
+    // Ensure lightbox links use resolved build paths instead of /src/assets URLs.
+    document.querySelectorAll(".glightbox").forEach((anchor) => {
+      const image = anchor.querySelector("img");
+      if (image) {
+        anchor.setAttribute("href", image.currentSrc || image.src);
+      }
+    });
 
-      // Ensure lightbox links use resolved build paths instead of /src/assets URLs.
-      document.querySelectorAll(".glightbox").forEach((anchor) => {
-        const image = anchor.querySelector("img");
-        if (image) {
-          anchor.setAttribute("href", image.currentSrc || image.src);
-        }
-      });
-
-      // Initialize GLightbox
-      const lightbox = GLightbox({
-        selector: ".glightbox",
-        touchNavigation: true,
-        loop: true,
-        zoomable: true,
-        draggable: true,
-        width: "auto",
-        height: "auto",
-      });
-    </script>
-    
-    <!-- GSXD-DEBUG:END type=PAGE file=products/phu-kien-ngoi/index.html uid=bd02ff09 -->
+    GLightbox({
+      selector: ".glightbox",
+      touchNavigation: true,
+      loop: true,
+      zoomable: true,
+      draggable: true,
+      width: "auto",
+      height: "auto",
+      autoplayVideos: true,
+    });
+  }
+</script>
 {{/push}}
 
-    {{> components/footer hideNewsletter=true}}
-
-    <script type="module" src="/assets/js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    {{{stack "scripts"}}}
-    <script>
-      if (window.AOS) {
-        AOS.init({
-          duration: 800,
-          once: true,
-          offset: 100,
-        });
-      }
-
-      if (typeof GLightbox !== "undefined") {
-        document.querySelectorAll(".glightbox").forEach((anchor) => {
-          const image = anchor.querySelector("img");
-          if (image) {
-            anchor.setAttribute("href", image.currentSrc || image.src);
-          }
-        });
-        GLightbox({
-          touchNavigation: true,
-          loop: true,
-          autoplayVideos: true,
-        });
-      }
-    </script>
-  </body>
-</html>
-<!-- GSXD-DEBUG:END type=PAGE file=products/phu-kien-ngoi/index.html -->
-
+{{/layouts/main}}

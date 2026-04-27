@@ -1,86 +1,62 @@
-<!doctype html>
 <!-- GSXD-DEBUG:BEGIN type=PAGE file=about/index.html uid=fc50e048 -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Về chúng tôi - Thanh Hải Ceramics</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
-    />
-    <style>
-      #catalog-sticky-btn {
-        top: 170px !important;
+{{#> layouts/main 
+    title="Về chúng tôi" 
+    dataPage="about"
+    mainClass="about-content"
+}}
+  {{#push "styles"}}
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+  />
+  <style>
+    #catalog-sticky-btn {
+      top: 170px !important;
+    }
+
+    .about-content p {
+      line-height: 1.75;
+    }
+
+    .tab-craft-copy p {
+      color: #2e2f2a;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: 0.48px;
+    }
+  </style>
+  {{/push}}
+
+  {{> components/catalog-button}}
+
+  <!-- GSXD-ELEMENT:BEGIN file=about/index.html tag=main idx=001 uid=024652b5 -->
+  <!-- GSXD-PARTIAL:BEGIN file=about/index.html include=about/partials/banner idx=002 uid=9ddeaf33 -->
+  {{> about/partials/banner}}
+  <!-- GSXD-PARTIAL:BEGIN file=about/index.html include=about/partials/tabs idx=003 uid=4362372a -->
+  {{> about/partials/tabs}}
+  <!-- GSXD-PARTIAL:BEGIN file=about/index.html include=components/newsletter idx=004 uid=newsletter_about -->
+  {{> components/newsletter}}
+
+  {{#push "scripts"}}
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    // Keep lightbox links in sync with actual rendered image URLs (works with Vite asset hashing).
+    document.querySelectorAll(".glightbox").forEach((anchor) => {
+      const image = anchor.querySelector("img");
+      if (image) {
+        anchor.setAttribute("href", image.currentSrc || image.src);
       }
+    });
 
-      .about-content p {
-        line-height: 1.75;
-      }
-
-      .tab-craft-copy p {
-        color: #2e2f2a;
-        font-family: "Roboto", sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 28px;
-        letter-spacing: 0.48px;
-      }
-    </style>
-    {{{stack "styles"}}}
-  </head>
-  <body data-page="about" class="min-h-screen flex flex-col bg-neutral-1">
-    <!-- GSXD-PARTIAL:BEGIN file=about/index.html include=components/header idx=001 uid=96069786 -->
-    {{> components/header}} {{> components/catalog-button}}
-
-    <!-- GSXD-ELEMENT:BEGIN file=about/index.html tag=main idx=001 uid=024652b5 -->
-
-    <main class="flex-grow about-content">
-      <!-- GSXD-PARTIAL:BEGIN file=about/index.html include=about/partials/banner idx=002 uid=9ddeaf33 -->
-      {{> about/partials/banner}}
-      <!-- GSXD-PARTIAL:BEGIN file=about/index.html include=about/partials/tabs idx=003 uid=4362372a -->
-      {{> about/partials/tabs}}
-      <!-- GSXD-PARTIAL:BEGIN file=about/index.html include=components/newsletter idx=004 uid=newsletter_about -->
-      {{> components/newsletter}}
-    </main>
-    <!-- GSXD-PARTIAL:BEGIN file=about/index.html include=components/footer idx=005 uid=f6d0833c -->
-    {{> components/footer}}
-
-    <script type="module" src="/assets/js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    {{{stack "scripts"}}}
-    <script>
-      AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100,
-      });
-
-      // Keep lightbox links in sync with actual rendered image URLs (works with Vite asset hashing).
-      document.querySelectorAll(".glightbox").forEach((anchor) => {
-        const image = anchor.querySelector("img");
-        if (image) {
-          anchor.setAttribute("href", image.currentSrc || image.src);
-        }
-      });
-
-      const lightbox = GLightbox({
-        touchNavigation: true,
-        loop: true,
-        autoplayVideos: true,
-      });
-    </script>
-    <!-- GSXD-DEBUG:END type=PAGE file=about/index.html uid=fc50e048 -->
-  </body>
-</html>
+    const lightbox = GLightbox({
+      touchNavigation: true,
+      loop: true,
+      autoplayVideos: true,
+    });
+  </script>
+  {{/push}}
+{{/layouts/main}}
+<!-- GSXD-DEBUG:END type=PAGE file=about/index.html uid=fc50e048 -->

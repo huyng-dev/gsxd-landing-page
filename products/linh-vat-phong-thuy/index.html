@@ -1,460 +1,266 @@
-<!doctype html>
 <!-- GSXD-DEBUG:BEGIN type=PAGE file=products/linh-vat-phong-thuy/index.html -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linh Vật Phong Thủy - Thanh Hải Ceramics</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
-    </style>
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
-    />
-    {{{stack "styles"}}}
-  </head>
-  <body
-    data-page="products"
-    class="min-h-screen flex flex-col bg-background-secondary"
-  >
-    {{> components/header}} {{#push "styles"}}
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Ephesis&family=Italianno&display=swap");
-    </style>
-    {{/push}}
+{{#> layouts/main
+title="Linh Vật Phong Thủy"
+dataPage="products"
+mainClass="bg-background-secondary"
+}}
 
-    <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/header idx=001 uid=98a2635d -->
-    {{> components/catalog-button}}
+{{#push "styles"}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Ephesis&family=Italianno&display=swap");
+</style>
+{{/push}}
 
-    <!-- GSXD-ELEMENT:BEGIN file=products/linh-vat-phong-thuy/index.html tag=main idx=001 uid=5697e7c8 -->
+<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/catalog-button -->
+{{> components/catalog-button}}
 
-    <main class="flex-grow">
-      <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/banner-section idx=002 uid=8ccaf1ad -->
-      {{>products/linh-vat-phong-thuy/partials/banner-section}}
+<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/banner-section idx=002 uid=8ccaf1ad -->
+{{>products/linh-vat-phong-thuy/partials/banner-section}}
 
-      <div class="w-[85%] max-w-[1320px] mx-auto">
-        <!-- Breadcrumb -->
-        <div class="pt-6 pb-3 md:pb-6 md:pt-8 relative z-10">
-          <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/breadcrumb idx=003 uid=efe09016 -->
-          {{> components/products/breadcrumb currentLabel="Linh Vật Phong
-          Thủy"}}
+<div class="w-[85%] max-w-[1320px] mx-auto">
+  <!-- Breadcrumb -->
+  <div class="pt-6 pb-3 md:pb-6 md:pt-8 relative z-10">
+    <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/breadcrumb idx=003 uid=efe09016 -->
+    {{> components/products/breadcrumb currentLabel="Linh Vật Phong Thủy"}}
+  </div>
+  <hr class="border-t border-black/10 mb-4 w-full" />
+
+  <!-- Product Grid Section -->
+  <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=001 uid=8d87b5cd -->
+  <section class="md:pb-8" data-aos="fade-up">
+    <!-- Filter Button -->
+    <div class="mb-[20px] md:mb-10 block">
+      <button
+        class="flex items-center gap-3 text-textPrimary hover:text-secondary transition-colors font-bold uppercase tracking-[0.05em] text-[13px]">
+        <div class="w-8 h-8 flex items-center justify-center border border-black/60 rounded text-black/60">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z">
+            </path>
+          </svg>
         </div>
+        BỘ LỌC SẢN PHẨM
+      </button>
+    </div>
 
-        <hr class="border-t border-black/10 mb-4 w-full" />
-
-        <!-- Product Grid Section -->
-        <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=001 uid=8d87b5cd -->
-        <section class="md:pb-8" data-aos="fade-up">
-          <!-- Filter Button -->
-          <div class="mb-[20px] md:mb-10 block">
-            <button
-              class="flex items-center gap-3 text-textPrimary hover:text-secondary transition-colors font-bold uppercase tracking-[0.05em] text-[13px]"
-            >
-              <div
-                class="w-8 h-8 flex items-center justify-center border border-black/60 rounded text-black/60"
-              >
-                <svg
-                  class="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-                  ></path>
-                </svg>
-              </div>
-              BỘ LỌC SẢN PHẨM
-            </button>
+    <!-- Nghê Intro Section -->
+    <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=002 uid=a790105f -->
+    <section class="mb-[50px] md:mb-24 relative" data-aos="fade-up">
+      <div class="flex flex-col md:flex-row items-center">
+        <!-- Image Container -->
+        <div class="w-full h-full max-h-[438px] md:max-h-full md:w-[68%] z-0">
+          <div class="h-full md:aspect-auto overflow-hidden rounded-sm shadow-xl">
+            <img src="/assets/images/nghe.png" alt="Linh vật Nghê" class="w-full h-full object-cover"
+              onerror="this.src = '/assets/images/ngoi-01.jpg'" />
           </div>
-
-          <!-- Nghê Intro Section -->
-          <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=002 uid=a790105f -->
-          <section class="mb-[50px] md:mb-24 relative" data-aos="fade-up">
-            <div class="flex flex-col md:flex-row items-center">
-              <!-- Image Container -->
-              <div
-                class="w-full h-full max-h-[438px] md:max-h-full md:w-[68%] z-0"
-              >
-                <div
-                  class="h-full md:aspect-auto overflow-hidden rounded-sm shadow-xl"
-                >
-                  <img
-                    src="/assets/images/nghe.png"
-                    alt="Linh vật Nghê"
-                    class="w-full h-full object-cover"
-                    onerror="this.src = '/assets/images/ngoi-01.jpg'"
-                  />
-                </div>
-              </div>
-              <!-- Content Box (Teal background) -->
-              <div
-                class="w-[90%] md:w-[38%] mt-[-60px] md:mt-0 md:ml-[-6%] bg-[#5D8482] p-8 md:p-12 lg:p-16 text-white shadow-2xl z-10 rounded-sm"
-              >
-                <h2
-                  class="font-lavishly text-[48px] md:text-[56px] lg:text-[64px] mb-12 leading-none"
-                >
-                  Nghê
-                </h2>
-                <p
-                  class="font-light text-justify text-base md:text-lg lg:text-[20px] leading-8 md:leading-9 tracking-normal"
-                >
-                  Nghê là linh vật thuần Việt độc đáo, mang thân hình loài chó
-                  trung thành trong diện mạo uy nghi của lân sư. Với quyền năng
-                  xua đuổi tà khí và canh giữ bình an, Nghê từ lâu đã trở thành
-                  "vị hộ thần" không thể thiếu tại các không gian tâm linh và
-                  cửa đình, hay đơn giản trong không gian nhà Việt.
-                </p>
-              </div>
-            </div>
-          </section>
-          <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/nghe-featured-products idx=004 uid=b2938da9 -->
-          {{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
-
-          <!-- Phượng Intro Section -->
-          <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=003 uid=732fe4d0 -->
-          <section class="mt-8 mb-20 relative" data-aos="fade-up">
-            <div class="flex flex-col md:flex-row-reverse items-center">
-              <!-- Image Container -->
-              <div class="w-full md:w-[68%] z-0">
-                <div
-                  class="aspect-[6/5] md:aspect-auto overflow-hidden rounded-sm shadow-xl"
-                >
-                  <img
-                    src="/assets/images/phuong.png"
-                    alt="Linh vật Phượng"
-                    class="w-full h-full object-cover"
-                    onerror="this.src = '/assets/images/ngoi-05.jpg'"
-                  />
-                </div>
-              </div>
-              <!-- Content Box (Gold background) -->
-              <div
-                class="w-[90%] md:w-[38%] mt-[-60px] md:mt-0 md:mr-[-6%] bg-[#D2A35C] p-8 md:p-12 lg:p-16 text-white shadow-2xl z-10 rounded-sm"
-              >
-                <h2
-                  class="font-lavishly text-[48px] md:text-[56px] lg:text-[64px] mb-12 leading-none"
-                >
-                  Phượng
-                </h2>
-                <p
-                  class="font-light text-justify text-base md:text-lg lg:text-[20px] leading-8 md:leading-9 tracking-normal"
-                >
-                  Phượng là linh vật biểu trưng cho sự thanh cao và trường tồn
-                  bất diệt. Với dáng hình kiêu sa hội tụ tinh hoa muôn loài,
-                  chim Phượng mang đến điềm lành và vượng khí khởi sắc cho mọi
-                  không gian kiến trúc cổ.
-                </p>
-              </div>
-            </div>
-          </section>
-          <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/nghe-featured-products idx=005 uid=7516cb63 -->
-          {{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
-
-          <!-- Đầu Rồng Intro Section -->
-          <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=004 uid=6a3ae18c -->
-          <section class="mt-8 mb-8 md:mb-20 relative" data-aos="fade-up">
-            <div class="flex flex-col md:flex-row items-center">
-              <!-- Image Container -->
-              <div class="w-full md:w-[68%] z-0">
-                <div
-                  class="aspect-[5/6] md:aspect-auto overflow-hidden rounded-sm shadow-xl"
-                >
-                  <img
-                    src="/assets/images/dau-rong.png"
-                    alt="Linh vật Đầu Rồng"
-                    class="w-full h-full object-cover"
-                    onerror="this.src = '/assets/images/ngoi-07.jpg'"
-                  />
-                </div>
-              </div>
-              <!-- Content Box (Terracotta background) -->
-              <div
-                class="w-[90%] md:w-[38%] mt-[-60px] md:mt-0 md:ml-[-6%] bg-[#B36E6E] p-8 md:p-12 lg:p-16 text-white shadow-2xl z-10 rounded-sm"
-              >
-                <h2
-                  class="font-lavishly text-[48px] md:text-[56px] lg:text-[64px] mb-12 leading-none"
-                >
-                  Đầu rồng
-                </h2>
-                <p
-                  class="font-light text-justify text-base md:text-lg lg:text-[20px] leading-8 md:leading-9 tracking-normal"
-                >
-                  Đầu rồng thời Lý là kiệt tác gốm sứ hiền triết, biểu trưng cho
-                  quyền uy và thịnh vượng. Đầu rồng có các phiên bản lớn uy
-                  nghiêm trong đại sảnh đến nhỏ xinh tinh xảo trên bàn làm việc.
-                  Không chỉ là vật phẩm phong thủy linh thiêng, đây còn là món
-                  quà đối ngoại cao cấp từng được trao tặng Tổng thống Mỹ Obama,
-                  đóng vai trò "sứ giả văn hóa" truyền tải niềm tự hào di sản
-                  Việt đến quốc tế.
-                </p>
-              </div>
-            </div>
-          </section>
-          <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/nghe-featured-products idx=006 uid=45b70c77 -->
-          {{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
-        </section>
+        </div>
+        <!-- Content Box (Teal background) -->
+        <div
+          class="w-[90%] md:w-[38%] mt-[-60px] md:mt-0 md:ml-[-6%] bg-[#5D8482] p-8 md:p-12 lg:p-16 text-white shadow-2xl z-10 rounded-sm">
+          <h2 class="font-lavishly text-[48px] md:text-[56px] lg:text-[64px] mb-12 leading-none">Nghê</h2>
+          <p class="font-light text-justify text-base md:text-lg lg:text-[20px] leading-8 md:leading-9 tracking-normal">
+            Nghê là linh vật thuần Việt độc đáo, mang thân hình loài chó trung thành trong diện mạo uy nghi của lân sư.
+            Với quyền năng xua đuổi tà khí và canh giữ bình an, Nghê từ lâu đã trở thành "vị hộ thần" không thể thiếu
+            tại các không gian tâm linh và cửa đình, hay đơn giản trong không gian nhà Việt.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <!-- Product Grid Section -->
-      <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=005 uid=3242f5b9 -->
-      <section class="mt-8 md:mt-auto relative mx-auto pb-8 overflow-visible">
-        <div class="relative w-[85%] md:w-full max-w-[1920px] mx-auto z-10">
-          <div
-            class="md:ml-[15.5%] grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 gap-y-[30px] lg:gap-y-6"
-            data-aos="fade-up"
-          >
-            <!-- Product 1 -->
-            <div
-              class="flex flex-col col-span-2 lg:col-span-2 group cursor-pointer"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              onclick="
-                window.location.href =
-                  '/products/linh-vat-phong-thuy/detail.html'
-              "
-            >
-              <div
-                class="product-card relative w-full aspect-[2/1] md:aspect-[18.8/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-              >
-                <img
-                  src="/assets/images/pk-02.jpg"
-                  alt="Riềm Âm Dương Sen Bầu"
-                  class="w-full h-full object-cover"
-                />
-                <div class="product-overlay">
-                  <img src="/assets/images/eye.svg" alt="Search" />
-                  <span>Xem chi tiết</span>
-                </div>
-              </div>
-              <h3
-                class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-              >
-                Riềm Âm Dương Sen Bầu
-              </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                MSP: 1234RDS
-              </p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                Giá: 675.000 đ/m2
-              </p>
-            </div>
-            <!-- Product 2 -->
-            <div
-              class="flex flex-col group cursor-pointer"
-              data-aos="fade-up"
-              data-aos-delay="200"
-              onclick="
-                window.location.href =
-                  '/products/linh-vat-phong-thuy/detail.html'
-              "
-            >
-              <div
-                class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-              >
-                <img
-                  src="/assets/images/pk-03.jpg"
-                  alt="Riềm Âm Dương Sen Bầu"
-                  class="w-full h-full object-cover"
-                />
-                <div class="product-overlay">
-                  <img src="/assets/images/eye.svg" alt="Search" />
-                  <span>Xem chi tiết</span>
-                </div>
-              </div>
-              <h3
-                class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-              >
-                Riềm Âm Dương Sen Bầu
-              </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                MSP: 1234RDS
-              </p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                Giá: 675.000 đ/m2
-              </p>
-            </div>
-            <!-- Product 3 -->
-            <div
-              class="flex flex-col group cursor-pointer"
-              data-aos="fade-up"
-              data-aos-delay="300"
-              onclick="
-                window.location.href =
-                  '/products/linh-vat-phong-thuy/detail.html'
-              "
-            >
-              <div
-                class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-              >
-                <img
-                  src="/assets/images/pk-04.jpg"
-                  alt="Riềm Âm Dương Sen Bầu"
-                  class="w-full h-full object-cover"
-                />
-                <div class="product-overlay">
-                  <img src="/assets/images/eye.svg" alt="Search" />
-                  <span>Xem chi tiết</span>
-                </div>
-              </div>
-              <h3
-                class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-              >
-                Riềm Âm Dương Sen Bầu
-              </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                MSP: 1234RDS
-              </p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                Giá: 675.000 đ/m2
-              </p>
-            </div>
-            <!-- Product 4 -->
-            <div
-              class="flex flex-col group cursor-pointer"
-              data-aos="fade-up"
-              data-aos-delay="400"
-              onclick="
-                window.location.href =
-                  '/products/linh-vat-phong-thuy/detail.html'
-              "
-            >
-              <div
-                class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-              >
-                <img
-                  src="/assets/images/pk-05.jpg"
-                  alt="Riềm Âm Dương Sen Bầu"
-                  class="w-full h-full object-cover"
-                />
-                <div class="product-overlay">
-                  <img src="/assets/images/eye.svg" alt="Search" />
-                  <span>Xem chi tiết</span>
-                </div>
-              </div>
-              <h3
-                class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-              >
-                Riềm Âm Dương Sen Bầu
-              </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                MSP: 1234RDS
-              </p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                Giá: 675.000 đ/m2
-              </p>
-            </div>
-            <!-- Product 5 -->
-            <div
-              class="flex flex-col group cursor-pointer"
-              data-aos="fade-up"
-              data-aos-delay="500"
-              onclick="
-                window.location.href =
-                  '/products/linh-vat-phong-thuy/detail.html'
-              "
-            >
-              <div
-                class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
-              >
-                <img
-                  src="/assets/images/pk-06.jpg"
-                  alt="Riềm Âm Dương Sen Bầu"
-                  class="w-full h-full object-cover"
-                />
-                <div class="product-overlay">
-                  <img src="/assets/images/eye.svg" alt="Search" />
-                  <span>Xem chi tiết</span>
-                </div>
-              </div>
-              <h3
-                class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
-              >
-                Riềm Âm Dương Sen Bầu
-              </h3>
-              <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                MSP: 1234RDS
-              </p>
-              <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                Giá: 675.000 đ/m2
-              </p>
-            </div>
+    <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/nghe-featured-products idx=004 uid=b2938da9 -->
+    {{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
+
+    <!-- Phượng Intro Section -->
+    <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=003 uid=732fe4d0 -->
+    <section class="mt-8 mb-20 relative" data-aos="fade-up">
+      <div class="flex flex-col md:flex-row-reverse items-center">
+        <!-- Image Container -->
+        <div class="w-full md:w-[68%] z-0">
+          <div class="aspect-[6/5] md:aspect-auto overflow-hidden rounded-sm shadow-xl">
+            <img src="/assets/images/phuong.png" alt="Linh vật Phượng" class="w-full h-full object-cover"
+              onerror="this.src = '/assets/images/ngoi-05.jpg'" />
           </div>
         </div>
-      </section>
-      <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/fabrication-process idx=007 uid=aae3ded4 -->
-      {{>components/products/fabrication-process}}
-      <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/journey-video idx=008 uid=a09f5b77 -->
-      {{>components/products/journey-video hideTitle=true}}
-      <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/recommendations idx=009 uid=5373c3e1 -->
-      {{>components/products/recommendations}}
+        <!-- Content Box (Gold background) -->
+        <div
+          class="w-[90%] md:w-[38%] mt-[-60px] md:mt-0 md:mr-[-6%] bg-[#D2A35C] p-8 md:p-12 lg:p-16 text-white shadow-2xl z-10 rounded-sm">
+          <h2 class="font-lavishly text-[48px] md:text-[56px] lg:text-[64px] mb-12 leading-none">Phượng</h2>
+          <p class="font-light text-justify text-base md:text-lg lg:text-[20px] leading-8 md:leading-9 tracking-normal">
+            Phượng là linh vật biểu trưng cho sự thanh cao và trường tồn bất diệt. Với dáng hình kiêu sa hội tụ tinh hoa
+            muôn loài, chim Phượng mang đến điềm lành và vượng khí khởi sắc cho mọi không gian kiến trúc cổ.
+          </p>
+        </div>
+      </div>
+    </section>
 
-      <!-- FAQ Section -->
-      <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=006 uid=c2832d17 -->
-      <section
-        class="w-full relative pb-[70px] md:pb-32 bg-background-secondary overflow-visible"
-        data-aos="fade-up"
-      >
-        <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/faq-content idx=010 uid=79fdfd7a -->
-        {{> components/products/faq-content}}
-      </section>
-    </main>
-    <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/footer idx=011 uid=461f88f6 -->
+    <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/nghe-featured-products idx=005 uid=7516cb63 -->
+    {{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
 
-    {{#push "scripts"}}
+    <!-- Đầu Rồng Intro Section -->
+    <!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=004 uid=6a3ae18c -->
+    <section class="mt-8 mb-8 md:mb-20 relative" data-aos="fade-up">
+      <div class="flex flex-col md:flex-row items-center">
+        <!-- Image Container -->
+        <div class="w-full md:w-[68%] z-0">
+          <div class="aspect-[5/6] md:aspect-auto overflow-hidden rounded-sm shadow-xl">
+            <img src="/assets/images/dau-rong.png" alt="Linh vật Đầu Rồng" class="w-full h-full object-cover"
+              onerror="this.src = '/assets/images/ngoi-07.jpg'" />
+          </div>
+        </div>
+        <!-- Content Box (Terracotta background) -->
+        <div
+          class="w-[90%] md:w-[38%] mt-[-60px] md:mt-0 md:ml-[-6%] bg-[#B36E6E] p-8 md:p-12 lg:p-16 text-white shadow-2xl z-10 rounded-sm">
+          <h2 class="font-lavishly text-[48px] md:text-[56px] lg:text-[64px] mb-12 leading-none">Đầu rồng</h2>
+          <p class="font-light text-justify text-base md:text-lg lg:text-[20px] leading-8 md:leading-9 tracking-normal">
+            Đầu rồng thời Lý là kiệt tác gốm sứ hiền triết, biểu trưng cho quyền uy và thịnh vượng. Đầu rồng có các
+            phiên bản lớn uy nghiêm trong đại sảnh đến nhỏ xinh tinh xảo trên bàn làm việc. Không chỉ là vật phẩm phong
+            thủy linh thiêng, đây còn là món quà đối ngoại cao cấp từng được trao tặng Tổng thống Mỹ Obama, đóng vai trò
+            "sứ giả văn hóa" truyền tải niềm tự hào di sản Việt đến quốc tế.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Initialize AOS
-        AOS.init({ duration: 800, once: true, offset: 100 });
+    <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=products/linh-vat-phong-thuy/partials/nghe-featured-products idx=006 uid=45b70c77 -->
+    {{> products/linh-vat-phong-thuy/partials/nghe-featured-products}}
+  </section>
+</div>
+
+<!-- Product Grid Section -->
+<!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=005 uid=3242f5b9 -->
+<section class="mt-8 md:mt-auto relative mx-auto pb-8 overflow-visible">
+  <div class="relative w-[85%] md:w-full max-w-[1920px] mx-auto z-10">
+    <div class="md:ml-[15.5%] grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 gap-y-[30px] lg:gap-y-6"
+      data-aos="fade-up">
+      <!-- Product 1 -->
+      <div class="flex flex-col col-span-2 lg:col-span-2 group cursor-pointer" data-aos="fade-up" data-aos-delay="100"
+        onclick="window.location.href = '/products/linh-vat-phong-thuy/detail.html'">
+        <div
+          class="product-card relative w-full aspect-[2/1] md:aspect-[18.8/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+          <img src="/assets/images/pk-02.jpg" alt="Riềm Âm Dương Sen Bầu" class="w-full h-full object-cover" />
+          <div class="product-overlay">
+            <img src="/assets/images/eye.svg" alt="Search" />
+            <span>Xem chi tiết</span>
+          </div>
+        </div>
+        <h3
+          class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">
+          Riềm Âm Dương Sen Bầu</h3>
+        <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+        <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+      </div>
+      <!-- Product 2 -->
+      <div class="flex flex-col group cursor-pointer" data-aos="fade-up" data-aos-delay="200"
+        onclick="window.location.href = '/products/linh-vat-phong-thuy/detail.html'">
+        <div
+          class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+          <img src="/assets/images/pk-03.jpg" alt="Riềm Âm Dương Sen Bầu" class="w-full h-full object-cover" />
+          <div class="product-overlay">
+            <img src="/assets/images/eye.svg" alt="Search" />
+            <span>Xem chi tiết</span>
+          </div>
+        </div>
+        <h3
+          class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">
+          Riềm Âm Dương Sen Bầu</h3>
+        <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+        <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+      </div>
+      <!-- Product 3 -->
+      <div class="flex flex-col group cursor-pointer" data-aos="fade-up" data-aos-delay="300"
+        onclick="window.location.href = '/products/linh-vat-phong-thuy/detail.html'">
+        <div
+          class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+          <img src="/assets/images/pk-04.jpg" alt="Riềm Âm Dương Sen Bầu" class="w-full h-full object-cover" />
+          <div class="product-overlay">
+            <img src="/assets/images/eye.svg" alt="Search" />
+            <span>Xem chi tiết</span>
+          </div>
+        </div>
+        <h3
+          class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">
+          Riềm Âm Dương Sen Bầu</h3>
+        <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+        <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+      </div>
+      <!-- Product 4 -->
+      <div class="flex flex-col group cursor-pointer" data-aos="fade-up" data-aos-delay="400"
+        onclick="window.location.href = '/products/linh-vat-phong-thuy/detail.html'">
+        <div
+          class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+          <img src="/assets/images/pk-05.jpg" alt="Riềm Âm Dương Sen Bầu" class="w-full h-full object-cover" />
+          <div class="product-overlay">
+            <img src="/assets/images/eye.svg" alt="Search" />
+            <span>Xem chi tiết</span>
+          </div>
+        </div>
+        <h3
+          class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">
+          Riềm Âm Dương Sen Bầu</h3>
+        <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+        <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+      </div>
+      <!-- Product 5 -->
+      <div class="flex flex-col group cursor-pointer" data-aos="fade-up" data-aos-delay="500"
+        onclick="window.location.href = '/products/linh-vat-phong-thuy/detail.html'">
+        <div
+          class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+          <img src="/assets/images/pk-06.jpg" alt="Riềm Âm Dương Sen Bầu" class="w-full h-full object-cover" />
+          <div class="product-overlay">
+            <img src="/assets/images/eye.svg" alt="Search" />
+            <span>Xem chi tiết</span>
+          </div>
+        </div>
+        <h3
+          class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">
+          Riềm Âm Dương Sen Bầu</h3>
+        <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
+        <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/fabrication-process idx=007 uid=aae3ded4 -->
+{{>components/products/fabrication-process}}
+
+<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/journey-video idx=008 uid=a09f5b77 -->
+{{>components/products/journey-video hideTitle=true}}
+
+<!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/recommendations idx=009 uid=5373c3e1 -->
+{{>components/products/recommendations}}
+
+<!-- FAQ Section -->
+<!-- GSXD-SECTION:BEGIN file=products/linh-vat-phong-thuy/index.html tag=section idx=006 uid=c2832d17 -->
+<section class="w-full relative pb-[70px] md:pb-32 bg-background-secondary overflow-visible" data-aos="fade-up">
+  <!-- GSXD-PARTIAL:BEGIN file=products/linh-vat-phong-thuy/index.html include=components/products/faq-content idx=010 uid=79fdfd7a -->
+  {{> components/products/faq-content}}
+</section>
+
+{{#push "scripts"}}
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof GLightbox !== "undefined") {
+      document.querySelectorAll(".glightbox").forEach((anchor) => {
+        const image = anchor.querySelector("img");
+        if (image) {
+          anchor.setAttribute("href", image.currentSrc || image.src);
+        }
       });
-    </script>
+      GLightbox({
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true,
+      });
+    }
+  });
+</script>
+{{/push}}
 
-    <!-- GSXD-DEBUG:END type=PAGE file=products/linh-vat-phong-thuy/index.html uid=1f8bf6c4 -->
-    {{/push}} {{> components/footer hideNewsletter=true}}
-
-    <script type="module" src="/assets/js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    {{{stack "scripts"}}}
-    <script>
-      if (window.AOS) {
-        AOS.init({
-          duration: 800,
-          once: true,
-          offset: 100,
-        });
-      }
-
-      if (typeof GLightbox !== "undefined") {
-        document.querySelectorAll(".glightbox").forEach((anchor) => {
-          const image = anchor.querySelector("img");
-          if (image) {
-            anchor.setAttribute("href", image.currentSrc || image.src);
-          }
-        });
-        GLightbox({
-          touchNavigation: true,
-          loop: true,
-          autoplayVideos: true,
-        });
-      }
-    </script>
-  </body>
-</html>
+{{/layouts/main}}
 <!-- GSXD-DEBUG:END type=PAGE file=products/linh-vat-phong-thuy/index.html -->

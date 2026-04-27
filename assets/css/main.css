@@ -208,7 +208,7 @@
 }
 
 @media (max-width: 767px) {
-  body[data-page="index"] main section h2 {
+  main[data-page="index"] section h2 {
     font-family: "Archivo", sans-serif;
     font-size: 20px;
     font-weight: 700;
