@@ -1,45 +1,14 @@
-<!doctype html>
-<!-- GSXD-DEBUG:BEGIN type=PAGE file=dich-vu-khach-hang/bao-mat-thong-tin.html uid=b7baaf24 -->
-<html lang="vi">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bảo mật thông tin - Dịch vụ khách hàng - Thanh Hải Ceramics</title>
-  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  {{{stack "styles"}}}
-</head>
-
-<body data-page="customer-service" class="bg-white">
-  <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/bao-mat-thong-tin.html include=components/header idx=001 uid=6e4d0378 -->
-  {{> components/header}}
-
-  <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/bao-mat-thong-tin.html tag=main idx=001 uid=52957f6a -->
-
-  <main class="bg-background-secondary min-h-screen font-archivo text-primary">
-    <div class="w-[85%] max-w-[1320px] mx-auto">
-      <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/bao-mat-thong-tin.html include=dich-vu-khach-hang/partials/customer-service/breadcrumb idx=002 uid=054f24ba -->
-      {{> dich-vu-khach-hang/partials/customer-service/breadcrumb
-      currentPage="Bảo mật thông tin"}}
-
-      <div class="flex flex-col lg:flex-row gap-12 mb-6 lg:mb-12">
-        <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/bao-mat-thong-tin.html include=dich-vu-khach-hang/partials/customer-service/sidebar idx=003 uid=010f4f22 -->
-        {{> dich-vu-khach-hang/partials/customer-service/sidebar
-        activePrivacy=true}}
-        <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/bao-mat-thong-tin.html include=dich-vu-khach-hang/partials/customer-service/privacy-policy-content idx=004 uid=8fe3b52b -->
-        {{>
-        dich-vu-khach-hang/partials/customer-service/privacy-policy-content}}
-      </div>
-    </div>
-    {{> components/faq/faq-contact}}
-  </main>
-  <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/bao-mat-thong-tin.html include=components/footer idx=006 uid=99b56e58 -->
-  {{> components/footer}}
-  <script type="module" src="/assets/js/app.js"></script>
-  {{{stack "scripts"}}}
-  <!-- GSXD-DEBUG:END type=PAGE file=dich-vu-khach-hang/bao-mat-thong-tin.html uid=b7baaf24 -->
-</body>
-
-</html>
+{{#> layouts/main
+title="Bảo mật thông tin - Dịch vụ khách hàng"
+dataPage="customer-service"
+mainClass="bg-background-secondary min-h-screen font-archivo text-primary"
+}}
+<div class="w-[85%] max-w-[1320px] mx-auto">
+  {{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Bảo mật thông tin"}}
+  <div class="flex flex-col lg:flex-row gap-12 mb-6 lg:mb-12">
+    {{> dich-vu-khach-hang/partials/customer-service/sidebar activePrivacy=true}}
+    {{> dich-vu-khach-hang/partials/customer-service/privacy-policy-content}}
+  </div>
+</div>
+{{> components/faq/faq-contact}}
+{{/layouts/main}}

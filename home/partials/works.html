@@ -10,100 +10,23 @@
   </div>
 
   <!-- Works Carousel Container: Full width to allow bleed-out -->
-  <div
-    class="works-carousel-container relative"
-    data-aos="fade-up"
-    data-aos-delay="200"
-  >
+  <div class="works-carousel-container relative" data-aos="fade-up" data-aos-delay="200">
     <div class="works-carousel overflow-x-auto scrollbar-hide">
       <!-- padding-left calculated to match the 1320px container's left edge -->
-      <div
-        class="flex"
-        style="padding-left: max(7.5%, calc((100% - 1320px) / 2))"
-      >
+      <div class="flex" style="padding-left: max(7.5%, calc((100% - 1320px) / 2))">
         <div class="works-track flex gap-[10px] lg:gap-6 pr-12">
+          {{#for 10}}
           <div
-            class="works-item flex-shrink-0 w-[151px] lg:w-96 h-[125px] lg:h-80 rounded-sm overflow-hidden group cursor-pointer relative"
-          >
-            <img
-              src="/assets/images/work-01.jpg"
-              alt="Chùa Bái Đính, Ninh Bình"
-              class="w-full h-full object-cover"
-            />
+            class="works-item flex-shrink-0 w-[151px] lg:w-96 h-[125px] lg:h-80 rounded-sm overflow-hidden group cursor-pointer relative">
+            <img src="/assets/images/work-01.jpg" alt="Chùa Bái Đính, Ninh Bình" class="w-full h-full object-cover" />
             <div
-              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-12"
-            >
+              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2 md:p-4 pt-12">
               <p class="works-item-title text-white">
                 Chùa Bái Đính, Ninh Bình
               </p>
             </div>
           </div>
-
-          <div
-            class="works-item flex-shrink-0 w-[151px] lg:w-96 h-[125px] lg:h-80 rounded-sm overflow-hidden group cursor-pointer relative"
-          >
-            <img
-              src="/assets/images/work-02.jpg"
-              alt="Thiền Viện Trúc Lâm Đại Giác Sapa"
-              class="w-full h-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-12"
-            >
-              <p class="works-item-title text-white">
-                Thiền Viện Trúc Lâm Đại Giác Sapa
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="works-item flex-shrink-0 w-[151px] lg:w-96 h-[125px] lg:h-80 rounded-sm overflow-hidden group cursor-pointer relative"
-          >
-            <img
-              src="/assets/images/work-01.jpg"
-              alt="Chùa Cấp Cô Độc, Quảng Trị"
-              class="w-full h-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-12"
-            >
-              <p class="works-item-title text-white">
-                Chùa Cấp Cô Độc, Quảng Trị
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="works-item flex-shrink-0 w-[151px] lg:w-96 h-[125px] lg:h-80 rounded-sm overflow-hidden group cursor-pointer relative"
-          >
-            <img
-              src="/assets/images/work-02.jpg"
-              alt="Chùa Cấp Cô Độc, Quảng Trị"
-              class="w-full h-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-12"
-            >
-              <p class="works-item-title text-white">
-                Chùa Cấp Cô Độc, Quảng Trị
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="works-item flex-shrink-0 w-[151px] lg:w-96 h-[125px] lg:h-80 rounded-sm overflow-hidden group cursor-pointer relative"
-          >
-            <img
-              src="/assets/images/work-01.jpg"
-              alt="Đền Trần, Nam Định"
-              class="w-full h-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-12"
-            >
-              <p class="works-item-title text-white">Đền Trần, Nam Định</p>
-            </div>
-          </div>
+          {{/for}}
         </div>
       </div>
     </div>
@@ -111,8 +34,7 @@
 
   <!-- Controls Container: Gói gọn trong 1320px -->
   <div
-    class="w-[85%] max-w-[1320px] mx-auto mt-[11px] md:mt-12 flex flex-col items-center lg:items-end justify-between gap-8 lg:gap-12"
-  >
+    class="w-[85%] max-w-[1320px] mx-auto mt-[11px] md:mt-12 flex flex-col items-center lg:items-end justify-between gap-8 lg:gap-12">
     <!-- Custom scrollbar -->
     <div class="flex-grow w-full">
       <div class="works-scrollbar-track">
@@ -239,6 +161,3 @@
 </script>
 {{/push}}
 <!-- GSXD-DEBUG:END type=LAYOUT file=home/partials/works.html uid=85fdaf1e -->
-
-
-

@@ -1,42 +1,14 @@
-<!doctype html>
-<!-- GSXD-DEBUG:BEGIN type=PAGE file=dich-vu-khach-hang/chinh-sach-doi-tra.html uid=739bddbd -->
-<html lang="vi">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chính sách đổi trả - Dịch vụ khách hàng - Thanh Hải Ceramics</title>
-  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  {{{stack "styles"}}}
-</head>
-
-<body data-page="customer-service" class="bg-white">
-  <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-doi-tra.html include=components/header idx=001 uid=b109c11b -->
-  {{> components/header}}
-
-  <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/chinh-sach-doi-tra.html tag=main idx=001 uid=4ec84a60 -->
-
-  <main class="bg-background-secondary min-h-screen font-archivo">
-    <div class="w-[85%] max-w-[1320px] mx-auto">
-      <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-doi-tra.html include=dich-vu-khach-hang/partials/customer-service/breadcrumb idx=002 uid=91169c42 -->
-      {{> dich-vu-khach-hang/partials/customer-service/breadcrumb
-      currentPage="Chính sách đổi trả"}}
-
-      <div class="flex flex-col lg:flex-row gap-12 mb-0 lg:mb-12">
-        {{> dich-vu-khach-hang/partials/customer-service/sidebar
-        activeReturn=true}} {{>
-        dich-vu-khach-hang/partials/customer-service/return-policy-content}}
-      </div>
-    </div>
-    {{> components/faq/faq-contact}}
-  </main>
-  <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/chinh-sach-doi-tra.html include=components/footer idx=006 uid=92650cb3 -->
-  {{> components/footer}}
-  <script type="module" src="/assets/js/app.js"></script>
-  {{{stack "scripts"}}}
-  <!-- GSXD-DEBUG:END type=PAGE file=dich-vu-khach-hang/chinh-sach-doi-tra.html uid=739bddbd -->
-</body>
-
-</html>
+{{#> layouts/main
+title="Chính sách đổi trả - Dịch vụ khách hàng"
+dataPage="customer-service"
+mainClass="bg-background-secondary min-h-screen font-archivo"
+}}
+<div class="w-[85%] max-w-[1320px] mx-auto">
+  {{> dich-vu-khach-hang/partials/customer-service/breadcrumb currentPage="Chính sách đổi trả"}}
+  <div class="flex flex-col lg:flex-row gap-12 mb-0 lg:mb-12">
+    {{> dich-vu-khach-hang/partials/customer-service/sidebar activeReturn=true}}
+    {{> dich-vu-khach-hang/partials/customer-service/return-policy-content}}
+  </div>
+</div>
+{{> components/faq/faq-contact}}
+{{/layouts/main}}
