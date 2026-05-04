@@ -1,4 +1,3 @@
-<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=layouts/main.html -->
 <!doctype html>
 <html lang="vi">
 
@@ -20,21 +19,21 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/main.css" />
 
-    <!-- Style riêng của từng page -->
+    <!-- BEGIN: Style riêng của từng page -->
     {{{stack "styles"}}}
+    <!-- END: Style riêng của từng page -->
 </head>
-
-<!-- Body hoàn toàn TĨNH, không nhận bất kỳ biến nào -->
 
 <body class="min-h-screen flex flex-col font-archivo text-primary">
 
     {{> components/header}}
 
-    <!-- Main Content: Đón toàn bộ biến động (data-page, class nền, v.v...) -->
+    <!-- BEGIN: Main Content: Đón toàn bộ biến động (data-page, class nền, v.v...) -->
     <main {{#if dataPage}}data-page="{{dataPage}}" {{/if}}
         class="flex-grow {{#if mainClass}}{{mainClass}}{{else}}bg-white{{/if}}">
         {{> @partial-block}}
     </main>
+    <!-- END: Main Content: Đón toàn bộ biến động (data-page, class nền, v.v...) -->
 
     {{> components/footer hideNewsletter=hideNewsletter}}
 
@@ -50,10 +49,9 @@
         }
     </script>
 
-    <!-- Script riêng của từng page -->
+    <!-- BEGIN: Script riêng của từng page -->
     {{{stack "scripts"}}}
-
+    <!-- END: Script riêng của từng page -->
 </body>
 
 </html>
-<!-- GSXD-DEBUG:END type=LAYOUT file=layouts/main.html -->
