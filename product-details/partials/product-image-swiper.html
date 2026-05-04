@@ -1,0 +1,94 @@
+{{!-- Product Image Swiper Partial --}}
+{{!-- Shared across all product-details pages. --}}
+
+<!-- Left: Images -->
+<div class="flex flex-col md:gap-5 lg:col-span-3">
+  <!-- Main Image Swiper -->
+  <div class="w-full aspect-square bg-white md:shadow-lg relative overflow-hidden group swiper product-main-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide w-full h-full">
+        <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 1"
+          class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+      </div>
+      <div class="swiper-slide w-full h-full">
+        <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 2"
+          class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+      </div>
+      <div class="swiper-slide w-full h-full">
+        <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 3"
+          class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+      </div>
+      <div class="swiper-slide w-full h-full">
+        <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 4"
+          class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+      </div>
+      <div class="swiper-slide w-full h-full">
+        <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 5"
+          class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+      </div>
+      <div class="swiper-slide w-full h-full">
+        <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 6"
+          class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+      </div>
+      <div class="swiper-slide w-full h-full">
+        <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 7"
+          class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Mobile Dots Pagination -->
+  <div class="md:hidden flex justify-center mt-5">
+    <div class="product-main-pagination flex justify-center gap-[7px]"></div>
+  </div>
+
+  <!-- Thumbnails (Desktop only) -->
+  <div class="hidden md:block w-full mt-2 overflow-hidden swiper product-thumb-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+      </div>
+      <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+      </div>
+      <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+      </div>
+      <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+      </div>
+      <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+      </div>
+      <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+      </div>
+      <div
+        class="swiper-slide aspect-square bg-gradient-to-r from-[#5C2321] to-[#EFE4DE] cursor-pointer opacity-90 relative">
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Pagination styles are handled globally in main.css --}}
+
+{{#push "scripts"}}
+<script>
+  // ── Product Image Swiper Initialization ─────────────────────────────────
+  (function () {
+    var thumbSwiper = new Swiper(".product-thumb-swiper", {
+      spaceBetween: 20,
+      slidesPerView: 7,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    new Swiper(".product-main-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: ".product-main-pagination",
+        clickable: true,
+      },
+      thumbs: {
+        swiper: thumbSwiper,
+      },
+    });
+  })();
+</script>
+{{/push}}

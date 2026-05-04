@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngói Bò Nóc Chữ Vạn - Thanh Hải Ceramics</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    {{{stack "styles"}}}
+  </head>
+  <body
+    data-page="products"
+    class="min-h-screen flex flex-col bg-background-secondary"
+  >
+    {{> components/header}}
+
+    <main class="flex-grow bg-background-secondary pb-14 md:pb-20">
+      <!-- Top Banner for Detail -->
+      <section class="relative w-full hidden md:block">
+        <div
+          class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]"
+        >
+          <img
+            src="/assets/images/pk-banner.png"
+            alt="Phụ Kiện Ngói"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-center pt-[5%] md:pt-[5%] lg:pt-[5%]"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="text-center text-white px-4 w-[85%] max-w-[1320px] mx-auto"
+            >
+              <h1
+                class="font-sans text-[26px] md:text-4xl lg:text-[44px] font-bold uppercase mb-2 md:mb-6 drop-shadow-md"
+              >
+                PHỤ KIỆN NGÓI
+              </h1>
+              <p
+                class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95"
+              >
+                Nâng niu nét chạm trổ, sắt son cùng thời gian
+              </p>
+              <p
+                class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95"
+              >
+                Phụ kiện Thanh Hải: Điểm nhấn tâm linh, hoàn thiện dáng hình
+                kiến trúc Việt
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sub Breadcrumb -->
+      <div class="hidden md:block w-[85%] max-w-[1320px] mx-auto py-8">
+        {{> components/products/breadcrumb textClass="font-semibold text-primary/60 uppercase text-[14px] md:text-base" linkClass="hover:text-primary transition-colors" separatorClass="mx-1" parentHref="/products/phu-kien-ngoi/" parentLabel="Sản phẩm" currentClass="text-primary font-semibold pb-1" currentLabel="PHỤ KIỆN NGÓI"}}
+        <hr class="border-t border-black/10 mt-4 w-full" />
+      </div>
+
+      <!-- Product Detail Container -->
+      {{> components/products/product-detail-container
+        title="Ngói bò nóc chữ vạn"
+        price="675.000 đ/m2"
+        variants=(list
+          (object name="COMBO NGÓI + PHỤ KIỆN CỠ NHỎ" class="w-[54%] md:w-auto md:min-w-[240px]")
+          (object name="NGÓI BÒ CHỮ VẠN CỠ NHỎ" class="flex-1 md:w-auto md:min-w-[200px]")
+          (object name="COMBO NGÓI + PHỤ KIỆN CỠ LỚN" class="w-[54%] md:w-auto md:min-w-[240px]")
+          (object name="NGÓI BÒ CHỮ VẠN CỠ LỚN" class="flex-1 md:w-auto md:min-w-[200px]")
+        )
+      }}
+
+      <!-- Product Detail -->
+      <section class="w-full md:w-[85%] max-w-[1320px] mx-auto pb-16 lg:pb-20">
+        <!-- Section Title -->
+        <div class="text-center" data-aos="fade-up">
+          <h2
+            class="text-[20px] md:text-3xl font-semibold text-secondary uppercase drop-shadow-sm"
+          >
+            Bộ ngói bò chữ vạn và phụ kiện
+          </h2>
+        </div>
+        <div class="flex flex-col gap-8 md:gap-12">
+          <!-- Desktop Images -->
+          <img
+            src="/assets/images/chu-van-1.png"
+            alt="Bộ ngói bò chữ vạn và phụ kiện"
+            class="w-full hidden md:block select-none pointer-events-none"
+            data-aos="fade-up"
+          />
+          <img
+            src="/assets/images/chu-van-2.png"
+            alt="Bộ ngói bò chữ vạn và phụ kiện"
+            class="w-full hidden md:block select-none pointer-events-none"
+            data-aos="fade-up"
+          />
+          <img
+            src="/assets/images/chu-van-3.png"
+            alt="Bộ ngói bò chữ vạn và phụ kiện"
+            class="w-full hidden md:block select-none pointer-events-none"
+            data-aos="fade-up"
+          />
+          <!-- Mobile Image -->
+          <img
+            src="/assets/images/chu-van-mobile.png"
+            alt="Bộ ngói bò chữ vạn và phụ kiện"
+            class="w-[90%] mx-auto block md:hidden select-none pointer-events-none"
+            data-aos="fade-up"
+          />
+        </div>
+      </section>
+
+      {{> components/products/outstanding-value}}
+      {{> components/products/journey-video}}
+      {{> components/products/works}}
+      {{> components/products/recommendations}}
+      {{> components/products/faq2}}
+    </main>
+
+    {{> components/footer hideNewsletter=true}}
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script type="module" src="/assets/js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    {{{stack "scripts"}}}
+  </body>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+  </script>
+</html>
